@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScriptureConnected component renders without errors 1`] = `
+<View>
+  <Text
+    style={
+      Object {
+        "color": "#303030",
+        "fontFamily": "InterUI-Bold",
+        "fontSize": 16,
+        "lineHeight": 24,
+        "paddingBottom": 12,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 16,
+          "lineHeight": 24,
+        }
+      }
+    >
+      Genesis 1:1
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "#505050",
+          "fontFamily": "InterUI-Bold",
+          "fontSize": 12,
+          "lineHeight": 18,
+        }
+      }
+    >
+       
+      WEB
+    </Text>
+  </Text>
+  <View
+    style={
+      Object {
+        "paddingBottom": 18,
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "paddingBottom": 0,
+          }
+        }
+      >
+        <Text
+          bold={false}
+          italic={false}
+          style={
+            Object {
+              "color": "#303030",
+              "fontFamily": "DroidSerif",
+              "fontSize": 16,
+              "lineHeight": 26,
+            }
+          }
+        >
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#505050",
+                "fontFamily": "DroidSerif",
+                "fontSize": 9.6,
+                "lineHeight": 26,
+              }
+            }
+          >
+             
+            <Text>
+              1
+            </Text>
+             
+          </Text>
+          <Text
+            bold={false}
+            italic={false}
+            style={
+              Object {
+                "color": "#303030",
+                "fontFamily": "DroidSerif",
+                "fontSize": 16,
+                "lineHeight": 26,
+              }
+            }
+          >
+            <Text>
+              In the beginning, God created the heavens and the earth. 
+            </Text>
+          </Text>
+        </Text>
+      </View>
+    </View>
+  </View>
+</View>
+`;

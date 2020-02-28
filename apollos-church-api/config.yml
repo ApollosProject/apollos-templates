@@ -1,0 +1,267 @@
+# This file, in conjuction with your .env file,
+# should be used to configure the apollos server.
+
+# Any values you wish to keep secret should be placed in `.env`
+# You can access those values (and any other values in your environment)
+# using the ${VARIABLE_NAME} syntax
+
+# This file should be checked into version control.
+# `.env` should NOT be checked into version control.
+APP:
+  # This variable is used for generating deep links.
+  # It should match whatver is in your Info.plist `CFBundleURLTypes`
+  DEEP_LINK_HOST: apolloschurchapp
+  ROOT_API_URL: ${ROOT_URL}
+  JOBS_USERNAME: ${JOBS_USERNAME}
+  JOBS_PASSWORD: ${JOBS_PASSWORD}
+ROCK:
+  API_URL: https://apollosrock.newspring.cc/api
+  API_TOKEN: ${ROCK_TOKEN}
+  IMAGE_URL: https://apollosrock.newspring.cc/GetImage.ashx
+  SHARE_URL: https://apollosrock.newspring.cc
+  # This should match the timezone of the Rock server
+  TIMEZONE: 'America/New_York'
+  USE_PLUGIN: true
+  SHOW_INACTIVE_CONTENT: ${ROCK_SHOW_INACTIVE_CONTENT}
+ONE_SIGNAL:
+  APP_ID: b6e75a77-003f-4466-95ca-82cc5cdc407b
+  REST_KEY: ${ONE_SIGNAL_REST_KEY}
+CHURCH_ONLINE:
+  URL: https://apollos.churchonline.org/api/v1/
+  MEDIA_URLS: []
+  WEB_VIEW_URL: https://apollos.churchonline.org/
+ALGOLIA:
+  APPLICATION_ID: ${ALGOLIA_APP_ID}
+  API_KEY: ${ALGOLIA_API_KEY}
+  # TODO: should we support multiple indices? how
+  SEARCH_INDEX: test_ContentItem
+  # Configure Algolia custom settings here
+  # https://www.algolia.com/doc/api-reference/settings-api-parameters/
+  CONFIGURATION:
+    searchableAttributes:
+      - title
+      - unordered(summary)
+    #customRankings:
+      # NOT CURRENTLY INCLUDED
+      # This just demonstrates what's possible
+      # To include likedCount (or any other field) override search package
+      # and add field to config below
+      #- desc(likedCount)
+TWILIO:
+  ACCOUNT_SID: ${TWILIO_ACCOUNT_SID}
+  AUTH_TOKEN: ${TWILIO_AUTH_TOKEN}
+  FROM_NUMBER: ${TWILIO_FROM_NUMBER}
+PASS:
+  TEMPLATES:
+    CHECKIN: ${PWD}/wallet-passes/checkin.pass
+  CERTIFICATES:
+    WWDR: ${PASS_WWDR_CERT}
+    SIGNER_CERT: ${PASS_SIGNER_CERT}
+    SIGNER_KEY: ${PASS_SIGNER_KEY}
+    SIGNER_KEY_PASSPHRASE: ${PASS_SIGNER_PASSPHRASE}
+ANALYTICS:
+  # Filling out these fields will automatically enable analytics tracking
+  # on the accompanying service
+  SEGMENT_KEY:
+  GA_ID:
+  USE_ROCK: true
+BIBLE_API:
+  KEY: ${BIBLE_API_KEY}
+  BIBLE_ID:
+    WEB: '9879dbb7cfe39e4d-01'
+    KJV: 'de4e12af7f28f599-02'
+CLOUDINARY:
+  # Cloudinary is used to improve image loading
+  # value should look something like
+  # cloudinary://123123123:adkfnla_adASDv_adAS@test
+  URL: ${CLOUDINARY_URL}
+ENGINE:
+  API_KEY: ${ENGINE_API_KEY}
+  SCHEMA_TAG: ${ENGINE_SCHEMA_TAG}
+
+# This key holds various properties that allow our GraphQL server to map to your Rock Instance
+ROCK_MAPPINGS:
+  INTERACTIONS:
+    # Name of the InteractionChannel that will be created
+    CHANNEL_NAME: Apollos App
+    # Name of the InteractionComponent that will be created for Content Items
+    COMPONENT_NAME: Apollos Content Item
+    # 512 is "Mobile App"
+    CHANNEL_MEDIUM_TYPE_ID: 512
+
+  CONTENT_ITEM:
+    ContentSeriesContentItem:
+      # When resolving "ContentSeriesContentItem" look in rock for a "ContentChannelItem"
+      EntityType: ContentChannelItem
+      # Used to define the subset of content channels types that use this specific type.
+      ContentChannelTypeId: [6, 7]
+    DevotionalContentItem:
+      EntityType: ContentChannelItem
+      ContentChannelTypeId: [1]
+    MediaContentItem:
+      EntityType: ContentChannelItem
+    UniversalContentItem:
+      EntityType: ContentChannelItem
+    WeekendContentItem:
+      ContentChannelId: [5]
+      EntityType: ContentChannelItem
+    ContentItem:
+      EntityType: ContentChannelItem
+
+  DATAVIEW_CATEGORIES:
+    # Id of the category used to store all persona dataviews
+    PersonaId: 210
+
+  # Apollos will pull these content channels and expose them in the app on the discover screen.
+  DISCOVER_CONTENT_CHANNEL_IDS:
+    - 2
+    - 3
+    - 4
+    - 6
+    - 8
+  # Apollos will pull content items from these channels and expose them on the user feed
+  # However, it will not expose the channel itself.
+  # These channels are also pulled when indexing searchable content.
+  FEED_CONTENT_CHANNEL_IDS:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 8
+
+  CAMPAIGN_CHANNEL_IDS:
+    - 11
+
+  SERMON_CHANNEL_ID: 5
+
+  SERVING_GROUP_TYPE_ID: 23
+  COMMUNITY_GROUP_TYPE_ID: 25
+  FAMILY_GROUP_TYPE_ID: 10
+
+HOME_FEATURES:
+  - title: FOR YOU
+    algorithms: [SERMON_CHILDREN, PERSONA_FEED]
+    subtitle: Explore what God calls you to today
+  - title: BULLETIN
+    subtitle: What's happening at apollos?
+    algorithms:
+      - type: CONTENT_CHANNEL
+        arguments:
+          contentChannelId: 13
+      - type: UPCOMING_EVENTS
+
+
+# Default mapping of field types -> ids. There's probably no reason to edit this.
+ROCK_CONSTANTS:
+  TEXT: 1
+  MULTI_SELECT: 2
+  BOOLEAN: 3
+  COLOR: 4
+  SINGLE_SELECT: 6
+  INTEGER: 7
+  PAGE_REFERENCE: 8
+  IMAGE: 10
+  DATE: 11
+  DECIMAL: 14
+  DEFINED_TYPE: 15
+  DEFINED_VALUE: 16
+  PERSON: 18
+  HTML: 20
+  MEMO: 21
+  GROUP_TYPES: 22
+  GROUP: 23
+  CAMPUSES: 26
+  ENTITY_TYPE: 29
+  CAMPUS: 30
+  EMAIL_TEMPLATE: 31
+  FILE: 32
+  GROUP_TYPE: 33
+  KEY_VALUE_LIST: 34
+  BINARY_FILE_TYPE: 35
+  WORKFLOW_TYPE: 36
+  BINARY_FILE: 37
+  FINANCIAL_ACCOUNT: 38
+  FINANCIAL_ACCOUNTS: 39
+  COMPONENT: 40
+  COMPONENTS: 41
+  CATEGORIES: 42
+  GROUP_ROLE: 43
+  CATEGORY: 44
+  LOCATION: 45
+  DATE_RANGE: 46
+  DECIMAL_RANGE: 47
+  INTEGER_RANGE: 48
+  TIME: 49
+  GROUP_LOCATION_TYPE: 50
+  CODE_EDITOR: 51
+  PERSON_BADGES: 52
+  SITE: 53
+  COMMUNICATION_TEMPLATE: 54
+  DAY_OF_WEEK: 55
+  DAYS_OF_WEEK: 56
+  REMOTE_AUTHS: 57
+  COMPARISON: 58
+  METRIC_ENTITY: 59
+  WORKFLOW_ACTIVITY: 60
+  WORKFLOW_ATTRIBUTE: 61
+  METRICS: 62
+  ENTITY: 63
+  METRIC_CATEGORIES: 64
+  WORKFLOW_TEXT_OR_ATTRIBUTE: 65
+  SLIDING_DATE_RANGE: 66
+  GROUP_TYPE_GROUP: 67
+  SECURITY_ROLE: 68
+  VALUE_LIST: 69
+  CURRENCY: 70
+  EMAIL: 71
+  URL_LINK: 72
+  WORKFLOW_TYPES: 73
+  ATTRIBUTE: 74
+  SCHEDULES: 75
+  CONTENT_CHANNEL: 76
+  AUDIO_FILE: 77
+  AUDIO_URL: 78
+  VIDEO_FILE: 79
+  VIDEO_URL: 80
+  ENCRYPTED_TEXT: 81
+  FILTER_DATE: 82
+  DATE_TIME: 83
+  DEFINED_VALUE_RANGE: 84
+  RATING: 85
+  SYSTEM_EMAIL: 86
+  FINANCIAL_GATEWAY: 87
+  GROUP_AND_ROLE: 88
+  NOTE_TYPE: 89
+  NOTE_TYPES: 90
+  EVENT_CALENDAR: 91
+  EVENT_ITEM: 92
+  CONNECTION_ACTIVITY_TYPE: 93
+  CONNECTION_OPPORTUNITY: 94
+  CONNECTION_REQUEST: 95
+  CONNECTION_STATE: 96
+  CONNECTION_STATUS: 97
+  CONNECTION_TYPE: 98
+  CONNECTION_TYPES: 99
+  MERGE_TEMPLATE: 100
+  RANGE_SLIDER: 101
+  BINARY_FILE_TYPES: 102
+  MARKDOWN: 103
+  DATA_VIEW: 104
+  PHONE_NUMBER: 105
+  SCHEDULE: 106
+  LAVA_COMMANDS: 107
+  ADDRESS: 108
+  BENEVOLENCE_REQUEST: 109
+  CONTENT_CHANNEL_TYPES: 110
+  WORKFLOW: 111
+  SSN: 112
+  MATRIX: 113
+  LAVA: 114
+  DATA_VIEWS: 115
+  COMMUNICATION_PREFERENCE: 116
+  INTERACTION_CHANNEL: 117
+  GROUP_MEMBER: 118
+  TIME_ZONE: 119
+  LABEL: 120

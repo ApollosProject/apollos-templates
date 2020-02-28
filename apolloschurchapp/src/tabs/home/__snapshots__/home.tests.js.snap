@@ -1,0 +1,3085 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User Home Feed Query should return correct query results 1`] = `
+<BVLinearGradient
+  colors={
+    Array [
+      4294967295,
+      4294506484,
+    ]
+  }
+  endPoint={
+    Object {
+      "x": 0.5,
+      "y": 1,
+    }
+  }
+  locations={null}
+  startPoint={
+    Object {
+      "x": 0.5,
+      "y": 0,
+    }
+  }
+  style={
+    Object {
+      "flex": 1,
+      "height": "100%",
+    }
+  }
+>
+  <View
+    onLayout={[Function]}
+    pointerEvents="box-none"
+    style={
+      Object {
+        "paddingBottom": 0,
+        "paddingLeft": 0,
+        "paddingRight": 0,
+        "paddingTop": 20,
+      }
+    }
+  >
+    <RCTScrollView
+      ListHeaderComponent={
+        <React.Fragment>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(Image)))))
+            source={
+              Object {
+                "testUri": "../../../src/tabs/home/wordmark.png",
+              }
+            }
+          />
+          <Query
+            fetchPolicy="cache-and-network"
+            query={
+              Object {
+                "definitions": Array [
+                  Object {
+                    "directives": Array [],
+                    "kind": "OperationDefinition",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "campaigns",
+                    },
+                    "operation": "query",
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "campaigns",
+                          },
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "edges",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "node",
+                                      },
+                                      "selectionSet": Object {
+                                        "kind": "SelectionSet",
+                                        "selections": Array [
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "childContentItemsConnection",
+                                            },
+                                            "selectionSet": Object {
+                                              "kind": "SelectionSet",
+                                              "selections": Array [
+                                                Object {
+                                                  "alias": undefined,
+                                                  "arguments": Array [],
+                                                  "directives": Array [],
+                                                  "kind": "Field",
+                                                  "name": Object {
+                                                    "kind": "Name",
+                                                    "value": "edges",
+                                                  },
+                                                  "selectionSet": Object {
+                                                    "kind": "SelectionSet",
+                                                    "selections": Array [
+                                                      Object {
+                                                        "alias": undefined,
+                                                        "arguments": Array [],
+                                                        "directives": Array [],
+                                                        "kind": "Field",
+                                                        "name": Object {
+                                                          "kind": "Name",
+                                                          "value": "node",
+                                                        },
+                                                        "selectionSet": Object {
+                                                          "kind": "SelectionSet",
+                                                          "selections": Array [
+                                                            Object {
+                                                              "directives": Array [],
+                                                              "kind": "FragmentSpread",
+                                                              "name": Object {
+                                                                "kind": "Name",
+                                                                "value": "contentCardFragment",
+                                                              },
+                                                            },
+                                                          ],
+                                                        },
+                                                      },
+                                                    ],
+                                                  },
+                                                },
+                                              ],
+                                            },
+                                          },
+                                        ],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                      ],
+                    },
+                    "variableDefinitions": Array [],
+                  },
+                  Object {
+                    "directives": Array [],
+                    "kind": "FragmentDefinition",
+                    "name": Object {
+                      "kind": "Name",
+                      "value": "contentCardFragment",
+                    },
+                    "selectionSet": Object {
+                      "kind": "SelectionSet",
+                      "selections": Array [
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "id",
+                          },
+                          "selectionSet": undefined,
+                        },
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "__typename",
+                          },
+                          "selectionSet": undefined,
+                        },
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "coverImage",
+                          },
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "sources",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "uri",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "theme",
+                          },
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "type",
+                                },
+                                "selectionSet": undefined,
+                              },
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "colors",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "primary",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "secondary",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "screen",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "paper",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                        },
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "title",
+                          },
+                          "selectionSet": undefined,
+                        },
+                        Object {
+                          "alias": Object {
+                            "kind": "Name",
+                            "value": "hyphenatedTitle",
+                          },
+                          "arguments": Array [
+                            Object {
+                              "kind": "Argument",
+                              "name": Object {
+                                "kind": "Name",
+                                "value": "hyphenated",
+                              },
+                              "value": Object {
+                                "kind": "BooleanValue",
+                                "value": true,
+                              },
+                            },
+                          ],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "title",
+                          },
+                          "selectionSet": undefined,
+                        },
+                        Object {
+                          "alias": undefined,
+                          "arguments": Array [],
+                          "directives": Array [],
+                          "kind": "Field",
+                          "name": Object {
+                            "kind": "Name",
+                            "value": "summary",
+                          },
+                          "selectionSet": undefined,
+                        },
+                        Object {
+                          "directives": Array [],
+                          "kind": "InlineFragment",
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "videos",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "sources",
+                                      },
+                                      "selectionSet": Object {
+                                        "kind": "SelectionSet",
+                                        "selections": Array [
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "uri",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                        ],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "parentChannel",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "id",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "name",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                          "typeCondition": Object {
+                            "kind": "NamedType",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "MediaContentItem",
+                            },
+                          },
+                        },
+                        Object {
+                          "directives": Array [],
+                          "kind": "InlineFragment",
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "videos",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "sources",
+                                      },
+                                      "selectionSet": Object {
+                                        "kind": "SelectionSet",
+                                        "selections": Array [
+                                          Object {
+                                            "alias": undefined,
+                                            "arguments": Array [],
+                                            "directives": Array [],
+                                            "kind": "Field",
+                                            "name": Object {
+                                              "kind": "Name",
+                                              "value": "uri",
+                                            },
+                                            "selectionSet": undefined,
+                                          },
+                                        ],
+                                      },
+                                    },
+                                  ],
+                                },
+                              },
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "parentChannel",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "id",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "name",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                          "typeCondition": Object {
+                            "kind": "NamedType",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "WeekendContentItem",
+                            },
+                          },
+                        },
+                        Object {
+                          "directives": Array [],
+                          "kind": "InlineFragment",
+                          "selectionSet": Object {
+                            "kind": "SelectionSet",
+                            "selections": Array [
+                              Object {
+                                "alias": undefined,
+                                "arguments": Array [],
+                                "directives": Array [],
+                                "kind": "Field",
+                                "name": Object {
+                                  "kind": "Name",
+                                  "value": "parentChannel",
+                                },
+                                "selectionSet": Object {
+                                  "kind": "SelectionSet",
+                                  "selections": Array [
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "id",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                    Object {
+                                      "alias": undefined,
+                                      "arguments": Array [],
+                                      "directives": Array [],
+                                      "kind": "Field",
+                                      "name": Object {
+                                        "kind": "Name",
+                                        "value": "name",
+                                      },
+                                      "selectionSet": undefined,
+                                    },
+                                  ],
+                                },
+                              },
+                            ],
+                          },
+                          "typeCondition": Object {
+                            "kind": "NamedType",
+                            "name": Object {
+                              "kind": "Name",
+                              "value": "DevotionalContentItem",
+                            },
+                          },
+                        },
+                      ],
+                    },
+                    "typeCondition": Object {
+                      "kind": "NamedType",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "ContentItem",
+                      },
+                    },
+                  },
+                ],
+                "kind": "Document",
+                "loc": Object {
+                  "end": 982,
+                  "start": 0,
+                },
+              }
+            }
+          >
+            [Function]
+          </Query>
+          <Memo
+            navigation={
+              Object {
+                "getParam": [MockFunction],
+                "navigate": [MockFunction],
+                "setParams": [MockFunction],
+              }
+            }
+          />
+        </React.Fragment>
+      }
+      data={
+        Array [
+          Object {
+            "channelType": "",
+            "coverImage": Array [],
+            "id": "fakeId0",
+            "isLoading": true,
+            "parentChannel": Object {
+              "id": "",
+              "name": "",
+            },
+            "title": "",
+          },
+          Object {
+            "channelType": "",
+            "coverImage": Array [],
+            "id": "fakeId1",
+            "isLoading": true,
+            "parentChannel": Object {
+              "id": "",
+              "name": "",
+            },
+            "title": "",
+          },
+          Object {
+            "channelType": "",
+            "coverImage": Array [],
+            "id": "fakeId2",
+            "isLoading": true,
+            "parentChannel": Object {
+              "id": "",
+              "name": "",
+            },
+            "title": "",
+          },
+          Object {
+            "channelType": "",
+            "coverImage": Array [],
+            "id": "fakeId3",
+            "isLoading": true,
+            "parentChannel": Object {
+              "id": "",
+              "name": "",
+            },
+            "title": "",
+          },
+          Object {
+            "channelType": "",
+            "coverImage": Array [],
+            "id": "fakeId4",
+            "isLoading": true,
+            "parentChannel": Object {
+              "id": "",
+              "name": "",
+            },
+            "title": "",
+          },
+          Object {
+            "channelType": "",
+            "coverImage": Array [],
+            "id": "fakeId5",
+            "isLoading": true,
+            "parentChannel": Object {
+              "id": "",
+              "name": "",
+            },
+            "title": "",
+          },
+          Object {
+            "channelType": "",
+            "coverImage": Array [],
+            "id": "fakeId6",
+            "isLoading": true,
+            "parentChannel": Object {
+              "id": "",
+              "name": "",
+            },
+            "title": "",
+          },
+          Object {
+            "channelType": "",
+            "coverImage": Array [],
+            "id": "fakeId7",
+            "isLoading": true,
+            "parentChannel": Object {
+              "id": "",
+              "name": "",
+            },
+            "title": "",
+          },
+          Object {
+            "channelType": "",
+            "coverImage": Array [],
+            "id": "fakeId8",
+            "isLoading": true,
+            "parentChannel": Object {
+              "id": "",
+              "name": "",
+            },
+            "title": "",
+          },
+          Object {
+            "channelType": "",
+            "coverImage": Array [],
+            "id": "fakeId9",
+            "isLoading": true,
+            "parentChannel": Object {
+              "id": "",
+              "name": "",
+            },
+            "title": "",
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onContentSizeChange={[Function]}
+      onEndReached={[Function]}
+      onEndReachedThreshold={0.7}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onPressItem={[Function]}
+      onRefresh={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      refreshControl={
+        <RefreshControlMock
+          onRefresh={[Function]}
+          refreshing={true}
+        />
+      }
+      refreshing={true}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <RCTRefreshControl />
+      <View>
+        <View
+          onLayout={[Function]}
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../src/tabs/home/wordmark.png",
+              }
+            }
+            style={
+              Object {
+                "alignSelf": "center",
+                "height": 16,
+                "margin": 16,
+                "resizeMode": "contain",
+              }
+            }
+          />
+          <View
+            accessible={true}
+            clickable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              cardColor="#00676D"
+              isLoading={true}
+              style={
+                Object {
+                  "backgroundColor": "#00676D",
+                  "borderRadius": 16,
+                  "marginHorizontal": 16,
+                  "marginVertical": 12,
+                  "shadowColor": "rgba(165, 165, 165, 0.6)",
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 6,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <Image
+                      maxAspectRatio={1}
+                      minAspectRatio={1}
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <BVLinearGradient
+                    colors={
+                      Array [
+                        1725684697,
+                        4292598745,
+                      ]
+                    }
+                    endPoint={
+                      Object {
+                        "x": 0,
+                        "y": 1,
+                      }
+                    }
+                    locations={
+                      Array [
+                        0,
+                        0.8,
+                      ]
+                    }
+                    overlayColor="#DBDBD9"
+                    overlayType="featured"
+                    startPoint={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "marginTop": "-40%",
+                      "paddingBottom": 32,
+                      "paddingHorizontal": 24,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    hasSummary={false}
+                    style={
+                      Object {
+                        "alignItems": "flex-end",
+                        "flexDirection": "row",
+                        "paddingTop": 16,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "flex": 1,
+                          "marginRight": 16,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 36,
+                            "marginVertical": 2.6999999999999993,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+          <View
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 12,
+                      "marginVertical": 3,
+                      "width": "50%",
+                    }
+                  }
+                />
+                <View
+                  style={
+                    Object {
+                      "alignSelf": "stretch",
+                      "backgroundColor": "#A5A5A5",
+                      "borderRadius": 16,
+                      "height": 24,
+                      "marginVertical": 1.8000000000000007,
+                      "width": "100%",
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#FFFFFF",
+                    "borderBottomWidth": 0,
+                    "borderColor": "rgba(165, 165, 165, 0.6)",
+                    "borderLeftWidth": 0,
+                    "borderRightWidth": 0,
+                    "borderTopWidth": 0,
+                    "marginBottom": 16,
+                  }
+                }
+              >
+                <View
+                  accessible={true}
+                  clickable={true}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "transform": Array [
+                        Object {
+                          "scale": 1,
+                        },
+                      ],
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#FFFFFF",
+                        "flexDirection": "row",
+                        "justifyContent": "flex-start",
+                        "paddingHorizontal": 16,
+                        "paddingVertical": 4,
+                      }
+                    }
+                  >
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 64,
+                          "marginRight": 16,
+                          "width": 64,
+                        }
+                      }
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={
+                          Array [
+                            Object {
+                              "cache": "force-cache",
+                              "uri": "",
+                              "url": "",
+                            },
+                          ]
+                        }
+                        style={
+                          Object {
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 64,
+                            "marginRight": 16,
+                            "opacity": 0,
+                            "width": 64,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "borderBottomWidth": 0.5,
+                          "borderColor": "rgba(165, 165, 165, 0.6)",
+                          "flex": 1,
+                          "height": 68,
+                          "justifyContent": "center",
+                          "marginTop": 6.4,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 12,
+                            "marginVertical": 3,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+                <View
+                  accessible={true}
+                  clickable={true}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "transform": Array [
+                        Object {
+                          "scale": 1,
+                        },
+                      ],
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#FFFFFF",
+                        "flexDirection": "row",
+                        "justifyContent": "flex-start",
+                        "paddingHorizontal": 16,
+                        "paddingVertical": 4,
+                      }
+                    }
+                  >
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 64,
+                          "marginRight": 16,
+                          "width": 64,
+                        }
+                      }
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={
+                          Array [
+                            Object {
+                              "cache": "force-cache",
+                              "uri": "",
+                              "url": "",
+                            },
+                          ]
+                        }
+                        style={
+                          Object {
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 64,
+                            "marginRight": 16,
+                            "opacity": 0,
+                            "width": 64,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "borderBottomWidth": 0.5,
+                          "borderColor": "rgba(165, 165, 165, 0.6)",
+                          "flex": 1,
+                          "height": 68,
+                          "justifyContent": "center",
+                          "marginTop": 6.4,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 12,
+                            "marginVertical": 3,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+                <View
+                  accessible={true}
+                  clickable={true}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "transform": Array [
+                        Object {
+                          "scale": 1,
+                        },
+                      ],
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#FFFFFF",
+                        "flexDirection": "row",
+                        "justifyContent": "flex-start",
+                        "paddingHorizontal": 16,
+                        "paddingVertical": 4,
+                      }
+                    }
+                  >
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 64,
+                          "marginRight": 16,
+                          "width": 64,
+                        }
+                      }
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={
+                          Array [
+                            Object {
+                              "cache": "force-cache",
+                              "uri": "",
+                              "url": "",
+                            },
+                          ]
+                        }
+                        style={
+                          Object {
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 64,
+                            "marginRight": 16,
+                            "opacity": 0,
+                            "width": 64,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "borderBottomWidth": 0.5,
+                          "borderColor": "rgba(165, 165, 165, 0.6)",
+                          "flex": 1,
+                          "height": 68,
+                          "justifyContent": "center",
+                          "marginTop": 6.4,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 12,
+                            "marginVertical": 3,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+                <View
+                  accessible={true}
+                  clickable={true}
+                  onClick={[Function]}
+                  onResponderGrant={[Function]}
+                  onResponderMove={[Function]}
+                  onResponderRelease={[Function]}
+                  onResponderTerminate={[Function]}
+                  onResponderTerminationRequest={[Function]}
+                  onStartShouldSetResponder={[Function]}
+                  style={
+                    Object {
+                      "transform": Array [
+                        Object {
+                          "scale": 1,
+                        },
+                      ],
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#FFFFFF",
+                        "flexDirection": "row",
+                        "justifyContent": "flex-start",
+                        "paddingHorizontal": 16,
+                        "paddingVertical": 4,
+                      }
+                    }
+                  >
+                    <View
+                      animate={null}
+                      customAnimate={null}
+                      onReady={false}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 64,
+                          "marginRight": 16,
+                          "width": 64,
+                        }
+                      }
+                    >
+                      <Image
+                        onLoad={[Function]}
+                        source={
+                          Array [
+                            Object {
+                              "cache": "force-cache",
+                              "uri": "",
+                              "url": "",
+                            },
+                          ]
+                        }
+                        style={
+                          Object {
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 64,
+                            "marginRight": 16,
+                            "opacity": 0,
+                            "width": 64,
+                          }
+                        }
+                      />
+                    </View>
+                    <View
+                      style={
+                        Object {
+                          "borderBottomWidth": 0.5,
+                          "borderColor": "rgba(165, 165, 165, 0.6)",
+                          "flex": 1,
+                          "height": 68,
+                          "justifyContent": "center",
+                          "marginTop": 6.4,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "alignSelf": "stretch",
+                            "backgroundColor": "#A5A5A5",
+                            "borderRadius": 16,
+                            "height": 12,
+                            "marginVertical": 3,
+                            "width": "100%",
+                          }
+                        }
+                      />
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            clickable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              isLoading={true}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "marginHorizontal": 16,
+                  "marginVertical": 12,
+                  "shadowColor": "rgba(165, 165, 165, 0.6)",
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 6,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <Image
+                      maxAspectRatio={1.78}
+                      minAspectRatio={1.2}
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <BVLinearGradient
+                    colors={
+                      Array [
+                        2147483648,
+                        0,
+                      ]
+                    }
+                    endPoint={
+                      Object {
+                        "x": 0,
+                        "y": 1,
+                      }
+                    }
+                    locations={
+                      Array [
+                        0,
+                        1,
+                      ]
+                    }
+                    overlayColor="#000000"
+                    overlayType="gradient-top"
+                    startPoint={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "paddingBottom": 32,
+                      "paddingHorizontal": 24,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "marginBottom": 16,
+                        "marginTop": -32,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 32,
+                          "paddingHorizontal": 12,
+                          "width": 64,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            clickable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              isLoading={true}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "marginHorizontal": 16,
+                  "marginVertical": 12,
+                  "shadowColor": "rgba(165, 165, 165, 0.6)",
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 6,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <Image
+                      maxAspectRatio={1.78}
+                      minAspectRatio={1.2}
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <BVLinearGradient
+                    colors={
+                      Array [
+                        2147483648,
+                        0,
+                      ]
+                    }
+                    endPoint={
+                      Object {
+                        "x": 0,
+                        "y": 1,
+                      }
+                    }
+                    locations={
+                      Array [
+                        0,
+                        1,
+                      ]
+                    }
+                    overlayColor="#000000"
+                    overlayType="gradient-top"
+                    startPoint={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "paddingBottom": 32,
+                      "paddingHorizontal": 24,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "marginBottom": 16,
+                        "marginTop": -32,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 32,
+                          "paddingHorizontal": 12,
+                          "width": 64,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            clickable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              isLoading={true}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "marginHorizontal": 16,
+                  "marginVertical": 12,
+                  "shadowColor": "rgba(165, 165, 165, 0.6)",
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 6,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <Image
+                      maxAspectRatio={1.78}
+                      minAspectRatio={1.2}
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <BVLinearGradient
+                    colors={
+                      Array [
+                        2147483648,
+                        0,
+                      ]
+                    }
+                    endPoint={
+                      Object {
+                        "x": 0,
+                        "y": 1,
+                      }
+                    }
+                    locations={
+                      Array [
+                        0,
+                        1,
+                      ]
+                    }
+                    overlayColor="#000000"
+                    overlayType="gradient-top"
+                    startPoint={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "paddingBottom": 32,
+                      "paddingHorizontal": 24,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "marginBottom": 16,
+                        "marginTop": -32,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 32,
+                          "paddingHorizontal": 12,
+                          "width": 64,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            clickable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              isLoading={true}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "marginHorizontal": 16,
+                  "marginVertical": 12,
+                  "shadowColor": "rgba(165, 165, 165, 0.6)",
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 6,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <Image
+                      maxAspectRatio={1.78}
+                      minAspectRatio={1.2}
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <BVLinearGradient
+                    colors={
+                      Array [
+                        2147483648,
+                        0,
+                      ]
+                    }
+                    endPoint={
+                      Object {
+                        "x": 0,
+                        "y": 1,
+                      }
+                    }
+                    locations={
+                      Array [
+                        0,
+                        1,
+                      ]
+                    }
+                    overlayColor="#000000"
+                    overlayType="gradient-top"
+                    startPoint={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "paddingBottom": 32,
+                      "paddingHorizontal": 24,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "marginBottom": 16,
+                        "marginTop": -32,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 32,
+                          "paddingHorizontal": 12,
+                          "width": 64,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            clickable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              isLoading={true}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "marginHorizontal": 16,
+                  "marginVertical": 12,
+                  "shadowColor": "rgba(165, 165, 165, 0.6)",
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 6,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <Image
+                      maxAspectRatio={1.78}
+                      minAspectRatio={1.2}
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <BVLinearGradient
+                    colors={
+                      Array [
+                        2147483648,
+                        0,
+                      ]
+                    }
+                    endPoint={
+                      Object {
+                        "x": 0,
+                        "y": 1,
+                      }
+                    }
+                    locations={
+                      Array [
+                        0,
+                        1,
+                      ]
+                    }
+                    overlayColor="#000000"
+                    overlayType="gradient-top"
+                    startPoint={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "paddingBottom": 32,
+                      "paddingHorizontal": 24,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "marginBottom": 16,
+                        "marginTop": -32,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 32,
+                          "paddingHorizontal": 12,
+                          "width": 64,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            clickable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              isLoading={true}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "marginHorizontal": 16,
+                  "marginVertical": 12,
+                  "shadowColor": "rgba(165, 165, 165, 0.6)",
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 6,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <Image
+                      maxAspectRatio={1.78}
+                      minAspectRatio={1.2}
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <BVLinearGradient
+                    colors={
+                      Array [
+                        2147483648,
+                        0,
+                      ]
+                    }
+                    endPoint={
+                      Object {
+                        "x": 0,
+                        "y": 1,
+                      }
+                    }
+                    locations={
+                      Array [
+                        0,
+                        1,
+                      ]
+                    }
+                    overlayColor="#000000"
+                    overlayType="gradient-top"
+                    startPoint={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "paddingBottom": 32,
+                      "paddingHorizontal": 24,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "marginBottom": 16,
+                        "marginTop": -32,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 32,
+                          "paddingHorizontal": 12,
+                          "width": 64,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            clickable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              isLoading={true}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "marginHorizontal": 16,
+                  "marginVertical": 12,
+                  "shadowColor": "rgba(165, 165, 165, 0.6)",
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 6,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <Image
+                      maxAspectRatio={1.78}
+                      minAspectRatio={1.2}
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <BVLinearGradient
+                    colors={
+                      Array [
+                        2147483648,
+                        0,
+                      ]
+                    }
+                    endPoint={
+                      Object {
+                        "x": 0,
+                        "y": 1,
+                      }
+                    }
+                    locations={
+                      Array [
+                        0,
+                        1,
+                      ]
+                    }
+                    overlayColor="#000000"
+                    overlayType="gradient-top"
+                    startPoint={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "paddingBottom": 32,
+                      "paddingHorizontal": 24,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "marginBottom": 16,
+                        "marginTop": -32,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 32,
+                          "paddingHorizontal": 12,
+                          "width": 64,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            clickable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              isLoading={true}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "marginHorizontal": 16,
+                  "marginVertical": 12,
+                  "shadowColor": "rgba(165, 165, 165, 0.6)",
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 6,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <Image
+                      maxAspectRatio={1.78}
+                      minAspectRatio={1.2}
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <BVLinearGradient
+                    colors={
+                      Array [
+                        2147483648,
+                        0,
+                      ]
+                    }
+                    endPoint={
+                      Object {
+                        "x": 0,
+                        "y": 1,
+                      }
+                    }
+                    locations={
+                      Array [
+                        0,
+                        1,
+                      ]
+                    }
+                    overlayColor="#000000"
+                    overlayType="gradient-top"
+                    startPoint={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "paddingBottom": 32,
+                      "paddingHorizontal": 24,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "marginBottom": 16,
+                        "marginTop": -32,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 32,
+                          "paddingHorizontal": 12,
+                          "width": 64,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            clickable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              isLoading={true}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "marginHorizontal": 16,
+                  "marginVertical": 12,
+                  "shadowColor": "rgba(165, 165, 165, 0.6)",
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 6,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <Image
+                      maxAspectRatio={1.78}
+                      minAspectRatio={1.2}
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <BVLinearGradient
+                    colors={
+                      Array [
+                        2147483648,
+                        0,
+                      ]
+                    }
+                    endPoint={
+                      Object {
+                        "x": 0,
+                        "y": 1,
+                      }
+                    }
+                    locations={
+                      Array [
+                        0,
+                        1,
+                      ]
+                    }
+                    overlayColor="#000000"
+                    overlayType="gradient-top"
+                    startPoint={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "paddingBottom": 32,
+                      "paddingHorizontal": 24,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "marginBottom": 16,
+                        "marginTop": -32,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 32,
+                          "paddingHorizontal": 12,
+                          "width": 64,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        >
+          <View
+            accessible={true}
+            clickable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "transform": Array [
+                  Object {
+                    "scale": 1,
+                  },
+                ],
+              }
+            }
+          >
+            <View
+              isLoading={true}
+              style={
+                Object {
+                  "backgroundColor": "#FFFFFF",
+                  "borderRadius": 16,
+                  "marginHorizontal": 16,
+                  "marginVertical": 12,
+                  "shadowColor": "rgba(165, 165, 165, 0.6)",
+                  "shadowOffset": Object {
+                    "height": 1,
+                    "width": 0,
+                  },
+                  "shadowOpacity": 1,
+                  "shadowRadius": 6,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "borderRadius": 16,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#A5A5A5",
+                      "overflow": "hidden",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <View
+                    animate={null}
+                    customAnimate={null}
+                    onReady={false}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  >
+                    <Image
+                      maxAspectRatio={1.78}
+                      minAspectRatio={1.2}
+                      onLoad={[Function]}
+                      source={Array []}
+                      style={
+                        Object {
+                          "aspectRatio": 1,
+                          "backgroundColor": "#A5A5A5",
+                          "opacity": 0,
+                          "resizeMode": "cover",
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <BVLinearGradient
+                    colors={
+                      Array [
+                        2147483648,
+                        0,
+                      ]
+                    }
+                    endPoint={
+                      Object {
+                        "x": 0,
+                        "y": 1,
+                      }
+                    }
+                    locations={
+                      Array [
+                        0,
+                        1,
+                      ]
+                    }
+                    overlayColor="#000000"
+                    overlayType="gradient-top"
+                    startPoint={
+                      Object {
+                        "x": 0,
+                        "y": 0,
+                      }
+                    }
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  />
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-start",
+                      "paddingBottom": 32,
+                      "paddingHorizontal": 24,
+                      "paddingVertical": 16,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "marginBottom": 16,
+                        "marginTop": -32,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignItems": "center",
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 32,
+                          "paddingHorizontal": 12,
+                          "width": 64,
+                        }
+                      }
+                    />
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+</BVLinearGradient>
+`;

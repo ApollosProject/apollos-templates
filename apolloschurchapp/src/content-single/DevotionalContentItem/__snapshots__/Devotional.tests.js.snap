@@ -1,0 +1,1094 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the Devotional component renders a devotional 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    collapsable={false}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#eee",
+        "flex": 1,
+        "flexDirection": "column-reverse",
+        "overflow": "hidden",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      <View
+        pointerEvents="auto"
+        style={
+          Object {
+            "bottom": 0,
+            "left": 0,
+            "opacity": 1,
+            "paddingTop": 64,
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+              Object {
+                "translateY": 0,
+              },
+            ],
+          }
+        }
+      >
+        <View
+          accessibilityElementsHidden={false}
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "flex": 1,
+            }
+          }
+        >
+          <BVLinearGradient
+            colors={
+              Array [
+                4294967295,
+                4294506484,
+              ]
+            }
+            endPoint={
+              Object {
+                "x": 0.5,
+                "y": 1,
+              }
+            }
+            locations={null}
+            startPoint={
+              Object {
+                "x": 0.5,
+                "y": 0,
+              }
+            }
+            style={
+              Object {
+                "flex": 1,
+                "height": "100%",
+              }
+            }
+          >
+            <RCTSafeAreaView
+              emulateUnlessSupported={true}
+              forceInset={
+                Object {
+                  "top": "always",
+                }
+              }
+              style={
+                Object {
+                  "flex": 1,
+                }
+              }
+            >
+              <View
+                collapsable={false}
+                style={
+                  Array [
+                    Object {
+                      "flex": 1,
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "flex": 1,
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#FFFFFF",
+                      "elevation": 4,
+                      "shadowColor": "black",
+                      "shadowOffset": Object {
+                        "height": 0.5,
+                      },
+                      "shadowOpacity": 0.1,
+                      "shadowRadius": 0.5,
+                      "zIndex": 1,
+                    }
+                  }
+                >
+                  <View
+                    pointerEvents="none"
+                    style={
+                      Object {
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "absolute",
+                        "right": 0,
+                        "top": 0,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#6EC5B8",
+                          "bottom": 0,
+                          "height": 3,
+                          "left": 0,
+                          "position": "absolute",
+                          "transform": Array [
+                            Object {
+                              "translateX": 0,
+                            },
+                          ],
+                          "width": 375,
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "overflow": "scroll",
+                      }
+                    }
+                  >
+                    <RCTScrollView
+                      alwaysBounceHorizontal={false}
+                      automaticallyAdjustContentInsets={false}
+                      contentContainerStyle={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                            "flexWrap": "nowrap",
+                          },
+                          Object {
+                            "flex": 1,
+                          },
+                        ]
+                      }
+                      horizontal={true}
+                      keyboardShouldPersistTaps="handled"
+                      onMomentumScrollBegin={[Function]}
+                      onMomentumScrollEnd={[Function]}
+                      onScroll={[Function]}
+                      onScrollBeginDrag={[Function]}
+                      onScrollEndDrag={[Function]}
+                      overScrollMode="never"
+                      scrollEventThrottle={1}
+                      scrollsToTop={false}
+                      showsHorizontalScrollIndicator={false}
+                    >
+                      <View>
+                        <View
+                          accessibilityLabel="DEVOTIONAL"
+                          accessible={true}
+                          clickable={true}
+                          isTVSelectable={true}
+                          onClick={[Function]}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "flex": 1,
+                              "opacity": 1,
+                            }
+                          }
+                        >
+                          <View
+                            pointerEvents="none"
+                            style={
+                              Object {
+                                "flex": 1,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "alignItems": "center",
+                                  "flex": 1,
+                                  "justifyContent": "center",
+                                  "opacity": 1,
+                                  "padding": 8,
+                                }
+                              }
+                            >
+                              <Text
+                                padded={true}
+                                style={
+                                  Object {
+                                    "color": "#303030",
+                                    "fontFamily": "InterUI-Bold",
+                                    "fontSize": 16,
+                                    "lineHeight": 24,
+                                    "paddingBottom": 12,
+                                    "paddingTop": 15.84,
+                                  }
+                                }
+                              >
+                                Devotional
+                              </Text>
+                            </View>
+                          </View>
+                        </View>
+                        <View
+                          accessibilityLabel="SCRIPTURE"
+                          accessible={true}
+                          clickable={true}
+                          isTVSelectable={true}
+                          onClick={[Function]}
+                          onResponderGrant={[Function]}
+                          onResponderMove={[Function]}
+                          onResponderRelease={[Function]}
+                          onResponderTerminate={[Function]}
+                          onResponderTerminationRequest={[Function]}
+                          onStartShouldSetResponder={[Function]}
+                          style={
+                            Object {
+                              "flex": 1,
+                              "opacity": 1,
+                            }
+                          }
+                        >
+                          <View
+                            pointerEvents="none"
+                            style={
+                              Object {
+                                "flex": 1,
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "alignItems": "center",
+                                  "flex": 1,
+                                  "justifyContent": "center",
+                                  "opacity": 0.7,
+                                  "padding": 8,
+                                }
+                              }
+                            >
+                              <Text
+                                padded={true}
+                                style={
+                                  Object {
+                                    "color": "#303030",
+                                    "fontFamily": "InterUI-Bold",
+                                    "fontSize": 16,
+                                    "lineHeight": 24,
+                                    "paddingBottom": 12,
+                                    "paddingTop": 15.84,
+                                  }
+                                }
+                              >
+                                Scripture
+                              </Text>
+                            </View>
+                          </View>
+                        </View>
+                      </View>
+                    </RCTScrollView>
+                  </View>
+                </View>
+                <View
+                  onLayout={[Function]}
+                  style={
+                    Object {
+                      "flex": 1,
+                    }
+                  }
+                >
+                  <View
+                    collapsable={false}
+                    onGestureHandlerEvent={[Function]}
+                    onGestureHandlerStateChange={[Function]}
+                    style={
+                      Object {
+                        "alignItems": "stretch",
+                        "flex": 1,
+                        "flexDirection": "row",
+                        "transform": Array [
+                          Object {
+                            "translateX": 0,
+                          },
+                        ],
+                        "width": 1500,
+                      }
+                    }
+                  >
+                    <View
+                      accessibilityElementsHidden={false}
+                      importantForAccessibility="auto"
+                      style={
+                        Object {
+                          "width": 750,
+                        }
+                      }
+                    >
+                      <RCTScrollView>
+                        <View>
+                          <View
+                            isLoading={false}
+                            style={
+                              Object {
+                                "paddingHorizontal": 16,
+                                "paddingVertical": 0,
+                              }
+                            }
+                          >
+                            <Text
+                              padded={true}
+                              style={
+                                Object {
+                                  "color": "#303030",
+                                  "fontFamily": "InterUI-Black",
+                                  "fontSize": 36,
+                                  "lineHeight": 41.4,
+                                  "paddingBottom": 20.02,
+                                  "paddingTop": 24,
+                                }
+                              }
+                            >
+                              Title
+                            </Text>
+                            <Text
+                              style={
+                                Object {
+                                  "color": "#00676D",
+                                  "fontFamily": "InterUI-Bold",
+                                  "fontSize": 16,
+                                  "lineHeight": 24,
+                                  "paddingBottom": 24,
+                                  "textAlign": "center",
+                                  "textDecorationLine": "underline",
+                                }
+                              }
+                            >
+                              <Text
+                                onPress={[Function]}
+                                padded={true}
+                                style={
+                                  Object {
+                                    "color": "#17B582",
+                                  }
+                                }
+                              >
+                                1 Corinthians 15:57, Exodus 17:8-15
+                              </Text>
+                            </Text>
+                            <View
+                              style={
+                                Object {
+                                  "paddingBottom": 18,
+                                }
+                              }
+                            >
+                              <View
+                                style={
+                                  Object {
+                                    "alignSelf": "stretch",
+                                    "backgroundColor": "#A5A5A5",
+                                    "borderRadius": 16,
+                                    "height": 16,
+                                    "marginVertical": 5,
+                                    "width": "85%",
+                                  }
+                                }
+                              />
+                              <View
+                                style={
+                                  Object {
+                                    "alignSelf": "stretch",
+                                    "backgroundColor": "#A5A5A5",
+                                    "borderRadius": 16,
+                                    "height": 16,
+                                    "marginVertical": 5,
+                                    "width": "100%",
+                                  }
+                                }
+                              />
+                              <View
+                                style={
+                                  Object {
+                                    "alignSelf": "stretch",
+                                    "backgroundColor": "#A5A5A5",
+                                    "borderRadius": 16,
+                                    "height": 16,
+                                    "marginVertical": 5,
+                                    "width": "100%",
+                                  }
+                                }
+                              />
+                              <View
+                                style={
+                                  Object {
+                                    "alignSelf": "stretch",
+                                    "backgroundColor": "#A5A5A5",
+                                    "borderRadius": 16,
+                                    "height": 16,
+                                    "marginVertical": 5,
+                                    "width": "100%",
+                                  }
+                                }
+                              />
+                              <View
+                                style={
+                                  Object {
+                                    "alignSelf": "stretch",
+                                    "backgroundColor": "#A5A5A5",
+                                    "borderRadius": 16,
+                                    "height": 16,
+                                    "marginVertical": 5,
+                                    "width": "100%",
+                                  }
+                                }
+                              />
+                              <View
+                                style={
+                                  Object {
+                                    "alignSelf": "stretch",
+                                    "backgroundColor": "#A5A5A5",
+                                    "borderRadius": 16,
+                                    "height": 16,
+                                    "marginVertical": 5,
+                                    "width": "100%",
+                                  }
+                                }
+                              />
+                              <View
+                                style={
+                                  Object {
+                                    "alignSelf": "stretch",
+                                    "backgroundColor": "#A5A5A5",
+                                    "borderRadius": 16,
+                                    "height": 16,
+                                    "marginVertical": 5,
+                                    "width": "100%",
+                                  }
+                                }
+                              />
+                              <View
+                                style={
+                                  Object {
+                                    "alignSelf": "stretch",
+                                    "backgroundColor": "#A5A5A5",
+                                    "borderRadius": 16,
+                                    "height": 16,
+                                    "marginVertical": 5,
+                                    "width": "75%",
+                                  }
+                                }
+                              />
+                            </View>
+                          </View>
+                        </View>
+                      </RCTScrollView>
+                    </View>
+                    <View
+                      accessibilityElementsHidden={true}
+                      importantForAccessibility="no-hide-descendants"
+                      style={
+                        Object {
+                          "width": 750,
+                        }
+                      }
+                    >
+                      <RCTScrollView>
+                        <View>
+                          <View
+                            style={
+                              Object {
+                                "paddingHorizontal": 16,
+                                "paddingVertical": 16,
+                              }
+                            }
+                          >
+                            <View>
+                              <Text
+                                style={
+                                  Object {
+                                    "color": "#303030",
+                                    "fontFamily": "InterUI-Bold",
+                                    "fontSize": 16,
+                                    "lineHeight": 24,
+                                    "paddingBottom": 12,
+                                  }
+                                }
+                              >
+                                <Text
+                                  style={
+                                    Object {
+                                      "color": "#303030",
+                                      "fontFamily": "InterUI-Bold",
+                                      "fontSize": 16,
+                                      "lineHeight": 24,
+                                    }
+                                  }
+                                >
+                                  1 Corinthians 15:57
+                                </Text>
+                                <Text
+                                  style={
+                                    Object {
+                                      "color": "#505050",
+                                      "fontFamily": "InterUI-Bold",
+                                      "fontSize": 12,
+                                      "lineHeight": 18,
+                                    }
+                                  }
+                                >
+                                   
+                                  WEB
+                                </Text>
+                              </Text>
+                              <View
+                                style={
+                                  Object {
+                                    "paddingBottom": 18,
+                                  }
+                                }
+                              >
+                                <View>
+                                  <View
+                                    style={
+                                      Object {
+                                        "paddingBottom": 0,
+                                      }
+                                    }
+                                  >
+                                    <Text
+                                      bold={false}
+                                      italic={false}
+                                      style={
+                                        Object {
+                                          "color": "#303030",
+                                          "fontFamily": "DroidSerif",
+                                          "fontSize": 16,
+                                          "lineHeight": 26,
+                                        }
+                                      }
+                                    >
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#505050",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 9.6,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                         
+                                        <Text>
+                                          57
+                                        </Text>
+                                         
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 16,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                        <Text>
+                                          But thanks be to God, who gives us the victory through our Lord Jesus Christ. 
+                                        </Text>
+                                      </Text>
+                                    </Text>
+                                  </View>
+                                </View>
+                              </View>
+                              <Text
+                                bold={false}
+                                italic={false}
+                                style={
+                                  Object {
+                                    "color": "#505050",
+                                    "fontFamily": "InterUI-Regular",
+                                    "fontSize": 9.6,
+                                    "lineHeight": 10.8,
+                                  }
+                                }
+                              />
+                            </View>
+                            <View>
+                              <Text
+                                style={
+                                  Object {
+                                    "color": "#303030",
+                                    "fontFamily": "InterUI-Bold",
+                                    "fontSize": 16,
+                                    "lineHeight": 24,
+                                    "paddingBottom": 12,
+                                  }
+                                }
+                              >
+                                <Text
+                                  style={
+                                    Object {
+                                      "color": "#303030",
+                                      "fontFamily": "InterUI-Bold",
+                                      "fontSize": 16,
+                                      "lineHeight": 24,
+                                    }
+                                  }
+                                >
+                                  Exodus 17:8-15
+                                </Text>
+                                <Text
+                                  style={
+                                    Object {
+                                      "color": "#505050",
+                                      "fontFamily": "InterUI-Bold",
+                                      "fontSize": 12,
+                                      "lineHeight": 18,
+                                    }
+                                  }
+                                >
+                                   
+                                  WEB
+                                </Text>
+                              </Text>
+                              <View
+                                style={
+                                  Object {
+                                    "paddingBottom": 18,
+                                  }
+                                }
+                              >
+                                <View>
+                                  <View
+                                    style={
+                                      Object {
+                                        "paddingBottom": 0,
+                                      }
+                                    }
+                                  >
+                                    <Text
+                                      bold={false}
+                                      italic={false}
+                                      style={
+                                        Object {
+                                          "color": "#303030",
+                                          "fontFamily": "DroidSerif",
+                                          "fontSize": 16,
+                                          "lineHeight": 26,
+                                        }
+                                      }
+                                    >
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#505050",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 9.6,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                         
+                                        <Text>
+                                          8
+                                        </Text>
+                                         
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 16,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                        <Text>
+                                          Then Amalek came and fought with Israel in Rephidim. 
+                                        </Text>
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#505050",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 9.6,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                         
+                                        <Text>
+                                          9
+                                        </Text>
+                                         
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 16,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                        <Text>
+                                          Moses said to Joshua, “Choose men for us, and go out to fight with Amalek. Tomorrow I will stand on the top of the hill with God’s rod in my hand.” 
+                                        </Text>
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#505050",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 9.6,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                         
+                                        <Text>
+                                          10
+                                        </Text>
+                                         
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 16,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                        <Text>
+                                          So Joshua did as Moses had told him, and fought with Amalek; and Moses, Aaron, and Hur went up to the top of the hill. 
+                                        </Text>
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#505050",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 9.6,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                         
+                                        <Text>
+                                          11
+                                        </Text>
+                                         
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 16,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                        <Text>
+                                          When Moses held up his hand, Israel prevailed. When he let down his hand, Amalek prevailed. 
+                                        </Text>
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#505050",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 9.6,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                         
+                                        <Text>
+                                          12
+                                        </Text>
+                                         
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 16,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                        <Text>
+                                          But Moses’ hands were heavy; so they took a stone, and put it under him, and he sat on it. Aaron and Hur held up his hands, the one on the one side, and the other on the other side. His hands were steady until sunset. 
+                                        </Text>
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#505050",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 9.6,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                         
+                                        <Text>
+                                          13
+                                        </Text>
+                                         
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 16,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                        <Text>
+                                          Joshua defeated Amalek and his people with the edge of the sword. 
+                                        </Text>
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#505050",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 9.6,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                         
+                                        <Text>
+                                          14
+                                        </Text>
+                                         
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 16,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                        <Text>
+                                          Yahweh said to Moses, “Write this for a memorial in a book, and rehearse it in the ears of Joshua: that I will utterly blot out the memory of Amalek from under the sky.” 
+                                        </Text>
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#505050",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 9.6,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                         
+                                        <Text>
+                                          15
+                                        </Text>
+                                         
+                                      </Text>
+                                      <Text
+                                        bold={false}
+                                        italic={false}
+                                        style={
+                                          Object {
+                                            "color": "#303030",
+                                            "fontFamily": "DroidSerif",
+                                            "fontSize": 16,
+                                            "lineHeight": 26,
+                                          }
+                                        }
+                                      >
+                                        <Text>
+                                          Moses built an altar, and called its name “Yahweh our Banner”.
+                                        </Text>
+                                      </Text>
+                                    </Text>
+                                  </View>
+                                </View>
+                              </View>
+                            </View>
+                          </View>
+                        </View>
+                      </RCTScrollView>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </RCTSafeAreaView>
+          </BVLinearGradient>
+        </View>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+      pointerEvents="box-none"
+      style={
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#FFF",
+            "transform": Array [
+              Object {
+                "translateX": 0,
+              },
+            ],
+          }
+        }
+      >
+        <View
+          onLayout={[Function]}
+          pointerEvents="box-none"
+          style={
+            Object {
+              "backgroundColor": "#FFF",
+              "borderBottomColor": "#A7A7AA",
+              "borderBottomWidth": 0.5,
+              "height": 64,
+              "paddingBottom": 0,
+              "paddingLeft": 0,
+              "paddingRight": 0,
+              "paddingTop": 20,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "flex": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "bottom": 0,
+                  "flexDirection": "row",
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                }
+              }
+            >
+              <View
+                pointerEvents="box-none"
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "backgroundColor": "transparent",
+                    "bottom": 0,
+                    "flexDirection": "row",
+                    "justifyContent": "center",
+                    "left": 0,
+                    "opacity": 1,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  }
+                }
+              >
+                <Text
+                  accessibilityTraits="header"
+                  allowFontScaling={false}
+                  numberOfLines={1}
+                  onLayout={[Function]}
+                  style={
+                    Object {
+                      "color": "rgba(0, 0, 0, .9)",
+                      "fontSize": 17,
+                      "fontWeight": "600",
+                      "marginHorizontal": 16,
+                      "textAlign": "center",
+                    }
+                  }
+                />
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

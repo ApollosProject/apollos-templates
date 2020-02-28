@@ -1,0 +1,392 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`content feed query component renders a feedview after successful query 1`] = `
+<BVLinearGradient
+  colors={
+    Array [
+      4294967295,
+      4294506484,
+    ]
+  }
+  endPoint={
+    Object {
+      "x": 0.5,
+      "y": 1,
+    }
+  }
+  locations={null}
+  startPoint={
+    Object {
+      "x": 0.5,
+      "y": 0,
+    }
+  }
+  style={
+    Object {
+      "flex": 1,
+      "height": "100%",
+    }
+  }
+>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "__typename": "UniversalContentItem",
+          "coverImage": null,
+          "hyphenatedTitle": "Mea Animal Aperiam Ornatus Eu",
+          "id": "UniversalContentItem:d57994350b9d213866b24dea3a97433d",
+          "summary": "Bla bla bla",
+          "theme": null,
+          "title": "Mea Animal Aperiam Ornatus Eu",
+        },
+        Object {
+          "__typename": "UniversalContentItem",
+          "coverImage": null,
+          "hyphenatedTitle": "Probo Senserit Id Mea, Ut Sed Malis Postea,",
+          "id": "UniversalContentItem:b36e55d803443431e96bb4b5068147ec",
+          "summary": "Bla bla bla",
+          "theme": null,
+          "title": "Probo Senserit Id Mea, Ut Sed Malis Postea,",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReached={[Function]}
+    onEndReachedThreshold={0.7}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onPressItem={[Function]}
+    onRefresh={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    refreshControl={
+      <RefreshControlMock
+        onRefresh={[Function]}
+        refreshing={false}
+      />
+    }
+    refreshing={false}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <RCTRefreshControl />
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            isLoading={false}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Black",
+                      "fontSize": 24,
+                      "lineHeight": 27.6,
+                    }
+                  }
+                >
+                  Mea Animal Aperiam Ornatus Eu
+                </Text>
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  Bla bla bla
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            isLoading={false}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "width": "100%",
+                    }
+                  }
+                />
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Black",
+                      "fontSize": 24,
+                      "lineHeight": 27.6,
+                    }
+                  }
+                >
+                  Probo Senserit Id Mea, Ut Sed Malis Postea,
+                </Text>
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  Bla bla bla
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</BVLinearGradient>
+`;

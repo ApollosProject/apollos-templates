@@ -1,0 +1,57 @@
+{
+  "description": "Apollos Church",
+  "formatVersion": 1,
+  "organizationName": "Apollos Church",
+  "passTypeIdentifier": "pass.com.apollos.testing",
+  "teamIdentifier": "7TM8C6252Z",
+  "logoText": "Apollos Church",
+  "backgroundColor": "rgb(0,103,109)",
+  "foregroundColor": "rgb(248,247,244)",
+  "labelColor": "rgb(248,247,244)",
+  "serialNumber": "checkinpass-{{ person | GetPersonAlternateId }}",
+  "thumbnail": {
+    "uri": "{{ person.Photo.Url }}&format=png&height=200"
+  },
+  "thumbnail@2x": {
+    "uri": "{{ person.Photo.Url }}&format=png&height=400"
+  },
+  "barcodes": [
+    {
+      "message": "{{ person | GetPersonAlternateId }}",
+      "format": "PKBarcodeFormatQR",
+      "messageEncoding": "iso-8859-1"
+    }
+  ],
+{% assign personCampus = person | Campus %}
+{% if personCampus.Location.Latitude %}
+  "locations": [
+    {
+      "latitude": {{ personCampus.Location.Latitude }},
+      "longitude": {{ personCampus.Location.Longitude }},
+      "relevantText": "Tap to check-in at {{ personCampus.Name }}"
+    }
+  ],
+{% endif %}
+  "generic": {
+    "primaryFields": [
+      {
+        "key": "member",
+        "value": "{{ person.FullName }}"
+      }
+    ],
+    "secondaryFields": [
+      {
+        "key": "home",
+        "label": "home",
+        "value": "{{ person | Address:'Home','[[City]], [[State]]' }}"
+      },
+      {
+        "key": "campus",
+        "label": "campus",
+        "textAlignment": "PKTextAlignmentRight",
+        "value":
+          "{% assign personCampus = person | Campus %}{{ personCampus.Name  }}"
+      }
+    ]
+  }
+}
