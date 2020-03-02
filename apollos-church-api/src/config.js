@@ -5,5 +5,3 @@ import ApollosConfig from '@apollosproject/config';
 ApollosConfig.loadYaml({
   configPath: path.join(__dirname, '..', 'config.yml'),
 });
-
-console.log(ApollosConfig);
