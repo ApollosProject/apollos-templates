@@ -1,6 +1,7 @@
 import dotenv from 'dotenv/config'; // eslint-disable-line
 import config from './config'; // eslint-disable-line
-import server from './server';
+
+const server = require('./server').default;
 
 export { testSchema } from './server'; // eslint-disable-line import/prefer-default-export
 
