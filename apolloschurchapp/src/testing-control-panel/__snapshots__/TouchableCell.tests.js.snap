@@ -35,6 +35,7 @@ exports[`touchable cell renders the cell, icon, and text 1`] = `
       align="xMidYMid"
       bbHeight={20}
       bbWidth={20}
+      focusable={false}
       height={20}
       meetOrSlice={0}
       minX={0}
@@ -48,7 +49,9 @@ exports[`touchable cell renders the cell, icon, and text 1`] = `
           Object {
             "paddingLeft": 0,
           },
-          null,
+          Object {
+            "opacity": 1,
+          },
           Object {
             "flex": 0,
             "height": 20,

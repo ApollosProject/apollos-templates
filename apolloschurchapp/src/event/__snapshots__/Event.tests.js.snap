@@ -144,6 +144,7 @@ exports[`The Event component should render 1`] = `
                 align="xMidYMid"
                 bbHeight={24}
                 bbWidth={24}
+                focusable={false}
                 height={24}
                 meetOrSlice={0}
                 minX={0}
@@ -157,7 +158,9 @@ exports[`The Event component should render 1`] = `
                     Object {
                       "marginRight": 8,
                     },
-                    null,
+                    Object {
+                      "opacity": 1,
+                    },
                     Object {
                       "flex": 0,
                       "height": 24,
@@ -304,6 +307,7 @@ exports[`The Event component should render 1`] = `
                 align="xMidYMid"
                 bbHeight={24}
                 bbWidth={24}
+                focusable={false}
                 height={24}
                 meetOrSlice={0}
                 minX={0}
@@ -317,7 +321,9 @@ exports[`The Event component should render 1`] = `
                     Object {
                       "marginRight": 8,
                     },
-                    null,
+                    Object {
+                      "opacity": 1,
+                    },
                     Object {
                       "flex": 0,
                       "height": 24,

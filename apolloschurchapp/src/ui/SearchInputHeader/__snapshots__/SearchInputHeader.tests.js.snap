@@ -50,6 +50,7 @@ exports[`The Onboarding LandingScreen component should be stylable 1`] = `
           align="xMidYMid"
           bbHeight={16}
           bbWidth={16}
+          focusable={false}
           height={16}
           isFocused={false}
           meetOrSlice={0}
@@ -64,7 +65,9 @@ exports[`The Onboarding LandingScreen component should be stylable 1`] = `
               Object {
                 "marginLeft": 16,
               },
-              null,
+              Object {
+                "opacity": 1,
+              },
               Object {
                 "flex": 0,
                 "height": 16,
@@ -258,6 +261,7 @@ exports[`The Onboarding LandingScreen component should be stylable 1`] = `
                   align="xMidYMid"
                   bbHeight={16}
                   bbWidth={16}
+                  focusable={false}
                   height={16}
                   meetOrSlice={0}
                   minX={0}
@@ -444,6 +448,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
           align="xMidYMid"
           bbHeight={16}
           bbWidth={16}
+          focusable={false}
           height={16}
           isFocused={false}
           meetOrSlice={0}
@@ -458,7 +463,9 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
               Object {
                 "marginLeft": 16,
               },
-              null,
+              Object {
+                "opacity": 1,
+              },
               Object {
                 "flex": 0,
                 "height": 16,
@@ -652,6 +659,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
                   align="xMidYMid"
                   bbHeight={16}
                   bbWidth={16}
+                  focusable={false}
                   height={16}
                   meetOrSlice={0}
                   minX={0}
@@ -838,6 +846,7 @@ exports[`The Onboarding LandingScreen component should render pass props to Sear
           align="xMidYMid"
           bbHeight={16}
           bbWidth={16}
+          focusable={false}
           height={16}
           isFocused={false}
           meetOrSlice={0}
@@ -852,7 +861,9 @@ exports[`The Onboarding LandingScreen component should render pass props to Sear
               Object {
                 "marginLeft": 16,
               },
-              null,
+              Object {
+                "opacity": 1,
+              },
               Object {
                 "flex": 0,
                 "height": 16,
@@ -1046,6 +1057,7 @@ exports[`The Onboarding LandingScreen component should render pass props to Sear
                   align="xMidYMid"
                   bbHeight={16}
                   bbWidth={16}
+                  focusable={false}
                   height={16}
                   meetOrSlice={0}
                   minX={0}

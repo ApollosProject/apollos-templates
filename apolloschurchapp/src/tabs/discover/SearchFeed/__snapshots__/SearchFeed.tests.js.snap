@@ -1284,7 +1284,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
       <View
         style={
           Object {
-            "backgroundColor": "#FFF",
+            "backgroundColor": "#fff",
             "transform": Array [
               Object {
                 "translateX": 0,
@@ -1298,8 +1298,8 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
           pointerEvents="box-none"
           style={
             Object {
-              "backgroundColor": "#FFF",
-              "borderBottomColor": "#A7A7AA",
+              "backgroundColor": "#fff",
+              "borderBottomColor": "#a7a7aa",
               "borderBottomWidth": 0.5,
               "height": 64,
               "paddingBottom": 0,
@@ -1352,7 +1352,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                   onLayout={[Function]}
                   style={
                     Object {
-                      "color": "rgba(0, 0, 0, .9)",
+                      "color": "rgba(0, 0, 0, 0.9)",
                       "fontSize": 17,
                       "fontWeight": "600",
                       "marginHorizontal": 16,
@@ -3237,7 +3237,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#FFF",
+            "backgroundColor": "#fff",
             "transform": Array [
               Object {
                 "translateX": 0,
@@ -3251,8 +3251,8 @@ exports[`The SearchFeed component should render a loading state 1`] = `
           pointerEvents="box-none"
           style={
             Object {
-              "backgroundColor": "#FFF",
-              "borderBottomColor": "#A7A7AA",
+              "backgroundColor": "#fff",
+              "borderBottomColor": "#a7a7aa",
               "borderBottomWidth": 0.5,
               "height": 64,
               "paddingBottom": 0,
@@ -3305,7 +3305,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                   onLayout={[Function]}
                   style={
                     Object {
-                      "color": "rgba(0, 0, 0, .9)",
+                      "color": "rgba(0, 0, 0, 0.9)",
                       "fontSize": 17,
                       "fontWeight": "600",
                       "marginHorizontal": 16,
@@ -3450,6 +3450,7 @@ exports[`The SearchFeed component should render an empty state 1`] = `
                     align="xMidYMid"
                     bbHeight={32}
                     bbWidth={32}
+                    focusable={false}
                     height={32}
                     meetOrSlice={0}
                     minX={0}
@@ -3463,7 +3464,9 @@ exports[`The SearchFeed component should render an empty state 1`] = `
                         Object {
                           "marginRight": 8,
                         },
-                        null,
+                        Object {
+                          "opacity": 1,
+                        },
                         Object {
                           "flex": 0,
                           "height": 32,
@@ -3642,7 +3645,7 @@ exports[`The SearchFeed component should render an empty state 1`] = `
       <View
         style={
           Object {
-            "backgroundColor": "#FFF",
+            "backgroundColor": "#fff",
             "transform": Array [
               Object {
                 "translateX": 0,
@@ -3656,8 +3659,8 @@ exports[`The SearchFeed component should render an empty state 1`] = `
           pointerEvents="box-none"
           style={
             Object {
-              "backgroundColor": "#FFF",
-              "borderBottomColor": "#A7A7AA",
+              "backgroundColor": "#fff",
+              "borderBottomColor": "#a7a7aa",
               "borderBottomWidth": 0.5,
               "height": 64,
               "paddingBottom": 0,
@@ -3710,7 +3713,7 @@ exports[`The SearchFeed component should render an empty state 1`] = `
                   onLayout={[Function]}
                   style={
                     Object {
-                      "color": "rgba(0, 0, 0, .9)",
+                      "color": "rgba(0, 0, 0, 0.9)",
                       "fontSize": 17,
                       "fontWeight": "600",
                       "marginHorizontal": 16,

@@ -57,6 +57,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
           align="xMidYMid"
           bbHeight={48}
           bbWidth={48}
+          focusable={false}
           height={48}
           meetOrSlice={0}
           minX={0}
@@ -70,7 +71,9 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
               Object {
                 "marginBottom": 16,
               },
-              null,
+              Object {
+                "opacity": 1,
+              },
               Object {
                 "flex": 0,
                 "height": 48,
@@ -215,15 +218,12 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
     }
     vertical={false}
   >
-    <View
-      onLayout={[Function]}
-      pointerEvents="box-none"
-      style={
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+      forceInset={
         Object {
-          "paddingBottom": 0,
-          "paddingLeft": 0,
-          "paddingRight": 0,
-          "paddingTop": 0,
+          "bottom": "always",
+          "top": "never",
         }
       }
     >
@@ -281,6 +281,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
             align="xMidYMid"
             bbHeight={20}
             bbWidth={20}
+            focusable={false}
             height={20}
             meetOrSlice={0}
             minX={0}
@@ -295,7 +296,9 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
                   "marginLeft": 8,
                   "marginRight": -8,
                 },
-                null,
+                Object {
+                  "opacity": 1,
+                },
                 Object {
                   "flex": 0,
                   "height": 20,
@@ -397,7 +400,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
           </RNSVGSvgView>
         </View>
       </View>
-    </View>
+    </RCTSafeAreaView>
   </View>
 </BVLinearGradient>
 `;
@@ -459,6 +462,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
           align="xMidYMid"
           bbHeight={48}
           bbWidth={48}
+          focusable={false}
           height={48}
           meetOrSlice={0}
           minX={0}
@@ -472,7 +476,9 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
               Object {
                 "marginBottom": 16,
               },
-              null,
+              Object {
+                "opacity": 1,
+              },
               Object {
                 "flex": 0,
                 "height": 48,
@@ -660,6 +666,7 @@ exports[`The Onboarding LandingScreen component should render a custom descripti
           align="xMidYMid"
           bbHeight={48}
           bbWidth={48}
+          focusable={false}
           height={48}
           meetOrSlice={0}
           minX={0}
@@ -673,7 +680,9 @@ exports[`The Onboarding LandingScreen component should render a custom descripti
               Object {
                 "marginBottom": 16,
               },
-              null,
+              Object {
+                "opacity": 1,
+              },
               Object {
                 "flex": 0,
                 "height": 48,
@@ -861,6 +870,7 @@ exports[`The Onboarding LandingScreen component should render a custom title 1`]
           align="xMidYMid"
           bbHeight={48}
           bbWidth={48}
+          focusable={false}
           height={48}
           meetOrSlice={0}
           minX={0}
@@ -874,7 +884,9 @@ exports[`The Onboarding LandingScreen component should render a custom title 1`]
               Object {
                 "marginBottom": 16,
               },
-              null,
+              Object {
+                "opacity": 1,
+              },
               Object {
                 "flex": 0,
                 "height": 48,
@@ -1062,7 +1074,8 @@ exports[`The Onboarding LandingScreen component should render with a custom text
           align="xMidYMid"
           bbHeight={48}
           bbWidth={48}
-          color="salmon"
+          color={4294606962}
+          focusable={false}
           height={48}
           meetOrSlice={0}
           minX={0}
@@ -1076,7 +1089,9 @@ exports[`The Onboarding LandingScreen component should render with a custom text
               Object {
                 "marginBottom": 16,
               },
-              null,
+              Object {
+                "opacity": 1,
+              },
               Object {
                 "flex": 0,
                 "height": 48,
@@ -1084,7 +1099,7 @@ exports[`The Onboarding LandingScreen component should render with a custom text
               },
             ]
           }
-          tintColor="salmon"
+          tintColor={4294606962}
           vbHeight={24}
           vbWidth={24}
           width={48}
@@ -1311,6 +1326,7 @@ exports[`The Onboarding LandingScreen component should render with an ImageCompo
           align="xMidYMid"
           bbHeight={48}
           bbWidth={48}
+          focusable={false}
           height={48}
           meetOrSlice={0}
           minX={0}
@@ -1324,7 +1340,9 @@ exports[`The Onboarding LandingScreen component should render with an ImageCompo
               Object {
                 "marginBottom": 16,
               },
-              null,
+              Object {
+                "opacity": 1,
+              },
               Object {
                 "flex": 0,
                 "height": 48,

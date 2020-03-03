@@ -46,7 +46,7 @@ Array [
   >
     <RCTScrollView
       activeDot={
-        <withOrientation
+        <ForwardRef(_SafeAreaView)
           forceInset={
             Object {
               "bottom": "always",
@@ -54,7 +54,7 @@ Array [
           }
         >
           <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-        </withOrientation>
+        </ForwardRef(_SafeAreaView)>
       }
       automaticallyAdjustContentInsets={false}
       autoplay={false}
@@ -76,7 +76,7 @@ Array [
       }
       disableNextButton={false}
       dot={
-        <withOrientation
+        <ForwardRef(_SafeAreaView)
           forceInset={
             Object {
               "bottom": "always",
@@ -90,7 +90,7 @@ Array [
               }
             }
           />
-        </withOrientation>
+        </ForwardRef(_SafeAreaView)>
       }
       horizontal={true}
       index={0}
@@ -137,28 +137,27 @@ Array [
             }
           >
             <View>
-              <View
-                onLayout={[Function]}
-                pointerEvents="box-none"
-                style={
+              <RCTSafeAreaView
+                emulateUnlessSupported={true}
+                forceInset={
                   Object {
-                    "paddingBottom": 0,
-                    "paddingLeft": 0,
-                    "paddingRight": 0,
-                    "paddingTop": 20,
+                    "bottom": "always",
+                    "top": "always",
                   }
                 }
               >
-                <View
-                  onLayout={[Function]}
-                  pointerEvents="box-none"
+                <RCTSafeAreaView
+                  emulateUnlessSupported={true}
+                  forceInset={
+                    Object {
+                      "bottom": "always",
+                    }
+                  }
                   style={
                     Object {
                       "marginBottom": 48,
-                      "paddingBottom": 0,
-                      "paddingLeft": 16,
-                      "paddingRight": 16,
-                      "paddingTop": 20,
+                      "paddingHorizontal": 16,
+                      "paddingTop": 16,
                     }
                   }
                 >
@@ -174,6 +173,7 @@ Array [
                         align="xMidYMid"
                         bbHeight={48}
                         bbWidth={48}
+                        focusable={false}
                         height={48}
                         icon={true}
                         meetOrSlice={0}
@@ -186,7 +186,9 @@ Array [
                               "borderWidth": 0,
                             },
                             undefined,
-                            null,
+                            Object {
+                              "opacity": 1,
+                            },
                             Object {
                               "flex": 0,
                               "height": 48,
@@ -652,8 +654,8 @@ Array [
                       </View>
                     </View>
                   </View>
-                </View>
-              </View>
+                </RCTSafeAreaView>
+              </RCTSafeAreaView>
             </View>
           </RCTScrollView>
           <View
@@ -673,15 +675,12 @@ Array [
             }
             vertical={false}
           >
-            <View
-              onLayout={[Function]}
-              pointerEvents="box-none"
-              style={
+            <RCTSafeAreaView
+              emulateUnlessSupported={true}
+              forceInset={
                 Object {
-                  "paddingBottom": 0,
-                  "paddingLeft": 0,
-                  "paddingRight": 0,
-                  "paddingTop": 0,
+                  "bottom": "always",
+                  "top": "never",
                 }
               }
             >
@@ -745,7 +744,7 @@ Array [
               >
                 Skip
               </Text>
-            </View>
+            </RCTSafeAreaView>
           </View>
         </View>
         <View
@@ -820,16 +819,18 @@ Array [
                   />
                 </View>
               </View>
-              <View
-                onLayout={[Function]}
-                pointerEvents="box-none"
+              <RCTSafeAreaView
+                emulateUnlessSupported={true}
+                forceInset={
+                  Object {
+                    "bottom": "always",
+                  }
+                }
                 style={
                   Object {
                     "marginBottom": 48,
-                    "paddingBottom": 0,
-                    "paddingLeft": 16,
-                    "paddingRight": 16,
-                    "paddingTop": 20,
+                    "paddingHorizontal": 16,
+                    "paddingTop": 16,
                   }
                 }
               >
@@ -867,7 +868,7 @@ Array [
                     We'd like to help personalize your mobile experience so we can help you with every step on your journey.
                   </Text>
                 </View>
-              </View>
+              </RCTSafeAreaView>
             </View>
           </RCTScrollView>
           <View
@@ -887,15 +888,12 @@ Array [
             }
             vertical={false}
           >
-            <View
-              onLayout={[Function]}
-              pointerEvents="box-none"
-              style={
+            <RCTSafeAreaView
+              emulateUnlessSupported={true}
+              forceInset={
                 Object {
-                  "paddingBottom": 0,
-                  "paddingLeft": 0,
-                  "paddingRight": 0,
-                  "paddingTop": 0,
+                  "bottom": "always",
+                  "top": "never",
                 }
               }
             >
@@ -945,7 +943,7 @@ Array [
                   />
                 </View>
               </View>
-            </View>
+            </RCTSafeAreaView>
           </View>
         </View>
         <View
@@ -1023,15 +1021,11 @@ Array [
         ]
       }
     >
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
+            "bottom": "always",
           }
         }
       >
@@ -1046,16 +1040,12 @@ Array [
             }
           }
         />
-      </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      </RCTSafeAreaView>
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
+            "bottom": "always",
           }
         }
       >
@@ -1075,16 +1065,12 @@ Array [
             }
           }
         />
-      </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      </RCTSafeAreaView>
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
+            "bottom": "always",
           }
         }
       >
@@ -1104,16 +1090,12 @@ Array [
             }
           }
         />
-      </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      </RCTSafeAreaView>
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
+            "bottom": "always",
           }
         }
       >
@@ -1133,16 +1115,12 @@ Array [
             }
           }
         />
-      </View>
-      <View
-        onLayout={[Function]}
-        pointerEvents="box-none"
-        style={
+      </RCTSafeAreaView>
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+        forceInset={
           Object {
-            "paddingBottom": 0,
-            "paddingLeft": 0,
-            "paddingRight": 0,
-            "paddingTop": 20,
+            "bottom": "always",
           }
         }
       >
@@ -1162,7 +1140,7 @@ Array [
             }
           }
         />
-      </View>
+      </RCTSafeAreaView>
     </View>
   </View>,
 ]

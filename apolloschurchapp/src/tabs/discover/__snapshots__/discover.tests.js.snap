@@ -132,6 +132,7 @@ exports[`The Discover tab component Should retrieve the Content Channel Feeds 1`
                       align="xMidYMid"
                       bbHeight={16}
                       bbWidth={16}
+                      focusable={false}
                       height={16}
                       isFocused={false}
                       meetOrSlice={0}
@@ -146,7 +147,9 @@ exports[`The Discover tab component Should retrieve the Content Channel Feeds 1`
                           Object {
                             "marginLeft": 16,
                           },
-                          null,
+                          Object {
+                            "opacity": 1,
+                          },
                           Object {
                             "flex": 0,
                             "height": 16,
@@ -340,6 +343,7 @@ exports[`The Discover tab component Should retrieve the Content Channel Feeds 1`
                               align="xMidYMid"
                               bbHeight={16}
                               bbWidth={16}
+                              focusable={false}
                               height={16}
                               meetOrSlice={0}
                               minX={0}
@@ -4641,7 +4645,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.
       <View
         style={
           Object {
-            "backgroundColor": "#FFF",
+            "backgroundColor": "#fff",
             "transform": Array [
               Object {
                 "translateX": 0,
@@ -4655,8 +4659,8 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.
           pointerEvents="box-none"
           style={
             Object {
-              "backgroundColor": "#FFF",
-              "borderBottomColor": "#A7A7AA",
+              "backgroundColor": "#fff",
+              "borderBottomColor": "#a7a7aa",
               "borderBottomWidth": 0,
               "elevation": 0,
               "height": 64,
@@ -4710,7 +4714,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.
                   onLayout={[Function]}
                   style={
                     Object {
-                      "color": "rgba(0, 0, 0, .9)",
+                      "color": "rgba(0, 0, 0, 0.9)",
                       "fontSize": 17,
                       "fontWeight": "600",
                       "marginHorizontal": 16,
