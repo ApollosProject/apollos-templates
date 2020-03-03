@@ -2,23 +2,6 @@
   "name": "apolloschurchapp",
   "version": "1.3.0-beta.6",
   "private": true,
-  "devDependencies": {
-    "codecov": "3.6.5",
-    "get-dev-paths": "^0.1.0",
-    "graphql-import": "^0.7.1",
-    "jest": "^24.8.0",
-    "jest-react-native": "18.0.0",
-    "jetifier": "^1.6.4",
-    "metro-react-native-babel-preset": "^0.56.0",
-    "nodemon": "1.18.7",
-    "prettier": "1.14.2",
-    "prop-types": "15.6.1",
-    "react-dom": "16.6.3",
-    "react-native-storybook-loader": "1.8.0",
-    "react-native-version": "2.6.2",
-    "react-test-renderer": "16.8.6",
-    "waait": "1.0.2"
-  },
   "engines": {
     "node": ">=8.11.x"
   },
@@ -30,6 +13,8 @@
     "codecov": "cat ./coverage/lcov.info | codecov",
     "fixlint": "eslint ./src --fix",
     "ios": "react-native run-ios --simulator=\"iPhone 11\"",
+    "link-packages": "node ./scripts/link-packages",
+    "unlink-packages": "wml rm all",
     "storybook:enable": "sed -i '' 's/STORYBOOK=false/STORYBOOK=true/g' .env",
     "storybook:disable": "sed -i '' 's/STORYBOOK=true/STORYBOOK=false/g' .env",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
@@ -127,7 +112,25 @@
     "recompose": "^0.30.0",
     "rn-fetch-blob": "^0.10.16",
     "stream": "^0.0.2",
+    "wml": "^0.0.83",
     "yup": "0.26.6"
+  },
+  "devDependencies": {
+    "codecov": "3.6.5",
+    "get-dev-paths": "^0.1.0",
+    "graphql-import": "^0.7.1",
+    "jest": "^24.8.0",
+    "jest-react-native": "18.0.0",
+    "jetifier": "^1.6.4",
+    "metro-react-native-babel-preset": "^0.56.0",
+    "nodemon": "1.18.7",
+    "prettier": "1.14.2",
+    "prop-types": "15.6.1",
+    "react-dom": "16.6.3",
+    "react-native-storybook-loader": "1.8.0",
+    "react-native-version": "2.6.2",
+    "react-test-renderer": "16.8.6",
+    "waait": "1.0.2"
   },
   "rnpm": {
     "assets": [

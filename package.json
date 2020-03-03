@@ -1,0 +1,16 @@
+{
+  "name": "apollos-templates",
+  "scripts": {
+    "start": "yarn watch:client & lerna run start --parallel",
+    "watch:client": "(cd apolloschurchapp && yarn wml start)",
+    "link-packages": "lerna run link-packages --parallel",
+    "unlink-packages": "lerna run unlink-packages --parallel",
+    "ios": "lerna run ios --parallel",
+    "pods": "lerna run pods --parallel"
+  },
+  "private": true,
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  },
+  "dependencies": {}
+}

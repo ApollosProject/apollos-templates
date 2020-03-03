@@ -1,7 +1,7 @@
 const fs = require('fs');
 const { exec } = require('child_process');
 
-const direction = process.argv[3] || 'link'
+const direction = process.argv[2] || 'link'
 
 const packageJson = JSON.parse(fs.readFileSync(`${__dirname}/../package.json`));
 
