@@ -7,6 +7,7 @@ import {
   HorizontalContentSeriesFeedConnected,
   LiveConsumer,
   MediaControlsConnected,
+  ContentSingleFeaturesConnected,
 } from '@apollosproject/ui-connected';
 import {
   styled,
@@ -20,8 +21,6 @@ import {
   CardLabel,
   withTheme,
 } from '@apollosproject/ui-kit';
-
-import Features from '../Features';
 
 const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
 
@@ -90,7 +89,7 @@ const WeekendContentItem = ({ content, loading }) => {
                   </ThemeMixin>
                 </Header>
                 <StyledMediaControlsConnected contentId={content.id} />
-                <Features contentId={content.id} />
+                <ContentSingleFeaturesConnected contentId={content.id} />
                 <HorizontalContentSeriesFeedConnected contentId={content.id} />
               </FlexedScrollView>
             )}

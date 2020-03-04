@@ -107,7 +107,7 @@
     "react-native-svg": "^9.4.0",
     "react-native-video": "^5.0.0",
     "react-native-video-controls": "2.2.3",
-    "react-native-webview": "^5.2.0",
+    "react-native-webview": "^7.0.0",
     "react-navigation": "^3.11.0",
     "recompose": "^0.30.0",
     "rn-fetch-blob": "^0.10.16",

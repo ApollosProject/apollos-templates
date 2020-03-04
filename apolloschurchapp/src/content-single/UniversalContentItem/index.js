@@ -6,6 +6,7 @@ import {
   ContentHTMLViewConnected,
   HorizontalContentSeriesFeedConnected,
   MediaControlsConnected,
+  ContentSingleFeaturesConnected,
 } from '@apollosproject/ui-connected';
 import {
   styled,
@@ -15,8 +16,6 @@ import {
   H2,
   StretchyView,
 } from '@apollosproject/ui-kit';
-
-import Features from '../Features';
 
 const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
 
@@ -47,7 +46,7 @@ const UniversalContentItem = ({ content, loading }) => {
               </H2>
               <ContentHTMLViewConnected contentId={content.id} />
             </PaddedView>
-            <Features contentId={content.id} />
+            <ContentSingleFeaturesConnected contentId={content.id} />
             <HorizontalContentSeriesFeedConnected contentId={content.id} />
           </FlexedScrollView>
         )}
