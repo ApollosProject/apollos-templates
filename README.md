@@ -21,9 +21,10 @@ First of all, to those of you who remember, the Monorepo, I'm sorry, stick with 
 ### Setting up "linked" development
 
 1. From this repo, cd into apollos-church-api and apolloschurchapp and run `yarn install`.
-2. Edit your `.env. in apolloschurchapp, and add a relative or direct path to your apollos-apps root under the `APOLLOS_APPS_LOCATION` variable. ex: `APOLLOS_APPS_LOCATION='../../apollos-prototype'.
-3. From the root of `apollos-apps`, run `yarn link-packages`. **You only need to run this once**
-4. From the root of this repo, run `yarn link-packages`. **You only need to run this once**
+2. From this repo, run `yarn pods` from the root.
+3. Edit your `.env. in apolloschurchapp, and add a relative or direct path to your apollos-apps root under the `APOLLOS_APPS_LOCATION` variable. ex: `APOLLOS_APPS_LOCATION='../../apollos-prototype'.
+4. From the root of `apollos-apps`, run `yarn link-packages`. **You only need to run this once**
+5. From the root of this repo, run `yarn link-packages`. **You only need to run this once**
 
 ### Running the linked environments
 
