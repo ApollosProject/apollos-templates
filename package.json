@@ -10,7 +10,9 @@
   },
   "private": true,
   "devDependencies": {
-    "lerna": "^3.20.2"
+    "lerna": "^3.20.2",
+    "wml": "^0.0.83",
+    "yalc": "^1.0.0-pre.35"
   },
   "dependencies": {}
 }
