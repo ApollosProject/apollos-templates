@@ -8,7 +8,7 @@
     "start:dev": "linkemon ./src/index.js --exec babel-node --delay 2",
     "start:prod": "NODE_ENV=production node ./lib/index.js",
     "link-packages": "node ./scripts/link-packages",
-    "unlink-packages": "node ./scripts/link-packages unlink",
+    "unlink-packages": "node ./scripts/link-packages remove",
     "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
     "test": "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
     "lint": "eslint ./src --ext .js",
