@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
+import PropTypes from 'prop-types';
 
 import { FeedView } from '@apollosproject/ui-kit';
 
@@ -30,6 +31,14 @@ const renderItem = (
     loadingStateObject={childContentItemLoadingState}
   />
 );
+
+renderItem.propTypes = {
+  item: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    isLoading: PropTypes.bool,
+  }),
+};
 
 const DiscoverFeed = memo(() => (
   <Query query={GET_CONTENT_CHANNELS} fetchPolicy="cache-and-network">

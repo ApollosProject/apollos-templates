@@ -19,12 +19,6 @@ class EventConnected extends PureComponent {
     }),
   };
 
-  static navigationOptions = {
-    header: NavigationHeader,
-    headerTransparent: true,
-    headerMode: 'float',
-  };
-
   get eventId() {
     return this.props.navigation.getParam('eventId', []);
   }
@@ -32,6 +26,12 @@ class EventConnected extends PureComponent {
   get queryVariables() {
     return { eventId: this.eventId };
   }
+
+  static navigationOptions = {
+    header: NavigationHeader,
+    headerTransparent: true,
+    headerMode: 'float',
+  };
 
   renderWithData = ({ loading, error, data }) => {
     if (error) return <ErrorCard error={error} />;
