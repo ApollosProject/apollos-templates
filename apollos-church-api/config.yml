@@ -84,8 +84,8 @@ ROCK_MAPPINGS:
   INTERACTIONS:
     # Name of the InteractionChannel that will be created
     CHANNEL_NAME: Apollos App
-    # Name of the InteractionComponent that will be created for Content Items
-    COMPONENT_NAME: Apollos Content Item
+    # Name of the InteractionComponent that will be created Interactions
+    COMPONENT_NAME: Apollos App Component
     # 512 is "Mobile App"
     CHANNEL_MEDIUM_TYPE_ID: 512
 
