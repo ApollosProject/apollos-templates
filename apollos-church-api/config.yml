@@ -82,9 +82,9 @@ ENGINE:
 # This key holds various properties that allow our GraphQL server to map to your Rock Instance
 ROCK_MAPPINGS:
   INTERACTIONS:
-    # Name of the InteractionChannel that will be created
+    # Name of the InteractionChannel that will be created per EntityType
     CHANNEL_NAME: Apollos App
-    # Name of the InteractionComponent that will be created Interactions
+    # Prefix for the name of the InteractionComponent that will be created per Entity
     COMPONENT_NAME: Apollos App Component
     # 512 is "Mobile App"
     CHANNEL_MEDIUM_TYPE_ID: 512
