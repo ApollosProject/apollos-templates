@@ -14,9 +14,6 @@ if (useStorybook) {
 }
 
 // If there's an error before the splash screen goes away, you never see that error.
-// This tries to hide the splash screen so you can see the error.
-// Shouldnt't do anything in Prod.
-// Depending on the error, splash screen might not go away ;)
 
 YellowBox.ignoreWarnings([
   "Warning: isMounted(...) is deprecated",
