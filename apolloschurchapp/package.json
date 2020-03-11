@@ -105,7 +105,6 @@
     "react-native-safe-area-context": "^0.3.6",
     "react-native-safe-area-view": "0.13.1",
     "react-native-screens": "^1.0.0-alpha.23",
-    "react-native-splash-screen": "3.2.0",
     "react-native-svg": "^9.4.0",
     "react-native-video": "^5.0.0",
     "react-native-video-controls": "2.2.3",
