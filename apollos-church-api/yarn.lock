@@ -188,6 +188,11 @@
   dependencies:
     graphql-tag "^2.10.0"
 
+"@apollosproject/eslint-config@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/eslint-config/-/eslint-config-1.3.0.tgz#589102a69140bd66e1d1d00a0eac26999b23d10e"
+  integrity sha512-hnwtfPPjirAIbrmTL7z8yOxnYxY2Neu7m+dXs+66ZCZyjsty/32+pBtQSsDJU2FuywtnyZFoqDobMBuMuomqwA==
+
 "@apollosproject/rock-apollo-data-source@^1.3.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@apollosproject/rock-apollo-data-source/-/rock-apollo-data-source-1.3.0.tgz#a3ee840cdd4cb1fa3daaa270dba1db88bf142cb6"
