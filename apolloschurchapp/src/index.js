@@ -1,39 +1,40 @@
-import hoistNonReactStatic from 'hoist-non-react-statics';
-import React from 'react';
-import { StatusBar } from 'react-native';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
-import SplashScreen from 'react-native-splash-screen';
+import hoistNonReactStatic from "hoist-non-react-statics";
+import React from "react";
+import { StatusBar } from "react-native";
+import { createStackNavigator, createAppContainer } from "react-navigation";
+// import SplashScreen from 'react-native-splash-screen';
+import RNBootSplash from "react-native-bootsplash";
 
-import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
-import Passes from '@apollosproject/ui-passes';
-import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
-import { MediaPlayer } from '@apollosproject/ui-media-player';
-import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
+import { BackgroundView, withTheme } from "@apollosproject/ui-kit";
+import Passes from "@apollosproject/ui-passes";
+import { MapViewConnected as Location } from "@apollosproject/ui-mapview";
+import { MediaPlayer } from "@apollosproject/ui-media-player";
+import Auth, { ProtectedRoute } from "@apollosproject/ui-auth";
 
-import Providers from './Providers';
-import NavigationService from './NavigationService';
-import ContentSingle from './content-single';
-import Event from './event';
-import Tabs from './tabs';
-import PersonalDetails from './user-settings/PersonalDetails';
-import ChangePassword from './user-settings/ChangePassword';
-import LandingScreen from './LandingScreen';
-import UserWebBrowser from './user-web-browser';
-import Onboarding from './ui/Onboarding';
+import Providers from "./Providers";
+import NavigationService from "./NavigationService";
+import ContentSingle from "./content-single";
+import Event from "./event";
+import Tabs from "./tabs";
+import PersonalDetails from "./user-settings/PersonalDetails";
+import ChangePassword from "./user-settings/ChangePassword";
+import LandingScreen from "./LandingScreen";
+import UserWebBrowser from "./user-web-browser";
+import Onboarding from "./ui/Onboarding";
 
 const AppStatusBar = withTheme(({ theme }) => ({
-  barStyle: 'dark-content',
-  backgroundColor: theme.colors.paper,
+  barStyle: "dark-content",
+  backgroundColor: theme.colors.paper
 }))(StatusBar);
 
-const ProtectedRouteWithSplashScreen = (props) => {
-  const handleOnRouteChange = () => SplashScreen.hide();
+const ProtectedRouteWithSplashScreen = props => {
+  const handleOnRouteChange = () => RNBootSplash.hide({ duration: 250 });
 
   return <ProtectedRoute {...props} onRouteChange={handleOnRouteChange} />;
 };
 
 // Hack to avoid needing to pass emailRequired through the navigator.navigate
-const EnhancedAuth = (props) => <Auth {...props} emailRequired />;
+const EnhancedAuth = props => <Auth {...props} emailRequired />;
 // 😑
 hoistNonReactStatic(EnhancedAuth, Auth);
 
@@ -50,12 +51,12 @@ const AppNavigator = createStackNavigator(
     Passes,
     UserWebBrowser,
     Onboarding,
-    LandingScreen,
+    LandingScreen
   },
   {
-    initialRouteName: 'ProtectedRoute',
-    mode: 'modal',
-    headerMode: 'screen',
+    initialRouteName: "ProtectedRoute",
+    mode: "modal",
+    headerMode: "screen"
   }
 );
 
@@ -66,7 +67,7 @@ const App = () => (
     <BackgroundView>
       <AppStatusBar barStyle="dark-content" />
       <AppContainer
-        ref={(navigatorRef) => {
+        ref={navigatorRef => {
           NavigationService.setTopLevelNavigator(navigatorRef);
         }}
       />
