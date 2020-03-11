@@ -54,7 +54,9 @@ ContentTab.propTypes = {
    * for the ScriptureList component to be able to jump to the ScriptureTab when the scripture
    * reference link is tapped.
    */
-  navigationState: PropTypes.shape({ routes: PropTypes.array }),
+  navigationState: PropTypes.shape({
+    route: PropTypes.shape({ jumpTo: PropTypes.func }),
+  }),
   /** An array of human readable references (i.e. '1 Corinthians 15:57') */
   references: PropTypes.arrayOf(PropTypes.string),
   /** The devotional title */

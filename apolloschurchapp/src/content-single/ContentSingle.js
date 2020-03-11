@@ -24,12 +24,6 @@ class ContentSingle extends PureComponent {
     }),
   };
 
-  static navigationOptions = {
-    header: NavigationHeader,
-    headerTransparent: true,
-    headerMode: 'float',
-  };
-
   get itemId() {
     return this.props.navigation.getParam('itemId', []);
   }
@@ -37,6 +31,12 @@ class ContentSingle extends PureComponent {
   get queryVariables() {
     return { itemId: this.itemId };
   }
+
+  static navigationOptions = {
+    header: NavigationHeader,
+    headerTransparent: true,
+    headerMode: 'float',
+  };
 
   renderContent = ({ content, loading, error }) => {
     let { __typename } = content;
