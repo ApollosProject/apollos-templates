@@ -17,7 +17,6 @@ if (useStorybook) {
 // This tries to hide the splash screen so you can see the error.
 // Shouldnt't do anything in Prod.
 // Depending on the error, splash screen might not go away ;)
-// global.ErrorUtils.setGlobalHandler(() => SplashScreen.hide());
 
 YellowBox.ignoreWarnings([
   "Warning: isMounted(...) is deprecated",
