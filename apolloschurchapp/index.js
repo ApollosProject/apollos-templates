@@ -12,8 +12,6 @@ if (useStorybook) {
   App = Storybook;
 }
 
-// If there's an error before the splash screen goes away, you never see that error.
-
 YellowBox.ignoreWarnings([
   'Warning: isMounted(...) is deprecated',
   'Module RCTImageLoader'

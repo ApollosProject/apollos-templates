@@ -2,7 +2,6 @@ import hoistNonReactStatic from 'hoist-non-react-statics';
 import React from 'react';
 import { StatusBar } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-// import SplashScreen from 'react-native-splash-screen';
 import RNBootSplash from 'react-native-bootsplash';
 
 import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
