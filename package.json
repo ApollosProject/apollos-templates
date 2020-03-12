@@ -5,6 +5,8 @@
     "watch:client": "(cd apolloschurchapp && yarn wml start)",
     "link-packages": "lerna run link-packages --parallel",
     "unlink-packages": "lerna run unlink-packages --parallel",
+    "lint": "lerna run lint",
+    "test": "lerna run test",
     "ios": "lerna run ios --parallel",
     "pods": "lerna run pods --parallel"
   },
