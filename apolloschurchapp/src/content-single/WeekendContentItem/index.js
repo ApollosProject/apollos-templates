@@ -108,6 +108,7 @@ WeekendContentItem.propTypes = {
     }),
     id: PropTypes.string,
     title: PropTypes.string,
+    videos: PropTypes.arrayOf(PropTypes.shape({ sources: PropTypes.array })),
   }),
   loading: PropTypes.bool,
 };
