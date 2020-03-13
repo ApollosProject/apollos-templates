@@ -14,7 +14,7 @@ if (useStorybook) {
 
 YellowBox.ignoreWarnings([
   'Warning: isMounted(...) is deprecated',
-  'Module RCTImageLoader'
+  'Module RCTImageLoader',
 ]);
 
 AppRegistry.registerComponent('apolloschurchapp', () => App);
