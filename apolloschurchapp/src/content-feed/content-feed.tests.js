@@ -8,7 +8,7 @@ import GET_CONTENT_FEED from './getContentFeed';
 import ContentFeed from './index';
 
 describe('content feed query component', () => {
-  it('renders a feedview after successful query', async () => {
+  it('renders a feedview after successful query', async (done) => {
     const mock = {
       request: {
         query: GET_CONTENT_FEED,
@@ -87,5 +87,6 @@ describe('content feed query component', () => {
       </Providers>
     );
     expect(tree).toMatchSnapshot();
+    done();
   });
 });

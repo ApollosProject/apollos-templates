@@ -11,7 +11,7 @@ import Discover from './Discover';
 import GET_CONTENT_CHANNELS from './DiscoverFeed/getContentChannels';
 
 describe('The Discover tab component', () => {
-  it('Should retrieve the Content Channel Feeds', async () => {
+  it('Should retrieve the Content Channel Feeds', async (done) => {
     const mockFeedData = {
       request: {
         query: GET_CONTENT_CHANNELS,
@@ -570,5 +570,6 @@ describe('The Discover tab component', () => {
       </Providers>
     );
     expect(tree).toMatchSnapshot();
+    done();
   });
 });

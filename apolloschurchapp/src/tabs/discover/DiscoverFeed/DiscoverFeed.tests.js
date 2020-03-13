@@ -11,7 +11,7 @@ import GET_CONTENT_CHANNELS from './getContentChannels';
 import DiscoverFeed from '.';
 
 describe('The DiscoverFeed component', () => {
-  it('should render', async () => {
+  it('should render', async (done) => {
     const mockFeedData = {
       request: {
         query: GET_CONTENT_CHANNELS,
@@ -570,6 +570,7 @@ describe('The DiscoverFeed component', () => {
       </Providers>
     );
     expect(tree).toMatchSnapshot();
+    done();
   });
   it('should render a loading state', () => {
     const DiscoverStack = createStackNavigator({ DiscoverFeed });
