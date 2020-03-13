@@ -2,7 +2,7 @@ import hoistNonReactStatic from 'hoist-non-react-statics';
 import React from 'react';
 import { StatusBar } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import SplashScreen from 'react-native-splash-screen';
+import RNBootSplash from 'react-native-bootsplash';
 
 import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
@@ -23,17 +23,17 @@ import Onboarding from './ui/Onboarding';
 
 const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: 'dark-content',
-  backgroundColor: theme.colors.paper,
+  backgroundColor: theme.colors.paper
 }))(StatusBar);
 
-const ProtectedRouteWithSplashScreen = (props) => {
-  const handleOnRouteChange = () => SplashScreen.hide();
+const ProtectedRouteWithSplashScreen = props => {
+  const handleOnRouteChange = () => RNBootSplash.hide({ duration: 250 });
 
   return <ProtectedRoute {...props} onRouteChange={handleOnRouteChange} />;
 };
 
 // Hack to avoid needing to pass emailRequired through the navigator.navigate
-const EnhancedAuth = (props) => <Auth {...props} emailRequired />;
+const EnhancedAuth = props => <Auth {...props} emailRequired />;
 // 😑
 hoistNonReactStatic(EnhancedAuth, Auth);
 
@@ -50,12 +50,12 @@ const AppNavigator = createStackNavigator(
     Passes,
     UserWebBrowser,
     Onboarding,
-    LandingScreen,
+    LandingScreen
   },
   {
     initialRouteName: 'ProtectedRoute',
     mode: 'modal',
-    headerMode: 'screen',
+    headerMode: 'screen'
   }
 );
 
@@ -64,9 +64,9 @@ const AppContainer = createAppContainer(AppNavigator);
 const App = () => (
   <Providers>
     <BackgroundView>
-      <AppStatusBar barStyle="dark-content" />
+      <AppStatusBar barStyle='dark-content' />
       <AppContainer
-        ref={(navigatorRef) => {
+        ref={navigatorRef => {
           NavigationService.setTopLevelNavigator(navigatorRef);
         }}
       />
