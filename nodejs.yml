@@ -22,7 +22,8 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install -g yarn
     - name: Install
-      run: yarn
+      run: cd apolloschurchapp/ && yarn --ignore-scripts && cd ../
+      run: cd apollos-church-api/ && yarn && cd ../
     - name: Lint
       run: yarn lint
     - name: Test
