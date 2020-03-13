@@ -31,13 +31,15 @@ describe('the BrowserWithUserCookie component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  it('renders with modal false', async () => {
+  it('renders with modal false', async (done) => {
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
         <BrowserWithUserCookie modal={false} navigation={navigation} />
       </Providers>
     );
+
     expect(tree).toMatchSnapshot();
+    done();
   });
 });
 describe('the OpenUserWebView', () => {

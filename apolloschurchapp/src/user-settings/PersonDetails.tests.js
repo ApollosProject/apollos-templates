@@ -7,7 +7,7 @@ import { renderWithApolloData } from '../utils/testUtils';
 import PersonalDetails from './PersonalDetails';
 
 describe('PersonalDetails component', () => {
-  it('renders PersonalDetails when logged in', async () => {
+  it('renders PersonalDetails when logged in', async (done) => {
     const mock = {
       request: {
         query: GET_USER_PROFILE,
@@ -45,5 +45,6 @@ describe('PersonalDetails component', () => {
     );
 
     expect(tree).toMatchSnapshot();
+    done();
   });
 });
