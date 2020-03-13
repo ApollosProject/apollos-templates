@@ -21,11 +21,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Setup test environment with node ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install -g yarn
+    - run: |
+        npm install -g yarn
+        yarn
 
     - name: Install client dependencies
       run: yarn --ignore-scripts
