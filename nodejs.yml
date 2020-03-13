@@ -21,9 +21,12 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm install -g yarn
-    - name: Install
-      run: cd apolloschurchapp/ && yarn --ignore-scripts && cd ../
-      run: cd apollos-church-api/ && yarn && cd ../
+    - name: Install client dependencies
+      run: yarn --ignore-scripts
+      working-directory: ./apolloschurchapp
+    - name: Install api dependencies
+      run: yarn
+      working-directory: ./apollos-church-api
     - name: Lint
       run: yarn lint
     - name: Test
