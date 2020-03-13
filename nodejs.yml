@@ -8,7 +8,7 @@ on:
     branches:
       - master
   pull_request:
-    types: [review_requested, edited]
+    types: [synchronize]
 
 jobs:
   test:
@@ -25,18 +25,26 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+
+    - name: Install-YARN
     - run: npm install -g yarn
-    - name: Install client dependencies
+
+    - name: Install-client-dependencies
       run: yarn --ignore-scripts
       working-directory: ./apolloschurchapp
-    - name: Install api dependencies
+
+    - name: Install-api-dependencies
       run: yarn
       working-directory: ./apollos-church-api
+
     - name: Lint
       run: yarn lint
+
     - name: Test
       run: yarn test
+
     - name: Codecov
       run: yarn codecov
+
       env:
         CI: true
