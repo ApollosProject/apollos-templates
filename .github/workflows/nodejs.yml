@@ -30,18 +30,18 @@ jobs:
         yarn
 
     - name: Install client dependencies
-      run: yarn --ignore-scripts
+      run: |
+        yarn --ignore-scripts
+        yarn lint
+        yarn test
       working-directory: ./apolloschurchapp
 
     - name: Install api dependencies
-      run: yarn
+      run: |
+        yarn
+        yarn lint
+        yarn text
       working-directory: ./apollos-church-api
-
-    - name: Lint
-      run: yarn lint
-
-    - name: Test
-      run: yarn test
 
     - name: Codecov
       run: yarn codecov
