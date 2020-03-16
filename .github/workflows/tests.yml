@@ -21,6 +21,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - uses: codecov/codecov-action@v1
     - name: Setup test environment with node ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -43,3 +44,6 @@ jobs:
     - name: Test
       run: yarn test --forceExit
       working-directory: ./apolloschurchapp
+
+    - name: Codecov
+      run: yarn lerna run codecov
