@@ -4,21 +4,9 @@ import {
 } from 'apollo-cache-inmemory';
 import AsyncStorage from '@react-native-community/async-storage';
 import { CachePersistor } from 'apollo-cache-persist';
-import gql from 'graphql-tag';
 import ApollosConfig from '@apollosproject/config';
+
 import introspectionQueryResultData from './fragmentTypes.json';
-
-export const CACHE_LOADED = gql`
-  query {
-    cacheLoaded @client
-  }
-`;
-
-export const MARK_CACHE_LOADED = gql`
-  mutation markCacheLoaded {
-    cacheMarkLoaded @client
-  }
-`;
 
 // We reset our apollo cache based an env value and static number.
 // In the future, we should also look at resetting the app when an error occurs related to Apollo.

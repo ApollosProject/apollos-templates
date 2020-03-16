@@ -1,7 +1,7 @@
 import StorybookUI, {
   loadApollosStories,
   addApollosProviderDecorator,
-  configure
+  configure,
 } from '@apollosproject/ui-storybook';
 import RNBootSplash from 'react-native-bootsplash';
 import Providers from '../src/Providers';

@@ -1,0 +1,45 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Tests CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [synchronize]
+
+jobs:
+  tests_ci:
+    runs-on: ubuntu-latest
+    env:
+      CI: true
+    strategy:
+      matrix:
+        node-version: [10.19.0]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup test environment with node ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: |
+        npm install -g yarn
+        yarn
+
+    - name: Install client dependencies
+      run: yarn --ignore-scripts
+      working-directory: ./apolloschurchapp
+
+    - name: Install api dependencies
+      run: yarn
+      working-directory: ./apollos-church-api
+
+    - name: Lint
+      run: yarn lint
+
+    - name: Test
+      run: yarn test --forceExit
+      working-directory: ./apolloschurchapp
