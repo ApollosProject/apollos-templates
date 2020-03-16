@@ -43,6 +43,3 @@ jobs:
     - name: Test
       run: yarn test --forceExit
       working-directory: ./apolloschurchapp
-
-    - name: Codecov
-      run: yarn codecov
