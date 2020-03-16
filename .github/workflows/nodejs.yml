@@ -41,7 +41,7 @@ jobs:
       run: yarn lint
 
     - name: Test
-      run: yarn test --forceExit
+      run: yarn test
       working-directory: ./apolloschurchapp
 
     - name: Codecov
