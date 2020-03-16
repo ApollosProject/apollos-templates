@@ -41,7 +41,7 @@ const mocks = {
 };
 
 describe('EventConnected component', () => {
-  it('renders without errors', async (done) => {
+  it('renders without errors', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={[mocks]}>
         <EventConnected navigation={{ getParam: () => 'Event:123' }} />
@@ -49,6 +49,5 @@ describe('EventConnected component', () => {
     );
 
     expect(tree).toMatchSnapshot();
-    done();
   });
 });

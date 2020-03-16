@@ -8,7 +8,7 @@ import Providers from '../Providers';
 import UserSettings from '.';
 
 describe('UserSettings component', () => {
-  it('renders UserSettings when logged in', async (done) => {
+  it('renders UserSettings when logged in', async () => {
     const mock = {
       request: {
         query: GET_LOGIN_STATE,
@@ -25,6 +25,5 @@ describe('UserSettings component', () => {
     );
     await wait(0); // wait for response from graphql
     expect(tree).toMatchSnapshot();
-    done();
   });
 });

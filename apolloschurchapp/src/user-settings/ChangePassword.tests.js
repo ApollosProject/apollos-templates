@@ -7,7 +7,7 @@ import Providers from '../Providers';
 import ChangePassword from './ChangePassword';
 
 describe('Change Password component', () => {
-  it('renders a change password form', async (done) => {
+  it('renders a change password form', async () => {
     const navigation = {
       navigate: jest.fn(),
       getParam: jest.fn(),
@@ -20,6 +20,5 @@ describe('Change Password component', () => {
     );
     await wait(0); // wait for response from graphql
     expect(tree).toMatchSnapshot();
-    done();
   });
 });
