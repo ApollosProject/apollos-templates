@@ -12,7 +12,8 @@ on:
 
 jobs:
   test:
-
+    env:
+      CI: true
     runs-on: ubuntu-latest
 
     strategy:
@@ -30,21 +31,18 @@ jobs:
         yarn
 
     - name: Install client dependencies
-      run: |
-        yarn --ignore-scripts
-        yarn lint
-        yarn test
+      run: yarn --ignore-scripts
       working-directory: ./apolloschurchapp
 
     - name: Install api dependencies
-      run: |
-        yarn
-        yarn lint
-        yarn text
+      run: yarn
       working-directory: ./apollos-church-api
+
+    - name: Lint
+      run: yarn lint
+
+    - name: Test
+      run: yarn test
 
     - name: Codecov
       run: yarn codecov
-
-      env:
-        CI: true
