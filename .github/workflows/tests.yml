@@ -46,7 +46,7 @@ jobs:
       working-directory: ./apolloschurchapp
 
     - name: Generate Codecov
-    - run: yarn lerna run codecov
+      run: yarn lerna run codecov
 
     - name: Upload to Codecov
       uses: codecov/codecov-action@v1
