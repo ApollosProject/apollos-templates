@@ -12,8 +12,6 @@ on:
 
 jobs:
   test:
-    env:
-      CI: true
     runs-on: ubuntu-latest
 
     strategy:
@@ -21,6 +19,8 @@ jobs:
         node-version: [10.19.0]
 
     steps:
+      env:
+        CI: true
     - uses: actions/checkout@v2
     - name: Setup test environment with node ${{ matrix.node-version }}
       uses: actions/setup-node@v1
@@ -42,7 +42,8 @@ jobs:
       run: yarn lint
 
     - name: Test
-      run: yarn test
+      run: yarn test --forceExit
+      working-directory: ./apolloschurchapp
 
     - name: Codecov
       run: yarn codecov
