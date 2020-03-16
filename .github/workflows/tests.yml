@@ -49,7 +49,7 @@ jobs:
       working-directory: ./apolloschurchapp
 
     - name: Codecov
-    - uses: codecov/codecov-action@v1
+      run: yarn lerna run codecov
+      uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-      run: yarn lerna run codecov
