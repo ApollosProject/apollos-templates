@@ -7,8 +7,12 @@ on:
   push:
     branches:
       - master
+      paths-ignore:
+      - '**.md'
   pull_request:
     types: [synchronize]
+    paths-ignore:
+      - '**.md'
 
 jobs:
   tests_ci:
