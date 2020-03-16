@@ -11,7 +11,7 @@ import GET_SEARCH_RESULTS from './getSearchResults';
 import SearchFeed from '.';
 
 describe('The SearchFeed component', () => {
-  it('should render', async (done) => {
+  it('should render', async () => {
     const mockFeedData = {
       request: {
         query: GET_SEARCH_RESULTS,
@@ -293,9 +293,8 @@ describe('The SearchFeed component', () => {
       </Providers>
     );
     expect(tree).toMatchSnapshot();
-    done();
   });
-  it('should render an empty state', async (done) => {
+  it('should render an empty state', async () => {
     const mockEmptyFeedData = {
       request: {
         query: GET_SEARCH_RESULTS,
@@ -340,7 +339,6 @@ describe('The SearchFeed component', () => {
       </Providers>
     );
     expect(tree).toMatchSnapshot();
-    done();
   });
   it('should render a loading state', () => {
     const SearchStack = createStackNavigator({ SearchFeed });

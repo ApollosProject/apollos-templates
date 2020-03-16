@@ -23,14 +23,13 @@ const mocks = [
 const navigation = { navigate: jest.fn(), getParam: jest.fn() };
 
 describe('the BrowserWithUserCookie component', () => {
-  it('renders with a user', async (done) => {
+  it('renders with a user', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
         <BrowserWithUserCookie navigation={navigation} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
-    done();
   });
   it('renders with modal false', async () => {
     const tree = await renderWithApolloData(

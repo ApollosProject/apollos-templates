@@ -64,8 +64,7 @@ describe('the fetchMoreResolver function', () => {
   });
 });
 
-test('renderWithApolloData renders the component', async (done) => {
+test('renderWithApolloData renders the component', async () => {
   const tree = await renderWithApolloData(<Text>hello, world!</Text>);
   expect(tree).toMatchSnapshot();
-  done();
 });

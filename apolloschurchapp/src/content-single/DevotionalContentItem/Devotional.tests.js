@@ -61,7 +61,7 @@ const contentHTMLMock = {
 const mocks = [contentScriptureMock, contentHTMLMock];
 
 describe('the Devotional component', () => {
-  it('renders a devotional', async (done) => {
+  it('renders a devotional', async () => {
     const DevotionalStack = createStackNavigator({
       // eslint-disable-next-line
       Devotional: (props) => (
@@ -75,6 +75,5 @@ describe('the Devotional component', () => {
       </Providers>
     );
     expect(tree).toMatchSnapshot();
-    done();
   });
 });
