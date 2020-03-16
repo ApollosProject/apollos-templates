@@ -13,14 +13,13 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-
+    env:
+      CI: true
     strategy:
       matrix:
         node-version: [10.19.0]
 
     steps:
-      env:
-        CI: true
     - uses: actions/checkout@v2
     - name: Setup test environment with node ${{ matrix.node-version }}
       uses: actions/setup-node@v1
