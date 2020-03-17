@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { ErrorCard, ThemeMixin } from '@apollosproject/ui-kit';
 
 import { TrackEventWhenLoaded } from '@apollosproject/ui-analytics';
+import { InteractWhenLoadedConnected } from '@apollosproject/ui-connected';
 
 import ActionContainer from './ActionContainer';
 import GET_CONTENT_ITEM from './getContentItem';
@@ -82,6 +83,7 @@ class ContentSingle extends PureComponent {
     const content = data.node || {};
 
     const { theme = {}, id } = content;
+    const loaded = !!(!loading && content.title);
 
     return (
       <ThemeMixin
@@ -90,8 +92,13 @@ class ContentSingle extends PureComponent {
           colors: get(theme, 'colors'),
         }}
       >
+        <InteractWhenLoadedConnected
+          loaded={loaded}
+          nodeId={this.itemId}
+          action={'COMPLETE'}
+        />
         <TrackEventWhenLoaded
-          loaded={!!(!loading && content.title)}
+          loaded={loaded}
           eventName={'View Contentx'}
           properties={{
             title: content.title,
