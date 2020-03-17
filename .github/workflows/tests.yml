@@ -7,9 +7,7 @@ on:
     paths-ignore:
       - '**.md'
   pull_request:
-    types: [synchronize]
-    paths-ignore:
-      - '**.md'
+    types: [opened, reopened, synchronize]
 
 jobs:
   tests_ci:
