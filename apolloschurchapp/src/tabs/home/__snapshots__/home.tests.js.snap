@@ -636,7 +636,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
           >
             [Function]
           </Query>
-          <UNDEFINED
+          <Memo(Features)
             navigation={
               Object {
                 "getParam": [MockFunction],

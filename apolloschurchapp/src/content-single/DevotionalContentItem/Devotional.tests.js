@@ -63,7 +63,10 @@ const mocks = [contentScriptureMock, contentHTMLMock];
 describe('the Devotional component', () => {
   it('renders a devotional', async () => {
     const DevotionalStack = createStackNavigator({
-      Devotional: (props) => <Devotional id="1" content={{ title: 'Title' }} {...props} />, //eslint-disable-line
+      // eslint-disable-next-line
+      Devotional: (props) => (
+        <Devotional id={'1'} content={{ title: 'Title' }} {...props} />
+      ),
     });
     const DevotionalWithNavigation = createAppContainer(DevotionalStack);
     const tree = await renderWithApolloData(

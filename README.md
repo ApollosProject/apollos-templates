@@ -42,3 +42,6 @@ First of all, to those of you who remember, the Monorepo, I'm sorry, stick with 
 
 **Q**: Do I need to set that `APOLLOS_APPS_LOCATION` variable?
 **A**: Yes. Because `metro` doesn't support symlinks, we need to use `wml`, which needs to know where the packages live on disk.
+
+**Q**: I'm getting errors when starting the bundler saying folders are not being watched!
+**A**: `watchman watch-del-all` and then try `yarn start` from this repo again.

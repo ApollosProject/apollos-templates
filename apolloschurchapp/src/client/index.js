@@ -6,10 +6,13 @@ import { ApolloLink } from 'apollo-link';
 import { getVersion, getApplicationName } from 'react-native-device-info';
 
 import { authLink, buildErrorLink } from '@apollosproject/ui-auth';
+
 import { resolvers, schema, defaults } from '../store';
 import NavigationService from '../NavigationService';
+
 import httpLink from './httpLink';
-import cache, { ensureCacheHydration, MARK_CACHE_LOADED } from './cache';
+import cache, { ensureCacheHydration } from './cache';
+import MARK_CACHE_LOADED from './markCacheLoaded';
 
 const goToAuth = () => NavigationService.resetToAuth();
 const wipeData = () => cache.writeData({ data: defaults });

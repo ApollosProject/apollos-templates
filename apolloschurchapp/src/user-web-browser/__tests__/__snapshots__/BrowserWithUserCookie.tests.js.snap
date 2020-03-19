@@ -32,15 +32,21 @@ exports[`the BrowserWithUserCookie component renders with a user 1`] = `
 >
   <View
     style={
-      Object {
-        "flex": 1,
-        "overflow": "hidden",
-      }
+      Array [
+        Object {
+          "flex": 1,
+          "overflow": "hidden",
+        },
+        undefined,
+      ]
     }
   >
-    <RNCWKWebView
+    <RNCWebView
       cacheEnabled={true}
+      javaScriptEnabled={true}
       messagingEnabled={false}
+      onContentProcessDidTerminate={[Function]}
+      onHttpError={[Function]}
       onLoadingError={[Function]}
       onLoadingFinish={[Function]}
       onLoadingProgress={[Function]}
@@ -245,15 +251,21 @@ exports[`the BrowserWithUserCookie component renders with a user 1`] = `
 exports[`the BrowserWithUserCookie component renders with modal false 1`] = `
 <View
   style={
-    Object {
-      "flex": 1,
-      "overflow": "hidden",
-    }
+    Array [
+      Object {
+        "flex": 1,
+        "overflow": "hidden",
+      },
+      undefined,
+    ]
   }
 >
-  <RNCWKWebView
+  <RNCWebView
     cacheEnabled={true}
+    javaScriptEnabled={true}
     messagingEnabled={false}
+    onContentProcessDidTerminate={[Function]}
+    onHttpError={[Function]}
     onLoadingError={[Function]}
     onLoadingFinish={[Function]}
     onLoadingProgress={[Function]}

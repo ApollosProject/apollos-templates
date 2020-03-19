@@ -1,3 +1,13 @@
+# operating system files
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.swp
+
+# Dependency directories
 node_modules/
 .yalc/
 yalc.lock
