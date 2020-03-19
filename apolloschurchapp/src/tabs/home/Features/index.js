@@ -17,6 +17,47 @@ const StyledH6 = styled(({ theme }) => ({
 //     transitionKey: 2,
 //   });
 
+const ActionListCardFeature = ({
+  actions,
+  navigation,
+  loading,
+  title,
+  subtitle,
+  id,
+}) => (
+  <ActionListCard
+    isLoading={loading}
+    key={id}
+    header={
+      <>
+        <StyledH6 numberOfLines={1}>{title}</StyledH6>
+        <H3 numberOfLines={3}>{subtitle}</H3>
+      </>
+    }
+    actions={actions}
+    onPressActionItem={({ action, relatedNode }) => {
+      if (action === 'READ_CONTENT') {
+        navigation.navigate('ContentSingle', {
+          itemId: relatedNode.id,
+          transitionKey: 2,
+        });
+      }
+      if (action === 'READ_EVENT') {
+        navigation.navigate('Event', {
+          eventId: relatedNode.id,
+          transitionKey: 2,
+        });
+      }
+    }}
+    onPressCardActionButton={() =>
+      navigation.navigate('ContentFeed', {
+        itemId: id,
+        itemTitle: title,
+      })
+    }
+  />
+);
+
 const Features = memo(({ navigation }) => (
   <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
     {({ data: features, loading }) =>
@@ -90,40 +131,12 @@ const Features = memo(({ navigation }) => (
         />
       ) : (
         get(features, 'userFeedFeatures', []).map(
-          ({ title, subtitle, actions, id }) =>
-            actions.length ? (
-              <ActionListCard
-                isLoading={loading}
-                key={id}
-                header={
-                  <>
-                    <StyledH6 numberOfLines={1}>{title}</StyledH6>
-                    <H3 numberOfLines={3}>{subtitle}</H3>
-                  </>
-                }
-                actions={actions}
-                onPressActionItem={({ action, relatedNode }) => {
-                  if (action === 'READ_CONTENT') {
-                    navigation.navigate('ContentSingle', {
-                      itemId: relatedNode.id,
-                      transitionKey: 2,
-                    });
-                  }
-                  if (action === 'READ_EVENT') {
-                    navigation.navigate('Event', {
-                      eventId: relatedNode.id,
-                      transitionKey: 2,
-                    });
-                  }
-                }}
-                onPressCardActionButton={() =>
-                  navigation.navigate('ContentFeed', {
-                    itemId: id,
-                    itemTitle: title,
-                  })
-                }
-              />
-            ) : null
+          ({ __typename, ...props }) => {
+            if (__typename === 'ActionListFeature') {
+              return <ActionListCardFeature loading={loading} {...props} />;
+            }
+            console.warn(__typename);
+          }
         )
       )
     }
