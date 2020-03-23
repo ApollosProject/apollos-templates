@@ -42,7 +42,7 @@
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"apolloschurchapp"
                                             initialProperties:nil];
-  
+
   // Initialize Google Cast
   GCKDiscoveryCriteria *criteria = [[GCKDiscoveryCriteria alloc] initWithApplicationID:kGCKDefaultMediaReceiverApplicationID];
   GCKCastOptions* options = [[GCKCastOptions alloc] initWithDiscoveryCriteria:criteria];
@@ -53,9 +53,7 @@
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
-
   [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
-
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
 
