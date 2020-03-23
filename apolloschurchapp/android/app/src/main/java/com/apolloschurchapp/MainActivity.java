@@ -7,7 +7,7 @@ import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
 import com.zoontek.rnbootsplash.RNBootSplash;
 import com.facebook.react.GoogleCastActivity;
 
-public class MainActivity extends ReactActivity {
+public class MainActivity extends GoogleCastActivity {
     /**
      * Returns the name of the main component registered from JavaScript.
      * This is used to schedule rendering of the component.
@@ -21,7 +21,6 @@ public class MainActivity extends ReactActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         RNBootSplash.init(R.drawable.bootsplash, com.apolloschurchapp.MainActivity.this);
-        CastContext.getSharedInstance(this);
     }
 
     @Override

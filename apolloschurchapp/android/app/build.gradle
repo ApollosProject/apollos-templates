@@ -152,6 +152,7 @@ android {
             abiFilters "armeabi-v7a", "x86", "arm64-v8a", "x86_64"
         }
         resValue "string", "build_config_package", "com.apolloschurchapp"
+        multiDexEnabled true
     }
     splits {
         abi {
@@ -194,7 +195,6 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation 'com.facebook.fresco:animated-gif:2.0.0'
-    implementation "com.google.android.gms:play-services-cast-framework:${rootProject.ext.castFrameworkVersion}"
 
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";
