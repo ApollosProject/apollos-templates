@@ -5,6 +5,7 @@ import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
 import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
 import com.zoontek.rnbootsplash.RNBootSplash;
+import com.facebook.react.GoogleCastActivity;
 
 public class MainActivity extends ReactActivity {
     /**
@@ -20,6 +21,7 @@ public class MainActivity extends ReactActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         RNBootSplash.init(R.drawable.bootsplash, com.apolloschurchapp.MainActivity.this);
+        CastContext.getSharedInstance(this);
     }
 
     @Override
