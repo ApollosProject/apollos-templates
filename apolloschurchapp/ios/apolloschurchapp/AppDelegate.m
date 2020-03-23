@@ -55,7 +55,7 @@
   rootViewController.view = rootView;
   
   [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
-
+  
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
 
