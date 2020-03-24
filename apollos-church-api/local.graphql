@@ -106,14 +106,6 @@ input CampusLocationInput {
   longitude: Float
 }
 
-type CardListFeature implements Feature & Node {
-  id: ID!
-  order: Int
-  title: String
-  subtitle: String
-  cards: [CardListItem]
-}
-
 type CardListItem {
   id: ID!
   hasAction: Boolean
@@ -184,6 +176,7 @@ type ContentSeriesContentItem implements ContentItem & Node {
   siblingContentItemsConnection(first: Int, after: String): ContentItemsConnection
   parentChannel: ContentChannel
   theme: Theme
+  percentComplete: Float
   upNext: ContentItem
   scriptures: [Scripture]
   isLiked: Boolean
@@ -551,6 +544,14 @@ enum USER_AUTH_STATUS {
 enum VERSION {
   WEB
   KJV
+}
+
+type VerticalCardListFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  title: String
+  subtitle: String
+  cards: [CardListItem]
 }
 
 type VideoMedia implements Media {

@@ -3,7 +3,15 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 // import PropTypes from 'prop-types';
 
-import { styled, ActionListCard, H3, H6 } from '@apollosproject/ui-kit';
+import {
+  styled,
+  ActionListCard,
+  H3,
+  H6,
+  FeedView,
+} from '@apollosproject/ui-kit';
+
+import { contentCardComponentMapper } from '@apollosproject/ui-connected';
 
 import GET_FEED_FEATURES from './getFeedFeatures';
 
@@ -11,11 +19,20 @@ const StyledH6 = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
 }))(H6);
 
-// const handleOnPressActionItem = (id) =>
-//   this.props.navigation.navigate('ContentSingle', {
-//     itemId: id,
-//     transitionKey: 2,
-//   });
+const handleOnPressActionItem = ({ action, relatedNode, navigation }) => {
+  if (action === 'READ_CONTENT') {
+    navigation.navigate('ContentSingle', {
+      itemId: relatedNode.id,
+      transitionKey: 2,
+    });
+  }
+  if (action === 'READ_EVENT') {
+    navigation.navigate('Event', {
+      eventId: relatedNode.id,
+      transitionKey: 2,
+    });
+  }
+};
 
 const ActionListCardFeature = ({
   actions,
@@ -35,26 +52,30 @@ const ActionListCardFeature = ({
       </>
     }
     actions={actions}
-    onPressActionItem={({ action, relatedNode }) => {
-      if (action === 'READ_CONTENT') {
-        navigation.navigate('ContentSingle', {
-          itemId: relatedNode.id,
-          transitionKey: 2,
-        });
-      }
-      if (action === 'READ_EVENT') {
-        navigation.navigate('Event', {
-          eventId: relatedNode.id,
-          transitionKey: 2,
-        });
-      }
-    }}
+    onPressActionItem={({ action, relatedNode }) =>
+      handleOnPressActionItem({ action, relatedNode, navigation })
+    }
     onPressCardActionButton={() =>
       navigation.navigate('ContentFeed', {
         itemId: id,
         itemTitle: title,
       })
     }
+  />
+);
+
+const VerticalCardListFeature = ({ cards, loading, navigation }) => (
+  <FeedView
+    onPressItem={({ action, relatedNode }) =>
+      handleOnPressActionItem({ action, relatedNode, navigation })
+    }
+    ListItemComponent={contentCardComponentMapper}
+    content={cards.map((card) => ({
+      ...card,
+      coverImage: get(card, 'coverImage.sources', undefined),
+      __typename: card.relatedNode.__typename,
+    }))}
+    isLoading={loading}
   />
 );
 
@@ -133,9 +154,23 @@ const Features = memo(({ navigation }) => (
         get(features, 'userFeedFeatures', []).map(
           ({ __typename, ...props }) => {
             if (__typename === 'ActionListFeature') {
-              return <ActionListCardFeature loading={loading} {...props} />;
+              return (
+                <ActionListCardFeature
+                  loading={loading}
+                  navigation={navigation}
+                  {...props}
+                />
+              );
             }
-            console.warn(__typename);
+            if (__typename === 'VerticalCardListFeature') {
+              return (
+                <VerticalCardListFeature
+                  loading={loading}
+                  navigation={navigation}
+                  {...props}
+                />
+              );
+            }
           }
         )
       )
