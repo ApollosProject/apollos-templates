@@ -7,7 +7,7 @@ const StyledH6 = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
 }))(H6);
 
-const ActionListFeature = memo(
+const ActionListCardFeature = memo(
   ({
     actions,
     id,
@@ -22,10 +22,10 @@ const ActionListFeature = memo(
       key={id}
       header={
         <>
-          {isLoading || title ? (
+          {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
             <StyledH6 numberOfLines={1}>{title}</StyledH6>
           ) : null}
-          {isLoading || subtitle ? <H3 numberOfLines={3}>{subtitle}</H3> : null}
+          {isLoading || subtitle ? <H3>{subtitle}</H3> : null}
         </>
       }
       actions={actions}
@@ -35,9 +35,9 @@ const ActionListFeature = memo(
   )
 );
 
-ActionListFeature.displayName = 'Features';
+ActionListCardFeature.displayName = 'Features';
 
-ActionListFeature.propTypes = {
+ActionListCardFeature.propTypes = {
   actions: PropTypes.arrayOf(PropTypes.shape({})),
   id: PropTypes.number,
   isLoading: PropTypes.bool,
@@ -47,4 +47,4 @@ ActionListFeature.propTypes = {
   title: PropTypes.string,
 };
 
-export default ActionListFeature;
+export default ActionListCardFeature;
