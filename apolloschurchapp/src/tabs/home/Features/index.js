@@ -13,13 +13,15 @@ import {
 
 import { contentCardComponentMapper } from '@apollosproject/ui-connected';
 
+import ActionListCardFeature from './ActionListCardFeature';
+
 import GET_FEED_FEATURES from './getFeedFeatures';
 
 const StyledH6 = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
 }))(H6);
 
-const handleOnPressActionItem = ({ action, relatedNode, navigation }) => {
+const handleOnPressActionItem = ({ action, navigation, relatedNode }) => {
   if (action === 'READ_CONTENT') {
     navigation.navigate('ContentSingle', {
       itemId: relatedNode.id,
@@ -34,41 +36,15 @@ const handleOnPressActionItem = ({ action, relatedNode, navigation }) => {
   }
 };
 
-const ActionListCardFeature = ({
-  actions,
-  navigation,
-  loading,
-  title,
-  subtitle,
-  id,
-}) => (
-  <ActionListCard
-    isLoading={loading}
-    key={id}
-    header={
-      <>
-        <StyledH6 numberOfLines={1}>{title}</StyledH6>
-        <H3 numberOfLines={3}>{subtitle}</H3>
-      </>
-    }
-    actions={actions}
-    onPressActionItem={({ action, relatedNode }) =>
-      handleOnPressActionItem({ action, relatedNode, navigation })
-    }
-    onPressCardActionButton={() =>
-      navigation.navigate('ContentFeed', {
-        itemId: id,
-        itemTitle: title,
-      })
-    }
-  />
-);
+const handleOnPressCardActionButton = ({ id, navigation, title }) =>
+  navigation.navigate('ContentFeed', {
+    itemId: id,
+    itemTitle: title,
+  });
 
 const VerticalCardListFeature = ({ cards, loading, navigation }) => (
   <FeedView
-    onPressItem={({ action, relatedNode }) =>
-      handleOnPressActionItem({ action, relatedNode, navigation })
-    }
+    onPressItem={handleOnPressActionItem({ navigation })}
     ListItemComponent={contentCardComponentMapper}
     content={cards.map((card) => ({
       ...card,
@@ -79,100 +55,109 @@ const VerticalCardListFeature = ({ cards, loading, navigation }) => (
   />
 );
 
+const loadingStateData = [
+  {
+    id: 'fakeId1',
+    title: '',
+    subtitle: '',
+    parentChannel: {
+      id: '',
+      name: '',
+    },
+    image: {
+      sources: [
+        {
+          uri: '',
+        },
+      ],
+    },
+  },
+  {
+    id: 'fakeId2',
+    title: '',
+    subtitle: '',
+    parentChannel: {
+      id: '',
+      name: '',
+    },
+    image: {
+      sources: [
+        {
+          uri: '',
+        },
+      ],
+    },
+  },
+  {
+    id: 'fakeId3',
+    title: '',
+    subtitle: '',
+    parentChannel: {
+      id: '',
+      name: '',
+    },
+    image: {
+      sources: [
+        {
+          uri: '',
+        },
+      ],
+    },
+  },
+  {
+    id: 'fakeId4',
+    title: '',
+    subtitle: '',
+    parentChannel: {
+      id: '',
+      name: '',
+    },
+    image: {
+      sources: [
+        {
+          uri: '',
+        },
+      ],
+    },
+  },
+];
+
 const Features = memo(({ navigation }) => (
   <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
     {({ data: features, loading }) =>
-      loading ? (
-        <ActionListCard
-          isLoading
-          header={
-            <>
-              <StyledH6 isLoading />
-              <H3 isLoading />
-            </>
+      get(features, 'userFeedFeatures', []).map(
+        ({ actions, __typename, ...props }) => {
+          if (__typename === 'ActionListFeature') {
+            return (
+              <ActionListCardFeature
+                actions={loading ? loadingStateData : actions}
+                onPressActionItem={({ action, relatedNode }) =>
+                  handleOnPressActionItem({
+                    action,
+                    navigation,
+                    relatedNode,
+                  })
+                }
+                onPressActionListButton={() =>
+                  handleOnPressCardActionButton({ navigation })
+                }
+                isLoading={loading}
+                navigation={navigation}
+                {...props}
+              />
+            );
           }
-          actions={[
-            {
-              id: 'fakeId1',
-              title: '',
-              subtitle: '',
-              parentChannel: {
-                id: '',
-                name: '',
-              },
-              coverImage: {
-                sources: {
-                  uri: '',
-                },
-              },
-            },
-            {
-              id: 'fakeId2',
-              title: '',
-              subtitle: '',
-              parentChannel: {
-                id: '',
-                name: '',
-              },
-              coverImage: {
-                sources: {
-                  uri: '',
-                },
-              },
-            },
-            {
-              id: 'fakeId3',
-              title: '',
-              subtitle: '',
-              parentChannel: {
-                id: '',
-                name: '',
-              },
-              coverImage: {
-                sources: {
-                  uri: '',
-                },
-              },
-            },
-            {
-              id: 'fakeId4',
-              title: '',
-              subtitle: '',
-              parentChannel: {
-                id: '',
-                name: '',
-              },
-              coverImage: {
-                sources: {
-                  uri: '',
-                },
-              },
-            },
-          ]}
-        />
-      ) : (
-        get(features, 'userFeedFeatures', []).map(
-          ({ __typename, ...props }) => {
-            if (__typename === 'ActionListFeature') {
-              return (
-                <ActionListCardFeature
-                  loading={loading}
-                  navigation={navigation}
-                  {...props}
-                />
-              );
-            }
-            if (__typename === 'VerticalCardListFeature') {
-              return (
-                <VerticalCardListFeature
-                  loading={loading}
-                  navigation={navigation}
-                  {...props}
-                />
-              );
-            }
+          if (__typename === 'VerticalCardListFeature') {
+            return (
+              <VerticalCardListFeature
+                actions={actions}
+                loading={loading}
+                navigation={navigation}
+                {...props}
+              />
+            );
           }
-        )
+        }
       )
     }
   </Query>
