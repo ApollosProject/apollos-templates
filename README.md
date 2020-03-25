@@ -34,14 +34,17 @@ First of all, to those of you who remember, the Monorepo, I'm sorry, stick with 
 
 ### FAQ
 
-**Q**: Why `linkemon`? How is it different than `nodemon`?
+**Q**: Why `linkemon`? How is it different than `nodemon`?<br>
 **A**: `linkemon` will refresh the app if symlinked (yarn linked) packages are changed.
 
-**Q**: Who do I yell at if things are broken?
+**Q**: Who do I yell at if things are broken?<br>
 **A**: @vinnyjth
 
-**Q**: Do I need to set that `APOLLOS_APPS_LOCATION` variable?
+**Q**: Do I need to set that `APOLLOS_APPS_LOCATION` variable?<br>
 **A**: Yes. Because `metro` doesn't support symlinks, we need to use `wml`, which needs to know where the packages live on disk.
 
-**Q**: I'm getting errors when starting the bundler saying folders are not being watched!
+**Q**: I'm getting errors when starting the bundler saying folders are not being watched!<br>
 **A**: `watchman watch-del-all` and then try `yarn start` from this repo again.
+
+**Q**: What if I need to add a package to either repo?<br>
+**A**: In this case the node modules have changed and you'll need to `yarn unlink/link` from this repo again.
