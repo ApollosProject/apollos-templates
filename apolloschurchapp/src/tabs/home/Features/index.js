@@ -3,23 +3,13 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 // import PropTypes from 'prop-types';
 
-import {
-  styled,
-  ActionListCard,
-  H3,
-  H6,
-  FeedView,
-} from '@apollosproject/ui-kit';
+import { FeedView } from '@apollosproject/ui-kit';
 
 import { contentCardComponentMapper } from '@apollosproject/ui-connected';
 
 import ActionListCardFeature from './ActionListCardFeature';
 
 import GET_FEED_FEATURES from './getFeedFeatures';
-
-const StyledH6 = styled(({ theme }) => ({
-  color: theme.colors.text.tertiary,
-}))(H6);
 
 const handleOnPressActionItem = ({ action, navigation, relatedNode }) => {
   if (action === 'READ_CONTENT') {
