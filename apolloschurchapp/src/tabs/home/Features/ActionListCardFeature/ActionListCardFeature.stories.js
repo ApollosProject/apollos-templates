@@ -4,7 +4,7 @@ import { storiesOf } from '@apollosproject/ui-storybook';
 import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
 import ActionListFeature from '.';
 
-storiesOf('ActionListFeature', module)
+storiesOf('ActionListCardFeature', module)
   .addDecorator((story) => (
     <BackgroundView>
       {/* eslint-disable-next-line react-native/no-inline-styles */}
