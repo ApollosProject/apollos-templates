@@ -12,7 +12,7 @@ const ActionListCardFeature = memo(
     actions,
     id,
     isLoading,
-    onPressCardActionButton,
+    onPressActionListButton,
     onPressActionItem,
     subtitle,
     title,
@@ -30,7 +30,7 @@ const ActionListCardFeature = memo(
       }
       actions={actions}
       onPressActionItem={onPressActionItem}
-      onPressCardActionButton={onPressCardActionButton}
+      onPressActionListButton={onPressActionListButton}
     />
   )
 );
@@ -41,7 +41,7 @@ ActionListCardFeature.propTypes = {
   actions: PropTypes.arrayOf(PropTypes.shape({})),
   id: PropTypes.number,
   isLoading: PropTypes.bool,
-  onPressCardActionButton: PropTypes.func,
+  onPressActionListButton: PropTypes.func,
   onPressActionItem: PropTypes.func,
   subtitle: PropTypes.string,
   title: PropTypes.string,
