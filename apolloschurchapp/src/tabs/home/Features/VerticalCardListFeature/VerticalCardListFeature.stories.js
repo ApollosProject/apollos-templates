@@ -13,16 +13,11 @@ const cards = [
     labelText: null,
     summary:
       "Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.",
-    coverImage: {
-      sources: [
-        {
-          uri:
-            'https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,q_auto:eco,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dfe44d493-b69f-4721-83f7-7942c4f99125',
-          __typename: 'ImageMediaSource',
-        },
-      ],
-      __typename: 'ImageMedia',
-    },
+    coverImage: [
+      {
+        uri: 'https://picsum.photos/800',
+      },
+    ],
     relatedNode: {
       id: 'UniversalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae',
       __typename: 'UniversalContentItem',
@@ -46,38 +41,7 @@ storiesOf('VerticalCardListFeature', module)
     />
   ))
   .add('default', () => <VerticalCardListFeature cards={cards} />)
-  .add('isLoading', () => {
-    const loadingStateData = [
-      {
-        action: 'READ_CONTENT',
-        title: '',
-        hasAction: null,
-        actionIcon: null,
-        labelText: null,
-        summary: '',
-        coverImage: {
-          sources: [
-            {
-              uri: '',
-            },
-          ],
-        },
-        relatedNode: {
-          id: 'fakeId1',
-          __typename: '',
-        },
-        __typename: '',
-      },
-    ];
-
-    return (
-      <VerticalCardListFeature
-        cards={loadingStateData}
-        onPressActionListButton={() => {}}
-        isLoading
-      />
-    );
-  })
+  .add('isLoading', () => <VerticalCardListFeature cards={[]} isLoading />)
   .add('subtitle', () => (
     <VerticalCardListFeature cards={cards} subtitle={'subtitle'} />
   ))
