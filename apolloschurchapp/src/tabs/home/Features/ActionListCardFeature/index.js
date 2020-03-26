@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 
 import { styled, ActionListCard, H3, H6 } from '@apollosproject/ui-kit';
 
-const StyledH6 = styled(({ theme }) => ({
-  color: theme.colors.text.tertiary,
-}))(H6);
+const StyledH6 = styled(
+  ({ theme }) => ({
+    color: theme.colors.text.tertiary,
+  }),
+  'ActionListCardFeature.StyledH6'
+)(H6);
 
 const ActionListCardFeature = memo(
   ({
