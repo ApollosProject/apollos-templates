@@ -81,4 +81,12 @@ describe('The Onboarding LandingScreen component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render with a title', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListCardFeature actions={actions} title={'Boom'} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
