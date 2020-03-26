@@ -84,7 +84,21 @@ describe('The Onboarding LandingScreen component', () => {
   it('should render with a title', () => {
     const tree = renderer.create(
       <Providers>
-        <ActionListCardFeature actions={actions} title={'Boom'} />
+        <ActionListCardFeature
+          actions={actions}
+          title={'This renders smaller than its name would suggest'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a subtitle', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListCardFeature
+          actions={actions}
+          subtitle={'This renders larger than you might expect'}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
