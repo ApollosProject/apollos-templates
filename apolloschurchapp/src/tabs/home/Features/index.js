@@ -3,10 +3,7 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 // import PropTypes from 'prop-types';
 
-import { FeedView } from '@apollosproject/ui-kit';
-
-import { contentCardComponentMapper } from '@apollosproject/ui-connected';
-
+import VerticalCardListFeature from './VerticalCardListFeature';
 import ActionListCardFeature from './ActionListCardFeature';
 
 import GET_FEED_FEATURES from './getFeedFeatures';
@@ -32,20 +29,7 @@ const handleOnPressCardActionButton = ({ id, navigation, title }) =>
     itemTitle: title,
   });
 
-const VerticalCardListFeature = ({ cards, loading, navigation }) => (
-  <FeedView
-    onPressItem={handleOnPressActionItem({ navigation })}
-    ListItemComponent={contentCardComponentMapper}
-    content={cards.map((card) => ({
-      ...card,
-      coverImage: get(card, 'coverImage.sources', undefined),
-      __typename: card.relatedNode.__typename,
-    }))}
-    isLoading={loading}
-  />
-);
-
-const loadingStateData = [
+const actionListLoadingStateData = [
   {
     id: 'fakeId1',
     title: '',
@@ -121,7 +105,7 @@ const Features = memo(({ navigation }) => (
             return (
               <ActionListCardFeature
                 // TODO: How can we better handle generating a loading state.
-                actions={loading ? loadingStateData : actions}
+                actions={loading ? actionListLoadingStateData : actions}
                 onPressActionItem={({ action, relatedNode }) =>
                   handleOnPressActionItem({
                     action,
@@ -141,10 +125,16 @@ const Features = memo(({ navigation }) => (
           if (__typename === 'VerticalCardListFeature') {
             return (
               <VerticalCardListFeature
-                actions={actions}
-                loading={loading}
+                cards={props.cards.map((card) => ({
+                  ...card,
+                  coverImage: get(card, 'coverImage.sources', undefined),
+                  __typename: card.relatedNode.__typename,
+                }))}
+                isLoading={loading}
                 navigation={navigation}
-                {...props}
+                onPressItem={handleOnPressActionItem({ navigation })}
+                title={'RECOMMENDED'}
+                subtitle={'For Him'}
               />
             );
           }
