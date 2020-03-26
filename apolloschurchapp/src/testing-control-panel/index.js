@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { TableView } from '@apollosproject/ui-kit';
 import { RockAuthedWebBrowser } from '@apollosproject/ui-connected';
-import { UserWebBrowserConsumer } from '../user-web-browser';
 import TouchableCell from './TouchableCell';
 
 export default class TestingControlPanel extends PureComponent {
@@ -12,20 +11,16 @@ export default class TestingControlPanel extends PureComponent {
   render() {
     return (
       <TableView>
-        <UserWebBrowserConsumer>
-          {(openUserWebView) => (
-            <TouchableCell
-              handlePress={() =>
-                openUserWebView({
-                  url:
-                    'https://www.whatismybrowser.com/detect/what-http-headers-is-my-browser-sending',
-                })
-              }
-              iconName="share"
-              cellText={`Open Web Browser With User Cookie`}
-            />
-          )}
-        </UserWebBrowserConsumer>
+        <TouchableCell
+          handlePress={() =>
+            this.props.navigation.navigate('RockAuthedWebView', {
+              url:
+                'https://www.whatismybrowser.com/detect/what-http-headers-is-my-browser-sending',
+            })
+          }
+          iconName="share"
+          cellText={`Open Web Browser With User Cookie`}
+        />
         <RockAuthedWebBrowser>
           {(openUrl) => (
             <>

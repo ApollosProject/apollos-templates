@@ -4,6 +4,7 @@ import { StatusBar } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import RNBootSplash from 'react-native-bootsplash';
 
+import { RockAuthedWebView } from '@apollosproject/ui-connected';
 import { BackgroundView, withTheme } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
@@ -18,8 +19,9 @@ import Tabs from './tabs';
 import PersonalDetails from './user-settings/PersonalDetails';
 import ChangePassword from './user-settings/ChangePassword';
 import LandingScreen from './LandingScreen';
-import UserWebBrowser from './user-web-browser';
 import Onboarding from './ui/Onboarding';
+
+console.log(RockAuthedWebView);
 
 const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: 'dark-content',
@@ -48,7 +50,7 @@ const AppNavigator = createStackNavigator(
     ChangePassword,
     Location,
     Passes,
-    UserWebBrowser,
+    RockAuthedWebView,
     Onboarding,
     LandingScreen,
   },

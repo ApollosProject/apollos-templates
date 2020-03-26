@@ -165,6 +165,8 @@ type ContentSeriesContentItem implements ContentItem & Node {
   siblingContentItemsConnection(first: Int, after: String): ContentItemsConnection
   parentChannel: ContentChannel
   theme: Theme
+  percentComplete: Float
+  upNext: ContentItem
   scriptures: [Scripture]
   isLiked: Boolean
   likedCount: Int
@@ -236,6 +238,23 @@ type ImageMediaSource implements MediaSource {
   uri: String
 }
 
+enum InteractionAction {
+  VIEW
+  COMPLETE
+}
+
+input InteractionDataField {
+  field: String!
+  value: InteractionValue
+}
+
+type InteractionResult {
+  success: Boolean
+  node: Node
+}
+
+scalar InteractionValue
+
 enum LIKE_OPERATION {
   Like
   Unlike
@@ -301,6 +320,7 @@ type Mutation {
   requestSmsLoginPin(phoneNumber: String!): SmsPinResult
   authenticateWithSms(phoneNumber: String!, pin: String!): Authentication
   registerWithSms(phoneNumber: String!, pin: String!, userProfile: [UpdateProfileInput]): Authentication
+  interactWithNode(action: InteractionAction!, nodeId: ID!, data: [InteractionDataField]): InteractionResult
   identifySelf(input: AnalyticsIdentifyInput!): AnalyticsResult
   trackEvent(input: AnalyticsTrackInput!): AnalyticsResult
   updateUserPushSettings(input: PushSettingsInput!): Person
