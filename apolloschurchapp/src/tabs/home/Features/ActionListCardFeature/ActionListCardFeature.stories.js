@@ -155,7 +155,13 @@ storiesOf('ActionListCardFeature', module)
       },
     ];
 
-    return <ActionListFeature actions={loadingStateData} isLoading />;
+    return (
+      <ActionListFeature
+        actions={loadingStateData}
+        onPressActionListButton={() => {}}
+        isLoading
+      />
+    );
   })
   .add('onPressActionListButton', () => (
     <ActionListFeature actions={actions} onPressActionListButton={() => {}} />
