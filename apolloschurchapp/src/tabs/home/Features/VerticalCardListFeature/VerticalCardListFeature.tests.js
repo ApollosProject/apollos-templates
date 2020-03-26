@@ -35,17 +35,17 @@ describe('The VerticalCardListFeature component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  // it('should render with a title', () => {
-  //   const tree = renderer.create(
-  //     <Providers>
-  //       <VerticalCardListFeature
-  //         cards={cards}
-  //         title={'This renders smaller than its name would suggest'}
-  //       />
-  //     </Providers>
-  //   );
-  //   expect(tree).toMatchSnapshot();
-  // });
+  it('should render a section title', () => {
+    const tree = renderer.create(
+      <Providers>
+        <VerticalCardListFeature
+          cards={cards}
+          title={'This renders smaller than its name would suggest'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   // it('should render with a subtitle', () => {
   //   const tree = renderer.create(
   //     <Providers>
