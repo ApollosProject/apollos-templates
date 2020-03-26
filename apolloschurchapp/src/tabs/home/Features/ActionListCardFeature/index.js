@@ -30,7 +30,7 @@ const ActionListCardFeature = memo(
       }
       actions={actions}
       onPressActionItem={onPressActionItem}
-      onPressActionListButton={onPressActionListButton}
+      onPressActionListButton={isLoading || onPressActionListButton} // we check for isloading here so that the button is included in the loading state
     />
   )
 );
