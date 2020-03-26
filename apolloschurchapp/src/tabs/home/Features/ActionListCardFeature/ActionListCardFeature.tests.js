@@ -103,4 +103,15 @@ describe('The Onboarding LandingScreen component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
+  it('should render a button for onPressActionListButton', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListCardFeature
+          actions={actions}
+          onPressActionListButton={jest.fn()}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
