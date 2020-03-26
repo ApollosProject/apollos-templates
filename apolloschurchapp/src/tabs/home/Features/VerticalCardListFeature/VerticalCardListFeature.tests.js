@@ -46,17 +46,17 @@ describe('The VerticalCardListFeature component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  // it('should render with a subtitle', () => {
-  //   const tree = renderer.create(
-  //     <Providers>
-  //       <VerticalCardListFeature
-  //         cards={cards}
-  //         subtitle={'This renders larger than you might expect'}
-  //       />
-  //     </Providers>
-  //   );
-  //   expect(tree).toMatchSnapshot();
-  // });
+  it('should render with a subtitle', () => {
+    const tree = renderer.create(
+      <Providers>
+        <VerticalCardListFeature
+          cards={cards}
+          subtitle={'This renders larger than you might expect'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
   // it('should render a button for onPressActionListButton', () => {
   //   const tree = renderer.create(
   //     <Providers>
