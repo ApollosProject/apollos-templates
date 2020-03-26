@@ -120,7 +120,7 @@ const Features = memo(({ navigation }) => (
           if (__typename === 'ActionListFeature') {
             return (
               <ActionListCardFeature
-                // TODO: How can we handle generating a loading state better.
+                // TODO: How can we better handle generating a loading state.
                 actions={loading ? loadingStateData : actions}
                 onPressActionItem={({ action, relatedNode }) =>
                   handleOnPressActionItem({
