@@ -57,23 +57,12 @@ describe('The VerticalCardListFeature component', () => {
     );
     expect(tree).toMatchSnapshot();
   });
-  // it('should render a button for onPressActionListButton', () => {
-  //   const tree = renderer.create(
-  //     <Providers>
-  //       <VerticalCardListFeature
-  //         cards={cards}
-  //         onPressActionListButton={jest.fn()}
-  //       />
-  //     </Providers>
-  //   );
-  //   expect(tree).toMatchSnapshot();
-  // });
-  // it('should render a loading state for isLoading', () => {
-  //   const tree = renderer.create(
-  //     <Providers>
-  //       <VerticalCardListFeature actions={loadingStateData} isLoading />
-  //     </Providers>
-  //   );
-  //   expect(tree).toMatchSnapshot();
-  // });
+  it('should render a loading state for isLoading', () => {
+    const tree = renderer.create(
+      <Providers>
+        <VerticalCardListFeature cards={[]} isLoading />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
 });
