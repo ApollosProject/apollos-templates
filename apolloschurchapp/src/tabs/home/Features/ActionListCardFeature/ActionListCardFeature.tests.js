@@ -72,7 +72,7 @@ const actions = [
   },
 ];
 
-describe('The Onboarding LandingScreen component', () => {
+describe('The ActionListCardFeatures component', () => {
   it('should render', () => {
     const tree = renderer.create(
       <Providers>

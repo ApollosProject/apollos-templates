@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Onboarding LandingScreen component should render 1`] = `
+exports[`The ActionListCardFeatures component should render 1`] = `
 <View
   style={
     Object {
@@ -504,7 +504,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
 </View>
 `;
 
-exports[`The Onboarding LandingScreen component should render a button for onPressActionListButton 1`] = `
+exports[`The ActionListCardFeatures component should render a button for onPressActionListButton 1`] = `
 <View
   style={
     Object {
@@ -1073,7 +1073,7 @@ exports[`The Onboarding LandingScreen component should render a button for onPre
 </View>
 `;
 
-exports[`The Onboarding LandingScreen component should render a loading state for isLoading 1`] = `
+exports[`The ActionListCardFeatures component should render a loading state for isLoading 1`] = `
 <View
   isLoading={true}
   style={
@@ -1535,7 +1535,7 @@ exports[`The Onboarding LandingScreen component should render a loading state fo
 </View>
 `;
 
-exports[`The Onboarding LandingScreen component should render with a subtitle 1`] = `
+exports[`The ActionListCardFeatures component should render with a subtitle 1`] = `
 <View
   style={
     Object {
@@ -2052,7 +2052,7 @@ exports[`The Onboarding LandingScreen component should render with a subtitle 1`
 </View>
 `;
 
-exports[`The Onboarding LandingScreen component should render with a title 1`] = `
+exports[`The ActionListCardFeatures component should render with a title 1`] = `
 <View
   style={
     Object {
