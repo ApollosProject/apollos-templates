@@ -21,8 +21,6 @@ import ChangePassword from './user-settings/ChangePassword';
 import LandingScreen from './LandingScreen';
 import Onboarding from './ui/Onboarding';
 
-console.log(RockAuthedWebView);
-
 const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: 'dark-content',
   backgroundColor: theme.colors.paper,
