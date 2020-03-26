@@ -5,10 +5,13 @@ exports[`The VerticalCardListFeature component should render 1`] = `
   <View
     style={
       Object {
+        "paddingBottom": 8,
         "paddingHorizontal": 16,
-        "paddingVertical": 16,
+        "paddingTop": 48,
+        "paddingVertical": 0,
       }
     }
+    vertical={false}
   />
   <RCTScrollView
     data={
@@ -243,10 +246,13 @@ exports[`The VerticalCardListFeature component should render a loading state for
   <View
     style={
       Object {
+        "paddingBottom": 8,
         "paddingHorizontal": 16,
-        "paddingVertical": 16,
+        "paddingTop": 48,
+        "paddingVertical": 0,
       }
     }
+    vertical={false}
   >
     <View
       style={
@@ -254,9 +260,9 @@ exports[`The VerticalCardListFeature component should render a loading state for
           "alignSelf": "stretch",
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
-          "height": 12,
-          "marginVertical": 3,
-          "width": "50%",
+          "height": 14,
+          "marginVertical": 3.5,
+          "width": "60%",
         }
       }
     />
@@ -266,8 +272,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
           "alignSelf": "stretch",
           "backgroundColor": "#A5A5A5",
           "borderRadius": 16,
-          "height": 24,
-          "marginVertical": 1.8000000000000007,
+          "height": 36,
+          "marginVertical": 2.6999999999999993,
           "width": "100%",
         }
       }
@@ -2054,19 +2060,22 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
   <View
     style={
       Object {
+        "paddingBottom": 8,
         "paddingHorizontal": 16,
-        "paddingVertical": 16,
+        "paddingTop": 48,
+        "paddingVertical": 0,
       }
     }
+    vertical={false}
   >
     <Text
       numberOfLines={1}
       style={
         Object {
           "color": "#A5A5A5",
-          "fontFamily": "InterUI-Bold",
-          "fontSize": 12,
-          "lineHeight": 18,
+          "fontFamily": "InterUI-Medium",
+          "fontSize": 14,
+          "lineHeight": 21,
         }
       }
     >
@@ -2306,18 +2315,21 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
   <View
     style={
       Object {
+        "paddingBottom": 8,
         "paddingHorizontal": 16,
-        "paddingVertical": 16,
+        "paddingTop": 48,
+        "paddingVertical": 0,
       }
     }
+    vertical={false}
   >
     <Text
       style={
         Object {
           "color": "#303030",
           "fontFamily": "InterUI-Black",
-          "fontSize": 24,
-          "lineHeight": 27.6,
+          "fontSize": 36,
+          "lineHeight": 41.4,
         }
       }
     >

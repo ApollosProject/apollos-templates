@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 import {
   FeedView,
-  H3,
-  H6,
+  H2,
+  H5,
   PaddedView,
   styled,
   withIsLoading,
@@ -14,7 +14,12 @@ import { contentCardComponentMapper } from '@apollosproject/ui-connected';
 
 const StyledH6 = styled(({ theme }) => ({
   color: theme.colors.text.tertiary,
-}))(H6);
+}))(H5);
+
+const Header = styled(({ theme }) => ({
+  paddingTop: theme.sizing.baseUnit * 3,
+  paddingBottom: theme.sizing.baseUnit * 0.5,
+}))(PaddedView);
 
 // const getContent = ({ cards, isLoading }) => {
 //   let content = [];
@@ -47,12 +52,12 @@ const StyledH6 = styled(({ theme }) => ({
 const VerticalCardListFeature = memo(
   ({ cards, isLoading, onPressItem, subtitle, title }) => (
     <View>
-      <PaddedView>
+      <Header vertical={false}>
         {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
           <StyledH6 numberOfLines={1}>{title}</StyledH6>
         ) : null}
-        {isLoading || subtitle ? <H3>{subtitle}</H3> : null}
-      </PaddedView>
+        {isLoading || subtitle ? <H2>{subtitle}</H2> : null}
+      </Header>
       <FeedView
         onPressItem={onPressItem}
         ListItemComponent={contentCardComponentMapper}
