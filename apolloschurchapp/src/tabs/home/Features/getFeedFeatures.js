@@ -22,6 +22,27 @@ export default gql`
           }
         }
       }
+      ... on VerticalCardListFeature {
+        id
+        title
+        subtitle
+        cards {
+          action
+          title
+          hasAction
+          actionIcon
+          labelText
+          summary
+          coverImage {
+            sources {
+              uri
+            }
+          }
+          relatedNode {
+            id
+          }
+        }
+      }
     }
   }
 `;
