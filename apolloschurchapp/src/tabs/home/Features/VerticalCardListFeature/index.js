@@ -12,9 +12,14 @@ import {
 } from '@apollosproject/ui-kit';
 import { contentCardComponentMapper } from '@apollosproject/ui-connected';
 
-const StyledH6 = styled(({ theme }) => ({
-  color: theme.colors.text.tertiary,
-}))(H5);
+const Title = styled(
+  ({ theme }) => ({
+    color: theme.colors.text.tertiary,
+  }),
+  'VerticalCardListFeature.Title'
+)(H5);
+
+const Subtitle = styled({}, 'VerticalCardListFeature.Subtitle')(H2);
 
 const Header = styled(({ theme }) => ({
   paddingTop: theme.sizing.baseUnit * 3,
@@ -54,9 +59,9 @@ const VerticalCardListFeature = memo(
     <View>
       <Header vertical={false}>
         {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-          <StyledH6 numberOfLines={1}>{title}</StyledH6>
+          <Title numberOfLines={1}>{title}</Title>
         ) : null}
-        {isLoading || subtitle ? <H2>{subtitle}</H2> : null}
+        {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
       </Header>
       <FeedView
         onPressItem={onPressItem}
