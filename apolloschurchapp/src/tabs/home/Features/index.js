@@ -4,7 +4,7 @@ import { get } from 'lodash';
 // import PropTypes from 'prop-types';
 
 import VerticalCardListFeature from './VerticalCardListFeature';
-import ActionListCardFeature from './ActionListCardFeature';
+import ActionListFeature from './ActionListFeature';
 
 import GET_FEED_FEATURES from './getFeedFeatures';
 
@@ -104,7 +104,7 @@ const Features = memo(({ navigation }) => (
           switch (__typename) {
             case 'ActionListFeature':
               return (
-                <ActionListCardFeature
+                <ActionListFeature
                   // TODO: How can we better handle generating a loading state.
                   actions={loading ? actionListLoadingStateData : actions}
                   isLoading={loading}

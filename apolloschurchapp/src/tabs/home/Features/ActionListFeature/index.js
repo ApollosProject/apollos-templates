@@ -7,12 +7,12 @@ const Title = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'ActionListCardFeature.Title'
+  'ActionListFeature.Title'
 )(H6);
 
-const Subtitle = styled({}, 'ActionListCardFeature.Subtitle')(H3);
+const Subtitle = styled({}, 'ActionListFeature.Subtitle')(H3);
 
-const ActionListCardFeature = memo(
+const ActionListFeature = memo(
   ({
     actions,
     id,
@@ -40,9 +40,9 @@ const ActionListCardFeature = memo(
   )
 );
 
-ActionListCardFeature.displayName = 'Features';
+ActionListFeature.displayName = 'Features';
 
-ActionListCardFeature.propTypes = {
+ActionListFeature.propTypes = {
   // TODO: refactor ActionListCard to safely render without an actions array.
   actions: PropTypes.arrayOf(PropTypes.shape({})).isRequired, // at least for the time being this is required
   id: PropTypes.number,
@@ -53,4 +53,4 @@ ActionListCardFeature.propTypes = {
   title: PropTypes.string,
 };
 
-export default ActionListCardFeature;
+export default ActionListFeature;

@@ -1,7 +1,8 @@
 import React from 'react';
-import { storiesOf } from '@apollosproject/ui-storybook';
+import renderer from 'react-test-renderer';
 
-import { BackgroundView, CenteredView } from '@apollosproject/ui-kit';
+import Providers from '../../../../Providers';
+
 import ActionListFeature from '.';
 
 const actions = [
@@ -71,23 +72,49 @@ const actions = [
   },
 ];
 
-storiesOf('ActionListCardFeature', module)
-  .addDecorator((story) => (
-    <BackgroundView>
-      {/* eslint-disable-next-line react-native/no-inline-styles */}
-      <CenteredView style={{ alignItems: 'stretch' }}>{story()}</CenteredView>
-    </BackgroundView>
-  ))
-  .add('example', () => (
-    <ActionListFeature
-      actions={actions}
-      title={'Title'}
-      subtitle={'Subtitle'}
-      onPressActionListButton={() => {}}
-    />
-  ))
-  .add('default', () => <ActionListFeature actions={actions} />)
-  .add('isLoading', () => {
+describe('The ActionListFeatures component', () => {
+  it('should render', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListFeature actions={actions} />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a title', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListFeature
+          actions={actions}
+          title={'This renders smaller than its name would suggest'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render with a subtitle', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListFeature
+          actions={actions}
+          subtitle={'This renders larger than you might expect'}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a button for onPressActionListButton', () => {
+    const tree = renderer.create(
+      <Providers>
+        <ActionListFeature
+          actions={actions}
+          onPressActionListButton={jest.fn()}
+        />
+      </Providers>
+    );
+    expect(tree).toMatchSnapshot();
+  });
+  it('should render a loading state for isLoading', () => {
     const loadingStateData = [
       {
         id: 'fakeId1',
@@ -154,19 +181,11 @@ storiesOf('ActionListCardFeature', module)
         },
       },
     ];
-
-    return (
-      <ActionListFeature
-        actions={loadingStateData}
-        onPressActionListButton={() => {}}
-        isLoading
-      />
+    const tree = renderer.create(
+      <Providers>
+        <ActionListFeature actions={loadingStateData} isLoading />
+      </Providers>
     );
-  })
-  .add('onPressActionListButton', () => (
-    <ActionListFeature actions={actions} onPressActionListButton={() => {}} />
-  ))
-  .add('subtitle', () => (
-    <ActionListFeature actions={actions} subtitle={'subtitle'} />
-  ))
-  .add('title', () => <ActionListFeature actions={actions} title={'Title'} />);
+    expect(tree).toMatchSnapshot();
+  });
+});
