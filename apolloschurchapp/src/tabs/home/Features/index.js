@@ -100,13 +100,14 @@ const Features = memo(({ navigation }) => (
   <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
     {({ data: features, loading }) =>
       get(features, 'userFeedFeatures', []).map(
-        ({ actions, cards, __typename, ...props }) => {
+        ({ actions, cards, id, title, __typename, ...props }) => {
           switch (__typename) {
             case 'ActionListFeature':
               return (
                 <ActionListCardFeature
                   // TODO: How can we better handle generating a loading state.
                   actions={loading ? actionListLoadingStateData : actions}
+                  isLoading={loading}
                   onPressActionItem={({ action, relatedNode }) =>
                     handleOnPressActionItem({
                       action,
@@ -115,10 +116,13 @@ const Features = memo(({ navigation }) => (
                     })
                   }
                   onPressActionListButton={() =>
-                    handleOnPressCardActionButton({ navigation })
+                    handleOnPressCardActionButton({
+                      id,
+                      navigation,
+                      title,
+                    })
                   }
-                  isLoading={loading}
-                  navigation={navigation}
+                  title={title}
                   {...props}
                 />
               );
@@ -131,7 +135,6 @@ const Features = memo(({ navigation }) => (
                     __typename: card.relatedNode.__typename,
                   }))}
                   isLoading={loading}
-                  navigation={navigation}
                   onPressItem={({ action, relatedNode }) =>
                     handleOnPressActionItem({ action, relatedNode, navigation })
                   }
