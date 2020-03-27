@@ -101,42 +101,44 @@ const Features = memo(({ navigation }) => (
     {({ data: features, loading }) =>
       get(features, 'userFeedFeatures', []).map(
         ({ actions, __typename, ...props }) => {
-          if (__typename === 'ActionListFeature') {
-            return (
-              <ActionListCardFeature
-                // TODO: How can we better handle generating a loading state.
-                actions={loading ? actionListLoadingStateData : actions}
-                onPressActionItem={({ action, relatedNode }) =>
-                  handleOnPressActionItem({
-                    action,
-                    navigation,
-                    relatedNode,
-                  })
-                }
-                onPressActionListButton={() =>
-                  handleOnPressCardActionButton({ navigation })
-                }
-                isLoading={loading}
-                navigation={navigation}
-                {...props}
-              />
-            );
-          }
-          if (__typename === 'VerticalCardListFeature') {
-            return (
-              <VerticalCardListFeature
-                cards={props.cards.map((card) => ({
-                  ...card,
-                  coverImage: get(card, 'coverImage.sources', undefined),
-                  __typename: card.relatedNode.__typename,
-                }))}
-                isLoading={loading}
-                navigation={navigation}
-                onPressItem={handleOnPressActionItem({ navigation })}
-                title={'RECOMMENDED'}
-                subtitle={'For Him'}
-              />
-            );
+          switch (__typename) {
+            case 'ActionListFeature':
+              return (
+                <ActionListCardFeature
+                  // TODO: How can we better handle generating a loading state.
+                  actions={loading ? actionListLoadingStateData : actions}
+                  onPressActionItem={({ action, relatedNode }) =>
+                    handleOnPressActionItem({
+                      action,
+                      navigation,
+                      relatedNode,
+                    })
+                  }
+                  onPressActionListButton={() =>
+                    handleOnPressCardActionButton({ navigation })
+                  }
+                  isLoading={loading}
+                  navigation={navigation}
+                  {...props}
+                />
+              );
+            case 'VerticalCardListFeature':
+              return (
+                <VerticalCardListFeature
+                  cards={props.cards.map((card) => ({
+                    ...card,
+                    coverImage: get(card, 'coverImage.sources', undefined),
+                    __typename: card.relatedNode.__typename,
+                  }))}
+                  isLoading={loading}
+                  navigation={navigation}
+                  onPressItem={handleOnPressActionItem({ navigation })}
+                  title={'RECOMMENDED'}
+                  subtitle={'For Him'}
+                />
+              );
+            default:
+              break;
           }
         }
       )
