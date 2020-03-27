@@ -23,11 +23,11 @@ const handleOnPressActionItem = ({ action, navigation, relatedNode }) => {
   }
 };
 
-const handleOnPressCardActionButton = ({ id, navigation, title }) =>
-  navigation.navigate('ContentFeed', {
-    itemId: id,
-    itemTitle: title,
-  });
+// const handleOnPressCardActionButton = ({ id, navigation, title }) =>
+//   navigation.navigate('ContentFeed', {
+//     itemId: id,
+//     itemTitle: title,
+//   });
 
 const actionListLoadingStateData = [
   {
@@ -115,13 +115,13 @@ const Features = memo(({ navigation }) => (
                       relatedNode,
                     })
                   }
-                  onPressActionListButton={() =>
-                    handleOnPressCardActionButton({
-                      id,
-                      navigation,
-                      title,
-                    })
-                  }
+                  // onPressActionListButton={() =>
+                  //   handleOnPressCardActionButton({
+                  //     id,
+                  //     navigation,
+                  //     title,
+                  //   })
+                  // }
                   title={title}
                   {...props}
                 />
