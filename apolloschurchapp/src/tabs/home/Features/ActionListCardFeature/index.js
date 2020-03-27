@@ -10,7 +10,7 @@ const Title = styled(
   'ActionListCardFeature.Title'
 )(H6);
 
-const Subtitle = styled({}, 'VerticalCardListFeature.Subtitle')(H3);
+const Subtitle = styled({}, 'ActionListCardFeature.Subtitle')(H3);
 
 const ActionListCardFeature = memo(
   ({
