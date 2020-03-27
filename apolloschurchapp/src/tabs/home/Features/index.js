@@ -100,7 +100,7 @@ const Features = memo(({ navigation }) => (
   <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
     {({ data: features, loading }) =>
       get(features, 'userFeedFeatures', []).map(
-        ({ actions, __typename, ...props }) => {
+        ({ actions, cards, __typename, ...props }) => {
           switch (__typename) {
             case 'ActionListFeature':
               return (
@@ -125,7 +125,7 @@ const Features = memo(({ navigation }) => (
             case 'VerticalCardListFeature':
               return (
                 <VerticalCardListFeature
-                  cards={props.cards.map((card) => ({
+                  cards={cards.map((card) => ({
                     ...card,
                     coverImage: get(card, 'coverImage.sources', undefined),
                     __typename: card.relatedNode.__typename,
@@ -138,7 +138,7 @@ const Features = memo(({ navigation }) => (
                 />
               );
             default:
-              break;
+              return null;
           }
         }
       )
