@@ -132,7 +132,9 @@ const Features = memo(({ navigation }) => (
                   }))}
                   isLoading={loading}
                   navigation={navigation}
-                  onPressItem={handleOnPressActionItem({ navigation })}
+                  onPressItem={({ action, relatedNode }) =>
+                    handleOnPressActionItem({ action, relatedNode, navigation })
+                  }
                   title={'RECOMMENDED'}
                   subtitle={'For Him'}
                 />
