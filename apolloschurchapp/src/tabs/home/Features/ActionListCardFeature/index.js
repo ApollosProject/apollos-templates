@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 
 import { styled, ActionListCard, H3, H6 } from '@apollosproject/ui-kit';
 
-const StyledH6 = styled(
+const Title = styled(
   ({ theme }) => ({
     color: theme.colors.text.tertiary,
   }),
-  'ActionListCardFeature.StyledH6'
+  'ActionListCardFeature.Title'
 )(H6);
+
+const Subtitle = styled({}, 'VerticalCardListFeature.Subtitle')(H3);
 
 const ActionListCardFeature = memo(
   ({
@@ -26,9 +28,9 @@ const ActionListCardFeature = memo(
       header={
         <>
           {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-            <StyledH6 numberOfLines={1}>{title}</StyledH6>
+            <Title numberOfLines={1}>{title}</Title>
           ) : null}
-          {isLoading || subtitle ? <H3>{subtitle}</H3> : null}
+          {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
         </>
       }
       actions={actions}
