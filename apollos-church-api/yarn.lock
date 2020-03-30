@@ -174,7 +174,7 @@
     apollo-datasource "^0.2.0"
     twilio "^3.28.0"
 
-"@apollosproject/data-schema@^1.3.0":
+"@apollosproject/data-schema@^1.3.0", "@apollosproject/data-schema@^1.3.0-alpha.33+b75278a":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@apollosproject/data-schema/-/data-schema-1.3.0.tgz#c2a1dccd31612c269410e1e022914b2ee5902fe2"
   integrity sha512-pYXPaZKLKJpafrgeF2Q0U6260fQN9mZvBBS9jE4xKuPu24xgkFJuPBRJ0c6G5NdGXFwuINQNgKuapNbkPU+wNQ==
@@ -202,6 +202,20 @@
   integrity sha512-AH8F3y5QBy5f+aiDwHNU8fIGpQfm8w2+HEeaWYHg3z3x0A/pT4G/AFE82DY3zdr0nnRa1SbrpmK2NCeCXFlErA==
   dependencies:
     "@apollosproject/data-schema" "^1.3.0"
+    apollo-server-caching "^0.4.0"
+    bull "^3.11.0"
+    bull-board "^0.1.1"
+    express-basic-auth "^1.2.0"
+    graphql-parse-resolve-info "^4.4.5"
+    graphql-tag "^2.10.0"
+    lodash "^4.17.11"
+
+"@apollosproject/server-core@^1.3.0-alpha.33":
+  version "1.3.0-alpha.33"
+  resolved "https://registry.yarnpkg.com/@apollosproject/server-core/-/server-core-1.3.0-alpha.33.tgz#babd87a690e79e4e33b3bb929ead0f1fa8542453"
+  integrity sha512-LdvddEJW4+xRwdWbZ2lghrfO9b4F9m2pbfXzlMydjw8+trnH4QjocnSgZUcaTgKYlESEED9EFUmN1rJWhPzzbA==
+  dependencies:
+    "@apollosproject/data-schema" "^1.3.0-alpha.33+b75278a"
     apollo-server-caching "^0.4.0"
     bull "^3.11.0"
     bull-board "^0.1.1"
