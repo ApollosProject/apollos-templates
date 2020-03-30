@@ -1,0 +1,2565 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The VerticalCardListFeature component should render 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingBottom": 8,
+        "paddingHorizontal": 16,
+        "paddingTop": 48,
+        "paddingVertical": 0,
+      }
+    }
+    vertical={false}
+  />
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "__typename": "CardListItem",
+          "action": "READ_CONTENT",
+          "actionIcon": null,
+          "coverImage": Array [
+            Object {
+              "uri": "https://picsum.photos/800",
+            },
+          ],
+          "hasAction": null,
+          "labelText": null,
+          "relatedNode": Object {
+            "__typename": "UniversalContentItem",
+            "id": "UniversalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
+          },
+          "summary": "Card summary",
+          "title": "Card Title",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={0.7}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    refreshing={false}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1.78}
+                    minAspectRatio={1.2}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://picsum.photos/800",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Black",
+                      "fontSize": 24,
+                      "lineHeight": 27.6,
+                    }
+                  }
+                >
+                  Card Title
+                </Text>
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  Card summary
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`The VerticalCardListFeature component should render a loading state for isLoading 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingBottom": 8,
+        "paddingHorizontal": 16,
+        "paddingTop": 48,
+        "paddingVertical": 0,
+      }
+    }
+    vertical={false}
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 14,
+          "marginVertical": 3.5,
+          "width": "60%",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 36,
+          "marginVertical": 2.6999999999999993,
+          "width": "100%",
+        }
+      }
+    />
+  </View>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "channelType": "",
+          "coverImage": Array [],
+          "id": "fakeId0",
+          "isLoading": true,
+          "parentChannel": Object {
+            "id": "",
+            "name": "",
+          },
+          "title": "",
+        },
+        Object {
+          "channelType": "",
+          "coverImage": Array [],
+          "id": "fakeId1",
+          "isLoading": true,
+          "parentChannel": Object {
+            "id": "",
+            "name": "",
+          },
+          "title": "",
+        },
+        Object {
+          "channelType": "",
+          "coverImage": Array [],
+          "id": "fakeId2",
+          "isLoading": true,
+          "parentChannel": Object {
+            "id": "",
+            "name": "",
+          },
+          "title": "",
+        },
+        Object {
+          "channelType": "",
+          "coverImage": Array [],
+          "id": "fakeId3",
+          "isLoading": true,
+          "parentChannel": Object {
+            "id": "",
+            "name": "",
+          },
+          "title": "",
+        },
+        Object {
+          "channelType": "",
+          "coverImage": Array [],
+          "id": "fakeId4",
+          "isLoading": true,
+          "parentChannel": Object {
+            "id": "",
+            "name": "",
+          },
+          "title": "",
+        },
+        Object {
+          "channelType": "",
+          "coverImage": Array [],
+          "id": "fakeId5",
+          "isLoading": true,
+          "parentChannel": Object {
+            "id": "",
+            "name": "",
+          },
+          "title": "",
+        },
+        Object {
+          "channelType": "",
+          "coverImage": Array [],
+          "id": "fakeId6",
+          "isLoading": true,
+          "parentChannel": Object {
+            "id": "",
+            "name": "",
+          },
+          "title": "",
+        },
+        Object {
+          "channelType": "",
+          "coverImage": Array [],
+          "id": "fakeId7",
+          "isLoading": true,
+          "parentChannel": Object {
+            "id": "",
+            "name": "",
+          },
+          "title": "",
+        },
+        Object {
+          "channelType": "",
+          "coverImage": Array [],
+          "id": "fakeId8",
+          "isLoading": true,
+          "parentChannel": Object {
+            "id": "",
+            "name": "",
+          },
+          "title": "",
+        },
+        Object {
+          "channelType": "",
+          "coverImage": Array [],
+          "id": "fakeId9",
+          "isLoading": true,
+          "parentChannel": Object {
+            "id": "",
+            "name": "",
+          },
+          "title": "",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReached={[Function]}
+    onEndReachedThreshold={0.7}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    refreshing={true}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1.78}
+                    minAspectRatio={1.2}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 16,
+                      "marginTop": -32,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "paddingHorizontal": 12,
+                        "width": 64,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1.78}
+                    minAspectRatio={1.2}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 16,
+                      "marginTop": -32,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "paddingHorizontal": 12,
+                        "width": 64,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1.78}
+                    minAspectRatio={1.2}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 16,
+                      "marginTop": -32,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "paddingHorizontal": 12,
+                        "width": 64,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1.78}
+                    minAspectRatio={1.2}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 16,
+                      "marginTop": -32,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "paddingHorizontal": 12,
+                        "width": 64,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1.78}
+                    minAspectRatio={1.2}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 16,
+                      "marginTop": -32,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "paddingHorizontal": 12,
+                        "width": 64,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1.78}
+                    minAspectRatio={1.2}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 16,
+                      "marginTop": -32,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "paddingHorizontal": 12,
+                        "width": 64,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1.78}
+                    minAspectRatio={1.2}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 16,
+                      "marginTop": -32,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "paddingHorizontal": 12,
+                        "width": 64,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1.78}
+                    minAspectRatio={1.2}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 16,
+                      "marginTop": -32,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "paddingHorizontal": 12,
+                        "width": 64,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1.78}
+                    minAspectRatio={1.2}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 16,
+                      "marginTop": -32,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "paddingHorizontal": 12,
+                        "width": 64,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1.78}
+                    minAspectRatio={1.2}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "marginBottom": 16,
+                      "marginTop": -32,
+                    }
+                  }
+                >
+                  <View
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "alignSelf": "stretch",
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "paddingHorizontal": 12,
+                        "width": 64,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`The VerticalCardListFeature component should render a section title 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingBottom": 8,
+        "paddingHorizontal": 16,
+        "paddingTop": 48,
+        "paddingVertical": 0,
+      }
+    }
+    vertical={false}
+  >
+    <Text
+      numberOfLines={1}
+      style={
+        Object {
+          "color": "#A5A5A5",
+          "fontFamily": "InterUI-Medium",
+          "fontSize": 14,
+          "lineHeight": 21,
+        }
+      }
+    >
+      This renders smaller than its name would suggest
+    </Text>
+  </View>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "__typename": "CardListItem",
+          "action": "READ_CONTENT",
+          "actionIcon": null,
+          "coverImage": Array [
+            Object {
+              "uri": "https://picsum.photos/800",
+            },
+          ],
+          "hasAction": null,
+          "labelText": null,
+          "relatedNode": Object {
+            "__typename": "UniversalContentItem",
+            "id": "UniversalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
+          },
+          "summary": "Card summary",
+          "title": "Card Title",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={0.7}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    refreshing={false}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1.78}
+                    minAspectRatio={1.2}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://picsum.photos/800",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Black",
+                      "fontSize": 24,
+                      "lineHeight": 27.6,
+                    }
+                  }
+                >
+                  Card Title
+                </Text>
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  Card summary
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`The VerticalCardListFeature component should render with a subtitle 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingBottom": 8,
+        "paddingHorizontal": 16,
+        "paddingTop": 48,
+        "paddingVertical": 0,
+      }
+    }
+    vertical={false}
+  >
+    <Text
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 36,
+          "lineHeight": 41.4,
+        }
+      }
+    >
+      This renders larger than you might expect
+    </Text>
+  </View>
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "__typename": "CardListItem",
+          "action": "READ_CONTENT",
+          "actionIcon": null,
+          "coverImage": Array [
+            Object {
+              "uri": "https://picsum.photos/800",
+            },
+          ],
+          "hasAction": null,
+          "labelText": null,
+          "relatedNode": Object {
+            "__typename": "UniversalContentItem",
+            "id": "UniversalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
+          },
+          "summary": "Card summary",
+          "title": "Card Title",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={0.7}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    refreshing={false}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "marginHorizontal": 16,
+                "marginVertical": 12,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1.78}
+                    minAspectRatio={1.2}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://picsum.photos/800",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 32,
+                    "paddingHorizontal": 24,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Black",
+                      "fontSize": 24,
+                      "lineHeight": 27.6,
+                    }
+                  }
+                >
+                  Card Title
+                </Text>
+                <Text
+                  bold={false}
+                  italic={false}
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 16,
+                      "lineHeight": 26,
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  Card summary
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
