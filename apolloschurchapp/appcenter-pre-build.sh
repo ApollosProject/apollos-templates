@@ -10,8 +10,11 @@ cd ..
 
 # You can comment this out if your app doesn't have an existing build number.
 VERSION_CODE=$((VERSION_CODE_SHIFT + APPCENTER_BUILD_ID))
+
+echo Using "$VERSION_CODE" as build number
+
 echo $VERSION_CODE
 plutil -replace CFBundleVersion -string "$VERSION_CODE" $(pwd)/ios/apolloschurchapp/Info.plist
-echo "IOS"
 sed -i "" 's/versionCode [^"]*/versionCode '$VERSION_CODE'/' $(pwd)/android/app/build.gradle
-echo "Android"
+
+yarn generate-stories
