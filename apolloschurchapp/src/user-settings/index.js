@@ -23,8 +23,9 @@ import {
 import NavigationService from '../NavigationService';
 
 class UserSettings extends PureComponent {
-  static navigationOptions = () => ({
+  static navigationOptions = (props) => ({
     title: 'Settings',
+    headerStyle: { backgroundColor: props.screenProps.headerBackgroundColor },
   });
 
   static propTypes = {
@@ -52,7 +53,13 @@ class UserSettings extends PureComponent {
                         <Touchable
                           onPress={async () => {
                             await this.props.navigation.navigate(
-                              'PersonalDetails'
+                              'PersonalDetails',
+                              {
+                                backgroundColor: this.props.screenProps
+                                  .headerBackgroundColor,
+                                headerTitleColor: this.props.screenProps
+                                  .headerTitleStyle.color,
+                              }
                             );
                           }}
                         >
@@ -64,7 +71,12 @@ class UserSettings extends PureComponent {
                         <Divider />
                         <Touchable
                           onPress={async () => {
-                            await this.props.navigation.navigate('Location');
+                            await this.props.navigation.navigate('Location', {
+                              backgroundColor: this.props.screenProps
+                                .headerBackgroundColor,
+                              headerTitleColor: this.props.screenProps
+                                .headerTitleStyle.color,
+                            });
                           }}
                         >
                           <Cell>
@@ -76,7 +88,13 @@ class UserSettings extends PureComponent {
                         <Touchable
                           onPress={async () => {
                             await this.props.navigation.navigate(
-                              'ChangePassword'
+                              'ChangePassword',
+                              {
+                                backgroundColor: this.props.screenProps
+                                  .headerBackgroundColor,
+                                headerTitleColor: this.props.screenProps
+                                  .headerTitleStyle.color,
+                              }
                             );
                           }}
                         >
