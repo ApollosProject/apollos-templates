@@ -38,8 +38,8 @@ const keyExtractor = (item) => item && item.id;
 const loadingStateObject = {
   id: 'fakeId0',
   isLoading: true,
-  title: '',
-  summary: '',
+  title: 'Boom',
+  summary: 'What',
   channelType: '',
   coverImage: [],
 };
