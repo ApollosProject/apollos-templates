@@ -18,7 +18,6 @@ import {
   PaddedView,
   FlexedView,
   styled,
-  withTheme,
 } from '@apollosproject/ui-kit';
 
 import GET_AUTH_TOKEN from '../store/getAuthToken';
@@ -153,4 +152,4 @@ class ChangePassword extends PureComponent {
   }
 }
 
-export default withTheme()(ChangePassword);
+export default ChangePassword;

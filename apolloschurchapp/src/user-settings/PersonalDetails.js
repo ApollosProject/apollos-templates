@@ -18,7 +18,6 @@ import {
   Button,
   ButtonLink,
   styled,
-  withTheme,
 } from '@apollosproject/ui-kit';
 
 import { GET_USER_PROFILE } from '../tabs/connect/UserAvatarHeader';
@@ -184,4 +183,4 @@ class PersonalDetails extends PureComponent {
   }
 }
 
-export default withTheme()(PersonalDetails);
+export default PersonalDetails;
