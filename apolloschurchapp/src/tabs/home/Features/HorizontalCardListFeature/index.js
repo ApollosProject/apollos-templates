@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { PureComponent } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -27,58 +27,53 @@ const Header = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 0.5,
 }))(PaddedView);
 
-const handleOnPressItem = (item) => {
-  this.props.navigation.push('ContentSingle', {
-    itemId: item.id,
-  });
-};
+class HorizontalCardListFeature extends PureComponent {
+  loadingStateObject = {
+    id: 'fakeId0',
+    isLoading: true,
+    title: 'Boom',
+    summary: 'What',
+    channelType: '',
+    coverImage: [],
+  };
 
-const keyExtractor = (item) => item && item.id;
+  static propTypes = {
+    cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
+    isLoading: PropTypes.bool,
+    onPressItem: PropTypes.func,
+    subtitle: PropTypes.string,
+    title: PropTypes.string,
+  };
 
-const loadingStateObject = {
-  id: 'fakeId0',
-  isLoading: true,
-  title: 'Boom',
-  summary: 'What',
-  channelType: '',
-  coverImage: [],
-};
+  keyExtractor = (item) => item && item.id;
 
-const renderItem = ({ item }) => (
-  <TouchableScale onPress={() => handleOnPressItem(item)}>
-    {horizontalContentCardComponentMapper({ ...item })}
-  </TouchableScale>
-);
+  renderItem = ({ item }) => (
+    <TouchableScale onPress={() => this.props.onPressItem(item)}>
+      {horizontalContentCardComponentMapper({ ...item })}
+    </TouchableScale>
+  );
 
-const HorizontalCardListFeature = memo(
-  ({ cards, isLoading, onPressItem, subtitle, title }) => (
-    <View>
-      <Header vertical={false}>
-        {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
-          <Title numberOfLines={1}>{title}</Title>
-        ) : null}
-        {isLoading || subtitle ? <Subtitle>{subtitle}</Subtitle> : null}
-      </Header>
-      <HorizontalTileFeed
-        content={cards}
-        isLoading={isLoading}
-        keyExtractor={keyExtractor}
-        loadingStateObject={loadingStateObject}
-        onPressItem={onPressItem}
-        renderItem={renderItem}
-      />
-    </View>
-  )
-);
-
-HorizontalCardListFeature.displayName = 'Features';
-
-HorizontalCardListFeature.propTypes = {
-  cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-  isLoading: PropTypes.bool,
-  onPressItem: PropTypes.func,
-  subtitle: PropTypes.string,
-  title: PropTypes.string,
-};
+  render() {
+    return (
+      <View>
+        <Header vertical={false}>
+          {this.props.isLoading || this.props.title ? ( // we check for isloading here so that they are included in the loading state
+            <Title numberOfLines={1}>{this.props.title}</Title>
+          ) : null}
+          {this.props.isLoading || this.props.subtitle ? (
+            <Subtitle>{this.props.subtitle}</Subtitle>
+          ) : null}
+        </Header>
+        <HorizontalTileFeed
+          content={this.props.cards}
+          isLoading={this.props.isLoading}
+          keyExtractor={this.keyExtractor}
+          loadingStateObject={this.loadingStateObject}
+          renderItem={this.renderItem}
+        />
+      </View>
+    );
+  }
+}
 
 export default withIsLoading(HorizontalCardListFeature);
