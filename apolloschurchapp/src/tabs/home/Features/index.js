@@ -3,128 +3,149 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 // import PropTypes from 'prop-types';
 
-import { styled, ActionListCard, H3, H6 } from '@apollosproject/ui-kit';
+import VerticalCardListFeature from './VerticalCardListFeature';
+import ActionListFeature from './ActionListFeature';
 
 import GET_FEED_FEATURES from './getFeedFeatures';
 
-const StyledH6 = styled(({ theme }) => ({
-  color: theme.colors.text.tertiary,
-}))(H6);
+const handleOnPressActionItem = ({ action, navigation, relatedNode }) => {
+  if (action === 'READ_CONTENT') {
+    navigation.navigate('ContentSingle', {
+      itemId: relatedNode.id,
+      transitionKey: 2,
+    });
+  }
+  if (action === 'READ_EVENT') {
+    navigation.navigate('Event', {
+      eventId: relatedNode.id,
+      transitionKey: 2,
+    });
+  }
+};
 
-// const handleOnPressActionItem = (id) =>
-//   this.props.navigation.navigate('ContentSingle', {
+// const handleOnPressCardActionButton = ({ id, navigation, title }) =>
+//   navigation.navigate('ContentFeed', {
 //     itemId: id,
-//     transitionKey: 2,
+//     itemTitle: title,
 //   });
+
+const actionListLoadingStateData = [
+  {
+    id: 'fakeId1',
+    title: '',
+    subtitle: '',
+    parentChannel: {
+      id: '',
+      name: '',
+    },
+    image: {
+      sources: [
+        {
+          uri: '',
+        },
+      ],
+    },
+  },
+  {
+    id: 'fakeId2',
+    title: '',
+    subtitle: '',
+    parentChannel: {
+      id: '',
+      name: '',
+    },
+    image: {
+      sources: [
+        {
+          uri: '',
+        },
+      ],
+    },
+  },
+  {
+    id: 'fakeId3',
+    title: '',
+    subtitle: '',
+    parentChannel: {
+      id: '',
+      name: '',
+    },
+    image: {
+      sources: [
+        {
+          uri: '',
+        },
+      ],
+    },
+  },
+  {
+    id: 'fakeId4',
+    title: '',
+    subtitle: '',
+    parentChannel: {
+      id: '',
+      name: '',
+    },
+    image: {
+      sources: [
+        {
+          uri: '',
+        },
+      ],
+    },
+  },
+];
 
 const Features = memo(({ navigation }) => (
   <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
     {({ data: features, loading }) =>
-      loading ? (
-        <ActionListCard
-          isLoading
-          header={
-            <>
-              <StyledH6 isLoading />
-              <H3 isLoading />
-            </>
+      get(features, 'userFeedFeatures', []).map(
+        ({ actions, cards, id, title, __typename, ...props }) => {
+          switch (__typename) {
+            case 'ActionListFeature':
+              return (
+                <ActionListFeature
+                  // TODO: How can we better handle generating a loading state.
+                  actions={loading ? actionListLoadingStateData : actions}
+                  isLoading={loading}
+                  onPressActionItem={({ action, relatedNode }) =>
+                    handleOnPressActionItem({
+                      action,
+                      navigation,
+                      relatedNode,
+                    })
+                  }
+                  // onPressActionListButton={() =>
+                  //   handleOnPressCardActionButton({
+                  //     id,
+                  //     navigation,
+                  //     title,
+                  //   })
+                  // }
+                  title={title}
+                  {...props}
+                />
+              );
+            case 'VerticalCardListFeature':
+              return (
+                <VerticalCardListFeature
+                  cards={cards.map((card) => ({
+                    ...card,
+                    coverImage: get(card, 'coverImage.sources', undefined),
+                    __typename: card.relatedNode.__typename,
+                  }))}
+                  isLoading={loading}
+                  onPressItem={({ action, relatedNode }) =>
+                    handleOnPressActionItem({ action, relatedNode, navigation })
+                  }
+                  title={'RECOMMENDED'}
+                  subtitle={'For Him'}
+                />
+              );
+            default:
+              return null;
           }
-          actions={[
-            {
-              id: 'fakeId1',
-              title: '',
-              subtitle: '',
-              parentChannel: {
-                id: '',
-                name: '',
-              },
-              coverImage: {
-                sources: {
-                  uri: '',
-                },
-              },
-            },
-            {
-              id: 'fakeId2',
-              title: '',
-              subtitle: '',
-              parentChannel: {
-                id: '',
-                name: '',
-              },
-              coverImage: {
-                sources: {
-                  uri: '',
-                },
-              },
-            },
-            {
-              id: 'fakeId3',
-              title: '',
-              subtitle: '',
-              parentChannel: {
-                id: '',
-                name: '',
-              },
-              coverImage: {
-                sources: {
-                  uri: '',
-                },
-              },
-            },
-            {
-              id: 'fakeId4',
-              title: '',
-              subtitle: '',
-              parentChannel: {
-                id: '',
-                name: '',
-              },
-              coverImage: {
-                sources: {
-                  uri: '',
-                },
-              },
-            },
-          ]}
-        />
-      ) : (
-        get(features, 'userFeedFeatures', []).map(
-          ({ title, subtitle, actions, id }) =>
-            actions.length ? (
-              <ActionListCard
-                isLoading={loading}
-                key={id}
-                header={
-                  <>
-                    <StyledH6 numberOfLines={1}>{title}</StyledH6>
-                    <H3 numberOfLines={3}>{subtitle}</H3>
-                  </>
-                }
-                actions={actions}
-                onPressActionItem={({ action, relatedNode }) => {
-                  if (action === 'READ_CONTENT') {
-                    navigation.navigate('ContentSingle', {
-                      itemId: relatedNode.id,
-                      transitionKey: 2,
-                    });
-                  }
-                  if (action === 'READ_EVENT') {
-                    navigation.navigate('Event', {
-                      eventId: relatedNode.id,
-                      transitionKey: 2,
-                    });
-                  }
-                }}
-                onPressCardActionButton={() =>
-                  navigation.navigate('ContentFeed', {
-                    itemId: id,
-                    itemTitle: title,
-                  })
-                }
-              />
-            ) : null
-        )
+        }
       )
     }
   </Query>

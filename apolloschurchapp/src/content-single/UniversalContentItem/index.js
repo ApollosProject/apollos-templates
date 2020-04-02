@@ -7,6 +7,7 @@ import {
   HorizontalContentSeriesFeedConnected,
   MediaControlsConnected,
   ContentSingleFeaturesConnected,
+  UpNextButtonConnected,
 } from '@apollosproject/ui-connected';
 import {
   styled,
@@ -47,6 +48,7 @@ const UniversalContentItem = ({ content, loading }) => {
               <ContentHTMLViewConnected contentId={content.id} />
             </PaddedView>
             <ContentSingleFeaturesConnected contentId={content.id} />
+            <UpNextButtonConnected contentId={content.id} />
             <HorizontalContentSeriesFeedConnected contentId={content.id} />
           </FlexedScrollView>
         )}
