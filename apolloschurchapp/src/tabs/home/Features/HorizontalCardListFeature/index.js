@@ -32,7 +32,8 @@ class HorizontalCardListFeature extends PureComponent {
     id: 'fakeId0',
     isLoading: true,
     title: 'Boom',
-    summary: 'What',
+    hasAction: true,
+    actionIcon: 'umbrella',
     channelType: '',
     coverImage: [],
     // We need to assume a typename so horizontalContentCardComponentMapper knows what "type" to render
