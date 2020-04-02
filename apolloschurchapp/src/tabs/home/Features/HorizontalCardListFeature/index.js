@@ -35,6 +35,8 @@ class HorizontalCardListFeature extends PureComponent {
     summary: 'What',
     channelType: '',
     coverImage: [],
+    // We need to assume a typename so horizontalContentCardComponentMapper knows what "type" to render
+    __typename: 'MediaContentItem',
   };
 
   static propTypes = {
