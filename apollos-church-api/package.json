@@ -7,6 +7,7 @@
     "start": "./scripts/generateLocalSchema.sh & yarn start:dev",
     "start:dev": "linkemon ./src/index.js --exec babel-node --delay 2",
     "start:prod": "NODE_ENV=production node ./lib/index.js",
+    "postinstall": "yarn build",
     "link-packages": "node ./scripts/link-packages",
     "unlink-packages": "node ./scripts/link-packages remove",
     "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
