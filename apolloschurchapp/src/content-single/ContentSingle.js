@@ -83,7 +83,6 @@ class ContentSingle extends PureComponent {
     const content = data.node || {};
 
     const { theme = {}, id } = content;
-    const loaded = !!(!loading && content.title);
 
     return (
       <ThemeMixin
@@ -93,13 +92,13 @@ class ContentSingle extends PureComponent {
         }}
       >
         <InteractWhenLoadedConnected
-          loaded={loaded}
+          isLoading={loading}
           nodeId={this.itemId}
           action={'COMPLETE'}
         />
         <TrackEventWhenLoaded
-          loaded={loaded}
-          eventName={'View Contentx'}
+          isLoading={loading}
+          eventName={'View Content'}
           properties={{
             title: content.title,
             itemId: this.itemId,
