@@ -3,8 +3,9 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 // import PropTypes from 'prop-types';
 
-import VerticalCardListFeature from './VerticalCardListFeature';
 import ActionListFeature from './ActionListFeature';
+import HorizontalCardListFeature from './HorizontalCardListFeature';
+import VerticalCardListFeature from './VerticalCardListFeature';
 
 import GET_FEED_FEATURES from './getFeedFeatures';
 
@@ -100,7 +101,7 @@ const Features = memo(({ navigation }) => (
   <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
     {({ data: features, loading }) =>
       get(features, 'userFeedFeatures', []).map(
-        ({ actions, cards, id, title, __typename, ...props }) => {
+        ({ actions, cards, id, subtitle, title, __typename, ...props }) => {
           switch (__typename) {
             case 'ActionListFeature':
               return (
@@ -122,8 +123,25 @@ const Features = memo(({ navigation }) => (
                   //     title,
                   //   })
                   // }
+                  subtitle={subtitle}
                   title={title}
                   {...props}
+                />
+              );
+            case 'HorizontalCardListFeature':
+              return (
+                <HorizontalCardListFeature
+                  cards={cards.map((card) => ({
+                    ...card,
+                    coverImage: get(card, 'coverImage.sources', undefined),
+                    __typename: card.relatedNode.__typename,
+                    id: card.relatedNode.id,
+                  }))}
+                  isLoading={loading}
+                  onPressItem={({ action, relatedNode }) =>
+                    handleOnPressActionItem({ action, relatedNode, navigation })
+                  }
+                  subtitle={subtitle}
                 />
               );
             case 'VerticalCardListFeature':
@@ -138,8 +156,8 @@ const Features = memo(({ navigation }) => (
                   onPressItem={({ action, relatedNode }) =>
                     handleOnPressActionItem({ action, relatedNode, navigation })
                   }
-                  title={'RECOMMENDED'}
-                  subtitle={'For Him'}
+                  subtitle={subtitle}
+                  title={title}
                 />
               );
             default:
