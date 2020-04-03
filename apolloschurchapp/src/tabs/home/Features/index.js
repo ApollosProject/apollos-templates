@@ -138,6 +138,7 @@ const Features = memo(({ navigation }) => (
                     id: card.relatedNode.id,
                   }))}
                   isLoading={loading}
+                  listKey={id}
                   onPressItem={({ action, relatedNode }) =>
                     handleOnPressActionItem({ action, relatedNode, navigation })
                   }
@@ -153,6 +154,7 @@ const Features = memo(({ navigation }) => (
                     __typename: card.relatedNode.__typename,
                   }))}
                   isLoading={loading}
+                  listKey={id}
                   onPressItem={({ action, relatedNode }) =>
                     handleOnPressActionItem({ action, relatedNode, navigation })
                   }

@@ -55,7 +55,7 @@ const Header = styled(({ theme }) => ({
 // };
 
 const CampaignItemListFeature = memo(
-  ({ cards, isLoading, onPressItem, subtitle, title }) => (
+  ({ cards, isLoading, listKey, onPressItem, subtitle, title }) => (
     <View>
       <Header vertical={false}>
         {isLoading || title ? ( // we check for isloading here so that they are included in the loading state
@@ -68,6 +68,7 @@ const CampaignItemListFeature = memo(
         ListItemComponent={contentCardComponentMapper}
         content={cards} // {getContent({ cards, isLoading })}
         isLoading={isLoading}
+        listKey={listKey}
       />
     </View>
   )
@@ -78,6 +79,7 @@ CampaignItemListFeature.displayName = 'Features';
 CampaignItemListFeature.propTypes = {
   cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
   isLoading: PropTypes.bool,
+  listKey: PropTypes.string,
   onPressItem: PropTypes.func,
   subtitle: PropTypes.string,
   title: PropTypes.string,
