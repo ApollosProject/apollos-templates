@@ -22,7 +22,7 @@ import UserWebBrowser from './user-web-browser';
 import Onboarding from './ui/Onboarding';
 
 const AppStatusBar = withTheme(({ theme }) => ({
-  barStyle: theme.type === 'light' ? 'dark-content' : 'light-content',
+  barStyle: theme.barStyle,
   backgroundColor: theme.colors.paper,
 }))(StatusBar);
 
