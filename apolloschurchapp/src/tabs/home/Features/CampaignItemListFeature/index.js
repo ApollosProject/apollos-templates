@@ -3,6 +3,7 @@ import { View } from 'react-native';
 import PropTypes from 'prop-types';
 
 import {
+  FeaturedCard,
   FeedView,
   H2,
   H5,
@@ -10,7 +11,6 @@ import {
   styled,
   withIsLoading,
 } from '@apollosproject/ui-kit';
-import { contentCardComponentMapper } from '@apollosproject/ui-connected';
 
 const Title = styled(
   ({ theme }) => ({
@@ -65,7 +65,7 @@ const CampaignItemListFeature = memo(
       </Header>
       <FeedView
         onPressItem={onPressItem}
-        ListItemComponent={contentCardComponentMapper}
+        ListItemComponent={FeaturedCard}
         content={cards} // {getContent({ cards, isLoading })}
         isLoading={isLoading}
         listKey={listKey}
