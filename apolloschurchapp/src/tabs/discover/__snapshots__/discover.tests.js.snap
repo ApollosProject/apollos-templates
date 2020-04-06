@@ -252,6 +252,7 @@ exports[`The Discover tab component Should retrieve the Content Channel Feeds 1`
                     <TextInput
                       allowFontScaling={true}
                       cancelButtonOffset={1000}
+                      color="#303030"
                       editable={true}
                       isFocused={false}
                       onChangeText={[Function]}
@@ -2513,7 +2514,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 "borderRadius": 16,
                                 "height": 240,
                                 "margin": 8,
-                                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                                "shadowColor": "transparent",
                                 "shadowOffset": Object {
                                   "height": 1,
                                   "width": 0,
@@ -2711,7 +2712,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 "borderRadius": 16,
                                 "height": 240,
                                 "margin": 8,
-                                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                                "shadowColor": "transparent",
                                 "shadowOffset": Object {
                                   "height": 1,
                                   "width": 0,
@@ -2909,7 +2910,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 "borderRadius": 16,
                                 "height": 240,
                                 "margin": 8,
-                                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                                "shadowColor": "transparent",
                                 "shadowOffset": Object {
                                   "height": 1,
                                   "width": 0,
@@ -3304,7 +3305,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 "borderRadius": 16,
                                 "height": 240,
                                 "margin": 8,
-                                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                                "shadowColor": "transparent",
                                 "shadowOffset": Object {
                                   "height": 1,
                                   "width": 0,
@@ -3502,7 +3503,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 "borderRadius": 16,
                                 "height": 240,
                                 "margin": 8,
-                                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                                "shadowColor": "transparent",
                                 "shadowOffset": Object {
                                   "height": 1,
                                   "width": 0,
@@ -3700,7 +3701,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 "borderRadius": 16,
                                 "height": 240,
                                 "margin": 8,
-                                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                                "shadowColor": "transparent",
                                 "shadowOffset": Object {
                                   "height": 1,
                                   "width": 0,
