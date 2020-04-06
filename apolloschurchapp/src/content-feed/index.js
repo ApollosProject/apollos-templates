@@ -17,10 +17,11 @@ import GET_CONTENT_FEED from './getContentFeed';
  */
 class ContentFeed extends PureComponent {
   /** Function for React Navigation to set information in the header. */
-  static navigationOptions = ({ navigation }) => {
+  static navigationOptions = ({ navigation, screenProps }) => {
     const itemTitle = navigation.getParam('itemTitle', 'Content Channel');
     return {
       title: itemTitle,
+      headerStyle: { backgroundColor: screenProps.headerBackgroundColor },
     };
   };
 
