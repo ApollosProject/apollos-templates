@@ -4659,7 +4659,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.
           pointerEvents="box-none"
           style={
             Object {
-              "backgroundColor": "#fff",
+              "backgroundColor": undefined,
               "borderBottomColor": "#a7a7aa",
               "borderBottomWidth": 0,
               "elevation": 0,

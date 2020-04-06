@@ -15,7 +15,7 @@ const PositioningView = styled(({ theme }) => ({
 }))(SideBySideView);
 
 const Container = styled(({ theme }) => ({
-  backgroundColor: theme.colors.paper,
+  backgroundColor: theme.colors.background.paper,
   ...Platform.select(theme.shadows.default),
 }))(View);
 
