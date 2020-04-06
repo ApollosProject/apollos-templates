@@ -4,6 +4,7 @@ import { get } from 'lodash';
 // import PropTypes from 'prop-types';
 
 import ActionListFeature from './ActionListFeature';
+import CampaignItemListFeature from './CampaignItemListFeature';
 import HorizontalCardListFeature from './HorizontalCardListFeature';
 import VerticalCardListFeature from './VerticalCardListFeature';
 
@@ -101,7 +102,16 @@ const Features = memo(({ navigation }) => (
   <Query query={GET_FEED_FEATURES} fetchPolicy="cache-and-network">
     {({ data: features, loading }) =>
       get(features, 'userFeedFeatures', []).map(
-        ({ actions, cards, id, subtitle, title, __typename, ...props }) => {
+        ({
+          actions,
+          cards,
+          id,
+          isFeatured,
+          subtitle,
+          title,
+          __typename,
+          ...props
+        }) => {
           switch (__typename) {
             case 'ActionListFeature':
               return (
@@ -131,8 +141,11 @@ const Features = memo(({ navigation }) => (
             case 'HorizontalCardListFeature':
               return (
                 <HorizontalCardListFeature
-                  cards={cards.map((card) => ({
+                  cards={cards.map(({ actionIcon, ...card }) => ({
                     ...card,
+                    ...(actionIcon != null
+                      ? { actionIcon: card.actionIcon }
+                      : {}),
                     coverImage: get(card, 'coverImage.sources', undefined),
                     __typename: card.relatedNode.__typename,
                     id: card.relatedNode.id,
@@ -145,11 +158,17 @@ const Features = memo(({ navigation }) => (
                   subtitle={subtitle}
                 />
               );
-            case 'VerticalCardListFeature':
+            case 'VerticalCardListFeature': // eslint-disable-line no-case-declarations
+              const Component = isFeatured
+                ? CampaignItemListFeature
+                : VerticalCardListFeature;
               return (
-                <VerticalCardListFeature
-                  cards={cards.map((card) => ({
+                <Component
+                  cards={cards.map(({ actionIcon, ...card }) => ({
                     ...card,
+                    ...(actionIcon != null
+                      ? { actionIcon: card.actionIcon }
+                      : {}),
                     coverImage: get(card, 'coverImage.sources', undefined),
                     __typename: card.relatedNode.__typename,
                   }))}

@@ -560,6 +560,7 @@ type VerticalCardListFeature implements Feature & Node {
   order: Int
   title: String
   subtitle: String
+  isFeatured: Boolean
   cards: [CardListItem]
 }
 

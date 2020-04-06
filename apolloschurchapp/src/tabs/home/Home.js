@@ -9,17 +9,10 @@ import {
   ContentCardConnected,
   fetchMoreResolver,
 } from '@apollosproject/ui-connected';
-import {
-  styled,
-  FeedView,
-  BackgroundView,
-  TouchableScale,
-  FeaturedCard,
-} from '@apollosproject/ui-kit';
+import { styled, FeedView, BackgroundView } from '@apollosproject/ui-kit';
 
 import Features from './Features';
 import GET_USER_FEED from './getUserFeed';
-import GET_CAMPAIGN_CONTENT_ITEM from './getCampaignContentItem';
 
 const LogoTitle = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
@@ -77,38 +70,6 @@ class Home extends PureComponent {
                 ListHeaderComponent={
                   <>
                     <LogoTitle source={require('./wordmark.png')} />
-                    <Query
-                      query={GET_CAMPAIGN_CONTENT_ITEM}
-                      fetchPolicy="cache-and-network"
-                    >
-                      {({ data: featuredData, loading: isFeaturedLoading }) => {
-                        const featuredContent = get(
-                          featuredData,
-                          'campaigns.edges',
-                          []
-                        ).map((edge) => edge.node);
-
-                        const featuredItem = get(
-                          featuredContent[0],
-                          'childContentItemsConnection.edges[0].node',
-                          {}
-                        );
-
-                        return (
-                          <TouchableScale
-                            onPress={() =>
-                              this.handleOnPress({ id: featuredItem.id })
-                            }
-                          >
-                            <ContentCardConnected
-                              Component={FeaturedCard}
-                              contentId={featuredItem.id}
-                              isLoading={isFeaturedLoading}
-                            />
-                          </TouchableScale>
-                        );
-                      }}
-                    </Query>
                     <Features navigation={this.props.navigation} />
                   </>
                 }

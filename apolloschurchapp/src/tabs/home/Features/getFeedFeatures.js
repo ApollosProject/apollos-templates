@@ -24,6 +24,7 @@ export default gql`
       }
       ... on VerticalCardListFeature {
         id
+        isFeatured
         title
         subtitle
         cards {
