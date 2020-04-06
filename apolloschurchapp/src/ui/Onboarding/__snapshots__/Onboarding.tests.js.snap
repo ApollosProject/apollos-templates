@@ -482,7 +482,7 @@ Array [
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#17B582",
+                                  "backgroundColor": "#00676D",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }
@@ -643,7 +643,7 @@ Array [
                               hasError={false}
                               style={
                                 Object {
-                                  "backgroundColor": "#17B582",
+                                  "backgroundColor": "#00676D",
                                   "bottom": 0,
                                   "height": 0.5,
                                 }

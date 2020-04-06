@@ -843,7 +843,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
                   "borderRadius": 16,
                   "marginHorizontal": 16,
                   "marginVertical": 12,
-                  "shadowColor": "transparent",
+                  "shadowColor": "rgba(165, 165, 165, 0.6)",
                   "shadowOffset": Object {
                     "height": 1,
                     "width": 0,

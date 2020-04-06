@@ -2091,7 +2091,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               "borderRadius": 16,
                               "height": 240,
                               "margin": 8,
-                              "shadowColor": "transparent",
+                              "shadowColor": "rgba(165, 165, 165, 0.6)",
                               "shadowOffset": Object {
                                 "height": 1,
                                 "width": 0,
@@ -2289,7 +2289,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               "borderRadius": 16,
                               "height": 240,
                               "margin": 8,
-                              "shadowColor": "transparent",
+                              "shadowColor": "rgba(165, 165, 165, 0.6)",
                               "shadowOffset": Object {
                                 "height": 1,
                                 "width": 0,
@@ -2487,7 +2487,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               "borderRadius": 16,
                               "height": 240,
                               "margin": 8,
-                              "shadowColor": "transparent",
+                              "shadowColor": "rgba(165, 165, 165, 0.6)",
                               "shadowOffset": Object {
                                 "height": 1,
                                 "width": 0,
@@ -2882,7 +2882,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               "borderRadius": 16,
                               "height": 240,
                               "margin": 8,
-                              "shadowColor": "transparent",
+                              "shadowColor": "rgba(165, 165, 165, 0.6)",
                               "shadowOffset": Object {
                                 "height": 1,
                                 "width": 0,
@@ -3080,7 +3080,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               "borderRadius": 16,
                               "height": 240,
                               "margin": 8,
-                              "shadowColor": "transparent",
+                              "shadowColor": "rgba(165, 165, 165, 0.6)",
                               "shadowOffset": Object {
                                 "height": 1,
                                 "width": 0,
@@ -3278,7 +3278,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               "borderRadius": 16,
                               "height": 240,
                               "margin": 8,
-                              "shadowColor": "transparent",
+                              "shadowColor": "rgba(165, 165, 165, 0.6)",
                               "shadowOffset": Object {
                                 "height": 1,
                                 "width": 0,
