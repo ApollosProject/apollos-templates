@@ -28,6 +28,11 @@ const Footer = styled({
   justifyContent: 'flex-end',
 })(SafeAreaView);
 
+const StyledKeyboardAvoidingView = styled(({ theme }) => ({
+  ...StyleSheet.absoluteFill,
+  backgroundColor: theme.colors.background.paper,
+}))(KeyboardAvoidingView);
+
 class PersonalDetails extends PureComponent {
   static navigationOptions = ({ navigation }) => ({
     title: 'Personal Details',
@@ -37,6 +42,12 @@ class PersonalDetails extends PureComponent {
         <ButtonLink onPress={() => navigation.goBack()}>Cancel</ButtonLink>
       </PaddedView>
     ),
+    headerStyle: {
+      backgroundColor: navigation.getParam('backgroundColor', []),
+    },
+    headerTitleStyle: {
+      color: navigation.getParam('headerTitleColor', []),
+    },
   });
 
   static propTypes = {
@@ -49,9 +60,8 @@ class PersonalDetails extends PureComponent {
 
   renderForm = (props) => (
     // have to add the offset to account for react-navigation header
-    <KeyboardAvoidingView
+    <StyledKeyboardAvoidingView
       behavior={'padding'}
-      style={StyleSheet.absoluteFill}
       keyboardVerticalOffset={
         Header.HEIGHT +
         (Platform.OS === 'android' ? StatusBar.currentHeight : 0)
@@ -92,7 +102,7 @@ class PersonalDetails extends PureComponent {
           </PaddedView>
         </Footer>
       </FlexedView>
-    </KeyboardAvoidingView>
+    </StyledKeyboardAvoidingView>
   );
 
   render() {
