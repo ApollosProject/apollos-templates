@@ -1,0 +1,3790 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`The HorizontalCardListFeature component should render 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingBottom": 8,
+        "paddingHorizontal": 16,
+        "paddingTop": 48,
+        "paddingVertical": 0,
+      }
+    }
+    vertical={false}
+  />
+  <RCTScrollView
+    collapsable={false}
+    contentContainerStyle={
+      Object {
+        "padding": 8,
+        "paddingBottom": 0,
+      }
+    }
+    data={
+      Array [
+        Object {
+          "__typename": "WeekendContentItem",
+          "action": "READ_CONTENT",
+          "actionIcon": "umbrella",
+          "coverImage": Array [
+            Object {
+              "uri": "https://picsum.photos/800",
+            },
+          ],
+          "hasAction": true,
+          "hyphenatedTitle": "Live for Freedom Toolkit",
+          "id": "WeekendContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
+          "labelText": "Stormy",
+          "summary": "Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.",
+          "title": "Live for Freedom Toolkit",
+        },
+        Object {
+          "__typename": "UniversalContentItem",
+          "action": "READ_CONTENT",
+          "actionIcon": null,
+          "coverImage": Array [
+            Object {
+              "uri": "https://picsum.photos/800",
+            },
+          ],
+          "hasAction": null,
+          "hyphenatedTitle": "Live for Freedom Toolkit",
+          "id": "UniversalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
+          "labelText": null,
+          "summary": "Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.",
+          "title": "Live for Freedom Toolkit",
+        },
+        Object {
+          "__typename": "DevotionalContentItem",
+          "action": "READ_CONTENT",
+          "actionIcon": null,
+          "coverImage": Array [
+            Object {
+              "uri": "https://picsum.photos/800",
+            },
+          ],
+          "hasAction": null,
+          "hyphenatedTitle": "Live for Freedom Toolkit",
+          "id": "DevotionalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
+          "labelText": null,
+          "summary": "Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.",
+          "title": "Live for Freedom Toolkit",
+        },
+      ]
+    }
+    decelerationRate="fast"
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={true}
+    initialNumToRender={10}
+    initialScrollIndex={0}
+    keyExtractor={[Function]}
+    loadingStateObject={
+      Object {
+        "__typename": "MediaContentItem",
+        "actionIcon": "umbrella",
+        "channelType": "",
+        "coverImage": Array [],
+        "hasAction": true,
+        "id": "fakeId0",
+        "isLoading": true,
+        "title": "Boom",
+      }
+    }
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    refreshing={false}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    renderScrollComponent={[Function]}
+    scrollEventThrottle={50}
+    showsHorizontalScrollIndicator={false}
+    snapToAlignment="start"
+    snapToInterval={256}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            __typename="WeekendContentItem"
+            action="READ_CONTENT"
+            id="WeekendContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
+            inHorizontalList={true}
+            style={
+              Object {
+                "backgroundColor": "#303030",
+                "borderRadius": 16,
+                "height": 240,
+                "margin": 8,
+                "shadowColor": "transparent",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 240,
+              }
+            }
+            summary="Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer."
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  forceRatio={1}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://picsum.photos/800",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      1711276032,
+                      2147483648,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-bottom"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "bottom": 0,
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                    "position": "absolute",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  bordered={false}
+                  disabled={false}
+                  pill={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": Object {
+                        "color": Array [
+                          255,
+                          255,
+                          255,
+                        ],
+                        "model": "rgb",
+                        "valpha": 0.4,
+                      },
+                      "borderColor": Object {
+                        "color": Array [
+                          255,
+                          255,
+                          255,
+                        ],
+                        "model": "rgb",
+                        "valpha": 0.4,
+                      },
+                      "borderRadius": 16,
+                      "borderWidth": 0,
+                      "elevation": 2,
+                      "flexDirection": "row",
+                      "height": 32,
+                      "justifyContent": "center",
+                      "opacity": 1,
+                      "overflow": "hidden",
+                      "paddingHorizontal": 12,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "color": "#FFFFFF",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "justifyContent": "center",
+                        "lineHeight": 18,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Stormy
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  <View
+                    hasAction={true}
+                    style={
+                      Object {
+                        "flex": 1,
+                        "marginRight": 16,
+                      }
+                    }
+                  >
+                    <Text
+                      numberOfLines={4}
+                      style={
+                        Object {
+                          "color": "#F8F7F4",
+                          "fontFamily": "InterUI-Black",
+                          "fontSize": 24,
+                          "lineHeight": 27.6,
+                        }
+                      }
+                    >
+                      Live for Freedom Toolkit
+                    </Text>
+                  </View>
+                  <RNSVGSvgView
+                    align="xMidYMid"
+                    bbHeight={32}
+                    bbWidth={32}
+                    focusable={false}
+                    height={32}
+                    meetOrSlice={0}
+                    minX={0}
+                    minY={0}
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderWidth": 0,
+                        },
+                        undefined,
+                        Object {
+                          "opacity": 1,
+                        },
+                        Object {
+                          "flex": 0,
+                          "height": 32,
+                          "width": 32,
+                        },
+                      ]
+                    }
+                    vbHeight={32}
+                    vbWidth={32}
+                    width={32}
+                  >
+                    <RNSVGGroup
+                      fill={
+                        Array [
+                          0,
+                          4278190080,
+                        ]
+                      }
+                      fillOpacity={1}
+                      fillRule={1}
+                      font={Object {}}
+                      matrix={
+                        Array [
+                          1,
+                          0,
+                          0,
+                          1,
+                          0,
+                          0,
+                        ]
+                      }
+                      opacity={1}
+                      originX={0}
+                      originY={0}
+                      propList={Array []}
+                      rotation={0}
+                      scaleX={1}
+                      scaleY={1}
+                      skewX={0}
+                      skewY={0}
+                      stroke={null}
+                      strokeDasharray={null}
+                      strokeDashoffset={null}
+                      strokeLinecap={0}
+                      strokeLinejoin={0}
+                      strokeMiterlimit={4}
+                      strokeOpacity={1}
+                      strokeWidth={1}
+                      vectorEffect={0}
+                      x={0}
+                      y={0}
+                    >
+                      <RNSVGPath
+                        d="M27 14h5c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0zM27 14c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0 14c0 1.112-0.895 2-2 2-1.112 0-2-0.896-2-2.001v-1.494c0-0.291 0.224-0.505 0.5-0.505 0.268 0 0.5 0.226 0.5 0.505v1.505c0 0.547 0.444 0.991 1 0.991 0.552 0 1-0.451 1-0.991v-14.009c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-5.415 6.671-9.825 15-9.995v-1.506c0-0.283 0.224-0.499 0.5-0.499 0.268 0 0.5 0.224 0.5 0.499v1.506c8.329 0.17 15 4.58 15 9.995h-5z"
+                        fill={
+                          Array [
+                            0,
+                            4294506484,
+                          ]
+                        }
+                        fillOpacity={1}
+                        fillRule={1}
+                        matrix={
+                          Array [
+                            1,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                          ]
+                        }
+                        opacity={1}
+                        originX={0}
+                        originY={0}
+                        propList={
+                          Array [
+                            "fill",
+                          ]
+                        }
+                        rotation={0}
+                        scaleX={1}
+                        scaleY={1}
+                        skewX={0}
+                        skewY={0}
+                        stroke={null}
+                        strokeDasharray={null}
+                        strokeDashoffset={null}
+                        strokeLinecap={0}
+                        strokeLinejoin={0}
+                        strokeMiterlimit={4}
+                        strokeOpacity={1}
+                        strokeWidth={1}
+                        vectorEffect={0}
+                        x={0}
+                        y={0}
+                      />
+                    </RNSVGGroup>
+                  </RNSVGSvgView>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            inHorizontalList={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "height": 240,
+                "margin": 8,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 240,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  forceRatio={2}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 2,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    hasTitleAndSummary={true}
+                    maxAspectRatio={2}
+                    minAspectRatio={2}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://picsum.photos/800",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Medium",
+                      "fontSize": 14,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  Live for Freedom Toolkit
+                </Text>
+                <Text
+                  bold={false}
+                  hasTitle="Live for Freedom Toolkit"
+                  italic={false}
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#A5A5A5",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 12,
+                      "lineHeight": 18,
+                      "paddingTop": 8,
+                    }
+                  }
+                >
+                  Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            __typename="DevotionalContentItem"
+            action="READ_CONTENT"
+            id="DevotionalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
+            inHorizontalList={true}
+            style={
+              Object {
+                "backgroundColor": "#303030",
+                "borderRadius": 16,
+                "height": 240,
+                "margin": 8,
+                "shadowColor": "transparent",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 240,
+              }
+            }
+            summary="Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer."
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  forceRatio={1}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://picsum.photos/800",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      1711276032,
+                      2147483648,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-bottom"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "bottom": 0,
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                    "position": "absolute",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  <View
+                    hasAction={null}
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <Text
+                      numberOfLines={4}
+                      style={
+                        Object {
+                          "color": "#F8F7F4",
+                          "fontFamily": "InterUI-Black",
+                          "fontSize": 24,
+                          "lineHeight": 27.6,
+                        }
+                      }
+                    >
+                      Live for Freedom Toolkit
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`The HorizontalCardListFeature component should render a loading state for isLoading 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingBottom": 8,
+        "paddingHorizontal": 16,
+        "paddingTop": 48,
+        "paddingVertical": 0,
+      }
+    }
+    vertical={false}
+  >
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 14,
+          "marginVertical": 3.5,
+          "width": "60%",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignSelf": "stretch",
+          "backgroundColor": "#A5A5A5",
+          "borderRadius": 16,
+          "height": 36,
+          "marginVertical": 2.6999999999999993,
+          "width": "100%",
+        }
+      }
+    />
+  </View>
+  <RCTScrollView
+    collapsable={false}
+    contentContainerStyle={
+      Object {
+        "padding": 8,
+        "paddingBottom": 0,
+      }
+    }
+    data={
+      Array [
+        Object {
+          "__typename": "MediaContentItem",
+          "actionIcon": "umbrella",
+          "channelType": "",
+          "coverImage": Array [],
+          "hasAction": true,
+          "id": "fakeId0",
+          "isLoading": true,
+          "title": "Boom",
+        },
+        Object {
+          "__typename": "MediaContentItem",
+          "actionIcon": "umbrella",
+          "channelType": "",
+          "coverImage": Array [],
+          "hasAction": true,
+          "id": "fakeId1",
+          "isLoading": true,
+          "title": "Boom",
+        },
+        Object {
+          "__typename": "MediaContentItem",
+          "actionIcon": "umbrella",
+          "channelType": "",
+          "coverImage": Array [],
+          "hasAction": true,
+          "id": "fakeId2",
+          "isLoading": true,
+          "title": "Boom",
+        },
+        Object {
+          "__typename": "MediaContentItem",
+          "actionIcon": "umbrella",
+          "channelType": "",
+          "coverImage": Array [],
+          "hasAction": true,
+          "id": "fakeId3",
+          "isLoading": true,
+          "title": "Boom",
+        },
+        Object {
+          "__typename": "MediaContentItem",
+          "actionIcon": "umbrella",
+          "channelType": "",
+          "coverImage": Array [],
+          "hasAction": true,
+          "id": "fakeId4",
+          "isLoading": true,
+          "title": "Boom",
+        },
+      ]
+    }
+    decelerationRate="fast"
+    disableVirtualization={false}
+    fetchMore={[Function]}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={true}
+    initialNumToRender={10}
+    initialScrollIndex={0}
+    keyExtractor={[Function]}
+    loadingStateObject={
+      Object {
+        "__typename": "MediaContentItem",
+        "actionIcon": "umbrella",
+        "channelType": "",
+        "coverImage": Array [],
+        "hasAction": true,
+        "id": "fakeId0",
+        "isLoading": true,
+        "title": "Boom",
+      }
+    }
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    refreshing={true}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    renderScrollComponent={[Function]}
+    scrollEventThrottle={50}
+    showsHorizontalScrollIndicator={false}
+    snapToAlignment="start"
+    snapToInterval={256}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            __typename="MediaContentItem"
+            channelType=""
+            id="fakeId0"
+            inHorizontalList={true}
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#303030",
+                "borderRadius": 16,
+                "height": 240,
+                "margin": 8,
+                "shadowColor": "transparent",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 240,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  forceRatio={1}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      1711276032,
+                      2147483648,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-bottom"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "bottom": 0,
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                    "position": "absolute",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  <View
+                    hasAction={true}
+                    style={
+                      Object {
+                        "flex": 1,
+                        "marginRight": 16,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "marginVertical": 1.8000000000000007,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "width": 32,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            __typename="MediaContentItem"
+            channelType=""
+            id="fakeId1"
+            inHorizontalList={true}
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#303030",
+                "borderRadius": 16,
+                "height": 240,
+                "margin": 8,
+                "shadowColor": "transparent",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 240,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  forceRatio={1}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      1711276032,
+                      2147483648,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-bottom"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "bottom": 0,
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                    "position": "absolute",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  <View
+                    hasAction={true}
+                    style={
+                      Object {
+                        "flex": 1,
+                        "marginRight": 16,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "marginVertical": 1.8000000000000007,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "width": 32,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            __typename="MediaContentItem"
+            channelType=""
+            id="fakeId2"
+            inHorizontalList={true}
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#303030",
+                "borderRadius": 16,
+                "height": 240,
+                "margin": 8,
+                "shadowColor": "transparent",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 240,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  forceRatio={1}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      1711276032,
+                      2147483648,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-bottom"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "bottom": 0,
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                    "position": "absolute",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  <View
+                    hasAction={true}
+                    style={
+                      Object {
+                        "flex": 1,
+                        "marginRight": 16,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "marginVertical": 1.8000000000000007,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "width": 32,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            __typename="MediaContentItem"
+            channelType=""
+            id="fakeId3"
+            inHorizontalList={true}
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#303030",
+                "borderRadius": 16,
+                "height": 240,
+                "margin": 8,
+                "shadowColor": "transparent",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 240,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  forceRatio={1}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      1711276032,
+                      2147483648,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-bottom"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "bottom": 0,
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                    "position": "absolute",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  <View
+                    hasAction={true}
+                    style={
+                      Object {
+                        "flex": 1,
+                        "marginRight": 16,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "marginVertical": 1.8000000000000007,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "width": 32,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            __typename="MediaContentItem"
+            channelType=""
+            id="fakeId4"
+            inHorizontalList={true}
+            isLoading={true}
+            style={
+              Object {
+                "backgroundColor": "#303030",
+                "borderRadius": 16,
+                "height": 240,
+                "margin": 8,
+                "shadowColor": "transparent",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 240,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  forceRatio={1}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
+                    onLoad={[Function]}
+                    source={Array []}
+                    style={
+                      Object {
+                        "aspectRatio": 1,
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      1711276032,
+                      2147483648,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-bottom"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "bottom": 0,
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                    "position": "absolute",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  <View
+                    hasAction={true}
+                    style={
+                      Object {
+                        "flex": 1,
+                        "marginRight": 16,
+                      }
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 24,
+                          "marginVertical": 1.8000000000000007,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
+                  <View
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "borderRadius": 16,
+                        "height": 32,
+                        "width": 32,
+                      }
+                    }
+                  />
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`The HorizontalCardListFeature component should render a section title 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingBottom": 8,
+        "paddingHorizontal": 16,
+        "paddingTop": 48,
+        "paddingVertical": 0,
+      }
+    }
+    vertical={false}
+  >
+    <Text
+      numberOfLines={1}
+      style={
+        Object {
+          "color": "#A5A5A5",
+          "fontFamily": "InterUI-Medium",
+          "fontSize": 14,
+          "lineHeight": 21,
+        }
+      }
+    >
+      This renders smaller than its name would suggest
+    </Text>
+  </View>
+  <RCTScrollView
+    collapsable={false}
+    contentContainerStyle={
+      Object {
+        "padding": 8,
+        "paddingBottom": 0,
+      }
+    }
+    data={
+      Array [
+        Object {
+          "__typename": "WeekendContentItem",
+          "action": "READ_CONTENT",
+          "actionIcon": "umbrella",
+          "coverImage": Array [
+            Object {
+              "uri": "https://picsum.photos/800",
+            },
+          ],
+          "hasAction": true,
+          "hyphenatedTitle": "Live for Freedom Toolkit",
+          "id": "WeekendContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
+          "labelText": "Stormy",
+          "summary": "Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.",
+          "title": "Live for Freedom Toolkit",
+        },
+        Object {
+          "__typename": "UniversalContentItem",
+          "action": "READ_CONTENT",
+          "actionIcon": null,
+          "coverImage": Array [
+            Object {
+              "uri": "https://picsum.photos/800",
+            },
+          ],
+          "hasAction": null,
+          "hyphenatedTitle": "Live for Freedom Toolkit",
+          "id": "UniversalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
+          "labelText": null,
+          "summary": "Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.",
+          "title": "Live for Freedom Toolkit",
+        },
+        Object {
+          "__typename": "DevotionalContentItem",
+          "action": "READ_CONTENT",
+          "actionIcon": null,
+          "coverImage": Array [
+            Object {
+              "uri": "https://picsum.photos/800",
+            },
+          ],
+          "hasAction": null,
+          "hyphenatedTitle": "Live for Freedom Toolkit",
+          "id": "DevotionalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
+          "labelText": null,
+          "summary": "Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.",
+          "title": "Live for Freedom Toolkit",
+        },
+      ]
+    }
+    decelerationRate="fast"
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={true}
+    initialNumToRender={10}
+    initialScrollIndex={0}
+    keyExtractor={[Function]}
+    loadingStateObject={
+      Object {
+        "__typename": "MediaContentItem",
+        "actionIcon": "umbrella",
+        "channelType": "",
+        "coverImage": Array [],
+        "hasAction": true,
+        "id": "fakeId0",
+        "isLoading": true,
+        "title": "Boom",
+      }
+    }
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    refreshing={false}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    renderScrollComponent={[Function]}
+    scrollEventThrottle={50}
+    showsHorizontalScrollIndicator={false}
+    snapToAlignment="start"
+    snapToInterval={256}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            __typename="WeekendContentItem"
+            action="READ_CONTENT"
+            id="WeekendContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
+            inHorizontalList={true}
+            style={
+              Object {
+                "backgroundColor": "#303030",
+                "borderRadius": 16,
+                "height": 240,
+                "margin": 8,
+                "shadowColor": "transparent",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 240,
+              }
+            }
+            summary="Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer."
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  forceRatio={1}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://picsum.photos/800",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      1711276032,
+                      2147483648,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-bottom"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "bottom": 0,
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                    "position": "absolute",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  bordered={false}
+                  disabled={false}
+                  pill={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": Object {
+                        "color": Array [
+                          255,
+                          255,
+                          255,
+                        ],
+                        "model": "rgb",
+                        "valpha": 0.4,
+                      },
+                      "borderColor": Object {
+                        "color": Array [
+                          255,
+                          255,
+                          255,
+                        ],
+                        "model": "rgb",
+                        "valpha": 0.4,
+                      },
+                      "borderRadius": 16,
+                      "borderWidth": 0,
+                      "elevation": 2,
+                      "flexDirection": "row",
+                      "height": 32,
+                      "justifyContent": "center",
+                      "opacity": 1,
+                      "overflow": "hidden",
+                      "paddingHorizontal": 12,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "color": "#FFFFFF",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "justifyContent": "center",
+                        "lineHeight": 18,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Stormy
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  <View
+                    hasAction={true}
+                    style={
+                      Object {
+                        "flex": 1,
+                        "marginRight": 16,
+                      }
+                    }
+                  >
+                    <Text
+                      numberOfLines={4}
+                      style={
+                        Object {
+                          "color": "#F8F7F4",
+                          "fontFamily": "InterUI-Black",
+                          "fontSize": 24,
+                          "lineHeight": 27.6,
+                        }
+                      }
+                    >
+                      Live for Freedom Toolkit
+                    </Text>
+                  </View>
+                  <RNSVGSvgView
+                    align="xMidYMid"
+                    bbHeight={32}
+                    bbWidth={32}
+                    focusable={false}
+                    height={32}
+                    meetOrSlice={0}
+                    minX={0}
+                    minY={0}
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderWidth": 0,
+                        },
+                        undefined,
+                        Object {
+                          "opacity": 1,
+                        },
+                        Object {
+                          "flex": 0,
+                          "height": 32,
+                          "width": 32,
+                        },
+                      ]
+                    }
+                    vbHeight={32}
+                    vbWidth={32}
+                    width={32}
+                  >
+                    <RNSVGGroup
+                      fill={
+                        Array [
+                          0,
+                          4278190080,
+                        ]
+                      }
+                      fillOpacity={1}
+                      fillRule={1}
+                      font={Object {}}
+                      matrix={
+                        Array [
+                          1,
+                          0,
+                          0,
+                          1,
+                          0,
+                          0,
+                        ]
+                      }
+                      opacity={1}
+                      originX={0}
+                      originY={0}
+                      propList={Array []}
+                      rotation={0}
+                      scaleX={1}
+                      scaleY={1}
+                      skewX={0}
+                      skewY={0}
+                      stroke={null}
+                      strokeDasharray={null}
+                      strokeDashoffset={null}
+                      strokeLinecap={0}
+                      strokeLinejoin={0}
+                      strokeMiterlimit={4}
+                      strokeOpacity={1}
+                      strokeWidth={1}
+                      vectorEffect={0}
+                      x={0}
+                      y={0}
+                    >
+                      <RNSVGPath
+                        d="M27 14h5c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0zM27 14c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0 14c0 1.112-0.895 2-2 2-1.112 0-2-0.896-2-2.001v-1.494c0-0.291 0.224-0.505 0.5-0.505 0.268 0 0.5 0.226 0.5 0.505v1.505c0 0.547 0.444 0.991 1 0.991 0.552 0 1-0.451 1-0.991v-14.009c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-5.415 6.671-9.825 15-9.995v-1.506c0-0.283 0.224-0.499 0.5-0.499 0.268 0 0.5 0.224 0.5 0.499v1.506c8.329 0.17 15 4.58 15 9.995h-5z"
+                        fill={
+                          Array [
+                            0,
+                            4294506484,
+                          ]
+                        }
+                        fillOpacity={1}
+                        fillRule={1}
+                        matrix={
+                          Array [
+                            1,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                          ]
+                        }
+                        opacity={1}
+                        originX={0}
+                        originY={0}
+                        propList={
+                          Array [
+                            "fill",
+                          ]
+                        }
+                        rotation={0}
+                        scaleX={1}
+                        scaleY={1}
+                        skewX={0}
+                        skewY={0}
+                        stroke={null}
+                        strokeDasharray={null}
+                        strokeDashoffset={null}
+                        strokeLinecap={0}
+                        strokeLinejoin={0}
+                        strokeMiterlimit={4}
+                        strokeOpacity={1}
+                        strokeWidth={1}
+                        vectorEffect={0}
+                        x={0}
+                        y={0}
+                      />
+                    </RNSVGGroup>
+                  </RNSVGSvgView>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            inHorizontalList={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "height": 240,
+                "margin": 8,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 240,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  forceRatio={2}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 2,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    hasTitleAndSummary={true}
+                    maxAspectRatio={2}
+                    minAspectRatio={2}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://picsum.photos/800",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Medium",
+                      "fontSize": 14,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  Live for Freedom Toolkit
+                </Text>
+                <Text
+                  bold={false}
+                  hasTitle="Live for Freedom Toolkit"
+                  italic={false}
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#A5A5A5",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 12,
+                      "lineHeight": 18,
+                      "paddingTop": 8,
+                    }
+                  }
+                >
+                  Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            __typename="DevotionalContentItem"
+            action="READ_CONTENT"
+            id="DevotionalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
+            inHorizontalList={true}
+            style={
+              Object {
+                "backgroundColor": "#303030",
+                "borderRadius": 16,
+                "height": 240,
+                "margin": 8,
+                "shadowColor": "transparent",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 240,
+              }
+            }
+            summary="Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer."
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  forceRatio={1}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://picsum.photos/800",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      1711276032,
+                      2147483648,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-bottom"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "bottom": 0,
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                    "position": "absolute",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  <View
+                    hasAction={null}
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <Text
+                      numberOfLines={4}
+                      style={
+                        Object {
+                          "color": "#F8F7F4",
+                          "fontFamily": "InterUI-Black",
+                          "fontSize": 24,
+                          "lineHeight": 27.6,
+                        }
+                      }
+                    >
+                      Live for Freedom Toolkit
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`The HorizontalCardListFeature component should render with a section subtitle 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "paddingBottom": 8,
+        "paddingHorizontal": 16,
+        "paddingTop": 48,
+        "paddingVertical": 0,
+      }
+    }
+    vertical={false}
+  >
+    <Text
+      style={
+        Object {
+          "color": "#303030",
+          "fontFamily": "InterUI-Black",
+          "fontSize": 36,
+          "lineHeight": 41.4,
+        }
+      }
+    >
+      This renders larger than you might expect
+    </Text>
+  </View>
+  <RCTScrollView
+    collapsable={false}
+    contentContainerStyle={
+      Object {
+        "padding": 8,
+        "paddingBottom": 0,
+      }
+    }
+    data={
+      Array [
+        Object {
+          "__typename": "WeekendContentItem",
+          "action": "READ_CONTENT",
+          "actionIcon": "umbrella",
+          "coverImage": Array [
+            Object {
+              "uri": "https://picsum.photos/800",
+            },
+          ],
+          "hasAction": true,
+          "hyphenatedTitle": "Live for Freedom Toolkit",
+          "id": "WeekendContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
+          "labelText": "Stormy",
+          "summary": "Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.",
+          "title": "Live for Freedom Toolkit",
+        },
+        Object {
+          "__typename": "UniversalContentItem",
+          "action": "READ_CONTENT",
+          "actionIcon": null,
+          "coverImage": Array [
+            Object {
+              "uri": "https://picsum.photos/800",
+            },
+          ],
+          "hasAction": null,
+          "hyphenatedTitle": "Live for Freedom Toolkit",
+          "id": "UniversalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
+          "labelText": null,
+          "summary": "Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.",
+          "title": "Live for Freedom Toolkit",
+        },
+        Object {
+          "__typename": "DevotionalContentItem",
+          "action": "READ_CONTENT",
+          "actionIcon": null,
+          "coverImage": Array [
+            Object {
+              "uri": "https://picsum.photos/800",
+            },
+          ],
+          "hasAction": null,
+          "hyphenatedTitle": "Live for Freedom Toolkit",
+          "id": "DevotionalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae",
+          "labelText": null,
+          "summary": "Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.",
+          "title": "Live for Freedom Toolkit",
+        },
+      ]
+    }
+    decelerationRate="fast"
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={true}
+    initialNumToRender={10}
+    initialScrollIndex={0}
+    keyExtractor={[Function]}
+    loadingStateObject={
+      Object {
+        "__typename": "MediaContentItem",
+        "actionIcon": "umbrella",
+        "channelType": "",
+        "coverImage": Array [],
+        "hasAction": true,
+        "id": "fakeId0",
+        "isLoading": true,
+        "title": "Boom",
+      }
+    }
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onGestureHandlerEvent={[Function]}
+    onGestureHandlerStateChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    refreshing={false}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    renderScrollComponent={[Function]}
+    scrollEventThrottle={50}
+    showsHorizontalScrollIndicator={false}
+    snapToAlignment="start"
+    snapToInterval={256}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            __typename="WeekendContentItem"
+            action="READ_CONTENT"
+            id="WeekendContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
+            inHorizontalList={true}
+            style={
+              Object {
+                "backgroundColor": "#303030",
+                "borderRadius": 16,
+                "height": 240,
+                "margin": 8,
+                "shadowColor": "transparent",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 240,
+              }
+            }
+            summary="Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer."
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  forceRatio={1}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://picsum.photos/800",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      1711276032,
+                      2147483648,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-bottom"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "bottom": 0,
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                    "position": "absolute",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  bordered={false}
+                  disabled={false}
+                  pill={false}
+                  style={
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": Object {
+                        "color": Array [
+                          255,
+                          255,
+                          255,
+                        ],
+                        "model": "rgb",
+                        "valpha": 0.4,
+                      },
+                      "borderColor": Object {
+                        "color": Array [
+                          255,
+                          255,
+                          255,
+                        ],
+                        "model": "rgb",
+                        "valpha": 0.4,
+                      },
+                      "borderRadius": 16,
+                      "borderWidth": 0,
+                      "elevation": 2,
+                      "flexDirection": "row",
+                      "height": 32,
+                      "justifyContent": "center",
+                      "opacity": 1,
+                      "overflow": "hidden",
+                      "paddingHorizontal": 12,
+                    }
+                  }
+                >
+                  <Text
+                    style={
+                      Object {
+                        "alignItems": "center",
+                        "color": "#FFFFFF",
+                        "fontFamily": "InterUI-Bold",
+                        "fontSize": 12,
+                        "justifyContent": "center",
+                        "lineHeight": 18,
+                        "textAlign": "center",
+                      }
+                    }
+                  >
+                    Stormy
+                  </Text>
+                </View>
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  <View
+                    hasAction={true}
+                    style={
+                      Object {
+                        "flex": 1,
+                        "marginRight": 16,
+                      }
+                    }
+                  >
+                    <Text
+                      numberOfLines={4}
+                      style={
+                        Object {
+                          "color": "#F8F7F4",
+                          "fontFamily": "InterUI-Black",
+                          "fontSize": 24,
+                          "lineHeight": 27.6,
+                        }
+                      }
+                    >
+                      Live for Freedom Toolkit
+                    </Text>
+                  </View>
+                  <RNSVGSvgView
+                    align="xMidYMid"
+                    bbHeight={32}
+                    bbWidth={32}
+                    focusable={false}
+                    height={32}
+                    meetOrSlice={0}
+                    minX={0}
+                    minY={0}
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "transparent",
+                          "borderWidth": 0,
+                        },
+                        undefined,
+                        Object {
+                          "opacity": 1,
+                        },
+                        Object {
+                          "flex": 0,
+                          "height": 32,
+                          "width": 32,
+                        },
+                      ]
+                    }
+                    vbHeight={32}
+                    vbWidth={32}
+                    width={32}
+                  >
+                    <RNSVGGroup
+                      fill={
+                        Array [
+                          0,
+                          4278190080,
+                        ]
+                      }
+                      fillOpacity={1}
+                      fillRule={1}
+                      font={Object {}}
+                      matrix={
+                        Array [
+                          1,
+                          0,
+                          0,
+                          1,
+                          0,
+                          0,
+                        ]
+                      }
+                      opacity={1}
+                      originX={0}
+                      originY={0}
+                      propList={Array []}
+                      rotation={0}
+                      scaleX={1}
+                      scaleY={1}
+                      skewX={0}
+                      skewY={0}
+                      stroke={null}
+                      strokeDasharray={null}
+                      strokeDashoffset={null}
+                      strokeLinecap={0}
+                      strokeLinejoin={0}
+                      strokeMiterlimit={4}
+                      strokeOpacity={1}
+                      strokeWidth={1}
+                      vectorEffect={0}
+                      x={0}
+                      y={0}
+                    >
+                      <RNSVGPath
+                        d="M27 14h5c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0zM27 14c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2v0 14c0 1.112-0.895 2-2 2-1.112 0-2-0.896-2-2.001v-1.494c0-0.291 0.224-0.505 0.5-0.505 0.268 0 0.5 0.226 0.5 0.505v1.505c0 0.547 0.444 0.991 1 0.991 0.552 0 1-0.451 1-0.991v-14.009c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-1.105-1.119-2-2.5-2s-2.5 0.895-2.5 2c0-5.415 6.671-9.825 15-9.995v-1.506c0-0.283 0.224-0.499 0.5-0.499 0.268 0 0.5 0.224 0.5 0.499v1.506c8.329 0.17 15 4.58 15 9.995h-5z"
+                        fill={
+                          Array [
+                            0,
+                            4294506484,
+                          ]
+                        }
+                        fillOpacity={1}
+                        fillRule={1}
+                        matrix={
+                          Array [
+                            1,
+                            0,
+                            0,
+                            1,
+                            0,
+                            0,
+                          ]
+                        }
+                        opacity={1}
+                        originX={0}
+                        originY={0}
+                        propList={
+                          Array [
+                            "fill",
+                          ]
+                        }
+                        rotation={0}
+                        scaleX={1}
+                        scaleY={1}
+                        skewX={0}
+                        skewY={0}
+                        stroke={null}
+                        strokeDasharray={null}
+                        strokeDashoffset={null}
+                        strokeLinecap={0}
+                        strokeLinejoin={0}
+                        strokeMiterlimit={4}
+                        strokeOpacity={1}
+                        strokeWidth={1}
+                        vectorEffect={0}
+                        x={0}
+                        y={0}
+                      />
+                    </RNSVGGroup>
+                  </RNSVGSvgView>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            inHorizontalList={true}
+            style={
+              Object {
+                "backgroundColor": "#FFFFFF",
+                "borderRadius": 16,
+                "height": 240,
+                "margin": 8,
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 240,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  forceRatio={2}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 2,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    hasTitleAndSummary={true}
+                    maxAspectRatio={2}
+                    minAspectRatio={2}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://picsum.photos/800",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      2147483648,
+                      0,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-top"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                  }
+                }
+              >
+                <Text
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#303030",
+                      "fontFamily": "InterUI-Medium",
+                      "fontSize": 14,
+                      "lineHeight": 21,
+                    }
+                  }
+                >
+                  Live for Freedom Toolkit
+                </Text>
+                <Text
+                  bold={false}
+                  hasTitle="Live for Freedom Toolkit"
+                  italic={false}
+                  numberOfLines={2}
+                  style={
+                    Object {
+                      "color": "#A5A5A5",
+                      "fontFamily": "InterUI-Regular",
+                      "fontSize": 12,
+                      "lineHeight": 18,
+                      "paddingTop": 8,
+                    }
+                  }
+                >
+                  Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer.
+                </Text>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "flexDirection": "row",
+            },
+            null,
+          ]
+        }
+      >
+        <View
+          accessible={true}
+          clickable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "scale": 1,
+                },
+              ],
+            }
+          }
+        >
+          <View
+            __typename="DevotionalContentItem"
+            action="READ_CONTENT"
+            id="DevotionalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
+            inHorizontalList={true}
+            style={
+              Object {
+                "backgroundColor": "#303030",
+                "borderRadius": 16,
+                "height": 240,
+                "margin": 8,
+                "shadowColor": "transparent",
+                "shadowOffset": Object {
+                  "height": 1,
+                  "width": 0,
+                },
+                "shadowOpacity": 1,
+                "shadowRadius": 6,
+                "width": 240,
+              }
+            }
+            summary="Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you go — with this playlist of NewSpring Worship's favorite songs of the summer."
+          >
+            <View
+              style={
+                Object {
+                  "borderRadius": 16,
+                  "overflow": "hidden",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#A5A5A5",
+                    "overflow": "hidden",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  animate={null}
+                  customAnimate={null}
+                  forceRatio={1}
+                  onReady={false}
+                  style={
+                    Object {
+                      "aspectRatio": 1,
+                      "backgroundColor": "#A5A5A5",
+                      "resizeMode": "cover",
+                      "width": "100%",
+                    }
+                  }
+                >
+                  <Image
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
+                    onLoad={[Function]}
+                    source={
+                      Array [
+                        Object {
+                          "cache": "force-cache",
+                          "uri": "https://picsum.photos/800",
+                        },
+                      ]
+                    }
+                    style={
+                      Object {
+                        "backgroundColor": "#A5A5A5",
+                        "opacity": 0,
+                        "resizeMode": "cover",
+                        "width": "100%",
+                      }
+                    }
+                  />
+                </View>
+                <BVLinearGradient
+                  colors={
+                    Array [
+                      1711276032,
+                      2147483648,
+                    ]
+                  }
+                  endPoint={
+                    Object {
+                      "x": 0,
+                      "y": 1,
+                    }
+                  }
+                  locations={
+                    Array [
+                      0,
+                      1,
+                    ]
+                  }
+                  overlayColor="#000000"
+                  overlayType="gradient-bottom"
+                  startPoint={
+                    Object {
+                      "x": 0,
+                      "y": 0,
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+              <View
+                style={
+                  Object {
+                    "alignItems": "flex-start",
+                    "bottom": 0,
+                    "paddingBottom": 24,
+                    "paddingHorizontal": 16,
+                    "paddingVertical": 16,
+                    "position": "absolute",
+                    "width": "100%",
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
+                    }
+                  }
+                >
+                  <View
+                    hasAction={null}
+                    style={
+                      Object {
+                        "flex": 1,
+                      }
+                    }
+                  >
+                    <Text
+                      numberOfLines={4}
+                      style={
+                        Object {
+                          "color": "#F8F7F4",
+                          "fontFamily": "InterUI-Black",
+                          "fontSize": 24,
+                          "lineHeight": 27.6,
+                        }
+                      }
+                    >
+                      Live for Freedom Toolkit
+                    </Text>
+                  </View>
+                </View>
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;

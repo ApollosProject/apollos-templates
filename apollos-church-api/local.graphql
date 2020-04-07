@@ -113,7 +113,7 @@ type CardListItem {
   labelText: String
   summary: String
   coverImage: ImageMedia
-  title: String
+  title(hyphenated: Boolean): String
   relatedNode: Node
   action: ACTION_FEATURE_ACTION
 }
@@ -238,6 +238,14 @@ enum GROUP_TYPE {
   Serving
   Community
   Family
+}
+
+type HorizontalCardListFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  title: String
+  subtitle: String
+  cards: [CardListItem]
 }
 
 type ImageMedia implements Media {
