@@ -43,7 +43,7 @@ class HorizontalCardListFeature extends PureComponent {
   static propTypes = {
     cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     isLoading: PropTypes.bool,
-    listKey: PropTypes.string,
+    listKey: PropTypes.string, // needed if multiple lists/feeds are displayed as siblings
     onPressItem: PropTypes.func,
     subtitle: PropTypes.string,
     title: PropTypes.string,
