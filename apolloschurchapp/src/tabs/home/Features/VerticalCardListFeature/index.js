@@ -1,7 +1,6 @@
 import React, { memo } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
-import { get } from 'lodash';
 
 import {
   FeedView,
