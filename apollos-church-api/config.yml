@@ -154,8 +154,13 @@ HOME_FEATURES:
     subtitle: Continue
     type: HorizontalCardList
   - title: RECOMMENDED
-    algorithms: [SERMON_CHILDREN]
     subtitle: For Him
+    algorithms:
+      - type: CONTENT_CHANNEL
+        arguments:
+          contentChannelId: 5
+          limit: 1
+      - type: SERMON_CHILDREN
     type: VerticalCardList
   - title: BULLETIN
     subtitle: What's happening at apollos?

@@ -1,6 +1,7 @@
 import React, { memo } from 'react';
 import { View } from 'react-native';
 import PropTypes from 'prop-types';
+import { get } from 'lodash';
 
 import {
   FeedView,
@@ -57,11 +58,12 @@ const Header = styled(({ theme }) => ({
 //   return content;
 // };
 
-const ListItemComponent = ({ contentId, ...args }) => (
+const ListItemComponent = ({ contentId, ...item }) => (
   <LiveConsumer contentId={contentId}>
     {(liveStream) => {
       const isLive = !!(liveStream && liveStream.isLive);
-      return contentCardComponentMapper({ isLive, contentId, ...args });
+      const labelText = isLive ? 'Live' : item.labelText;
+      return contentCardComponentMapper({ isLive, ...item, labelText });
     }}
   </LiveConsumer>
 );

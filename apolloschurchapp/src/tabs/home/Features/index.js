@@ -171,6 +171,7 @@ const Features = memo(({ navigation }) => (
                       : {}),
                     coverImage: get(card, 'coverImage.sources', undefined),
                     __typename: card.relatedNode.__typename,
+                    id: card.relatedNode.id,
                   }))}
                   isLoading={loading}
                   listKey={id}
