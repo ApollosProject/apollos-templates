@@ -43,6 +43,7 @@ class HorizontalCardListFeature extends PureComponent {
   static propTypes = {
     cards: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
     isLoading: PropTypes.bool,
+    listKey: PropTypes.string, // needed if multiple lists/feeds are displayed as siblings
     onPressItem: PropTypes.func,
     subtitle: PropTypes.string,
     title: PropTypes.string,
@@ -70,6 +71,7 @@ class HorizontalCardListFeature extends PureComponent {
         <HorizontalTileFeed
           content={this.props.cards}
           isLoading={this.props.isLoading}
+          listKey={this.props.listKey}
           keyExtractor={this.keyExtractor}
           loadingStateObject={this.loadingStateObject}
           renderItem={this.renderItem}

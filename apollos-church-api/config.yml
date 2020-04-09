@@ -143,6 +143,9 @@ ROCK_MAPPINGS:
   MOBILE_DEVICE_TYPE_ID: 671
 
 HOME_FEATURES:
+  - algorithms: [CAMPAIGN_ITEMS]
+    type: VerticalCardList
+    isFeatured: true
   - title: FOR YOU
     algorithms: [SERMON_CHILDREN, PERSONA_FEED]
     subtitle: Explore what God calls you to today
