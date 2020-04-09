@@ -6,7 +6,7 @@ export default gql`
     node(id: $itemId) {
       __typename
       ... on ContentItem {
-        ...contentItemFragment
+        ...contentCardFragment
       }
     }
   }
