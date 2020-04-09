@@ -154,6 +154,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
             action="READ_CONTENT"
             id="WeekendContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
             inHorizontalList={true}
+            isLive={false}
             style={
               Object {
                 "backgroundColor": "#303030",
@@ -708,6 +709,7 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
             action="READ_CONTENT"
             id="DevotionalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
             inHorizontalList={true}
+            isLive={false}
             style={
               Object {
                 "backgroundColor": "#303030",
@@ -1054,6 +1056,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
             channelType=""
             id="fakeId0"
             inHorizontalList={true}
+            isLive={false}
             isLoading={true}
             style={
               Object {
@@ -1253,6 +1256,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
             channelType=""
             id="fakeId1"
             inHorizontalList={true}
+            isLive={false}
             isLoading={true}
             style={
               Object {
@@ -1452,6 +1456,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
             channelType=""
             id="fakeId2"
             inHorizontalList={true}
+            isLive={false}
             isLoading={true}
             style={
               Object {
@@ -1651,6 +1656,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
             channelType=""
             id="fakeId3"
             inHorizontalList={true}
+            isLive={false}
             isLoading={true}
             style={
               Object {
@@ -1850,6 +1856,7 @@ exports[`The HorizontalCardListFeature component should render a loading state f
             channelType=""
             id="fakeId4"
             inHorizontalList={true}
+            isLive={false}
             isLoading={true}
             style={
               Object {
@@ -2186,6 +2193,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
             action="READ_CONTENT"
             id="WeekendContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
             inHorizontalList={true}
+            isLive={false}
             style={
               Object {
                 "backgroundColor": "#303030",
@@ -2740,6 +2748,7 @@ exports[`The HorizontalCardListFeature component should render a section title 1
             action="READ_CONTENT"
             id="DevotionalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
             inHorizontalList={true}
+            isLive={false}
             style={
               Object {
                 "backgroundColor": "#303030",
@@ -3071,6 +3080,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
             action="READ_CONTENT"
             id="WeekendContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
             inHorizontalList={true}
+            isLive={false}
             style={
               Object {
                 "backgroundColor": "#303030",
@@ -3625,6 +3635,7 @@ exports[`The HorizontalCardListFeature component should render with a section su
             action="READ_CONTENT"
             id="DevotionalContentItem:95ff79f60a028b1b506aaeedf8b4c6ae"
             inHorizontalList={true}
+            isLive={false}
             style={
               Object {
                 "backgroundColor": "#303030",
