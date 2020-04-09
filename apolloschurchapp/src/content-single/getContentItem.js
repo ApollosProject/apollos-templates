@@ -10,5 +10,5 @@ export default gql`
       }
     }
   }
-  ${ApollosConfig.FRAGMENTS.CONTENT_ITEM_FRAGMENT}
+  ${ApollosConfig.FRAGMENTS.CONTENT_CARD_FRAGMENT}
 `;
