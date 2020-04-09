@@ -58,7 +58,7 @@ class HorizontalCardListFeature extends PureComponent {
     <LiveConsumer contentId={item.id}>
       {(liveStream) => {
         const isLive = !!(liveStream && liveStream.isLive);
-        const labelText = isLive ? 'Live' : labelText;
+        const labelText = isLive ? 'Live' : item.labelText;
         return (
           <TouchableScale onPress={() => this.props.onPressItem(item)}>
             {horizontalContentCardComponentMapper({
