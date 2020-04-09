@@ -11,7 +11,10 @@ import {
   TouchableScale,
   withIsLoading,
 } from '@apollosproject/ui-kit';
-import { horizontalContentCardComponentMapper } from '@apollosproject/ui-connected';
+import {
+  horizontalContentCardComponentMapper,
+  LiveConsumer,
+} from '@apollosproject/ui-connected';
 
 const Title = styled(
   ({ theme }) => ({
@@ -52,9 +55,17 @@ class HorizontalCardListFeature extends PureComponent {
   keyExtractor = (item) => item && item.id;
 
   renderItem = ({ item }) => (
-    <TouchableScale onPress={() => this.props.onPressItem(item)}>
-      {horizontalContentCardComponentMapper({ ...item })}
-    </TouchableScale>
+    <LiveConsumer contentId={item.id}>
+      {(liveStream) => {
+        const isLive = !!(liveStream && liveStream.isLive);
+
+        return (
+          <TouchableScale onPress={() => this.props.onPressItem(item)}>
+            {horizontalContentCardComponentMapper({ isLive, ...item })}
+          </TouchableScale>
+        );
+      }}
+    </LiveConsumer>
   );
 
   render() {
