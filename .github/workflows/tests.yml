@@ -26,14 +26,15 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: |
         npm install -g yarn
+        yarn --ignore-scripts
 
-    - name: Install client dependencies
-      run: yarn --ignore-scripts
-      working-directory: ./apolloschurchapp
+    # - name: Install client dependencies
+    #   run: yarn --ignore-scripts
+    #   working-directory: ./apolloschurchapp
 
-    - name: Install api dependencies
-      run: yarn
-      working-directory: ./apollos-church-api
+    # - name: Install api dependencies
+    #   run: yarn --ignore-scripts
+    #   working-directory: ./apollos-church-api
 
     - name: Lint
       run: yarn lint
