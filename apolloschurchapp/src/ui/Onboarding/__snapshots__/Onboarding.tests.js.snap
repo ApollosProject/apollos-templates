@@ -75,6 +75,7 @@ Array [
         }
       }
       disableNextButton={false}
+      disablePrevButton={false}
       dot={
         <SafeAreaView
           forceInset={
