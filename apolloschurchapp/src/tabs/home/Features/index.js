@@ -2,12 +2,14 @@ import React, { memo } from 'react';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 // import PropTypes from 'prop-types';
+import {
+  HorizontalCardListFeature,
+  VerticalCardListFeature,
+} from '@apollosproject/ui-connected';
 
 import { ActionListFeature } from '@apollosproject/ui-connected';
 
 import CampaignItemListFeature from './CampaignItemListFeature';
-import HorizontalCardListFeature from './HorizontalCardListFeature';
-import VerticalCardListFeature from './VerticalCardListFeature';
 
 import GET_FEED_FEATURES from './getFeedFeatures';
 
