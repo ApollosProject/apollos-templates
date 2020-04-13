@@ -1,18 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The VerticalCardListFeature component should render 1`] = `
+exports[`The CampaignItemListFeature component should render 1`] = `
 <View>
-  <View
-    style={
-      Object {
-        "paddingBottom": 8,
-        "paddingHorizontal": 16,
-        "paddingTop": 48,
-        "paddingVertical": 0,
-      }
-    }
-    vertical={false}
-  />
   <RCTScrollView
     data={
       Array [
@@ -86,9 +75,10 @@ exports[`The VerticalCardListFeature component should render 1`] = `
           }
         >
           <View
+            cardColor="#00676D"
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#00676D",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -133,8 +123,8 @@ exports[`The VerticalCardListFeature component should render 1`] = `
                   }
                 >
                   <Image
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
                     onLoad={[Function]}
                     source={
                       Array [
@@ -157,8 +147,8 @@ exports[`The VerticalCardListFeature component should render 1`] = `
                 <BVLinearGradient
                   colors={
                     Array [
-                      2147483648,
-                      0,
+                      1711302509,
+                      4278216557,
                     ]
                   }
                   endPoint={
@@ -170,11 +160,11 @@ exports[`The VerticalCardListFeature component should render 1`] = `
                   locations={
                     Array [
                       0,
-                      1,
+                      0.8,
                     ]
                   }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
+                  overlayColor="#00676D"
+                  overlayType="featured"
                   startPoint={
                     Object {
                       "x": 0,
@@ -196,6 +186,7 @@ exports[`The VerticalCardListFeature component should render 1`] = `
                 style={
                   Object {
                     "alignItems": "flex-start",
+                    "marginTop": "-40%",
                     "paddingBottom": 32,
                     "paddingHorizontal": 24,
                     "paddingVertical": 16,
@@ -203,34 +194,53 @@ exports[`The VerticalCardListFeature component should render 1`] = `
                 }
               >
                 <Text
-                  numberOfLines={2}
+                  numberOfLines={3}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#F8F7F4",
                       "fontFamily": "InterUI-Black",
-                      "fontSize": 24,
-                      "lineHeight": 27.6,
+                      "fontSize": 36,
+                      "lineHeight": 41.4,
                     }
                   }
                 >
                   Card Title
                 </Text>
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={2}
+                <View
+                  hasSummary={true}
                   style={
                     Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
+                      "alignItems": "center",
+                      "flexDirection": "row",
                       "paddingTop": 16,
                     }
                   }
                 >
-                  Card summary
-                </Text>
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "marginRight": 16,
+                      }
+                    }
+                  >
+                    <Text
+                      bold={false}
+                      italic={false}
+                      numberOfLines={2}
+                      style={
+                        Object {
+                          "color": "#F8F7F4",
+                          "fontFamily": "InterUI-Regular",
+                          "fontSize": 16,
+                          "lineHeight": 26,
+                        }
+                      }
+                    >
+                      Card summary
+                    </Text>
+                  </View>
+                </View>
               </View>
             </View>
           </View>
@@ -241,7 +251,7 @@ exports[`The VerticalCardListFeature component should render 1`] = `
 </View>
 `;
 
-exports[`The VerticalCardListFeature component should render a loading state for isLoading 1`] = `
+exports[`The CampaignItemListFeature component should render a loading state for isLoading 1`] = `
 <View>
   <View
     style={
@@ -445,10 +455,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
           }
         >
           <View
+            cardColor="#00676D"
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#00676D",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -493,8 +504,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   }
                 >
                   <Image
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
                     onLoad={[Function]}
                     source={Array []}
                     style={
@@ -511,8 +522,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 <BVLinearGradient
                   colors={
                     Array [
-                      2147483648,
-                      0,
+                      1725684697,
+                      4292598745,
                     ]
                   }
                   endPoint={
@@ -524,11 +535,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   locations={
                     Array [
                       0,
-                      1,
+                      0.8,
                     ]
                   }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
+                  overlayColor="#DBDBD9"
+                  overlayType="featured"
                   startPoint={
                     Object {
                       "x": 0,
@@ -550,6 +561,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 style={
                   Object {
                     "alignItems": "flex-start",
+                    "marginTop": "-40%",
                     "paddingBottom": 32,
                     "paddingHorizontal": 24,
                     "paddingVertical": 16,
@@ -557,26 +569,36 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               >
                 <View
+                  hasSummary={false}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "flex": 1,
+                        "marginRight": 16,
                       }
                     }
-                  />
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 36,
+                          "marginVertical": 2.6999999999999993,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
               </View>
             </View>
@@ -608,10 +630,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
           }
         >
           <View
+            cardColor="#00676D"
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#00676D",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -656,8 +679,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   }
                 >
                   <Image
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
                     onLoad={[Function]}
                     source={Array []}
                     style={
@@ -674,8 +697,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 <BVLinearGradient
                   colors={
                     Array [
-                      2147483648,
-                      0,
+                      1725684697,
+                      4292598745,
                     ]
                   }
                   endPoint={
@@ -687,11 +710,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   locations={
                     Array [
                       0,
-                      1,
+                      0.8,
                     ]
                   }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
+                  overlayColor="#DBDBD9"
+                  overlayType="featured"
                   startPoint={
                     Object {
                       "x": 0,
@@ -713,6 +736,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 style={
                   Object {
                     "alignItems": "flex-start",
+                    "marginTop": "-40%",
                     "paddingBottom": 32,
                     "paddingHorizontal": 24,
                     "paddingVertical": 16,
@@ -720,26 +744,36 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               >
                 <View
+                  hasSummary={false}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "flex": 1,
+                        "marginRight": 16,
                       }
                     }
-                  />
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 36,
+                          "marginVertical": 2.6999999999999993,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
               </View>
             </View>
@@ -771,10 +805,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
           }
         >
           <View
+            cardColor="#00676D"
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#00676D",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -819,8 +854,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   }
                 >
                   <Image
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
                     onLoad={[Function]}
                     source={Array []}
                     style={
@@ -837,8 +872,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 <BVLinearGradient
                   colors={
                     Array [
-                      2147483648,
-                      0,
+                      1725684697,
+                      4292598745,
                     ]
                   }
                   endPoint={
@@ -850,11 +885,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   locations={
                     Array [
                       0,
-                      1,
+                      0.8,
                     ]
                   }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
+                  overlayColor="#DBDBD9"
+                  overlayType="featured"
                   startPoint={
                     Object {
                       "x": 0,
@@ -876,6 +911,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 style={
                   Object {
                     "alignItems": "flex-start",
+                    "marginTop": "-40%",
                     "paddingBottom": 32,
                     "paddingHorizontal": 24,
                     "paddingVertical": 16,
@@ -883,26 +919,36 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               >
                 <View
+                  hasSummary={false}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "flex": 1,
+                        "marginRight": 16,
                       }
                     }
-                  />
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 36,
+                          "marginVertical": 2.6999999999999993,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
               </View>
             </View>
@@ -934,10 +980,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
           }
         >
           <View
+            cardColor="#00676D"
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#00676D",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -982,8 +1029,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   }
                 >
                   <Image
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
                     onLoad={[Function]}
                     source={Array []}
                     style={
@@ -1000,8 +1047,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 <BVLinearGradient
                   colors={
                     Array [
-                      2147483648,
-                      0,
+                      1725684697,
+                      4292598745,
                     ]
                   }
                   endPoint={
@@ -1013,11 +1060,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   locations={
                     Array [
                       0,
-                      1,
+                      0.8,
                     ]
                   }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
+                  overlayColor="#DBDBD9"
+                  overlayType="featured"
                   startPoint={
                     Object {
                       "x": 0,
@@ -1039,6 +1086,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 style={
                   Object {
                     "alignItems": "flex-start",
+                    "marginTop": "-40%",
                     "paddingBottom": 32,
                     "paddingHorizontal": 24,
                     "paddingVertical": 16,
@@ -1046,26 +1094,36 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               >
                 <View
+                  hasSummary={false}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "flex": 1,
+                        "marginRight": 16,
                       }
                     }
-                  />
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 36,
+                          "marginVertical": 2.6999999999999993,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
               </View>
             </View>
@@ -1097,10 +1155,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
           }
         >
           <View
+            cardColor="#00676D"
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#00676D",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -1145,8 +1204,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   }
                 >
                   <Image
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
                     onLoad={[Function]}
                     source={Array []}
                     style={
@@ -1163,8 +1222,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 <BVLinearGradient
                   colors={
                     Array [
-                      2147483648,
-                      0,
+                      1725684697,
+                      4292598745,
                     ]
                   }
                   endPoint={
@@ -1176,11 +1235,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   locations={
                     Array [
                       0,
-                      1,
+                      0.8,
                     ]
                   }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
+                  overlayColor="#DBDBD9"
+                  overlayType="featured"
                   startPoint={
                     Object {
                       "x": 0,
@@ -1202,6 +1261,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 style={
                   Object {
                     "alignItems": "flex-start",
+                    "marginTop": "-40%",
                     "paddingBottom": 32,
                     "paddingHorizontal": 24,
                     "paddingVertical": 16,
@@ -1209,26 +1269,36 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               >
                 <View
+                  hasSummary={false}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "flex": 1,
+                        "marginRight": 16,
                       }
                     }
-                  />
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 36,
+                          "marginVertical": 2.6999999999999993,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
               </View>
             </View>
@@ -1260,10 +1330,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
           }
         >
           <View
+            cardColor="#00676D"
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#00676D",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -1308,8 +1379,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   }
                 >
                   <Image
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
                     onLoad={[Function]}
                     source={Array []}
                     style={
@@ -1326,8 +1397,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 <BVLinearGradient
                   colors={
                     Array [
-                      2147483648,
-                      0,
+                      1725684697,
+                      4292598745,
                     ]
                   }
                   endPoint={
@@ -1339,11 +1410,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   locations={
                     Array [
                       0,
-                      1,
+                      0.8,
                     ]
                   }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
+                  overlayColor="#DBDBD9"
+                  overlayType="featured"
                   startPoint={
                     Object {
                       "x": 0,
@@ -1365,6 +1436,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 style={
                   Object {
                     "alignItems": "flex-start",
+                    "marginTop": "-40%",
                     "paddingBottom": 32,
                     "paddingHorizontal": 24,
                     "paddingVertical": 16,
@@ -1372,26 +1444,36 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               >
                 <View
+                  hasSummary={false}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "flex": 1,
+                        "marginRight": 16,
                       }
                     }
-                  />
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 36,
+                          "marginVertical": 2.6999999999999993,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
               </View>
             </View>
@@ -1423,10 +1505,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
           }
         >
           <View
+            cardColor="#00676D"
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#00676D",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -1471,8 +1554,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   }
                 >
                   <Image
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
                     onLoad={[Function]}
                     source={Array []}
                     style={
@@ -1489,8 +1572,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 <BVLinearGradient
                   colors={
                     Array [
-                      2147483648,
-                      0,
+                      1725684697,
+                      4292598745,
                     ]
                   }
                   endPoint={
@@ -1502,11 +1585,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   locations={
                     Array [
                       0,
-                      1,
+                      0.8,
                     ]
                   }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
+                  overlayColor="#DBDBD9"
+                  overlayType="featured"
                   startPoint={
                     Object {
                       "x": 0,
@@ -1528,6 +1611,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 style={
                   Object {
                     "alignItems": "flex-start",
+                    "marginTop": "-40%",
                     "paddingBottom": 32,
                     "paddingHorizontal": 24,
                     "paddingVertical": 16,
@@ -1535,26 +1619,36 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               >
                 <View
+                  hasSummary={false}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "flex": 1,
+                        "marginRight": 16,
                       }
                     }
-                  />
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 36,
+                          "marginVertical": 2.6999999999999993,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
               </View>
             </View>
@@ -1586,10 +1680,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
           }
         >
           <View
+            cardColor="#00676D"
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#00676D",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -1634,8 +1729,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   }
                 >
                   <Image
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
                     onLoad={[Function]}
                     source={Array []}
                     style={
@@ -1652,8 +1747,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 <BVLinearGradient
                   colors={
                     Array [
-                      2147483648,
-                      0,
+                      1725684697,
+                      4292598745,
                     ]
                   }
                   endPoint={
@@ -1665,11 +1760,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   locations={
                     Array [
                       0,
-                      1,
+                      0.8,
                     ]
                   }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
+                  overlayColor="#DBDBD9"
+                  overlayType="featured"
                   startPoint={
                     Object {
                       "x": 0,
@@ -1691,6 +1786,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 style={
                   Object {
                     "alignItems": "flex-start",
+                    "marginTop": "-40%",
                     "paddingBottom": 32,
                     "paddingHorizontal": 24,
                     "paddingVertical": 16,
@@ -1698,26 +1794,36 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               >
                 <View
+                  hasSummary={false}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "flex": 1,
+                        "marginRight": 16,
                       }
                     }
-                  />
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 36,
+                          "marginVertical": 2.6999999999999993,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
               </View>
             </View>
@@ -1749,10 +1855,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
           }
         >
           <View
+            cardColor="#00676D"
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#00676D",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -1797,8 +1904,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   }
                 >
                   <Image
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
                     onLoad={[Function]}
                     source={Array []}
                     style={
@@ -1815,8 +1922,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 <BVLinearGradient
                   colors={
                     Array [
-                      2147483648,
-                      0,
+                      1725684697,
+                      4292598745,
                     ]
                   }
                   endPoint={
@@ -1828,11 +1935,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   locations={
                     Array [
                       0,
-                      1,
+                      0.8,
                     ]
                   }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
+                  overlayColor="#DBDBD9"
+                  overlayType="featured"
                   startPoint={
                     Object {
                       "x": 0,
@@ -1854,6 +1961,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 style={
                   Object {
                     "alignItems": "flex-start",
+                    "marginTop": "-40%",
                     "paddingBottom": 32,
                     "paddingHorizontal": 24,
                     "paddingVertical": 16,
@@ -1861,26 +1969,36 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               >
                 <View
+                  hasSummary={false}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "flex": 1,
+                        "marginRight": 16,
                       }
                     }
-                  />
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 36,
+                          "marginVertical": 2.6999999999999993,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
               </View>
             </View>
@@ -1912,10 +2030,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
           }
         >
           <View
+            cardColor="#00676D"
             isLoading={true}
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#00676D",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -1960,8 +2079,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   }
                 >
                   <Image
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
                     onLoad={[Function]}
                     source={Array []}
                     style={
@@ -1978,8 +2097,8 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 <BVLinearGradient
                   colors={
                     Array [
-                      2147483648,
-                      0,
+                      1725684697,
+                      4292598745,
                     ]
                   }
                   endPoint={
@@ -1991,11 +2110,11 @@ exports[`The VerticalCardListFeature component should render a loading state for
                   locations={
                     Array [
                       0,
-                      1,
+                      0.8,
                     ]
                   }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
+                  overlayColor="#DBDBD9"
+                  overlayType="featured"
                   startPoint={
                     Object {
                       "x": 0,
@@ -2017,6 +2136,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 style={
                   Object {
                     "alignItems": "flex-start",
+                    "marginTop": "-40%",
                     "paddingBottom": 32,
                     "paddingHorizontal": 24,
                     "paddingVertical": 16,
@@ -2024,26 +2144,36 @@ exports[`The VerticalCardListFeature component should render a loading state for
                 }
               >
                 <View
+                  hasSummary={false}
                   style={
                     Object {
-                      "marginBottom": 16,
-                      "marginTop": -32,
+                      "alignItems": "flex-end",
+                      "flexDirection": "row",
+                      "paddingTop": 16,
                     }
                   }
                 >
                   <View
                     style={
                       Object {
-                        "alignItems": "center",
-                        "alignSelf": "stretch",
-                        "backgroundColor": "#A5A5A5",
-                        "borderRadius": 16,
-                        "height": 32,
-                        "paddingHorizontal": 12,
-                        "width": 64,
+                        "flex": 1,
+                        "marginRight": 16,
                       }
                     }
-                  />
+                  >
+                    <View
+                      style={
+                        Object {
+                          "alignSelf": "stretch",
+                          "backgroundColor": "#A5A5A5",
+                          "borderRadius": 16,
+                          "height": 36,
+                          "marginVertical": 2.6999999999999993,
+                          "width": "100%",
+                        }
+                      }
+                    />
+                  </View>
                 </View>
               </View>
             </View>
@@ -2055,7 +2185,7 @@ exports[`The VerticalCardListFeature component should render a loading state for
 </View>
 `;
 
-exports[`The VerticalCardListFeature component should render a section title 1`] = `
+exports[`The CampaignItemListFeature component should render a section title 1`] = `
 <View>
   <View
     style={
@@ -2155,9 +2285,10 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
           }
         >
           <View
+            cardColor="#00676D"
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#00676D",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -2202,8 +2333,8 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
                   }
                 >
                   <Image
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
                     onLoad={[Function]}
                     source={
                       Array [
@@ -2226,8 +2357,8 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
                 <BVLinearGradient
                   colors={
                     Array [
-                      2147483648,
-                      0,
+                      1711302509,
+                      4278216557,
                     ]
                   }
                   endPoint={
@@ -2239,11 +2370,11 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
                   locations={
                     Array [
                       0,
-                      1,
+                      0.8,
                     ]
                   }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
+                  overlayColor="#00676D"
+                  overlayType="featured"
                   startPoint={
                     Object {
                       "x": 0,
@@ -2265,6 +2396,7 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
                 style={
                   Object {
                     "alignItems": "flex-start",
+                    "marginTop": "-40%",
                     "paddingBottom": 32,
                     "paddingHorizontal": 24,
                     "paddingVertical": 16,
@@ -2272,34 +2404,53 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
                 }
               >
                 <Text
-                  numberOfLines={2}
+                  numberOfLines={3}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#F8F7F4",
                       "fontFamily": "InterUI-Black",
-                      "fontSize": 24,
-                      "lineHeight": 27.6,
+                      "fontSize": 36,
+                      "lineHeight": 41.4,
                     }
                   }
                 >
                   Card Title
                 </Text>
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={2}
+                <View
+                  hasSummary={true}
                   style={
                     Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
+                      "alignItems": "center",
+                      "flexDirection": "row",
                       "paddingTop": 16,
                     }
                   }
                 >
-                  Card summary
-                </Text>
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "marginRight": 16,
+                      }
+                    }
+                  >
+                    <Text
+                      bold={false}
+                      italic={false}
+                      numberOfLines={2}
+                      style={
+                        Object {
+                          "color": "#F8F7F4",
+                          "fontFamily": "InterUI-Regular",
+                          "fontSize": 16,
+                          "lineHeight": 26,
+                        }
+                      }
+                    >
+                      Card summary
+                    </Text>
+                  </View>
+                </View>
               </View>
             </View>
           </View>
@@ -2310,7 +2461,7 @@ exports[`The VerticalCardListFeature component should render a section title 1`]
 </View>
 `;
 
-exports[`The VerticalCardListFeature component should render with a subtitle 1`] = `
+exports[`The CampaignItemListFeature component should render with a subtitle 1`] = `
 <View>
   <View
     style={
@@ -2409,9 +2560,10 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
           }
         >
           <View
+            cardColor="#00676D"
             style={
               Object {
-                "backgroundColor": "#FFFFFF",
+                "backgroundColor": "#00676D",
                 "borderRadius": 16,
                 "marginHorizontal": 16,
                 "marginVertical": 12,
@@ -2456,8 +2608,8 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
                   }
                 >
                   <Image
-                    maxAspectRatio={1.78}
-                    minAspectRatio={1.2}
+                    maxAspectRatio={1}
+                    minAspectRatio={1}
                     onLoad={[Function]}
                     source={
                       Array [
@@ -2480,8 +2632,8 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
                 <BVLinearGradient
                   colors={
                     Array [
-                      2147483648,
-                      0,
+                      1711302509,
+                      4278216557,
                     ]
                   }
                   endPoint={
@@ -2493,11 +2645,11 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
                   locations={
                     Array [
                       0,
-                      1,
+                      0.8,
                     ]
                   }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
+                  overlayColor="#00676D"
+                  overlayType="featured"
                   startPoint={
                     Object {
                       "x": 0,
@@ -2519,6 +2671,7 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
                 style={
                   Object {
                     "alignItems": "flex-start",
+                    "marginTop": "-40%",
                     "paddingBottom": 32,
                     "paddingHorizontal": 24,
                     "paddingVertical": 16,
@@ -2526,34 +2679,53 @@ exports[`The VerticalCardListFeature component should render with a subtitle 1`]
                 }
               >
                 <Text
-                  numberOfLines={2}
+                  numberOfLines={3}
                   style={
                     Object {
-                      "color": "#303030",
+                      "color": "#F8F7F4",
                       "fontFamily": "InterUI-Black",
-                      "fontSize": 24,
-                      "lineHeight": 27.6,
+                      "fontSize": 36,
+                      "lineHeight": 41.4,
                     }
                   }
                 >
                   Card Title
                 </Text>
-                <Text
-                  bold={false}
-                  italic={false}
-                  numberOfLines={2}
+                <View
+                  hasSummary={true}
                   style={
                     Object {
-                      "color": "#303030",
-                      "fontFamily": "InterUI-Regular",
-                      "fontSize": 16,
-                      "lineHeight": 26,
+                      "alignItems": "center",
+                      "flexDirection": "row",
                       "paddingTop": 16,
                     }
                   }
                 >
-                  Card summary
-                </Text>
+                  <View
+                    style={
+                      Object {
+                        "flex": 1,
+                        "marginRight": 16,
+                      }
+                    }
+                  >
+                    <Text
+                      bold={false}
+                      italic={false}
+                      numberOfLines={2}
+                      style={
+                        Object {
+                          "color": "#F8F7F4",
+                          "fontFamily": "InterUI-Regular",
+                          "fontSize": 16,
+                          "lineHeight": 26,
+                        }
+                      }
+                    >
+                      Card summary
+                    </Text>
+                  </View>
+                </View>
               </View>
             </View>
           </View>
