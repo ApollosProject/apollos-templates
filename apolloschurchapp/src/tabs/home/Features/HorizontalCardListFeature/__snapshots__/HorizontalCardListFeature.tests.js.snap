@@ -160,14 +160,13 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "marginBottom": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "transparent",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 1,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 6,
                 "width": 240,
               }
             }
@@ -525,14 +524,13 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "marginBottom": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 1,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 6,
                 "width": 240,
               }
             }
@@ -716,14 +714,13 @@ exports[`The HorizontalCardListFeature component should render 1`] = `
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "marginBottom": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "transparent",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 1,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 6,
                 "width": 240,
               }
             }
@@ -1064,14 +1061,13 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "marginBottom": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "transparent",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 1,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 6,
                 "width": 240,
               }
             }
@@ -1264,14 +1260,13 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "marginBottom": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "transparent",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 1,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 6,
                 "width": 240,
               }
             }
@@ -1464,14 +1459,13 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "marginBottom": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "transparent",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 1,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 6,
                 "width": 240,
               }
             }
@@ -1664,14 +1658,13 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "marginBottom": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "transparent",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 1,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 6,
                 "width": 240,
               }
             }
@@ -1864,14 +1857,13 @@ exports[`The HorizontalCardListFeature component should render a loading state f
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "marginBottom": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "transparent",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 1,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 6,
                 "width": 240,
               }
             }
@@ -2200,14 +2192,13 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "marginBottom": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "transparent",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 1,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 6,
                 "width": 240,
               }
             }
@@ -2565,14 +2556,13 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "marginBottom": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 1,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 6,
                 "width": 240,
               }
             }
@@ -2756,14 +2746,13 @@ exports[`The HorizontalCardListFeature component should render a section title 1
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "marginBottom": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "transparent",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 1,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 6,
                 "width": 240,
               }
             }
@@ -3088,14 +3077,13 @@ exports[`The HorizontalCardListFeature component should render with a section su
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "marginBottom": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "transparent",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 1,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 6,
                 "width": 240,
               }
             }
@@ -3453,14 +3441,13 @@ exports[`The HorizontalCardListFeature component should render with a section su
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "marginBottom": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "rgba(165, 165, 165, 0.6)",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 1,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 6,
                 "width": 240,
               }
             }
@@ -3644,14 +3631,13 @@ exports[`The HorizontalCardListFeature component should render with a section su
                 "borderRadius": 16,
                 "height": 240,
                 "margin": 8,
-                "marginBottom": 12,
-                "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                "shadowColor": "transparent",
                 "shadowOffset": Object {
-                  "height": 2,
+                  "height": 1,
                   "width": 0,
                 },
                 "shadowOpacity": 1,
-                "shadowRadius": 8,
+                "shadowRadius": 6,
                 "width": 240,
               }
             }

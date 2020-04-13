@@ -237,13 +237,13 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "transparent",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -435,13 +435,13 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "rgba(165, 165, 165, 0.6)",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -590,13 +590,13 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "rgba(165, 165, 165, 0.6)",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -766,13 +766,13 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "rgba(165, 165, 165, 0.6)",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -942,13 +942,13 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "rgba(165, 165, 165, 0.6)",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -1097,13 +1097,13 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "transparent",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -1619,13 +1619,13 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "rgba(165, 165, 165, 0.6)",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -1782,13 +1782,13 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "rgba(165, 165, 165, 0.6)",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -1945,13 +1945,13 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "rgba(165, 165, 165, 0.6)",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -2108,13 +2108,13 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "rgba(165, 165, 165, 0.6)",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -2271,13 +2271,13 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "rgba(165, 165, 165, 0.6)",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -2434,13 +2434,13 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "rgba(165, 165, 165, 0.6)",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -2597,13 +2597,13 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "rgba(165, 165, 165, 0.6)",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -2760,13 +2760,13 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "rgba(165, 165, 165, 0.6)",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -2923,13 +2923,13 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "rgba(165, 165, 165, 0.6)",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
@@ -3086,13 +3086,13 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                         "borderRadius": 16,
                         "marginHorizontal": 16,
                         "marginVertical": 12,
-                        "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                        "shadowColor": "rgba(165, 165, 165, 0.6)",
                         "shadowOffset": Object {
-                          "height": 2,
+                          "height": 1,
                           "width": 0,
                         },
                         "shadowOpacity": 1,
-                        "shadowRadius": 8,
+                        "shadowRadius": 6,
                       }
                     }
                   >
