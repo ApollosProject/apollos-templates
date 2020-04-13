@@ -5,9 +5,9 @@ import { get } from 'lodash';
 import {
   HorizontalCardListFeature,
   VerticalCardListFeature,
+  ActionListFeature,
 } from '@apollosproject/ui-connected';
 
-import ActionListFeature from './ActionListFeature';
 import CampaignItemListFeature from './CampaignItemListFeature';
 
 import GET_FEED_FEATURES from './getFeedFeatures';
