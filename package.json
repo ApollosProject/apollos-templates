@@ -3,7 +3,8 @@
   "scripts": {
     "start": "yarn watch:client & lerna run start --parallel",
     "watch:client": "(cd apolloschurchapp && yarn wml start)",
-    "link-packages": "lerna run link-packages --parallel",
+    "link-packages": "watchman watch-del-all && lerna run link-packages --parallel",
+    "link-doctor": "node ./scripts/link-doctor.js",
     "unlink-packages": "lerna run unlink-packages --parallel",
     "lint": "lerna run lint --stream",
     "test": "lerna run test --stream",
@@ -14,7 +15,20 @@
   "devDependencies": {
     "lerna": "^3.20.2",
     "wml": "^0.0.83",
-    "yalc": "^1.0.0-pre.35"
+    "yalc": "^1.0.0-pre.35",
+    "chalk": "^4.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+  },
+  "workspaces": {
+    "packages": [
+      "apolloschurchapp",
+      "apollos-church-api"
+    ],
+    "nohoist": [
+      "*",
+      "**",
+      "**/**"
+    ]
+  }
 }
