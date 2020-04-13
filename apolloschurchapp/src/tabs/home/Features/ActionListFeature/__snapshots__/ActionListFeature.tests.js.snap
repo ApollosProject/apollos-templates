@@ -8,13 +8,13 @@ exports[`The ActionListFeatures component should render 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -39,7 +39,7 @@ exports[`The ActionListFeatures component should render 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderBottomWidth": 0,
-          "borderColor": "rgba(165, 165, 165, 0.6)",
+          "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "borderLeftWidth": 0,
           "borderRightWidth": 0,
           "borderTopWidth": 0,
@@ -120,7 +120,7 @@ exports[`The ActionListFeatures component should render 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -233,7 +233,7 @@ exports[`The ActionListFeatures component should render 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -346,7 +346,7 @@ exports[`The ActionListFeatures component should render 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -459,7 +459,7 @@ exports[`The ActionListFeatures component should render 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -512,13 +512,13 @@ exports[`The ActionListFeatures component should render a button for onPressActi
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -543,7 +543,7 @@ exports[`The ActionListFeatures component should render a button for onPressActi
         Object {
           "backgroundColor": "#FFFFFF",
           "borderBottomWidth": 0,
-          "borderColor": "rgba(165, 165, 165, 0.6)",
+          "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "borderLeftWidth": 0,
           "borderRightWidth": 0,
           "borderTopWidth": 0,
@@ -624,7 +624,7 @@ exports[`The ActionListFeatures component should render a button for onPressActi
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -737,7 +737,7 @@ exports[`The ActionListFeatures component should render a button for onPressActi
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -850,7 +850,7 @@ exports[`The ActionListFeatures component should render a button for onPressActi
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -963,7 +963,7 @@ exports[`The ActionListFeatures component should render a button for onPressActi
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1082,13 +1082,13 @@ exports[`The ActionListFeatures component should render a loading state for isLo
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -1138,7 +1138,7 @@ exports[`The ActionListFeatures component should render a loading state for isLo
         Object {
           "backgroundColor": "#FFFFFF",
           "borderBottomWidth": 0,
-          "borderColor": "rgba(165, 165, 165, 0.6)",
+          "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "borderLeftWidth": 0,
           "borderRightWidth": 0,
           "borderTopWidth": 0,
@@ -1219,7 +1219,7 @@ exports[`The ActionListFeatures component should render a loading state for isLo
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1315,7 +1315,7 @@ exports[`The ActionListFeatures component should render a loading state for isLo
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1411,7 +1411,7 @@ exports[`The ActionListFeatures component should render a loading state for isLo
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1507,7 +1507,7 @@ exports[`The ActionListFeatures component should render a loading state for isLo
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1543,13 +1543,13 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -1587,7 +1587,7 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderBottomWidth": 0,
-          "borderColor": "rgba(165, 165, 165, 0.6)",
+          "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "borderLeftWidth": 0,
           "borderRightWidth": 0,
           "borderTopWidth": 0,
@@ -1668,7 +1668,7 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1781,7 +1781,7 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -1894,7 +1894,7 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -2007,7 +2007,7 @@ exports[`The ActionListFeatures component should render with a subtitle 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -2060,13 +2060,13 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
       "borderRadius": 16,
       "marginHorizontal": 16,
       "marginVertical": 12,
-      "shadowColor": "rgba(165, 165, 165, 0.6)",
+      "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
       "shadowOffset": Object {
-        "height": 1,
+        "height": 2,
         "width": 0,
       },
       "shadowOpacity": 1,
-      "shadowRadius": 6,
+      "shadowRadius": 8,
     }
   }
 >
@@ -2105,7 +2105,7 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
         Object {
           "backgroundColor": "#FFFFFF",
           "borderBottomWidth": 0,
-          "borderColor": "rgba(165, 165, 165, 0.6)",
+          "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
           "borderLeftWidth": 0,
           "borderRightWidth": 0,
           "borderTopWidth": 0,
@@ -2186,7 +2186,7 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -2299,7 +2299,7 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -2412,7 +2412,7 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
@@ -2525,7 +2525,7 @@ exports[`The ActionListFeatures component should render with a title 1`] = `
             style={
               Object {
                 "borderBottomWidth": 0.5,
-                "borderColor": "rgba(165, 165, 165, 0.6)",
+                "borderColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "flex": 1,
                 "height": 68,
                 "justifyContent": "center",
