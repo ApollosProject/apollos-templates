@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Query } from 'react-apollo';
-import { Image } from 'react-native';
+import { Image, ScrollView } from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
@@ -44,39 +44,10 @@ class Home extends PureComponent {
     return (
       <BackgroundView>
         <SafeAreaView>
-          <Query
-            query={GET_USER_FEED}
-            variables={{
-              first: 10,
-              after: null,
-            }}
-            fetchPolicy="cache-and-network"
-          >
-            {({ loading, error, data, refetch, fetchMore, variables }) => (
-              <FeedView
-                ListItemComponent={ContentCardConnected}
-                content={get(data, 'userFeed.edges', []).map(
-                  (edge) => edge.node
-                )}
-                fetchMore={fetchMoreResolver({
-                  collectionName: 'userFeed',
-                  fetchMore,
-                  variables,
-                  data,
-                })}
-                isLoading={loading}
-                error={error}
-                refetch={refetch}
-                ListHeaderComponent={
-                  <>
-                    <LogoTitle source={require('./wordmark.png')} />
-                    <Features navigation={this.props.navigation} />
-                  </>
-                }
-                onPressItem={this.handleOnPress}
-              />
-            )}
-          </Query>
+          <ScrollView>
+            <LogoTitle source={require('./wordmark.png')} />
+            <Features navigation={this.props.navigation} />
+          </ScrollView>
         </SafeAreaView>
       </BackgroundView>
     );
