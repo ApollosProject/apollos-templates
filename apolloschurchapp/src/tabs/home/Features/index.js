@@ -3,10 +3,12 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 // import PropTypes from 'prop-types';
 
-import ActionListFeature from './ActionListFeature';
-import CampaignItemListFeature from './CampaignItemListFeature';
-import HorizontalCardListFeature from './HorizontalCardListFeature';
-import VerticalCardListFeature from './VerticalCardListFeature';
+import {
+  ActionListFeature,
+  CampaignItemListFeature,
+  HorizontalCardListFeature,
+  VerticalCardListFeature,
+} from '@apollosproject/ui-connected';
 
 import GET_FEED_FEATURES from './getFeedFeatures';
 
