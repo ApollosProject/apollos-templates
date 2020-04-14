@@ -55,12 +55,6 @@ class Home extends PureComponent {
     }
   };
 
-  // const handleOnPressCardActionButton = ({ id, navigation, title }) =>
-  //   navigation.navigate('ContentFeed', {
-  //     itemId: id,
-  //     itemTitle: title,
-  //   });
-
   render() {
     return (
       <BackgroundView>
@@ -93,7 +87,6 @@ class Home extends PureComponent {
                     <LogoTitle source={require('./wordmark.png')} />
                     <FeaturesFeedConnected
                       onPressActionItem={this.handleOnPressActionItem}
-                      // onPressCardActionButton={this.handleOnPressCardActionButton}
                     />
                   </>
                 }
