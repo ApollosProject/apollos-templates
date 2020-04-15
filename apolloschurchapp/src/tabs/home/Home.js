@@ -7,11 +7,11 @@ import PropTypes from 'prop-types';
 
 import {
   ContentCardConnected,
+  FeaturesFeedConnected,
   fetchMoreResolver,
 } from '@apollosproject/ui-connected';
 import { styled, FeedView, BackgroundView } from '@apollosproject/ui-kit';
 
-import Features from './Features';
 import GET_USER_FEED from './getUserFeed';
 
 const LogoTitle = styled(({ theme }) => ({
@@ -39,6 +39,21 @@ class Home extends PureComponent {
       itemId: item.id,
       transitionKey: item.transitionKey,
     });
+
+  handleOnPressActionItem = ({ action, relatedNode }) => {
+    if (action === 'READ_CONTENT') {
+      this.props.navigation.navigate('ContentSingle', {
+        itemId: relatedNode.id,
+        transitionKey: 2,
+      });
+    }
+    if (action === 'READ_EVENT') {
+      this.props.navigation.navigate('Event', {
+        eventId: relatedNode.id,
+        transitionKey: 2,
+      });
+    }
+  };
 
   render() {
     return (
@@ -70,7 +85,9 @@ class Home extends PureComponent {
                 ListHeaderComponent={
                   <>
                     <LogoTitle source={require('./wordmark.png')} />
-                    <Features navigation={this.props.navigation} />
+                    <FeaturesFeedConnected
+                      onPressActionItem={this.handleOnPressActionItem}
+                    />
                   </>
                 }
                 onPressItem={this.handleOnPress}

@@ -50,14 +50,9 @@ exports[`User Home Feed Query should return correct query results 1`] = `
               }
             }
           />
-          <Memo(Features)
-            navigation={
-              Object {
-                "getParam": [MockFunction],
-                "navigate": [MockFunction],
-                "setParams": [MockFunction],
-              }
-            }
+          <Memo(FeaturesFeedConnected)
+            Component={[Function]}
+            onPressActionItem={[Function]}
           />
         </React.Fragment>
       }
