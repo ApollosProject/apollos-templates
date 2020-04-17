@@ -1,18 +1,10 @@
 import React, { PureComponent } from 'react';
-import { Query } from 'react-apollo';
 import { Image } from 'react-native';
 import SafeAreaView from 'react-native-safe-area-view';
-import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import {
-  ContentCardConnected,
-  FeaturesFeedConnected,
-  fetchMoreResolver,
-} from '@apollosproject/ui-connected';
-import { styled, FeedView, BackgroundView } from '@apollosproject/ui-kit';
-
-import GET_USER_FEED from './getUserFeed';
+import { styled, BackgroundView } from '@apollosproject/ui-kit';
+import { FeaturesFeedConnected } from '@apollosproject/ui-connected';
 
 const LogoTitle = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
@@ -59,41 +51,12 @@ class Home extends PureComponent {
     return (
       <BackgroundView>
         <SafeAreaView>
-          <Query
-            query={GET_USER_FEED}
-            variables={{
-              first: 10,
-              after: null,
-            }}
-            fetchPolicy="cache-and-network"
-          >
-            {({ loading, error, data, refetch, fetchMore, variables }) => (
-              <FeedView
-                ListItemComponent={ContentCardConnected}
-                content={get(data, 'userFeed.edges', []).map(
-                  (edge) => edge.node
-                )}
-                fetchMore={fetchMoreResolver({
-                  collectionName: 'userFeed',
-                  fetchMore,
-                  variables,
-                  data,
-                })}
-                isLoading={loading}
-                error={error}
-                refetch={refetch}
-                ListHeaderComponent={
-                  <>
-                    <LogoTitle source={require('./wordmark.png')} />
-                    <FeaturesFeedConnected
-                      onPressActionItem={this.handleOnPressActionItem}
-                    />
-                  </>
-                }
-                onPressItem={this.handleOnPress}
-              />
-            )}
-          </Query>
+          <FeaturesFeedConnected
+            onPressActionItem={this.handleOnPressActionItem}
+            ListHeaderComponent={
+              <LogoTitle source={require('./wordmark.png')} />
+            }
+          />
         </SafeAreaView>
       </BackgroundView>
     );
