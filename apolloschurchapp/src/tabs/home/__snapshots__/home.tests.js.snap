@@ -39,6 +39,153 @@ exports[`User Home Feed Query should return correct query results 1`] = `
         "paddingTop": 20,
       }
     }
-  />
+  >
+    <RCTScrollView
+      ListHeaderComponent={
+        <mapProps(getContext(mapProps(withPropsOnChange(mapProps(Image)))))
+          source={
+            Object {
+              "testUri": "../../../src/tabs/home/wordmark.png",
+            }
+          }
+        />
+      }
+      data={
+        Array [
+          Object {
+            "id": "fakeId0",
+            "isLoading": true,
+          },
+          Object {
+            "id": "fakeId1",
+            "isLoading": true,
+          },
+          Object {
+            "id": "fakeId2",
+            "isLoading": true,
+          },
+          Object {
+            "id": "fakeId3",
+            "isLoading": true,
+          },
+          Object {
+            "id": "fakeId4",
+            "isLoading": true,
+          },
+          Object {
+            "id": "fakeId5",
+            "isLoading": true,
+          },
+          Object {
+            "id": "fakeId6",
+            "isLoading": true,
+          },
+          Object {
+            "id": "fakeId7",
+            "isLoading": true,
+          },
+          Object {
+            "id": "fakeId8",
+            "isLoading": true,
+          },
+          Object {
+            "id": "fakeId9",
+            "isLoading": true,
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      loadingStateObject={
+        Object {
+          "isLoading": true,
+        }
+      }
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onContentSizeChange={[Function]}
+      onEndReached={[Function]}
+      onEndReachedThreshold={0.7}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      refreshing={true}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={21}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+        >
+          <Image
+            source={
+              Object {
+                "testUri": "../../../src/tabs/home/wordmark.png",
+              }
+            }
+            style={
+              Object {
+                "alignSelf": "center",
+                "height": 16,
+                "margin": 16,
+                "resizeMode": "contain",
+              }
+            }
+          />
+        </View>
+        <View
+          onLayout={[Function]}
+          style={null}
+        />
+        <View
+          onLayout={[Function]}
+          style={null}
+        />
+        <View
+          onLayout={[Function]}
+          style={null}
+        />
+        <View
+          onLayout={[Function]}
+          style={null}
+        />
+        <View
+          onLayout={[Function]}
+          style={null}
+        />
+        <View
+          onLayout={[Function]}
+          style={null}
+        />
+        <View
+          onLayout={[Function]}
+          style={null}
+        />
+        <View
+          onLayout={[Function]}
+          style={null}
+        />
+        <View
+          onLayout={[Function]}
+          style={null}
+        />
+        <View
+          onLayout={[Function]}
+          style={null}
+        />
+      </View>
+    </RCTScrollView>
+  </View>
 </BVLinearGradient>
 `;
