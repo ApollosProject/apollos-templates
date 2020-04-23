@@ -6,6 +6,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
   style={
     Array [
       Object {
+        "backgroundColor": "#FFFFFF",
         "bottom": 0,
         "left": 0,
         "position": "absolute",
@@ -180,7 +181,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                 hasError={false}
                 style={
                   Object {
-                    "backgroundColor": "#00676D",
+                    "backgroundColor": "#17B582",
                     "bottom": 0,
                     "height": 0.5,
                   }
@@ -337,7 +338,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                 hasError={false}
                 style={
                   Object {
-                    "backgroundColor": "#00676D",
+                    "backgroundColor": "#17B582",
                     "bottom": 0,
                     "height": 0.5,
                   }
@@ -497,7 +498,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                 hasError={false}
                 style={
                   Object {
-                    "backgroundColor": "#00676D",
+                    "backgroundColor": "#17B582",
                     "bottom": 0,
                     "height": 0.5,
                   }

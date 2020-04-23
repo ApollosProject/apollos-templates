@@ -22,7 +22,7 @@ import UserWebBrowser from './user-web-browser';
 import Onboarding from './ui/Onboarding';
 
 const AppStatusBar = withTheme(({ theme }) => ({
-  barStyle: 'dark-content',
+  barStyle: theme.barStyle,
   backgroundColor: theme.colors.paper,
 }))(StatusBar);
 
@@ -64,7 +64,7 @@ const AppContainer = createAppContainer(AppNavigator);
 const App = () => (
   <Providers>
     <BackgroundView>
-      <AppStatusBar barStyle="dark-content" />
+      <AppStatusBar />
       <AppContainer
         ref={(navigatorRef) => {
           NavigationService.setTopLevelNavigator(navigatorRef);

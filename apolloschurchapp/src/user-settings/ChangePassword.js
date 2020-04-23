@@ -28,6 +28,11 @@ const Footer = styled({
   justifyContent: 'flex-end',
 })(SafeAreaView);
 
+const StyledKeyboardAvoidingView = styled(({ theme }) => ({
+  ...StyleSheet.absoluteFill,
+  backgroundColor: theme.colors.background.paper,
+}))(KeyboardAvoidingView);
+
 class ChangePassword extends PureComponent {
   static navigationOptions = ({ navigation }) => ({
     title: 'Change Password',
@@ -37,6 +42,12 @@ class ChangePassword extends PureComponent {
         <ButtonLink onPress={() => navigation.goBack()}>Cancel</ButtonLink>
       </PaddedView>
     ),
+    headerStyle: {
+      backgroundColor: navigation.getParam('backgroundColor', []),
+    },
+    headerTitleStyle: {
+      color: navigation.getParam('headerTitleColor', []),
+    },
   });
 
   static propTypes = {
@@ -48,9 +59,8 @@ class ChangePassword extends PureComponent {
   };
 
   renderForm = (props) => (
-    <KeyboardAvoidingView
+    <StyledKeyboardAvoidingView
       behavior={'padding'}
-      style={StyleSheet.absoluteFill}
       keyboardVerticalOffset={
         Header.HEIGHT +
         (Platform.OS === 'android' ? StatusBar.currentHeight : 0)
@@ -88,7 +98,7 @@ class ChangePassword extends PureComponent {
           </PaddedView>
         </Footer>
       </FlexedView>
-    </KeyboardAvoidingView>
+    </StyledKeyboardAvoidingView>
   );
 
   render() {

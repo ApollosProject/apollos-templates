@@ -6,9 +6,9 @@ export default gql`
     node(id: $itemId) {
       __typename
       ... on ContentItem {
-        ...contentItemFragment
+        ...contentCardFragment
       }
     }
   }
-  ${ApollosConfig.FRAGMENTS.CONTENT_ITEM_FRAGMENT}
+  ${ApollosConfig.FRAGMENTS.CONTENT_CARD_FRAGMENT}
 `;

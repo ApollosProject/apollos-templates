@@ -106,6 +106,18 @@ input CampusLocationInput {
   longitude: Float
 }
 
+type CardListItem {
+  id: ID!
+  hasAction: Boolean
+  actionIcon: String
+  labelText: String
+  summary: String
+  coverImage: ImageMedia
+  title(hyphenated: Boolean): String
+  relatedNode: Node
+  action: ACTION_FEATURE_ACTION
+}
+
 """A rgb color string"""
 scalar Color
 
@@ -226,6 +238,14 @@ enum GROUP_TYPE {
   Serving
   Community
   Family
+}
+
+type HorizontalCardListFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  title: String
+  subtitle: String
+  cards: [CardListItem]
 }
 
 type ImageMedia implements Media {
@@ -533,6 +553,15 @@ enum USER_AUTH_STATUS {
 enum VERSION {
   WEB
   KJV
+}
+
+type VerticalCardListFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  title: String
+  subtitle: String
+  isFeatured: Boolean
+  cards: [CardListItem]
 }
 
 type VideoMedia implements Media {
