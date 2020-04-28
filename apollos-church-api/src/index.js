@@ -14,4 +14,3 @@ if (!PORT && process.env.NODE_ENV !== 'test')
 server.listen({ port: PORT || 4000 }, () => {
   console.log(`🚀 Server ready at http://0.0.0.0:${PORT || 4000}`);
 });
-
