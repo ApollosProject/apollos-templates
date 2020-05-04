@@ -252,7 +252,6 @@ exports[`The Discover tab component Should retrieve the Content Channel Feeds 1`
                     <TextInput
                       allowFontScaling={true}
                       cancelButtonOffset={1000}
-                      color="#303030"
                       editable={true}
                       isFocused={false}
                       onChangeText={[Function]}
@@ -264,6 +263,7 @@ exports[`The Discover tab component Should retrieve the Content Channel Feeds 1`
                       selectionColor="#17B582"
                       style={
                         Object {
+                          "color": "#303030",
                           "flexGrow": 1,
                           "fontFamily": "System",
                           "fontSize": 14,
