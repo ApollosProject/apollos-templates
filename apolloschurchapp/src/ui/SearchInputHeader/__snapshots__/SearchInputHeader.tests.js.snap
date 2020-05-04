@@ -170,7 +170,6 @@ exports[`The Onboarding LandingScreen component should be stylable 1`] = `
         <TextInput
           allowFontScaling={true}
           cancelButtonOffset={1000}
-          color="#303030"
           editable={true}
           isFocused={false}
           onChangeText={[Function]}
@@ -182,6 +181,7 @@ exports[`The Onboarding LandingScreen component should be stylable 1`] = `
           selectionColor="#17B582"
           style={
             Object {
+              "color": "#303030",
               "flexGrow": 1,
               "fontFamily": "System",
               "fontSize": 14,
@@ -569,7 +569,6 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
         <TextInput
           allowFontScaling={true}
           cancelButtonOffset={1000}
-          color="#303030"
           editable={true}
           isFocused={false}
           onChangeText={[Function]}
@@ -581,6 +580,7 @@ exports[`The Onboarding LandingScreen component should render 1`] = `
           selectionColor="#17B582"
           style={
             Object {
+              "color": "#303030",
               "flexGrow": 1,
               "fontFamily": "System",
               "fontSize": 14,
@@ -968,7 +968,6 @@ exports[`The Onboarding LandingScreen component should render pass props to Sear
         <TextInput
           allowFontScaling={true}
           cancelButtonOffset={1000}
-          color="#303030"
           editable={true}
           isFocused={false}
           onChangeText={[Function]}
@@ -980,6 +979,7 @@ exports[`The Onboarding LandingScreen component should render pass props to Sear
           selectionColor="#17B582"
           style={
             Object {
+              "color": "#303030",
               "flexGrow": 1,
               "fontFamily": "System",
               "fontSize": 14,
