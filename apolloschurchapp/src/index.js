@@ -23,7 +23,7 @@ import Onboarding from './ui/Onboarding';
 
 const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: theme.barStyle,
-  backgroundColor: theme.colors.paper,
+  backgroundColor: theme.colors.background.paper,
 }))(StatusBar);
 
 const ProtectedRouteWithSplashScreen = (props) => {
