@@ -61,6 +61,7 @@
     "@apollosproject/ui-notifications": "1.4.0-beta.1",
     "@apollosproject/ui-onboarding": "1.4.0-beta.1",
     "@apollosproject/ui-passes": "1.4.0-beta.1",
+    "@apollosproject/ui-prayer": "1.4.0-beta.1",
     "@apollosproject/ui-scripture": "1.4.0-beta.1",
     "@apollosproject/ui-storybook": "1.4.0-beta.1",
     "@react-native-community/async-storage": "^1.5.1",
