@@ -584,6 +584,14 @@ type VideoMediaSource implements MediaSource {
   uri: String
 }
 
+type WebviewFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  linkText: String
+  title: String
+  url: String
+}
+
 type WeekendContentItem implements ContentItem & Node {
   id: ID!
   title(hyphenated: Boolean): String
