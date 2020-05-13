@@ -13,6 +13,7 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		19B25B91EDEC230368A68056 /* libPods-apolloschurchapp-apolloschurchappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F51046D0AC3E5F3BDF183FE /* libPods-apolloschurchapp-apolloschurchappTests.a */; };
 		1C48DCDE11AC47C48E918489 /* Inter-UI-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC74A378C1CC40E4B6192D7F /* Inter-UI-Medium.otf */; };
 		25B9E67E3B46D33F45473A84 /* libPods-apolloschurchapp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F64CCA987A0419EB9C02236 /* libPods-apolloschurchapp-tvOSTests.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -33,7 +34,6 @@
 		8EA9BDE542E09F685A47D9BE /* libPods-apolloschurchapp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B9762ACA099D28C28DBB31 /* libPods-apolloschurchapp-tvOS.a */; };
 		90743C40BF544F10A810C43C /* DroidSerif-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ADC3D2DB245545ADB1CAB3FE /* DroidSerif-Italic.ttf */; };
 		93A2B0A9328A46A4B7DD5EFA /* DroidSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E007B33EDD74B82AEF02C24 /* DroidSerif-Regular.ttf */; };
-		A415698B9815C7305EDB7AA7 /* libPods-apolloschurchappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 560CBCD50AE7D282715D134E /* libPods-apolloschurchappTests.a */; };
 		AB3BD177B8A14193A5EEDDF8 /* Inter-UI-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A613256118404CB691DE2C8E /* Inter-UI-Regular.otf */; };
 		B02F194A3F6A4FE29AC799B4 /* DroidSerif-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A93F9D112A034626A9421759 /* DroidSerif-BoldItalic.ttf */; };
 		E875558F3FB8FA2024EF7DC2 /* libPods-apolloschurchapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB6B5B7B6A0D1ECB68CF0DD /* libPods-apolloschurchapp.a */; };
@@ -77,14 +77,16 @@
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F5410F239E9477B9C2E86BD /* Inter-UI-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-BoldItalic.otf"; path = "../assets/fonts/Inter-UI-BoldItalic.otf"; sourceTree = "<group>"; };
 		38B9762ACA099D28C28DBB31 /* libPods-apolloschurchapp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-apolloschurchapp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		442EA8BF4B43A30482DE3B5A /* Pods-apolloschurchapp-apolloschurchappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp-apolloschurchappTests.debug.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp-apolloschurchappTests/Pods-apolloschurchapp-apolloschurchappTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4E007B33EDD74B82AEF02C24 /* DroidSerif-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DroidSerif-Regular.ttf"; path = "../assets/fonts/DroidSerif-Regular.ttf"; sourceTree = "<group>"; };
 		4F64CCA987A0419EB9C02236 /* libPods-apolloschurchapp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-apolloschurchapp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54F271B8EB67A4997A2C7D96 /* Pods-apolloschurchapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp.debug.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp/Pods-apolloschurchapp.debug.xcconfig"; sourceTree = "<group>"; };
-		560CBCD50AE7D282715D134E /* libPods-apolloschurchappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-apolloschurchappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A5A2BC2998547F4816B82E4 /* Inter-UI-BlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-BlackItalic.otf"; path = "../assets/fonts/Inter-UI-BlackItalic.otf"; sourceTree = "<group>"; };
 		63F6EE53A9B44B4388B5F1C2 /* Inter-UI-Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Italic.otf"; path = "../assets/fonts/Inter-UI-Italic.otf"; sourceTree = "<group>"; };
 		745C835CA2F1E1EC2425152A /* Pods-apolloschurchapp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp-tvOS/Pods-apolloschurchapp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		82AAE52D24187BB500D1EEC7 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = apolloschurchapp/BootSplash.storyboard; sourceTree = "<group>"; };
+		8F51046D0AC3E5F3BDF183FE /* libPods-apolloschurchapp-apolloschurchappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-apolloschurchapp-apolloschurchappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		957C4FDD28DD3006A9F47F47 /* Pods-apolloschurchapp-apolloschurchappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp-apolloschurchappTests.release.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp-apolloschurchappTests/Pods-apolloschurchapp-apolloschurchappTests.release.xcconfig"; sourceTree = "<group>"; };
 		A460FD7884FD4574A818005A /* Inter-UI-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-MediumItalic.otf"; path = "../assets/fonts/Inter-UI-MediumItalic.otf"; sourceTree = "<group>"; };
 		A613256118404CB691DE2C8E /* Inter-UI-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Regular.otf"; path = "../assets/fonts/Inter-UI-Regular.otf"; sourceTree = "<group>"; };
 		A93F9D112A034626A9421759 /* DroidSerif-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DroidSerif-BoldItalic.ttf"; path = "../assets/fonts/DroidSerif-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -108,7 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A415698B9815C7305EDB7AA7 /* libPods-apolloschurchappTests.a in Frameworks */,
+				19B25B91EDEC230368A68056 /* libPods-apolloschurchapp-apolloschurchappTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +184,7 @@
 				DDB6B5B7B6A0D1ECB68CF0DD /* libPods-apolloschurchapp.a */,
 				38B9762ACA099D28C28DBB31 /* libPods-apolloschurchapp-tvOS.a */,
 				4F64CCA987A0419EB9C02236 /* libPods-apolloschurchapp-tvOSTests.a */,
-				560CBCD50AE7D282715D134E /* libPods-apolloschurchappTests.a */,
+				8F51046D0AC3E5F3BDF183FE /* libPods-apolloschurchapp-apolloschurchappTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -217,6 +219,8 @@
 				DA9745795726553C6FA9E7A8 /* Pods-apolloschurchapp-tvOSTests.release.xcconfig */,
 				AB44FC16DED929081698EDFD /* Pods-apolloschurchappTests.debug.xcconfig */,
 				E98AC9782C338F13632EF710 /* Pods-apolloschurchappTests.release.xcconfig */,
+				442EA8BF4B43A30482DE3B5A /* Pods-apolloschurchapp-apolloschurchappTests.debug.xcconfig */,
+				957C4FDD28DD3006A9F47F47 /* Pods-apolloschurchapp-apolloschurchappTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -474,7 +478,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-apolloschurchappTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-apolloschurchapp-apolloschurchappTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -616,7 +620,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB44FC16DED929081698EDFD /* Pods-apolloschurchappTests.debug.xcconfig */;
+			baseConfigurationReference = 442EA8BF4B43A30482DE3B5A /* Pods-apolloschurchapp-apolloschurchappTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -643,7 +647,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E98AC9782C338F13632EF710 /* Pods-apolloschurchappTests.release.xcconfig */;
+			baseConfigurationReference = 957C4FDD28DD3006A9F47F47 /* Pods-apolloschurchapp-apolloschurchappTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
