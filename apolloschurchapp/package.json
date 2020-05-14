@@ -103,7 +103,7 @@
     "react-native-permissions": "^2.0.5",
     "react-native-safari-view": "2.1.0",
     "react-native-safe-area-context": "^0.3.6",
-    "react-native-safe-area-view": "0.13.1",
+    "react-native-safe-area-view": "0.14.9",
     "react-native-screens": "^1.0.0-alpha.23",
     "react-native-svg": "^9.4.0",
     "react-native-video": "^5.0.0",
