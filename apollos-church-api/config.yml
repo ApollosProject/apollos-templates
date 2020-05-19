@@ -143,6 +143,10 @@ ROCK_MAPPINGS:
   MOBILE_DEVICE_TYPE_ID: 671
 
 HOME_FEATURES:
+  - algorithms: [DAILY_PRAYER]
+    type: PrayerList
+    title: Daily Prayer
+    subtitle: What will you pray for?!
   - algorithms: [CAMPAIGN_ITEMS]
     type: VerticalCardList
     isFeatured: true
