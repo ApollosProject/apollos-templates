@@ -135,6 +135,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-plugin-react-native": "^3.2.1",
+    "eslint-plugin-react-hooks": "^4.0.2",
     "get-dev-paths": "^0.1.0",
     "graphql-import": "^0.7.1",
     "jest": "^25.1.0",
