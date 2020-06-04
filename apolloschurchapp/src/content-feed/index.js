@@ -21,7 +21,11 @@ class ContentFeed extends PureComponent {
     const itemTitle = navigation.getParam('itemTitle', 'Content Channel');
     return {
       title: itemTitle,
-      headerStyle: { backgroundColor: screenProps.headerBackgroundColor },
+      headerStyle: {
+        backgroundColor: screenProps.headerBackgroundColor,
+        borderBottomWidth: 0,
+        elevation: 0,
+      },
     };
   };
 

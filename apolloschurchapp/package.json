@@ -65,6 +65,7 @@
     "@apollosproject/ui-storybook": "1.4.1",
     "@apollosproject/ui-prayer": "1.4.1",
     "@react-native-community/async-storage": "^1.5.1",
+    "@react-native-community/datetimepicker": "^2.4.0",
     "@react-native-community/geolocation": "^2.0.2",
     "@react-native-community/datetimepicker": "^2.4.0",
     "apollo-cache-inmemory": "1.5.1",
