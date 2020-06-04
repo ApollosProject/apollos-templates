@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-unused-styles */
 import React from 'react';
 import { Platform, StyleSheet, View } from 'react-native';
 
