@@ -1,9 +1,9 @@
 import React from 'react';
+import { NavigationService } from '@apollosproject/ui-kit';
 import { renderWithApolloData } from '../../utils/testUtils';
 import Providers from '../../Providers';
 import BrowserWithUserCookie, { WITH_USER_COOKIE } from '../index';
 import { OpenUserWebView } from '../Provider';
-import NavigationService from '../../NavigationService';
 
 const mocks = [
   {
