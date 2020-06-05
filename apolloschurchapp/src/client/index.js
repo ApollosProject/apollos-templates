@@ -7,8 +7,8 @@ import { getVersion, getApplicationName } from 'react-native-device-info';
 
 import { authLink, buildErrorLink } from '@apollosproject/ui-auth';
 
+import { NavigationService } from '@apollosproject/ui-kit';
 import { resolvers, schema, defaults } from '../store';
-import NavigationService from '../NavigationService';
 
 import httpLink from './httpLink';
 import cache, { ensureCacheHydration } from './cache';

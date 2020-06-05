@@ -9,6 +9,7 @@ import {
   GradientOverlayImage,
   styled,
   BackgroundView,
+  NavigationService,
 } from '@apollosproject/ui-kit';
 import {
   AskNotificationsConnected,
@@ -18,7 +19,6 @@ import {
   LocationFinderConnected,
   OnboardingSwiper,
 } from '@apollosproject/ui-onboarding';
-import { resetAction } from '../../NavigationService';
 
 const FullscreenBackgroundView = styled({
   position: 'absolute',
@@ -81,7 +81,7 @@ function Onboarding({ navigation }) {
               }}
               onPressPrimary={() =>
                 navigation.dispatch(
-                  resetAction({
+                  NavigationService.resetAction({
                     navigatorName: 'Tabs',
                     routeName: 'Home',
                   })
