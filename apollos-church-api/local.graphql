@@ -240,6 +240,15 @@ enum GROUP_TYPE {
   Family
 }
 
+type HeroListFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  title: String
+  subtitle: String
+  actions: [ActionListAction]
+  heroCard: CardListItem
+}
+
 type HorizontalCardListFeature implements Feature & Node {
   id: ID!
   order: Int
@@ -573,6 +582,14 @@ type VideoMedia implements Media {
 
 type VideoMediaSource implements MediaSource {
   uri: String
+}
+
+type WebviewFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  linkText: String
+  title: String
+  url: String
 }
 
 type WeekendContentItem implements ContentItem & Node {
