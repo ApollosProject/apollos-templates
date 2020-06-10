@@ -28,7 +28,7 @@ import {
   BinaryFiles,
   Feature,
   Event,
-  Prayer,
+  PrayerRequest,
 } from '@apollosproject/data-connector-rock';
 import * as Theme from './theme';
 
@@ -64,7 +64,7 @@ const data = {
   Feature,
   Event,
   Cache,
-  Prayer,
+  PrayerRequest,
 };
 
 const {
