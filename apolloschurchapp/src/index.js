@@ -13,6 +13,7 @@ import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import { MediaPlayer } from '@apollosproject/ui-media-player';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
+import { PrayingExperienceConnected } from '@apollosproject/ui-prayer';
 
 import Providers from './Providers';
 import ContentSingle from './content-single';
@@ -54,6 +55,7 @@ const AppNavigator = createStackNavigator(
     UserWebBrowser,
     Onboarding,
     LandingScreen,
+    Prayer: PrayingExperienceConnected,
   },
   {
     initialRouteName: 'ProtectedRoute',
