@@ -23,6 +23,18 @@ ROCK:
   TIMEZONE: 'America/New_York'
   USE_PLUGIN: true
   SHOW_INACTIVE_CONTENT: ${ROCK_SHOW_INACTIVE_CONTENT}
+UNIVERSAL_LINKS:
+  # This should be your app's bundle ID, as found in your info.plist.
+  APPLE_APP_ID: org.reactjs.native.apolloschurchapp
+  # This should be your app's team ID, as found in Xcode
+  APPLE_TEAM_ID: 7TM8C6252Z
+  # Where should a user be redirected if they don't have your app installed?
+  APP_STORE_LINK: https://apollos.app/ios
+  PLAY_STORE_LINK: https://apollos.app/android
+  # Your app Id, as found in your app/build.gradle.
+  GOOGLE_APP_ID: com.apolloschurch.app
+  # https://docs.getsocial.im/knowledge-base/android-signing-key-sha256/
+  GOOGLE_KEYSTORE_SHA256: EC:6E:B5:5A:62:53:1E:53:FF:C4:BA:A7:CB:29:77:57:71:9D:65:2F:AF:69:41:A3:AD:2B:C4:55:A1:7A:07:03
 ONE_SIGNAL:
   APP_ID: b6e75a77-003f-4466-95ca-82cc5cdc407b
   REST_KEY: ${ONE_SIGNAL_REST_KEY}
