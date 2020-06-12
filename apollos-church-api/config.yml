@@ -156,6 +156,7 @@ ROCK_MAPPINGS:
 
 HOME_FEATURES:
   - algorithms: [DAILY_PRAYER]
+    isCard: false
     type: PrayerList
     title: Daily Prayer
   - algorithms: [CAMPAIGN_ITEMS]
