@@ -3,6 +3,7 @@ directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITI
 enum ACTION_FEATURE_ACTION {
   READ_CONTENT
   READ_EVENT
+  OPEN_URL
 }
 
 type ActionListAction {
@@ -571,6 +572,11 @@ input UpdateProfileInput {
 
 """The `Upload` scalar type represents a file upload."""
 scalar Upload
+
+type Url implements Node {
+  url: String
+  id: ID!
+}
 
 enum USER_AUTH_STATUS {
   NONE
