@@ -68,7 +68,6 @@
     "@react-native-community/async-storage": "^1.5.1",
     "@react-native-community/datetimepicker": "^2.4.0",
     "@react-native-community/geolocation": "^2.0.2",
-    "@react-native-community/blur": "^3.6.0",
     "apollo-cache-inmemory": "1.5.1",
     "apollo-cache-persist": "0.1.1",
     "apollo-client": "2.6.8",
