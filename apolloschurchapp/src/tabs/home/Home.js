@@ -4,7 +4,10 @@ import SafeAreaView from 'react-native-safe-area-view';
 import PropTypes from 'prop-types';
 
 import { styled, BackgroundView } from '@apollosproject/ui-kit';
-import { FeaturesFeedConnected } from '@apollosproject/ui-connected';
+import {
+  FeaturesFeedConnected,
+  RockAuthedWebBrowser,
+} from '@apollosproject/ui-connected';
 
 const LogoTitle = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
@@ -26,13 +29,7 @@ class Home extends PureComponent {
     }),
   };
 
-  handleOnPress = (item) =>
-    this.props.navigation.navigate('ContentSingle', {
-      itemId: item.id,
-      transitionKey: item.transitionKey,
-    });
-
-  handleOnPressActionItem = ({ action, relatedNode }) => {
+  handleOnPress = ({ openUrl }) => ({ action, relatedNode }) => {
     if (action === 'READ_CONTENT') {
       this.props.navigation.navigate('ContentSingle', {
         itemId: relatedNode.id,
@@ -45,20 +42,27 @@ class Home extends PureComponent {
         transitionKey: 2,
       });
     }
+    if (action === 'OPEN_URL') {
+      openUrl(relatedNode.url);
+    }
   };
 
   render() {
     return (
-      <BackgroundView>
-        <SafeAreaView>
-          <FeaturesFeedConnected
-            onPressActionItem={this.handleOnPressActionItem}
-            ListHeaderComponent={
-              <LogoTitle source={require('./wordmark.png')} />
-            }
-          />
-        </SafeAreaView>
-      </BackgroundView>
+      <RockAuthedWebBrowser>
+        {(openUrl) => (
+          <BackgroundView>
+            <SafeAreaView>
+              <FeaturesFeedConnected
+                onPressActionItem={this.handleOnPress({ openUrl })}
+                ListHeaderComponent={
+                  <LogoTitle source={require('./wordmark.png')} />
+                }
+              />
+            </SafeAreaView>
+          </BackgroundView>
+        )}
+      </RockAuthedWebBrowser>
     );
   }
 }
