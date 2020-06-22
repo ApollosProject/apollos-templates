@@ -218,15 +218,12 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
     }
     vertical={false}
   >
-    <View
-      onLayout={[Function]}
-      pointerEvents="box-none"
-      style={
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+      forceInset={
         Object {
-          "paddingBottom": 0,
-          "paddingLeft": 0,
-          "paddingRight": 0,
-          "paddingTop": 0,
+          "bottom": "always",
+          "top": "never",
         }
       }
     >
@@ -403,7 +400,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
           </RNSVGSvgView>
         </View>
       </View>
-    </View>
+    </RCTSafeAreaView>
   </View>
 </BVLinearGradient>
 `;
