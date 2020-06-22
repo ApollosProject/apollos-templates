@@ -57,6 +57,11 @@ class ClientProvider extends PureComponent {
     client: PropTypes.shape({
       cache: PropTypes.shape({}),
     }),
+    children: PropTypes.oneOfType([
+      PropTypes.arrayOf(PropTypes.node),
+      PropTypes.node,
+      PropTypes.object, // covers Fragments
+    ]).isRequired,
   };
 
   static defaultProps = {
