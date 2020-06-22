@@ -156,8 +156,16 @@ ROCK_MAPPINGS:
 
 HOME_FEATURES:
   - algorithms: [CAMPAIGN_ITEMS]
-    type: VerticalCardList
+    type: HeroList
     isFeatured: true
+    primaryAction:
+      # Right now, you hardcode exactly what GraphQL should return.
+      # Long term, we hope to have a more sophisticated mechanism for driving this field
+      action: OPEN_URL
+      title: 'Read More'
+      relatedNode:
+        __typename: Url
+        url: 'https://wwww.apollos.io'
   - title: FOR YOU
     algorithms: [SERMON_CHILDREN, PERSONA_FEED]
     subtitle: Explore what God calls you to today
