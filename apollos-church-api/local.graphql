@@ -4,6 +4,7 @@ enum ACTION_FEATURE_ACTION {
   READ_CONTENT
   READ_EVENT
   OPEN_URL
+  OPEN_ROUTE
 }
 
 type ActionListAction {
@@ -221,6 +222,12 @@ interface Feature {
   order: Int
 }
 
+type FeatureAction {
+  relatedNode: Node
+  action: ACTION_FEATURE_ACTION
+  title: String
+}
+
 enum GENDER {
   Male
   Female
@@ -248,6 +255,7 @@ type HeroListFeature implements Feature & Node {
   subtitle: String
   actions: [ActionListAction]
   heroCard: CardListItem
+  primaryAction: FeatureAction
 }
 
 type HorizontalCardListFeature implements Feature & Node {
