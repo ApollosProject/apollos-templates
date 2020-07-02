@@ -5,9 +5,10 @@ import {
   KeyboardAvoidingView,
   StyleSheet,
   StatusBar,
+  SafeAreaView,
 } from 'react-native';
 import { Mutation } from 'react-apollo';
-import { SafeAreaView, Header } from 'react-navigation';
+import { Header } from 'react-navigation-stack';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 

@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
-import { ScrollView } from 'react-native';
-import { SafeAreaView } from 'react-navigation';
+import { ScrollView, SafeAreaView } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { HorizontalLikedContentFeedConnected } from '@apollosproject/ui-connected';

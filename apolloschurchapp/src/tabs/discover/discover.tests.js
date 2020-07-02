@@ -1,6 +1,7 @@
 import React from 'react';
 import { flatMap } from 'lodash';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
 import Providers from '../../Providers';
