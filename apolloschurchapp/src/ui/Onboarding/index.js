@@ -1,4 +1,5 @@
 import React from 'react';
+import { Query } from 'react-apollo';
 import {
   checkNotifications,
   openSettings,
@@ -9,7 +10,6 @@ import {
   GradientOverlayImage,
   styled,
   BackgroundView,
-  NavigationService,
 } from '@apollosproject/ui-kit';
 import {
   AskNotificationsConnected,
@@ -19,6 +19,8 @@ import {
   LocationFinderConnected,
   OnboardingSwiper,
 } from '@apollosproject/ui-onboarding';
+
+import { onboardingComplete, WITH_USER_ID } from './onboardingStatus';
 
 const FullscreenBackgroundView = styled({
   position: 'absolute',
@@ -65,35 +67,40 @@ function Onboarding({ navigation }) {
                 />
               }
             />
-            <AskNotificationsConnected
-              onRequestPushPermissions={(update) => {
-                checkNotifications().then((checkRes) => {
-                  if (checkRes.status === RESULTS.DENIED) {
-                    requestNotifications(['alert', 'badge', 'sound']).then(
-                      () => {
-                        update();
-                      }
-                    );
-                  } else {
-                    openSettings();
+            <Query query={WITH_USER_ID} fetchPolicy="network-only">
+              {({
+                data: { currentUser: { id } = { currentUser: { id: null } } },
+              }) => (
+                <AskNotificationsConnected
+                  description={
+                    'Get updates when people pray for you, and receive reminders and announcements from your Church family.'
                   }
-                });
-              }}
-              onPressPrimary={() =>
-                navigation.dispatch(
-                  NavigationService.resetAction({
-                    navigatorName: 'Tabs',
-                    routeName: 'Home',
-                  })
-                )
-              }
-              primaryNavText={'Finish'}
-              BackgroundComponent={
-                <StyledGradient
-                  source={'https://picsum.photos/640/640/?random'}
+                  onPressPrimary={() => {
+                    onboardingComplete({ userId: id });
+                    navigation.replace('Tabs');
+                  }}
+                  onRequestPushPermissions={(update) => {
+                    checkNotifications().then((checkRes) => {
+                      if (checkRes.status === RESULTS.DENIED) {
+                        requestNotifications(['alert', 'badge', 'sound']).then(
+                          () => {
+                            update();
+                          }
+                        );
+                      } else {
+                        openSettings();
+                      }
+                    });
+                  }}
+                  primaryNavText={'Finish'}
+                  BackgroundComponent={
+                    <StyledGradient
+                      source={'http://picsum.photos/640/640/?random'}
+                    />
+                  }
                 />
-              }
-            />
+              )}
+            </Query>
           </>
         )}
       </OnboardingSwiper>
