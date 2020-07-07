@@ -18,9 +18,9 @@ import {
   AboutYouConnected,
   LocationFinderConnected,
   OnboardingSwiper,
+  onboardingComplete,
+  WITH_USER_ID,
 } from '@apollosproject/ui-onboarding';
-
-import { onboardingComplete, WITH_USER_ID } from '@apollosproject/ui-onboarding/src/onboardingStatus';
 
 const FullscreenBackgroundView = styled({
   position: 'absolute',
