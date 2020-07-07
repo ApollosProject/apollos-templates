@@ -59,7 +59,7 @@ function Onboarding({ navigation }) {
             <LocationFinderConnected
               onPressPrimary={swipeForward}
               onNavigate={() => {
-                navigation.navigate('Location');
+                navigation.navigate('Location', { onFinished: swipeForward });
               }}
               BackgroundComponent={
                 <StyledGradient
@@ -73,7 +73,7 @@ function Onboarding({ navigation }) {
               }) => (
                 <AskNotificationsConnected
                   description={
-                    'Get updates when people pray for you, and receive reminders and announcements from your Church family.'
+                    'Get updates, reminders, and announcements from your Church.'
                   }
                   onPressPrimary={() => {
                     onboardingComplete({ userId: id });
