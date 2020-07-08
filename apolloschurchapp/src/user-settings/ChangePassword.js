@@ -5,10 +5,9 @@ import {
   KeyboardAvoidingView,
   StyleSheet,
   StatusBar,
-  SafeAreaView,
 } from 'react-native';
 import { Mutation } from 'react-apollo';
-import { Header } from 'react-navigation-stack';
+import { Header } from '@react-navigation/stack';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
@@ -21,6 +20,7 @@ import {
   styled,
 } from '@apollosproject/ui-kit';
 
+import { SafeAreaView } from 'react-native-safe-area-context';
 import GET_AUTH_TOKEN from '../store/getAuthToken';
 import CHANGE_PASSWORD from './passwordChange';
 

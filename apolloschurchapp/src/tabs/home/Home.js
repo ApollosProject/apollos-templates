@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import { Image } from 'react-native';
-import SafeAreaView from 'react-native-safe-area-view';
 import PropTypes from 'prop-types';
 
 import { styled, BackgroundView } from '@apollosproject/ui-kit';
@@ -8,6 +7,7 @@ import {
   FeaturesFeedConnected,
   RockAuthedWebBrowser,
 } from '@apollosproject/ui-connected';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const LogoTitle = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,

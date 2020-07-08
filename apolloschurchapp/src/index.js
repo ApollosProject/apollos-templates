@@ -1,8 +1,8 @@
 import hoistNonReactStatic from 'hoist-non-react-statics';
 import React from 'react';
 import { StatusBar } from 'react-native';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import RNBootSplash from 'react-native-bootsplash';
 
 import {
@@ -41,39 +41,38 @@ const EnhancedAuth = (props) => <Auth {...props} emailRequired />;
 // 😑
 hoistNonReactStatic(EnhancedAuth, Auth);
 
-const AppNavigator = createStackNavigator(
-  {
-    ProtectedRoute: ProtectedRouteWithSplashScreen,
-    Tabs,
-    ContentSingle,
-    Event,
-    Auth: EnhancedAuth,
-    PersonalDetails,
-    ChangePassword,
-    Location,
-    Passes,
-    UserWebBrowser,
-    Onboarding,
-    LandingScreen,
-  },
-  {
-    initialRouteName: 'ProtectedRoute',
-    mode: 'modal',
-    headerMode: 'screen',
-  }
-);
-
-const AppContainer = createAppContainer(AppNavigator);
+const { Navigator, Screen } = createStackNavigator();
 
 const App = () => (
   <Providers>
     <BackgroundView>
       <AppStatusBar />
-      <AppContainer
-        ref={(navigatorRef) => {
-          NavigationService.setTopLevelNavigator(navigatorRef);
-        }}
-      />
+      <NavigationContainer>
+        <Navigator
+          ref={(navigatorRef) => {
+            NavigationService.setTopLevelNavigator(navigatorRef);
+          }}
+          initialRouteName="ProtectedRoute"
+          mode="modal"
+          headerMode="screen"
+        >
+          <Screen
+            name="ProtectedRoute"
+            component={ProtectedRouteWithSplashScreen}
+          />
+          <Screen name="Tabs" component={Tabs} />
+          <Screen name="ContentSingle" component={ContentSingle} />
+          <Screen name="Event" component={Event} />
+          <Screen name="Auth" component={EnhancedAuth} />
+          <Screen name="PersonalDetails" component={PersonalDetails} />
+          <Screen name="ChangePassword" component={ChangePassword} />
+          <Screen name="Location" component={Location} />
+          <Screen name="Passes" component={Passes} />
+          <Screen name="UserWebBrowser" component={UserWebBrowser} />
+          <Screen name="Onboarding" component={Onboarding} />
+          <Screen name="LandingScreen" component={LandingScreen} />
+        </Navigator>
+      </NavigationContainer>
       <MediaPlayer />
     </BackgroundView>
   </Providers>

@@ -4,10 +4,9 @@ import {
   KeyboardAvoidingView,
   StyleSheet,
   StatusBar,
-  SafeAreaView,
   Platform,
 } from 'react-native';
-import { Header } from 'react-navigation-stack';
+import { Header } from '@react-navigation/stack';
 import { Query, Mutation } from 'react-apollo';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -21,6 +20,7 @@ import {
   styled,
 } from '@apollosproject/ui-kit';
 
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { GET_USER_PROFILE } from '../tabs/connect/UserAvatarHeader';
 import UPDATE_CURRENT_USER from './updateCurrentUser';
 
@@ -60,7 +60,7 @@ class PersonalDetails extends PureComponent {
   };
 
   renderForm = (props) => (
-    // have to add the offset to account for react-navigation header
+    // have to add the offset to account for @react-navigation/native header
     <StyledKeyboardAvoidingView
       behavior={'padding'}
       keyboardVerticalOffset={

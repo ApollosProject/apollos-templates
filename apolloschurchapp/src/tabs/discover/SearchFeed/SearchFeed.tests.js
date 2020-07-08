@@ -1,7 +1,7 @@
 import React from 'react';
 import { flatMap } from 'lodash';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import { NavigationProvider } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import renderer from 'react-test-renderer';
 
 import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
@@ -284,13 +284,19 @@ describe('The SearchFeed component', () => {
       })
     );
 
-    const SearchStack = createStackNavigator({
-      SearchFeed: (props) => <SearchFeed searchText={'Love'} {...props} />, // eslint-disable-line react/display-name
-    });
-    const SearchFeedWithNavigation = createAppContainer(SearchStack);
+    const SearchStack = createStackNavigator();
     const tree = await renderWithApolloData(
       <Providers mocks={[mockFeedData, ...mockSearchResultsCardData]}>
-        <SearchFeedWithNavigation searchText={'Love'} />
+        <NavigationProvider>
+          <SearchStack.Navigator>
+            <SearchStack.Screen
+              name="SearchFeed"
+              component={(props) => (
+                <SearchFeed searchText={'Love'} {...props} />
+              )}
+            />
+          </SearchStack.Navigator>
+        </NavigationProvider>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
@@ -323,30 +329,40 @@ describe('The SearchFeed component', () => {
       },
     ];
 
-    const SearchStack = createStackNavigator({
-      // eslint-disable-next-line react/display-name
-      SearchFeed: (props) => (
-        <SearchFeed searchText={'No results here'} {...props} />
-      ),
-    });
-
-    const SearchFeedWithNavigation = createAppContainer(SearchStack);
+    const SearchStack = createStackNavigator();
     const tree = await renderWithApolloData(
       <Providers
         mocks={[mockEmptyFeedData, ...mockEmptySearchResultsCardData]}
         cache={null}
       >
-        <SearchFeedWithNavigation searchText={'No results here'} />
+        <NavigationProvider>
+          <SearchStack.Navigator>
+            <SearchStack.Screen
+              name="SearchFeed"
+              component={(props) => (
+                <SearchFeed searchText={'No results here'} {...props} />
+              )}
+            />
+          </SearchStack.Navigator>
+        </NavigationProvider>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
   it('should render a loading state', () => {
-    const SearchStack = createStackNavigator({ SearchFeed });
-    const SearchFeedWithNavigation = createAppContainer(SearchStack);
+    const SearchStack = createStackNavigator();
     const tree = renderer.create(
       <Providers cache={null}>
-        <SearchFeedWithNavigation searchText={'Love'} />
+        <NavigationProvider>
+          <SearchStack.Navigator>
+            <SearchStack.Screen
+              name="SearchFeed"
+              component={(props) => (
+                <SearchFeed searchText={'No results here'} {...props} />
+              )}
+            />
+          </SearchStack.Navigator>
+        </NavigationProvider>
       </Providers>
     );
     expect(tree).toMatchSnapshot();

@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import './loadConfig';
 import { AppRegistry, YellowBox } from 'react-native';
 import ApollosConfig from '@apollosproject/config';

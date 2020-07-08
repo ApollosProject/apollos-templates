@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { SafeAreaView } from 'react-native';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
 
@@ -11,6 +10,7 @@ import {
   BackgroundView,
   styled,
 } from '@apollosproject/ui-kit';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import ContentTab from './ContentTab';
 import ScriptureTab from './ScriptureTab';
 

@@ -1,17 +1,14 @@
-import { createStackNavigator } from 'react-navigation-stack';
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import ContentSingle from './ContentSingle';
 
-const ContentSingleNavigator = createStackNavigator(
-  {
-    ContentSingle,
-  },
-  {
-    initialRouteName: 'ContentSingle',
-    headerMode: 'float',
-    headerTransitionPreset: 'fade-in-place',
-    navigationOptions: { header: null },
-  }
+const { Screen, Navigator } = createStackNavigator();
+
+const ContentSingleNavigator = (props) => (
+  <Navigator headerMode="none" {...props}>
+    <Screen name="ContentSingle" component={ContentSingle} />
+  </Navigator>
 );
 
 export default ContentSingleNavigator;

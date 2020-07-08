@@ -1,7 +1,7 @@
 import React from 'react';
 import { flatMap } from 'lodash';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import { NavigationProvider } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import renderer from 'react-test-renderer';
 
 import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
@@ -563,21 +563,33 @@ describe('The DiscoverFeed component', () => {
         }))
     );
 
-    const DiscoverStack = createStackNavigator({ DiscoverFeed });
-    const DiscoverFeedWithNavigation = createAppContainer(DiscoverStack);
+    const DiscoverStack = createStackNavigator();
     const tree = await renderWithApolloData(
       <Providers mocks={[mockFeedData, ...mockChannelCardData]}>
-        <DiscoverFeedWithNavigation />
+        <NavigationProvider>
+          <DiscoverStack.Navigator>
+            <DiscoverStack.Screen
+              name="DiscoverFeed"
+              component={DiscoverFeed}
+            />
+          </DiscoverStack.Navigator>
+        </NavigationProvider>
       </Providers>
     );
     expect(tree).toMatchSnapshot();
   });
   it('should render a loading state', () => {
-    const DiscoverStack = createStackNavigator({ DiscoverFeed });
-    const DiscoverFeedWithNavigation = createAppContainer(DiscoverStack);
+    const DiscoverStack = createStackNavigator();
     const tree = renderer.create(
       <Providers cache={null}>
-        <DiscoverFeedWithNavigation />
+        <NavigationProvider>
+          <DiscoverStack.Navigator>
+            <DiscoverStack.Screen
+              name="DiscoverFeed"
+              component={DiscoverFeed}
+            />
+          </DiscoverStack.Navigator>
+        </NavigationProvider>
       </Providers>
     );
     expect(tree).toMatchSnapshot();

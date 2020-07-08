@@ -1,10 +1,11 @@
 import React, { PureComponent } from 'react';
-import { ScrollView, SafeAreaView } from 'react-native';
+import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
 
 import { HorizontalLikedContentFeedConnected } from '@apollosproject/ui-connected';
 import { BackgroundView } from '@apollosproject/ui-kit';
 
+import { SafeAreaView } from 'react-native-safe-area-context';
 import ActionTable from './ActionTable';
 import ActionBar from './ActionBar';
 import UserAvatarHeader from './UserAvatarHeader';

@@ -32,7 +32,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@react-navigation|@apollosproject))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@@react-navigation/native|@apollosproject))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -46,6 +46,9 @@
     "setupFiles": [
       "./jest.setup.js"
     ]
+  },
+  "resolutions": {
+    "react-native-safe-area-context": "^3.0.7"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.3",
@@ -68,6 +71,12 @@
     "@react-native-community/async-storage": "^1.5.1",
     "@react-native-community/datetimepicker": "^2.4.0",
     "@react-native-community/geolocation": "^2.0.2",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/bottom-tabs": "^5.6.1",
+    "@react-navigation/drawer": "^5.8.4",
+    "@react-navigation/native": "^5.6.1",
+    "@react-navigation/stack": "^5.6.2",
+    "@react-navigation/compat": "^5.1.28",
     "apollo-cache-inmemory": "1.5.1",
     "apollo-cache-persist": "0.1.1",
     "apollo-client": "2.6.8",
@@ -94,7 +103,7 @@
     "react-native-config": "^0.11.7",
     "react-native-device-info": "^4.0.1",
     "react-native-geolocation-service": "^3.0.0",
-    "react-native-gesture-handler": "^1.3.1",
+    "react-native-gesture-handler": "^1.6.1",
     "react-native-google-cast": "^3.3.0",
     "react-native-image-picker": "0.28.0",
     "react-native-inappbrowser-reborn": "^3.0.0",
@@ -105,18 +114,14 @@
     "react-native-onesignal": "3.3.2",
     "react-native-passkit-wallet": "^0.1.4",
     "react-native-permissions": "^2.0.5",
+    "react-native-reanimated": "^1.9.0",
     "react-native-safari-view": "2.1.0",
-    "react-native-safe-area-context": "^0.3.6",
-    "react-native-safe-area-view": "0.13.1",
-    "react-native-screens": "^1.0.0-alpha.23",
+    "react-native-safe-area-context": "^3.0.7",
+    "react-native-screens": "^2.9.0",
     "react-native-svg": "^9.4.0",
     "react-native-video": "^5.0.0",
     "react-native-video-controls": "2.2.3",
     "react-native-webview": "^7.0.0",
-    "react-navigation": "^4.4.0",
-    "react-navigation-drawer": "^1.4.0",
-    "react-navigation-stack": "^1.7.3",
-    "react-navigation-tabs": "^1.2.0",
     "recompose": "^0.30.0",
     "rn-fetch-blob": "^0.10.16",
     "stream": "^0.0.2",

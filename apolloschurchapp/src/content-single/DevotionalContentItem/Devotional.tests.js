@@ -1,6 +1,6 @@
 import React from 'react';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import { NavigationProvider } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import { GET_CONTENT_ITEM_CONTENT } from '@apollosproject/ui-connected';
 
 import Providers from '../../Providers';
@@ -63,16 +63,19 @@ const mocks = [contentScriptureMock, contentHTMLMock];
 
 describe('the Devotional component', () => {
   it('renders a devotional', async () => {
-    const DevotionalStack = createStackNavigator({
-      // eslint-disable-next-line
-      Devotional: (props) => (
-        <Devotional id={'1'} content={{ title: 'Title' }} {...props} />
-      ),
-    });
-    const DevotionalWithNavigation = createAppContainer(DevotionalStack);
+    const DevotionalStack = createStackNavigator();
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
-        <DevotionalWithNavigation />
+        <NavigationProvider>
+          <DevotionalStack.Navigator>
+            <DevotionalStack.Screen
+              name="Devotional"
+              component={(props) => (
+                <Devotional id={'1'} content={{ title: 'Title' }} {...props} />
+              )}
+            />
+          </DevotionalStack.Navigator>
+        </NavigationProvider>
       </Providers>
     );
     expect(tree).toMatchSnapshot();

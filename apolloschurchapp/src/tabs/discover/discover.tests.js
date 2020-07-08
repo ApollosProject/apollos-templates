@@ -1,7 +1,7 @@
 import React from 'react';
 import { flatMap } from 'lodash';
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
+import { NavigationProvider } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
 import Providers from '../../Providers';
@@ -563,11 +563,14 @@ describe('The Discover tab component', () => {
         }))
     );
 
-    const DiscoverStack = createStackNavigator({ Discover });
-    const DiscoverWithNavigation = createAppContainer(DiscoverStack);
+    const DiscoverStack = createStackNavigator();
     const tree = await renderWithApolloData(
       <Providers mocks={[mockFeedData, ...mockChannelCardData]}>
-        <DiscoverWithNavigation />
+        <NavigationProvider>
+          <DiscoverStack.Navigator>
+            <DiscoverStack.Screen name="Discover" component={Discover} />
+          </DiscoverStack.Navigator>
+        </NavigationProvider>
       </Providers>
     );
     expect(tree).toMatchSnapshot();

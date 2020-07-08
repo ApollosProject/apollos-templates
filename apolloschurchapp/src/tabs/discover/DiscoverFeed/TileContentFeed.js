@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { withNavigation } from 'react-navigation';
+import { useNavigation } from '@react-navigation/native';
 import isEmpty from 'lodash/isEmpty';
 import PropTypes from 'prop-types';
 
@@ -54,8 +54,10 @@ const loadingStateObject = {
   coverImage: [],
 };
 
-const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) =>
-  (isLoading || !isEmpty(content)) && (
+const TileContentFeed = ({ isLoading, id, name, content = [] }) => {
+  const navigation = useNavigation();
+  if (isLoading || !isEmpty(content)) return null;
+  return (
     <>
       <RowHeader>
         <Name>
@@ -97,11 +99,9 @@ const TileContentFeed = ({ isLoading, id, name, navigation, content = [] }) =>
       />
     </>
   );
+};
 
 TileContentFeed.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func,
-  }),
   isLoading: PropTypes.bool,
   id: PropTypes.string,
   name: PropTypes.string,
@@ -110,4 +110,4 @@ TileContentFeed.propTypes = {
   ),
 };
 
-export default withNavigation(withIsLoading(TileContentFeed));
+export default withIsLoading(TileContentFeed);
