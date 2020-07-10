@@ -1,6 +1,7 @@
 import React, { PureComponent } from 'react';
-import { ScrollView, SafeAreaView } from 'react-native';
+import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { HorizontalLikedContentFeedConnected } from '@apollosproject/ui-connected';
 import { BackgroundView } from '@apollosproject/ui-kit';
@@ -19,7 +20,7 @@ class Connect extends PureComponent {
   render() {
     return (
       <BackgroundView>
-        <SafeAreaView>
+        <SafeAreaView edges={['top', 'left', 'right']}>
           <ScrollView>
             <UserAvatarHeader />
             <ActionBar />

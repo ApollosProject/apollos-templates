@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-unused-styles */
 import React from 'react';
-import { Platform, StyleSheet, View, SafeAreaView } from 'react-native';
-
+import { Platform, View } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { styled, PaddedView, SearchInput } from '@apollosproject/ui-kit';
 
 const HeaderBorder = styled(
@@ -11,21 +11,7 @@ const HeaderBorder = styled(
      * research suggest that without a background color the shadows don't know what to blend with so
      * the view collapses. */
     backgroundColor: theme.colors.background.paper,
-    // Renders the same shadows that React Navigation does.
-    ...Platform.select({
-      ios: {
-        shadowColor: 'rgba(0, 0, 0, 0.3)',
-        shadowOpacity: 0.85,
-        shadowRadius: 0,
-        shadowOffset: {
-          width: 0,
-          height: StyleSheet.hairlineWidth,
-        },
-      },
-      android: {
-        elevation: 4,
-      },
-    }),
+    ...Platform.select(theme.shadows.default),
   }),
   'SearchInputHeader.HeaderBorder'
 )(PaddedView);
@@ -43,17 +29,10 @@ const AndroidClipElevationFix = styled(
   'SearchInputHeader.AndroidClipElevationFix'
 )(View);
 
-const ReactNavigationStyleReset = StyleSheet.create({
-  header: {
-    borderBottomWidth: 0,
-    elevation: 0,
-  },
-});
-
 const SearchInputHeader = ({ style, ...props }) => (
   <AndroidClipElevationFix style={style}>
     <HeaderBorder vertical={false}>
-      <SafeAreaView>
+      <SafeAreaView edges={['top', 'left', 'right']}>
         <SearchInput {...props} />
       </SafeAreaView>
     </HeaderBorder>
@@ -64,4 +43,4 @@ SearchInputHeader.propTypes = {
   ...SearchInput.propTypes,
 };
 
-export { SearchInputHeader as default, ReactNavigationStyleReset };
+export { SearchInputHeader as default };
