@@ -1,13 +1,13 @@
 import React from 'react';
 import { Platform } from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { withTheme } from '@apollosproject/ui-kit';
 
 import ContentFeed from '../../content-feed';
 
 import Discover from './Discover';
 
-const { Navigator, Screen } = createStackNavigator();
+const { Navigator, Screen } = createNativeStackNavigator();
 
 const DiscoverNavigator = (props) => (
   <Navigator initialRouteName="Discover" {...props}>
@@ -37,6 +37,7 @@ const EnhancedDiscover = withTheme(({ theme, ...props }) => ({
       backgroundColor: theme.colors.background.paper,
       ...Platform.select(theme.shadows.default),
     },
+    headerLargeTitle: true,
   },
 }))(DiscoverNavigator);
 

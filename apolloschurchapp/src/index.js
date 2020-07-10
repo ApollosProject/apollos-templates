@@ -2,7 +2,7 @@ import hoistNonReactStatic from 'hoist-non-react-statics';
 import React from 'react';
 import { StatusBar, Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import RNBootSplash from 'react-native-bootsplash';
 
 import {
@@ -23,10 +23,13 @@ import Tabs from './tabs';
 import LandingScreen from './LandingScreen';
 import Onboarding from './ui/Onboarding';
 
-const AppStatusBar = withTheme(({ theme }) => ({
-  barStyle: theme.barStyle,
-  backgroundColor: theme.colors.background.paper,
-}))(StatusBar);
+const AppStatusBar = withTheme(
+  ({ theme }) =>
+    console.log({ theme }) || {
+      barStyle: theme.barStyle,
+      backgroundColor: theme.colors.background.paper,
+    }
+)(StatusBar);
 
 const ProtectedRouteWithSplashScreen = (props) => {
   const handleOnRouteChange = () => RNBootSplash.hide({ duration: 250 });
@@ -39,14 +42,14 @@ const EnhancedAuth = (props) => <Auth {...props} emailRequired />;
 // 😑
 hoistNonReactStatic(EnhancedAuth, Auth);
 
-const { Navigator, Screen } = createStackNavigator();
+const { Navigator, Screen } = createNativeStackNavigator();
 
 const App = (props) => (
   <Providers>
     <BackgroundView>
       <AppStatusBar />
       <NavigationContainer ref={NavigationService.setTopLevelNavigator}>
-        <Navigator initialRouteName="ProtectedRoute" mode="modal" {...props}>
+        <Navigator initialRouteName="ProtectedRoute" {...props}>
           <Screen
             name="ProtectedRoute"
             component={ProtectedRouteWithSplashScreen}
@@ -110,6 +113,7 @@ const EnhancedApp = withTheme(({ theme, ...props }) => ({
       ...Platform.select(theme.shadows.default),
     },
     headerShown: false,
+    stackPresentation: 'modal',
   },
 }))(App);
 

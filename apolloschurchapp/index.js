@@ -1,11 +1,11 @@
-import 'react-native-gesture-handler';
+import 'react-native-gesture-handler'; // required for react-navigation
 import './loadConfig';
 import { AppRegistry, YellowBox } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
 import { enableScreens } from 'react-native-screens';
 import Storybook from './storybook';
 
-enableScreens();
+enableScreens(); // improves performance for react-navigation
 
 const useStorybook = ApollosConfig.STORYBOOK === 'true';
 

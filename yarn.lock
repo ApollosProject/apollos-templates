@@ -3276,6 +3276,11 @@
     color "^3.1.2"
     react-native-iphone-x-helper "^1.2.1"
 
+"@react-navigation/native-stack@^5.0.5":
+  version "5.0.5"
+  resolved "https://registry.yarnpkg.com/@react-navigation/native-stack/-/native-stack-5.0.5.tgz#c5bcbfa92a7dbd8753893fb4c94d943a99c23c78"
+  integrity sha512-gzBwX0tVLUFSBudLV1BxwcyOJ8FZ0+fzWiK9BjFkamUCXE7Vi9mA5PIgoXW69X3tnATTM3+7VA3d+/UcflpJow==
+
 "@react-navigation/native@^5.6.1":
   version "5.6.1"
   resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-5.6.1.tgz#a603b921f39fe3fcfcc27232d71b24e80effc1f2"
@@ -15469,6 +15474,8 @@ rxjs@^5.4.3:
   version "5.5.12"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.12.tgz#6fa61b8a77c3d793dbaf270bee2f43f652d741cc"
   integrity sha512-xx2itnL5sBbqeeiVgNPVuQQ1nC8Jp2WfNJhXWHmElW9YmrpS9UVnNzhP3EH3HFqexO5Tlp8GhYY+WEcqcVMvGw==
+  dependencies:
+    symbol-observable "1.0.1"
 
 rxjs@^6.4.0:
   version "6.6.0"

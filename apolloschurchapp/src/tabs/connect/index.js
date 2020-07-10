@@ -1,6 +1,5 @@
 import React from 'react';
-import { Platform } from 'react-native';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { withTheme } from '@apollosproject/ui-kit';
 import { LikedContentFeedConnected } from '@apollosproject/ui-connected';
 
@@ -11,7 +10,7 @@ import TestingControlPanel from '../../testing-control-panel';
 
 import Connect from './Connect';
 
-const { Screen, Navigator } = createStackNavigator();
+const { Screen, Navigator } = createNativeStackNavigator();
 
 const ConnectNavigator = (props) => (
   <Navigator {...props}>
@@ -60,8 +59,8 @@ const EnhancedConnect = withTheme(({ theme, ...props }) => ({
     },
     headerStyle: {
       backgroundColor: theme.colors.background.paper,
-      ...Platform.select(theme.shadows.default),
     },
+    headerLargeTitle: true,
   },
 }))(ConnectNavigator);
 
