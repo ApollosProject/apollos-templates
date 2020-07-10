@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
 import { Image } from 'react-native';
 import PropTypes from 'prop-types';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import { styled, BackgroundView } from '@apollosproject/ui-kit';
 import {
   FeaturesFeedConnected,
   RockAuthedWebBrowser,
 } from '@apollosproject/ui-connected';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
 const LogoTitle = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
@@ -17,10 +17,6 @@ const LogoTitle = styled(({ theme }) => ({
 }))(Image);
 
 class Home extends PureComponent {
-  static navigationOptions = () => ({
-    header: null,
-  });
-
   static propTypes = {
     navigation: PropTypes.shape({
       getParam: PropTypes.func,
@@ -52,7 +48,7 @@ class Home extends PureComponent {
       <RockAuthedWebBrowser>
         {(openUrl) => (
           <BackgroundView>
-            <SafeAreaView>
+            <SafeAreaView edges={['top', 'left', 'right']}>
               <FeaturesFeedConnected
                 onPressActionItem={this.handleOnPress({ openUrl })}
                 ListHeaderComponent={

@@ -79,8 +79,4 @@ LandingScreen.defaultProps = {
     "We're not just a building you go to, but a family to belong to.",
 };
 
-LandingScreen.navigationOptions = {
-  header: null,
-};
-
 export default LandingScreen;

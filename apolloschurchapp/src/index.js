@@ -1,6 +1,6 @@
 import hoistNonReactStatic from 'hoist-non-react-statics';
 import React from 'react';
-import { StatusBar } from 'react-native';
+import { StatusBar, Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import RNBootSplash from 'react-native-bootsplash';
@@ -19,8 +19,6 @@ import Providers from './Providers';
 import ContentSingle from './content-single';
 import Event from './event';
 import Tabs from './tabs';
-import PersonalDetails from './user-settings/PersonalDetails';
-import ChangePassword from './user-settings/ChangePassword';
 import LandingScreen from './LandingScreen';
 import UserWebBrowser from './user-web-browser';
 import Onboarding from './ui/Onboarding';
@@ -43,34 +41,52 @@ hoistNonReactStatic(EnhancedAuth, Auth);
 
 const { Navigator, Screen } = createStackNavigator();
 
-const App = () => (
+const App = (props) => (
   <Providers>
     <BackgroundView>
       <AppStatusBar />
-      <NavigationContainer>
-        <Navigator
-          ref={(navigatorRef) => {
-            NavigationService.setTopLevelNavigator(navigatorRef);
-          }}
-          initialRouteName="ProtectedRoute"
-          mode="modal"
-          headerMode="screen"
-        >
+      <NavigationContainer ref={NavigationService.setTopLevelNavigator}>
+        <Navigator initialRouteName="ProtectedRoute" mode="modal" {...props}>
           <Screen
             name="ProtectedRoute"
             component={ProtectedRouteWithSplashScreen}
           />
-          <Screen name="Tabs" component={Tabs} />
-          <Screen name="ContentSingle" component={ContentSingle} />
-          <Screen name="Event" component={Event} />
-          <Screen name="Auth" component={EnhancedAuth} />
-          <Screen name="PersonalDetails" component={PersonalDetails} />
-          <Screen name="ChangePassword" component={ChangePassword} />
-          <Screen name="Location" component={Location} />
-          <Screen name="Passes" component={Passes} />
+          <Screen name="Tabs" component={Tabs} options={{ title: 'Home' }} />
+          <Screen
+            name="ContentSingle"
+            component={ContentSingle}
+            options={{ title: 'Content' }}
+          />
+          <Screen name="Event" component={Event} options={{ title: 'Event' }} />
+          <Screen
+            name="Auth"
+            component={EnhancedAuth}
+            options={{ title: 'Login' }}
+          />
+          <Screen
+            name="Location"
+            component={Location}
+            options={{ headerShown: true }}
+          />
+          <Screen
+            name="Passes"
+            component={Passes}
+            options={{ title: 'Check-In Pass' }}
+          />
           <Screen name="UserWebBrowser" component={UserWebBrowser} />
-          <Screen name="Onboarding" component={Onboarding} />
-          <Screen name="LandingScreen" component={LandingScreen} />
+          <Screen
+            name="Onboarding"
+            component={Onboarding}
+            options={{
+              title: 'Onboarding',
+              gesturesEnabled: false,
+            }}
+          />
+          <Screen
+            name="LandingScreen"
+            component={LandingScreen}
+            options={{ headerShown: false }}
+          />
         </Navigator>
       </NavigationContainer>
       <MediaPlayer />
@@ -78,4 +94,19 @@ const App = () => (
   </Providers>
 );
 
-export default App;
+const EnhancedApp = withTheme(({ theme, ...props }) => ({
+  ...props,
+  screenOptions: {
+    headerTintColor: theme.colors.action.secondary,
+    headerTitleStyle: {
+      color: theme.colors.text.primary,
+    },
+    headerStyle: {
+      backgroundColor: theme.colors.background.paper,
+      ...Platform.select(theme.shadows.default),
+    },
+    headerShown: false,
+  },
+}))(App);
+
+export default EnhancedApp;

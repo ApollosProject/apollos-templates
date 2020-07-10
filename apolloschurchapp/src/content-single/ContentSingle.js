@@ -15,29 +15,25 @@ import DevotionalContentItem from './DevotionalContentItem';
 import UniversalContentItem from './UniversalContentItem';
 import WeekendContentItem from './WeekendContentItem';
 
-import NavigationHeader from './NavigationHeader';
-
 class ContentSingle extends PureComponent {
   static propTypes = {
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       push: PropTypes.func,
+    }),
+    route: PropTypes.shape({
+      params: PropTypes.shape({
+        itemId: PropTypes.string,
+      }),
     }),
   };
 
   get itemId() {
-    return this.props.navigation.getParam('itemId', []);
+    return this.props.route?.params?.itemId;
   }
 
   get queryVariables() {
     return { itemId: this.itemId };
   }
-
-  static navigationOptions = {
-    header: NavigationHeader,
-    headerTransparent: true,
-    headerMode: 'float',
-  };
 
   renderContent = ({ content, loading, error }) => {
     let { __typename } = content;

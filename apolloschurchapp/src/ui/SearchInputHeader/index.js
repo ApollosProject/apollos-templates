@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-unused-styles */
 import React from 'react';
-import { Platform, StyleSheet, View } from 'react-native';
+import { Platform, StyleSheet, View, SafeAreaView } from 'react-native';
 
 import { styled, PaddedView, SearchInput } from '@apollosproject/ui-kit';
 
@@ -53,7 +53,9 @@ const ReactNavigationStyleReset = StyleSheet.create({
 const SearchInputHeader = ({ style, ...props }) => (
   <AndroidClipElevationFix style={style}>
     <HeaderBorder vertical={false}>
-      <SearchInput {...props} />
+      <SafeAreaView>
+        <SearchInput {...props} />
+      </SafeAreaView>
     </HeaderBorder>
   </AndroidClipElevationFix>
 );

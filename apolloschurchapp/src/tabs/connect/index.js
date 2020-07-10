@@ -1,30 +1,55 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { withTheme } from '@apollosproject/ui-kit';
 import { LikedContentFeedConnected } from '@apollosproject/ui-connected';
 
 import UserSettings from '../../user-settings';
+import PersonalDetails from '../../user-settings/PersonalDetails';
+import ChangePassword from '../../user-settings/ChangePassword';
 import TestingControlPanel from '../../testing-control-panel';
 
-// import tabBarIcon from '../tabBarIcon';
 import Connect from './Connect';
 
 const { Screen, Navigator } = createStackNavigator();
 
 const ConnectNavigator = (props) => (
-  <Navigator headerMode="screen" {...props}>
-    <Screen component={Connect} name="Connect" />
-    <Screen component={TestingControlPanel} name="TestingControlPanel" />
-    <Screen component={UserSettings} name="UserSettings" />
+  <Navigator {...props}>
+    <Screen
+      component={Connect}
+      name="Connect"
+      options={{ headerShown: false }}
+    />
+    <Screen
+      component={TestingControlPanel}
+      name="TestingControlPanel"
+      options={{ headerTitle: 'Testing' }}
+    />
+    <Screen
+      component={UserSettings}
+      name="UserSettings"
+      options={{ headerTitle: 'Settings' }}
+    />
+
+    <Screen
+      name="PersonalDetails"
+      component={PersonalDetails}
+      options={{ headerTitle: 'Personal Details' }}
+    />
+    <Screen
+      name="ChangePassword"
+      component={ChangePassword}
+      options={{
+        title: 'Change Password',
+      }}
+    />
     <Screen
       component={LikedContentFeedConnected}
       name="LikedContentFeedConnected"
+      options={{ headerTitle: 'Your Likes' }}
     />
   </Navigator>
 );
-
-// TODO: this needs to be moved to parent
-// tabBarIcon: tabBarIcon('profile')
 
 const EnhancedConnect = withTheme(({ theme, ...props }) => ({
   ...props,
@@ -33,7 +58,10 @@ const EnhancedConnect = withTheme(({ theme, ...props }) => ({
     headerTitleStyle: {
       color: theme.colors.text.primary,
     },
-    headerBackgroundColor: theme.colors.background.paper,
+    headerStyle: {
+      backgroundColor: theme.colors.background.paper,
+      ...Platform.select(theme.shadows.default),
+    },
   },
 }))(ConnectNavigator);
 

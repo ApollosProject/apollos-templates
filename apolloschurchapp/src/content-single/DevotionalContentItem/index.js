@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import { get } from 'lodash';
+import { SafeAreaView } from 'react-native';
 
 import {
   ErrorCard,
@@ -10,7 +11,7 @@ import {
   BackgroundView,
   styled,
 } from '@apollosproject/ui-kit';
-import { SafeAreaView } from 'react-native-safe-area-context';
+
 import ContentTab from './ContentTab';
 import ScriptureTab from './ScriptureTab';
 

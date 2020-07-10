@@ -1,4 +1,5 @@
 import React from 'react';
+import { Platform } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { withTheme } from '@apollosproject/ui-kit';
 
@@ -10,14 +11,21 @@ const { Navigator, Screen } = createStackNavigator();
 
 const DiscoverNavigator = (props) => (
   <Navigator initialRouteName="Discover" {...props}>
-    <Screen component={Discover} name="Discover" />
-    <Screen component={ContentFeed} name="ContentFeed" />
+    <Screen
+      component={Discover}
+      name="Discover"
+      options={{ headerShown: false }}
+    />
+    <Screen
+      component={ContentFeed}
+      name="ContentFeed"
+      /** Function for React Navigation to set information in the header. */
+      options={({ route }) => ({
+        title: route.params.itemTitle || 'Content Feed',
+      })}
+    />
   </Navigator>
 );
-
-// TODO
-// navigationOptions: { tabBarIcon: tabBarIcon('sections') },
-
 const EnhancedDiscover = withTheme(({ theme, ...props }) => ({
   ...props,
   screenOptions: {
@@ -25,7 +33,10 @@ const EnhancedDiscover = withTheme(({ theme, ...props }) => ({
     headerTitleStyle: {
       color: theme.colors.text.primary,
     },
-    headerBackgroundColor: theme.colors.background.paper,
+    headerStyle: {
+      backgroundColor: theme.colors.background.paper,
+      ...Platform.select(theme.shadows.default),
+    },
   },
 }))(DiscoverNavigator);
 

@@ -14,13 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  Invariant Violation: could not find a copy of react-native to link in /Users/conradvanlandingham/Sites/apollos-templates/node_modules/apolloschurchapp/node_modules/@apollosproject/ui-kit/node_modules
-      at invariant (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:2314:15)
-      at PackageLinker.<anonymous> (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:48716:7)
-      at Generator.next (<anonymous>)
-      at step (/usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:310:30)
-      at /usr/local/Cellar/yarn/1.22.4/libexec/lib/cli.js:321:13
-      at process._tickCallback (internal/process/next_tick.js:68:7)
+  Error: ENOTEMPTY: directory not empty, rmdir '/Users/conradvanlandingham/Library/Caches/Yarn/v6/npm-rxjs-5.5.12-6fa61b8a77c3d793dbaf270bee2f43f652d741cc-integrity/node_modules/rxjs'
 
 npm manifest: 
   {

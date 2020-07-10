@@ -2,7 +2,10 @@ import 'react-native-gesture-handler';
 import './loadConfig';
 import { AppRegistry, YellowBox } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
+import { enableScreens } from 'react-native-screens';
 import Storybook from './storybook';
+
+enableScreens();
 
 const useStorybook = ApollosConfig.STORYBOOK === 'true';
 

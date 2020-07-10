@@ -3,9 +3,7 @@ import { throttle } from 'lodash';
 
 import { BackgroundView } from '@apollosproject/ui-kit';
 
-import SearchInputHeader, {
-  ReactNavigationStyleReset,
-} from '../../ui/SearchInputHeader';
+import SearchInputHeader from '../../ui/SearchInputHeader';
 
 import SearchFeed from './SearchFeed';
 import DiscoverFeed from './DiscoverFeed';
@@ -47,11 +45,4 @@ class Discover extends PureComponent {
   }
 }
 
-Discover.navigationOptions = (props) => ({
-  title: 'Discover',
-  headerStyle: [
-    ReactNavigationStyleReset.header,
-    { backgroundColor: props.screenProps.headerBackgroundColor },
-  ],
-});
 export default Discover;

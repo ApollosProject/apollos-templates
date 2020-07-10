@@ -35,22 +35,6 @@ const StyledKeyboardAvoidingView = styled(({ theme }) => ({
 }))(KeyboardAvoidingView);
 
 class PersonalDetails extends PureComponent {
-  static navigationOptions = ({ navigation }) => ({
-    title: 'Personal Details',
-    headerLeft: null,
-    headerRight: (
-      <PaddedView vertical={false}>
-        <ButtonLink onPress={() => navigation.goBack()}>Cancel</ButtonLink>
-      </PaddedView>
-    ),
-    headerStyle: {
-      backgroundColor: navigation.getParam('backgroundColor', []),
-    },
-    headerTitleStyle: {
-      color: navigation.getParam('headerTitleColor', []),
-    },
-  });
-
   static propTypes = {
     navigation: PropTypes.shape({
       getParam: PropTypes.func,

@@ -101,10 +101,4 @@ function Onboarding({ navigation }) {
   );
 }
 
-Onboarding.navigationOptions = {
-  title: 'Onboarding',
-  header: null,
-  gesturesEnabled: false,
-};
-
 export default Onboarding;

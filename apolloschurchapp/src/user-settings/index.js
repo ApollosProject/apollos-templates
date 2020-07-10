@@ -23,21 +23,10 @@ import {
 } from '@apollosproject/ui-connected';
 
 class UserSettings extends PureComponent {
-  static navigationOptions = (props) => ({
-    title: 'Settings',
-    headerStyle: { backgroundColor: props.screenProps.headerBackgroundColor },
-  });
-
   static propTypes = {
     navigation: PropTypes.shape({
       getParam: PropTypes.func,
       navigate: PropTypes.func,
-    }),
-    screenProps: PropTypes.shape({
-      headerBackgroundColor: PropTypes.any,
-      headerTitleStyle: PropTypes.shape({
-        color: PropTypes.any,
-      }),
     }),
   };
 
@@ -57,16 +46,8 @@ class UserSettings extends PureComponent {
                     <>
                       <TableView>
                         <Touchable
-                          onPress={async () => {
-                            await this.props.navigation.navigate(
-                              'PersonalDetails',
-                              {
-                                backgroundColor: this.props.screenProps
-                                  .headerBackgroundColor,
-                                headerTitleColor: this.props.screenProps
-                                  .headerTitleStyle.color,
-                              }
-                            );
+                          onPress={() => {
+                            this.props.navigation.navigate('PersonalDetails');
                           }}
                         >
                           <Cell>
@@ -76,13 +57,8 @@ class UserSettings extends PureComponent {
                         </Touchable>
                         <Divider />
                         <Touchable
-                          onPress={async () => {
-                            await this.props.navigation.navigate('Location', {
-                              backgroundColor: this.props.screenProps
-                                .headerBackgroundColor,
-                              headerTitleColor: this.props.screenProps
-                                .headerTitleStyle.color,
-                            });
+                          onPress={() => {
+                            this.props.navigation.navigate('Location');
                           }}
                         >
                           <Cell>
@@ -92,16 +68,8 @@ class UserSettings extends PureComponent {
                         </Touchable>
                         <Divider />
                         <Touchable
-                          onPress={async () => {
-                            await this.props.navigation.navigate(
-                              'ChangePassword',
-                              {
-                                backgroundColor: this.props.screenProps
-                                  .headerBackgroundColor,
-                                headerTitleColor: this.props.screenProps
-                                  .headerTitleStyle.color,
-                              }
-                            );
+                          onPress={() => {
+                            this.props.navigation.navigate('ChangePassword');
                           }}
                         >
                           <Cell>
