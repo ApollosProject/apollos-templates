@@ -10,6 +10,7 @@ const { Screen, Navigator } = createStackNavigator();
 const ContentSingleNavigator = ({ route, navigation, ...props }) => (
   <Navigator
     {...props}
+    headerMode="float"
     screenOptions={{ header: NavigationHeader, headerTransparent: true }}
   >
     <Screen
