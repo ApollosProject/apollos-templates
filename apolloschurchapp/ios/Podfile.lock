@@ -128,13 +128,13 @@ PODS:
     - React-Core
   - RNAirplay (1.0.0):
     - React
-  - RNBootSplash (2.2.4):
+  - RNBootSplash (2.2.5):
     - React
   - RNCAsyncStorage (1.11.0):
     - React
   - RNCMaskedView (0.1.10):
     - React
-  - RNDateTimePicker (2.5.0):
+  - RNDateTimePicker (2.6.0):
     - React
   - RNDeviceInfo (4.0.1):
     - React
@@ -352,10 +352,10 @@ SPEC CHECKSUMS:
   React-RCTWebSocket: cd932a16b7214898b6b7f788c8bddb3637246ac4
   rn-fetch-blob: 651b8d076b43d0d7aa294a3d9ec16c00aab8bef9
   RNAirplay: 75777dd55dafbd3687703c3eb9c290ea6cc43248
-  RNBootSplash: 7cb9b4fe7e94177edc0d11010f7631d79db2f5e9
+  RNBootSplash: b3836aa90c5bec690c6cd3c9ab355fcf98d0fe1d
   RNCAsyncStorage: d059c3ee71738c39834a627476322a5a8cd5bf36
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
-  RNDateTimePicker: a8000390e7a4fe23d9f36492ded9282640721c82
+  RNDateTimePicker: e386ff4ef3300964ed0cad97ce6f206e0effbfdb
   RNDeviceInfo: 687c1b2ab6d86ff1ca1208783320cd144138c7f2
   RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
   RNInAppBrowser: c1a0dad2734458d79bcb6c8f4297ba8658a1da9f
