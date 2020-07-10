@@ -25,7 +25,6 @@ import {
 class UserSettings extends PureComponent {
   static propTypes = {
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       navigate: PropTypes.func,
     }),
   };

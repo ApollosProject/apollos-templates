@@ -15,12 +15,12 @@ import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import { MediaPlayer } from '@apollosproject/ui-media-player';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 
+import { RockAuthedWebView as UserWebBrowser } from '@apollosproject/ui-connected';
 import Providers from './Providers';
 import ContentSingle from './content-single';
 import Event from './event';
 import Tabs from './tabs';
 import LandingScreen from './LandingScreen';
-import UserWebBrowser from './user-web-browser';
 import Onboarding from './ui/Onboarding';
 
 const AppStatusBar = withTheme(({ theme }) => ({
@@ -73,7 +73,11 @@ const App = (props) => (
             component={Passes}
             options={{ title: 'Check-In Pass' }}
           />
-          <Screen name="UserWebBrowser" component={UserWebBrowser} />
+          <Screen
+            name="UserWebBrowser"
+            component={UserWebBrowser}
+            options={{ headerShown: true }}
+          />
           <Screen
             name="Onboarding"
             component={Onboarding}

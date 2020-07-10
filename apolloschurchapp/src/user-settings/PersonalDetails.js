@@ -37,7 +37,6 @@ const StyledKeyboardAvoidingView = styled(({ theme }) => ({
 class PersonalDetails extends PureComponent {
   static propTypes = {
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       navigate: PropTypes.func,
       goBack: PropTypes.func,
     }),

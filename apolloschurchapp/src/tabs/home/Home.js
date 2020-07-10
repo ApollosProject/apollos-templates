@@ -19,7 +19,6 @@ const LogoTitle = styled(({ theme }) => ({
 class Home extends PureComponent {
   static propTypes = {
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       setParams: PropTypes.func,
       navigate: PropTypes.func,
     }),
