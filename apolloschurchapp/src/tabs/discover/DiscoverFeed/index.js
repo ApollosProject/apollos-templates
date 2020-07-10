@@ -3,7 +3,7 @@ import { Query } from 'react-apollo';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import { FeedView } from '@apollosproject/ui-kit';
+import { FeedView, PaddedView } from '@apollosproject/ui-kit';
 
 import TileContentFeed from './TileContentFeed';
 import GET_CONTENT_CHANNELS from './getContentChannels';
@@ -46,7 +46,7 @@ const DiscoverFeed = memo(() => (
       <FeedView
         error={error}
         content={contentChannels}
-        isLoading={loading && !contentChannels.length}
+        isLoading={loading}
         refetch={refetch}
         renderItem={renderItem}
         loadingStateObject={feedItemLoadingState}

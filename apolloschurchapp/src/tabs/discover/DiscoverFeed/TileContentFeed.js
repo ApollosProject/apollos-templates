@@ -1,7 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import isEmpty from 'lodash/isEmpty';
 import PropTypes from 'prop-types';
 
 import {
@@ -13,7 +12,6 @@ import {
   ButtonLink,
   TouchableScale,
   Touchable,
-  withIsLoading,
 } from '@apollosproject/ui-kit';
 
 import { HorizontalContentCardConnected } from '@apollosproject/ui-connected';
@@ -56,7 +54,8 @@ const loadingStateObject = {
 
 const TileContentFeed = ({ isLoading, id, name, content = [] }) => {
   const navigation = useNavigation();
-  if (isLoading || !isEmpty(content)) return null;
+
+  if (!content?.length) return null;
   return (
     <>
       <RowHeader>
@@ -110,4 +109,4 @@ TileContentFeed.propTypes = {
   ),
 };
 
-export default withIsLoading(TileContentFeed);
+export default TileContentFeed;
