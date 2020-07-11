@@ -23,13 +23,10 @@ import Tabs from './tabs';
 import LandingScreen from './LandingScreen';
 import Onboarding from './ui/Onboarding';
 
-const AppStatusBar = withTheme(
-  ({ theme }) =>
-    console.log({ theme }) || {
-      barStyle: theme.barStyle,
-      backgroundColor: theme.colors.background.paper,
-    }
-)(StatusBar);
+const AppStatusBar = withTheme(({ theme }) => ({
+  barStyle: theme.barStyle,
+  backgroundColor: theme.colors.background.paper,
+}))(StatusBar);
 
 const ProtectedRouteWithSplashScreen = (props) => {
   const handleOnRouteChange = () => RNBootSplash.hide({ duration: 250 });
@@ -64,7 +61,11 @@ const App = (props) => (
           <Screen
             name="Auth"
             component={EnhancedAuth}
-            options={{ title: 'Login' }}
+            options={{
+              title: 'Login',
+              gestureEnabled: false,
+              stackPresentation: 'push',
+            }}
           />
           <Screen
             name="Location"
@@ -86,7 +87,8 @@ const App = (props) => (
             component={Onboarding}
             options={{
               title: 'Onboarding',
-              gesturesEnabled: false,
+              gestureEnabled: false,
+              stackPresentation: 'push',
             }}
           />
           <Screen

@@ -1,17 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 
+import { ModalCloseButton, ModalBackButton } from '@apollosproject/ui-kit';
 import ContentSingle from './ContentSingle';
-import NavigationHeader from './NavigationHeader';
 
-const { Screen, Navigator } = createStackNavigator();
+const { Screen, Navigator } = createNativeStackNavigator();
 
 const ContentSingleNavigator = ({ route, navigation, ...props }) => (
   <Navigator
     {...props}
     headerMode="float"
-    screenOptions={{ header: NavigationHeader, headerTransparent: true }}
+    screenOptions={{
+      headerTranslucent: true,
+      headerStyle: { backgroundColor: 'transparent' },
+      headerHideShadow: true,
+      headerRight: ModalCloseButton,
+      headerLeft: ModalBackButton,
+      headerTitle: '',
+    }}
   >
     <Screen
       name="ContentSingle"
