@@ -69,6 +69,7 @@
     "@react-native-community/datetimepicker": "^2.4.0",
     "@react-native-community/geolocation": "^2.0.2",
     "apollo-cache-persist": "0.1.1",
+    "apollo-client": "^2.6.10",
     "apollo-upload-client": "9.0.0",
     "buffer": "^5.4.3",
     "color": "3.0.0",
