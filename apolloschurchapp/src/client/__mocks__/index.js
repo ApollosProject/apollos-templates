@@ -1,11 +1,12 @@
 import React from 'react';
-import { MockedProvider } from 'react-apollo/test-utils';
-import ApolloClient from 'apollo-client';
+import { ApolloClient } from '@apollo/client';
+import { MockedProvider } from '@apollo/client/testing';
+import { SchemaLink } from '@apollo/client/link/schema';
 import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools';
-import { SchemaLink } from 'apollo-link-schema';
 import { importSchema } from 'graphql-import';
 
-import { resolvers, schema, defaults } from '../../store';
+import { resolvers, schema } from '../../store';
+import GET_CACHE_LOADED from '../getCacheLoaded';
 import cache from './cache';
 
 // eslint-disable-next-line
@@ -30,7 +31,12 @@ const serverSchema = makeExecutableSchema({
 addMockFunctionsToSchema({ schema: serverSchema });
 
 const link = new SchemaLink({ schema: serverSchema });
-cache.writeData({ data: defaults });
+cache.writeQuery({
+  query: GET_CACHE_LOADED,
+  data: {
+    cacheLoaded: false,
+  },
+});
 
 export const client = new ApolloClient({
   link,

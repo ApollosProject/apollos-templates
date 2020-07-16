@@ -1,5 +1,5 @@
 import React from 'react';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import PropTypes from 'prop-types';
 import { withNavigation } from 'react-navigation';
 import { get } from 'lodash';

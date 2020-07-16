@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 import { schema as mediaPlayerSchema } from '@apollosproject/ui-media-player';
 import { updatePushId } from '@apollosproject/ui-notifications';
@@ -21,11 +21,6 @@ export const schema = `
   }
 ${mediaPlayerSchema}
 `;
-
-export const defaults = {
-  __typename: 'Query',
-  cacheLoaded: false,
-};
 
 const GET_LOGGED_IN = gql`
   query {

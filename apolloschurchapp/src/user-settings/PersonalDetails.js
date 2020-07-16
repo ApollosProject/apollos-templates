@@ -7,7 +7,7 @@ import {
   Platform,
 } from 'react-native';
 import { SafeAreaView, Header } from 'react-navigation';
-import { Query, Mutation } from 'react-apollo';
+import { Query, Mutation } from '@apollo/client/react/components';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 

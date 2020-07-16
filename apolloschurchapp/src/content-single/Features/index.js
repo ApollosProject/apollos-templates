@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { ErrorCard, H3, PaddedView } from '@apollosproject/ui-kit';
 import { get } from 'lodash';
 import TextFeature from './TextFeature';

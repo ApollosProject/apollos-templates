@@ -6,7 +6,7 @@ import {
   StyleSheet,
   StatusBar,
 } from 'react-native';
-import { Mutation } from 'react-apollo';
+import { Mutation } from '@apollo/client/react/components';
 import { SafeAreaView, Header } from 'react-navigation';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -108,10 +108,6 @@ class ChangePassword extends PureComponent {
         update={async (cache, { data: { token } }) => {
           await cache.writeQuery({
             query: GET_AUTH_TOKEN,
-            data: { authToken: token },
-          });
-
-          await cache.writeData({
             data: { authToken: token },
           });
         }}

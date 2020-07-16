@@ -1,7 +1,7 @@
 import React from 'react';
 import { withProps } from 'recompose';
 import { withNavigation } from 'react-navigation';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 

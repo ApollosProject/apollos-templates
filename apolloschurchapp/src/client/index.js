@@ -1,21 +1,26 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { ApolloProvider } from 'react-apollo';
-import { ApolloClient } from 'apollo-client';
-import { ApolloLink } from 'apollo-link';
+import { ApolloProvider, ApolloClient, ApolloLink } from '@apollo/client';
 import { getVersion, getApplicationName } from 'react-native-device-info';
 
 import { authLink, buildErrorLink } from '@apollosproject/ui-auth';
 
 import { NavigationService } from '@apollosproject/ui-kit';
-import { resolvers, schema, defaults } from '../store';
+import { resolvers, schema } from '../store';
 
 import httpLink from './httpLink';
 import cache, { ensureCacheHydration } from './cache';
+import GET_CACHE_LOADED from './getCacheLoaded';
 import MARK_CACHE_LOADED from './markCacheLoaded';
 
 const goToAuth = () => NavigationService.resetToAuth();
-const wipeData = () => cache.writeData({ data: defaults });
+const wipeData = () =>
+  cache.writeQuery({
+    query: GET_CACHE_LOADED,
+    data: {
+      cacheLoaded: true,
+    },
+  });
 
 let clearStore;
 let storeIsResetting = false;

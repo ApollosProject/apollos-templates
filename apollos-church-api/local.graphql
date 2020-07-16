@@ -3,6 +3,7 @@ directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITI
 enum ACTION_FEATURE_ACTION {
   READ_CONTENT
   READ_EVENT
+  OPEN_URL
 }
 
 type ActionListAction {
@@ -20,6 +21,7 @@ type ActionListFeature implements Feature & Node {
   title: String
   subtitle: String
   actions: [ActionListAction]
+  primaryAction: FeatureAction
 }
 
 input AnalyticsDeviceInfo {
@@ -220,6 +222,12 @@ interface Feature {
   order: Int
 }
 
+type FeatureAction {
+  relatedNode: Node
+  action: ACTION_FEATURE_ACTION
+  title: String
+}
+
 enum GENDER {
   Male
   Female
@@ -247,6 +255,7 @@ type HeroListFeature implements Feature & Node {
   subtitle: String
   actions: [ActionListAction]
   heroCard: CardListItem
+  primaryAction: FeatureAction
 }
 
 type HorizontalCardListFeature implements Feature & Node {
@@ -552,6 +561,11 @@ input UpdateProfileInput {
 
 """The `Upload` scalar type represents a file upload."""
 scalar Upload
+
+type Url implements Node {
+  url: String
+  id: ID!
+}
 
 enum USER_AUTH_STATUS {
   NONE
