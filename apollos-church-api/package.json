@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "./scripts/generateLocalSchema.sh & yarn start:dev",
-    "start:dev": "linkemon ./src/index.js --exec babel-node --delay 2",
+    "start:dev": "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
     "start:prod": "NODE_ENV=production node ./lib/index.js",
     "postinstall": "yarn build",
     "link-packages": "node ./scripts/link-packages",
@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@apollosproject/config": "1.4.3",
+    "@apollosproject/bugsnag": "1.4.3",
     "@apollosproject/data-connector-algolia-search": "1.4.3",
     "@apollosproject/data-connector-analytics": "1.4.3",
     "@apollosproject/data-connector-bible": "1.4.3",
@@ -68,15 +69,12 @@
     "@babel/cli": "^7.4.5",
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.7.4",
+    "@bugsnag/js": "^7.2.1",
     "@entria/graphql-findbreakingchanges": "^1.0.1",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-plugin-module-resolver": "^3.2.0",
     "codecov": "3.6.5",
-    "get-graphql-schema": "^2.1.2",
-    "graphql-schema-linter": "^0.2.0",
-    "nodemon": "^2.0.2",
-    "linkemon": "^0.1.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^2.9.0",
@@ -84,6 +82,10 @@
     "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jest": "^21.15.2",
-    "eslint-plugin-prettier": "^2.6.0"
+    "eslint-plugin-prettier": "^2.6.0",
+    "get-graphql-schema": "^2.1.2",
+    "graphql-schema-linter": "^0.2.0",
+    "linkemon": "^0.1.1",
+    "nodemon": "^2.0.2"
   }
 }
