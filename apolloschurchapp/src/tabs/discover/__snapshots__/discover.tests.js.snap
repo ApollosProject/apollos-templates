@@ -1118,44 +1118,32 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                   }
                                 }
                               >
-                                <View
-                                  animate={null}
-                                  customAnimate={null}
-                                  forceRatio={2}
-                                  onReady={false}
+                                <Image
+                                  hasTitleAndSummary={true}
+                                  maxAspectRatio={2}
+                                  minAspectRatio={2}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "height": 240,
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D62e0e2ba-2dac-468b-a852-7e8cf2533efc",
+                                        "width": 320,
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
                                       "aspectRatio": 2,
                                       "backgroundColor": "#A5A5A5",
+                                      "opacity": 0,
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
                                   }
-                                >
-                                  <Image
-                                    hasTitleAndSummary={true}
-                                    maxAspectRatio={2}
-                                    minAspectRatio={2}
-                                    onLoad={[Function]}
-                                    source={
-                                      Array [
-                                        Object {
-                                          "__typename": "ImageMediaSource",
-                                          "cache": "force-cache",
-                                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D62e0e2ba-2dac-468b-a852-7e8cf2533efc",
-                                        },
-                                      ]
-                                    }
-                                    style={
-                                      Object {
-                                        "backgroundColor": "#A5A5A5",
-                                        "opacity": 0,
-                                        "resizeMode": "cover",
-                                        "width": "100%",
-                                      }
-                                    }
-                                  />
-                                </View>
+                                />
                                 <BVLinearGradient
                                   colors={
                                     Array [
@@ -1308,44 +1296,32 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                   }
                                 }
                               >
-                                <View
-                                  animate={null}
-                                  customAnimate={null}
-                                  forceRatio={2}
-                                  onReady={false}
+                                <Image
+                                  hasTitleAndSummary={true}
+                                  maxAspectRatio={2}
+                                  minAspectRatio={2}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "height": 240,
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Df3ba0936-8aab-46c1-8245-0e5aef637ae3",
+                                        "width": 320,
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
                                       "aspectRatio": 2,
                                       "backgroundColor": "#A5A5A5",
+                                      "opacity": 0,
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
                                   }
-                                >
-                                  <Image
-                                    hasTitleAndSummary={true}
-                                    maxAspectRatio={2}
-                                    minAspectRatio={2}
-                                    onLoad={[Function]}
-                                    source={
-                                      Array [
-                                        Object {
-                                          "__typename": "ImageMediaSource",
-                                          "cache": "force-cache",
-                                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Df3ba0936-8aab-46c1-8245-0e5aef637ae3",
-                                        },
-                                      ]
-                                    }
-                                    style={
-                                      Object {
-                                        "backgroundColor": "#A5A5A5",
-                                        "opacity": 0,
-                                        "resizeMode": "cover",
-                                        "width": "100%",
-                                      }
-                                    }
-                                  />
-                                </View>
+                                />
                                 <BVLinearGradient
                                   colors={
                                     Array [
@@ -1498,44 +1474,32 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                   }
                                 }
                               >
-                                <View
-                                  animate={null}
-                                  customAnimate={null}
-                                  forceRatio={2}
-                                  onReady={false}
+                                <Image
+                                  hasTitleAndSummary={true}
+                                  maxAspectRatio={2}
+                                  minAspectRatio={2}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "height": 240,
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D58c037fa-cc7f-4d72-9571-a0cc0558e346",
+                                        "width": 320,
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
                                       "aspectRatio": 2,
                                       "backgroundColor": "#A5A5A5",
+                                      "opacity": 0,
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
                                   }
-                                >
-                                  <Image
-                                    hasTitleAndSummary={true}
-                                    maxAspectRatio={2}
-                                    minAspectRatio={2}
-                                    onLoad={[Function]}
-                                    source={
-                                      Array [
-                                        Object {
-                                          "__typename": "ImageMediaSource",
-                                          "cache": "force-cache",
-                                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D58c037fa-cc7f-4d72-9571-a0cc0558e346",
-                                        },
-                                      ]
-                                    }
-                                    style={
-                                      Object {
-                                        "backgroundColor": "#A5A5A5",
-                                        "opacity": 0,
-                                        "resizeMode": "cover",
-                                        "width": "100%",
-                                      }
-                                    }
-                                  />
-                                </View>
+                                />
                                 <BVLinearGradient
                                   colors={
                                     Array [
@@ -2550,44 +2514,32 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 }
                               >
-                                <View
-                                  animate={null}
-                                  customAnimate={null}
-                                  forceRatio={1}
-                                  onReady={false}
+                                <Image
+                                  customTheme={null}
+                                  maxAspectRatio={1}
+                                  minAspectRatio={1}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "height": 240,
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D98be229f-dfed-4344-86ab-0d11666fc781",
+                                        "width": 320,
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
                                       "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
+                                      "opacity": 0,
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
                                   }
-                                >
-                                  <Image
-                                    customTheme={null}
-                                    maxAspectRatio={1}
-                                    minAspectRatio={1}
-                                    onLoad={[Function]}
-                                    source={
-                                      Array [
-                                        Object {
-                                          "__typename": "ImageMediaSource",
-                                          "cache": "force-cache",
-                                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D98be229f-dfed-4344-86ab-0d11666fc781",
-                                        },
-                                      ]
-                                    }
-                                    style={
-                                      Object {
-                                        "backgroundColor": "#A5A5A5",
-                                        "opacity": 0,
-                                        "resizeMode": "cover",
-                                        "width": "100%",
-                                      }
-                                    }
-                                  />
-                                </View>
+                                />
                                 <BVLinearGradient
                                   colors={
                                     Array [
@@ -2749,44 +2701,32 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 }
                               >
-                                <View
-                                  animate={null}
-                                  customAnimate={null}
-                                  forceRatio={1}
-                                  onReady={false}
+                                <Image
+                                  customTheme={null}
+                                  maxAspectRatio={1}
+                                  minAspectRatio={1}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "height": 240,
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D50f4e3e3-2842-4991-9f64-8fc6fbb3067c",
+                                        "width": 320,
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
                                       "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
+                                      "opacity": 0,
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
                                   }
-                                >
-                                  <Image
-                                    customTheme={null}
-                                    maxAspectRatio={1}
-                                    minAspectRatio={1}
-                                    onLoad={[Function]}
-                                    source={
-                                      Array [
-                                        Object {
-                                          "__typename": "ImageMediaSource",
-                                          "cache": "force-cache",
-                                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D50f4e3e3-2842-4991-9f64-8fc6fbb3067c",
-                                        },
-                                      ]
-                                    }
-                                    style={
-                                      Object {
-                                        "backgroundColor": "#A5A5A5",
-                                        "opacity": 0,
-                                        "resizeMode": "cover",
-                                        "width": "100%",
-                                      }
-                                    }
-                                  />
-                                </View>
+                                />
                                 <BVLinearGradient
                                   colors={
                                     Array [
@@ -2948,44 +2888,32 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 }
                               >
-                                <View
-                                  animate={null}
-                                  customAnimate={null}
-                                  forceRatio={1}
-                                  onReady={false}
+                                <Image
+                                  customTheme={null}
+                                  maxAspectRatio={1}
+                                  minAspectRatio={1}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "height": 240,
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D3e3e38d2-d804-45db-b45a-3b7a82c415d1",
+                                        "width": 320,
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
                                       "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
+                                      "opacity": 0,
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
                                   }
-                                >
-                                  <Image
-                                    customTheme={null}
-                                    maxAspectRatio={1}
-                                    minAspectRatio={1}
-                                    onLoad={[Function]}
-                                    source={
-                                      Array [
-                                        Object {
-                                          "__typename": "ImageMediaSource",
-                                          "cache": "force-cache",
-                                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D3e3e38d2-d804-45db-b45a-3b7a82c415d1",
-                                        },
-                                      ]
-                                    }
-                                    style={
-                                      Object {
-                                        "backgroundColor": "#A5A5A5",
-                                        "opacity": 0,
-                                        "resizeMode": "cover",
-                                        "width": "100%",
-                                      }
-                                    }
-                                  />
-                                </View>
+                                />
                                 <BVLinearGradient
                                   colors={
                                     Array [
@@ -3344,44 +3272,32 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 }
                               >
-                                <View
-                                  animate={null}
-                                  customAnimate={null}
-                                  forceRatio={1}
-                                  onReady={false}
+                                <Image
+                                  customTheme={null}
+                                  maxAspectRatio={1}
+                                  minAspectRatio={1}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "height": 240,
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
+                                        "width": 320,
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
                                       "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
+                                      "opacity": 0,
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
                                   }
-                                >
-                                  <Image
-                                    customTheme={null}
-                                    maxAspectRatio={1}
-                                    minAspectRatio={1}
-                                    onLoad={[Function]}
-                                    source={
-                                      Array [
-                                        Object {
-                                          "__typename": "ImageMediaSource",
-                                          "cache": "force-cache",
-                                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D31af1a61-360c-4b1e-8e62-45517c06a9a2",
-                                        },
-                                      ]
-                                    }
-                                    style={
-                                      Object {
-                                        "backgroundColor": "#A5A5A5",
-                                        "opacity": 0,
-                                        "resizeMode": "cover",
-                                        "width": "100%",
-                                      }
-                                    }
-                                  />
-                                </View>
+                                />
                                 <BVLinearGradient
                                   colors={
                                     Array [
@@ -3543,44 +3459,32 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 }
                               >
-                                <View
-                                  animate={null}
-                                  customAnimate={null}
-                                  forceRatio={1}
-                                  onReady={false}
+                                <Image
+                                  customTheme={null}
+                                  maxAspectRatio={1}
+                                  minAspectRatio={1}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "height": 240,
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dd3a96243-2558-4c04-bf41-3aadcf41771f",
+                                        "width": 320,
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
                                       "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
+                                      "opacity": 0,
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
                                   }
-                                >
-                                  <Image
-                                    customTheme={null}
-                                    maxAspectRatio={1}
-                                    minAspectRatio={1}
-                                    onLoad={[Function]}
-                                    source={
-                                      Array [
-                                        Object {
-                                          "__typename": "ImageMediaSource",
-                                          "cache": "force-cache",
-                                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dd3a96243-2558-4c04-bf41-3aadcf41771f",
-                                        },
-                                      ]
-                                    }
-                                    style={
-                                      Object {
-                                        "backgroundColor": "#A5A5A5",
-                                        "opacity": 0,
-                                        "resizeMode": "cover",
-                                        "width": "100%",
-                                      }
-                                    }
-                                  />
-                                </View>
+                                />
                                 <BVLinearGradient
                                   colors={
                                     Array [
@@ -3742,44 +3646,32 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 }
                               >
-                                <View
-                                  animate={null}
-                                  customAnimate={null}
-                                  forceRatio={1}
-                                  onReady={false}
+                                <Image
+                                  customTheme={null}
+                                  maxAspectRatio={1}
+                                  minAspectRatio={1}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "height": 240,
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D70b0b57c-5a15-4f46-8e6a-c759231685bf",
+                                        "width": 320,
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
                                       "aspectRatio": 1,
                                       "backgroundColor": "#A5A5A5",
+                                      "opacity": 0,
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
                                   }
-                                >
-                                  <Image
-                                    customTheme={null}
-                                    maxAspectRatio={1}
-                                    minAspectRatio={1}
-                                    onLoad={[Function]}
-                                    source={
-                                      Array [
-                                        Object {
-                                          "__typename": "ImageMediaSource",
-                                          "cache": "force-cache",
-                                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D70b0b57c-5a15-4f46-8e6a-c759231685bf",
-                                        },
-                                      ]
-                                    }
-                                    style={
-                                      Object {
-                                        "backgroundColor": "#A5A5A5",
-                                        "opacity": 0,
-                                        "resizeMode": "cover",
-                                        "width": "100%",
-                                      }
-                                    }
-                                  />
-                                </View>
+                                />
                                 <BVLinearGradient
                                   colors={
                                     Array [
@@ -4135,44 +4027,32 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                   }
                                 }
                               >
-                                <View
-                                  animate={null}
-                                  customAnimate={null}
-                                  forceRatio={2}
-                                  onReady={false}
+                                <Image
+                                  hasTitleAndSummary={true}
+                                  maxAspectRatio={2}
+                                  minAspectRatio={2}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "height": 240,
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D2a65e561-cd6e-4590-bb37-029a21c554e8",
+                                        "width": 320,
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
                                       "aspectRatio": 2,
                                       "backgroundColor": "#A5A5A5",
+                                      "opacity": 0,
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
                                   }
-                                >
-                                  <Image
-                                    hasTitleAndSummary={true}
-                                    maxAspectRatio={2}
-                                    minAspectRatio={2}
-                                    onLoad={[Function]}
-                                    source={
-                                      Array [
-                                        Object {
-                                          "__typename": "ImageMediaSource",
-                                          "cache": "force-cache",
-                                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D2a65e561-cd6e-4590-bb37-029a21c554e8",
-                                        },
-                                      ]
-                                    }
-                                    style={
-                                      Object {
-                                        "backgroundColor": "#A5A5A5",
-                                        "opacity": 0,
-                                        "resizeMode": "cover",
-                                        "width": "100%",
-                                      }
-                                    }
-                                  />
-                                </View>
+                                />
                                 <BVLinearGradient
                                   colors={
                                     Array [
@@ -4325,44 +4205,32 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                   }
                                 }
                               >
-                                <View
-                                  animate={null}
-                                  customAnimate={null}
-                                  forceRatio={2}
-                                  onReady={false}
+                                <Image
+                                  hasTitleAndSummary={true}
+                                  maxAspectRatio={2}
+                                  minAspectRatio={2}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "height": 240,
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D0305285f-1155-4405-ba38-a61b9c8558be",
+                                        "width": 320,
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
                                       "aspectRatio": 2,
                                       "backgroundColor": "#A5A5A5",
+                                      "opacity": 0,
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
                                   }
-                                >
-                                  <Image
-                                    hasTitleAndSummary={true}
-                                    maxAspectRatio={2}
-                                    minAspectRatio={2}
-                                    onLoad={[Function]}
-                                    source={
-                                      Array [
-                                        Object {
-                                          "__typename": "ImageMediaSource",
-                                          "cache": "force-cache",
-                                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D0305285f-1155-4405-ba38-a61b9c8558be",
-                                        },
-                                      ]
-                                    }
-                                    style={
-                                      Object {
-                                        "backgroundColor": "#A5A5A5",
-                                        "opacity": 0,
-                                        "resizeMode": "cover",
-                                        "width": "100%",
-                                      }
-                                    }
-                                  />
-                                </View>
+                                />
                                 <BVLinearGradient
                                   colors={
                                     Array [
@@ -4515,44 +4383,32 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                   }
                                 }
                               >
-                                <View
-                                  animate={null}
-                                  customAnimate={null}
-                                  forceRatio={2}
-                                  onReady={false}
+                                <Image
+                                  hasTitleAndSummary={true}
+                                  maxAspectRatio={2}
+                                  minAspectRatio={2}
+                                  onLoad={[Function]}
+                                  source={
+                                    Array [
+                                      Object {
+                                        "__typename": "ImageMediaSource",
+                                        "cache": "force-cache",
+                                        "height": 240,
+                                        "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Da65bc45d-f961-4b7e-a899-63eb1f9b8da9",
+                                        "width": 320,
+                                      },
+                                    ]
+                                  }
                                   style={
                                     Object {
                                       "aspectRatio": 2,
                                       "backgroundColor": "#A5A5A5",
+                                      "opacity": 0,
                                       "resizeMode": "cover",
                                       "width": "100%",
                                     }
                                   }
-                                >
-                                  <Image
-                                    hasTitleAndSummary={true}
-                                    maxAspectRatio={2}
-                                    minAspectRatio={2}
-                                    onLoad={[Function]}
-                                    source={
-                                      Array [
-                                        Object {
-                                          "__typename": "ImageMediaSource",
-                                          "cache": "force-cache",
-                                          "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Da65bc45d-f961-4b7e-a899-63eb1f9b8da9",
-                                        },
-                                      ]
-                                    }
-                                    style={
-                                      Object {
-                                        "backgroundColor": "#A5A5A5",
-                                        "opacity": 0,
-                                        "resizeMode": "cover",
-                                        "width": "100%",
-                                      }
-                                    }
-                                  />
-                                </View>
+                                />
                                 <BVLinearGradient
                                   colors={
                                     Array [
