@@ -3,6 +3,7 @@ directive @cacheControl(maxAge: Int, scope: CacheControlScope) on FIELD_DEFINITI
 enum ACTION_FEATURE_ACTION {
   READ_CONTENT
   READ_EVENT
+  OPEN_URL
 }
 
 type ActionListAction {
@@ -20,6 +21,7 @@ type ActionListFeature implements Feature & Node {
   title: String
   subtitle: String
   actions: [ActionListAction]
+  primaryAction: FeatureAction
 }
 
 input AnalyticsDeviceInfo {
@@ -220,6 +222,12 @@ interface Feature {
   order: Int
 }
 
+type FeatureAction {
+  relatedNode: Node
+  action: ACTION_FEATURE_ACTION
+  title: String
+}
+
 enum GENDER {
   Male
   Female
@@ -238,6 +246,16 @@ enum GROUP_TYPE {
   Serving
   Community
   Family
+}
+
+type HeroListFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  title: String
+  subtitle: String
+  actions: [ActionListAction]
+  heroCard: CardListItem
+  primaryAction: FeatureAction
 }
 
 type HorizontalCardListFeature implements Feature & Node {
@@ -261,6 +279,7 @@ type ImageMediaSource implements MediaSource {
 enum InteractionAction {
   VIEW
   COMPLETE
+  PRAY
 }
 
 input InteractionDataField {
@@ -345,6 +364,7 @@ type Mutation {
   trackEvent(input: AnalyticsTrackInput!): AnalyticsResult
   updateUserPushSettings(input: PushSettingsInput!): Person
   updateUserCampus(campusId: String!): Person
+  addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
 }
 
 interface Node {
@@ -401,6 +421,23 @@ type Person implements Node {
   photo: ImageMediaSource
   campus: Campus
   groups(type: GROUP_TYPE, asLeader: Boolean): [Group]
+}
+
+type PrayerListFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  isCard: Boolean
+  title: String
+  subtitle: String
+  prayers: [PrayerRequest]
+}
+
+type PrayerRequest implements Node {
+  id: ID!
+  text: String!
+  requestor: Person
+  isAnonymous: Boolean
+  isPrayed: Boolean
 }
 
 input PushSettingsInput {
@@ -544,6 +581,11 @@ input UpdateProfileInput {
 """The `Upload` scalar type represents a file upload."""
 scalar Upload
 
+type Url implements Node {
+  url: String
+  id: ID!
+}
+
 enum USER_AUTH_STATUS {
   NONE
   NEW_APP_USER
@@ -573,6 +615,14 @@ type VideoMedia implements Media {
 
 type VideoMediaSource implements MediaSource {
   uri: String
+}
+
+type WebviewFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  linkText: String
+  title: String
+  url: String
 }
 
 type WeekendContentItem implements ContentItem & Node {

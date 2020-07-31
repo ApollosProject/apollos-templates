@@ -7,11 +7,12 @@ ApollosConfig.loadJs({ FRAGMENTS });
 
 // We ran into an issue where SafeAreaView would break jest tests.
 jest.mock('react-native-safe-area-context', () => ({
-    SafeAreaConsumer: ({ children }) =>
-      children({ top: 0, bottom: 0, left: 0, right: 0 }),
-    SafeAreaProvider: ({ children }) => children,
-  })
-);
+  SafeAreaConsumer: ({ children }) =>
+    children({ top: 0, bottom: 0, left: 0, right: 0 }),
+  SafeAreaProvider: ({ children }) => children,
+}));
+
+jest.mock('@react-native-community/datetimepicker', () => 'DateTimePicker');
 
 jest.mock('react-navigation', () => {
   const ActualNavigation = require.requireActual('react-navigation');
@@ -71,6 +72,22 @@ jest.mock('react-native-device-info', () => ({
 }));
 
 jest.mock('rn-fetch-blob', () => 'Fetch');
+
+jest.mock('@apollosproject/ui-analytics', () => ({
+  track: () => '',
+  AnalyticsConsumer: ({ children }) => children({ test: jest.fn() }),
+  AnalyticsProvider: ({ children }) => children,
+  TrackEventWhenLoaded: () => null,
+  withTrackOnPress: (Component) => (props) => <Component {...props} />,
+}));
+
+jest.mock('@apollosproject/ui-kit', () => ({
+  ...require.requireActual('@apollosproject/ui-kit'),
+  NavigationService: {
+    navigate: jest.fn(),
+    setTopLevelNavigator: jest.fn(),
+  },
+}));
 
 jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',

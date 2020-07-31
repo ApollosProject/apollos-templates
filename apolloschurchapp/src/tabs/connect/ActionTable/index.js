@@ -11,9 +11,9 @@ import {
   styled,
   PaddedView,
   H4,
+  NavigationService,
 } from '@apollosproject/ui-kit';
 import { RockAuthedWebBrowser } from '@apollosproject/ui-connected';
-import NavigationActions from '../../../NavigationService';
 
 const RowHeader = styled(({ theme }) => ({
   flexDirection: 'row',
@@ -65,7 +65,7 @@ const ActionTable = () => (
         </TableView>
         <TableView>
           <Touchable
-            onPress={() => NavigationActions.navigate('TestingControlPanel')}
+            onPress={() => NavigationService.navigate('TestingControlPanel')}
           >
             <Cell>
               <CellIcon name="settings" />
