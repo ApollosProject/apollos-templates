@@ -73,7 +73,11 @@
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-plugin-module-resolver": "^3.2.0",
-    "codecov": "3.6.5",
+    "codecov": "3.7.1",
+    "get-graphql-schema": "^2.1.2",
+    "graphql-schema-linter": "^0.2.0",
+    "nodemon": "^2.0.2",
+    "linkemon": "^0.1.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^2.9.0",
@@ -81,10 +85,6 @@
     "eslint-plugin-babel": "^5.1.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jest": "^21.15.2",
-    "eslint-plugin-prettier": "^2.6.0",
-    "get-graphql-schema": "^2.1.2",
-    "graphql-schema-linter": "^0.2.0",
-    "linkemon": "^0.1.1",
-    "nodemon": "^2.0.2"
+    "eslint-plugin-prettier": "^2.6.0"
   }
 }

@@ -188,6 +188,12 @@ type ContentSeriesContentItem implements ContentItem & Node {
   features: [Feature]
 }
 
+type Device implements Node {
+  id: ID!
+  pushId: String!
+  notificationsEnabled: Boolean!
+}
+
 type DevotionalContentItem implements ContentItem & Node {
   id: ID!
   title(hyphenated: Boolean): String
@@ -419,6 +425,7 @@ type Person implements Node {
   gender: GENDER
   birthDate: String
   photo: ImageMediaSource
+  devices: [Device]
   campus: Campus
   groups(type: GROUP_TYPE, asLeader: Boolean): [Group]
 }
