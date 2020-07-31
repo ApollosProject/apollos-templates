@@ -69,7 +69,6 @@
     "@babel/cli": "^7.4.5",
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.7.4",
-    "@bugsnag/js": "^7.2.1",
     "@entria/graphql-findbreakingchanges": "^1.0.1",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
