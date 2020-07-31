@@ -16,7 +16,7 @@ APP:
   JOBS_PASSWORD: ${JOBS_PASSWORD}
 BUGSNAG:
   ## Optional, but you'll need to remove references to @apollosproject/bugsnag if you don't wish to use.
-  API_KEY: cd419c14afc14c6afe138e2500044f5f
+  API_KEY: ${BUGSNAG_KEY}
 ROCK:
   API_URL: https://apollosrock.newspring.cc/api
   API_TOKEN: ${ROCK_TOKEN}
