@@ -52,7 +52,7 @@
     "@apollosproject/data-schema": "1.4.3",
     "@apollosproject/rock-apollo-data-source": "1.4.3",
     "@apollosproject/server-core": "1.4.3",
-    "apollo-server": "^2.11.0",
+    "apollo-server": "^2.14.2",
     "apollo-server-express": "2.11.0",
     "color": "3.0.0",
     "dotenv": "6.0.0",
