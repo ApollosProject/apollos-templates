@@ -1,5 +1,5 @@
 import { createContext } from 'react';
-import NavigationService from '../NavigationService';
+import { NavigationService } from '@apollosproject/ui-kit';
 
 // Can can either call the OpenUserWebView function directly, or call it using
 // the Consumer. Your choice.

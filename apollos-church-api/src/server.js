@@ -3,7 +3,7 @@ import ApollosConfig from '@apollosproject/config';
 import express from 'express';
 import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
 import { get } from 'lodash';
-
+import { setupUniversalLinks } from '@apollosproject/server-core';
 import {
   resolvers,
   schema,
@@ -60,6 +60,8 @@ const app = express();
 
 applyServerMiddleware({ app, dataSources, context });
 setupJobs({ app, dataSources, context });
+// Comment out if you don't want the API serving apple-app-site-association or assetlinks manifests.
+setupUniversalLinks({ app });
 
 apolloServer.applyMiddleware({ app });
 apolloServer.applyMiddleware({ app, path: '/' });
