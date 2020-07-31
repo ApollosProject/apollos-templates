@@ -54,11 +54,11 @@ ALGOLIA:
       - title
       - unordered(summary)
     #customRankings:
-      # NOT CURRENTLY INCLUDED
-      # This just demonstrates what's possible
-      # To include likedCount (or any other field) override search package
-      # and add field to config below
-      #- desc(likedCount)
+    # NOT CURRENTLY INCLUDED
+    # This just demonstrates what's possible
+    # To include likedCount (or any other field) override search package
+    # and add field to config below
+    #- desc(likedCount)
 TWILIO:
   ACCOUNT_SID: ${TWILIO_ACCOUNT_SID}
   AUTH_TOKEN: ${TWILIO_AUTH_TOKEN}
@@ -155,6 +155,10 @@ ROCK_MAPPINGS:
   MOBILE_DEVICE_TYPE_ID: 671
 
 HOME_FEATURES:
+  - algorithms: [DAILY_PRAYER]
+    isCard: false
+    type: PrayerList
+    title: Daily Prayer
   - algorithms: [CAMPAIGN_ITEMS]
     type: HeroList
     isFeatured: true
@@ -187,7 +191,6 @@ HOME_FEATURES:
       - type: UPCOMING_EVENTS
   - algorithms: [USER_FEED]
     type: VerticalCardList
-
 
 # Default mapping of field types -> ids. There's probably no reason to edit this.
 ROCK_CONSTANTS:
