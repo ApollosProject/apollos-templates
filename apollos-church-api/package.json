@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "./scripts/generateLocalSchema.sh & yarn start:dev",
-    "start:dev": "linkemon ./src/index.js --exec babel-node --delay 2",
+    "start:dev": "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
     "start:prod": "NODE_ENV=production node ./lib/index.js",
     "postinstall": "yarn build",
     "link-packages": "node ./scripts/link-packages",
