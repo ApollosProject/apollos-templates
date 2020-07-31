@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "@apollosproject/config": "1.4.3",
+    "@apollosproject/bugsnag": "1.4.3",
     "@apollosproject/data-connector-algolia-search": "1.4.3",
     "@apollosproject/data-connector-analytics": "1.4.3",
     "@apollosproject/data-connector-bible": "1.4.3",
