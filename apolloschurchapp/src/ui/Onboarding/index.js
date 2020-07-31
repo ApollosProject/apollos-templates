@@ -18,6 +18,7 @@ import {
   AboutYouConnected,
   LocationFinderConnected,
   OnboardingSwiper,
+  onboardingComplete,
 } from '@apollosproject/ui-onboarding';
 
 const FullscreenBackgroundView = styled({
@@ -66,6 +67,15 @@ function Onboarding({ navigation }) {
               }
             />
             <AskNotificationsConnected
+              onPressPrimary={() =>
+                onboardingComplete({ userId: id });
+                navigation.dispatch(
+                  NavigationService.resetAction({
+                    navigatorName: 'Tabs',
+                    routeName: 'Home',
+                  })
+                )
+              }
               onRequestPushPermissions={(update) => {
                 checkNotifications().then((checkRes) => {
                   if (checkRes.status === RESULTS.DENIED) {
@@ -79,18 +89,10 @@ function Onboarding({ navigation }) {
                   }
                 });
               }}
-              onPressPrimary={() =>
-                navigation.dispatch(
-                  NavigationService.resetAction({
-                    navigatorName: 'Tabs',
-                    routeName: 'Home',
-                  })
-                )
-              }
               primaryNavText={'Finish'}
               BackgroundComponent={
                 <StyledGradient
-                  source={'https://picsum.photos/640/640/?random'}
+                  source={'http://picsum.photos/640/640/?random'}
                 />
               }
             />
