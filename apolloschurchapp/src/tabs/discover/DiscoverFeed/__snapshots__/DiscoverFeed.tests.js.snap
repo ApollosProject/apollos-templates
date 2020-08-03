@@ -4066,20 +4066,27 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.
           }
         }
       >
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "backgroundColor": "#fff",
-              "borderBottomColor": "#a7a7aa",
-              "borderBottomWidth": 0.5,
-              "height": 64,
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "never",
+              "horizontal": "always",
+              "top": "always",
             }
+          }
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#fff",
+                "borderBottomColor": "#a7a7aa",
+                "borderBottomWidth": 0.5,
+              },
+              Object {
+                "height": 44,
+              },
+              Object {},
+            ]
           }
         >
           <View
@@ -4136,7 +4143,7 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.
               </View>
             </View>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </View>
   </View>
@@ -12767,20 +12774,27 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
           }
         }
       >
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "backgroundColor": "#fff",
-              "borderBottomColor": "#a7a7aa",
-              "borderBottomWidth": 0.5,
-              "height": 64,
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "never",
+              "horizontal": "always",
+              "top": "always",
             }
+          }
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#fff",
+                "borderBottomColor": "#a7a7aa",
+                "borderBottomWidth": 0.5,
+              },
+              Object {
+                "height": 44,
+              },
+              Object {},
+            ]
           }
         >
           <View
@@ -12837,7 +12851,7 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
               </View>
             </View>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </View>
   </View>

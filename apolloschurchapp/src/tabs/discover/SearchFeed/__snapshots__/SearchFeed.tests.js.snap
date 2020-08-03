@@ -1223,20 +1223,27 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
           }
         }
       >
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "backgroundColor": "#fff",
-              "borderBottomColor": "#a7a7aa",
-              "borderBottomWidth": 0.5,
-              "height": 64,
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "never",
+              "horizontal": "always",
+              "top": "always",
             }
+          }
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#fff",
+                "borderBottomColor": "#a7a7aa",
+                "borderBottomWidth": 0.5,
+              },
+              Object {
+                "height": 44,
+              },
+              Object {},
+            ]
           }
         >
           <View
@@ -1293,7 +1300,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
               </View>
             </View>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </View>
   </View>
@@ -3026,20 +3033,27 @@ exports[`The SearchFeed component should render a loading state 1`] = `
           }
         }
       >
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "backgroundColor": "#fff",
-              "borderBottomColor": "#a7a7aa",
-              "borderBottomWidth": 0.5,
-              "height": 64,
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "never",
+              "horizontal": "always",
+              "top": "always",
             }
+          }
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#fff",
+                "borderBottomColor": "#a7a7aa",
+                "borderBottomWidth": 0.5,
+              },
+              Object {
+                "height": 44,
+              },
+              Object {},
+            ]
           }
         >
           <View
@@ -3096,7 +3110,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
               </View>
             </View>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </View>
   </View>
@@ -3434,20 +3448,27 @@ exports[`The SearchFeed component should render an empty state 1`] = `
           }
         }
       >
-        <View
-          onLayout={[Function]}
-          pointerEvents="box-none"
-          style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          forceInset={
             Object {
-              "backgroundColor": "#fff",
-              "borderBottomColor": "#a7a7aa",
-              "borderBottomWidth": 0.5,
-              "height": 64,
-              "paddingBottom": 0,
-              "paddingLeft": 0,
-              "paddingRight": 0,
-              "paddingTop": 20,
+              "bottom": "never",
+              "horizontal": "always",
+              "top": "always",
             }
+          }
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#fff",
+                "borderBottomColor": "#a7a7aa",
+                "borderBottomWidth": 0.5,
+              },
+              Object {
+                "height": 44,
+              },
+              Object {},
+            ]
           }
         >
           <View
@@ -3504,7 +3525,7 @@ exports[`The SearchFeed component should render an empty state 1`] = `
               </View>
             </View>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </View>
   </View>

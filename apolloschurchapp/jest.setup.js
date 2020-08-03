@@ -22,6 +22,14 @@ jest.mock('react-navigation', () => {
   };
 });
 
+jest.mock('@react-navigation/native', () => {
+  const ActualNavigation = require.requireActual('@react-navigation/native');
+  return {
+    ...ActualNavigation,
+    SafeAreaView: require.requireActual('SafeAreaView'),
+  };
+});
+
 jest.mock('react-native-music-control', () => ({
   enableBackgroundMode: jest.fn(),
   enableControl: jest.fn(),
