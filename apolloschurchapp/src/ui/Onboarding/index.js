@@ -1,4 +1,5 @@
 import React from 'react';
+import { Query } from 'react-apollo';
 import {
   checkNotifications,
   openSettings,
@@ -19,6 +20,7 @@ import {
   LocationFinderConnected,
   OnboardingSwiper,
   onboardingComplete,
+  WITH_USER_ID,
 } from '@apollosproject/ui-onboarding';
 
 const FullscreenBackgroundView = styled({
@@ -66,36 +68,42 @@ function Onboarding({ navigation }) {
                 />
               }
             />
-            <AskNotificationsConnected
-              onPressPrimary={() =>
-                onboardingComplete({ userId: id });
-                navigation.dispatch(
-                  NavigationService.resetAction({
-                    navigatorName: 'Tabs',
-                    routeName: 'Home',
-                  })
-                )
-              }
-              onRequestPushPermissions={(update) => {
-                checkNotifications().then((checkRes) => {
-                  if (checkRes.status === RESULTS.DENIED) {
-                    requestNotifications(['alert', 'badge', 'sound']).then(
-                      () => {
-                        update();
-                      }
+            <Query query={WITH_USER_ID} fetchPolicy="network-only">
+              {({
+                data: { currentUser: { id } = { currentUser: { id: null } } },
+              }) => (
+                <AskNotificationsConnected
+                  onPressPrimary={() => {
+                    onboardingComplete({ userId: id });
+                    navigation.dispatch(
+                      NavigationService.resetAction({
+                        navigatorName: 'Tabs',
+                        routeName: 'Home',
+                      })
                     );
-                  } else {
-                    openSettings();
+                  }}
+                  onRequestPushPermissions={(update) => {
+                    checkNotifications().then((checkRes) => {
+                      if (checkRes.status === RESULTS.DENIED) {
+                        requestNotifications(['alert', 'badge', 'sound']).then(
+                          () => {
+                            update();
+                          }
+                        );
+                      } else {
+                        openSettings();
+                      }
+                    });
+                  }}
+                  primaryNavText={'Finish'}
+                  BackgroundComponent={
+                    <StyledGradient
+                      source={'http://picsum.photos/640/640/?random'}
+                    />
                   }
-                });
-              }}
-              primaryNavText={'Finish'}
-              BackgroundComponent={
-                <StyledGradient
-                  source={'http://picsum.photos/640/640/?random'}
                 />
-              }
-            />
+              )}
+            </Query>
           </>
         )}
       </OnboardingSwiper>

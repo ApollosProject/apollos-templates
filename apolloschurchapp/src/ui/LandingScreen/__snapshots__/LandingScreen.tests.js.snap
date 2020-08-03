@@ -1277,10 +1277,18 @@ exports[`The Onboarding LandingScreen component should render with an ImageCompo
           }
         }
       >
-        <View
-          animate={null}
-          customAnimate={null}
-          onReady={false}
+        <Image
+          fadeDuration={250}
+          onLoad={[Function]}
+          source={
+            Array [
+              Object {
+                "cache": "force-cache",
+                "uri": "https://picsum.photos/375/812/?random",
+                "url": "https://picsum.photos/375/812/?random",
+              },
+            ]
+          }
           style={
             Object {
               "aspectRatio": 1,
@@ -1289,28 +1297,7 @@ exports[`The Onboarding LandingScreen component should render with an ImageCompo
               "width": "100%",
             }
           }
-        >
-          <Image
-            onLoad={[Function]}
-            source={
-              Array [
-                Object {
-                  "cache": "force-cache",
-                  "uri": "https://picsum.photos/375/812/?random",
-                  "url": "https://picsum.photos/375/812/?random",
-                },
-              ]
-            }
-            style={
-              Object {
-                "backgroundColor": "#A5A5A5",
-                "opacity": 0,
-                "resizeMode": "cover",
-                "width": "100%",
-              }
-            }
-          />
-        </View>
+        />
       </View>
       <View
         style={

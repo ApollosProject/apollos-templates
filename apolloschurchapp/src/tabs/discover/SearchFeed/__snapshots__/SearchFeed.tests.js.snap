@@ -265,25 +265,21 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         }
                       >
                         <Image
-                          maxAspectRatio={1.2}
-                          minAspectRatio={0.75}
+                          fadeDuration={250}
                           onLoad={[Function]}
                           source={
                             Array [
                               Object {
                                 "__typename": "ImageMediaSource",
                                 "cache": "force-cache",
-                                "height": 240,
                                 "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dd3a96243-2558-4c04-bf41-3aadcf41771f",
-                                "width": 320,
                               },
                             ]
                           }
                           style={
                             Object {
-                              "aspectRatio": 1.2,
+                              "aspectRatio": 1,
                               "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
                               "resizeMode": "cover",
                               "width": "100%",
                             }
@@ -602,25 +598,21 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         }
                       >
                         <Image
-                          maxAspectRatio={1.78}
-                          minAspectRatio={1.2}
+                          fadeDuration={250}
                           onLoad={[Function]}
                           source={
                             Array [
                               Object {
                                 "__typename": "ImageMediaSource",
                                 "cache": "force-cache",
-                                "height": 240,
                                 "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Db08e4d69-0acf-40ff-920a-4517de086175",
-                                "width": 320,
                               },
                             ]
                           }
                           style={
                             Object {
-                              "aspectRatio": 1.3333333333333333,
+                              "aspectRatio": 1.2,
                               "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
                               "resizeMode": "cover",
                               "width": "100%",
                             }
@@ -767,25 +759,21 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         }
                       >
                         <Image
-                          maxAspectRatio={1.78}
-                          minAspectRatio={1.2}
+                          fadeDuration={250}
                           onLoad={[Function]}
                           source={
                             Array [
                               Object {
                                 "__typename": "ImageMediaSource",
                                 "cache": "force-cache",
-                                "height": 240,
                                 "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3D58c037fa-cc7f-4d72-9571-a0cc0558e346",
-                                "width": 320,
                               },
                             ]
                           }
                           style={
                             Object {
-                              "aspectRatio": 1.3333333333333333,
+                              "aspectRatio": 1.2,
                               "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
                               "resizeMode": "cover",
                               "width": "100%",
                             }
@@ -1082,25 +1070,21 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                         }
                       >
                         <Image
-                          maxAspectRatio={1.2}
-                          minAspectRatio={0.75}
+                          fadeDuration={250}
                           onLoad={[Function]}
                           source={
                             Array [
                               Object {
                                 "__typename": "ImageMediaSource",
                                 "cache": "force-cache",
-                                "height": 240,
                                 "uri": "https://res.cloudinary.com/apollos/image/fetch/c_limit,f_auto,w_1600/https://apollosrock.newspring.cc/GetImage.ashx%3Fguid%3Dd3a96243-2558-4c04-bf41-3aadcf41771f",
-                                "width": 320,
                               },
                             ]
                           }
                           style={
                             Object {
-                              "aspectRatio": 1.2,
+                              "aspectRatio": 1,
                               "backgroundColor": "#A5A5A5",
-                              "opacity": 0,
                               "resizeMode": "cover",
                               "width": "100%",
                             }
@@ -1592,35 +1576,20 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         }
                       >
-                        <View
-                          animate={null}
-                          customAnimate={null}
-                          onReady={false}
+                        <Image
+                          fadeDuration={250}
+                          isLoading={true}
+                          onLoad={[Function]}
+                          source={Array []}
                           style={
                             Object {
-                              "aspectRatio": 1,
+                              "aspectRatio": 1.2,
                               "backgroundColor": "#A5A5A5",
                               "resizeMode": "cover",
                               "width": "100%",
                             }
                           }
-                        >
-                          <Image
-                            maxAspectRatio={1.78}
-                            minAspectRatio={1.2}
-                            onLoad={[Function]}
-                            source={Array []}
-                            style={
-                              Object {
-                                "aspectRatio": 1,
-                                "backgroundColor": "#A5A5A5",
-                                "opacity": 0,
-                                "resizeMode": "cover",
-                                "width": "100%",
-                              }
-                            }
-                          />
-                        </View>
+                        />
                         <BVLinearGradient
                           colors={
                             Array [
@@ -1755,35 +1724,20 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         }
                       >
-                        <View
-                          animate={null}
-                          customAnimate={null}
-                          onReady={false}
+                        <Image
+                          fadeDuration={250}
+                          isLoading={true}
+                          onLoad={[Function]}
+                          source={Array []}
                           style={
                             Object {
-                              "aspectRatio": 1,
+                              "aspectRatio": 1.2,
                               "backgroundColor": "#A5A5A5",
                               "resizeMode": "cover",
                               "width": "100%",
                             }
                           }
-                        >
-                          <Image
-                            maxAspectRatio={1.78}
-                            minAspectRatio={1.2}
-                            onLoad={[Function]}
-                            source={Array []}
-                            style={
-                              Object {
-                                "aspectRatio": 1,
-                                "backgroundColor": "#A5A5A5",
-                                "opacity": 0,
-                                "resizeMode": "cover",
-                                "width": "100%",
-                              }
-                            }
-                          />
-                        </View>
+                        />
                         <BVLinearGradient
                           colors={
                             Array [
@@ -1918,35 +1872,20 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         }
                       >
-                        <View
-                          animate={null}
-                          customAnimate={null}
-                          onReady={false}
+                        <Image
+                          fadeDuration={250}
+                          isLoading={true}
+                          onLoad={[Function]}
+                          source={Array []}
                           style={
                             Object {
-                              "aspectRatio": 1,
+                              "aspectRatio": 1.2,
                               "backgroundColor": "#A5A5A5",
                               "resizeMode": "cover",
                               "width": "100%",
                             }
                           }
-                        >
-                          <Image
-                            maxAspectRatio={1.78}
-                            minAspectRatio={1.2}
-                            onLoad={[Function]}
-                            source={Array []}
-                            style={
-                              Object {
-                                "aspectRatio": 1,
-                                "backgroundColor": "#A5A5A5",
-                                "opacity": 0,
-                                "resizeMode": "cover",
-                                "width": "100%",
-                              }
-                            }
-                          />
-                        </View>
+                        />
                         <BVLinearGradient
                           colors={
                             Array [
@@ -2081,35 +2020,20 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         }
                       >
-                        <View
-                          animate={null}
-                          customAnimate={null}
-                          onReady={false}
+                        <Image
+                          fadeDuration={250}
+                          isLoading={true}
+                          onLoad={[Function]}
+                          source={Array []}
                           style={
                             Object {
-                              "aspectRatio": 1,
+                              "aspectRatio": 1.2,
                               "backgroundColor": "#A5A5A5",
                               "resizeMode": "cover",
                               "width": "100%",
                             }
                           }
-                        >
-                          <Image
-                            maxAspectRatio={1.78}
-                            minAspectRatio={1.2}
-                            onLoad={[Function]}
-                            source={Array []}
-                            style={
-                              Object {
-                                "aspectRatio": 1,
-                                "backgroundColor": "#A5A5A5",
-                                "opacity": 0,
-                                "resizeMode": "cover",
-                                "width": "100%",
-                              }
-                            }
-                          />
-                        </View>
+                        />
                         <BVLinearGradient
                           colors={
                             Array [
@@ -2244,35 +2168,20 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         }
                       >
-                        <View
-                          animate={null}
-                          customAnimate={null}
-                          onReady={false}
+                        <Image
+                          fadeDuration={250}
+                          isLoading={true}
+                          onLoad={[Function]}
+                          source={Array []}
                           style={
                             Object {
-                              "aspectRatio": 1,
+                              "aspectRatio": 1.2,
                               "backgroundColor": "#A5A5A5",
                               "resizeMode": "cover",
                               "width": "100%",
                             }
                           }
-                        >
-                          <Image
-                            maxAspectRatio={1.78}
-                            minAspectRatio={1.2}
-                            onLoad={[Function]}
-                            source={Array []}
-                            style={
-                              Object {
-                                "aspectRatio": 1,
-                                "backgroundColor": "#A5A5A5",
-                                "opacity": 0,
-                                "resizeMode": "cover",
-                                "width": "100%",
-                              }
-                            }
-                          />
-                        </View>
+                        />
                         <BVLinearGradient
                           colors={
                             Array [
@@ -2407,35 +2316,20 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         }
                       >
-                        <View
-                          animate={null}
-                          customAnimate={null}
-                          onReady={false}
+                        <Image
+                          fadeDuration={250}
+                          isLoading={true}
+                          onLoad={[Function]}
+                          source={Array []}
                           style={
                             Object {
-                              "aspectRatio": 1,
+                              "aspectRatio": 1.2,
                               "backgroundColor": "#A5A5A5",
                               "resizeMode": "cover",
                               "width": "100%",
                             }
                           }
-                        >
-                          <Image
-                            maxAspectRatio={1.78}
-                            minAspectRatio={1.2}
-                            onLoad={[Function]}
-                            source={Array []}
-                            style={
-                              Object {
-                                "aspectRatio": 1,
-                                "backgroundColor": "#A5A5A5",
-                                "opacity": 0,
-                                "resizeMode": "cover",
-                                "width": "100%",
-                              }
-                            }
-                          />
-                        </View>
+                        />
                         <BVLinearGradient
                           colors={
                             Array [
@@ -2570,35 +2464,20 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         }
                       >
-                        <View
-                          animate={null}
-                          customAnimate={null}
-                          onReady={false}
+                        <Image
+                          fadeDuration={250}
+                          isLoading={true}
+                          onLoad={[Function]}
+                          source={Array []}
                           style={
                             Object {
-                              "aspectRatio": 1,
+                              "aspectRatio": 1.2,
                               "backgroundColor": "#A5A5A5",
                               "resizeMode": "cover",
                               "width": "100%",
                             }
                           }
-                        >
-                          <Image
-                            maxAspectRatio={1.78}
-                            minAspectRatio={1.2}
-                            onLoad={[Function]}
-                            source={Array []}
-                            style={
-                              Object {
-                                "aspectRatio": 1,
-                                "backgroundColor": "#A5A5A5",
-                                "opacity": 0,
-                                "resizeMode": "cover",
-                                "width": "100%",
-                              }
-                            }
-                          />
-                        </View>
+                        />
                         <BVLinearGradient
                           colors={
                             Array [
@@ -2733,35 +2612,20 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         }
                       >
-                        <View
-                          animate={null}
-                          customAnimate={null}
-                          onReady={false}
+                        <Image
+                          fadeDuration={250}
+                          isLoading={true}
+                          onLoad={[Function]}
+                          source={Array []}
                           style={
                             Object {
-                              "aspectRatio": 1,
+                              "aspectRatio": 1.2,
                               "backgroundColor": "#A5A5A5",
                               "resizeMode": "cover",
                               "width": "100%",
                             }
                           }
-                        >
-                          <Image
-                            maxAspectRatio={1.78}
-                            minAspectRatio={1.2}
-                            onLoad={[Function]}
-                            source={Array []}
-                            style={
-                              Object {
-                                "aspectRatio": 1,
-                                "backgroundColor": "#A5A5A5",
-                                "opacity": 0,
-                                "resizeMode": "cover",
-                                "width": "100%",
-                              }
-                            }
-                          />
-                        </View>
+                        />
                         <BVLinearGradient
                           colors={
                             Array [
@@ -2896,35 +2760,20 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         }
                       >
-                        <View
-                          animate={null}
-                          customAnimate={null}
-                          onReady={false}
+                        <Image
+                          fadeDuration={250}
+                          isLoading={true}
+                          onLoad={[Function]}
+                          source={Array []}
                           style={
                             Object {
-                              "aspectRatio": 1,
+                              "aspectRatio": 1.2,
                               "backgroundColor": "#A5A5A5",
                               "resizeMode": "cover",
                               "width": "100%",
                             }
                           }
-                        >
-                          <Image
-                            maxAspectRatio={1.78}
-                            minAspectRatio={1.2}
-                            onLoad={[Function]}
-                            source={Array []}
-                            style={
-                              Object {
-                                "aspectRatio": 1,
-                                "backgroundColor": "#A5A5A5",
-                                "opacity": 0,
-                                "resizeMode": "cover",
-                                "width": "100%",
-                              }
-                            }
-                          />
-                        </View>
+                        />
                         <BVLinearGradient
                           colors={
                             Array [
@@ -3059,35 +2908,20 @@ exports[`The SearchFeed component should render a loading state 1`] = `
                           }
                         }
                       >
-                        <View
-                          animate={null}
-                          customAnimate={null}
-                          onReady={false}
+                        <Image
+                          fadeDuration={250}
+                          isLoading={true}
+                          onLoad={[Function]}
+                          source={Array []}
                           style={
                             Object {
-                              "aspectRatio": 1,
+                              "aspectRatio": 1.2,
                               "backgroundColor": "#A5A5A5",
                               "resizeMode": "cover",
                               "width": "100%",
                             }
                           }
-                        >
-                          <Image
-                            maxAspectRatio={1.78}
-                            minAspectRatio={1.2}
-                            onLoad={[Function]}
-                            source={Array []}
-                            style={
-                              Object {
-                                "aspectRatio": 1,
-                                "backgroundColor": "#A5A5A5",
-                                "opacity": 0,
-                                "resizeMode": "cover",
-                                "width": "100%",
-                              }
-                            }
-                          />
-                        </View>
+                        />
                         <BVLinearGradient
                           colors={
                             Array [

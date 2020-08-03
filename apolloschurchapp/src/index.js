@@ -25,6 +25,8 @@ import LandingScreen from './LandingScreen';
 import UserWebBrowser from './user-web-browser';
 import Onboarding from './ui/Onboarding';
 
+console.log(CoreNavigationAnalytics);
+
 const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: theme.barStyle,
   backgroundColor: theme.colors.background.paper,

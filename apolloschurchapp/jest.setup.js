@@ -77,6 +77,8 @@ jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',
   AnalyticsConsumer: ({ children }) => children({ test: jest.fn() }),
   AnalyticsProvider: ({ children }) => children,
+  CoreNavigationAnalytics: ({ children }) =>
+    children({ onNavigationStateChange: jest.fn() }),
   TrackEventWhenLoaded: () => null,
   withTrackOnPress: (Component) => (props) => <Component {...props} />,
 }));
@@ -87,14 +89,6 @@ jest.mock('@apollosproject/ui-kit', () => ({
     navigate: jest.fn(),
     setTopLevelNavigator: jest.fn(),
   },
-}));
-
-jest.mock('@apollosproject/ui-analytics', () => ({
-  track: () => '',
-  AnalyticsConsumer: ({ children }) => children({ test: jest.fn() }),
-  AnalyticsProvider: ({ children }) => children,
-  TrackEventWhenLoaded: () => null,
-  withTrackOnPress: (Component) => (props) => <Component {...props} />,
 }));
 
 jest.mock('@apollosproject/ui-notifications', () => ({
