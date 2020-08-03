@@ -61,7 +61,7 @@ ContentTab.propTypes = {
   references: PropTypes.arrayOf(PropTypes.string),
   /** The devotional title */
   title: PropTypes.string,
-  navigation: PropTypes.shape({ navigate: PropTypes.array }).isRequired,
+  navigation: PropTypes.shape({ navigate: PropTypes.func }).isRequired,
 };
 
 export default ContentTab;

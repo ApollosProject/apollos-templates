@@ -34,9 +34,9 @@ class UserSettings extends PureComponent {
       navigate: PropTypes.func,
     }),
     screenProps: PropTypes.shape({
-      headerBackgroundColor: PropTypes.any,
+      headerBackgroundColor: PropTypes.string,
       headerTitleStyle: PropTypes.shape({
-        color: PropTypes.any,
+        color: PropTypes.string,
       }),
     }),
   };
