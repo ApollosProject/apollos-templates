@@ -65,6 +65,7 @@
     "@apollosproject/ui-prayer": "1.5.0-beta.0",
     "@apollosproject/ui-scripture": "1.5.0-beta.0",
     "@apollosproject/ui-storybook": "1.5.0-beta.0",
+    "@metarouter/analytics-react-native": "^1.1.5",
     "@react-native-community/async-storage": "^1.5.1",
     "@react-native-community/datetimepicker": "^2.4.0",
     "@react-native-community/geolocation": "^2.0.2",
