@@ -22,6 +22,14 @@ jest.mock('react-navigation', () => {
   };
 });
 
+jest.mock('@react-navigation/native', () => {
+  const ActualNavigation = require.requireActual('@react-navigation/native');
+  return {
+    ...ActualNavigation,
+    SafeAreaView: require.requireActual('SafeAreaView'),
+  };
+});
+
 jest.mock('react-native-music-control', () => ({
   enableBackgroundMode: jest.fn(),
   enableControl: jest.fn(),
@@ -77,6 +85,8 @@ jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',
   AnalyticsConsumer: ({ children }) => children({ test: jest.fn() }),
   AnalyticsProvider: ({ children }) => children,
+  CoreNavigationAnalytics: ({ children }) =>
+    children({ onNavigationStateChange: jest.fn() }),
   TrackEventWhenLoaded: () => null,
   withTrackOnPress: (Component) => (props) => <Component {...props} />,
 }));
@@ -87,14 +97,6 @@ jest.mock('@apollosproject/ui-kit', () => ({
     navigate: jest.fn(),
     setTopLevelNavigator: jest.fn(),
   },
-}));
-
-jest.mock('@apollosproject/ui-analytics', () => ({
-  track: () => '',
-  AnalyticsConsumer: ({ children }) => children({ test: jest.fn() }),
-  AnalyticsProvider: ({ children }) => children,
-  TrackEventWhenLoaded: () => null,
-  withTrackOnPress: (Component) => (props) => <Component {...props} />,
 }));
 
 jest.mock('@apollosproject/ui-notifications', () => ({

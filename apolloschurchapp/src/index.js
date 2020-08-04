@@ -10,6 +10,7 @@ import {
   NavigationService,
 } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
+import { CoreNavigationAnalytics } from '@apollosproject/ui-analytics';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import { MediaPlayer } from '@apollosproject/ui-media-player';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
@@ -23,6 +24,8 @@ import ChangePassword from './user-settings/ChangePassword';
 import LandingScreen from './LandingScreen';
 import UserWebBrowser from './user-web-browser';
 import Onboarding from './ui/Onboarding';
+
+console.log(CoreNavigationAnalytics);
 
 const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: theme.barStyle,
@@ -68,11 +71,16 @@ const App = () => (
   <Providers>
     <BackgroundView>
       <AppStatusBar />
-      <AppContainer
-        ref={(navigatorRef) => {
-          NavigationService.setTopLevelNavigator(navigatorRef);
-        }}
-      />
+      <CoreNavigationAnalytics>
+        {(props) => (
+          <AppContainer
+            ref={(navigatorRef) => {
+              NavigationService.setTopLevelNavigator(navigatorRef);
+            }}
+            {...props}
+          />
+        )}
+      </CoreNavigationAnalytics>
       <MediaPlayer />
     </BackgroundView>
   </Providers>
