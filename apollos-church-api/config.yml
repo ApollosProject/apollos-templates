@@ -18,10 +18,10 @@ BUGSNAG:
   ## Optional, but you'll need to remove references to @apollosproject/bugsnag if you don't wish to use.
   API_KEY: ${BUGSNAG_KEY}
 ROCK:
-  API_URL: https://apollosrock.newspring.cc/api
+  API_URL: https://rock.apollos.app/api
   API_TOKEN: ${ROCK_TOKEN}
-  IMAGE_URL: https://apollosrock.newspring.cc/GetImage.ashx
-  SHARE_URL: https://apollosrock.newspring.cc
+  IMAGE_URL: https://rock.apollos.app/GetImage.ashx
+  SHARE_URL: https://rock.apollos.app
   # This should match the timezone of the Rock server
   TIMEZONE: 'America/New_York'
   USE_PLUGIN: true
@@ -109,16 +109,16 @@ ROCK_MAPPINGS:
       # When resolving "ContentSeriesContentItem" look in rock for a "ContentChannelItem"
       EntityType: ContentChannelItem
       # Used to define the subset of content channels types that use this specific type.
-      ContentChannelTypeId: [6, 7]
+      ContentChannelTypeId: [6]
     DevotionalContentItem:
       EntityType: ContentChannelItem
-      ContentChannelTypeId: [1]
+      ContentChannelTypeId: []
     MediaContentItem:
       EntityType: ContentChannelItem
     UniversalContentItem:
       EntityType: ContentChannelItem
     WeekendContentItem:
-      ContentChannelId: [5]
+      ContentChannelId: []
       EntityType: ContentChannelItem
     ContentItem:
       EntityType: ContentChannelItem
@@ -129,22 +129,15 @@ ROCK_MAPPINGS:
 
   # Apollos will pull these content channels and expose them in the app on the discover screen.
   DISCOVER_CONTENT_CHANNEL_IDS:
-    - 2
     - 3
-    - 4
+    - 5
     - 6
     - 8
   # Apollos will pull content items from these channels and expose them on the user feed
   # However, it will not expose the channel itself.
   # These channels are also pulled when indexing searchable content.
   FEED_CONTENT_CHANNEL_IDS:
-    - 1
-    - 2
-    - 3
-    - 4
-    - 5
     - 6
-    - 8
 
   CAMPAIGN_CHANNEL_IDS:
     - 11
