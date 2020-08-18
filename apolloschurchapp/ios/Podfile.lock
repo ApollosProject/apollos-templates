@@ -1,4 +1,5 @@
 PODS:
+  - AstronomerAnalytics (3.6.9)
   - boost-for-react-native (1.63.0)
   - BVLinearGradient (2.5.6):
     - React
@@ -128,6 +129,9 @@ PODS:
     - React-Core
   - RNAirplay (1.0.0):
     - React
+  - RNAnalytics (1.1.5):
+    - AstronomerAnalytics
+    - React
   - RNBootSplash (2.1.0):
     - React
   - RNCAsyncStorage (1.9.0):
@@ -186,6 +190,7 @@ DEPENDENCIES:
   - React-RCTWebSocket (from `../node_modules/react-native/Libraries/WebSocket`)
   - rn-fetch-blob (from `../node_modules/rn-fetch-blob`)
   - "RNAirplay (from `../node_modules/@apollosproject/react-native-airplay-btn`)"
+  - "RNAnalytics (from `../node_modules/@metarouter/analytics-react-native`)"
   - RNBootSplash (from `../node_modules/react-native-bootsplash`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
@@ -199,6 +204,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AstronomerAnalytics
     - boost-for-react-native
     - google-cast-sdk-no-bluetooth
     - OneSignal
@@ -279,6 +285,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/rn-fetch-blob"
   RNAirplay:
     :path: "../node_modules/@apollosproject/react-native-airplay-btn"
+  RNAnalytics:
+    :path: "../node_modules/@metarouter/analytics-react-native"
   RNBootSplash:
     :path: "../node_modules/react-native-bootsplash"
   RNCAsyncStorage:
@@ -301,6 +309,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  AstronomerAnalytics: 36f48678a387e41481650edd6247c6c95d994131
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   BVLinearGradient: e3aad03778a456d77928f594a649e96995f1c872
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
@@ -342,6 +351,7 @@ SPEC CHECKSUMS:
   React-RCTWebSocket: cd932a16b7214898b6b7f788c8bddb3637246ac4
   rn-fetch-blob: 651b8d076b43d0d7aa294a3d9ec16c00aab8bef9
   RNAirplay: 75777dd55dafbd3687703c3eb9c290ea6cc43248
+  RNAnalytics: 360b0680753d0e1d37152a25d47aa34a015cab72
   RNBootSplash: fbf76a4bf1c03e9acd1dd08ce064847f26d6d8bf
   RNCAsyncStorage: 453cd7c335ec9ba3b877e27d02238956b76f3268
   RNDateTimePicker: c4285bfdd87430f1e575b81a4742b7586a09d53e
