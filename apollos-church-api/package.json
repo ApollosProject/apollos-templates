@@ -4,18 +4,22 @@
   "private": true,
   "main": "lib/index.js",
   "scripts": {
-    "start": "./scripts/generateLocalSchema.sh & yarn start:dev",
-    "start:dev": "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
+    "start": "yarn start:prod",
+    "start:dev":
+      "./scripts/generateLocalSchema.sh && linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
     "start:prod": "NODE_ENV=production node ./lib/index.js",
     "postinstall": "yarn build",
     "link-packages": "node ./scripts/link-packages",
     "unlink-packages": "node ./scripts/link-packages remove",
-    "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
-    "test": "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
+    "build":
+      "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
+    "test":
+      "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
     "lint": "eslint ./src --ext .js",
     "fixlint": "eslint ./src --ext .js --fix",
     "codecov": "cat ./coverage/lcov.info | codecov",
-    "version": "node ../../scripts/update-apollos-version.js && git add apollos.json",
+    "version":
+      "node ../../scripts/update-apollos-version.js && git add apollos.json",
     "schema-diff": "./scripts/schemaDiff.sh",
     "schema-lint": "graphql-schema-linter local.graphql",
     "upgrade": "npx @apollosproject/upgrade-tools upgrade"
@@ -25,17 +29,13 @@
   },
   "jest": {
     "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
+    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
     "testEnvironment": "node",
-    "reporters": [
-      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
-    ]
+    "reporters": ["<rootDir>/../../scripts/fingers-crossed-reporter.js"]
   },
   "dependencies": {
     "@apollosproject/config": "1.5.0-beta.0",

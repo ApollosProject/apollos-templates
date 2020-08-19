@@ -1,7 +1,7 @@
 {
   "name": "apollos-templates",
   "scripts": {
-    "start": "yarn watch:client & lerna run start --parallel",
+    "start": "yarn watch:client & lerna run start:dev --parallel",
     "watch:client": "(cd apolloschurchapp && yarn wml start)",
     "link-packages": "watchman watch-del-all && lerna run link-packages --parallel",
     "link-doctor": "node ./scripts/link-doctor.js",
@@ -19,8 +19,7 @@
     "yalc": "^1.0.0-pre.35",
     "chalk": "^4.0.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "workspaces": {
     "packages": [
       "apolloschurchapp",
