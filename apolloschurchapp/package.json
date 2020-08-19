@@ -25,7 +25,6 @@
     "postinstall": "jetify && yarn pods",
     "pods": "(cd ios && bundle install && bundle exec pod install)",
     "start": "react-native start",
-    "start:dev": "yarn start",
     "test": "TZ=UTC jest",
     "upgrade": "npx @apollosproject/upgrade-tools upgrade"
   },
