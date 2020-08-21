@@ -710,7 +710,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.apolloschurchapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.differential.apollos;
 				PRODUCT_NAME = apolloschurchapp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -738,7 +738,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.apolloschurchapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.differential.apollos;
 				PRODUCT_NAME = apolloschurchapp;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VERSIONING_SYSTEM = "apple-generic";
