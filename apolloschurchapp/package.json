@@ -23,7 +23,7 @@
     "postversion": "react-native-version --never-amend --never-increment-build --android android/app/build.gradle --ios ios/",
     "prestart": "yarn generate-stories & node ./scripts/get-introspection-data.js",
     "postinstall": "jetify && yarn pods",
-    "pods": "(cd ios && bundle install && bundle exec pod install)",
+    "pods": "(bundle install && cd ios && bundle exec pod install)",
     "start": "react-native start",
     "test": "TZ=UTC jest",
     "upgrade": "npx @apollosproject/upgrade-tools upgrade"
