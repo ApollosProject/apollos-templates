@@ -20,6 +20,12 @@ before_all do
 end
 
 platform :ios do
+  desc 'Fetch certificates and provisioning profiles'
+  lane :certificates do
+    match(app_identifier: 'com.differential.apollos', type: 'development', readonly: true)
+    match(app_identifier: 'com.differential.apollos', type: 'appstore', readonly: true)
+  end
+
   desc "Push a new beta build to TestFlight"
   lane :beta do
     increment_build_number(xcodeproj: "apolloschurchapp.xcodeproj")
@@ -29,5 +35,9 @@ platform :ios do
 end
 
 platform :android do
-  # Android Lanes
+  desc "Deploy a new version to the Google Play"
+  lane :deploy do
+    gradle(task: "clean assembleRelease")
+    upload_to_play_store
+  end
 end
