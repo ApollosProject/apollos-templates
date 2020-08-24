@@ -26,7 +26,9 @@
     "pods": "(cd ios && bundle install && bundle exec pod install)",
     "start": "react-native start",
     "test": "TZ=UTC jest",
-    "upgrade": "npx @apollosproject/upgrade-tools upgrade"
+    "upgrade": "npx @apollosproject/upgrade-tools upgrade",
+    "sync:stable": "./scripts/add-stable.sh",
+    "sync:canary": "./scripts/add-canaries.sh"
   },
   "jest": {
     "preset": "react-native",
