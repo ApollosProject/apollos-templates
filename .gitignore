@@ -13,3 +13,6 @@ node_modules/
 yalc.lock
 
 terraform.tfvars
+
+# Google Play authentication key
+key.json
