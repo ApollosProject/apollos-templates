@@ -9,7 +9,7 @@
     "src"
   ],
   "scripts": {
-    "android": "SIM=\"$($HOME/Library/Android/sdk/emulator/emulator -list-avds | sed -n 1p)\" && $HOME/Library/Android/sdk/emulator/emulator -avd \"${SIM}\" & react-native run-android --appId com.apolloschurch.app",
+    "android": "SIM=\"$($HOME/Library/Android/sdk/emulator/emulator -list-avds | sed -n 1p)\" && $HOME/Library/Android/sdk/emulator/emulator -avd \"${SIM}\" & react-native run-android --appId com.differential.apollos",
     "codecov": "cat ./coverage/lcov.info | codecov",
     "fixlint": "eslint ./src --fix",
     "ios": "react-native run-ios --simulator=\"iPhone 11\"",
