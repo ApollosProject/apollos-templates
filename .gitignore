@@ -16,3 +16,4 @@ terraform.tfvars
 
 # Google Play authentication key
 key.json
+apollos.keystore
