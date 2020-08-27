@@ -7,6 +7,7 @@ import RNBootSplash from 'react-native-bootsplash';
 import {
   BackgroundView,
   withTheme,
+  ThemeMixin,
   NavigationService,
 } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
@@ -69,20 +70,22 @@ const AppContainer = createAppContainer(AppNavigator);
 
 const App = () => (
   <Providers>
-    <BackgroundView>
-      <AppStatusBar />
-      <CoreNavigationAnalytics>
-        {(props) => (
-          <AppContainer
-            ref={(navigatorRef) => {
-              NavigationService.setTopLevelNavigator(navigatorRef);
-            }}
-            {...props}
-          />
-        )}
-      </CoreNavigationAnalytics>
-      <MediaPlayer />
-    </BackgroundView>
+    <ThemeMixin mixin={{ type: 'dark' }}>
+      <BackgroundView>
+        <AppStatusBar />
+        <CoreNavigationAnalytics>
+          {(props) => (
+            <AppContainer
+              ref={(navigatorRef) => {
+                NavigationService.setTopLevelNavigator(navigatorRef);
+              }}
+              {...props}
+            />
+          )}
+        </CoreNavigationAnalytics>
+        <MediaPlayer />
+      </BackgroundView>
+    </ThemeMixin>
   </Providers>
 );
 

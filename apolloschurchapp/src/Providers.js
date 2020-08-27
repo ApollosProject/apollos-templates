@@ -31,6 +31,7 @@ const AppProviders = (props) => (
           <AnalyticsProvider>
             <LiveProvider>
               <Providers
+                // themeInput={{ ...customTheme, type: 'dark' }}
                 themeInput={customTheme}
                 iconInput={customIcons}
                 {...props}
