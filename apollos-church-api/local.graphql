@@ -191,7 +191,7 @@ interface ContentParentNode {
   childContentItemsConnection(first: Int, after: String): ContentItemsConnection
 }
 
-type ContentSeriesContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ProgressNode & LikableNode & ShareableNode {
+type ContentSeriesContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ProgressNode & LikableNode & ShareableNode & FeaturesNode {
   id: ID!
   title(hyphenated: Boolean): String
   coverImage: ImageMedia
@@ -691,7 +691,7 @@ type WebviewFeature implements Feature & Node {
   url: String
 }
 
-type WeekendContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & LiveNode & ShareableNode {
+type WeekendContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & LiveNode & ShareableNode & FeaturesNode {
   id: ID!
   title(hyphenated: Boolean): String
   coverImage: ImageMedia
