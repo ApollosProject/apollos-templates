@@ -11,8 +11,8 @@
     "ios": "lerna run ios --parallel",
     "android": "lerna run android --parallel",
     "pods": "lerna run pods --parallel",
-    "dev": "lerna run sync:canary",
-    "stable": "lerna run sync:stable"
+    "latest": "lerna run latest",
+    "canary": "lerna run canary"
   },
   "private": true,
   "devDependencies": {

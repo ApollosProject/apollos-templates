@@ -23,8 +23,8 @@
     "schema-diff": "./scripts/schemaDiff.sh",
     "schema-lint": "graphql-schema-linter local.graphql",
     "upgrade": "npx @apollosproject/upgrade-tools upgrade",
-    "sync:stable": "./scripts/add-stable.sh",
-    "sync:canary": "./scripts/add-canaries.sh"
+    "latest": "./scripts/add-packages.sh",
+    "canary": "./scripts/add-packages.sh canary"
   },
   "engines": {
     "node": ">=8.11.x"

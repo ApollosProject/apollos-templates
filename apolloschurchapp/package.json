@@ -27,8 +27,8 @@
     "start": "react-native start",
     "test": "TZ=UTC jest",
     "upgrade": "npx @apollosproject/upgrade-tools upgrade",
-    "sync:stable": "./scripts/add-stable.sh",
-    "sync:canary": "./scripts/add-canaries.sh"
+    "latest": "./scripts/add-packages.sh",
+    "canary": "./scripts/add-packages.sh canary"
   },
   "jest": {
     "preset": "react-native",
