@@ -81,7 +81,7 @@
     "dotenv": "^6.2.0",
     "events": "^3.0.0",
     "formik": "^1.5.2",
-    "graphql": "0.13.2",
+    "graphql": "14.7.0",
     "graphql-tag": "2.9.2",
     "graphql-tools": "3.1.1",
     "lodash": "^4.17.11",
@@ -119,7 +119,8 @@
     "rn-fetch-blob": "^0.10.16",
     "stream": "^0.0.2",
     "wml": "^0.0.83",
-    "yup": "0.26.6"
+    "yup": "0.26.6",
+    "apollo-storybook-react-native": "0.2.12"
   },
   "devDependencies": {
     "@apollosproject/eslint-config": "1.5.0",
