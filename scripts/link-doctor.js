@@ -57,6 +57,20 @@ function checkWml(){
   if (failedLinks.length !== 0){
     return `The following packages have failed to link. You may need to relink to fix this issue. ${failedLinks.join(', ')}`
   }
+
+  const invalidLinks = linkedPackages.filter(package => {
+    try {
+      return fs.readdirSync(`${__dirname}/../apolloschurchapp/node_modules/${package}/node_modules`).includes('react-native')
+    } catch (e) {
+      if (e.code !== 'ENOENT') {
+        console.warn(`Error reading package modules: ${e}`)
+      }
+    }
+  });
+
+  if (invalidLinks.length !== 0){
+    return `The following packages have invalid links (they brought their node_modules along for a ride). Unlink and relink in templates to fix this issue. ${invalidLinks.join(', ')}`
+  }
 }
 
 function checkEnvVariable() {

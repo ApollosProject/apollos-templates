@@ -11,6 +11,7 @@ import {
   NavigationService,
 } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
+import { CoreNavigationAnalytics } from '@apollosproject/ui-analytics';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import { MediaPlayer } from '@apollosproject/ui-media-player';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
@@ -22,6 +23,8 @@ import Event from './event';
 import Tabs from './tabs';
 import LandingScreen from './LandingScreen';
 import Onboarding from './ui/Onboarding';
+
+console.log(CoreNavigationAnalytics);
 
 const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: theme.barStyle,
