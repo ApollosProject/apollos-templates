@@ -10,7 +10,9 @@
     "test": "lerna run test --stream",
     "ios": "lerna run ios --parallel",
     "android": "lerna run android --parallel",
-    "pods": "lerna run pods --parallel"
+    "pods": "lerna run pods --parallel",
+    "latest": "lerna run latest",
+    "canary": "lerna run canary"
   },
   "private": true,
   "devDependencies": {
