@@ -21,5 +21,5 @@ else
 		PKGS=$(echo "$JSON" | sed -n "$DEPSLINE",/^$/p | grep "@apollosproject" | tr -d "\n")
 		DEVPKGS=$(echo "$JSON" | sed -n "$DEVDEPSLINE","$DEPSLINE"p | grep "@apollosproject" | tr -d "\n")
 fi
-yarn add $PKGS
 yarn add --dev $DEVPKGS
+yarn add $PKGS
