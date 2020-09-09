@@ -10,7 +10,9 @@
     "test": "lerna run test --stream",
     "ios": "lerna run ios --parallel",
     "android": "lerna run android --parallel",
-    "pods": "lerna run pods --parallel"
+    "pods": "lerna run pods --parallel",
+    "latest": "lerna run latest",
+    "canary": "lerna run canary"
   },
   "private": true,
   "devDependencies": {
@@ -19,8 +21,7 @@
     "yalc": "^1.0.0-pre.35",
     "chalk": "^4.0.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "workspaces": {
     "packages": [
       "apolloschurchapp",
