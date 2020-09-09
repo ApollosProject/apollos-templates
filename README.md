@@ -4,7 +4,7 @@
 
 Click the "Use the Template" button on the repo page ⬆
 
-<pic>
+![template button](https://files-2aze9g2bq.vercel.app)
 
 Clone down your new repo and you're off the to races!
 
