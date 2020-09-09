@@ -1,16 +1,14 @@
 # Apollos Template Project
 
-## Instructions for starting your own app.
+## Getting Started
 
-### 1. Forking this repo
+Click the "Use the Template" button on the repo page ⬆
 
-Forking this repo via forking this project on GitHub is not recommended, as it will tie your project directly to our repo. Instead, we recommend taking the following steps.
+<pic>
 
-1. Clone this repo locally.
-2. From the root of this repo, `rm -rf .git`
-3. Intialize a new git repository, `git init`.
+Clone down your new repo and you're off the to races!
 
-### 2. Setting up your environment.
+### Set Up
 
 TBD
 
