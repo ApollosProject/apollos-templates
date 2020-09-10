@@ -75,6 +75,7 @@
     "@react-navigation/native": "^5.6.1",
     "@react-navigation/stack": "^5.6.2",
     "@react-navigation/compat": "^5.1.28",
+    "apollo-storybook-react-native": "0.2.12",
     "apollo-cache-inmemory": "1.5.1",
     "apollo-cache-persist": "0.1.1",
     "apollo-client": "2.6.8",

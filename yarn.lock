@@ -4655,6 +4655,18 @@ apollo-server@^2.14.2:
     graphql-subscriptions "^1.0.0"
     graphql-tools "^4.0.0"
 
+apollo-storybook-core@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/apollo-storybook-core/-/apollo-storybook-core-0.5.4.tgz#8357861cfb127ac9a9d0afc4d87fdf5ff97f39b2"
+  integrity sha512-5h+Yr4Pt2foGJi078gmjlQZ4mj8NBNravjjyhFOrfXTDQd2ODgWn2cwoSGJcpp+iZdkGwwlFkZbyJ1nBTsxukg==
+
+apollo-storybook-react-native@0.2.12:
+  version "0.2.12"
+  resolved "https://registry.yarnpkg.com/apollo-storybook-react-native/-/apollo-storybook-react-native-0.2.12.tgz#bbc26970f91d17186fc70a9c57d7e7a9a402e89b"
+  integrity sha512-L1KX5iSSpZqtP82gNDXoKCLuyXrzcQwpk3gOxa5bZwIHd9Czz7ETAJJCQb/DM9IgFSkgOIv5clNtUmHEPCLcxQ==
+  dependencies:
+    apollo-storybook-core "^0.5.4"
+
 apollo-tracing@^0.11.1:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/apollo-tracing/-/apollo-tracing-0.11.1.tgz#3e3a4ce4b21e57dcc57b10bbd539db243b752606"
