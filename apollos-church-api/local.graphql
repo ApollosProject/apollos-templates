@@ -71,6 +71,10 @@ type AudioMediaSource implements MediaSource {
   uri: String
 }
 
+interface AudioNode {
+  audios: [AudioMedia]
+}
+
 type AuthenticatedUser {
   id: ID!
   profile: Person
@@ -108,6 +112,12 @@ input CampusLocationInput {
   longitude: Float
 }
 
+interface Card {
+  title(hyphenated: Boolean): String
+  coverImage: ImageMedia
+  summary: String
+}
+
 type CardListItem {
   id: ID!
   hasAction: Boolean
@@ -130,6 +140,11 @@ type ContentChannel implements Node {
   childContentChannels: [ContentChannel]
   childContentItemsConnection(first: Int, after: String): ContentItemsConnection
   iconName: String
+}
+
+interface ContentChildNode {
+  parentChannel: ContentChannel
+  siblingContentItemsConnection(first: Int, after: String): ContentItemsConnection
 }
 
 interface ContentItem {
@@ -166,7 +181,17 @@ input ContentItemsConnectionInput {
   after: String
 }
 
-type ContentSeriesContentItem implements ContentItem & Node {
+interface ContentNode {
+  title(hyphenated: Boolean): String
+  coverImage: ImageMedia
+  htmlContent: String
+}
+
+interface ContentParentNode {
+  childContentItemsConnection(first: Int, after: String): ContentItemsConnection
+}
+
+type ContentSeriesContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ProgressNode & LikableNode & ShareableNode & FeaturesNode {
   id: ID!
   title(hyphenated: Boolean): String
   coverImage: ImageMedia
@@ -194,7 +219,7 @@ type Device implements Node {
   notificationsEnabled: Boolean!
 }
 
-type DevotionalContentItem implements ContentItem & Node {
+type DevotionalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ScriptureNode & LikableNode & ShareableNode {
   id: ID!
   title(hyphenated: Boolean): String
   coverImage: ImageMedia
@@ -232,6 +257,10 @@ type FeatureAction {
   relatedNode: Node
   action: ACTION_FEATURE_ACTION
   title: String
+}
+
+interface FeaturesNode {
+  features: [Feature]
 }
 
 enum GENDER {
@@ -300,6 +329,11 @@ type InteractionResult {
 
 scalar InteractionValue
 
+interface LikableNode {
+  isLiked: Boolean
+  likedCount: Int
+}
+
 enum LIKE_OPERATION {
   Like
   Unlike
@@ -308,6 +342,10 @@ enum LIKE_OPERATION {
 input LikeEntityInput {
   nodeId: ID!
   operation: LIKE_OPERATION!
+}
+
+interface LiveNode {
+  liveStream: LiveStream
 }
 
 type LiveStream {
@@ -324,7 +362,7 @@ interface Media {
   sources: [MediaSource]
 }
 
-type MediaContentItem implements ContentItem & Node {
+type MediaContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ScriptureNode & LikableNode & ShareableNode {
   id: ID!
   title(hyphenated: Boolean): String
   coverImage: ImageMedia
@@ -447,6 +485,11 @@ type PrayerRequest implements Node {
   isPrayed: Boolean
 }
 
+interface ProgressNode {
+  percentComplete: Float
+  upNext: ContentItem
+}
+
 input PushSettingsInput {
   enabled: Boolean
   pushProviderUserId: String
@@ -492,6 +535,10 @@ type ScriptureFeature implements Feature & Node {
   sharing: SharableFeature
 }
 
+interface ScriptureNode {
+  scriptures: [Scripture]
+}
+
 type SearchResult {
   cursor: String
   title: String
@@ -523,6 +570,10 @@ type SharableFeature implements Sharable {
   url: String @deprecated(reason: "Not supported on a feature")
 }
 
+interface ShareableNode {
+  sharing: SharableContentItem
+}
+
 type SmsPinResult {
   success: Boolean
   userAuthStatus: USER_AUTH_STATUS
@@ -548,12 +599,16 @@ type ThemeColors {
   alert: Color
 }
 
+interface ThemedNode {
+  theme: Theme
+}
+
 enum ThemeType {
   LIGHT
   DARK
 }
 
-type UniversalContentItem implements ContentItem & Node {
+type UniversalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & ShareableNode {
   id: ID!
   title(hyphenated: Boolean): String
   coverImage: ImageMedia
@@ -624,6 +679,10 @@ type VideoMediaSource implements MediaSource {
   uri: String
 }
 
+interface VideoNode {
+  videos: [VideoMedia]
+}
+
 type WebviewFeature implements Feature & Node {
   id: ID!
   order: Int
@@ -632,7 +691,7 @@ type WebviewFeature implements Feature & Node {
   url: String
 }
 
-type WeekendContentItem implements ContentItem & Node {
+type WeekendContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & LiveNode & ShareableNode & FeaturesNode {
   id: ID!
   title(hyphenated: Boolean): String
   coverImage: ImageMedia
