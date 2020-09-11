@@ -21,6 +21,10 @@ jobs:
     - name: Install Dependencies
       run: yarn --ignore-scripts
 
+  lint:
+    needs: setup
+    steps:
+
     - name: Lint
       run: yarn lint
 
