@@ -7,16 +7,13 @@ on:
 jobs:
   setup:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [10.19.0]
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup test environment with node ${{ matrix.node-version }}
+    - name: Setup Node 10
       uses: actions/setup-node@v1
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: 10.x
     - run: |
         npm install -g yarn
         yarn --ignore-scripts
