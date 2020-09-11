@@ -9,7 +9,7 @@
     "src"
   ],
   "scripts": {
-    "android": "SIM=\"$($HOME/Library/Android/sdk/emulator/emulator -list-avds | sed -n 1p)\" && $HOME/Library/Android/sdk/emulator/emulator -avd \"${SIM}\" & react-native run-android --appId com.apolloschurch.app",
+    "android": "SIM=\"$($HOME/Library/Android/sdk/emulator/emulator -list-avds | sed -n 1p)\" && $HOME/Library/Android/sdk/emulator/emulator -avd \"${SIM}\" & react-native run-android --appId com.differential.apollos",
     "codecov": "cat ./coverage/lcov.info | codecov",
     "fixlint": "eslint ./src --fix",
     "ios": "react-native run-ios --simulator=\"iPhone 11\"",
@@ -23,7 +23,7 @@
     "postversion": "react-native-version --never-amend --never-increment-build --android android/app/build.gradle --ios ios/",
     "prestart": "yarn generate-stories & node ./scripts/get-introspection-data.js",
     "postinstall": "jetify && yarn pods",
-    "pods": "(cd ios && bundle install && bundle exec pod install)",
+    "pods": "(bundle install && cd ios && bundle exec pod install)",
     "start": "react-native start",
     "test": "TZ=UTC jest",
     "upgrade": "npx @apollosproject/upgrade-tools upgrade",
