@@ -1,19 +1,12 @@
 name: Tests CI
 
 on:
-  push:
-    branches:
-      - master
-    paths-ignore:
-      - '**.md'
   pull_request:
     types: [opened, reopened, synchronize]
 
 jobs:
-  tests_ci:
+  setup:
     runs-on: ubuntu-latest
-    env:
-      CI: true
     strategy:
       matrix:
         node-version: [10.19.0]
