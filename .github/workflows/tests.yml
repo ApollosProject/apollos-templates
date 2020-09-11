@@ -14,17 +14,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 10.x
-    - run: |
-        npm install -g yarn
-        yarn --ignore-scripts
 
-    # - name: Install client dependencies
-    #   run: yarn --ignore-scripts
-    #   working-directory: ./apolloschurchapp
+    - name: Install Yarn
+      run: npm install -g yarn
 
-    # - name: Install api dependencies
-    #   run: yarn --ignore-scripts
-    #   working-directory: ./apollos-church-api
+    - name: Install Dependencies
+      run: yarn --ignore-scripts
 
     - name: Lint
       run: yarn lint
