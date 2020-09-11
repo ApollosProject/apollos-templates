@@ -1,44 +1,47 @@
-name: Tests
+name: Tests CI
 
 on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
   pull_request:
-    branches: [ master, develop ]
+    types: [opened, reopened, synchronize]
 
 jobs:
-  setup:
+  tests_ci:
     runs-on: ubuntu-latest
+    env:
+      CI: true
+    strategy:
+      matrix:
+        node-version: [10.19.0]
+
     steps:
-
     - uses: actions/checkout@v2
-
-    - name: Setup Node.js 10.x
+    - name: Setup test environment with node ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
-        node-version: 10.x
+        node-version: ${{ matrix.node-version }}
+    - run: |
+        npm install -g yarn
+        yarn --ignore-scripts
 
-    - name: Install Yarn
-      run: npm install -g yarn
+    # - name: Install client dependencies
+    #   run: yarn --ignore-scripts
+    #   working-directory: ./apolloschurchapp
 
-    - name: Install Dependencies
-    - run: yarn --ignore-scripts
-
-  eslint:
-    needs: setup
-    steps:
+    # - name: Install api dependencies
+    #   run: yarn --ignore-scripts
+    #   working-directory: ./apollos-church-api
 
     - name: Lint
       run: yarn lint
 
-  jest:
-    needs: setup
-    steps:
-
     - name: Test
       run: yarn test --forceExit
-
-  codecov:
-    needs: setup
-    steps:
+      working-directory: ./apolloschurchapp
 
     - name: Generate Codecov
       run: yarn lerna run codecov
