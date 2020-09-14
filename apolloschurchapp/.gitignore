@@ -146,3 +146,6 @@ project.xcworkspace
 
 # Fastlane
 fastlane/report.xml
+
+# symbols
+apolloschurchapp.app.dSYM.zip
