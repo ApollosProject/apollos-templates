@@ -14,17 +14,20 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
-  - google-cast-sdk-no-bluetooth (4.4.7):
-    - google-cast-sdk-no-bluetooth/Core (= 4.4.7)
-    - Protobuf (~> 3.0)
-  - google-cast-sdk-no-bluetooth/Core (4.4.7):
-    - Protobuf (~> 3.0)
-  - OneSignal (2.10.1)
+  - google-cast-sdk-no-bluetooth (4.4.8):
+    - google-cast-sdk-no-bluetooth/Core (= 4.4.8)
+    - GTMSessionFetcher/Core (~> 1.0)
+    - Protobuf (~> 3.12)
+  - google-cast-sdk-no-bluetooth/Core (4.4.8):
+    - GTMSessionFetcher/Core (~> 1.0)
+    - Protobuf (~> 3.12)
+  - GTMSessionFetcher/Core (1.4.0)
+  - OneSignal (2.15.2)
   - Permission-Notifications (2.0.10):
     - RNPermissions
   - Permission-PhotoLibrary (2.0.10):
     - RNPermissions
-  - Protobuf (3.12.0)
+  - Protobuf (3.13.0)
   - React (0.60.5):
     - React-Core (= 0.60.5)
     - React-DevSupport (= 0.60.5)
@@ -86,8 +89,8 @@ PODS:
     - React
   - react-native-music-control (0.10.8):
     - React
-  - react-native-onesignal (3.3.2):
-    - OneSignal (= 2.10.1)
+  - react-native-onesignal (3.9.1):
+    - OneSignal (= 2.15.2)
     - React (< 1.0.0, >= 0.13.0)
   - react-native-passkit-wallet (0.1.4):
     - React
@@ -207,6 +210,7 @@ SPEC REPOS:
     - AstronomerAnalytics
     - boost-for-react-native
     - google-cast-sdk-no-bluetooth
+    - GTMSessionFetcher
     - OneSignal
     - Protobuf
 
@@ -315,11 +319,12 @@ SPEC CHECKSUMS:
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
-  google-cast-sdk-no-bluetooth: 197acace9d5a78380bdaef8d45439b2250fa050b
-  OneSignal: 8fb749fa07f88006403c9b659a570fb7fb74519a
+  google-cast-sdk-no-bluetooth: d5a60530c72b0907fb302d835952b6cb0ba5f128
+  GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  OneSignal: 9531e385388565f4d31797ddadbe0fcc786430ec
   Permission-Notifications: c9eb3a2da68dc0f37a8dc67d37bd28d150c5041d
   Permission-PhotoLibrary: e59a7a687e002e8c8c46946c26520934ba85a688
-  Protobuf: 2793fcd0622a00b546c60e7cbbcc493e043e9bb9
+  Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
   React: 53c53c4d99097af47cf60594b8706b4e3321e722
   React-Core: ba421f6b4f4cbe2fb17c0b6fc675f87622e78a64
   React-cxxreact: 8384287780c4999351ad9b6e7a149d9ed10a2395
@@ -333,7 +338,7 @@ SPEC CHECKSUMS:
   react-native-image-picker: e6e06d4315e3c85bad17e4b2002cd29f11d202c8
   react-native-maps: 6e499eee4eabf422ba8b6f94e993cc768bf35153
   react-native-music-control: dcfe5b61e56a15898c4618579cb8ce612c9d21a8
-  react-native-onesignal: 8958311abbd9125f26e600914e48833b57321cbf
+  react-native-onesignal: ad2eaab1517951e50d19fa3eccd16d3048167181
   react-native-passkit-wallet: 51e3babdaeec4c10b5736786ebd1bfb470fcaa36
   react-native-safari-view: 955d7160d159241b8e9395d12d10ea0ef863dcdd
   react-native-safe-area-context: e380a6f783ccaec848e2f3cc8eb205a62362950d
