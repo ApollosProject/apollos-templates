@@ -2,7 +2,7 @@ import { createStackNavigator } from 'react-navigation';
 
 import NodeSingle from './NodeSingle';
 
-const ContentSingleNavigator = createStackNavigator(
+const NodeSingleNavigator = createStackNavigator(
   {
     NodeSingle,
   },
@@ -14,4 +14,4 @@ const ContentSingleNavigator = createStackNavigator(
   }
 );
 
-export default ContentSingleNavigator;
+export default NodeSingleNavigator;

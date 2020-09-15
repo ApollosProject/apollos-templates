@@ -4,17 +4,15 @@ import PropTypes from 'prop-types';
 
 import { ThemeMixin } from '@apollosproject/ui-kit';
 
-// import { TrackEventWhenLoaded } from '@apollosproject/ui-analytics';
 import {
   InteractWhenLoadedConnected,
   NodeSingleConnected,
 } from '@apollosproject/ui-connected';
 
-// import ActionContainer from './ActionContainer';
 
 import NavigationHeader from '../ui/NavigationHeader';
 
-class ContentSingle extends PureComponent {
+class NodeSingle extends PureComponent {
   static propTypes = {
     navigation: PropTypes.shape({
       getParam: PropTypes.func,
@@ -41,19 +39,10 @@ class ContentSingle extends PureComponent {
         }}
       >
         <InteractWhenLoadedConnected nodeId={this.nodeId} action={'COMPLETE'} />
-        {/* <TrackEventWhenLoaded */}
-        {/*   isLoading={loading} */}
-        {/*   eventName={'View Node'} */}
-        {/*   properties={{ */}
-        {/*     title: content.title, */}
-        {/*     itemId: this.itemId, */}
-        {/*   }} */}
-        {/* /> */}
         <NodeSingleConnected nodeId={this.nodeId} />
-        {/* <ActionContainer itemId={id} /> */}
       </ThemeMixin>
     );
   }
 }
 
-export default ContentSingle;
+export default NodeSingle;
