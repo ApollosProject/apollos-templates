@@ -143,3 +143,6 @@ project.xcworkspace
 
 # CocoaPods
 /ios/Pods/
+
+# Fastlane
+fastlane/report.xml
