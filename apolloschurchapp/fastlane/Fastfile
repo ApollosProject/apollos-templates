@@ -37,7 +37,7 @@ end
 platform :android do
   desc "Deploy a new version to the Google Play"
   lane :deploy do
-    gradle(task: "clean assembleRelease")
-    upload_to_play_store
+    gradle(project_dir: "android", task: "clean assembleRelease")
+    upload_to_play_store(track: "alpha")
   end
 end
