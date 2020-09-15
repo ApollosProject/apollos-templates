@@ -151,6 +151,16 @@ ROCK_MAPPINGS:
   MOBILE_DEVICE_TYPE_ID: 671
 
 HOME_FEATURES:
+  - algorithms: [USER_FEED]
+    type: HeroList
+    primaryAction:
+      # Right now, you hardcode exactly what GraphQL should return.
+      # Long term, we hope to have a more sophisticated mechanism for driving this field
+      action: OPEN_NODE
+      title: 'Read More'
+      relatedNode:
+        __typename: UniversalContentItem
+        id: 21
   - algorithms: [DAILY_PRAYER]
     isCard: false
     type: PrayerList
@@ -158,14 +168,6 @@ HOME_FEATURES:
   - algorithms: [CAMPAIGN_ITEMS]
     type: HeroList
     isFeatured: true
-    primaryAction:
-      # Right now, you hardcode exactly what GraphQL should return.
-      # Long term, we hope to have a more sophisticated mechanism for driving this field
-      action: OPEN_URL
-      title: 'Read More'
-      relatedNode:
-        __typename: Url
-        url: 'https://wwww.apollos.io'
   - title: FOR YOU
     algorithms: [SERMON_CHILDREN, PERSONA_FEED]
     subtitle: Explore what God calls you to today
@@ -185,8 +187,6 @@ HOME_FEATURES:
         arguments:
           contentChannelId: 13
       - type: UPCOMING_EVENTS
-  - algorithms: [USER_FEED]
-    type: VerticalCardList
 
 # Default mapping of field types -> ids. There's probably no reason to edit this.
 ROCK_CONSTANTS:

@@ -46,6 +46,16 @@ dependencies.forEach((dep) => {
       `printf 'y\n' | yarn wml add ${apollosAppsLocation}/packages/apollos-${folderName} ${__dirname}/../node_modules/${dep}`,
       { encoding: 'utf8' }
     );
+    const watchmanConfig = JSON.parse(
+      fs.readFileSync(
+        `${apollosAppsLocation}/packages/apollos-${folderName}/.watchmanconfig`
+      )
+    );
+    watchmanConfig.ignore_dirs = [...watchmanConfig.ignore_dirs, 'coverage'];
+    fs.writeFileSync(
+      `${apollosAppsLocation}/packages/apollos-${folderName}/.watchmanconfig`,
+      JSON.stringify(watchmanConfig, null, 2)
+    );
     console.log(output);
   }
 });
