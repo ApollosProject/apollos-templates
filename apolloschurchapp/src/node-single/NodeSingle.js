@@ -9,7 +9,6 @@ import {
   NodeSingleConnected,
 } from '@apollosproject/ui-connected';
 
-
 import NavigationHeader from '../ui/NavigationHeader';
 
 class NodeSingle extends PureComponent {
