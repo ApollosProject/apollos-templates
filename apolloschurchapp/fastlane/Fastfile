@@ -11,7 +11,7 @@
 #
 
 # Uncomment the line if you want fastlane to automatically update itself
-update_fastlane
+#update_fastlane
 
 before_all do
   ensure_git_branch
@@ -27,17 +27,35 @@ platform :ios do
   end
 
   desc "Push a new beta build to TestFlight"
-  lane :beta do
-    increment_build_number(xcodeproj: "apolloschurchapp.xcodeproj")
-    build_app(workspace: "apolloschurchapp.xcworkspace", scheme: "apolloschurchappprod")
+  lane :deploy do
+    increment_build_number(build_number: number_of_commits, xcodeproj: "ios/apolloschurchapp.xcodeproj")
+    build_app(workspace: "ios/apolloschurchapp.xcworkspace", scheme: "apolloschurchappprod")
     upload_to_testflight
   end
 end
 
 platform :android do
+
+  # necessary because setting gradle properties doesn't seem to be working
+  desc "Bumps Android versionCode"
+  lane :bump_version_code do
+    path = '../android/app/build.gradle'
+    re = /versionCode\s+(\d+)/
+
+    s = File.read(path)
+    versionCode = number_of_commits
+    s[re, 1] = (versionCode).to_s
+
+    f = File.new(path, 'w')
+    f.write(s)
+    f.close
+  end
+
   desc "Deploy a new version to the Google Play"
   lane :deploy do
-    gradle(task: "clean assembleRelease")
-    upload_to_play_store
+    bump_version_code
+    gradle(task: 'clean', project_dir: 'android')
+    gradle(task: 'bundle', build_type: 'Release', project_dir: 'android')
+    upload_to_play_store(track: "internal")
   end
 end
