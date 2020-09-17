@@ -35,16 +35,27 @@ platform :ios do
 end
 
 platform :android do
+
+  # necessary because setting gradle properties doesn't seem to be working
+  desc "Bumps Android versionCode"
+  lane :bump_version_code do
+    path = '../android/app/build.gradle'
+    re = /versionCode\s+(\d+)/
+
+    s = File.read(path)
+    versionCode = number_of_commits
+    s[re, 1] = (versionCode).to_s
+
+    f = File.new(path, 'w')
+    f.write(s)
+    f.close
+  end
+
   desc "Deploy a new version to the Google Play"
   lane :deploy do
-    gradle(
-      project_dir: "android",
-      task: "clean assembleRelease",
-      properties: {
-        "versionCode" => number_of_commits,
-        "versionName" => "1.0.0",
-      }
-    )
+    bump_version_code
+    gradle(task: 'clean', project_dir: 'android')
+    gradle(task: 'bundle', build_type: 'Release', project_dir: 'android')
     upload_to_play_store(track: "internal")
   end
 end

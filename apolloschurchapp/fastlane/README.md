@@ -30,6 +30,11 @@ Push a new beta build to TestFlight
 ----
 
 ## Android
+### android bump_version_code
+```
+fastlane android bump_version_code
+```
+Bumps Android versionCode
 ### android deploy
 ```
 fastlane android deploy
