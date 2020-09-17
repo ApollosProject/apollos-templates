@@ -37,14 +37,8 @@ end
 platform :android do
   desc "Deploy a new version to the Google Play"
   lane :deploy do
-    gradle(
-      project_dir: "android",
-      task: "clean assembleRelease",
-      properties: {
-        "versionCode" => number_of_commits,
-        "versionName" => "1.0.0",
-      }
-    )
+    gradle(task: 'clean', project_dir: 'android/')
+    gradle(task: 'bundle', build_type: 'Release', project_dir: 'android/')
     upload_to_play_store(track: "internal")
   end
 end
