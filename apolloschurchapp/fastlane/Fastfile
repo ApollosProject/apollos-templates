@@ -27,7 +27,7 @@ platform :ios do
   end
 
   desc "Push a new beta build to TestFlight"
-  lane :beta do
+  lane :deploy do
     increment_build_number(build_number: number_of_commits, xcodeproj: "ios/apolloschurchapp.xcodeproj")
     build_app(workspace: "ios/apolloschurchapp.xcworkspace", scheme: "apolloschurchappprod")
     upload_to_testflight
@@ -37,7 +37,14 @@ end
 platform :android do
   desc "Deploy a new version to the Google Play"
   lane :deploy do
-    gradle(project_dir: "android", task: "clean assembleRelease")
+    gradle(
+      project_dir: "android",
+      task: "clean assembleRelease",
+      properties: {
+        "versionCode" => number_of_commits,
+        "versionName" => "1.0.0",
+      }
+    )
     upload_to_play_store(track: "internal")
   end
 end
