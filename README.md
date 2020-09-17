@@ -6,49 +6,53 @@ Click the "Use the Template" button on the repo page ⬆
 
 ![template button](https://files-2aze9g2bq.vercel.app)
 
-Clone down your new repo and you're off the to races!
+Clone down your new repo and run the initialization script:
 
-### Set Up
+```
+npx @apollosproject/apollos-cli init
+```
 
-TBD
+## Develop
 
-## Instructions for co-development with [Apollos Apps](https://github.com/ApollosProject/apollos-apps)
+Install tools necessary
 
-First of all, to those of you who remember, the Monorepo, I'm sorry, stick with me. You'll need to change how you work slightly now that the app themselves have been split out, but you'll still get the same great features.
+- [Yarn](https://yarnpkg.com/)
+- [XCode](https://developer.apple.com/xcode/)
+- [Android Studio](https://developer.android.com/studio)
+- [Bundler](https://bundler.io)
 
-### Setting up "linked" development
+Make sure at least the following environment variables are set:
 
-1. From this repo, cd into apollos-church-api and apolloschurchapp and run `yarn install`.
-2. From this repo, run `yarn pods` from the root.
-3. Edit your `.env`. in apolloschurchapp, and add a relative or direct path to your apollos-apps root under the `APOLLOS_APPS_LOCATION` variable. ex: `APOLLOS_APPS_LOCATION=../../apollos-prototype`.
-4. From the root of `apollos-apps`, run `yarn link-packages`. **You only need to run this once**
-5. From the root of this repo, run `yarn link-packages`. **You only need to run this once**
+```
+# API .env file
+ROCK_API=
+ROCK_TOKEN=
+BIBLE_API_KEY=
 
-### Running the linked environments
+# App .env file
+APP_DATA_URL=
+GOOGLE_MAPS_API_KEY=
+```
 
-1. If you are working on API packages, cd into the `apollos-apps` project and run `yarn build:api-watch`.
-   If you don't do this, you can still run the app, but you won't get live updates on changes to the API packages.
-2. From this repo, run `yarn start`. Just like the good old days.
+Install dependencies, cocoapods, start the bundler
 
-### FAQ
+```
+yarn
+yarn start
+```
 
-**Q**: Why `linkemon`? How is it different than `nodemon`?<br>
-**A**: `linkemon` will refresh the app if symlinked (yarn linked) packages are changed.
+Start the sims _in separate tabs_
 
-**Q**: Who do I yell at if things are broken?<br>
-**A**: @vinnyjth
+```
+yarn ios
+yarn android
+```
 
-**Q**: Do I need to set that `APOLLOS_APPS_LOCATION` variable?<br>
-**A**: Yes. Because `metro` doesn't support symlinks, we need to use `wml`, which needs to know where the packages live on disk.
+## Deploy
 
-**Q**: I'm getting errors when starting the bundler saying folders are not being watched!<br>
-**A**: `watchman watch-del-all` and then try `yarn start` from this repo again.
+We use `fastlane` to deploy test builds to Testflight and the Play Store interal track. From the app directory:
 
-**Q**: What if I need to add a package to either repo?<br>
-**A**: In this case the node modules have changed and you'll need to `yarn unlink/link` from this repo again.
-
-**Q**: Linking isn't working!<br>
-**A**: Try going into each respective directory and running `yarn yalc update`.
-
-**Q**: Unlinking isn't working!<br>
-**A**: Try running `yarn --check-files` to install after unlinking.
+```
+bundle exec fastlane ios deploy
+bundle exec fastlane android deploy
+```
