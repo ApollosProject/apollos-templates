@@ -23,7 +23,7 @@ jobs:
       run: yarn --ignore-scripts
 
     - name: Jest
-      run: yarn test
+      run: yarn test -- -- --forceExit
 
     - name: Codecov
       uses: codecov/codecov-action@v1
