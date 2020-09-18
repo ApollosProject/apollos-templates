@@ -4,6 +4,7 @@ enum ACTION_FEATURE_ACTION {
   READ_CONTENT
   READ_EVENT
   OPEN_URL
+  OPEN_NODE
 }
 
 type ActionListAction {
@@ -166,7 +167,7 @@ input ContentItemsConnectionInput {
   after: String
 }
 
-type ContentSeriesContentItem implements ContentItem & Node {
+type ContentSeriesContentItem implements ContentItem & Node & LikableNode & ShareableNode & FeaturesNode {
   id: ID!
   title(hyphenated: Boolean): String
   coverImage: ImageMedia
@@ -194,7 +195,7 @@ type Device implements Node {
   notificationsEnabled: Boolean!
 }
 
-type DevotionalContentItem implements ContentItem & Node {
+type DevotionalContentItem implements ContentItem & Node & LikableNode & ShareableNode {
   id: ID!
   title(hyphenated: Boolean): String
   coverImage: ImageMedia
@@ -232,6 +233,10 @@ type FeatureAction {
   relatedNode: Node
   action: ACTION_FEATURE_ACTION
   title: String
+}
+
+interface FeaturesNode {
+  features: [Feature]
 }
 
 enum GENDER {
@@ -300,6 +305,11 @@ type InteractionResult {
 
 scalar InteractionValue
 
+interface LikableNode {
+  isLiked: Boolean
+  likedCount: Int
+}
+
 enum LIKE_OPERATION {
   Like
   Unlike
@@ -308,6 +318,10 @@ enum LIKE_OPERATION {
 input LikeEntityInput {
   nodeId: ID!
   operation: LIKE_OPERATION!
+}
+
+interface LiveNode {
+  liveStream: LiveStream
 }
 
 type LiveStream {
@@ -324,7 +338,7 @@ interface Media {
   sources: [MediaSource]
 }
 
-type MediaContentItem implements ContentItem & Node {
+type MediaContentItem implements ContentItem & Node & LikableNode & ShareableNode {
   id: ID!
   title(hyphenated: Boolean): String
   coverImage: ImageMedia
@@ -523,6 +537,10 @@ type SharableFeature implements Sharable {
   url: String @deprecated(reason: "Not supported on a feature")
 }
 
+interface ShareableNode {
+  sharing: SharableContentItem
+}
+
 type SmsPinResult {
   success: Boolean
   userAuthStatus: USER_AUTH_STATUS
@@ -553,7 +571,7 @@ enum ThemeType {
   DARK
 }
 
-type UniversalContentItem implements ContentItem & Node {
+type UniversalContentItem implements ContentItem & Node & LikableNode & ShareableNode {
   id: ID!
   title(hyphenated: Boolean): String
   coverImage: ImageMedia
@@ -632,7 +650,7 @@ type WebviewFeature implements Feature & Node {
   url: String
 }
 
-type WeekendContentItem implements ContentItem & Node {
+type WeekendContentItem implements ContentItem & Node & LikableNode & LiveNode & ShareableNode & FeaturesNode {
   id: ID!
   title(hyphenated: Boolean): String
   coverImage: ImageMedia
