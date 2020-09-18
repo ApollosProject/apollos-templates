@@ -21,17 +21,10 @@ Install tools necessary
 - [Android Studio](https://developer.android.com/studio)
 - [Bundler](https://bundler.io)
 
-Make sure at least the following environment variables are set:
+Run initialization script to set up environments
 
 ```
-# API .env file
-ROCK_API=
-ROCK_TOKEN=
-BIBLE_API_KEY=
-
-# App .env file
-APP_DATA_URL=
-GOOGLE_MAPS_API_KEY=
+yarn init
 ```
 
 Install dependencies, cocoapods, start the bundler
