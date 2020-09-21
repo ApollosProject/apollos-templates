@@ -1,0 +1,30 @@
+name: Deploy to Apple App Store
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.19.x
+
+    - name: Install Yarn
+      run: npm install -g yarn
+
+    - name: Install Dependencies
+      run: yarn
+
+    - name: Fastlane Deploy
+      run: |
+        export MATCH_GIT_BASIC_AUTHORIZATION=${{ secrets.APOLLOS_ADMIN_MATCH_TOKEN }}
+        cd apolloschurchapp
+        bundle exec fastlane ios deploy
