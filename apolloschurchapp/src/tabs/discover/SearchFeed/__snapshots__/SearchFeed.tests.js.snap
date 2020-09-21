@@ -11,6 +11,7 @@ exports[`The SearchFeed component should render 1`] = `
 >
   <View
     collapsable={false}
+    forwardedRef={[Function]}
     onGestureHandlerEvent={[Function]}
     onGestureHandlerStateChange={[Function]}
     style={
@@ -30,6 +31,7 @@ exports[`The SearchFeed component should render 1`] = `
       }
     >
       <View
+        forwardedRef={[Function]}
         pointerEvents="auto"
         style={
           Object {
@@ -178,7 +180,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
             initialNumToRender={10}
             keyExtractor={[Function]}
             maxToRenderPerBatch={10}
-            numColumns={1}
             onContentSizeChange={[Function]}
             onEndReachedThreshold={0.7}
             onLayout={[Function]}
@@ -211,7 +212,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -395,7 +396,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -545,7 +546,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -706,7 +707,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -867,7 +868,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -1016,7 +1017,7 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -1318,6 +1319,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
 >
   <View
     collapsable={false}
+    forwardedRef={[Function]}
     onGestureHandlerEvent={[Function]}
     onGestureHandlerStateChange={[Function]}
     style={
@@ -1337,6 +1339,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
       }
     >
       <View
+        forwardedRef={[Function]}
         pointerEvents="auto"
         style={
           Object {
@@ -1496,7 +1499,6 @@ exports[`The SearchFeed component should render a loading state 1`] = `
             initialNumToRender={10}
             keyExtractor={[Function]}
             maxToRenderPerBatch={10}
-            numColumns={1}
             onContentSizeChange={[Function]}
             onEndReached={[Function]}
             onEndReachedThreshold={0.7}
@@ -1530,7 +1532,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -1678,7 +1680,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -1826,7 +1828,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -1974,7 +1976,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -2122,7 +2124,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -2270,7 +2272,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -2418,7 +2420,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -2566,7 +2568,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -2714,7 +2716,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -2862,7 +2864,7 @@ exports[`The SearchFeed component should render a loading state 1`] = `
               >
                 <View
                   accessible={true}
-                  clickable={true}
+                  focusable={true}
                   onClick={[Function]}
                   onResponderGrant={[Function]}
                   onResponderMove={[Function]}
@@ -3128,6 +3130,7 @@ exports[`The SearchFeed component should render an empty state 1`] = `
 >
   <View
     collapsable={false}
+    forwardedRef={[Function]}
     onGestureHandlerEvent={[Function]}
     onGestureHandlerStateChange={[Function]}
     style={
@@ -3147,6 +3150,7 @@ exports[`The SearchFeed component should render an empty state 1`] = `
       }
     >
       <View
+        forwardedRef={[Function]}
         pointerEvents="auto"
         style={
           Object {
@@ -3193,7 +3197,6 @@ exports[`The SearchFeed component should render an empty state 1`] = `
             initialNumToRender={10}
             keyExtractor={[Function]}
             maxToRenderPerBatch={10}
-            numColumns={1}
             onContentSizeChange={[Function]}
             onEndReachedThreshold={0.7}
             onLayout={[Function]}

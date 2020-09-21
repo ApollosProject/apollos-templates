@@ -21,5 +21,8 @@ else
 		PKGS=$(echo "$JSON" | sed -n "$DEPSLINE",/^$/p | grep "@apollosproject" | tr -d "\n")
 		DEVPKGS=$(echo "$JSON" | sed -n "$DEVDEPSLINE","$DEPSLINE"p | grep "@apollosproject" | tr -d "\n")
 fi
+
+PKGS=$(echo "$PKGS" | sed -e "s/@apollosproject\/react-native-airplay-btn@canary//")
+
 yarn add --dev $DEVPKGS --ignore-scripts
 yarn add $PKGS --ignore-scripts

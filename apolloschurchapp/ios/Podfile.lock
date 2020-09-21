@@ -273,8 +273,8 @@ PODS:
     - React
   - react-native-safari-view (1.0.0):
     - React
-  - react-native-safe-area-context (0.3.6):
-    - React
+  - react-native-safe-area-context (3.1.8):
+    - React-Core
   - react-native-video (5.0.2):
     - React
     - react-native-video/Video (= 5.0.2)
@@ -615,7 +615,7 @@ SPEC CHECKSUMS:
   react-native-onesignal: ad2eaab1517951e50d19fa3eccd16d3048167181
   react-native-passkit-wallet: 51e3babdaeec4c10b5736786ebd1bfb470fcaa36
   react-native-safari-view: 955d7160d159241b8e9395d12d10ea0ef863dcdd
-  react-native-safe-area-context: e380a6f783ccaec848e2f3cc8eb205a62362950d
+  react-native-safe-area-context: 79fea126c6830c85f65947c223a5e3058a666937
   react-native-video: d01ed7ff1e38fa7dcc6c15c94cf505e661b7bfd0
   react-native-webview: db4682f1698ab4b17a5e88f951031d203ff8aea8
   React-RCTActionSheet: 910163b6b09685a35c4ebbc52b66d1bfbbe39fc5
