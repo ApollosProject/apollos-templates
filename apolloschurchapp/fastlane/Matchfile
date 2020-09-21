@@ -1,4 +1,4 @@
-git_url("https://github.com/ApollosProject/certificates")
+git_url("https://github.com/ApollosProject/certificates.git")
 
 storage_mode("git")
 
