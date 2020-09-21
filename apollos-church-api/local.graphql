@@ -394,7 +394,8 @@ interface MediaSource {
 
 type Mutation {
   _placeholder: Boolean
-  updateLikeEntity(input: LikeEntityInput!): ContentItem
+  updateLikeEntity(input: LikeEntityInput!): ContentItem @deprecated(reason: "Use the more general updateLikeNode instead")
+  updateLikeNode(input: LikeEntityInput!): Node
   updateProfileField(input: UpdateProfileInput!): Person
   updateProfileFields(input: [UpdateProfileInput]!): Person
   uploadProfileImage(file: Upload!, size: Int!): Person
