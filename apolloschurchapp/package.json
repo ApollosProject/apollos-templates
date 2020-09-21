@@ -29,6 +29,7 @@
     "test": "TZ=UTC jest",
     "upgrade": "npx @apollosproject/upgrade-tools upgrade",
     "latest": "./scripts/add-packages.sh",
+    "beta": "./scripts/add-packages.sh beta",
     "canary": "./scripts/add-packages.sh canary"
   },
   "jest": {
