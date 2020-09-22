@@ -124,12 +124,12 @@
     "rn-fetch-blob": "^0.10.16",
     "stream": "^0.0.2",
     "wml": "^0.0.83",
-    "yup": "0.26.6",
-    "apollo-storybook-react-native": "0.2.12"
+    "yup": "0.26.6"
   },
   "devDependencies": {
     "@apollosproject/eslint-config": "^1.6.0-beta.0",
     "babel-eslint": "10.0.1",
+    "babel-plugin-module-resolver": "^4.0.0",
     "codecov": "3.7.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
