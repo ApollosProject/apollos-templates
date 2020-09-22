@@ -23,6 +23,9 @@ jobs:
     - name: Install Dependencies
       run: yarn
 
+    - name: Install Keychain
+      uses: sinoru/actions-setup-keychain@v1.0
+
     - name: Fastlane Deploy
       run: |
         cd apolloschurchapp
