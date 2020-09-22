@@ -8,14 +8,13 @@ import { ErrorCard, ThemeMixin } from '@apollosproject/ui-kit';
 import { TrackEventWhenLoaded } from '@apollosproject/ui-analytics';
 import { InteractWhenLoadedConnected } from '@apollosproject/ui-connected';
 
+import NavigationHeader from '../ui/NavigationHeader';
 import ActionContainer from './ActionContainer';
 import GET_CONTENT_ITEM from './getContentItem';
 
 import DevotionalContentItem from './DevotionalContentItem';
 import UniversalContentItem from './UniversalContentItem';
 import WeekendContentItem from './WeekendContentItem';
-
-import NavigationHeader from './NavigationHeader';
 
 class ContentSingle extends PureComponent {
   static propTypes = {

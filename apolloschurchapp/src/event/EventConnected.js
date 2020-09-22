@@ -7,7 +7,7 @@ import { ErrorCard, ThemeMixin } from '@apollosproject/ui-kit';
 
 import { TrackEventWhenLoaded } from '@apollosproject/ui-analytics';
 
-import NavigationHeader from '../content-single/NavigationHeader';
+import NavigationHeader from '../ui/NavigationHeader';
 import Event from './Event';
 import GET_EVENT from './getEvent';
 

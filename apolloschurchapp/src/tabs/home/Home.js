@@ -42,6 +42,13 @@ class Home extends PureComponent {
         transitionKey: 2,
       });
     }
+    if (action === 'OPEN_NODE') {
+      console.warn(relatedNode);
+      this.props.navigation.navigate('NodeSingle', {
+        nodeId: relatedNode.id,
+        transitionKey: 2,
+      });
+    }
     if (action === 'OPEN_URL') {
       openUrl(relatedNode.url);
     }
