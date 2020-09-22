@@ -7,8 +7,9 @@ DEVDEPSLINE=$(grep -n "devDependencies" package.json | sed -E "s/^([0-9]+):.*/\1
 DEPSLINE=$(grep -n "dependencies" package.json | sed -E "s/^([0-9]+):.*/\1/g")
 
 # determine what npm tag to update to
-if [ "$#" -eq 0 ]; then
-	TAG=latest
+if [ "$#" -ne 1 ]; then
+	echo "pass npm tag like this: ./add-packages.sh <TAG>"
+	exit 1
 else
 	TAG=$1
 fi;
