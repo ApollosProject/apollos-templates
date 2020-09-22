@@ -7,7 +7,12 @@ DEVDEPSLINE=$(grep -n "devDependencies" package.json | sed -E "s/^([0-9]+):.*/\1
 DEPSLINE=$(grep -n "dependencies" package.json | sed -E "s/^([0-9]+):.*/\1/g")
 
 # determine what npm tag to update to
-[[ $1 = "canary" ]] && TAG=canary || [[ $1 = "beta" ]] && TAG=beta || TAG=latest
+if [ "$#" -ne 1 ]; then
+	echo "pass npm tag like this: ./add-packages.sh <TAG>"
+	exit 1
+else
+	TAG=$1
+fi;
 
 # replace package names with version tag
 JSON=$(sed -E "s/^.*\"(@apollosproject\/[a-z\-]+)\".*$/\1@$TAG /g" package.json)
