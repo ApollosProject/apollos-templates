@@ -15,7 +15,7 @@ configure(() => {
   loadStories();
   loadApollosStories();
 
-  SplashScreen.hide({ duration: 250 });
+  SplashScreen.hide();
 }, module);
 
 export default StorybookUI;

@@ -54,11 +54,10 @@
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
-
-  [RNSplashScreen showSplash:@"SplashScreen" inRootView:rootView];
-
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+
+  [RNSplashScreen show];
 
   return YES;
 }
