@@ -2,7 +2,7 @@ import hoistNonReactStatic from 'hoist-non-react-statics';
 import React from 'react';
 import { StatusBar } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import RNBootSplash from 'react-native-bootsplash';
+import SplashScreen from 'react-native-splash-screen';
 
 import {
   BackgroundView,
@@ -32,7 +32,7 @@ const AppStatusBar = withTheme(({ theme }) => ({
 }))(StatusBar);
 
 const ProtectedRouteWithSplashScreen = (props) => {
-  const handleOnRouteChange = () => RNBootSplash.hide({ duration: 250 });
+  const handleOnRouteChange = () => SplashScreen.hide({ duration: 250 });
 
   return <ProtectedRoute {...props} onRouteChange={handleOnRouteChange} />;
 };

@@ -12,8 +12,8 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <React/RCTLinkingManager.h>
-#import "RNBootSplash.h"
 #import <GoogleCast/GoogleCast.h>
+#import "RNSplashScreen.h"
 
 @implementation AppDelegate
 
@@ -55,12 +55,11 @@
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
 
-  [RNBootSplash initWithStoryboard:@"SplashScreen" rootView:rootView];
+  [RNSplashScreen showSplash:@"SplashScreen" inRootView:rootView];
 
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
 
-  [RNBootSplash initialShow];
   return YES;
 }
 
