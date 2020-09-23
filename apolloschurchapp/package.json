@@ -32,7 +32,7 @@
     "beta": "./scripts/add-packages.sh beta",
     "canary": "./scripts/add-packages.sh canary",
     "icons": "react-native set-icon --path",
-    "splash": "react-native set-splash --resize center --path"
+    "splash": "react-native set-splash --path"
   },
   "jest": {
     "preset": "react-native",
