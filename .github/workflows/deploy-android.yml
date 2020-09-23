@@ -1,4 +1,4 @@
-name: Deploy iOS
+name: Deploy Android
 
 on:
   push:
@@ -23,13 +23,7 @@ jobs:
     - name: Install Dependencies
       run: yarn
 
-    - name: Install Keychain
-      uses: sinoru/actions-setup-keychain@v1.0
-
     - name: Fastlane Deploy
       run: |
         cd apolloschurchapp
-        bundle exec fastlane ios deploy
-      env:
-        MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
-        MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+        bundle exec fastlane android deploy
