@@ -55,7 +55,7 @@
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
 
-  [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
+  [RNBootSplash initWithStoryboard:@"SplashScreen" rootView:rootView];
 
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
