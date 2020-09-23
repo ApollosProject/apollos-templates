@@ -14,7 +14,7 @@ We are assuming you're using a Mac for this guide. Install tools necessary.
 - [Android Studio](https://developer.android.com/studio)
 - [Bundler](https://bundler.io)
 
-Clone down your new repo, and run initialization script to set up environments
+Clone down your new repo, and run the setup script to set up environments
 
 ```
 yarn setup
@@ -38,15 +38,15 @@ heroku create apollos-api -s container
 git push heroku master
 ```
 
-_NOTE: If you have a [team](https://devcenter.heroku.com/articles/heroku-teams) you'd like to use on Heroku to manage billing, you can use the `-t <teamname>` flag in the create command above._
+_NOTE: If you have a [team](https://devcenter.heroku.com/articles/heroku-teams) you'd like to use on Heroku to manage billing, you can use the `-t <teamname>` flag in the `create` command above._
 
-Test to make sure the app deployed correctly, open the GraphQL Playground on your API
+Open the GraphQL Playground on your API to test the deploy
 
 ```
 heroku open
 ```
 
-To enable to deploy on push to master automatically through the workflow, copy your [Heroku API key](https://dashboard.heroku.com/account) and set a [Github secret](https://docs.github.com/en/actions/reference/encrypted-secrets) in your new repository called `HEROKU_API_KEY`.
+To deploy automatically through the Github workflow, copy your [Heroku API key](https://dashboard.heroku.com/account) and set a [Github secret](https://docs.github.com/en/actions/reference/encrypted-secrets) in your new repository called `HEROKU_API_KEY`.
 
 ![github secret](https://files-5eu5fyz6u.vercel.app)
 
