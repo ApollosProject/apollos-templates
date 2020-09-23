@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Image } from 'react-native';
-import SafeAreaView from 'react-native-safe-area-view';
+import { SafeAreaView } from 'react-navigation';
 import PropTypes from 'prop-types';
 
 import { styled, BackgroundView } from '@apollosproject/ui-kit';

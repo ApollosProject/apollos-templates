@@ -11,6 +11,7 @@ exports[`the Devotional component renders a devotional 1`] = `
 >
   <View
     collapsable={false}
+    forwardedRef={[Function]}
     onGestureHandlerEvent={[Function]}
     onGestureHandlerStateChange={[Function]}
     style={
@@ -30,6 +31,7 @@ exports[`the Devotional component renders a devotional 1`] = `
       }
     >
       <View
+        forwardedRef={[Function]}
         pointerEvents="auto"
         style={
           Object {
@@ -180,6 +182,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                           },
                         ]
                       }
+                      forwardedRef={[Function]}
                       horizontal={true}
                       keyboardShouldPersistTaps="handled"
                       onMomentumScrollBegin={[Function]}
@@ -196,8 +199,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                         <View
                           accessibilityLabel="DEVOTIONAL"
                           accessible={true}
-                          clickable={true}
-                          isTVSelectable={true}
+                          focusable={true}
                           onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
@@ -252,8 +254,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                         <View
                           accessibilityLabel="SCRIPTURE"
                           accessible={true}
-                          clickable={true}
-                          isTVSelectable={true}
+                          focusable={true}
                           onClick={[Function]}
                           onResponderGrant={[Function]}
                           onResponderMove={[Function]}
@@ -319,6 +320,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                 >
                   <View
                     collapsable={false}
+                    forwardedRef={[Function]}
                     onGestureHandlerEvent={[Function]}
                     onGestureHandlerStateChange={[Function]}
                     style={
