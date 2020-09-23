@@ -6,7 +6,7 @@
     </style>
 
     <style name="BootTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/bootsplash</item>
+        <item name="android:windowBackground">@drawable/splashscreen</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 

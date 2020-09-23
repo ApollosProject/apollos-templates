@@ -1,7 +1,5 @@
 package com.apolloschurchapp;
 import android.os.Bundle;
-import org.devio.rn.splashscreen.SplashScreen;
-import android.os.Bundle;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
@@ -21,8 +19,8 @@ public class MainActivity extends GoogleCastActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-SplashScreen.show(this, R.style.SplashScreenTheme);        super.onCreate(savedInstanceState);
-SplashScreen.show(this, R.style.SplashScreenTheme);        RNBootSplash.init(R.drawable.bootsplash, com.apolloschurchapp.MainActivity.this);
+        super.onCreate(savedInstanceState);
+        RNBootSplash.init(R.drawable.splashscreen, com.apolloschurchapp.MainActivity.this);
     }
 
     @Override
