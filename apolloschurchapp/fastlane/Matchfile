@@ -2,7 +2,5 @@ git_url("https://github.com/ApollosProject/certificates")
 
 storage_mode("git")
 
-type("appstore")
-
 app_identifier(["com.differential.apollos"])
 username("apps@apollos.app")
