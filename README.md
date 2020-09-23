@@ -54,6 +54,14 @@ To get started with different API integrations, check out our [docs](https://apo
 
 ### Mobile App
 
+This will outline the steps required to get your Android and iOS apps up and running. You will need a functioning production API from the previous section before moving forward.
+
+Set the API URL in the `.env.production` file.
+
+```
+APP_DATA_URL=<url>
+```
+
 (TBD)
 
 ## Develop
