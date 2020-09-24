@@ -46,10 +46,9 @@ CHURCH_ONLINE:
   MEDIA_URLS: []
   WEB_VIEW_URL: https://apollos.online.church/
 ALGOLIA:
-  APPLICATION_ID: ${ALGOLIA_APP_ID}
-  API_KEY: ${ALGOLIA_API_KEY}
-  # TODO: should we support multiple indices? how
-  SEARCH_INDEX: test_ContentItem
+  APPLICATION_ID: ${ALGOLIASEARCH_APPLICATION_ID}
+  API_KEY: ${ALGOLIASEARCH_API_KEY}
+  SEARCH_INDEX: prod_ContentItem
   # Configure Algolia custom settings here
   # https://www.algolia.com/doc/api-reference/settings-api-parameters/
   CONFIGURATION:
