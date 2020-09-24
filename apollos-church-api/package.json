@@ -21,8 +21,6 @@
     "codecov": "cat ./coverage/lcov.info | codecov",
     "version":
       "node ../../scripts/update-apollos-version.js && git add apollos.json",
-    "schema-diff": "./scripts/schemaDiff.sh",
-    "schema-lint": "graphql-schema-linter local.graphql",
     "upgrade": "npx @apollosproject/upgrade-tools upgrade",
     "latest": "./scripts/add-packages.sh latest",
     "beta": "./scripts/add-packages.sh beta",
@@ -87,7 +85,6 @@
     "eslint-plugin-jest": "^21.15.2",
     "eslint-plugin-prettier": "^2.6.0",
     "get-graphql-schema": "^2.1.2",
-    "graphql-schema-linter": "^0.2.0",
     "linkemon": "^0.1.1",
     "nodemon": "^2.0.2"
   }
