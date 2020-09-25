@@ -15,7 +15,7 @@
     "ios": "react-native run-ios --simulator=\"iPhone 11\"",
     "link-packages": "yarn --check-files --ignore-scripts && node ./scripts/link-packages",
     "unlink-packages": "rm -rf ./node_modules/@apollosproject/* && ../node_modules/.bin/wml rm all",
-    "generate-stories": "if eval $(grep STORYBOOK .env | sed \"s/STORYBOOK=//\") -eq \"true\"; then rnstl --searchDir ./src --pattern **/*.stories.js; fi",
+    "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js",
     "prestart": "yarn generate-stories & node ./scripts/get-introspection-data.js",
     "postinstall": "jetify && yarn pods",
