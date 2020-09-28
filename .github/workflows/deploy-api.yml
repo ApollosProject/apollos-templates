@@ -21,7 +21,7 @@ jobs:
           healthcheck: ${{ secrets.APP_DATA_URL }}/health
           rollbackonhealthcheckfailed: true
           checkstring: "ok"
-          delay: 30
+          delay: 300
 
       - name: Setup Node
         uses: actions/setup-node@v1
