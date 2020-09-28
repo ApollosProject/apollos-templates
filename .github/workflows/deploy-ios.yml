@@ -36,8 +36,8 @@ jobs:
       env:
         APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
 
-    - name: Create Keychain
-      run: bundle exec fastlane run create_keychain name:"login.keychain" default_keychain:"true" unlock:"true" password:"password"
+    - name: Set up Keychain
+      run: bundle exec fastlane run setup_ci
 
     - name: Fastlane Deploy
       run: bundle exec fastlane ios deploy
