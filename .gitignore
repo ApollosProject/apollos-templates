@@ -11,9 +11,3 @@ Thumbs.db
 node_modules/
 .yalc/
 yalc.lock
-
-terraform.tfvars
-
-# Google Play authentication key
-key.json
-apollos.keystore
