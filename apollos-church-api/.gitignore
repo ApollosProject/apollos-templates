@@ -94,3 +94,5 @@ storyLoader.js
 # generated markdown docs
 packages/**/docs/generated/*
 
+# shared secrets
+.env.shared

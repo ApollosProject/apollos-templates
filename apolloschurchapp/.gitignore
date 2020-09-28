@@ -149,3 +149,10 @@ fastlane/report.xml
 
 # symbols
 apolloschurchapp.app.dSYM.zip
+
+# Google Play authentication key
+key.json
+apollos.keystore
+
+# shared secrets
+.env.shared
