@@ -30,7 +30,7 @@ platform :ios do
   lane :deploy do
     setup_ci
     certificates
-    increment_build_number(build_number: number_of_commits, xcodeproj: "ios/apolloschurchapp.xcodeproj")
+    increment_build_number(build_number: number_of_commits(all: true), xcodeproj: "ios/apolloschurchapp.xcodeproj")
     build_app(workspace: "ios/apolloschurchapp.xcworkspace", scheme: "apolloschurchappprod")
     upload_to_testflight
   end
@@ -45,7 +45,7 @@ platform :android do
     re = /versionCode\s+(\d+)/
 
     s = File.read(path)
-    versionCode = number_of_commits
+    versionCode = number_of_commits(all: true)
     s[re, 1] = (versionCode).to_s
 
     f = File.new(path, 'w')
