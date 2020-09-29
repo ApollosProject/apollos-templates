@@ -28,6 +28,7 @@ platform :ios do
 
   desc "Push a new beta build to TestFlight"
   lane :deploy do
+    setup_ci
     certificates
     increment_build_number(build_number: number_of_commits, xcodeproj: "ios/apolloschurchapp.xcodeproj")
     build_app(workspace: "ios/apolloschurchapp.xcworkspace", scheme: "apolloschurchappprod")
