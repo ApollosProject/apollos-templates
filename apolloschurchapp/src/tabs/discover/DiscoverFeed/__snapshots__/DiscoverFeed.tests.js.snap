@@ -718,43 +718,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -893,43 +856,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -1065,43 +991,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                     "backgroundColor": "#A5A5A5",
                                     "resizeMode": "cover",
                                     "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
                                   }
                                 }
                               />
@@ -1404,43 +1293,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -1566,43 +1418,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -1725,43 +1540,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     "aspectRatio": 2,
                                     "backgroundColor": "#A5A5A5",
                                     "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
                                   }
                                 }
                               />
@@ -2083,7 +1861,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               }
                             >
                               <Image
-                                customTheme={null}
                                 fadeDuration={250}
                                 isLoading={false}
                                 onLoad={[Function]}
@@ -2267,7 +2044,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               }
                             >
                               <Image
-                                customTheme={null}
                                 fadeDuration={250}
                                 isLoading={false}
                                 onLoad={[Function]}
@@ -2451,7 +2227,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               }
                             >
                               <Image
-                                customTheme={null}
                                 fadeDuration={250}
                                 isLoading={false}
                                 onLoad={[Function]}
@@ -2832,7 +2607,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               }
                             >
                               <Image
-                                customTheme={null}
                                 fadeDuration={250}
                                 isLoading={false}
                                 onLoad={[Function]}
@@ -3016,7 +2790,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               }
                             >
                               <Image
-                                customTheme={null}
                                 fadeDuration={250}
                                 isLoading={false}
                                 onLoad={[Function]}
@@ -3200,7 +2973,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                               }
                             >
                               <Image
-                                customTheme={null}
                                 fadeDuration={250}
                                 isLoading={false}
                                 onLoad={[Function]}
@@ -3600,43 +3372,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -3775,43 +3510,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -3947,43 +3645,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                     "backgroundColor": "#A5A5A5",
                                     "resizeMode": "cover",
                                     "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
                                   }
                                 }
                               />
@@ -4550,40 +4211,102 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "alignItems": "flex-start",
+                                  "paddingBottom": 24,
+                                  "paddingHorizontal": 16,
+                                  "paddingVertical": 16,
                                 }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
+                              }
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          null,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        clickable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "transform": Array [
+                              Object {
+                                "scale": 1,
+                              },
+                            ],
+                          }
+                        }
+                      >
+                        <View
+                          inHorizontalList={true}
+                          isLoading={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#FFFFFF",
+                              "borderRadius": 16,
+                              "height": 240,
+                              "margin": 8,
+                              "marginBottom": 12,
+                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
+                              "width": 240,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "borderRadius": 16,
+                                "overflow": "hidden",
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "backgroundColor": "#A5A5A5",
+                                  "overflow": "hidden",
+                                  "width": "100%",
                                 }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
+                              }
+                            >
+                              <Image
+                                fadeDuration={250}
+                                hasTitleAndSummary={false}
+                                isLoading={true}
+                                onLoad={[Function]}
+                                source={Array []}
                                 style={
                                   Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
+                                    "aspectRatio": 1.5,
+                                    "backgroundColor": "#A5A5A5",
+                                    "resizeMode": "cover",
+                                    "width": "100%",
                                   }
                                 }
                               />
@@ -4686,43 +4409,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -4822,43 +4508,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -4955,179 +4604,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                     "backgroundColor": "#A5A5A5",
                                     "resizeMode": "cover",
                                     "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "flex-start",
-                                  "paddingBottom": 24,
-                                  "paddingHorizontal": 16,
-                                  "paddingVertical": 16,
-                                }
-                              }
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                    <View
-                      onLayout={[Function]}
-                      style={
-                        Array [
-                          Object {
-                            "flexDirection": "row",
-                          },
-                          null,
-                        ]
-                      }
-                    >
-                      <View
-                        accessible={true}
-                        clickable={true}
-                        onClick={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
-                        style={
-                          Object {
-                            "transform": Array [
-                              Object {
-                                "scale": 1,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          inHorizontalList={true}
-                          isLoading={true}
-                          style={
-                            Object {
-                              "backgroundColor": "#FFFFFF",
-                              "borderRadius": 16,
-                              "height": 240,
-                              "margin": 8,
-                              "marginBottom": 12,
-                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                              "shadowOffset": Object {
-                                "height": 2,
-                                "width": 0,
-                              },
-                              "shadowOpacity": 1,
-                              "shadowRadius": 8,
-                              "width": 240,
-                            }
-                          }
-                        >
-                          <View
-                            style={
-                              Object {
-                                "borderRadius": 16,
-                                "overflow": "hidden",
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "backgroundColor": "#A5A5A5",
-                                  "overflow": "hidden",
-                                  "width": "100%",
-                                }
-                              }
-                            >
-                              <Image
-                                fadeDuration={250}
-                                hasTitleAndSummary={false}
-                                isLoading={true}
-                                onLoad={[Function]}
-                                source={Array []}
-                                style={
-                                  Object {
-                                    "aspectRatio": 1.5,
-                                    "backgroundColor": "#A5A5A5",
-                                    "resizeMode": "cover",
-                                    "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
                                   }
                                 }
                               />
@@ -5394,40 +4870,102 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "alignItems": "flex-start",
+                                  "paddingBottom": 24,
+                                  "paddingHorizontal": 16,
+                                  "paddingVertical": 16,
                                 }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
+                              }
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          null,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        clickable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "transform": Array [
+                              Object {
+                                "scale": 1,
+                              },
+                            ],
+                          }
+                        }
+                      >
+                        <View
+                          inHorizontalList={true}
+                          isLoading={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#FFFFFF",
+                              "borderRadius": 16,
+                              "height": 240,
+                              "margin": 8,
+                              "marginBottom": 12,
+                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
+                              "width": 240,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "borderRadius": 16,
+                                "overflow": "hidden",
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "backgroundColor": "#A5A5A5",
+                                  "overflow": "hidden",
+                                  "width": "100%",
                                 }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
+                              }
+                            >
+                              <Image
+                                fadeDuration={250}
+                                hasTitleAndSummary={false}
+                                isLoading={true}
+                                onLoad={[Function]}
+                                source={Array []}
                                 style={
                                   Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
+                                    "aspectRatio": 1.5,
+                                    "backgroundColor": "#A5A5A5",
+                                    "resizeMode": "cover",
+                                    "width": "100%",
                                   }
                                 }
                               />
@@ -5530,43 +5068,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -5666,43 +5167,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -5799,179 +5263,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                     "backgroundColor": "#A5A5A5",
                                     "resizeMode": "cover",
                                     "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "flex-start",
-                                  "paddingBottom": 24,
-                                  "paddingHorizontal": 16,
-                                  "paddingVertical": 16,
-                                }
-                              }
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                    <View
-                      onLayout={[Function]}
-                      style={
-                        Array [
-                          Object {
-                            "flexDirection": "row",
-                          },
-                          null,
-                        ]
-                      }
-                    >
-                      <View
-                        accessible={true}
-                        clickable={true}
-                        onClick={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
-                        style={
-                          Object {
-                            "transform": Array [
-                              Object {
-                                "scale": 1,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          inHorizontalList={true}
-                          isLoading={true}
-                          style={
-                            Object {
-                              "backgroundColor": "#FFFFFF",
-                              "borderRadius": 16,
-                              "height": 240,
-                              "margin": 8,
-                              "marginBottom": 12,
-                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                              "shadowOffset": Object {
-                                "height": 2,
-                                "width": 0,
-                              },
-                              "shadowOpacity": 1,
-                              "shadowRadius": 8,
-                              "width": 240,
-                            }
-                          }
-                        >
-                          <View
-                            style={
-                              Object {
-                                "borderRadius": 16,
-                                "overflow": "hidden",
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "backgroundColor": "#A5A5A5",
-                                  "overflow": "hidden",
-                                  "width": "100%",
-                                }
-                              }
-                            >
-                              <Image
-                                fadeDuration={250}
-                                hasTitleAndSummary={false}
-                                isLoading={true}
-                                onLoad={[Function]}
-                                source={Array []}
-                                style={
-                                  Object {
-                                    "aspectRatio": 1.5,
-                                    "backgroundColor": "#A5A5A5",
-                                    "resizeMode": "cover",
-                                    "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
                                   }
                                 }
                               />
@@ -6238,40 +5529,102 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "alignItems": "flex-start",
+                                  "paddingBottom": 24,
+                                  "paddingHorizontal": 16,
+                                  "paddingVertical": 16,
                                 }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
+                              }
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          null,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        clickable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "transform": Array [
+                              Object {
+                                "scale": 1,
+                              },
+                            ],
+                          }
+                        }
+                      >
+                        <View
+                          inHorizontalList={true}
+                          isLoading={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#FFFFFF",
+                              "borderRadius": 16,
+                              "height": 240,
+                              "margin": 8,
+                              "marginBottom": 12,
+                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
+                              "width": 240,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "borderRadius": 16,
+                                "overflow": "hidden",
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "backgroundColor": "#A5A5A5",
+                                  "overflow": "hidden",
+                                  "width": "100%",
                                 }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
+                              }
+                            >
+                              <Image
+                                fadeDuration={250}
+                                hasTitleAndSummary={false}
+                                isLoading={true}
+                                onLoad={[Function]}
+                                source={Array []}
                                 style={
                                   Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
+                                    "aspectRatio": 1.5,
+                                    "backgroundColor": "#A5A5A5",
+                                    "resizeMode": "cover",
+                                    "width": "100%",
                                   }
                                 }
                               />
@@ -6374,43 +5727,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -6510,43 +5826,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -6643,179 +5922,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                     "backgroundColor": "#A5A5A5",
                                     "resizeMode": "cover",
                                     "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "flex-start",
-                                  "paddingBottom": 24,
-                                  "paddingHorizontal": 16,
-                                  "paddingVertical": 16,
-                                }
-                              }
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                    <View
-                      onLayout={[Function]}
-                      style={
-                        Array [
-                          Object {
-                            "flexDirection": "row",
-                          },
-                          null,
-                        ]
-                      }
-                    >
-                      <View
-                        accessible={true}
-                        clickable={true}
-                        onClick={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
-                        style={
-                          Object {
-                            "transform": Array [
-                              Object {
-                                "scale": 1,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          inHorizontalList={true}
-                          isLoading={true}
-                          style={
-                            Object {
-                              "backgroundColor": "#FFFFFF",
-                              "borderRadius": 16,
-                              "height": 240,
-                              "margin": 8,
-                              "marginBottom": 12,
-                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                              "shadowOffset": Object {
-                                "height": 2,
-                                "width": 0,
-                              },
-                              "shadowOpacity": 1,
-                              "shadowRadius": 8,
-                              "width": 240,
-                            }
-                          }
-                        >
-                          <View
-                            style={
-                              Object {
-                                "borderRadius": 16,
-                                "overflow": "hidden",
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "backgroundColor": "#A5A5A5",
-                                  "overflow": "hidden",
-                                  "width": "100%",
-                                }
-                              }
-                            >
-                              <Image
-                                fadeDuration={250}
-                                hasTitleAndSummary={false}
-                                isLoading={true}
-                                onLoad={[Function]}
-                                source={Array []}
-                                style={
-                                  Object {
-                                    "aspectRatio": 1.5,
-                                    "backgroundColor": "#A5A5A5",
-                                    "resizeMode": "cover",
-                                    "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
                                   }
                                 }
                               />
@@ -7082,40 +6188,102 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "alignItems": "flex-start",
+                                  "paddingBottom": 24,
+                                  "paddingHorizontal": 16,
+                                  "paddingVertical": 16,
                                 }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
+                              }
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          null,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        clickable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "transform": Array [
+                              Object {
+                                "scale": 1,
+                              },
+                            ],
+                          }
+                        }
+                      >
+                        <View
+                          inHorizontalList={true}
+                          isLoading={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#FFFFFF",
+                              "borderRadius": 16,
+                              "height": 240,
+                              "margin": 8,
+                              "marginBottom": 12,
+                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
+                              "width": 240,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "borderRadius": 16,
+                                "overflow": "hidden",
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "backgroundColor": "#A5A5A5",
+                                  "overflow": "hidden",
+                                  "width": "100%",
                                 }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
+                              }
+                            >
+                              <Image
+                                fadeDuration={250}
+                                hasTitleAndSummary={false}
+                                isLoading={true}
+                                onLoad={[Function]}
+                                source={Array []}
                                 style={
                                   Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
+                                    "aspectRatio": 1.5,
+                                    "backgroundColor": "#A5A5A5",
+                                    "resizeMode": "cover",
+                                    "width": "100%",
                                   }
                                 }
                               />
@@ -7218,43 +6386,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -7354,43 +6485,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -7487,179 +6581,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                     "backgroundColor": "#A5A5A5",
                                     "resizeMode": "cover",
                                     "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "flex-start",
-                                  "paddingBottom": 24,
-                                  "paddingHorizontal": 16,
-                                  "paddingVertical": 16,
-                                }
-                              }
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                    <View
-                      onLayout={[Function]}
-                      style={
-                        Array [
-                          Object {
-                            "flexDirection": "row",
-                          },
-                          null,
-                        ]
-                      }
-                    >
-                      <View
-                        accessible={true}
-                        clickable={true}
-                        onClick={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
-                        style={
-                          Object {
-                            "transform": Array [
-                              Object {
-                                "scale": 1,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          inHorizontalList={true}
-                          isLoading={true}
-                          style={
-                            Object {
-                              "backgroundColor": "#FFFFFF",
-                              "borderRadius": 16,
-                              "height": 240,
-                              "margin": 8,
-                              "marginBottom": 12,
-                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                              "shadowOffset": Object {
-                                "height": 2,
-                                "width": 0,
-                              },
-                              "shadowOpacity": 1,
-                              "shadowRadius": 8,
-                              "width": 240,
-                            }
-                          }
-                        >
-                          <View
-                            style={
-                              Object {
-                                "borderRadius": 16,
-                                "overflow": "hidden",
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "backgroundColor": "#A5A5A5",
-                                  "overflow": "hidden",
-                                  "width": "100%",
-                                }
-                              }
-                            >
-                              <Image
-                                fadeDuration={250}
-                                hasTitleAndSummary={false}
-                                isLoading={true}
-                                onLoad={[Function]}
-                                source={Array []}
-                                style={
-                                  Object {
-                                    "aspectRatio": 1.5,
-                                    "backgroundColor": "#A5A5A5",
-                                    "resizeMode": "cover",
-                                    "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
                                   }
                                 }
                               />
@@ -7926,40 +6847,102 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "alignItems": "flex-start",
+                                  "paddingBottom": 24,
+                                  "paddingHorizontal": 16,
+                                  "paddingVertical": 16,
                                 }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
+                              }
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          null,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        clickable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "transform": Array [
+                              Object {
+                                "scale": 1,
+                              },
+                            ],
+                          }
+                        }
+                      >
+                        <View
+                          inHorizontalList={true}
+                          isLoading={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#FFFFFF",
+                              "borderRadius": 16,
+                              "height": 240,
+                              "margin": 8,
+                              "marginBottom": 12,
+                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
+                              "width": 240,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "borderRadius": 16,
+                                "overflow": "hidden",
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "backgroundColor": "#A5A5A5",
+                                  "overflow": "hidden",
+                                  "width": "100%",
                                 }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
+                              }
+                            >
+                              <Image
+                                fadeDuration={250}
+                                hasTitleAndSummary={false}
+                                isLoading={true}
+                                onLoad={[Function]}
+                                source={Array []}
                                 style={
                                   Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
+                                    "aspectRatio": 1.5,
+                                    "backgroundColor": "#A5A5A5",
+                                    "resizeMode": "cover",
+                                    "width": "100%",
                                   }
                                 }
                               />
@@ -8062,43 +7045,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -8198,43 +7144,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -8331,179 +7240,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                     "backgroundColor": "#A5A5A5",
                                     "resizeMode": "cover",
                                     "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "flex-start",
-                                  "paddingBottom": 24,
-                                  "paddingHorizontal": 16,
-                                  "paddingVertical": 16,
-                                }
-                              }
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                    <View
-                      onLayout={[Function]}
-                      style={
-                        Array [
-                          Object {
-                            "flexDirection": "row",
-                          },
-                          null,
-                        ]
-                      }
-                    >
-                      <View
-                        accessible={true}
-                        clickable={true}
-                        onClick={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
-                        style={
-                          Object {
-                            "transform": Array [
-                              Object {
-                                "scale": 1,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          inHorizontalList={true}
-                          isLoading={true}
-                          style={
-                            Object {
-                              "backgroundColor": "#FFFFFF",
-                              "borderRadius": 16,
-                              "height": 240,
-                              "margin": 8,
-                              "marginBottom": 12,
-                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                              "shadowOffset": Object {
-                                "height": 2,
-                                "width": 0,
-                              },
-                              "shadowOpacity": 1,
-                              "shadowRadius": 8,
-                              "width": 240,
-                            }
-                          }
-                        >
-                          <View
-                            style={
-                              Object {
-                                "borderRadius": 16,
-                                "overflow": "hidden",
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "backgroundColor": "#A5A5A5",
-                                  "overflow": "hidden",
-                                  "width": "100%",
-                                }
-                              }
-                            >
-                              <Image
-                                fadeDuration={250}
-                                hasTitleAndSummary={false}
-                                isLoading={true}
-                                onLoad={[Function]}
-                                source={Array []}
-                                style={
-                                  Object {
-                                    "aspectRatio": 1.5,
-                                    "backgroundColor": "#A5A5A5",
-                                    "resizeMode": "cover",
-                                    "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
                                   }
                                 }
                               />
@@ -8770,40 +7506,102 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "alignItems": "flex-start",
+                                  "paddingBottom": 24,
+                                  "paddingHorizontal": 16,
+                                  "paddingVertical": 16,
                                 }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
+                              }
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          null,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        clickable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "transform": Array [
+                              Object {
+                                "scale": 1,
+                              },
+                            ],
+                          }
+                        }
+                      >
+                        <View
+                          inHorizontalList={true}
+                          isLoading={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#FFFFFF",
+                              "borderRadius": 16,
+                              "height": 240,
+                              "margin": 8,
+                              "marginBottom": 12,
+                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
+                              "width": 240,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "borderRadius": 16,
+                                "overflow": "hidden",
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "backgroundColor": "#A5A5A5",
+                                  "overflow": "hidden",
+                                  "width": "100%",
                                 }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
+                              }
+                            >
+                              <Image
+                                fadeDuration={250}
+                                hasTitleAndSummary={false}
+                                isLoading={true}
+                                onLoad={[Function]}
+                                source={Array []}
                                 style={
                                   Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
+                                    "aspectRatio": 1.5,
+                                    "backgroundColor": "#A5A5A5",
+                                    "resizeMode": "cover",
+                                    "width": "100%",
                                   }
                                 }
                               />
@@ -8906,43 +7704,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -9042,43 +7803,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -9175,179 +7899,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                     "backgroundColor": "#A5A5A5",
                                     "resizeMode": "cover",
                                     "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "flex-start",
-                                  "paddingBottom": 24,
-                                  "paddingHorizontal": 16,
-                                  "paddingVertical": 16,
-                                }
-                              }
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                    <View
-                      onLayout={[Function]}
-                      style={
-                        Array [
-                          Object {
-                            "flexDirection": "row",
-                          },
-                          null,
-                        ]
-                      }
-                    >
-                      <View
-                        accessible={true}
-                        clickable={true}
-                        onClick={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
-                        style={
-                          Object {
-                            "transform": Array [
-                              Object {
-                                "scale": 1,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          inHorizontalList={true}
-                          isLoading={true}
-                          style={
-                            Object {
-                              "backgroundColor": "#FFFFFF",
-                              "borderRadius": 16,
-                              "height": 240,
-                              "margin": 8,
-                              "marginBottom": 12,
-                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                              "shadowOffset": Object {
-                                "height": 2,
-                                "width": 0,
-                              },
-                              "shadowOpacity": 1,
-                              "shadowRadius": 8,
-                              "width": 240,
-                            }
-                          }
-                        >
-                          <View
-                            style={
-                              Object {
-                                "borderRadius": 16,
-                                "overflow": "hidden",
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "backgroundColor": "#A5A5A5",
-                                  "overflow": "hidden",
-                                  "width": "100%",
-                                }
-                              }
-                            >
-                              <Image
-                                fadeDuration={250}
-                                hasTitleAndSummary={false}
-                                isLoading={true}
-                                onLoad={[Function]}
-                                source={Array []}
-                                style={
-                                  Object {
-                                    "aspectRatio": 1.5,
-                                    "backgroundColor": "#A5A5A5",
-                                    "resizeMode": "cover",
-                                    "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
                                   }
                                 }
                               />
@@ -9614,40 +8165,102 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "alignItems": "flex-start",
+                                  "paddingBottom": 24,
+                                  "paddingHorizontal": 16,
+                                  "paddingVertical": 16,
                                 }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
+                              }
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          null,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        clickable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "transform": Array [
+                              Object {
+                                "scale": 1,
+                              },
+                            ],
+                          }
+                        }
+                      >
+                        <View
+                          inHorizontalList={true}
+                          isLoading={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#FFFFFF",
+                              "borderRadius": 16,
+                              "height": 240,
+                              "margin": 8,
+                              "marginBottom": 12,
+                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
+                              "width": 240,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "borderRadius": 16,
+                                "overflow": "hidden",
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "backgroundColor": "#A5A5A5",
+                                  "overflow": "hidden",
+                                  "width": "100%",
                                 }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
+                              }
+                            >
+                              <Image
+                                fadeDuration={250}
+                                hasTitleAndSummary={false}
+                                isLoading={true}
+                                onLoad={[Function]}
+                                source={Array []}
                                 style={
                                   Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
+                                    "aspectRatio": 1.5,
+                                    "backgroundColor": "#A5A5A5",
+                                    "resizeMode": "cover",
+                                    "width": "100%",
                                   }
                                 }
                               />
@@ -9750,43 +8363,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -9886,43 +8462,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -10019,179 +8558,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                     "backgroundColor": "#A5A5A5",
                                     "resizeMode": "cover",
                                     "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "flex-start",
-                                  "paddingBottom": 24,
-                                  "paddingHorizontal": 16,
-                                  "paddingVertical": 16,
-                                }
-                              }
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                    <View
-                      onLayout={[Function]}
-                      style={
-                        Array [
-                          Object {
-                            "flexDirection": "row",
-                          },
-                          null,
-                        ]
-                      }
-                    >
-                      <View
-                        accessible={true}
-                        clickable={true}
-                        onClick={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
-                        style={
-                          Object {
-                            "transform": Array [
-                              Object {
-                                "scale": 1,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          inHorizontalList={true}
-                          isLoading={true}
-                          style={
-                            Object {
-                              "backgroundColor": "#FFFFFF",
-                              "borderRadius": 16,
-                              "height": 240,
-                              "margin": 8,
-                              "marginBottom": 12,
-                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                              "shadowOffset": Object {
-                                "height": 2,
-                                "width": 0,
-                              },
-                              "shadowOpacity": 1,
-                              "shadowRadius": 8,
-                              "width": 240,
-                            }
-                          }
-                        >
-                          <View
-                            style={
-                              Object {
-                                "borderRadius": 16,
-                                "overflow": "hidden",
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "backgroundColor": "#A5A5A5",
-                                  "overflow": "hidden",
-                                  "width": "100%",
-                                }
-                              }
-                            >
-                              <Image
-                                fadeDuration={250}
-                                hasTitleAndSummary={false}
-                                isLoading={true}
-                                onLoad={[Function]}
-                                source={Array []}
-                                style={
-                                  Object {
-                                    "aspectRatio": 1.5,
-                                    "backgroundColor": "#A5A5A5",
-                                    "resizeMode": "cover",
-                                    "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
                                   }
                                 }
                               />
@@ -10458,40 +8824,102 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "alignItems": "flex-start",
+                                  "paddingBottom": 24,
+                                  "paddingHorizontal": 16,
+                                  "paddingVertical": 16,
                                 }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
+                              }
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          null,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        clickable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "transform": Array [
+                              Object {
+                                "scale": 1,
+                              },
+                            ],
+                          }
+                        }
+                      >
+                        <View
+                          inHorizontalList={true}
+                          isLoading={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#FFFFFF",
+                              "borderRadius": 16,
+                              "height": 240,
+                              "margin": 8,
+                              "marginBottom": 12,
+                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
+                              "width": 240,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "borderRadius": 16,
+                                "overflow": "hidden",
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "backgroundColor": "#A5A5A5",
+                                  "overflow": "hidden",
+                                  "width": "100%",
                                 }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
+                              }
+                            >
+                              <Image
+                                fadeDuration={250}
+                                hasTitleAndSummary={false}
+                                isLoading={true}
+                                onLoad={[Function]}
+                                source={Array []}
                                 style={
                                   Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
+                                    "aspectRatio": 1.5,
+                                    "backgroundColor": "#A5A5A5",
+                                    "resizeMode": "cover",
+                                    "width": "100%",
                                   }
                                 }
                               />
@@ -10594,43 +9022,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -10730,43 +9121,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -10863,179 +9217,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                     "backgroundColor": "#A5A5A5",
                                     "resizeMode": "cover",
                                     "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "flex-start",
-                                  "paddingBottom": 24,
-                                  "paddingHorizontal": 16,
-                                  "paddingVertical": 16,
-                                }
-                              }
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                    <View
-                      onLayout={[Function]}
-                      style={
-                        Array [
-                          Object {
-                            "flexDirection": "row",
-                          },
-                          null,
-                        ]
-                      }
-                    >
-                      <View
-                        accessible={true}
-                        clickable={true}
-                        onClick={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
-                        style={
-                          Object {
-                            "transform": Array [
-                              Object {
-                                "scale": 1,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          inHorizontalList={true}
-                          isLoading={true}
-                          style={
-                            Object {
-                              "backgroundColor": "#FFFFFF",
-                              "borderRadius": 16,
-                              "height": 240,
-                              "margin": 8,
-                              "marginBottom": 12,
-                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                              "shadowOffset": Object {
-                                "height": 2,
-                                "width": 0,
-                              },
-                              "shadowOpacity": 1,
-                              "shadowRadius": 8,
-                              "width": 240,
-                            }
-                          }
-                        >
-                          <View
-                            style={
-                              Object {
-                                "borderRadius": 16,
-                                "overflow": "hidden",
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "backgroundColor": "#A5A5A5",
-                                  "overflow": "hidden",
-                                  "width": "100%",
-                                }
-                              }
-                            >
-                              <Image
-                                fadeDuration={250}
-                                hasTitleAndSummary={false}
-                                isLoading={true}
-                                onLoad={[Function]}
-                                source={Array []}
-                                style={
-                                  Object {
-                                    "aspectRatio": 1.5,
-                                    "backgroundColor": "#A5A5A5",
-                                    "resizeMode": "cover",
-                                    "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
                                   }
                                 }
                               />
@@ -11302,40 +9483,102 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "alignItems": "flex-start",
+                                  "paddingBottom": 24,
+                                  "paddingHorizontal": 16,
+                                  "paddingVertical": 16,
                                 }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
+                              }
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          null,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        clickable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "transform": Array [
+                              Object {
+                                "scale": 1,
+                              },
+                            ],
+                          }
+                        }
+                      >
+                        <View
+                          inHorizontalList={true}
+                          isLoading={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#FFFFFF",
+                              "borderRadius": 16,
+                              "height": 240,
+                              "margin": 8,
+                              "marginBottom": 12,
+                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
+                              "width": 240,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "borderRadius": 16,
+                                "overflow": "hidden",
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "backgroundColor": "#A5A5A5",
+                                  "overflow": "hidden",
+                                  "width": "100%",
                                 }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
+                              }
+                            >
+                              <Image
+                                fadeDuration={250}
+                                hasTitleAndSummary={false}
+                                isLoading={true}
+                                onLoad={[Function]}
+                                source={Array []}
                                 style={
                                   Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
+                                    "aspectRatio": 1.5,
+                                    "backgroundColor": "#A5A5A5",
+                                    "resizeMode": "cover",
+                                    "width": "100%",
                                   }
                                 }
                               />
@@ -11438,43 +9681,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -11574,43 +9780,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -11707,179 +9876,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                     "backgroundColor": "#A5A5A5",
                                     "resizeMode": "cover",
                                     "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "flex-start",
-                                  "paddingBottom": 24,
-                                  "paddingHorizontal": 16,
-                                  "paddingVertical": 16,
-                                }
-                              }
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                    <View
-                      onLayout={[Function]}
-                      style={
-                        Array [
-                          Object {
-                            "flexDirection": "row",
-                          },
-                          null,
-                        ]
-                      }
-                    >
-                      <View
-                        accessible={true}
-                        clickable={true}
-                        onClick={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
-                        style={
-                          Object {
-                            "transform": Array [
-                              Object {
-                                "scale": 1,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          inHorizontalList={true}
-                          isLoading={true}
-                          style={
-                            Object {
-                              "backgroundColor": "#FFFFFF",
-                              "borderRadius": 16,
-                              "height": 240,
-                              "margin": 8,
-                              "marginBottom": 12,
-                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                              "shadowOffset": Object {
-                                "height": 2,
-                                "width": 0,
-                              },
-                              "shadowOpacity": 1,
-                              "shadowRadius": 8,
-                              "width": 240,
-                            }
-                          }
-                        >
-                          <View
-                            style={
-                              Object {
-                                "borderRadius": 16,
-                                "overflow": "hidden",
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "backgroundColor": "#A5A5A5",
-                                  "overflow": "hidden",
-                                  "width": "100%",
-                                }
-                              }
-                            >
-                              <Image
-                                fadeDuration={250}
-                                hasTitleAndSummary={false}
-                                isLoading={true}
-                                onLoad={[Function]}
-                                source={Array []}
-                                style={
-                                  Object {
-                                    "aspectRatio": 1.5,
-                                    "backgroundColor": "#A5A5A5",
-                                    "resizeMode": "cover",
-                                    "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
                                   }
                                 }
                               />
@@ -12146,40 +10142,102 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
+                            </View>
+                            <View
+                              style={
+                                Object {
+                                  "alignItems": "flex-start",
+                                  "paddingBottom": 24,
+                                  "paddingHorizontal": 16,
+                                  "paddingVertical": 16,
                                 }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
+                              }
+                            />
+                          </View>
+                        </View>
+                      </View>
+                    </View>
+                    <View
+                      onLayout={[Function]}
+                      style={
+                        Array [
+                          Object {
+                            "flexDirection": "row",
+                          },
+                          null,
+                        ]
+                      }
+                    >
+                      <View
+                        accessible={true}
+                        clickable={true}
+                        onClick={[Function]}
+                        onResponderGrant={[Function]}
+                        onResponderMove={[Function]}
+                        onResponderRelease={[Function]}
+                        onResponderTerminate={[Function]}
+                        onResponderTerminationRequest={[Function]}
+                        onStartShouldSetResponder={[Function]}
+                        style={
+                          Object {
+                            "transform": Array [
+                              Object {
+                                "scale": 1,
+                              },
+                            ],
+                          }
+                        }
+                      >
+                        <View
+                          inHorizontalList={true}
+                          isLoading={true}
+                          style={
+                            Object {
+                              "backgroundColor": "#FFFFFF",
+                              "borderRadius": 16,
+                              "height": 240,
+                              "margin": 8,
+                              "marginBottom": 12,
+                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
+                              "shadowOffset": Object {
+                                "height": 2,
+                                "width": 0,
+                              },
+                              "shadowOpacity": 1,
+                              "shadowRadius": 8,
+                              "width": 240,
+                            }
+                          }
+                        >
+                          <View
+                            style={
+                              Object {
+                                "borderRadius": 16,
+                                "overflow": "hidden",
+                              }
+                            }
+                          >
+                            <View
+                              style={
+                                Object {
+                                  "backgroundColor": "#A5A5A5",
+                                  "overflow": "hidden",
+                                  "width": "100%",
                                 }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
+                              }
+                            >
+                              <Image
+                                fadeDuration={250}
+                                hasTitleAndSummary={false}
+                                isLoading={true}
+                                onLoad={[Function]}
+                                source={Array []}
                                 style={
                                   Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
+                                    "aspectRatio": 1.5,
+                                    "backgroundColor": "#A5A5A5",
+                                    "resizeMode": "cover",
+                                    "width": "100%",
                                   }
                                 }
                               />
@@ -12282,43 +10340,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -12418,43 +10439,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                   }
                                 }
                               />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
                             </View>
                             <View
                               style={
@@ -12551,179 +10535,6 @@ exports[`The DiscoverFeed component should render a loading state 1`] = `
                                     "backgroundColor": "#A5A5A5",
                                     "resizeMode": "cover",
                                     "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
-                                  }
-                                }
-                              />
-                            </View>
-                            <View
-                              style={
-                                Object {
-                                  "alignItems": "flex-start",
-                                  "paddingBottom": 24,
-                                  "paddingHorizontal": 16,
-                                  "paddingVertical": 16,
-                                }
-                              }
-                            />
-                          </View>
-                        </View>
-                      </View>
-                    </View>
-                    <View
-                      onLayout={[Function]}
-                      style={
-                        Array [
-                          Object {
-                            "flexDirection": "row",
-                          },
-                          null,
-                        ]
-                      }
-                    >
-                      <View
-                        accessible={true}
-                        clickable={true}
-                        onClick={[Function]}
-                        onResponderGrant={[Function]}
-                        onResponderMove={[Function]}
-                        onResponderRelease={[Function]}
-                        onResponderTerminate={[Function]}
-                        onResponderTerminationRequest={[Function]}
-                        onStartShouldSetResponder={[Function]}
-                        style={
-                          Object {
-                            "transform": Array [
-                              Object {
-                                "scale": 1,
-                              },
-                            ],
-                          }
-                        }
-                      >
-                        <View
-                          inHorizontalList={true}
-                          isLoading={true}
-                          style={
-                            Object {
-                              "backgroundColor": "#FFFFFF",
-                              "borderRadius": 16,
-                              "height": 240,
-                              "margin": 8,
-                              "marginBottom": 12,
-                              "shadowColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                              "shadowOffset": Object {
-                                "height": 2,
-                                "width": 0,
-                              },
-                              "shadowOpacity": 1,
-                              "shadowRadius": 8,
-                              "width": 240,
-                            }
-                          }
-                        >
-                          <View
-                            style={
-                              Object {
-                                "borderRadius": 16,
-                                "overflow": "hidden",
-                              }
-                            }
-                          >
-                            <View
-                              style={
-                                Object {
-                                  "backgroundColor": "#A5A5A5",
-                                  "overflow": "hidden",
-                                  "width": "100%",
-                                }
-                              }
-                            >
-                              <Image
-                                fadeDuration={250}
-                                hasTitleAndSummary={false}
-                                isLoading={true}
-                                onLoad={[Function]}
-                                source={Array []}
-                                style={
-                                  Object {
-                                    "aspectRatio": 1.5,
-                                    "backgroundColor": "#A5A5A5",
-                                    "resizeMode": "cover",
-                                    "width": "100%",
-                                  }
-                                }
-                              />
-                              <BVLinearGradient
-                                colors={
-                                  Array [
-                                    2147483648,
-                                    0,
-                                  ]
-                                }
-                                endPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 1,
-                                  }
-                                }
-                                locations={
-                                  Array [
-                                    0,
-                                    1,
-                                  ]
-                                }
-                                overlayColor="#000000"
-                                overlayType="gradient-top"
-                                startPoint={
-                                  Object {
-                                    "x": 0,
-                                    "y": 0,
-                                  }
-                                }
-                                style={
-                                  Object {
-                                    "bottom": 0,
-                                    "left": 0,
-                                    "position": "absolute",
-                                    "right": 0,
-                                    "top": 0,
                                   }
                                 }
                               />

@@ -154,43 +154,6 @@ exports[`content feed query component renders a feedview after successful query 
                     }
                   }
                 />
-                <BVLinearGradient
-                  colors={
-                    Array [
-                      2147483648,
-                      0,
-                    ]
-                  }
-                  endPoint={
-                    Object {
-                      "x": 0,
-                      "y": 1,
-                    }
-                  }
-                  locations={
-                    Array [
-                      0,
-                      1,
-                    ]
-                  }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
-                  startPoint={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
-                    }
-                  }
-                />
               </View>
               <View
                 style={
@@ -301,43 +264,6 @@ exports[`content feed query component renders a feedview after successful query 
                       "aspectRatio": 1,
                       "backgroundColor": "#A5A5A5",
                       "width": "100%",
-                    }
-                  }
-                />
-                <BVLinearGradient
-                  colors={
-                    Array [
-                      2147483648,
-                      0,
-                    ]
-                  }
-                  endPoint={
-                    Object {
-                      "x": 0,
-                      "y": 1,
-                    }
-                  }
-                  locations={
-                    Array [
-                      0,
-                      1,
-                    ]
-                  }
-                  overlayColor="#000000"
-                  overlayType="gradient-top"
-                  startPoint={
-                    Object {
-                      "x": 0,
-                      "y": 0,
-                    }
-                  }
-                  style={
-                    Object {
-                      "bottom": 0,
-                      "left": 0,
-                      "position": "absolute",
-                      "right": 0,
-                      "top": 0,
                     }
                   }
                 />
