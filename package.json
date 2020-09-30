@@ -13,9 +13,9 @@
     "android": "lerna run android --parallel",
     "pods": "lerna run pods --parallel",
     "bump": "./scripts/bump.sh",
-    "latest": "./scripts/add-packages latest",
-    "beta": "./scripts/add-packages beta",
-    "canary": "./scripts/add-packages canary",
+    "latest": "./scripts/add-packages.sh latest",
+    "beta": "./scripts/add-packages.sh beta",
+    "canary": "./scripts/add-packages.sh canary",
     "encrypt": "/usr/local/opt/openssl@1.1/bin/openssl enc -aes-256-cbc -pbkdf2 -iter 20000 -in",
     "decrypt": "/usr/local/opt/openssl@1.1/bin/openssl enc -d -aes-256-cbc -pbkdf2 -iter 20000 -in"
   },
