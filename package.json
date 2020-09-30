@@ -12,8 +12,8 @@
     "ios": "lerna run ios --parallel",
     "android": "lerna run android --parallel",
     "pods": "lerna run pods --parallel",
-    "bump": "./scripts/bump.sh",
-    "canary": "./scripts/add-packages.sh canary",
+    "bump": "./scripts/bump.sh && yarn",
+    "canary": "./scripts/add-packages.sh canary && yarn",
     "encrypt": "/usr/local/opt/openssl@1.1/bin/openssl enc -aes-256-cbc -pbkdf2 -iter 20000 -in",
     "decrypt": "/usr/local/opt/openssl@1.1/bin/openssl enc -d -aes-256-cbc -pbkdf2 -iter 20000 -in"
   },
