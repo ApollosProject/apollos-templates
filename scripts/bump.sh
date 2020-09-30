@@ -19,6 +19,6 @@ else
 	TAG=latest
 fi
 
-yarn "$TAG"
+./scripts/add-packages.sh $TAG
 (cd apollos-church-api || exit && sed -i "" -E "s/\"([0-9].*)\"/\"$VERSION\"/g" apollos.json)
 (cd apolloschurchapp || exit && sed -i "" -E "s/\"([0-9].*)\"/\"$VERSION\"/g" apollos.json)
