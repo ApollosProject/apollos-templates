@@ -9,7 +9,8 @@ curl -s 'https://api.github.com/repos/apollosproject/apollos-apps/tags' \
 | cut -d ':' -f 2 \
 | sed 's/&quot;/\"/g' \
 | sed -E 's/\"v(.*)\".*/\1/g' \
-| sed -n 1p
+| sed -n 1p \
+| tr -d '[:space:]'
 )
 
 if [[ $VERSION == *beta* ]]
@@ -22,5 +23,5 @@ fi
 echo $VERSION
 
 ./scripts/add-packages.sh $TAG
-(cd apollos-church-api && sed -i "" -E "s/[0-9]+.*\"/$VERSION\"/g" apollos.json)
-(cd apolloschurchapp && sed -i "" -E "s/[0-9]+.*\"/$VERSION\"/g" apollos.json)
+(cd apollos-church-api && sed -i "" -E "s/\"[0-9].*\"/\"$VERSION\"/g" apollos.json)
+(cd apolloschurchapp && sed -i "" -E "s/\"[0-9].*\"/\"$VERSION\"/g" apollos.json)
