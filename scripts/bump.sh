@@ -22,5 +22,5 @@ fi
 echo $VERSION
 
 ./scripts/add-packages.sh $TAG
-(cd apollos-church-api && sed -i "" -E "s/\"[0-9].*\"/\"$VERSION\"/g" apollos.json)
-(cd apolloschurchapp && sed -i "" -E "s/\"[0-9].*\"/\"$VERSION\"/g" apollos.json)
+(cd apollos-church-api && sed -i '' -E 's/"[0-9].*"/"$VERSION"/g' apollos.json)
+(cd apolloschurchapp && sed -i '' -E 's/"[0-9].*"/"$VERSION"/g' apollos.json)
