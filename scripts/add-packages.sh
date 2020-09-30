@@ -1,5 +1,4 @@
 # get list of apollosproject packages to update
-
 function bump() {
 	# get devDependencies line number
 	DEVDEPSLINE=$(grep -n "devDependencies" package.json | sed -E "s/^([0-9]+):.*/\1/g")
@@ -7,16 +6,8 @@ function bump() {
 	# get dependecies line number
 	DEPSLINE=$(grep -n "dependencies" package.json | sed -E "s/^([0-9]+):.*/\1/g")
 
-	# determine what npm tag to update to
-	if [ "$#" -ne 1 ]; then
-		echo "pass npm tag like this: ./add-packages.sh <TAG>"
-		exit 1
-	else
-		TAG=$1
-	fi;
-
 	# replace package names with version tag
-	JSON=$(sed -E "s/^.*\"(@apollosproject\/[a-z\-]+)\".*/\1@$TAG /g" package.json)
+	JSON=$(sed -E "s/^.*\"(@apollosproject\/[a-z\-]+)\".*/\1@$1 /g" package.json)
 
 	# remove packages with no tags
 	JSON=$( echo "$JSON" | sed "s/@apollosproject\/react-native-airplay-btn.*//g")
@@ -31,10 +22,18 @@ function bump() {
 			DEVPKGS=$(echo "$JSON" | sed -n "$DEVDEPSLINE","$DEPSLINE"p | grep "@apollosproject" | tr -d "\n")
 	fi
 
-	pwd
+	echo "$PKGS"
 	#yarn add --dev $DEVPKGS --ignore-scripts
 	#yarn add $PKGS --ignore-scripts
 }
 
-(cd apollos-church-api && bump)
-(cd apolloschurchapp && bump)
+# determine what npm tag to update to
+if [ "$#" -ne 1 ]; then
+	echo "Usage: ./add-packages.sh <TAG>"
+	exit
+else
+	TAG=$1
+fi;
+
+(cd apollos-church-api && bump $TAG)
+(cd apolloschurchapp && bump $TAG)
