@@ -21,5 +21,5 @@ fi
 
 echo $VERSION
 
-(cd apollos-church-api || exit && yarn "$TAG" && sed -i "" "s/\"([0-9].*)\"/\"$VERSION\"/g" apollos.json)
-(cd apolloschurchapp || exit && yarn "$TAG" && sed -i "" "s/\"([0-9].*)\"/\"$VERSION\"/g" apollos.json)
+(cd apollos-church-api || exit && yarn "$TAG" && sed -i "" -E "s/\"([0-9].*)\"/\"$VERSION\"/g" apollos.json)
+(cd apolloschurchapp || exit && yarn "$TAG" && sed -i "" -E "s/\"([0-9].*)\"/\"$VERSION\"/g" apollos.json)
