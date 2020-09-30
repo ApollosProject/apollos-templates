@@ -7,7 +7,7 @@ pull_request_rules:
       - label!=do-not-merge
     actions:
       merge:
-        method: merge
+        method: squash
         strict: smart
   - name: delete head branch after merge
     conditions:
