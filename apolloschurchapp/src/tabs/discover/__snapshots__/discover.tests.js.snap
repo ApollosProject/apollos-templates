@@ -1141,43 +1141,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                     }
                                   }
                                 />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      2147483648,
-                                      0,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-top"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
-                                      "bottom": 0,
-                                      "left": 0,
-                                      "position": "absolute",
-                                      "right": 0,
-                                      "top": 0,
-                                    }
-                                  }
-                                />
                               </View>
                               <View
                                 style={
@@ -1316,43 +1279,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                     }
                                   }
                                 />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      2147483648,
-                                      0,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-top"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
-                                      "bottom": 0,
-                                      "left": 0,
-                                      "position": "absolute",
-                                      "right": 0,
-                                      "top": 0,
-                                    }
-                                  }
-                                />
                               </View>
                               <View
                                 style={
@@ -1488,43 +1414,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                       "backgroundColor": "#A5A5A5",
                                       "resizeMode": "cover",
                                       "width": "100%",
-                                    }
-                                  }
-                                />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      2147483648,
-                                      0,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-top"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
-                                      "bottom": 0,
-                                      "left": 0,
-                                      "position": "absolute",
-                                      "right": 0,
-                                      "top": 0,
                                     }
                                   }
                                 />
@@ -1827,43 +1716,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     }
                                   }
                                 />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      2147483648,
-                                      0,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-top"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
-                                      "bottom": 0,
-                                      "left": 0,
-                                      "position": "absolute",
-                                      "right": 0,
-                                      "top": 0,
-                                    }
-                                  }
-                                />
                               </View>
                               <View
                                 style={
@@ -1989,43 +1841,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                     }
                                   }
                                 />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      2147483648,
-                                      0,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-top"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
-                                      "bottom": 0,
-                                      "left": 0,
-                                      "position": "absolute",
-                                      "right": 0,
-                                      "top": 0,
-                                    }
-                                  }
-                                />
                               </View>
                               <View
                                 style={
@@ -2148,43 +1963,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                       "aspectRatio": 2,
                                       "backgroundColor": "#A5A5A5",
                                       "width": "100%",
-                                    }
-                                  }
-                                />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      2147483648,
-                                      0,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-top"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
-                                      "bottom": 0,
-                                      "left": 0,
-                                      "position": "absolute",
-                                      "right": 0,
-                                      "top": 0,
                                     }
                                   }
                                 />
@@ -2506,7 +2284,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 }
                               >
                                 <Image
-                                  customTheme={null}
                                   fadeDuration={250}
                                   isLoading={false}
                                   onLoad={[Function]}
@@ -2690,7 +2467,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 }
                               >
                                 <Image
-                                  customTheme={null}
                                   fadeDuration={250}
                                   isLoading={false}
                                   onLoad={[Function]}
@@ -2874,7 +2650,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 }
                               >
                                 <Image
-                                  customTheme={null}
                                   fadeDuration={250}
                                   isLoading={false}
                                   onLoad={[Function]}
@@ -3255,7 +3030,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 }
                               >
                                 <Image
-                                  customTheme={null}
                                   fadeDuration={250}
                                   isLoading={false}
                                   onLoad={[Function]}
@@ -3439,7 +3213,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 }
                               >
                                 <Image
-                                  customTheme={null}
                                   fadeDuration={250}
                                   isLoading={false}
                                   onLoad={[Function]}
@@ -3623,7 +3396,6 @@ Celebrate your freedom in Christ — in the car, shower, cubicle or wherever you
                                 }
                               >
                                 <Image
-                                  customTheme={null}
                                   fadeDuration={250}
                                   isLoading={false}
                                   onLoad={[Function]}
@@ -4023,43 +3795,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                     }
                                   }
                                 />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      2147483648,
-                                      0,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-top"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
-                                      "bottom": 0,
-                                      "left": 0,
-                                      "position": "absolute",
-                                      "right": 0,
-                                      "top": 0,
-                                    }
-                                  }
-                                />
                               </View>
                               <View
                                 style={
@@ -4198,43 +3933,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                     }
                                   }
                                 />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      2147483648,
-                                      0,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-top"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
-                                      "bottom": 0,
-                                      "left": 0,
-                                      "position": "absolute",
-                                      "right": 0,
-                                      "top": 0,
-                                    }
-                                  }
-                                />
                               </View>
                               <View
                                 style={
@@ -4370,43 +4068,6 @@ Our son Cameron began attending Willow Creek Special Friends in 2015.",
                                       "backgroundColor": "#A5A5A5",
                                       "resizeMode": "cover",
                                       "width": "100%",
-                                    }
-                                  }
-                                />
-                                <BVLinearGradient
-                                  colors={
-                                    Array [
-                                      2147483648,
-                                      0,
-                                    ]
-                                  }
-                                  endPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 1,
-                                    }
-                                  }
-                                  locations={
-                                    Array [
-                                      0,
-                                      1,
-                                    ]
-                                  }
-                                  overlayColor="#000000"
-                                  overlayType="gradient-top"
-                                  startPoint={
-                                    Object {
-                                      "x": 0,
-                                      "y": 0,
-                                    }
-                                  }
-                                  style={
-                                    Object {
-                                      "bottom": 0,
-                                      "left": 0,
-                                      "position": "absolute",
-                                      "right": 0,
-                                      "top": 0,
                                     }
                                   }
                                 />
