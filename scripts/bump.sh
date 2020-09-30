@@ -1,11 +1,25 @@
+#!/bin/bash
 # this script will bump versions in the packages using the add-packages.sh scripts and then bump the Apollos versions
-TAG=$1
-if $TAG != "latest" || $TAG != "beta" || $TAG != "canary"
+
+# get latest apps version
+VERSION=$(
+curl -s 'https://api.github.com/repos/apollosproject/apollos-apps/tags' \
+| python -m json.tool \
+| grep '\"name\"' \
+| cut -d ':' -f 2 \
+| sed 's/&quot;/\"/g' \
+| sed -E 's/\"v(.*)\".*/\1/g' \
+| sed -n 1p
+)
+
+if [[ $VERSION == *beta* ]]
 then
-	echo "Usage: bump.sh latest|beta|canary"
-	exit
+	TAG=beta
+else
+	TAG=latest
 fi
-VERSION="1.6.0-beta.2" # get version from apps tag that matches TAG
+
+echo $VERSION
 
 # API
-(cd apollos-church-api || exit && yarn "$TAG" && sed -i "" "s/\"([0-9].*)\"/$VERSION/g" apollos.json)
+(cd apollos-church-api || exit && yarn "$TAG" && sed -i "" "s/\"([0-9].*)\"/\"$VERSION\"/g" apollos.json)

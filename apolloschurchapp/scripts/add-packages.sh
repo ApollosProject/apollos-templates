@@ -16,6 +16,7 @@ fi;
 
 # replace package names with version tag
 JSON=$(sed -E "s/^.*\"(@apollosproject\/[a-z\-]+)\".*/\1@$TAG /g" package.json)
+echo $JSON
 
 # if packages are listed first and dev packages second...
 if [ $DEVDEPSLINE -gt $DEPSLINE ]
@@ -26,5 +27,5 @@ else
 		PKGS=$(echo "$JSON" | sed -n "$DEPSLINE",/^$/p | grep "@apollosproject" | tr -d "\n")
 		DEVPKGS=$(echo "$JSON" | sed -n "$DEVDEPSLINE","$DEPSLINE"p | grep "@apollosproject" | tr -d "\n")
 fi
-yarn add --dev $DEVPKGS --ignore-scripts
-yarn add $PKGS --ignore-scripts
+#yarn add --dev $DEVPKGS --ignore-scripts
+#yarn add $PKGS --ignore-scripts
