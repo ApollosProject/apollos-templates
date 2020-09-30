@@ -19,7 +19,6 @@ else
 	TAG=latest
 fi
 
-echo $VERSION
-
-(cd apollos-church-api || exit && yarn "$TAG" && sed -i "" -E "s/\"([0-9].*)\"/\"$VERSION\"/g" apollos.json)
-(cd apolloschurchapp || exit && yarn "$TAG" && sed -i "" -E "s/\"([0-9].*)\"/\"$VERSION\"/g" apollos.json)
+yarn "$TAG"
+(cd apollos-church-api || exit && sed -i "" -E "s/\"([0-9].*)\"/\"$VERSION\"/g" apollos.json)
+(cd apolloschurchapp || exit && sed -i "" -E "s/\"([0-9].*)\"/\"$VERSION\"/g" apollos.json)
