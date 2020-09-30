@@ -1,5 +1,5 @@
 # get list of apollosproject packages to update
-function bump() {
+function add() {
 	# get devDependencies line number
 	DEVDEPSLINE=$(grep -n "devDependencies" package.json | sed -E "s/^([0-9]+):.*/\1/g")
 
@@ -22,9 +22,8 @@ function bump() {
 			DEVPKGS=$(echo "$JSON" | sed -n "$DEVDEPSLINE","$DEPSLINE"p | grep "@apollosproject" | tr -d "\n")
 	fi
 
-	echo "$PKGS"
-	#yarn add --dev $DEVPKGS --ignore-scripts
-	#yarn add $PKGS --ignore-scripts
+	yarn add --dev $DEVPKGS --ignore-scripts
+	yarn add $PKGS --ignore-scripts
 }
 
 # determine what npm tag to update to
@@ -35,5 +34,5 @@ else
 	TAG=$1
 fi;
 
-(cd apollos-church-api && bump $TAG)
-(cd apolloschurchapp && bump $TAG)
+(cd apollos-church-api && add $TAG)
+(cd apolloschurchapp && add $TAG)
