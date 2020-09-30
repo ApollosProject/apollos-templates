@@ -16,6 +16,9 @@ fi;
 
 # replace package names with version tag
 JSON=$(sed -E "s/^.*\"(@apollosproject\/[a-z\-]+)\".*/\1@$TAG /g" package.json)
+
+# remove packages with no tags
+JSON=$( echo "$JSON" | sed "s/@apollosproject\/react-native-airplay-btn//g"
 echo $JSON
 
 # if packages are listed first and dev packages second...
