@@ -9,7 +9,7 @@ import {
   ThemeManager,
   BackgroundView,
   withTheme,
-  ThemeMixin,
+  // ThemeMixin,
   NavigationService,
 } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
@@ -74,22 +74,22 @@ const App = () => (
   <AppearanceProvider>
     <ThemeManager>
       <Providers>
-        <ThemeMixin>
-          <BackgroundView>
-            <AppStatusBar />
-            <CoreNavigationAnalytics>
-              {(props) => (
-                <AppContainer
-                  ref={(navigatorRef) => {
-                    NavigationService.setTopLevelNavigator(navigatorRef);
-                  }}
-                  {...props}
-                />
-              )}
-            </CoreNavigationAnalytics>
-            <MediaPlayer />
-          </BackgroundView>
-        </ThemeMixin>
+      {/* <ThemeMixin mixin={{ type: 'dark' }}> */}
+        <BackgroundView>
+          <AppStatusBar />
+          <CoreNavigationAnalytics>
+            {(props) => (
+              <AppContainer
+                ref={(navigatorRef) => {
+                  NavigationService.setTopLevelNavigator(navigatorRef);
+                }}
+                {...props}
+              />
+            )}
+          </CoreNavigationAnalytics>
+          <MediaPlayer />
+        </BackgroundView>
+        {/* </ThemeMixin> */}
       </Providers>
     </ThemeManager>
   </AppearanceProvider>
