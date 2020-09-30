@@ -3,8 +3,10 @@ import React from 'react';
 import { StatusBar } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import RNBootSplash from 'react-native-bootsplash';
+import { AppearanceProvider } from 'react-native-appearance'
 
 import {
+  ThemeManager,
   BackgroundView,
   withTheme,
   ThemeMixin,
@@ -69,24 +71,28 @@ const AppNavigator = createStackNavigator(
 const AppContainer = createAppContainer(AppNavigator);
 
 const App = () => (
-  <Providers>
-    <ThemeMixin mixin={{ type: 'dark' }}>
-      <BackgroundView>
-        <AppStatusBar />
-        <CoreNavigationAnalytics>
-          {(props) => (
-            <AppContainer
-              ref={(navigatorRef) => {
-                NavigationService.setTopLevelNavigator(navigatorRef);
-              }}
-              {...props}
-            />
-          )}
-        </CoreNavigationAnalytics>
-        <MediaPlayer />
-      </BackgroundView>
-    </ThemeMixin>
-  </Providers>
+  <AppearanceProvider>
+    <ThemeManager>
+      <Providers>
+        <ThemeMixin>
+          <BackgroundView>
+            <AppStatusBar />
+            <CoreNavigationAnalytics>
+              {(props) => (
+                <AppContainer
+                  ref={(navigatorRef) => {
+                    NavigationService.setTopLevelNavigator(navigatorRef);
+                  }}
+                  {...props}
+                />
+              )}
+            </CoreNavigationAnalytics>
+            <MediaPlayer />
+          </BackgroundView>
+        </ThemeMixin>
+      </Providers>
+    </ThemeManager>
+  </AppearanceProvider>
 );
 
 export default App;
