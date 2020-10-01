@@ -14,8 +14,8 @@
     "pods": "lerna run pods --parallel",
     "latest": "lerna run latest",
     "canary": "lerna run canary",
-    "encrypt": "./scripts/secrets.sh -e",
-    "decrypt": "./scripts/secrets.sh -d"
+    "pack-secrets": "./scripts/secrets.sh -e",
+    "unpack-secrets": "./scripts/secrets.sh -d"
   },
   "private": true,
   "devDependencies": {
