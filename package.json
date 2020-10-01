@@ -14,8 +14,8 @@
     "pods": "lerna run pods --parallel",
     "latest": "lerna run latest",
     "canary": "lerna run canary",
-    "encrypt": "/usr/local/opt/openssl@1.1/bin/openssl enc -aes-256-cbc -pbkdf2 -iter 20000 -in",
-    "decrypt": "/usr/local/opt/openssl@1.1/bin/openssl enc -d -aes-256-cbc -pbkdf2 -iter 20000 -in"
+    "pack": "./scripts/secrets.sh -e",
+    "unpack": "./scripts/secrets.sh -d"
   },
   "private": true,
   "devDependencies": {
