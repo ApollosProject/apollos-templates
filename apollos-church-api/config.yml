@@ -35,7 +35,7 @@ UNIVERSAL_LINKS:
   APP_STORE_LINK: https://apollos.app/ios
   PLAY_STORE_LINK: https://apollos.app/android
   # Your app Id, as found in your app/build.gradle.
-  GOOGLE_APP_ID: com.apolloschurch.app
+  GOOGLE_APP_ID: com.differential.apollos
   # https://docs.getsocial.im/knowledge-base/android-signing-key-sha256/
   GOOGLE_KEYSTORE_SHA256: EC:6E:B5:5A:62:53:1E:53:FF:C4:BA:A7:CB:29:77:57:71:9D:65:2F:AF:69:41:A3:AD:2B:C4:55:A1:7A:07:03
 ONE_SIGNAL:
