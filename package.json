@@ -12,8 +12,8 @@
     "ios": "lerna run ios --parallel",
     "android": "lerna run android --parallel",
     "pods": "lerna run pods --parallel",
-    "latest": "lerna run latest",
-    "canary": "lerna run canary",
+    "bump": "./scripts/bump.sh && yarn",
+    "canary": "./scripts/add-packages.sh canary && yarn",
     "pack-secrets": "./scripts/secrets.sh -e",
     "unpack-secrets": "./scripts/secrets.sh -d"
   },
