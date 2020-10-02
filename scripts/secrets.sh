@@ -1,8 +1,7 @@
 #!/bin/bash
-if [ $# -ne 2 ]
-then
-		echo "Usage: secrets.sh -e|-d KEY"
-		exit
+if [ $# -ne 2 ]; then
+	echo "Usage: secrets.sh -e|-d KEY"
+	exit
 fi
 
 function encrypt() {
@@ -14,23 +13,19 @@ function decrypt() {
 }
 
 SECRETS=(
-		"apolloschurchapp/.env.shared"
-		"apollos-church-api/.env.shared"
-		"apolloschurchapp/android/key.json"
-		"apolloschurchapp/android/app/apollos.keystore"
-	)
+	"apolloschurchapp/.env.shared"
+	"apollos-church-api/.env.shared"
+	"apolloschurchapp/android/key.json"
+	"apolloschurchapp/android/app/apollos.keystore"
+)
 
-
-for file in "${SECRETS[@]}"
-do
-	if [ "$1" = "-e" ]
-	then
-			encrypt "$file" "$2"
-	elif [ "$1" = "-d" ]
-	then
-			decrypt "$file" "$2"
+for file in "${SECRETS[@]}"; do
+	if [ "$1" = "-e" ]; then
+		encrypt "$file" "$2"
+	elif [ "$1" = "-d" ]; then
+		decrypt "$file" "$2"
 	else
-			echo "Usage: secrets.sh KEY -e|-d"
-			exit
+		echo "Usage: secrets.sh KEY -e|-d"
+		exit
 	fi
 done
