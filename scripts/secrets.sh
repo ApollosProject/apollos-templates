@@ -1,22 +1,36 @@
+#!/usr/bin/bash
 if [ $# -ne 2 ]
 then
 		echo "Usage: secrets.sh -e|-d KEY"
 		exit
 fi
 
-if [ "$1" = "-e" ]
-then
-		/usr/local/opt/openssl@1.1/bin/openssl enc -aes-256-cbc -pbkdf2 -iter 20000 -in apolloschurchapp/.env.shared -out apolloschurchapp/.env.shared.enc -k "$2"
-		/usr/local/opt/openssl@1.1/bin/openssl enc -aes-256-cbc -pbkdf2 -iter 20000 -in apollos-church-api/.env.shared -out apollos-church-api/.env.shared.enc -k "$2"
-		/usr/local/opt/openssl@1.1/bin/openssl enc -aes-256-cbc -pbkdf2 -iter 20000 -in apolloschurchapp/android/app/apollos.keystore -out apolloschurchapp/android/app/apollos.keystore.enc -k "$2"
-		/usr/local/opt/openssl@1.1/bin/openssl enc -aes-256-cbc -pbkdf2 -iter 20000 -in apolloschurchapp/android/key.json -out apolloschurchapp/android/key.json.enc -k "$2"
-elif [ "$1" = "-d" ]
-then
-		/usr/local/opt/openssl@1.1/bin/openssl enc -d -aes-256-cbc -pbkdf2 -iter 20000 -in apolloschurchapp/.env.shared.enc -out apolloschurchapp/.env.shared -k "$2"
-		/usr/local/opt/openssl@1.1/bin/openssl enc -d -aes-256-cbc -pbkdf2 -iter 20000 -in apollos-church-api/.env.shared.enc -out apollos-church-api/.env.shared -k "$2"
-		/usr/local/opt/openssl@1.1/bin/openssl enc -d -aes-256-cbc -pbkdf2 -iter 20000 -in apolloschurchapp/android/app/apollos.keystore.enc -out apolloschurchapp/android/app/apollos.keystore -k "$2"
-		/usr/local/opt/openssl@1.1/bin/openssl enc -d -aes-256-cbc -pbkdf2 -iter 20000 -in apolloschurchapp/android/key.json.enc -out apolloschurchapp/android/key.json -k "$2"
-else
-		echo "Usage: secrets.sh KEY -e|-d"
-		exit
-fi
+function encrypt() {
+	/usr/local/opt/openssl@1.1/bin/openssl enc -aes-256-cbc -pbkdf2 -iter 20000 -in "$1" -out "$1".enc -k "$2"
+}
+
+function decrypt() {
+	/usr/local/opt/openssl@1.1/bin/openssl enc -d -aes-256-cbc -pbkdf2 -iter 20000 -in "$1".enc -out "$1" -k "$2"
+}
+
+SECRETS=(
+		"apolloschurchapp/.env.shared"
+		"apollos-church-api/.env.shared"
+		"apolloschurchapp/android/key.json"
+		"apolloschurchapp/android/apollos.keystore"
+	)
+
+
+for file in "${SECRETS[@]}"
+do
+	if [ "$1" = "-e" ]
+	then
+			encrypt "$file" "$2"
+	elif [ "$1" = "-d" ]
+	then
+			decrypt "$file" "$2"
+	else
+			echo "Usage: secrets.sh KEY -e|-d"
+			exit
+	fi
+done
