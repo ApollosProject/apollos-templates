@@ -17,7 +17,7 @@ SECRETS=(
 		"apolloschurchapp/.env.shared"
 		"apollos-church-api/.env.shared"
 		"apolloschurchapp/android/key.json"
-		"apolloschurchapp/android/apollos.keystore"
+		"apolloschurchapp/android/app/apollos.keystore"
 	)
 
 
