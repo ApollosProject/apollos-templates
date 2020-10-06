@@ -14,8 +14,7 @@
     "pods": "lerna run pods --parallel",
     "bump": "./scripts/bump.sh && yarn",
     "canary": "./scripts/add-packages.sh canary && yarn",
-    "pack-secrets": "./scripts/secrets.sh -e",
-    "unpack-secrets": "./scripts/secrets.sh -d"
+    "secrets": "./scripts/secrets.sh"
   },
   "private": true,
   "devDependencies": {
