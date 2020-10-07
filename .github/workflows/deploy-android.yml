@@ -39,7 +39,7 @@ jobs:
         APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
 
     - name: Decrypt Secrets
-      run: (cd .. && yarn unpack-secrets ${{ secrets.ENCRYPTION_PASSWORD }})
+      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
 
     - name: Fastlane Deploy
       run: bundle exec fastlane android deploy
