@@ -14,25 +14,7 @@ import * as Search from '@apollosproject/data-connector-algolia-search';
 import * as Pass from '@apollosproject/data-connector-passes';
 import * as Cache from '@apollosproject/data-connector-redis-cache';
 import * as Sms from '@apollosproject/data-connector-twilio';
-import {
-  Followings,
-  Interactions,
-  RockConstants,
-  Person,
-  ContentItem,
-  ContentChannel,
-  Sharable,
-  Auth,
-  PersonalDevice,
-  Template,
-  AuthSms,
-  Campus,
-  Group,
-  BinaryFiles,
-  Feature,
-  Event,
-  PrayerRequest,
-} from '@apollosproject/data-connector-rock';
+import * as Rock from '@apollosproject/data-connector-rock';
 import * as Theme from './theme';
 
 // This module is used to attach Rock User updating to the OneSignal module.
@@ -40,35 +22,19 @@ import * as Theme from './theme';
 import * as OneSignalWithRock from './oneSignalWithRock';
 
 const data = {
+  ...Rock,
   Interfaces,
-  Followings,
-  ContentChannel,
-  ContentItem,
-  Person,
   Cloudinary,
-  Auth,
-  AuthSms,
   Sms,
   LiveStream,
   Theme,
   Scripture,
-  Interactions,
-  RockConstants,
-  Sharable,
   Analytics,
   OneSignal,
-  PersonalDevice,
   OneSignalWithRock,
   Pass,
   Search,
-  Template,
-  Campus,
-  Group,
-  BinaryFiles,
-  Feature,
-  Event,
   Cache,
-  PrayerRequest,
 };
 
 const {
