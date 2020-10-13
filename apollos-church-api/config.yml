@@ -187,6 +187,24 @@ HOME_FEATURES:
           contentChannelId: 13
       - type: UPCOMING_EVENTS
 
+DISCOVER_FEATURES:
+  - algorithms: [CONTENT_CHANNEL]
+    arguments:
+      contentChannelId: 3
+    type: HorizontalCardList
+  - algorithms: [CONTENT_CHANNEL]
+    arguments:
+      contentChannelId: 5
+    type: HorizontalCardList
+  - algorithms: [CONTENT_CHANNEL]
+    arguments:
+      contentChannelId: 6
+    type: HorizontalCardList
+  - algorithms: [CONTENT_CHANNEL]
+    arguments:
+      contentChannelId: 8
+    type: HorizontalCardList
+
 # Default mapping of field types -> ids. There's probably no reason to edit this.
 ROCK_CONSTANTS:
   TEXT: 1
