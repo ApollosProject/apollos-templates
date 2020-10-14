@@ -59,6 +59,13 @@ exports[`User Home Feed Query should return correct query results 1`] = `
       keyExtractor={[Function]}
       loading={true}
       maxToRenderPerBatch={10}
+      navigation={
+        Object {
+          "getParam": [MockFunction],
+          "navigate": [MockFunction],
+          "setParams": [MockFunction],
+        }
+      }
       numColumns={1}
       onContentSizeChange={[Function]}
       onEndReachedThreshold={0.7}
@@ -68,6 +75,7 @@ exports[`User Home Feed Query should return correct query results 1`] = `
       onScroll={[Function]}
       onScrollBeginDrag={[Function]}
       onScrollEndDrag={[Function]}
+      openUrl={[Function]}
       refreshControl={
         <RefreshControlMock
           onRefresh={[Function]}
