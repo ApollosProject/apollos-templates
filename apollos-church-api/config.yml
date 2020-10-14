@@ -194,24 +194,28 @@ DISCOVER_FEATURES:
           contentChannelId: 3
           limit: 3
     type: HorizontalCardList
+    subtitle: Sermons
   - algorithms:
       - type: CONTENT_CHANNEL
         arguments:
           contentChannelId: 5
           limit: 3
     type: HorizontalCardList
+    subtitle: Podcasts
   - algorithms:
       - type: CONTENT_CHANNEL
         arguments:
           contentChannelId: 6
           limit: 3
     type: HorizontalCardList
+    title: Videos
   - algorithms:
       - type: CONTENT_CHANNEL
         arguments:
           contentChannelId: 8
           limit: 3
     type: HorizontalCardList
+    subtitle: Something Else
 
 # Default mapping of field types -> ids. There's probably no reason to edit this.
 ROCK_CONSTANTS:
