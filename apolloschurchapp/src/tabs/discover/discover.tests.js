@@ -14,7 +14,7 @@ describe('The Discover tab component', () => {
   it('Should retrieve the Content Channel Feeds', async () => {
     const mockFeedData = {
       request: {
-        query: GET_CONTENT_CHANNELS,
+        query: GET_FEATURE_FEED,
       },
       result: {
         data: {

@@ -33,7 +33,6 @@ import {
   FeatureFeed,
   Event,
   PrayerRequest,
-  FeatureFeed,
 } from '@apollosproject/data-connector-rock';
 import * as Theme from './theme';
 
@@ -72,7 +71,6 @@ const data = {
   Event,
   Cache,
   PrayerRequest,
-  FeatureFeed,
 };
 
 const {

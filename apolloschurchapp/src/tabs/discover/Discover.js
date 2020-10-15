@@ -24,7 +24,7 @@ function handleOnPress({ action, ...props }) {
 // getHomeFeed uses the HOME_FEATURES in the config.yml
 // You can also hardcode an ID if you are confident it will never change
 // Or use some other strategy to get a FeatureFeed.id
-const GET_HOME_FEED = gql`
+export const GET_DISCOVER_FEED = gql`
   query getDiscoverFeatureFeed {
     discoverFeedFeatures {
       id
@@ -51,7 +51,7 @@ class Discover extends PureComponent {
         {(openUrl) => (
           <BackgroundView>
             <SafeAreaView>
-              <Query query={GET_HOME_FEED}>
+              <Query query={GET_DISCOVER_FEED}>
                 {({ data, ...args }) =>
                   console.log(data, args) || (
                     <FeaturesFeedConnected
