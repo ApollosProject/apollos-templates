@@ -7,14 +7,13 @@ import Providers from '../../Providers';
 
 import { renderWithApolloData } from '../../utils/testUtils';
 
-import Discover from './Discover';
-import GET_CONTENT_CHANNELS from './DiscoverFeed/getContentChannels';
+import Discover, { GET_DISCOVER_FEED } from './Discover';
 
 describe('The Discover tab component', () => {
   it('Should retrieve the Content Channel Feeds', async () => {
     const mockFeedData = {
       request: {
-        query: GET_FEATURE_FEED,
+        query: GET_DISCOVER_FEED,
       },
       result: {
         data: {
