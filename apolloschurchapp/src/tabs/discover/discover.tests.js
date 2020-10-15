@@ -561,11 +561,9 @@ describe('The Discover tab component', () => {
         }))
     );
 
-    const DiscoverStack = createStackNavigator({ Discover });
-    const DiscoverWithNavigation = createAppContainer(DiscoverStack);
     const tree = await renderWithApolloData(
       <Providers mocks={[mockFeedData, ...mockChannelCardData]}>
-        <DiscoverWithNavigation />
+        <Discover />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
