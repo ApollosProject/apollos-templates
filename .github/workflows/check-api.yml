@@ -6,7 +6,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    working-directory: apollos-church-api
 
     steps:
     - uses: actions/checkout@v2
@@ -23,3 +22,4 @@ jobs:
 
     - name: Start Server and Check
       run: yarn start & sleep 30 && if [ $(curl "https://apollos-church-api.herokuapp.com/health") != "ok" ]; then exit 1; fi
+      working-directory: apollos-church-api
