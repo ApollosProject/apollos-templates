@@ -202,6 +202,12 @@ DISCOVER_FEATURES:
           limit: 3
     type: HorizontalCardList
     subtitle: Podcasts
+    primaryAction:
+      action: OPEN_CHANNEL
+      relatedNode:
+        __typename: ContentChannel
+        id: 5
+        name: Podcasts
   - algorithms:
       - type: CONTENT_CHANNEL
         arguments:
@@ -209,6 +215,12 @@ DISCOVER_FEATURES:
           limit: 3
     type: HorizontalCardList
     title: Videos
+    primaryAction:
+      action: OPEN_CHANNEL
+      relatedNode:
+        __typename: ContentChannel
+        id: 6
+        name: Videos
   - algorithms:
       - type: CONTENT_CHANNEL
         arguments:
