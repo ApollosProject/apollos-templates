@@ -7,7 +7,6 @@ import {
   HorizontalContentSeriesFeedConnected,
   LiveConsumer,
   MediaControlsConnected,
-  ContentSingleFeaturesConnected,
   ContentFeatureFeedConnected,
 } from '@apollosproject/ui-connected';
 import {
