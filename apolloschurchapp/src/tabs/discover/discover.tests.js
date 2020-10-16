@@ -1,20 +1,18 @@
 import React from 'react';
 import { flatMap } from 'lodash';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
 
 import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
 import Providers from '../../Providers';
 
 import { renderWithApolloData } from '../../utils/testUtils';
 
-import Discover from './Discover';
-import GET_CONTENT_CHANNELS from './DiscoverFeed/getContentChannels';
+import Discover, { GET_DISCOVER_FEED } from './Discover';
 
 describe('The Discover tab component', () => {
   it('Should retrieve the Content Channel Feeds', async () => {
     const mockFeedData = {
       request: {
-        query: GET_CONTENT_CHANNELS,
+        query: GET_DISCOVER_FEED,
       },
       result: {
         data: {
@@ -562,11 +560,9 @@ describe('The Discover tab component', () => {
         }))
     );
 
-    const DiscoverStack = createStackNavigator({ Discover });
-    const DiscoverWithNavigation = createAppContainer(DiscoverStack);
     const tree = await renderWithApolloData(
       <Providers mocks={[mockFeedData, ...mockChannelCardData]}>
-        <DiscoverWithNavigation />
+        <Discover />
       </Providers>
     );
     expect(tree).toMatchSnapshot();
