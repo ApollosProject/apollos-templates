@@ -12,9 +12,9 @@ import {
   FeaturesFeedConnected,
   FEATURE_FEED_ACTION_MAP,
   RockAuthedWebBrowser,
+  SearchInputHeader,
+  SearchFeedConnected,
 } from '@apollosproject/ui-connected';
-import SearchInputHeader from '../../ui/SearchInputHeader';
-import SearchFeed from './SearchFeed';
 
 function handleOnPress({ action, ...props }) {
   if (FEATURE_FEED_ACTION_MAP[action]) {
@@ -50,7 +50,7 @@ function Discover({ navigation }) {
               onFocus={setIsFocused}
             />
             {isFocused || searchText ? (
-              <SearchFeed searchText={searchText} />
+              <SearchFeedConnected searchText={searchText} />
             ) : (
               <Query query={GET_DISCOVER_FEED}>
                 {({ data }) => (
