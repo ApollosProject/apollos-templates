@@ -7,7 +7,7 @@ import {
   HorizontalContentSeriesFeedConnected,
   LiveConsumer,
   MediaControlsConnected,
-  ContentFeatureFeedConnected,
+  FeaturesFeedConnected,
 } from '@apollosproject/ui-connected';
 import {
   styled,
@@ -89,7 +89,7 @@ const WeekendContentItem = ({ content, loading }) => {
                   </ThemeMixin>
                 </Header>
                 <StyledMediaControlsConnected contentId={content.id} />
-                <ContentFeatureFeedConnected contentId={content.id} />
+                <FeaturesFeedConnected nodeId={content.id} />
                 <HorizontalContentSeriesFeedConnected contentId={content.id} />
               </FlexedScrollView>
             )}
