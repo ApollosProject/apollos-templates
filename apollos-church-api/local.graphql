@@ -5,6 +5,7 @@ enum ACTION_FEATURE_ACTION {
   READ_EVENT
   OPEN_URL
   OPEN_NODE
+  OPEN_CHANNEL
 }
 
 type ActionListAction {
@@ -307,6 +308,7 @@ type HorizontalCardListFeature implements Feature & Node {
   title: String
   subtitle: String
   cards: [CardListItem]
+  primaryAction: FeatureAction
 }
 
 type ImageMedia implements Media {
