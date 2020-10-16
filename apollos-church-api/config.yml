@@ -188,22 +188,48 @@ HOME_FEATURES:
       - type: UPCOMING_EVENTS
 
 DISCOVER_FEATURES:
-  - algorithms: [CONTENT_CHANNEL]
-    arguments:
-      contentChannelId: 3
+  - algorithms:
+      - type: CONTENT_CHANNEL
+        arguments:
+          contentChannelId: 3
+          limit: 3
     type: HorizontalCardList
-  - algorithms: [CONTENT_CHANNEL]
-    arguments:
-      contentChannelId: 5
+    subtitle: Sermons
+  - algorithms:
+      - type: CONTENT_CHANNEL
+        arguments:
+          contentChannelId: 5
+          limit: 3
     type: HorizontalCardList
-  - algorithms: [CONTENT_CHANNEL]
-    arguments:
-      contentChannelId: 6
+    subtitle: Podcasts
+    primaryAction:
+      action: OPEN_CHANNEL
+      title: 'Read More'
+      relatedNode:
+        __typename: ContentChannel
+        id: 5
+        name: Podcasts
+  - algorithms:
+      - type: CONTENT_CHANNEL
+        arguments:
+          contentChannelId: 6
+          limit: 3
     type: HorizontalCardList
-  - algorithms: [CONTENT_CHANNEL]
-    arguments:
-      contentChannelId: 8
+    title: Videos
+    primaryAction:
+      action: OPEN_CHANNEL
+      title: 'Read More'
+      relatedNode:
+        __typename: ContentChannel
+        id: 6
+        name: Videos
+  - algorithms:
+      - type: CONTENT_CHANNEL
+        arguments:
+          contentChannelId: 8
+          limit: 3
     type: HorizontalCardList
+    subtitle: Something Else
 
 # Default mapping of field types -> ids. There's probably no reason to edit this.
 ROCK_CONSTANTS:
