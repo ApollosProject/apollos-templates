@@ -52,16 +52,14 @@ class Discover extends PureComponent {
           <BackgroundView>
             <SafeAreaView>
               <Query query={GET_DISCOVER_FEED}>
-                {({ data, ...args }) =>
-                  console.log(data, args) || (
-                    <FeaturesFeedConnected
-                      openUrl={openUrl}
-                      navigation={this.props.navigation}
-                      nodeId={data?.discoverFeedFeatures?.id}
-                      onPressActionItem={handleOnPress}
-                    />
-                  )
-                }
+                {({ data }) => (
+                  <FeaturesFeedConnected
+                    openUrl={openUrl}
+                    navigation={this.props.navigation}
+                    featureFeedId={data?.discoverFeedFeatures?.id}
+                    onPressActionItem={handleOnPress}
+                  />
+                )}
               </Query>
             </SafeAreaView>
           </BackgroundView>
