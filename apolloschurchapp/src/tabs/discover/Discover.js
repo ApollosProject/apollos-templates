@@ -57,7 +57,7 @@ function Discover({ navigation }) {
                   <FeaturesFeedConnected
                     openUrl={openUrl}
                     navigation={navigation}
-                    nodeId={data?.discoverFeedFeatures?.id}
+                    featureFeedId={data?.discoverFeedFeatures?.id}
                     onPressActionItem={handleOnPress}
                   />
                 )}

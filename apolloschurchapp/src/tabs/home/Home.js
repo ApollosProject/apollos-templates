@@ -63,7 +63,7 @@ class Home extends PureComponent {
                   <FeaturesFeedConnected
                     openUrl={openUrl}
                     navigation={this.props.navigation}
-                    nodeId={data?.homeFeedFeatures?.id}
+                    featureFeedId={data?.homeFeedFeatures?.id}
                     onPressActionItem={handleOnPress}
                     ListHeaderComponent={
                       <LogoTitle source={require('./wordmark.png')} />
