@@ -70,7 +70,7 @@ function Discover({ navigation }) {
   );
 }
 
-Discover.navigationOptions = (props) => ({
+Discover.navigationOptions = () => ({
   header: null,
 });
 
