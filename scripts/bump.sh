@@ -34,5 +34,6 @@ echo "Bumped Apollos Version to $VERSION"
 # stage files and commit
 git commit -am "Release $VERSION"
 git tag "v$VERSION"
-git push --follow-tags
+git push
+git push --tags
 echo "Commited to repo and pushed tag!"
