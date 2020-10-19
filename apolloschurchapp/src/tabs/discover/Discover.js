@@ -56,7 +56,7 @@ function Discover({ navigation }) {
                 {({ data }) => (
                   <FeaturesFeedConnected
                     openUrl={openUrl}
-                    navigation={this.props.navigation}
+                    navigation={navigation}
                     featureFeedId={data?.discoverFeedFeatures?.id}
                     onPressActionItem={handleOnPress}
                   />
