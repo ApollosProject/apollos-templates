@@ -268,10 +268,10 @@
     graphql-tag "2.9.2"
     yup "^0.27.0"
 
-"@apollosproject/ui-connected@^1.6.1-alpha.10":
-  version "1.6.1-alpha.10"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-connected/-/ui-connected-1.6.1-alpha.10.tgz#390efec8cd415b749c2d81dfef830acdf0547a76"
-  integrity sha512-Tr72M/5HvypdfjqNcTXRci9uQpLDk14e1a9x7tOgFPjkbo/urg7VCGbgnO+IGgntCZJS+l16wxqZPPXLZWV1bg==
+"@apollosproject/ui-connected@^1.6.1-alpha.11":
+  version "1.6.1-alpha.11"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-connected/-/ui-connected-1.6.1-alpha.11.tgz#bcd0d6bf0aca919d0980e08f7ed3c3d520c56304"
+  integrity sha512-HjZSZpOkiFww2/UYJ+/vUNQNfRZ2TZoKrxocIyoKyXlL1QgKPb0YxfoYCtNlN9rmBm7mmPmvfPQ9jJftaaiImw==
   dependencies:
     apollo-storybook-react-native "0.2.12"
     apollo-upload-client "9.0.0"
