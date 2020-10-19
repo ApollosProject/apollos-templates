@@ -1,15 +1,19 @@
-import React, { PureComponent } from 'react';
+import React, { useState } from 'react';
 
 import SafeAreaView from 'react-native-safe-area-view';
 import PropTypes from 'prop-types';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 
+import { throttle } from 'lodash';
+
 import { BackgroundView } from '@apollosproject/ui-kit';
 import {
   FeaturesFeedConnected,
   FEATURE_FEED_ACTION_MAP,
   RockAuthedWebBrowser,
+  SearchInputHeader,
+  SearchFeedConnected,
 } from '@apollosproject/ui-connected';
 
 function handleOnPress({ action, ...props }) {
@@ -32,25 +36,22 @@ export const GET_DISCOVER_FEED = gql`
   }
 `;
 
-class Discover extends PureComponent {
-  static navigationOptions = () => ({
-    header: null,
-  });
+function Discover({ navigation }) {
+  const [searchText, setSearchText] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
 
-  static propTypes = {
-    navigation: PropTypes.shape({
-      getParam: PropTypes.func,
-      setParams: PropTypes.func,
-      navigate: PropTypes.func,
-    }),
-  };
-
-  render() {
-    return (
-      <RockAuthedWebBrowser>
-        {(openUrl) => (
-          <BackgroundView>
-            <SafeAreaView>
+  return (
+    <RockAuthedWebBrowser>
+      {(openUrl) => (
+        <BackgroundView>
+          <SafeAreaView>
+            <SearchInputHeader
+              onChangeText={throttle(setSearchText, 300)}
+              onFocus={setIsFocused}
+            />
+            {isFocused || searchText ? (
+              <SearchFeedConnected searchText={searchText} />
+            ) : (
               <Query query={GET_DISCOVER_FEED}>
                 {({ data }) => (
                   <FeaturesFeedConnected
@@ -61,12 +62,24 @@ class Discover extends PureComponent {
                   />
                 )}
               </Query>
-            </SafeAreaView>
-          </BackgroundView>
-        )}
-      </RockAuthedWebBrowser>
-    );
-  }
+            )}
+          </SafeAreaView>
+        </BackgroundView>
+      )}
+    </RockAuthedWebBrowser>
+  );
 }
+
+Discover.navigationOptions = () => ({
+  header: null,
+});
+
+Discover.propTypes = {
+  navigation: PropTypes.shape({
+    getParam: PropTypes.func,
+    setParams: PropTypes.func,
+    navigate: PropTypes.func,
+  }),
+};
 
 export default Discover;

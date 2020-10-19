@@ -63,10 +63,10 @@
   resolved "https://registry.yarnpkg.com/@apollosproject/apollo-server-env-mock/-/apollo-server-env-mock-1.6.1-alpha.5.tgz#acf3de2a4a40fbaca24dd7c86f82feb82fb69935"
   integrity sha512-cHnjBtSqSl6/xJuZsgkfeApzRJaVXQdsjCWWgIiwrFbRCwaVhWrK4A/fyfJtbbh1EYm7n5nOkMaF06MtIiB5ww==
 
-"@apollosproject/babel-preset-apollos@^1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/babel-preset-apollos/-/babel-preset-apollos-1.6.0.tgz#ba9e7e92eda69341d1cff5b0b1bd0cd866636b57"
-  integrity sha512-C+Tf5kEHvvGg5RRGGQKeun5xGMOYw6i+9b3AmYjtBoLDI5dr48Q04k6+X83jGzjOzKhDv/01eDRZ7oyS45jxmg==
+"@apollosproject/babel-preset-apollos@^1.5.1-alpha.31":
+  version "1.5.1-alpha.31"
+  resolved "https://registry.yarnpkg.com/@apollosproject/babel-preset-apollos/-/babel-preset-apollos-1.5.1-alpha.31.tgz#8e1f9c89f39d6f3ca82e50f7604af079b621b84b"
+  integrity sha512-TpvpPEDSzw7hKolbcJOj25e/RdfdKEuyckAp+BVomwM3yInodjWlm8N8h6NHWCgidtlnGzi1PJc5seDk928f/w==
   dependencies:
     "@babel/plugin-proposal-class-properties" "7.4.0"
     "@babel/plugin-proposal-decorators" "7.4.0"
@@ -268,10 +268,10 @@
     graphql-tag "2.9.2"
     yup "^0.27.0"
 
-"@apollosproject/ui-connected@^1.6.1-alpha.9":
-  version "1.6.1-alpha.9"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-connected/-/ui-connected-1.6.1-alpha.9.tgz#3165892d166ea1f34fc3ea5a56af11868aa4c8d1"
-  integrity sha512-GAaEfHiIx4in/n2ktJttPCGvxpfDIAjb1CJKWdM/giR1Xy8uRj2S6DD0o/94+y46W1uyjJSMq9RveV62XaLuJA==
+"@apollosproject/ui-connected@^1.6.1-alpha.10":
+  version "1.6.1-alpha.10"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-connected/-/ui-connected-1.6.1-alpha.10.tgz#390efec8cd415b749c2d81dfef830acdf0547a76"
+  integrity sha512-Tr72M/5HvypdfjqNcTXRci9uQpLDk14e1a9x7tOgFPjkbo/urg7VCGbgnO+IGgntCZJS+l16wxqZPPXLZWV1bg==
   dependencies:
     apollo-storybook-react-native "0.2.12"
     apollo-upload-client "9.0.0"
@@ -279,10 +279,10 @@
     lodash "^4.17.11"
     react-apollo "2.5.5"
 
-"@apollosproject/ui-fragments@^1.6.1-alpha.9":
-  version "1.6.1-alpha.9"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-fragments/-/ui-fragments-1.6.1-alpha.9.tgz#f7dddd309ccf51617b58499b3ebd83ac19ffd62f"
-  integrity sha512-0bPYMHxmtIwCcJGqfYpXMI/fHYErsSveFpkkXfaPGW+TJ1JwBCJnBMQ45RyOVGRC6il6VtjOQ4B+uC3Io1B4Cg==
+"@apollosproject/ui-fragments@^1.6.1-alpha.10":
+  version "1.6.1-alpha.10"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-fragments/-/ui-fragments-1.6.1-alpha.10.tgz#b77bd3a3d6123bd25892b0ea4ac4f349d9ef9012"
+  integrity sha512-U/doASHXqk01QUst+iHlJBp/kwuDMVWRlHwwSjoO25OEgsNj/HXByk2ccFzFSxe22rDLiEeuuBRSraK3Wzk1fg==
   dependencies:
     graphql-tag "2.9.2"
 

@@ -66,7 +66,7 @@
   },
   "devDependencies": {
     "@apollosproject/apollo-server-env-mock": "^1.6.1-alpha.5",
-    "@apollosproject/babel-preset-apollos": "^1.6.0",
+    "@apollosproject/babel-preset-apollos": "^1.5.1-alpha.31",
     "@apollosproject/eslint-config": "^1.6.1-alpha.5",
     "@babel/cli": "^7.4.5",
     "@babel/core": "^7.4.5",
