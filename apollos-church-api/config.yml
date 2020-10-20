@@ -150,6 +150,17 @@ ROCK_MAPPINGS:
   MOBILE_DEVICE_TYPE_ID: 671
 
 HOME_FEATURES:
+  - type: ActionBar
+    title: Welcome to Apollos
+    actions: [{
+      title: Check In,
+      icon: check,
+      action: OPEN_URL,
+      relatedNode: {
+        __typename: Url,
+        url: 'https://www.google.com'
+      }
+    }]
   - algorithms: [USER_FEED]
     type: HeroList
     primaryAction:

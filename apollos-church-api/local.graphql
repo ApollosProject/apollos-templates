@@ -8,6 +8,21 @@ enum ACTION_FEATURE_ACTION {
   OPEN_CHANNEL
 }
 
+type ActionBarAction {
+  id: ID!
+  icon: String
+  title: String
+  action: ACTION_FEATURE_ACTION
+  relatedNode: Node
+}
+
+type ActionBarFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  title: String
+  actions: [ActionBarAction]
+}
+
 type ActionListAction {
   id: ID!
   title: String
