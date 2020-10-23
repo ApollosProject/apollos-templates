@@ -34,7 +34,6 @@ import {
   ActionAlgorithm,
   Event,
   PrayerRequest,
-  ActionAlgorithm,
 } from '@apollosproject/data-connector-rock';
 import * as Theme from './theme';
 
@@ -74,7 +73,6 @@ const data = {
   Event,
   Cache,
   PrayerRequest,
-  ActionAlgorithm,
 };
 
 const {
