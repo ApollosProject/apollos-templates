@@ -164,6 +164,9 @@ HOME_FEATURES:
     isCard: false
     type: PrayerList
     title: Daily Prayer
+  - algorithms: [CURRENT_CAMPUS]
+    type: VerticalCardList
+    subtitle: My Campus
   - algorithms: [CAMPAIGN_ITEMS]
     type: HeroList
     isFeatured: true

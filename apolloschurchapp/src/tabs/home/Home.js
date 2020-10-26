@@ -32,9 +32,23 @@ function handleOnPress({ action, ...props }) {
 // You can also hardcode an ID if you are confident it will never change
 // Or use some other strategy to get a FeatureFeed.id
 const GET_HOME_FEED = gql`
-  query getHomeFeatureFeed {
-    homeFeedFeatures {
+  query getHomeFeatureFeed($campusId: ID) {
+    homeFeedFeatures(campusId: $campusId) {
       id
+    }
+  }
+`;
+
+const CURRENT_CAMPUS = gql`
+  query getCurrentCampus {
+    currentUser {
+      id
+      profile {
+        id
+        campus {
+          id
+        }
+      }
     }
   }
 `;
@@ -58,17 +72,27 @@ class Home extends PureComponent {
         {(openUrl) => (
           <BackgroundView>
             <SafeAreaView>
-              <Query query={GET_HOME_FEED}>
-                {({ data }) => (
-                  <FeaturesFeedConnected
-                    openUrl={openUrl}
-                    navigation={this.props.navigation}
-                    featureFeedId={data?.homeFeedFeatures?.id}
-                    onPressActionItem={handleOnPress}
-                    ListHeaderComponent={
-                      <LogoTitle source={require('./wordmark.png')} />
-                    }
-                  />
+              <Query query={CURRENT_CAMPUS}>
+                {({ data: campusData }) => (
+                  <Query
+                    query={GET_HOME_FEED}
+                    variables={{
+                      campusId: campusData?.currentUser?.profile?.campus?.id,
+                    }}
+                    fetchPolicy="cache-and-network"
+                  >
+                    {({ data }) => (
+                      <FeaturesFeedConnected
+                        openUrl={openUrl}
+                        navigation={this.props.navigation}
+                        featureFeedId={data?.homeFeedFeatures?.id}
+                        onPressActionItem={handleOnPress}
+                        ListHeaderComponent={
+                          <LogoTitle source={require('./wordmark.png')} />
+                        }
+                      />
+                    )}
+                  </Query>
                 )}
               </Query>
             </SafeAreaView>
