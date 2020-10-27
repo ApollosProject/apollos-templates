@@ -12,7 +12,7 @@
     "ios": "lerna run ios --parallel",
     "android": "lerna run android --parallel",
     "pods": "lerna run pods --parallel",
-    "bump": "./scripts/bump.sh",
+    "bump": "yarn unlink-packages && ./scripts/bump.sh",
     "canary": "./scripts/add-packages.sh canary && yarn",
     "secrets": "./scripts/secrets.sh"
   },
