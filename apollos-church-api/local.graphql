@@ -539,7 +539,7 @@ type Query {
   search(query: String!, first: Int, after: String): SearchResultsConnection
   campuses(location: CampusLocationInput): [Campus]
   userFeedFeatures: [Feature] @deprecated(reason: "Use homeFeedFeatures or discoverFeedFeatures")
-  homeFeedFeatures: FeatureFeed
+  homeFeedFeatures(campusId: ID): FeatureFeed
   discoverFeedFeatures: FeatureFeed
 }
 

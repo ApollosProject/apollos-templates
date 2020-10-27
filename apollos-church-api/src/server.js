@@ -1,3 +1,5 @@
+import fs from 'fs';
+import path from 'path';
 import { ApolloServer } from 'apollo-server-express';
 import ApollosConfig from '@apollosproject/config';
 import express from 'express';
@@ -63,6 +65,17 @@ const app = express();
 // health check
 app.get('/health', (req, res) => {
   res.send('ok');
+});
+
+// apollos version
+app.get('/version', (req, res) => {
+  try {
+    const data = fs.readFileSync(path.join(__dirname, '..', 'apollos.json'));
+    const { version } = JSON.parse(data);
+    res.send(version);
+  } catch (e) {
+    res.send('unknown');
+  }
 });
 
 applyServerMiddleware({ app, dataSources, context });
