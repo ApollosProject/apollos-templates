@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`User Home Feed Query should return correct query results 1`] = `
+exports[`The Discover tab component Should retrieve the discover feed 1`] = `
 <BVLinearGradient
   colors={
     Array [
@@ -59,13 +59,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
       keyExtractor={[Function]}
       loading={true}
       maxToRenderPerBatch={10}
-      navigation={
-        Object {
-          "getParam": [MockFunction],
-          "navigate": [MockFunction],
-          "setParams": [MockFunction],
-        }
-      }
       numColumns={1}
       onContentSizeChange={[Function]}
       onEndReachedThreshold={0.7}
