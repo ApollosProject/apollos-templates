@@ -1,5 +1,5 @@
 import React from 'react';
-import { NativeModules, Animated } from 'react-native';
+import { NativeModules } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
 import FRAGMENTS from '@apollosproject/ui-fragments';
 
@@ -18,7 +18,7 @@ jest.mock('react-navigation', () => {
   const ActualNavigation = require.requireActual('react-navigation');
   return {
     ...ActualNavigation,
-    SafeAreaView: require.requireActual('react-native').SafeAreaView,
+    SafeAreaView: require.requireActual('SafeAreaView'),
   };
 });
 
@@ -26,7 +26,7 @@ jest.mock('@react-navigation/native', () => {
   const ActualNavigation = require.requireActual('@react-navigation/native');
   return {
     ...ActualNavigation,
-    SafeAreaView: require.requireActual('react-native').SafeAreaView,
+    SafeAreaView: require.requireActual('SafeAreaView'),
   };
 });
 
@@ -43,26 +43,32 @@ ApollosConfig.loadJs({
   ONE_SIGNAL_KEY: 'doesntmatter',
 });
 
-Animated.timing = (value, config) => ({
-  start: (callback) => {
-    value.setValue(config.toValue);
-    callback && callback();
-  },
-  stop: () => ({}),
+jest.mock('Animated', () => {
+  const ActualAnimated = require.requireActual('Animated');
+  return {
+    ...ActualAnimated,
+    timing: (value, config) => ({
+      start: (callback) => {
+        value.setValue(config.toValue);
+        callback && callback();
+      },
+      stop: () => ({}),
+    }),
+    spring: (value, config) => ({
+      start: (callback) => {
+        value.setValue(config.toValue);
+        callback && callback();
+      },
+      stop: () => ({}),
+    }),
+  };
 });
-Animated.spring = (value, config) => ({
-  start: (callback) => {
-    value.setValue(config.toValue);
-    callback && callback();
-  },
-  stop: () => ({}),
-});
+
 jest.mock('NativeAnimatedHelper');
 
 jest.mock('react-native-safari-view', () => ({
   isAvailable: jest.fn().mockImplementation(() => Promise.resolve(true)),
   show: jest.fn(),
-  default: require.requireActual('react-native').SafeAreaView,
 }));
 
 jest.mock('react-native-device-info', () => ({
@@ -111,12 +117,9 @@ jest.mock('@apollosproject/ui-media-player', () => ({
 
 jest.mock('react-native-video', () => 'Video');
 
-jest.mock('react-native/Libraries/EventEmitter/NativeEventEmitter');
+jest.mock('NativeEventEmitter');
 
-jest.mock(
-  'react-native/Libraries/Components/DatePicker/DatePickerIOS',
-  () => 'DatePicker'
-);
+jest.mock('DatePickerIOS', () => 'DatePicker');
 jest.mock('./src/client/index');
 
 NativeModules.RNGestureHandlerModule = {
