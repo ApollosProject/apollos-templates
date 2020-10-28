@@ -1,4 +1,4 @@
-package com.apolloschurchapp;
+package com.differential.apollos;
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -20,7 +20,7 @@ public class MainActivity extends GoogleCastActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        RNBootSplash.init(R.drawable.bootsplash, com.apolloschurchapp.MainActivity.this);
+        RNBootSplash.init(R.drawable.bootsplash, com.differential.apollos.MainActivity.this);
     }
 
     @Override

@@ -5,6 +5,22 @@ enum ACTION_FEATURE_ACTION {
   READ_EVENT
   OPEN_URL
   OPEN_NODE
+  OPEN_CHANNEL
+}
+
+type ActionBarAction {
+  id: ID!
+  icon: String
+  title: String
+  action: ACTION_FEATURE_ACTION
+  relatedNode: Node
+}
+
+type ActionBarFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  title: String
+  actions: [ActionBarAction]
 }
 
 type ActionListAction {
@@ -211,7 +227,8 @@ type ContentSeriesContentItem implements ContentItem & Node & ContentNode & Card
   isLiked: Boolean
   likedCount: Int
   sharing: SharableContentItem
-  features: [Feature]
+  features: [Feature] @deprecated(reason: "Use featureFeed")
+  featureFeed: FeatureFeed
 }
 
 type Device implements Node {
@@ -260,8 +277,14 @@ type FeatureAction {
   title: String
 }
 
-interface FeaturesNode {
+type FeatureFeed implements Node {
+  id: ID!
   features: [Feature]
+}
+
+interface FeaturesNode {
+  features: [Feature] @deprecated(reason: "Use featureFeed")
+  featureFeed: FeatureFeed
 }
 
 enum GENDER {
@@ -300,6 +323,7 @@ type HorizontalCardListFeature implements Feature & Node {
   title: String
   subtitle: String
   cards: [CardListItem]
+  primaryAction: FeatureAction
 }
 
 type ImageMedia implements Media {
@@ -514,7 +538,9 @@ type Query {
   userPass: Pass
   search(query: String!, first: Int, after: String): SearchResultsConnection
   campuses(location: CampusLocationInput): [Campus]
-  userFeedFeatures: [Feature]
+  userFeedFeatures: [Feature] @deprecated(reason: "Use homeFeedFeatures or discoverFeedFeatures")
+  homeFeedFeatures: FeatureFeed
+  discoverFeedFeatures: FeatureFeed
 }
 
 type RockPersonDetails {
@@ -710,6 +736,7 @@ type WeekendContentItem implements ContentItem & Node & ContentNode & Card & Vid
   likedCount: Int
   liveStream: LiveStream
   sharing: SharableContentItem
-  features: [Feature]
+  features: [Feature] @deprecated(reason: "Use featureFeed")
+  featureFeed: FeatureFeed
 }
 

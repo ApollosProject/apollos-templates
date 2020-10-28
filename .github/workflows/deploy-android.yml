@@ -1,4 +1,4 @@
-name: Deploy iOS
+name: Deploy Android
 
 on:
   push:
@@ -38,9 +38,13 @@ jobs:
       env:
         APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
 
+    - name: Decrypt Secrets
+      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
+
     - name: Fastlane Deploy
-      run: bundle exec fastlane ios deploy
+      run: bundle exec fastlane android deploy
       env:
-        MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
-        MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
-        FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
+        KEYSTORE_FILE: apollos.keystore
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        KEY_ALIAS: apollos
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}

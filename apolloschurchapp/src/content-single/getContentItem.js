@@ -8,6 +8,16 @@ export default gql`
       ... on ContentItem {
         ...contentCardFragment
       }
+      ... on WeekendContentItem {
+        featureFeed {
+          id
+        }
+      }
+      ... on ContentSeriesContentItem {
+        featureFeed {
+          id
+        }
+      }
     }
   }
   ${ApollosConfig.FRAGMENTS.CONTENT_CARD_FRAGMENT}

@@ -1,4 +1,4 @@
-package com.apolloschurchapp;
+package com.differential.apollos;
 
 import android.app.Application;
 import android.content.Context;

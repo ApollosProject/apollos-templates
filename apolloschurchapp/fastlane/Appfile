@@ -1,6 +1,6 @@
 # iOS
 app_identifier("com.differential.apollos") # The bundle identifier of your app
-apple_id("apps@apollos.app") # Your Apple email address
+apple_id("fastlane@differential.com") # Your Apple email address
 
 itc_team_id("121565707") # App Store Connect Team ID
 team_id("7KS82J74VW") # Developer Portal Team ID
