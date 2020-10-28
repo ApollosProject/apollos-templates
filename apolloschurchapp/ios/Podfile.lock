@@ -77,9 +77,9 @@ PODS:
   - OpenSSL-Universal (1.0.2.20):
     - OpenSSL-Universal/Static (= 1.0.2.20)
   - OpenSSL-Universal/Static (1.0.2.20)
-  - Permission-Notifications (2.0.10):
+  - Permission-Notifications (2.2.2):
     - RNPermissions
-  - Permission-PhotoLibrary (2.0.10):
+  - Permission-PhotoLibrary (2.2.2):
     - RNPermissions
   - RCTRequired (0.63.2)
   - RCTTypeSafety (0.63.2):
@@ -349,20 +349,20 @@ PODS:
   - RNAnalytics (1.1.5):
     - AstronomerAnalytics
     - React
-  - RNBootSplash (2.1.0):
-    - React
-  - RNCAsyncStorage (1.9.0):
-    - React
-  - RNDateTimePicker (3.0.3):
+  - RNBootSplash (2.2.7):
+    - React-Core
+  - RNCAsyncStorage (1.12.1):
+    - React-Core
+  - RNDateTimePicker (3.0.4):
     - React-Core
   - RNDeviceInfo (4.0.1):
     - React
-  - RNGestureHandler (1.6.1):
+  - RNGestureHandler (1.8.0):
     - React
-  - RNInAppBrowser (3.4.0):
-    - React
-  - RNPermissions (2.0.10):
-    - React
+  - RNInAppBrowser (3.5.1):
+    - React-Core
+  - RNPermissions (2.2.2):
+    - React-Core
   - RNScreens (1.0.0-alpha.23):
     - React
   - RNSVG (9.13.6):
@@ -594,8 +594,8 @@ SPEC CHECKSUMS:
   google-cast-sdk: 57cd67b4a0966802b2738fcbbc103125c98cc8a1
   OneSignal: 9531e385388565f4d31797ddadbe0fcc786430ec
   OpenSSL-Universal: ff34003318d5e1163e9529b08470708e389ffcdd
-  Permission-Notifications: c9eb3a2da68dc0f37a8dc67d37bd28d150c5041d
-  Permission-PhotoLibrary: e59a7a687e002e8c8c46946c26520934ba85a688
+  Permission-Notifications: 9c6b5cc4f0e6599e9fc3395b77cebddc48f1be41
+  Permission-PhotoLibrary: 8227a6ed9f6a971537afe63742d54f5f23a38fe2
   RCTRequired: f13f25e7b12f925f1f6a6a8c69d929a03c0129fe
   RCTTypeSafety: 44982c5c8e43ff4141eb519a8ddc88059acd1f3a
   React: e1c65dd41cb9db13b99f24608e47dd595f28ca9a
@@ -631,13 +631,13 @@ SPEC CHECKSUMS:
   rn-fetch-blob: 651b8d076b43d0d7aa294a3d9ec16c00aab8bef9
   RNAirplay: 75777dd55dafbd3687703c3eb9c290ea6cc43248
   RNAnalytics: 360b0680753d0e1d37152a25d47aa34a015cab72
-  RNBootSplash: fbf76a4bf1c03e9acd1dd08ce064847f26d6d8bf
-  RNCAsyncStorage: 453cd7c335ec9ba3b877e27d02238956b76f3268
-  RNDateTimePicker: 6f62fd42ac8b58bcc30c43ac3620e5097e8a227f
+  RNBootSplash: a902017918cfd3e1f016ec7faef78fdf4c4e3cd0
+  RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
+  RNDateTimePicker: 3d1931e387248cb8f1d1d33740d4a1a82dfe622a
   RNDeviceInfo: 687c1b2ab6d86ff1ca1208783320cd144138c7f2
-  RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
-  RNInAppBrowser: c1a0dad2734458d79bcb6c8f4297ba8658a1da9f
-  RNPermissions: 1008d3511fee0e25739cf81c4af0d1b2248f1053
+  RNGestureHandler: 7a5833d0f788dbd107fbb913e09aa0c1ff333c39
+  RNInAppBrowser: 48b95ba7a4eaff5cc223bca338d3e319561dbd1b
+  RNPermissions: 5df468064df661a4c8c017e2791ce90d7695eea5
   RNScreens: f28b48b8345f2f5f39ed6195518291515032a788
   RNSVG: 8ba35cbeb385a52fd960fd28db9d7d18b4c2974f
   Yoga: 7740b94929bbacbddda59bf115b5317e9a161598
