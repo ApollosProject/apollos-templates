@@ -6,15 +6,15 @@ import { renderWithApolloData } from '../../utils/testUtils';
 
 import Home, { GET_HOME_FEED } from './Home';
 
-describe('The Discover tab component', () => {
-  it('Should retrieve the discover feed', async () => {
+describe('The Home tab component', () => {
+  it('Should retrieve the home feed', async () => {
     const feedmock = {
       request: {
         query: GET_HOME_FEED,
       },
       result: {
         data: {
-          discoverFeedFeatures: {
+          homeFeedFeatures: {
             __typename: 'FeatureFeed',
             id:
               'FeatureFeed:c7035fd9677aa209cd4613df53e9c83a0fb3b9ecd853808383d135407161a17bc75b8c451176e861b2ade040817c1b9da6fbfe9c93b76645950e3ce952ba659e',
