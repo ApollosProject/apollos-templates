@@ -57,7 +57,6 @@ exports[`User Home Feed Query should return correct query results 1`] = `
           "setParams": [MockFunction],
         }
       }
-      numColumns={1}
       onContentSizeChange={[Function]}
       onEndReachedThreshold={0.7}
       onLayout={[Function]}
