@@ -1,13 +1,12 @@
 import React from 'react';
 import { GET_FEED_FEATURES } from '@apollosproject/ui-connected';
+import renderer from 'react-test-renderer';
 import Providers from '../../Providers';
-
-import { renderWithApolloData } from '../../utils/testUtils';
 
 import Discover, { GET_DISCOVER_FEED } from './Discover';
 
 describe('The Discover tab component', () => {
-  it('Should retrieve the discover feed', async () => {
+  it('Should retrieve the discover feed', () => {
     const feedmock = {
       request: {
         query: GET_DISCOVER_FEED,
@@ -72,7 +71,7 @@ describe('The Discover tab component', () => {
       },
     };
 
-    const tree = await renderWithApolloData(
+    const tree = renderer.create(
       <Providers mocks={[feedmock, featuresmock]}>
         <Discover />
       </Providers>

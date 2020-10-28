@@ -57,7 +57,7 @@ Animated.spring = (value, config) => ({
   },
   stop: () => ({}),
 });
-// jest.mock('NativeAnimatedHelper');
+jest.mock('NativeAnimatedHelper');
 
 jest.mock('react-native-safari-view', () => ({
   isAvailable: jest.fn().mockImplementation(() => Promise.resolve(true)),

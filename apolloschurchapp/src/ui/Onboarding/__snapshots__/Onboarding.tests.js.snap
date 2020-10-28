@@ -46,7 +46,7 @@ Array [
   >
     <RCTScrollView
       activeDot={
-        <ForwardRef(SafeAreaView)
+        <SafeAreaView
           forceInset={
             Object {
               "bottom": "always",
@@ -54,7 +54,7 @@ Array [
           }
         >
           <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-        </ForwardRef(SafeAreaView)>
+        </SafeAreaView>
       }
       automaticallyAdjustContentInsets={false}
       autoplay={false}
@@ -77,7 +77,7 @@ Array [
       disableNextButton={false}
       disablePrevButton={false}
       dot={
-        <ForwardRef(SafeAreaView)
+        <SafeAreaView
           forceInset={
             Object {
               "bottom": "always",
@@ -91,7 +91,7 @@ Array [
               }
             }
           />
-        </ForwardRef(SafeAreaView)>
+        </SafeAreaView>
       }
       horizontal={true}
       index={0}
@@ -687,7 +687,8 @@ Array [
             >
               <View
                 accessible={true}
-                focusable={true}
+                clickable={true}
+                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}
@@ -886,7 +887,8 @@ Array [
             >
               <View
                 accessible={true}
-                focusable={true}
+                clickable={true}
+                isTVSelectable={true}
                 onClick={[Function]}
                 onResponderGrant={[Function]}
                 onResponderMove={[Function]}

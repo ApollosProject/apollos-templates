@@ -58,6 +58,7 @@ exports[`content feed query component renders a feedview after successful query 
     initialNumToRender={10}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
+    numColumns={1}
     onContentSizeChange={[Function]}
     onEndReached={[Function]}
     onEndReachedThreshold={0.7}
@@ -91,7 +92,7 @@ exports[`content feed query component renders a feedview after successful query 
       >
         <View
           accessible={true}
-          focusable={true}
+          clickable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
@@ -204,7 +205,7 @@ exports[`content feed query component renders a feedview after successful query 
       >
         <View
           accessible={true}
-          focusable={true}
+          clickable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}

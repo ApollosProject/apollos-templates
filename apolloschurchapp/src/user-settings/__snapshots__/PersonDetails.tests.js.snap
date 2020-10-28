@@ -528,7 +528,8 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
       >
         <View
           accessible={true}
-          focusable={true}
+          clickable={true}
+          isTVSelectable={true}
           onClick={[Function]}
           onResponderGrant={[Function]}
           onResponderMove={[Function]}
