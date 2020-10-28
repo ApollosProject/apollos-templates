@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`The Discover tab component Should retrieve the Content Channel Feeds 1`] = `
+exports[`The Discover tab component Should retrieve the discover feed 1`] = `
 <BVLinearGradient
   colors={
     Array [
