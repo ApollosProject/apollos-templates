@@ -64,6 +64,6 @@
     "eslint-plugin-jest": "^21.15.2",
     "eslint-plugin-prettier": "^2.6.0",
     "linkemon": "^0.1.1",
-    "nodemon": "^2.0.2"
+    "nodemon": "1.18.7"
   }
 }
