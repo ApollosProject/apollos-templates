@@ -11,6 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      # heroku only uses yarn if there's a yarn.lock file
+      - name: Use Yarn
+        run: touch apollos-church-api/yarn.lock
+
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.5.6
         with:
