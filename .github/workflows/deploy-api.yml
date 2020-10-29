@@ -17,7 +17,7 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "apollos-church-api"
           heroku_email: "apps@apollos.app"
-          usedocker: true
+          appdir: apollos-church-api
           healthcheck: ${{ secrets.APP_DATA_URL }}/health
           rollbackonhealthcheckfailed: true
           checkstring: "ok"
