@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "setup": "./scripts/init.sh",
-    "start": "./scripts/generateLocalSchema.sh & yarn start:dev",
+    "start": "yarn start:dev",
     "start:dev":
       "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
     "start:prod": "NODE_ENV=production node ./lib/index.js",
@@ -53,7 +53,6 @@
     "@babel/cli": "^7.4.5",
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.7.4",
-    "@entria/graphql-findbreakingchanges": "^1.0.1",
     "babel-eslint": "^10.0.3",
     "babel-plugin-module-resolver": "^3.2.0",
     "eslint": "^5.16.0",
@@ -64,7 +63,6 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jest": "^21.15.2",
     "eslint-plugin-prettier": "^2.6.0",
-    "get-graphql-schema": "^2.1.2",
     "linkemon": "^0.1.1",
     "nodemon": "^2.0.2"
   }
