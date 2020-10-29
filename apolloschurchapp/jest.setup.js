@@ -1,5 +1,5 @@
 import React from 'react';
-import { NativeModules, Animated, Dimensions } from 'react-native';
+import { NativeModules, Animated } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
 import FRAGMENTS from '@apollosproject/ui-fragments';
 import 'react-native/Libraries/Animated/src/bezier';
@@ -24,7 +24,7 @@ jest.mock('react-navigation', () => {
   const ActualNavigation = require.requireActual('react-navigation');
   return {
     ...ActualNavigation,
-    SafeAreaView: require.requireActual('react-native').View,
+    SafeAreaView: require.requireActual('react-native').SafeAreaView,
   };
 });
 
@@ -32,7 +32,7 @@ jest.mock('@react-navigation/native', () => {
   const ActualNavigation = require.requireActual('@react-navigation/native');
   return {
     ...ActualNavigation,
-    SafeAreaView: require.requireActual('react-native').View,
+    SafeAreaView: require.requireActual('react-native').SafeAreaView,
   };
 });
 

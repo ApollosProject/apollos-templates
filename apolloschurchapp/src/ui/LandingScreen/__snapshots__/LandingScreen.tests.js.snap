@@ -218,7 +218,8 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
     }
     vertical={false}
   >
-    <View
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
       forceInset={
         Object {
           "bottom": "always",
@@ -398,7 +399,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
           </RNSVGSvgView>
         </View>
       </View>
-    </View>
+    </RCTSafeAreaView>
   </View>
 </BVLinearGradient>
 `;

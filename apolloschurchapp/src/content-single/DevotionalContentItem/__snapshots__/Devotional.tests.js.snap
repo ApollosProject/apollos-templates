@@ -28,7 +28,8 @@ exports[`the Devotional component renders a devotional 1`] = `
     }
   }
 >
-  <View
+  <RCTSafeAreaView
+    emulateUnlessSupported={true}
     forceInset={
       Object {
         "top": "always",
@@ -862,6 +863,6 @@ exports[`the Devotional component renders a devotional 1`] = `
         </View>
       </View>
     </View>
-  </View>
+  </RCTSafeAreaView>
 </BVLinearGradient>
 `;
