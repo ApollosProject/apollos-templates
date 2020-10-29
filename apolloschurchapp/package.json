@@ -20,7 +20,7 @@
     "prestart": "yarn generate-stories & node ./scripts/get-introspection-data.js",
     "postinstall": "jetify && yarn pods",
     "pods": "(bundle install && cd ios && bundle exec pod install --repo-update)",
-    "start": "react-native start",
+    "start:dev": "react-native start",
     "test": "TZ=UTC jest",
     "upgrade": "npx @apollosproject/upgrade-tools upgrade",
     "latest": "./scripts/add-packages.sh latest",
