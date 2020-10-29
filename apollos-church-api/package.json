@@ -5,18 +5,22 @@
   "main": "lib/index.js",
   "scripts": {
     "setup": "./scripts/init.sh",
-    "start": "./scripts/generateLocalSchema.sh & yarn start:dev",
-    "start:dev": "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
+    "start": "yarn start:dev",
+    "start:dev":
+      "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
     "start:prod": "NODE_ENV=production node ./lib/index.js",
     "postinstall": "yarn build",
     "link-packages": "node ./scripts/link-packages",
     "unlink-packages": "node ./scripts/link-packages remove",
-    "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
-    "test": "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
+    "build":
+      "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
+    "test":
+      "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
     "lint": "eslint ./src --ext .js",
     "fixlint": "eslint ./src --ext .js --fix",
     "codecov": "cat ./coverage/lcov.info | codecov",
-    "version": "node ../../scripts/update-apollos-version.js && git add apollos.json",
+    "version":
+      "node ../../scripts/update-apollos-version.js && git add apollos.json",
     "upgrade": "npx @apollosproject/upgrade-tools upgrade",
     "latest": "./scripts/add-packages.sh latest",
     "beta": "./scripts/add-packages.sh beta",
@@ -27,17 +31,13 @@
   },
   "jest": {
     "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
+    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
     "testMatch": [
       "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
       "<rootDir>/src/**/?(*.)(spec|test|tests).{js,jsx,mjs}"
     ],
     "testEnvironment": "node",
-    "reporters": [
-      "<rootDir>/../../scripts/fingers-crossed-reporter.js"
-    ]
+    "reporters": ["<rootDir>/../../scripts/fingers-crossed-reporter.js"]
   },
   "dependencies": {
     "@apollosproject/bugsnag": "^1.7.0-beta.2",
@@ -71,7 +71,6 @@
     "@babel/cli": "^7.4.5",
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.7.4",
-    "@entria/graphql-findbreakingchanges": "^1.0.1",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-plugin-module-resolver": "^3.2.0",
@@ -84,7 +83,6 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jest": "^21.15.2",
     "eslint-plugin-prettier": "^2.6.0",
-    "get-graphql-schema": "^2.1.2",
     "linkemon": "^0.1.1",
     "nodemon": "^2.0.2"
   }
