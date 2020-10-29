@@ -31,7 +31,7 @@ function handleOnPress({ action, ...props }) {
 // getHomeFeed uses the HOME_FEATURES in the config.yml
 // You can also hardcode an ID if you are confident it will never change
 // Or use some other strategy to get a FeatureFeed.id
-const GET_HOME_FEED = gql`
+export const GET_HOME_FEED = gql`
   query getHomeFeatureFeed {
     homeFeedFeatures {
       id
