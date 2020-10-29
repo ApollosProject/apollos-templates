@@ -2,7 +2,7 @@
   "name": "apollos-templates",
   "scripts": {
     "setup": "lerna run setup",
-    "start": "yarn watch:client & lerna run start --parallel",
+    "start": "yarn watch:client & lerna run start:dev --parallel",
     "watch:client": "(cd apolloschurchapp && yarn wml start)",
     "link-packages": "watchman watch-del-all && yarn && lerna run link-packages --parallel && (cd apollos-church-api && yalc update)",
     "link-doctor": "node ./scripts/link-doctor.js",
