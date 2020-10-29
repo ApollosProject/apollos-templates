@@ -13,7 +13,8 @@ jobs:
 
       # heroku only uses yarn if there's a yarn.lock file
       - name: Use Yarn
-        run: touch apollos-church-api/yarn.lock
+        run: touch yarn.lock
+        working-directory: apollos-church-api
 
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.5.6
