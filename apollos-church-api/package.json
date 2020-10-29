@@ -16,8 +16,7 @@
       "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
     "test":
       "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
-    "lint": "eslint ./src --ext .js",
-    "codecov": "cat ./coverage/lcov.info | codecov"
+    "lint": "eslint ./src --ext .js"
   },
   "engines": {
     "node": ">=10.19.x"
@@ -57,7 +56,6 @@
     "@entria/graphql-findbreakingchanges": "^1.0.1",
     "babel-eslint": "^10.0.3",
     "babel-plugin-module-resolver": "^3.2.0",
-    "codecov": "3.7.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^2.9.0",
