@@ -4,7 +4,7 @@ import wait from 'waait';
 
 export const renderWithApolloData = async (component) => {
   const tree = renderer.create(component);
-  await wait(1);
+  await renderer.act(async () => wait(0));
   tree.update(component);
   return tree;
 };

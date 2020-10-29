@@ -1,5 +1,4 @@
 import React from 'react';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { GET_CONTENT_ITEM_CONTENT } from '@apollosproject/ui-connected';
 
 import Providers from '../../Providers';
@@ -62,16 +61,14 @@ const mocks = [contentScriptureMock, contentHTMLMock];
 
 describe('the Devotional component', () => {
   it('renders a devotional', async () => {
-    const DevotionalStack = createStackNavigator({
-      // eslint-disable-next-line
-      Devotional: (props) => (
-        <Devotional id={'1'} content={{ title: 'Title' }} {...props} />
-      ),
-    });
-    const DevotionalWithNavigation = createAppContainer(DevotionalStack);
+    // const DevotionalWithNavigation = createAppContainer(DevotionalStack);
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
-        <DevotionalWithNavigation />
+        <Devotional
+          id={'1'}
+          navigation={{ navigate: jest.fn() }}
+          content={{ title: 'Title' }}
+        />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

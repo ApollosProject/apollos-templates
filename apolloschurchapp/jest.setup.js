@@ -1,7 +1,8 @@
 import React from 'react';
-import { NativeModules, Animated } from 'react-native';
+import { NativeModules, Animated, Dimensions } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
 import FRAGMENTS from '@apollosproject/ui-fragments';
+import 'react-native/Libraries/Animated/src/bezier';
 
 ApollosConfig.loadJs({ FRAGMENTS });
 
@@ -12,13 +13,18 @@ jest.mock('react-native-safe-area-context', () => ({
   SafeAreaProvider: ({ children }) => children,
 }));
 
+jest.mock(
+  'react-native-safe-area-view',
+  () => require.requireActual('react-native').View
+);
+
 jest.mock('@react-native-community/datetimepicker', () => 'DateTimePicker');
 
 jest.mock('react-navigation', () => {
   const ActualNavigation = require.requireActual('react-navigation');
   return {
     ...ActualNavigation,
-    SafeAreaView: require.requireActual('react-native').SafeAreaView,
+    SafeAreaView: require.requireActual('react-native').View,
   };
 });
 
@@ -26,7 +32,7 @@ jest.mock('@react-navigation/native', () => {
   const ActualNavigation = require.requireActual('@react-navigation/native');
   return {
     ...ActualNavigation,
-    SafeAreaView: require.requireActual('react-native').SafeAreaView,
+    SafeAreaView: require.requireActual('react-native').View,
   };
 });
 
