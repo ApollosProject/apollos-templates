@@ -2,6 +2,7 @@ import React from 'react';
 import { NativeModules, Animated } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
 import FRAGMENTS from '@apollosproject/ui-fragments';
+import 'react-native/Libraries/Animated/src/bezier';
 
 ApollosConfig.loadJs({ FRAGMENTS });
 
@@ -11,6 +12,11 @@ jest.mock('react-native-safe-area-context', () => ({
     children({ top: 0, bottom: 0, left: 0, right: 0 }),
   SafeAreaProvider: ({ children }) => children,
 }));
+
+jest.mock(
+  'react-native-safe-area-view',
+  () => require.requireActual('react-native').View
+);
 
 jest.mock('@react-native-community/datetimepicker', () => 'DateTimePicker');
 
