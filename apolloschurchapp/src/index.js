@@ -41,13 +41,28 @@ const EnhancedAuth = (props) => <Auth {...props} emailRequired />;
 hoistNonReactStatic(EnhancedAuth, Auth);
 
 const { Navigator, Screen } = createNativeStackNavigator();
+const ThemedNavigator = withTheme(({ theme, ...props }) => ({
+  ...props,
+  screenOptions: {
+    headerTintColor: theme.colors.action.secondary,
+    headerTitleStyle: {
+      color: theme.colors.text.primary,
+    },
+    headerStyle: {
+      backgroundColor: theme.colors.background.paper,
+      ...Platform.select(theme.shadows.default),
+    },
+    headerShown: false,
+    stackPresentation: 'modal',
+  },
+}))(Navigator);
 
 const App = (props) => (
   <Providers>
     <BackgroundView>
       <AppStatusBar />
       <NavigationContainer ref={NavigationService.setTopLevelNavigator}>
-        <Navigator initialRouteName="ProtectedRoute" {...props}>
+        <ThemedNavigator initialRouteName="ProtectedRoute" {...props}>
           <Screen
             name="ProtectedRoute"
             component={ProtectedRouteWithSplashScreen}
@@ -102,27 +117,11 @@ const App = (props) => (
             component={LandingScreen}
             options={{ headerShown: false }}
           />
-        </Navigator>
+        </ThemedNavigator>
       </NavigationContainer>
       <MediaPlayer />
     </BackgroundView>
   </Providers>
 );
-
-const EnhancedApp = withTheme(({ theme, ...props }) => ({
-  ...props,
-  screenOptions: {
-    headerTintColor: theme.colors.action.secondary,
-    headerTitleStyle: {
-      color: theme.colors.text.primary,
-    },
-    headerStyle: {
-      backgroundColor: theme.colors.background.paper,
-      ...Platform.select(theme.shadows.default),
-    },
-    headerShown: false,
-    stackPresentation: 'modal',
-  },
-}))(App);
 
 export default App;
