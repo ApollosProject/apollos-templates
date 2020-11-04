@@ -2,7 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import PropTypes from 'prop-types';
-import NavigationHeader from '../content-single/NavigationHeader';
+import NavigationHeader from '../ui/NavigationHeader';
 import Event from './EventConnected';
 
 const { Navigator, Screen } = createStackNavigator();

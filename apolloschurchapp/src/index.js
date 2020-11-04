@@ -11,7 +11,6 @@ import {
   NavigationService,
 } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
-import { CoreNavigationAnalytics } from '@apollosproject/ui-analytics';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import { MediaPlayer } from '@apollosproject/ui-media-player';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
@@ -126,4 +125,4 @@ const EnhancedApp = withTheme(({ theme, ...props }) => ({
   },
 }))(App);
 
-export default EnhancedApp;
+export default App;

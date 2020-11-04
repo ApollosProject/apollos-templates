@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-import SafeAreaView from 'react-native-safe-area-view';
-import PropTypes from 'prop-types';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
 
