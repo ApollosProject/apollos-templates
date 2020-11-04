@@ -1,0 +1,50 @@
+name: Deploy Android
+
+on:
+  push:
+    branches: [ master ]
+
+defaults:
+  run:
+    working-directory: apolloschurchapp
+
+jobs:
+  deploy:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.19.x
+
+    - name: Install Yarn
+      run: npm install -g yarn
+
+    - name: Install Dependencies
+      run: yarn
+
+    # required to build
+    - name: Generate Stores
+      run: yarn generate-stories
+
+    - name: Get Introspection Data
+      run: node ./scripts/get-introspection-data.js
+      env:
+        APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
+
+    - name: Decrypt Secrets
+      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
+
+    - name: Fastlane Deploy
+      run: bundle exec fastlane android deploy
+      env:
+        KEYSTORE_FILE: apollos.keystore
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        KEY_ALIAS: apollos
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}

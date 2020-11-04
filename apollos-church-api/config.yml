@@ -35,21 +35,20 @@ UNIVERSAL_LINKS:
   APP_STORE_LINK: https://apollos.app/ios
   PLAY_STORE_LINK: https://apollos.app/android
   # Your app Id, as found in your app/build.gradle.
-  GOOGLE_APP_ID: com.apolloschurch.app
+  GOOGLE_APP_ID: com.differential.apollos
   # https://docs.getsocial.im/knowledge-base/android-signing-key-sha256/
   GOOGLE_KEYSTORE_SHA256: EC:6E:B5:5A:62:53:1E:53:FF:C4:BA:A7:CB:29:77:57:71:9D:65:2F:AF:69:41:A3:AD:2B:C4:55:A1:7A:07:03
 ONE_SIGNAL:
   APP_ID: b6e75a77-003f-4466-95ca-82cc5cdc407b
   REST_KEY: ${ONE_SIGNAL_REST_KEY}
 CHURCH_ONLINE:
-  URL: https://apollos.churchonline.org/api/v1/
+  URL: https://apollos.online.church/
   MEDIA_URLS: []
-  WEB_VIEW_URL: https://apollos.churchonline.org/
+  WEB_VIEW_URL: https://apollos.online.church/
 ALGOLIA:
-  APPLICATION_ID: ${ALGOLIA_APP_ID}
-  API_KEY: ${ALGOLIA_API_KEY}
-  # TODO: should we support multiple indices? how
-  SEARCH_INDEX: test_ContentItem
+  APPLICATION_ID: ${ALGOLIASEARCH_APPLICATION_ID}
+  API_KEY: ${ALGOLIASEARCH_API_KEY}
+  SEARCH_INDEX: prod_ContentItem
   # Configure Algolia custom settings here
   # https://www.algolia.com/doc/api-reference/settings-api-parameters/
   CONFIGURATION:
@@ -118,7 +117,7 @@ ROCK_MAPPINGS:
     UniversalContentItem:
       EntityType: ContentChannelItem
     WeekendContentItem:
-      ContentChannelId: []
+      ContentChannelId: [5]
       EntityType: ContentChannelItem
     ContentItem:
       EntityType: ContentChannelItem
@@ -151,6 +150,27 @@ ROCK_MAPPINGS:
   MOBILE_DEVICE_TYPE_ID: 671
 
 HOME_FEATURES:
+  - type: ActionBar
+    title: Welcome to Apollos
+    actions: [{
+      title: Check In,
+      icon: check,
+      action: OPEN_URL,
+      relatedNode: {
+        __typename: Url,
+        url: 'https://www.google.com'
+      }
+    }]
+  - algorithms: [USER_FEED]
+    type: HeroList
+    primaryAction:
+      # Right now, you hardcode exactly what GraphQL should return.
+      # Long term, we hope to have a more sophisticated mechanism for driving this field
+      action: OPEN_NODE
+      title: 'Read More'
+      relatedNode:
+        __typename: UniversalContentItem
+        id: 21
   - algorithms: [DAILY_PRAYER]
     isCard: false
     type: PrayerList
@@ -158,14 +178,6 @@ HOME_FEATURES:
   - algorithms: [CAMPAIGN_ITEMS]
     type: HeroList
     isFeatured: true
-    primaryAction:
-      # Right now, you hardcode exactly what GraphQL should return.
-      # Long term, we hope to have a more sophisticated mechanism for driving this field
-      action: OPEN_URL
-      title: 'Read More'
-      relatedNode:
-        __typename: Url
-        url: 'https://wwww.apollos.io'
   - title: FOR YOU
     algorithms: [SERMON_CHILDREN, PERSONA_FEED]
     subtitle: Explore what God calls you to today
@@ -185,8 +197,50 @@ HOME_FEATURES:
         arguments:
           contentChannelId: 13
       - type: UPCOMING_EVENTS
-  - algorithms: [USER_FEED]
-    type: VerticalCardList
+
+DISCOVER_FEATURES:
+  - algorithms:
+      - type: CONTENT_CHANNEL
+        arguments:
+          contentChannelId: 3
+          limit: 3
+    type: HorizontalCardList
+    subtitle: Sermons
+  - algorithms:
+      - type: CONTENT_CHANNEL
+        arguments:
+          contentChannelId: 5
+          limit: 3
+    type: HorizontalCardList
+    subtitle: Podcasts
+    primaryAction:
+      action: OPEN_CHANNEL
+      title: 'Read More'
+      relatedNode:
+        __typename: ContentChannel
+        id: 5
+        name: Podcasts
+  - algorithms:
+      - type: CONTENT_CHANNEL
+        arguments:
+          contentChannelId: 6
+          limit: 3
+    type: HorizontalCardList
+    title: Videos
+    primaryAction:
+      action: OPEN_CHANNEL
+      title: 'Read More'
+      relatedNode:
+        __typename: ContentChannel
+        id: 6
+        name: Videos
+  - algorithms:
+      - type: CONTENT_CHANNEL
+        arguments:
+          contentChannelId: 8
+          limit: 3
+    type: HorizontalCardList
+    subtitle: Something Else
 
 # Default mapping of field types -> ids. There's probably no reason to edit this.
 ROCK_CONSTANTS:

@@ -19,12 +19,11 @@ import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 import { RockAuthedWebView as UserWebBrowser } from '@apollosproject/ui-connected';
 import Providers from './Providers';
 import ContentSingle from './content-single';
+import NodeSingle from './node-single';
 import Event from './event';
 import Tabs from './tabs';
 import LandingScreen from './LandingScreen';
 import Onboarding from './ui/Onboarding';
-
-console.log(CoreNavigationAnalytics);
 
 const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: theme.barStyle,
@@ -59,6 +58,11 @@ const App = (props) => (
             name="ContentSingle"
             component={ContentSingle}
             options={{ title: 'Content' }}
+          />
+          <Screen
+            name="NodeSingle"
+            component={NodeSingle}
+            options={{ title: 'Node' }}
           />
           <Screen name="Event" component={Event} options={{ title: 'Event' }} />
           <Screen

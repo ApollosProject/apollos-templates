@@ -1,50 +1,87 @@
 # Apollos Template Project
 
-## Instructions for starting your own app.
+## Getting Started
 
-### 1. Forking this repo
+Click the "Use the Template" button on the repo page ⬆
 
-Forking this repo via forking this project on GitHub is not recommended, as it will tie your project directly to our repo. Instead, we recommend taking the following steps.
+![template button](https://files-2aze9g2bq.vercel.app)
 
-1. Clone this repo locally.
-2. From the root of this repo, `rm -rf .git`
-3. Intialize a new git repository, `git init`.
+We are assuming you're using a Mac for this guide. Install tools necessary.
 
-### 2. Setting up your environment.
+- [Homebrew](https://brew.sh)
+- [Yarn](https://yarnpkg.com/)
+- [XCode](https://developer.apple.com/xcode/)
+- [Android Studio](https://developer.android.com/studio)
+- [Bundler](https://bundler.io)
 
-TBD
+Clone down your new repo, and run the setup script to set up environments
 
-## Instructions for co-development with [Apollos Apps](https://github.com/ApollosProject/apollos-apps)
+```
+yarn setup
+```
 
-First of all, to those of you who remember, the Monorepo, I'm sorry, stick with me. You'll need to change how you work slightly now that the app themselves have been split out, but you'll still get the same great features.
+### API
 
-### Setting up "linked" development
+We use Heroku by default because it's free and easy to get started. If you'd like to use another platform to host your API, you can skip this section.
 
-1. From this repo, cd into apollos-church-api and apolloschurchapp and run `yarn install`.
-2. From this repo, run `yarn pods` from the root.
-3. Edit your `.env`. in apolloschurchapp, and add a relative or direct path to your apollos-apps root under the `APOLLOS_APPS_LOCATION` variable. ex: `APOLLOS_APPS_LOCATION=../../apollos-prototype`.
-4. From the root of `apollos-apps`, run `yarn link-packages`. **You only need to run this once**
-5. From the root of this repo, run `yarn link-packages`. **You only need to run this once**
+[Install the Heroku CLI](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
 
-### Running the linked environments
+```
+brew install heroku/brew/heroku
+heroku login
+```
 
-1. If you are working on API packages, cd into the `apollos-apps` project and run `yarn build:api-watch`.
-   If you don't do this, you can still run the app, but you won't get live updates on changes to the API packages.
-2. From this repo, run `yarn start`. Just like the good old days.
+Create your app and upload to Heroku.
 
-### FAQ
+```
+heroku create apollos-api
+git push heroku master
+```
 
-**Q**: Why `linkemon`? How is it different than `nodemon`?<br>
-**A**: `linkemon` will refresh the app if symlinked (yarn linked) packages are changed.
+_NOTE: If you have a [team](https://devcenter.heroku.com/articles/heroku-teams) you'd like to use on Heroku to manage billing, you can use the `-t <teamname>` flag in the `create` command above._
 
-**Q**: Who do I yell at if things are broken?<br>
-**A**: @vinnyjth
+Open the GraphQL Playground on your API to test the deploy
 
-**Q**: Do I need to set that `APOLLOS_APPS_LOCATION` variable?<br>
-**A**: Yes. Because `metro` doesn't support symlinks, we need to use `wml`, which needs to know where the packages live on disk.
+```
+heroku open
+```
 
-**Q**: I'm getting errors when starting the bundler saying folders are not being watched!<br>
-**A**: `watchman watch-del-all` and then try `yarn start` from this repo again.
+To deploy automatically through the Github workflow, copy your [Heroku API key](https://dashboard.heroku.com/account) and set a [Github secret](https://docs.github.com/en/actions/reference/encrypted-secrets) in your new repository called `HEROKU_API_KEY`.
 
-**Q**: What if I need to add a package to either repo?<br>
-**A**: In this case the node modules have changed and you'll need to `yarn unlink/link` from this repo again.
+![github secret](https://files-5eu5fyz6u.vercel.app)
+
+To get started with different API integrations, check out our [docs](https://apollosapp.io)!
+
+### Mobile App
+
+This will outline the steps required to get your Android and iOS apps up and running. You will need a functioning production API from the previous section before moving forward.
+
+Set the API URL in the `.env.production` file.
+
+```
+APP_DATA_URL=<url>
+```
+
+Rename your app
+
+```
+npx react-native-rename <church name>
+```
+
+Create new [icons](https://appicon.co) and [splash screens](https://github.com/zoontek/react-native-bootsplash#setup).
+
+## Develop
+
+Install dependencies, cocoapods, start the bundler
+
+```
+yarn
+yarn start
+```
+
+Start the sims _in separate tabs_
+
+```
+yarn ios
+yarn android
+```

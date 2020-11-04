@@ -1,0 +1,25 @@
+name: Check API
+
+on: pull_request
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node 10.19.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.19.x
+
+    - name: Install Yarn
+      run: npm install -g yarn
+
+    - name: Install Dependencies
+      run: yarn --ignore-scripts
+
+    - name: Start Server and Check
+      run: yarn start & sleep 30 && if [ $(curl "https://apollos-church-api.herokuapp.com/health") != "ok" ]; then exit 1; fi
+      working-directory: apollos-church-api
