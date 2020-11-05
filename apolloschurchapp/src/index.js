@@ -22,7 +22,7 @@ import Event from './event';
 import Tabs from './tabs';
 import PersonalDetails from './user-settings/PersonalDetails';
 import ChangePassword from './user-settings/ChangePassword';
-import LandingScreen from './LandingScreen';
+import LandingScreen from './ui/LandingScreen';
 import Onboarding from './ui/Onboarding';
 
 const AppStatusBar = withTheme(({ theme }) => ({
