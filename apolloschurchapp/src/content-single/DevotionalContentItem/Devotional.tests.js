@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavigationProvider } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { GET_CONTENT_ITEM_CONTENT } from '@apollosproject/ui-connected';
 
@@ -66,7 +66,7 @@ describe('the Devotional component', () => {
     const DevotionalStack = createStackNavigator();
     const tree = await renderWithApolloData(
       <Providers mocks={mocks}>
-        <NavigationProvider>
+        <NavigationContainer>
           <DevotionalStack.Navigator>
             <DevotionalStack.Screen
               name="Devotional"
@@ -75,7 +75,7 @@ describe('the Devotional component', () => {
               )}
             />
           </DevotionalStack.Navigator>
-        </NavigationProvider>
+        </NavigationContainer>
       </Providers>
     );
     expect(tree).toMatchSnapshot();

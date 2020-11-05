@@ -77,13 +77,9 @@ describe('content feed query component', () => {
       },
     };
 
-    const navigation = {
-      getParam: () => 'ContentChannel:123',
-      navigate: jest.fn(),
-    };
     const tree = await renderWithApolloData(
       <Providers mocks={[mock]}>
-        <ContentFeed navigation={navigation} />
+        <ContentFeed route={{ params: { itemId: 'ContentChannel:123' } }} />
       </Providers>
     );
     expect(tree).toMatchSnapshot();

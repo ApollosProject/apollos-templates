@@ -4,6 +4,8 @@ import { StatusBar, Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import RNBootSplash from 'react-native-bootsplash';
+import 'react-native-gesture-handler'; // required for react-navigation
+import { enableScreens } from 'react-native-screens';
 
 import {
   BackgroundView,
@@ -23,6 +25,8 @@ import Event from './event';
 import Tabs from './tabs';
 import LandingScreen from './LandingScreen';
 import Onboarding from './ui/Onboarding';
+
+enableScreens(); // improves performance for react-navigation
 
 const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: theme.barStyle,

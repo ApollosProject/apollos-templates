@@ -44,7 +44,7 @@ describe('EventConnected component', () => {
   it('renders without errors', async () => {
     const tree = await renderWithApolloData(
       <Providers mocks={[mocks]}>
-        <EventConnected navigation={{ getParam: () => 'Event:123' }} />
+        <EventConnected route={{ params: { eventId: 'Event:123' } }} />
       </Providers>
     );
 
