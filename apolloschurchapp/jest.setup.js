@@ -11,30 +11,10 @@ jest.mock('react-native-safe-area-context', () => ({
   SafeAreaConsumer: ({ children }) =>
     children({ top: 0, bottom: 0, left: 0, right: 0 }),
   SafeAreaProvider: ({ children }) => children,
+  SafeAreaView: require.requireActual('react-native').View,
 }));
 
-jest.mock(
-  'react-native-safe-area-view',
-  () => require.requireActual('react-native').View
-);
-
 jest.mock('@react-native-community/datetimepicker', () => 'DateTimePicker');
-
-jest.mock('@react-navigation/native', () => {
-  const ActualNavigation = require.requireActual('@react-navigation/native');
-  return {
-    ...ActualNavigation,
-    SafeAreaView: require.requireActual('react-native').SafeAreaView,
-  };
-});
-
-jest.mock('@react-navigation/native', () => {
-  const ActualNavigation = require.requireActual('@react-navigation/native');
-  return {
-    ...ActualNavigation,
-    SafeAreaView: require.requireActual('react-native').SafeAreaView,
-  };
-});
 
 jest.mock('react-native-music-control', () => ({
   enableBackgroundMode: jest.fn(),
@@ -52,14 +32,14 @@ ApollosConfig.loadJs({
 Animated.timing = (value, config) => ({
   start: (callback) => {
     value.setValue(config.toValue);
-    callback && callback();
+    callback && callback({ finished: true });
   },
   stop: () => ({}),
 });
 Animated.spring = (value, config) => ({
   start: (callback) => {
     value.setValue(config.toValue);
-    callback && callback();
+    callback && callback({ finished: true });
   },
   stop: () => ({}),
 });

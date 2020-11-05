@@ -33,7 +33,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@@react-navigation/native|@apollosproject))"
+      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"

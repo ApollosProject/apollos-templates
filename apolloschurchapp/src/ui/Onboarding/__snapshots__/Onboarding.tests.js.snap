@@ -46,15 +46,9 @@ Array [
   >
     <RCTScrollView
       activeDot={
-        <ForwardRef(SafeAreaView)
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        >
+        <View>
           <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
-        </ForwardRef(SafeAreaView)>
+        </View>
       }
       automaticallyAdjustContentInsets={false}
       autoplay={false}
@@ -77,21 +71,9 @@ Array [
       disableNextButton={false}
       disablePrevButton={false}
       dot={
-        <ForwardRef(SafeAreaView)
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
-        >
-          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View)))))
-            forceInset={
-              Object {
-                "bottom": "always",
-              }
-            }
-          />
-        </ForwardRef(SafeAreaView)>
+        <View>
+          <mapProps(getContext(mapProps(withPropsOnChange(mapProps(View))))) />
+        </View>
       }
       horizontal={true}
       index={0}
@@ -138,22 +120,8 @@ Array [
             }
           >
             <View>
-              <RCTSafeAreaView
-                emulateUnlessSupported={true}
-                forceInset={
-                  Object {
-                    "bottom": "always",
-                    "top": "always",
-                  }
-                }
-              >
-                <RCTSafeAreaView
-                  emulateUnlessSupported={true}
-                  forceInset={
-                    Object {
-                      "bottom": "always",
-                    }
-                  }
+              <View>
+                <View
                   style={
                     Object {
                       "marginBottom": 48,
@@ -653,8 +621,8 @@ Array [
                       </View>
                     </View>
                   </View>
-                </RCTSafeAreaView>
-              </RCTSafeAreaView>
+                </View>
+              </View>
             </View>
           </RCTScrollView>
           <View
@@ -674,15 +642,7 @@ Array [
             }
             vertical={false}
           >
-            <RCTSafeAreaView
-              emulateUnlessSupported={true}
-              forceInset={
-                Object {
-                  "bottom": "always",
-                  "top": "never",
-                }
-              }
-            >
+            <View>
               <Text
                 onPress={[Function]}
                 style={
@@ -697,7 +657,7 @@ Array [
               >
                 Skip
               </Text>
-            </RCTSafeAreaView>
+            </View>
           </View>
         </View>
         <View
@@ -759,13 +719,7 @@ Array [
                   }
                 />
               </View>
-              <RCTSafeAreaView
-                emulateUnlessSupported={true}
-                forceInset={
-                  Object {
-                    "bottom": "always",
-                  }
-                }
+              <View
                 style={
                   Object {
                     "marginBottom": 48,
@@ -808,7 +762,7 @@ Array [
                     We'd like to help personalize your mobile experience so we can help you with every step on your journey.
                   </Text>
                 </View>
-              </RCTSafeAreaView>
+              </View>
             </View>
           </RCTScrollView>
           <View
@@ -828,15 +782,7 @@ Array [
             }
             vertical={false}
           >
-            <RCTSafeAreaView
-              emulateUnlessSupported={true}
-              forceInset={
-                Object {
-                  "bottom": "always",
-                  "top": "never",
-                }
-              }
-            >
+            <View>
               <View
                 accessible={true}
                 focusable={true}
@@ -1009,7 +955,7 @@ Array [
                   </RNSVGSvgView>
                 </View>
               </View>
-            </RCTSafeAreaView>
+            </View>
           </View>
         </View>
         <View
@@ -1087,14 +1033,7 @@ Array [
         ]
       }
     >
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-      >
+      <View>
         <View
           style={
             Object {
@@ -1106,21 +1045,9 @@ Array [
             }
           }
         />
-      </RCTSafeAreaView>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-      >
+      </View>
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "#A5A5A5",
@@ -1131,21 +1058,9 @@ Array [
             }
           }
         />
-      </RCTSafeAreaView>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-      >
+      </View>
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "#A5A5A5",
@@ -1156,21 +1071,9 @@ Array [
             }
           }
         />
-      </RCTSafeAreaView>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-      >
+      </View>
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "#A5A5A5",
@@ -1181,21 +1084,9 @@ Array [
             }
           }
         />
-      </RCTSafeAreaView>
-      <RCTSafeAreaView
-        emulateUnlessSupported={true}
-        forceInset={
-          Object {
-            "bottom": "always",
-          }
-        }
-      >
+      </View>
+      <View>
         <View
-          forceInset={
-            Object {
-              "bottom": "always",
-            }
-          }
           style={
             Object {
               "backgroundColor": "#A5A5A5",
@@ -1206,7 +1097,7 @@ Array [
             }
           }
         />
-      </RCTSafeAreaView>
+      </View>
     </View>
   </View>,
 ]
