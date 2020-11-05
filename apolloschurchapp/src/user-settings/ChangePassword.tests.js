@@ -10,7 +10,6 @@ describe('Change Password component', () => {
   it('renders a change password form', async () => {
     const navigation = {
       navigate: jest.fn(),
-      getParam: jest.fn(),
       goBack: jest.fn(),
     };
     const tree = renderer.create(

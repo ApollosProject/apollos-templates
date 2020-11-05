@@ -35,7 +35,6 @@ describe('PersonalDetails component', () => {
     };
     const navigation = {
       navigate: jest.fn(),
-      getParam: jest.fn(),
       goBack: jest.fn(),
     };
     const tree = await renderWithApolloData(
