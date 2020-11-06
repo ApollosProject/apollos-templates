@@ -34,7 +34,7 @@ heroku login
 Create your app and upload to Heroku.
 
 ```
-heroku create apollos-api -s container
+heroku create apollos-api
 git push heroku master
 ```
 

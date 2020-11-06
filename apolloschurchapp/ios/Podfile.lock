@@ -14,14 +14,14 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
-  - google-cast-sdk-no-bluetooth (4.4.8):
-    - google-cast-sdk-no-bluetooth/Core (= 4.4.8)
-    - GTMSessionFetcher/Core (~> 1.0)
+  - google-cast-sdk-no-bluetooth (4.5.1):
+    - google-cast-sdk-no-bluetooth/Core (= 4.5.1)
+    - GTMSessionFetcher/Core (~> 1.1)
     - Protobuf (~> 3.12)
-  - google-cast-sdk-no-bluetooth/Core (4.4.8):
-    - GTMSessionFetcher/Core (~> 1.0)
+  - google-cast-sdk-no-bluetooth/Core (4.5.1):
+    - GTMSessionFetcher/Core (~> 1.1)
     - Protobuf (~> 3.12)
-  - GTMSessionFetcher/Core (1.4.0)
+  - GTMSessionFetcher/Core (1.5.0)
   - OneSignal (2.15.2)
   - Permission-Notifications (2.0.10):
     - RNPermissions
@@ -319,8 +319,8 @@ SPEC CHECKSUMS:
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
-  google-cast-sdk-no-bluetooth: d5a60530c72b0907fb302d835952b6cb0ba5f128
-  GTMSessionFetcher: 6f5c8abbab8a9bce4bb3f057e317728ec6182b10
+  google-cast-sdk-no-bluetooth: 73ac8e9edbee16f52c2a445e391bd531e116bb31
+  GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   OneSignal: 9531e385388565f4d31797ddadbe0fcc786430ec
   Permission-Notifications: c9eb3a2da68dc0f37a8dc67d37bd28d150c5041d
   Permission-PhotoLibrary: e59a7a687e002e8c8c46946c26520934ba85a688
