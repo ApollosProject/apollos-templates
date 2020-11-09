@@ -7,19 +7,19 @@ import {
   StatusBar,
 } from 'react-native';
 import { Mutation } from 'react-apollo';
-import { SafeAreaView, Header } from 'react-navigation';
+import { Header } from '@react-navigation/stack';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import {
   Button,
-  ButtonLink,
   TextInput,
   PaddedView,
   FlexedView,
   styled,
 } from '@apollosproject/ui-kit';
 
+import { SafeAreaView } from 'react-native-safe-area-context';
 import GET_AUTH_TOKEN from '../store/getAuthToken';
 import CHANGE_PASSWORD from './passwordChange';
 
@@ -34,25 +34,8 @@ const StyledKeyboardAvoidingView = styled(({ theme }) => ({
 }))(KeyboardAvoidingView);
 
 class ChangePassword extends PureComponent {
-  static navigationOptions = ({ navigation }) => ({
-    title: 'Change Password',
-    headerLeft: null,
-    headerRight: (
-      <PaddedView vertical={false}>
-        <ButtonLink onPress={() => navigation.goBack()}>Cancel</ButtonLink>
-      </PaddedView>
-    ),
-    headerStyle: {
-      backgroundColor: navigation.getParam('backgroundColor', []),
-    },
-    headerTitleStyle: {
-      color: navigation.getParam('headerTitleColor', []),
-    },
-  });
-
   static propTypes = {
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       navigate: PropTypes.func,
       goBack: PropTypes.func,
     }),

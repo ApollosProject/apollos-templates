@@ -13,14 +13,16 @@ import NavigationHeader from '../ui/NavigationHeader';
 
 class NodeSingle extends PureComponent {
   static propTypes = {
+    route: PropTypes.shape({
+      params: PropTypes.shape({ nodeId: PropTypes.string }),
+    }),
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       push: PropTypes.func,
     }),
   };
 
   get nodeId() {
-    return this.props.navigation.getParam('nodeId', []);
+    return this.props.route?.params?.nodeId;
   }
 
   static navigationOptions = {

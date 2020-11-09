@@ -6,7 +6,7 @@ import {
   StatusBar,
   Platform,
 } from 'react-native';
-import { SafeAreaView, Header } from 'react-navigation';
+import { Header } from '@react-navigation/stack';
 import { Query, Mutation } from 'react-apollo';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -16,10 +16,10 @@ import {
   PaddedView,
   FlexedView,
   Button,
-  ButtonLink,
   styled,
 } from '@apollosproject/ui-kit';
 
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { GET_USER_PROFILE } from '../tabs/connect/UserAvatarHeader';
 import UPDATE_CURRENT_USER from './updateCurrentUser';
 
@@ -34,32 +34,15 @@ const StyledKeyboardAvoidingView = styled(({ theme }) => ({
 }))(KeyboardAvoidingView);
 
 class PersonalDetails extends PureComponent {
-  static navigationOptions = ({ navigation }) => ({
-    title: 'Personal Details',
-    headerLeft: null,
-    headerRight: (
-      <PaddedView vertical={false}>
-        <ButtonLink onPress={() => navigation.goBack()}>Cancel</ButtonLink>
-      </PaddedView>
-    ),
-    headerStyle: {
-      backgroundColor: navigation.getParam('backgroundColor', []),
-    },
-    headerTitleStyle: {
-      color: navigation.getParam('headerTitleColor', []),
-    },
-  });
-
   static propTypes = {
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       navigate: PropTypes.func,
       goBack: PropTypes.func,
     }),
   };
 
   renderForm = (props) => (
-    // have to add the offset to account for react-navigation header
+    // have to add the offset to account for @react-navigation/native header
     <StyledKeyboardAvoidingView
       behavior={'padding'}
       keyboardVerticalOffset={

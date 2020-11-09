@@ -17,7 +17,7 @@ describe('UserSettings component', () => {
         data: { isLoggedIn: true },
       },
     };
-    const navigation = { navigate: jest.fn(), getParam: jest.fn() };
+    const navigation = { navigate: jest.fn() };
     const tree = renderer.create(
       <Providers mocks={[mock]}>
         <UserSettings navigation={navigation} />
