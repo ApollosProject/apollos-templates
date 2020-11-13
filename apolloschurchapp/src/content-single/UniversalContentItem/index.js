@@ -18,6 +18,8 @@ import {
   StretchyView,
 } from '@apollosproject/ui-kit';
 
+import PublishDateContainer from '../PublishDateContainer';
+
 const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
 
 const StyledMediaControlsConnected = styled(({ theme }) => ({
@@ -45,6 +47,7 @@ const UniversalContentItem = ({ content, loading }) => {
               <H2 padded isLoading={!content.title && loading}>
                 {content.title}
               </H2>
+              <PublishDateContainer contentId={content.id} />
               <ContentHTMLViewConnected contentId={content.id} />
             </PaddedView>
             <ContentSingleFeaturesConnected contentId={content.id} />
