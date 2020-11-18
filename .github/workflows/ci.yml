@@ -2,11 +2,10 @@ name: CI
 
 on: pull_request
 
-defaults:
-  runs-on: ubuntu-latest
-
 jobs:
   lint:
+    runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
     - name: Use Node 10.19.x
@@ -24,6 +23,8 @@ jobs:
       run: yarn lint
 
   test:
+    runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
     - name: Use Node 10.19.x
@@ -44,6 +45,8 @@ jobs:
       uses: codecov/codecov-action@v1
 
   health:
+    runs-on: ubuntu-latest
+
     steps:
     - uses: actions/checkout@v2
     - name: Use Node 10.19.x
