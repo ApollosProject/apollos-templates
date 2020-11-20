@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
-import { Query, Mutation } from 'react-apollo';
+import { Query, Mutation } from '@apollo/client/react/components';
 import { getVersion, getBuildNumber } from 'react-native-device-info';
 
 import {

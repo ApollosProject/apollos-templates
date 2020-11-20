@@ -6,7 +6,7 @@ import {
   StyleSheet,
   StatusBar,
 } from 'react-native';
-import { Mutation } from 'react-apollo';
+import { Mutation } from '@apollo/client/react/components';
 import { Header } from '@react-navigation/stack';
 import { Formik } from 'formik';
 import * as Yup from 'yup';

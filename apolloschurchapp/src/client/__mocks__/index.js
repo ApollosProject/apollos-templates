@@ -1,8 +1,8 @@
 import React from 'react';
-import { MockedProvider } from 'react-apollo/test-utils';
-import ApolloClient from 'apollo-client';
+import { MockedProvider } from '@apollo/client/testing';
+import { ApolloClient } from '@apollo/client';
 import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools';
-import { SchemaLink } from 'apollo-link-schema';
+import { SchemaLink } from '@apollo/client/link/schema';
 import { importSchema } from 'graphql-import';
 
 import { resolvers, schema, defaults } from '../../store';
