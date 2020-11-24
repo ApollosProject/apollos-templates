@@ -109,7 +109,7 @@ exports[`the Devotional component renders a devotional 1`] = `
                 }
               }
             >
-              Devotional
+              Home
             </Text>
           </View>
         </View>

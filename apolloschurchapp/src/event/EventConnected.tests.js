@@ -1,9 +1,8 @@
 import React from 'react';
 
 import moment from 'moment';
-import Providers from '../Providers';
-
-import { renderWithApolloData } from '../utils/testUtils';
+import { MockedProvider } from '@apollo/client/testing';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 import getEvent from './getEvent';
 import EventConnected from './EventConnected';
 
@@ -43,7 +42,7 @@ const mocks = {
 describe('EventConnected component', () => {
   it('renders without errors', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={[mocks]}>
+      <Providers mocks={[mocks]} MockedProvider={MockedProvider}>
         <EventConnected route={{ params: { eventId: 'Event:123' } }} />
       </Providers>
     );

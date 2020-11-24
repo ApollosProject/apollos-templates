@@ -40,10 +40,8 @@
     "modulePaths": [
       "<rootDir>/src/"
     ],
-    "modulePathIgnorePatterns": [
-      "node_modules/.*/node_modules/react-native"
-    ],
     "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js",
       "./jest.setup.js"
     ]
   },
@@ -155,7 +153,6 @@
     "prop-types": "15.6.1",
     "react-dom": "16.6.3",
     "react-native-storybook-loader": "1.8.0",
-    "react-native-version": "2.6.2",
     "react-test-renderer": "16.13.1",
     "waait": "1.0.2"
   },
