@@ -8,15 +8,6 @@ ApollosConfig.loadJs({ FRAGMENTS });
 
 jest.mock('@react-native-community/datetimepicker', () => 'DateTimePicker');
 
-jest.mock('react-native-music-control', () => ({
-  enableBackgroundMode: jest.fn(),
-  enableControl: jest.fn(),
-  on: jest.fn(),
-  setNowPlaying: jest.fn(),
-  STATE_PLAYING: false,
-  STATE_PAUSED: true,
-}));
-
 ApollosConfig.loadJs({
   ONE_SIGNAL_KEY: 'doesntmatter',
 });
