@@ -5,11 +5,11 @@ import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools';
 import { SchemaLink } from '@apollo/client/link/schema';
 import { importSchema } from 'graphql-import';
 
-import { resolvers, schema, defaults } from '../../store';
+import { resolvers, schema, defaults, GET_ALL_DATA } from '../../store';
 import cache from './cache';
 
 // eslint-disable-next-line
-export default (props) => {
+export default props => {
   let finalProps = props;
   // eslint-disable-next-line
   if (!props.mocks) {
@@ -28,7 +28,7 @@ const serverSchema = makeExecutableSchema({
 addMockFunctionsToSchema({ schema: serverSchema });
 
 const link = new SchemaLink({ schema: serverSchema });
-cache.writeData({ data: defaults });
+cache.writeQuery({ query: GET_ALL_DATA, data: defaults });
 
 export const client = new ApolloClient({
   link,
