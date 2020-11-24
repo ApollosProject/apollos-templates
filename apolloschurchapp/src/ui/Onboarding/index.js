@@ -69,12 +69,10 @@ function Onboarding({ navigation }) {
               }
             />
             <Query query={WITH_USER_ID} fetchPolicy="network-only">
-              {({
-                data: { currentUser: { id } = { currentUser: { id: null } } },
-              }) => (
+              {({ data }) => (
                 <AskNotificationsConnected
                   onPressPrimary={() => {
-                    onboardingComplete({ userId: id });
+                    onboardingComplete({ userId: data?.currentUser?.id });
                     navigation.dispatch(
                       NavigationService.resetAction({
                         navigatorName: 'Tabs',
