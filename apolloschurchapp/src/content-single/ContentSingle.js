@@ -76,7 +76,7 @@ class ContentSingle extends PureComponent {
   renderWithData = ({ loading, error, data }) => {
     if (error) return <ErrorCard error={error} />;
 
-    const content = data.node || {};
+    const content = data?.node || {};
 
     const { theme = {}, id } = content;
 

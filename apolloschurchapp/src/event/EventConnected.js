@@ -33,7 +33,7 @@ class EventConnected extends PureComponent {
   renderWithData = ({ loading, error, data }) => {
     if (error) return <ErrorCard error={error} />;
 
-    const event = data.node || {};
+    const event = data?.node || {};
 
     const { theme = {} } = event;
 
