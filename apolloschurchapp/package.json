@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": ">=8.x.x"
+    "node": ">=10.x.x"
   },
   "files": [
     "src"
@@ -126,11 +126,13 @@
     "@apollosproject/ui-test-utils": "^2.0.0-alpha.6",
     "@babel/core": "^7.8.4",
     "@babel/runtime": "^7.8.4",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@react-native-community/eslint-plugin": "^1.1.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "^25.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
     "codecov": "3.7.2",
-    "eslint": "^4.19.1",
+    "eslint": "^7.14.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-import-resolver-babel-module": "^5.0.0-beta.0",
