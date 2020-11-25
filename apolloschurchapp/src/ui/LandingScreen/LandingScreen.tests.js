@@ -1,8 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { GradientOverlayImage } from '@apollosproject/ui-kit';
-
-import Providers from '../../Providers';
+import { Providers } from '@apollosproject/ui-test-utils';
 
 import LandingScreen from '.';
 

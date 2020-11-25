@@ -1,9 +1,7 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import wait from 'waait';
 
-import Providers from '../Providers';
-import { renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 import ChangePassword from './ChangePassword';
 
 describe('Change Password component', () => {
@@ -13,7 +11,7 @@ describe('Change Password component', () => {
       goBack: jest.fn(),
     };
     const tree = await renderWithApolloData(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <ChangePassword navigation={navigation} />
       </Providers>
     );

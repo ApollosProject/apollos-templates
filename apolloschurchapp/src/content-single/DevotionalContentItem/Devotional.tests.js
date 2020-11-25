@@ -1,6 +1,4 @@
 import React from 'react';
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack';
 import { GET_CONTENT_ITEM_CONTENT } from '@apollosproject/ui-connected';
 import { MockedProvider } from '@apollo/client/testing';
 import {
@@ -9,8 +7,6 @@ import {
   renderWithApolloData,
 } from '@apollosproject/ui-test-utils';
 
-// import Providers from '../../Providers';
-// import { renderWithApolloData } from '../../utils/testUtils';
 import GET_SCRIPTURE from './getScripture';
 import Devotional from '.';
 
