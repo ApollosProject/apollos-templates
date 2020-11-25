@@ -66,9 +66,11 @@ const mocks = [contentScriptureMock, contentHTMLMock];
 describe('the Devotional component', () => {
   it('renders a devotional', async () => {
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks} MockedProvider={MockedProvider}>
-        <Devotional id={'1'} content={{ title: 'Title' }} navigation={{}} />
-      </Providers>
+      WithReactNavigator(
+        <Providers mocks={mocks} MockedProvider={MockedProvider}>
+          <Devotional id={'1'} content={{ title: 'Title' }} />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });
