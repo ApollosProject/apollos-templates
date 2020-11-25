@@ -32,7 +32,8 @@ class UserSettings extends PureComponent {
   render() {
     return (
       <Query query={GET_LOGIN_STATE} fetchPolicy="cache-and-network">
-        {({ data: { isLoggedIn = false, loading } }) => {
+        {({ data: { isLoggedIn = false}, loading, ...args }) => {
+          console.log({ isLoggedIn, loading, args });
           if (loading) return <ActivityIndicator />;
           if (!isLoggedIn) return null;
           return (
