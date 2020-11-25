@@ -16,7 +16,7 @@
     "lint": "eslint ./src --ext .js"
   },
   "engines": {
-    "node": ">=8.x.x"
+    "node": ">=10.x.x"
   },
   "dependencies": {
     "@apollosproject/bugsnag": "^2.0.0-alpha.6",
