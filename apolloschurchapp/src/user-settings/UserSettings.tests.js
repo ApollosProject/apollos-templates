@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { GET_LOGIN_STATE } from '@apollosproject/ui-auth';
-import { renderWithApolloData, Providers } from '@apollosproject/ui-test-utils'
+import { renderWithApolloData, Providers } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
 import { InMemoryCache } from '@apollo/client/cache';
 
@@ -12,7 +12,7 @@ describe('UserSettings component', () => {
     const cache = new InMemoryCache();
     cache.writeQuery({
       query: GET_LOGIN_STATE,
-      data: { isLoggedIn: true }
+      data: { isLoggedIn: true },
     });
     const navigation = { navigate: jest.fn() };
     const tree = await renderWithApolloData(

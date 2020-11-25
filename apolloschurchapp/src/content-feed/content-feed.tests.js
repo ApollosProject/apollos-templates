@@ -1,12 +1,9 @@
 import React from 'react';
 
-import {
-  renderWithApolloData,
-  Providers,
-} from '@apollosproject/ui-test-utils';
-import GET_CONTENT_FEED from './getContentFeed';
+import { renderWithApolloData, Providers } from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
 import { GET_CONTENT_CARD } from '@apollosproject/ui-connected';
+import GET_CONTENT_FEED from './getContentFeed';
 
 import ContentFeed from './index';
 
@@ -101,7 +98,10 @@ describe('content feed query component', () => {
     );
 
     const tree = await renderWithApolloData(
-      <Providers MockedProvider={MockedProvider} mocks={[mock, ...additionalMocks]}>
+      <Providers
+        MockedProvider={MockedProvider}
+        mocks={[mock, ...additionalMocks]}
+      >
         <ContentFeed route={{ params: { itemId: 'ContentChannel:123' } }} />
       </Providers>
     );

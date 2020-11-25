@@ -1,9 +1,7 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
-import wait from 'waait';
 
-import Providers from '../Providers';
 import { renderWithApolloData } from '@apollosproject/ui-test-utils';
+import Providers from '../Providers';
 import ChangePassword from './ChangePassword';
 
 describe('Change Password component', () => {

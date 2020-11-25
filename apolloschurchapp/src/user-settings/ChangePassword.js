@@ -71,14 +71,14 @@ class ChangePassword extends PureComponent {
           />
         </PaddedView>
         <Footer>
-        <PaddedView>
-          <Button
-            disabled={props.isSubmitting}
-            onPress={props.handleSubmit}
-            title="Save"
-            loading={props.isSubmitting}
-          />
-        </PaddedView>
+          <PaddedView>
+            <Button
+              disabled={props.isSubmitting}
+              onPress={props.handleSubmit}
+              title="Save"
+              loading={props.isSubmitting}
+            />
+          </PaddedView>
         </Footer>
       </FlexedView>
     </StyledKeyboardAvoidingView>
