@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
-import { Query, Mutation } from 'react-apollo';
+import { Query, Mutation } from '@apollo/client/react/components';
 import { getVersion, getBuildNumber } from 'react-native-device-info';
 
 import {
@@ -32,7 +32,7 @@ class UserSettings extends PureComponent {
   render() {
     return (
       <Query query={GET_LOGIN_STATE} fetchPolicy="cache-and-network">
-        {({ data: { isLoggedIn = false, loading } }) => {
+        {({ data: { isLoggedIn = false }, loading }) => {
           if (loading) return <ActivityIndicator />;
           if (!isLoggedIn) return null;
           return (

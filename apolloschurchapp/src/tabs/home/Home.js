@@ -3,7 +3,7 @@ import { Image } from 'react-native';
 import PropTypes from 'prop-types';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 
 import { styled, BackgroundView } from '@apollosproject/ui-kit';
 import {

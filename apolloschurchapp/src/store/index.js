@@ -33,6 +33,14 @@ const GET_LOGGED_IN = gql`
   }
 `;
 
+export const GET_ALL_DATA = gql`
+  query {
+    isLoggedIn @client
+    cacheLoaded @client
+    notificationsEnabled @client
+  }
+`;
+
 export const resolvers = {
   Mutation: {
     cacheMarkLoaded: async (root, args, { cache, client }) => {

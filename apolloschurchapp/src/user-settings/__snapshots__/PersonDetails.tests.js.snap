@@ -509,7 +509,8 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
         </View>
       </View>
     </View>
-    <View
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
       style={
         Object {
           "flex": 1,
@@ -577,7 +578,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
           </View>
         </View>
       </View>
-    </View>
+    </RCTSafeAreaView>
   </View>
 </View>
 `;

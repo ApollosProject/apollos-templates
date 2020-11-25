@@ -1,14 +1,13 @@
 import React from 'react';
-
-import Providers from '../../Providers';
-import { renderWithApolloData } from '../../utils/testUtils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 
 import Onboarding from '.';
 
 describe('the Onboarding component', () => {
   it('should render Onboarding', async () => {
     const tree = await renderWithApolloData(
-      <Providers>
+      <Providers MockedProvider={MockedProvider}>
         <Onboarding />
       </Providers>
     );

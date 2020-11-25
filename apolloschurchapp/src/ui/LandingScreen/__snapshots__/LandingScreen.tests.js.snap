@@ -218,7 +218,9 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
     }
     vertical={false}
   >
-    <View>
+    <RCTSafeAreaView
+      emulateUnlessSupported={true}
+    >
       <View
         accessible={true}
         focusable={true}
@@ -391,7 +393,7 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
           </RNSVGSvgView>
         </View>
       </View>
-    </View>
+    </RCTSafeAreaView>
   </View>
 </BVLinearGradient>
 `;

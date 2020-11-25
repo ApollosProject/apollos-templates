@@ -7,7 +7,7 @@ import {
   Platform,
 } from 'react-native';
 import { Header } from '@react-navigation/stack';
-import { Query, Mutation } from 'react-apollo';
+import { Query, Mutation } from '@apollo/client/react/components';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 

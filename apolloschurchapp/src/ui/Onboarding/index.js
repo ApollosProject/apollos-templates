@@ -1,5 +1,5 @@
 import React from 'react';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import {
   checkNotifications,
   openSettings,
@@ -69,12 +69,10 @@ function Onboarding({ navigation }) {
               }
             />
             <Query query={WITH_USER_ID} fetchPolicy="network-only">
-              {({
-                data: { currentUser: { id } = { currentUser: { id: null } } },
-              }) => (
+              {({ data }) => (
                 <AskNotificationsConnected
                   onPressPrimary={() => {
-                    onboardingComplete({ userId: id });
+                    onboardingComplete({ userId: data?.currentUser?.id });
                     navigation.dispatch(
                       NavigationService.resetAction({
                         navigatorName: 'Tabs',

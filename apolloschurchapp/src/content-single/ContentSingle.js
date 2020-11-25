@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -76,7 +76,7 @@ class ContentSingle extends PureComponent {
   renderWithData = ({ loading, error, data }) => {
     if (error) return <ErrorCard error={error} />;
 
-    const content = data.node || {};
+    const content = data?.node || {};
 
     const { theme = {}, id } = content;
 

@@ -1,10 +1,12 @@
 import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import { GET_CONTENT_ITEM_CONTENT } from '@apollosproject/ui-connected';
+import { MockedProvider } from '@apollo/client/testing';
+import {
+  Providers,
+  WithReactNavigator,
+  renderWithApolloData,
+} from '@apollosproject/ui-test-utils';
 
-import Providers from '../../Providers';
-import { renderWithApolloData } from '../../utils/testUtils';
 import GET_SCRIPTURE from './getScripture';
 import Devotional from '.';
 
@@ -63,20 +65,12 @@ const mocks = [contentScriptureMock, contentHTMLMock];
 
 describe('the Devotional component', () => {
   it('renders a devotional', async () => {
-    const DevotionalStack = createStackNavigator();
     const tree = await renderWithApolloData(
-      <Providers mocks={mocks}>
-        <NavigationContainer>
-          <DevotionalStack.Navigator>
-            <DevotionalStack.Screen
-              name="Devotional"
-              component={(props) => (
-                <Devotional id={'1'} content={{ title: 'Title' }} {...props} />
-              )}
-            />
-          </DevotionalStack.Navigator>
-        </NavigationContainer>
-      </Providers>
+      WithReactNavigator(
+        <Providers mocks={mocks} MockedProvider={MockedProvider}>
+          <Devotional id={'1'} content={{ title: 'Title' }} />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });

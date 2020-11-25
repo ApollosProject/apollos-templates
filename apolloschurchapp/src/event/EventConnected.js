@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -33,7 +33,7 @@ class EventConnected extends PureComponent {
   renderWithData = ({ loading, error, data }) => {
     if (error) return <ErrorCard error={error} />;
 
-    const event = data.node || {};
+    const event = data?.node || {};
 
     const { theme = {} } = event;
 
