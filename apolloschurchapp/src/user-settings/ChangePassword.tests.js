@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import wait from 'waait';
 
 import Providers from '../Providers';
-
+import { renderWithApolloData } from '@apollosproject/ui-test-utils';
 import ChangePassword from './ChangePassword';
 
 describe('Change Password component', () => {
@@ -12,12 +12,11 @@ describe('Change Password component', () => {
       navigate: jest.fn(),
       goBack: jest.fn(),
     };
-    const tree = renderer.create(
+    const tree = await renderWithApolloData(
       <Providers>
         <ChangePassword navigation={navigation} />
       </Providers>
     );
-    await wait(0); // wait for response from graphql
     expect(tree).toMatchSnapshot();
   });
 });
