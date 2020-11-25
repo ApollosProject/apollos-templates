@@ -44,9 +44,9 @@
     "randomcolor": "0.5.3"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^2.0.0-alpha.5",
-    "@apollosproject/babel-preset-apollos": "^2.0.0-alpha.5",
-    "@apollosproject/eslint-config": "^2.0.0-alpha.5",
+    "@apollosproject/apollo-server-env-mock": "^2.0.0-alpha.6",
+    "@apollosproject/babel-preset-apollos": "^2.0.0-alpha.6",
+    "@apollosproject/eslint-config": "^2.0.0-alpha.6",
     "@babel/cli": "^7.4.5",
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.7.4",

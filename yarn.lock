@@ -96,15 +96,15 @@
   dependencies:
     xss "^1.0.6"
 
-"@apollosproject/apollo-server-env-mock@^2.0.0-alpha.5":
-  version "2.0.0-alpha.5"
-  resolved "https://registry.yarnpkg.com/@apollosproject/apollo-server-env-mock/-/apollo-server-env-mock-2.0.0-alpha.5.tgz#5c81e57e5efdd4db5adc5f6d5b6bc6e9c3a21ed9"
-  integrity sha512-/vjolMLQiK4qUsT2tyEcxZ/2/NgAffIpywmj1k418ta5q0RGeuvychNowdnPbpZzwGJ0eXYxtH+hu4R8BrhMVQ==
+"@apollosproject/apollo-server-env-mock@^2.0.0-alpha.6":
+  version "2.0.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/@apollosproject/apollo-server-env-mock/-/apollo-server-env-mock-2.0.0-alpha.6.tgz#b6dc8aaf6bee22c02af14ad9d4181d2d9bc29b15"
+  integrity sha512-fWsePkde3ZvXEJd2JEeUGTaTx2Gdg9WA14X2a0vmevtykKu80d1cyAKy8hxJScbz983mFie92yJuW+bx6TOpJA==
 
-"@apollosproject/babel-preset-apollos@^2.0.0-alpha.5":
-  version "2.0.0-alpha.5"
-  resolved "https://registry.yarnpkg.com/@apollosproject/babel-preset-apollos/-/babel-preset-apollos-2.0.0-alpha.5.tgz#6218cd76f827f16071c0d9e84a508928d4516c06"
-  integrity sha512-oB1n5il3V3WBSb+d+VfZPOpl57uXOHI7jLqB8QVSAPiPWeuap3YSjCuafFhLIPqebwiinEOydSZ8g1pZ5xcmlg==
+"@apollosproject/babel-preset-apollos@^2.0.0-alpha.6":
+  version "2.0.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/@apollosproject/babel-preset-apollos/-/babel-preset-apollos-2.0.0-alpha.6.tgz#c393d2ee822eb9fcf1f69a2272225055a32e1516"
+  integrity sha512-Acls7obt02laAurdukMudFKmcSR55zRRr82OZGw0gVNYzLJVCbpk/0cI6EL29R/1rDRDiTm5+v6L7SE6MkNieQ==
   dependencies:
     "@babel/plugin-proposal-class-properties" "7.4.0"
     "@babel/plugin-proposal-decorators" "7.4.0"
@@ -250,11 +250,6 @@
   integrity sha512-M6n3UI6lQEVWOnZLM0t/lC3dmFTKi2/JwLRPPb6Oxn0mGHKyjlSlMhHrHEaXkLHgtnnb2+/exedNCEQQYconVw==
   dependencies:
     graphql-tag "^2.10.0"
-
-"@apollosproject/eslint-config@^2.0.0-alpha.5":
-  version "2.0.0-alpha.5"
-  resolved "https://registry.yarnpkg.com/@apollosproject/eslint-config/-/eslint-config-2.0.0-alpha.5.tgz#ca0f37958c88c5bf384e6d1cb29639139bc41124"
-  integrity sha512-Ej7GmHJAQAZhGBq9iW+xq1M576N55cpX0uhl1lryzuEtMEUiYMx2YUG1M2BcDhLBN+zSW2TGAIe8SeRsKTItyQ==
 
 "@apollosproject/eslint-config@^2.0.0-alpha.6":
   version "2.0.0-alpha.6"
