@@ -20,5 +20,4 @@ const LandingScreenSlide = ({ navigation }) => (
   />
 );
 
-
 export default LandingScreenSlide;

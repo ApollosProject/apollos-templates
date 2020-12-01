@@ -16,7 +16,6 @@ import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 
-import { RockAuthedWebView as UserWebBrowser } from '@apollosproject/ui-connected';
 import Providers from './Providers';
 import ContentSingle from './content-single';
 import NodeSingle from './node-single';
