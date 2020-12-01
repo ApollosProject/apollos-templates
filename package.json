@@ -6,7 +6,7 @@
     "watch:client": "(cd apolloschurchapp && yarn wml start)",
     "link-packages": "watchman watch-del-all && yarn && yarn postinstall && lerna run link-packages --parallel && (cd apollos-church-api && yalc update)",
     "link-doctor": "node ./scripts/link-doctor.js",
-    "unlink-packages": "lerna run unlink-packages --parallel && yarn --check-files",
+    "unlink-packages": "lerna run unlink-packages --parallel && yarn --check-files && yarn postinstall",
     "lint": "lerna run lint --stream",
     "test": "lerna run test --stream",
     "ios": "lerna run ios --parallel",

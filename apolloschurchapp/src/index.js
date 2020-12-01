@@ -14,7 +14,6 @@ import {
 } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
-import { MediaPlayer } from '@apollosproject/ui-media-player';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 
 import { RockAuthedWebView as UserWebBrowser } from '@apollosproject/ui-connected';
@@ -123,7 +122,6 @@ const App = (props) => (
           />
         </ThemedNavigator>
       </NavigationContainer>
-      <MediaPlayer />
     </BackgroundView>
   </Providers>
 );
