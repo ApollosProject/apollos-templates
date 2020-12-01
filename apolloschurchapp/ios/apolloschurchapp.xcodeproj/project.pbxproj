@@ -34,6 +34,7 @@
 		93A2B0A9328A46A4B7DD5EFA /* DroidSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E007B33EDD74B82AEF02C24 /* DroidSerif-Regular.ttf */; };
 		AB3BD177B8A14193A5EEDDF8 /* Inter-UI-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A613256118404CB691DE2C8E /* Inter-UI-Regular.otf */; };
 		B02F194A3F6A4FE29AC799B4 /* DroidSerif-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A93F9D112A034626A9421759 /* DroidSerif-BoldItalic.ttf */; };
+		BFC9F08425757C2D00FF49D7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC9F08325757C2D00FF49D7 /* File.swift */; };
 		E875558F3FB8FA2024EF7DC2 /* libPods-apolloschurchapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB6B5B7B6A0D1ECB68CF0DD /* libPods-apolloschurchapp.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
@@ -93,7 +94,8 @@
 		AC02408E578A898123910157 /* libPods-apolloschurchapp-tvOS-apolloschurchapp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-apolloschurchapp-tvOS-apolloschurchapp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC3D2DB245545ADB1CAB3FE /* DroidSerif-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DroidSerif-Italic.ttf"; path = "../assets/fonts/DroidSerif-Italic.ttf"; sourceTree = "<group>"; };
 		AE85030F59F256E90D5A4C2B /* Pods-apolloschurchapp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp-tvOS/Pods-apolloschurchapp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		BF29263125154F8C0047C00E /* apolloschurchapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "apolloschurchapp-Bridging-Header.h"; sourceTree = "<group>"; };
+		BFC9F08225757C2D00FF49D7 /* apolloschurchapp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "apolloschurchapp-Bridging-Header.h"; sourceTree = "<group>"; };
+		BFC9F08325757C2D00FF49D7 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		C6895BD78D40E00368BEB025 /* Pods-apolloschurchapp-apolloschurchappTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp-apolloschurchappTests.release.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp-apolloschurchappTests/Pods-apolloschurchapp-apolloschurchappTests.release.xcconfig"; sourceTree = "<group>"; };
 		D394E3064D75710E81C51EB0 /* Pods-apolloschurchapp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp-tvOSTests/Pods-apolloschurchapp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D5157D807E164356ADE87867 /* Inter-UI-Bold.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Bold.otf"; path = "../assets/fonts/Inter-UI-Bold.otf"; sourceTree = "<group>"; };
@@ -176,7 +178,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				4CA6A041251BC0BF00DD0D97 /* SplashScreen.storyboard */,
-				BF29263125154F8C0047C00E /* apolloschurchapp-Bridging-Header.h */,
+				BFC9F08325757C2D00FF49D7 /* File.swift */,
+				BFC9F08225757C2D00FF49D7 /* apolloschurchapp-Bridging-Header.h */,
 			);
 			name = apolloschurchapp;
 			sourceTree = "<group>";
@@ -374,7 +377,7 @@
 					};
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 7KS82J74VW;
-						LastSwiftMigration = 1170;
+						LastSwiftMigration = 1220;
 						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -664,6 +667,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				BFC9F08425757C2D00FF49D7 /* File.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -705,6 +709,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 59218083CDDF8EF2ABA9BCD1 /* Pods-apolloschurchapp-apolloschurchappTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -732,6 +737,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C6895BD78D40E00368BEB025 /* Pods-apolloschurchapp-apolloschurchappTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				HEADER_SEARCH_PATHS = (
@@ -760,7 +766,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = apolloschurchapp/apolloschurchapp.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development: Apollos Apps (58685TNK9H)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 21;
 				DEAD_CODE_STRIPPING = YES;
@@ -794,7 +800,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = apolloschurchapp/apolloschurchapp.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "Apple Distribution: Differential Dev Shop, LLC (7KS82J74VW)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 21;
 				DEVELOPMENT_TEAM = 7KS82J74VW;

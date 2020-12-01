@@ -220,12 +220,6 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
   >
     <RCTSafeAreaView
       emulateUnlessSupported={true}
-      forceInset={
-        Object {
-          "bottom": "always",
-          "top": "never",
-        }
-      }
     >
       <View
         accessible={true}

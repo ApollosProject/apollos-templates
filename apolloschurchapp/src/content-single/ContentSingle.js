@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -8,7 +8,6 @@ import { ErrorCard, ThemeMixin } from '@apollosproject/ui-kit';
 import { TrackEventWhenLoaded } from '@apollosproject/ui-analytics';
 import { InteractWhenLoadedConnected } from '@apollosproject/ui-connected';
 
-import NavigationHeader from '../ui/NavigationHeader';
 import ActionContainer from './ActionContainer';
 import GET_CONTENT_ITEM from './getContentItem';
 
@@ -19,24 +18,22 @@ import WeekendContentItem from './WeekendContentItem';
 class ContentSingle extends PureComponent {
   static propTypes = {
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       push: PropTypes.func,
+    }),
+    route: PropTypes.shape({
+      params: PropTypes.shape({
+        itemId: PropTypes.string,
+      }),
     }),
   };
 
   get itemId() {
-    return this.props.navigation.getParam('itemId', []);
+    return this.props.route?.params?.itemId;
   }
 
   get queryVariables() {
     return { itemId: this.itemId };
   }
-
-  static navigationOptions = {
-    header: NavigationHeader,
-    headerTransparent: true,
-    headerMode: 'float',
-  };
 
   renderContent = ({ content, loading, error }) => {
     let { __typename } = content;
@@ -79,7 +76,7 @@ class ContentSingle extends PureComponent {
   renderWithData = ({ loading, error, data }) => {
     if (error) return <ErrorCard error={error} />;
 
-    const content = data.node || {};
+    const content = data?.node || {};
 
     const { theme = {}, id } = content;
 

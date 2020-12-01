@@ -1,11 +1,14 @@
 import React, { PureComponent } from 'react';
 import { Image } from 'react-native';
-import { SafeAreaView } from 'react-navigation';
 import PropTypes from 'prop-types';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import gql from 'graphql-tag';
+import { Query } from '@apollo/client/react/components';
 
 import { styled, BackgroundView } from '@apollosproject/ui-kit';
 import {
   FeaturesFeedConnected,
+  FEATURE_FEED_ACTION_MAP,
   RockAuthedWebBrowser,
 } from '@apollosproject/ui-connected';
 
@@ -16,42 +19,32 @@ const LogoTitle = styled(({ theme }) => ({
   resizeMode: 'contain',
 }))(Image);
 
-class Home extends PureComponent {
-  static navigationOptions = () => ({
-    header: null,
-  });
+function handleOnPress({ action, ...props }) {
+  if (FEATURE_FEED_ACTION_MAP[action]) {
+    FEATURE_FEED_ACTION_MAP[action]({ action, ...props });
+  }
+  // If you add additional actions, you can handle them here.
+  // Or add them to the FEATURE_FEED_ACTION_MAP, with the syntax
+  // { [ActionName]: function({ relatedNode, action, ...FeatureFeedConnectedProps}) }
+}
 
+// getHomeFeed uses the HOME_FEATURES in the config.yml
+// You can also hardcode an ID if you are confident it will never change
+// Or use some other strategy to get a FeatureFeed.id
+export const GET_HOME_FEED = gql`
+  query getHomeFeatureFeed {
+    homeFeedFeatures {
+      id
+    }
+  }
+`;
+
+class Home extends PureComponent {
   static propTypes = {
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       setParams: PropTypes.func,
       navigate: PropTypes.func,
     }),
-  };
-
-  handleOnPress = ({ openUrl }) => ({ action, relatedNode }) => {
-    if (action === 'READ_CONTENT') {
-      this.props.navigation.navigate('ContentSingle', {
-        itemId: relatedNode.id,
-        transitionKey: 2,
-      });
-    }
-    if (action === 'READ_EVENT') {
-      this.props.navigation.navigate('Event', {
-        eventId: relatedNode.id,
-        transitionKey: 2,
-      });
-    }
-    if (action === 'OPEN_NODE') {
-      console.warn(relatedNode);
-      this.props.navigation.navigate('NodeSingle', {
-        nodeId: relatedNode.id,
-        transitionKey: 2,
-      });
-    }
-    if (action === 'OPEN_URL') {
-      openUrl(relatedNode.url);
-    }
   };
 
   render() {
@@ -59,13 +52,20 @@ class Home extends PureComponent {
       <RockAuthedWebBrowser>
         {(openUrl) => (
           <BackgroundView>
-            <SafeAreaView>
-              <FeaturesFeedConnected
-                onPressActionItem={this.handleOnPress({ openUrl })}
-                ListHeaderComponent={
-                  <LogoTitle source={require('./wordmark.png')} />
-                }
-              />
+            <SafeAreaView edges={['top', 'left', 'right']}>
+              <Query query={GET_HOME_FEED}>
+                {({ data }) => (
+                  <FeaturesFeedConnected
+                    openUrl={openUrl}
+                    navigation={this.props.navigation}
+                    featureFeedId={data?.homeFeedFeatures?.id}
+                    onPressActionItem={handleOnPress}
+                    ListHeaderComponent={
+                      <LogoTitle source={require('./wordmark.png')} />
+                    }
+                  />
+                )}
+              </Query>
             </SafeAreaView>
           </BackgroundView>
         )}

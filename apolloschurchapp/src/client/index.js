@@ -1,22 +1,20 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { ApolloProvider } from 'react-apollo';
-import { ApolloProvider as ApolloHookProvider } from '@apollo/react-hooks';
-import { ApolloClient } from 'apollo-client';
-import { ApolloLink } from 'apollo-link';
+import { ApolloProvider, ApolloClient, ApolloLink } from '@apollo/client';
 import { getVersion, getApplicationName } from 'react-native-device-info';
 
 import { authLink, buildErrorLink } from '@apollosproject/ui-auth';
 
 import { NavigationService } from '@apollosproject/ui-kit';
-import { resolvers, schema, defaults } from '../store';
+import { resolvers, schema, defaults, GET_ALL_DATA } from '../store';
 
 import httpLink from './httpLink';
 import cache, { ensureCacheHydration } from './cache';
 import MARK_CACHE_LOADED from './markCacheLoaded';
 
 const goToAuth = () => NavigationService.resetToAuth();
-const wipeData = () => cache.writeData({ data: defaults });
+const wipeData = () =>
+  cache.writeQuery({ query: GET_ALL_DATA, data: defaults });
 
 let clearStore;
 let storeIsResetting = false;
@@ -82,9 +80,7 @@ class ClientProvider extends PureComponent {
     const { children, ...otherProps } = this.props;
     return (
       <ApolloProvider {...otherProps} client={client}>
-        <ApolloHookProvider {...otherProps} client={client}>
-          {children}
-        </ApolloHookProvider>
+        {children}
       </ApolloProvider>
     );
   }

@@ -34,7 +34,7 @@ heroku login
 Create your app and upload to Heroku.
 
 ```
-heroku create apollos-api -s container
+heroku create apollos-api
 git push heroku master
 ```
 
@@ -62,7 +62,13 @@ Set the API URL in the `.env.production` file.
 APP_DATA_URL=<url>
 ```
 
-(TBD)
+Rename your app
+
+```
+npx react-native-rename <church name>
+```
+
+Create new [icons](https://appicon.co) and [splash screens](https://github.com/zoontek/react-native-bootsplash#setup).
 
 ## Develop
 
@@ -78,13 +84,4 @@ Start the sims _in separate tabs_
 ```
 yarn ios
 yarn android
-```
-
-## Deploy
-
-We use `fastlane` to deploy test builds to Testflight and the Play Store interal track. From the app directory:
-
-```
-bundle exec fastlane ios deploy
-bundle exec fastlane android deploy
 ```

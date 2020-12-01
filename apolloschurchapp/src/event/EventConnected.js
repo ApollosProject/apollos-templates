@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -7,36 +7,33 @@ import { ErrorCard, ThemeMixin } from '@apollosproject/ui-kit';
 
 import { TrackEventWhenLoaded } from '@apollosproject/ui-analytics';
 
-import NavigationHeader from '../ui/NavigationHeader';
 import Event from './Event';
 import GET_EVENT from './getEvent';
 
 class EventConnected extends PureComponent {
   static propTypes = {
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       push: PropTypes.func,
+    }),
+    route: PropTypes.shape({
+      params: PropTypes.shape({
+        eventId: PropTypes.string,
+      }),
     }),
   };
 
   get eventId() {
-    return this.props.navigation.getParam('eventId', []);
+    return this.props.route.params.eventId;
   }
 
   get queryVariables() {
     return { eventId: this.eventId };
   }
 
-  static navigationOptions = {
-    header: NavigationHeader,
-    headerTransparent: true,
-    headerMode: 'float',
-  };
-
   renderWithData = ({ loading, error, data }) => {
     if (error) return <ErrorCard error={error} />;
 
-    const event = data.node || {};
+    const event = data?.node || {};
 
     const { theme = {} } = event;
 

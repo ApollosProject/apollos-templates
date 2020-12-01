@@ -1,35 +1,43 @@
-import { createStackNavigator } from 'react-navigation';
+import React from 'react';
+import { Platform } from 'react-native';
+import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { withTheme } from '@apollosproject/ui-kit';
 
 import ContentFeed from '../../content-feed';
 
-import tabBarIcon from '../tabBarIcon';
-
 import Discover from './Discover';
 
-const DiscoverNavigator = createStackNavigator(
-  {
-    Discover,
-    ContentFeed,
-  },
-  {
-    initialRouteName: 'Discover',
-    defaultNavigationOptions: ({ screenProps }) => ({
-      headerTintColor: screenProps.headerTintColor,
-      headerTitleStyle: screenProps.headerTitleStyle,
-    }),
-    navigationOptions: { tabBarIcon: tabBarIcon('sections') },
-  }
-);
+const { Navigator, Screen } = createNativeStackNavigator();
 
+const DiscoverNavigator = (props) => (
+  <Navigator initialRouteName="Discover" {...props}>
+    <Screen
+      component={Discover}
+      name="Discover"
+      options={{ headerShown: false }}
+    />
+    <Screen
+      component={ContentFeed}
+      name="ContentFeed"
+      /** Function for React Navigation to set information in the header. */
+      options={({ route }) => ({
+        title: route.params.itemTitle || 'Content Feed',
+      })}
+    />
+  </Navigator>
+);
 const EnhancedDiscover = withTheme(({ theme, ...props }) => ({
   ...props,
-  screenProps: {
+  screenOptions: {
     headerTintColor: theme.colors.action.secondary,
     headerTitleStyle: {
       color: theme.colors.text.primary,
     },
-    headerBackgroundColor: theme.colors.background.paper,
+    headerStyle: {
+      backgroundColor: theme.colors.background.paper,
+      ...Platform.select(theme.shadows.default),
+    },
+    headerLargeTitle: true,
   },
 }))(DiscoverNavigator);
 
