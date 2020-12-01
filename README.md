@@ -22,7 +22,7 @@ yarn setup
 
 ### API
 
-We use Heroku by default because it's free and easy to get started. If you'd like to use another platform to host your API, you can skip this section.
+We use Heroku by default because it's free and simple to use. If you'd like to use another platform to host your API, you can skip this section.
 
 [Install the Heroku CLI](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up)
 
