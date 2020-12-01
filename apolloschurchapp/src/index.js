@@ -22,7 +22,7 @@ import ContentSingle from './content-single';
 import NodeSingle from './node-single';
 import Event from './event';
 import Tabs from './tabs';
-import LandingScreen from './LandingScreen';
+import LandingScreen from './ui/LandingScreen';
 import Onboarding from './ui/Onboarding';
 
 enableScreens(); // improves performance for react-navigation
@@ -100,11 +100,6 @@ const App = (props) => (
             name="Passes"
             component={Passes}
             options={{ title: 'Check-In Pass' }}
-          />
-          <Screen
-            name="UserWebBrowser"
-            component={UserWebBrowser}
-            options={{ headerShown: true }}
           />
           <Screen
             name="Onboarding"

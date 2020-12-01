@@ -19,10 +19,17 @@ VERSION=$(
 		tr -d '[:space:]'
 )
 
-if [[ $VERSION == *beta* ]]; then
+if [[ "$VERSION" == *beta* ]]; then
 	TAG=beta
+	PKG=$(npm show @apollosproject/config@beta version)
 else
 	TAG=latest
+	PKG=$(npm show @apollosproject/config version)
+fi
+
+if [[ "$VERSION" != "$PKG" ]]; then
+	echo "Latest Github tag ($VERSION) and NPM version ($PKG) doesn't match"
+	exit 1
 fi
 
 ./scripts/add-packages.sh $TAG
