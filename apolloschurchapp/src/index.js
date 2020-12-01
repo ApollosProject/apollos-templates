@@ -1,6 +1,6 @@
 import hoistNonReactStatic from 'hoist-non-react-statics';
 import React from 'react';
-import { StatusBar, Platform, Text } from 'react-native';
+import { StatusBar, Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import RNBootSplash from 'react-native-bootsplash';
