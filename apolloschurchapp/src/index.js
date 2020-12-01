@@ -1,6 +1,6 @@
 import hoistNonReactStatic from 'hoist-non-react-statics';
 import React from 'react';
-import { StatusBar, Platform } from 'react-native';
+import { StatusBar, Platform, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import RNBootSplash from 'react-native-bootsplash';
@@ -14,7 +14,6 @@ import {
 } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
-import { MediaPlayer } from '@apollosproject/ui-media-player';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 
 import { RockAuthedWebView as UserWebBrowser } from '@apollosproject/ui-connected';
@@ -123,7 +122,6 @@ const App = (props) => (
           />
         </ThemedNavigator>
       </NavigationContainer>
-      <MediaPlayer />
     </BackgroundView>
   </Providers>
 );
