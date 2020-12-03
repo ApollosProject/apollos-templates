@@ -1,8 +1,8 @@
 import React from 'react';
 import { Platform, View } from 'react-native';
+import { useSafeAreaFrame } from 'react-native-safe-area-context';
 import PropTypes from 'prop-types';
 import { SideBySideView, styled } from '@apollosproject/ui-kit';
-import { MediaPlayerSpacer } from '@apollosproject/ui-media-player';
 import {
   LikeButtonConnected,
   ShareButtonConnected,
@@ -14,21 +14,26 @@ const PositioningView = styled(({ theme }) => ({
   paddingHorizontal: theme.sizing.baseUnit,
 }))(SideBySideView);
 
-const Container = styled(({ theme }) => ({
+const Container = styled(({ theme, safeAreaMargin }) => ({
   backgroundColor: theme.colors.background.paper,
+  position: 'absolute',
+  width: '100%',
+  bottom: 0,
+  paddingBottom: safeAreaMargin,
   ...Platform.select(theme.shadows.default),
 }))(View);
 
-const ActionContainer = ({ itemId }) => (
-  <Container>
-    <MediaPlayerSpacer>
+const ActionContainer = ({ itemId }) => {
+  const { y } = useSafeAreaFrame();
+  return (
+    <Container safeAreaMargin={y / 4}>
       <PositioningView>
         <LikeButtonConnected itemId={itemId} />
         <ShareButtonConnected itemId={itemId} />
       </PositioningView>
-    </MediaPlayerSpacer>
-  </Container>
-);
+    </Container>
+  );
+};
 
 ActionContainer.propTypes = {
   content: PropTypes.shape({}),

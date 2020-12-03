@@ -1,118 +1,62 @@
-import React, { PureComponent } from 'react';
-import { Query } from '@apollo/client/react/components';
-import { get } from 'lodash';
+import React from 'react';
+import { gql, useQuery } from '@apollo/client';
 import PropTypes from 'prop-types';
 
-import { ErrorCard, ThemeMixin } from '@apollosproject/ui-kit';
-
 import { TrackEventWhenLoaded } from '@apollosproject/ui-analytics';
-import { InteractWhenLoadedConnected } from '@apollosproject/ui-connected';
+import {
+  InteractWhenLoadedConnected,
+  NodeSingleConnected,
+  ThemeMixinConnected,
+} from '@apollosproject/ui-connected';
 
 import ActionContainer from './ActionContainer';
-import GET_CONTENT_ITEM from './getContentItem';
 
-import DevotionalContentItem from './DevotionalContentItem';
-import UniversalContentItem from './UniversalContentItem';
-import WeekendContentItem from './WeekendContentItem';
-
-class ContentSingle extends PureComponent {
-  static propTypes = {
-    navigation: PropTypes.shape({
-      push: PropTypes.func,
-    }),
-    route: PropTypes.shape({
-      params: PropTypes.shape({
-        itemId: PropTypes.string,
-      }),
-    }),
-  };
-
-  get itemId() {
-    return this.props.route?.params?.itemId;
-  }
-
-  get queryVariables() {
-    return { itemId: this.itemId };
-  }
-
-  renderContent = ({ content, loading, error }) => {
-    let { __typename } = content;
-    if (!__typename && this.itemId) {
-      [__typename] = this.itemId.split(':');
-    }
-
-    switch (__typename) {
-      case 'DevotionalContentItem':
-        return (
-          <DevotionalContentItem
-            id={this.itemId}
-            content={content}
-            loading={loading}
-            error={error}
-          />
-        );
-      case 'WeekendContentItem':
-        return (
-          <WeekendContentItem
-            id={this.itemId}
-            content={content}
-            loading={loading}
-            error={error}
-          />
-        );
-      case 'UniversalContentItem':
-      default:
-        return (
-          <UniversalContentItem
-            id={this.itemId}
-            content={content}
-            loading={loading}
-            error={error}
-          />
-        );
-    }
-  };
-
-  renderWithData = ({ loading, error, data }) => {
-    if (error) return <ErrorCard error={error} />;
-
-    const content = data?.node || {};
-
-    const { theme = {}, id } = content;
-
-    return (
-      <ThemeMixin
-        mixin={{
-          type: get(theme, 'type'),
-          colors: get(theme, 'colors'),
+const ContentSingle = (props) => {
+  const nodeId = props.route?.params?.itemId;
+  const { data, loading } = useQuery(
+    gql`
+      query getContentNodeTitle($nodeId: ID) {
+        node(id: $nodeId) {
+          ... on ContentNode {
+            id
+            title
+          }
+        }
+      }
+    `,
+    { variables: { nodeId } }
+  );
+  return (
+    <ThemeMixinConnected nodeId={nodeId}>
+      <InteractWhenLoadedConnected
+        isLoading={loading}
+        nodeId={nodeId}
+        action={'COMPLETE'}
+      />
+      <TrackEventWhenLoaded
+        isLoading={loading}
+        eventName={'View Content'}
+        properties={{
+          title: data?.node?.title,
+          itemId: nodeId,
         }}
-      >
-        <InteractWhenLoadedConnected
-          isLoading={loading}
-          nodeId={this.itemId}
-          action={'COMPLETE'}
-        />
-        <TrackEventWhenLoaded
-          isLoading={loading}
-          eventName={'View Content'}
-          properties={{
-            title: content.title,
-            itemId: this.itemId,
-          }}
-        />
-        {this.renderContent({ content, loading, error })}
-        <ActionContainer itemId={id} />
-      </ThemeMixin>
-    );
-  };
+      />
+      <NodeSingleConnected nodeId={nodeId}>
+        {/* <ActionContainer itemId={nodeId} /> */}
+      </NodeSingleConnected>
+    </ThemeMixinConnected>
+  );
+};
 
-  render() {
-    return (
-      <Query query={GET_CONTENT_ITEM} variables={this.queryVariables}>
-        {this.renderWithData}
-      </Query>
-    );
-  }
-}
+ContentSingle.propTypes = {
+  navigation: PropTypes.shape({
+    push: PropTypes.func,
+  }),
+  route: PropTypes.shape({
+    params: PropTypes.shape({
+      itemId: PropTypes.string,
+    }),
+  }),
+};
 
 export default ContentSingle;
