@@ -29,6 +29,9 @@
   },
   "jest": {
     "preset": "react-native",
+    "transform": {
+      "\\.(js|ts|tsx)$": "./node_modules/react-native/jest/preprocessor.js"
+    },
     "collectCoverage": true,
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|react-navigation|@react-navigation|@apollosproject))"
@@ -123,7 +126,6 @@
   "devDependencies": {
     "@apollosproject/eslint-config": "^1.7.0",
     "babel-eslint": "10.0.1",
-    "babel-plugin-module-resolver": "^4.0.0",
     "codecov": "3.7.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
@@ -142,7 +144,6 @@
     "graphql-import": "^0.7.1",
     "jest": "^25.1.0",
     "jetifier": "^1.6.4",
-    "metro-react-native-babel-preset": "^0.56.0",
     "nodemon": "1.18.7",
     "prettier": "1.14.2",
     "prop-types": "15.6.1",
