@@ -1,64 +1,6 @@
 const path = require('path');
 const blacklist = require('metro-config/src/defaults/blacklist');
 
-const extraNodeModules = {
-  'react-native': path.resolve(`${__dirname}/node_modules/react-native`),
-  '@apollosproject/config': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-config/`
-  ),
-  '@apollosproject/ui-analytics': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-analytics/`
-  ),
-  '@apollosproject/ui-auth': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-auth/`
-  ),
-  '@apollosproject/ui-connected': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-connected/`
-  ),
-  '@apollosproject/ui-fragments': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-fragments/`
-  ),
-  '@apollosproject/ui-htmlview': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-htmlview/`
-  ),
-  '@apollosproject/ui-kit': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-kit/`
-  ),
-  '@apollosproject/ui-mapview': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-mapview/`
-  ),
-  '@apollosproject/ui-media-player': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-media-player/`
-  ),
-  '@apollosproject/ui-notifications': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-notifications/`
-  ),
-  '@apollosproject/ui-onboarding': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-onboarding/`
-  ),
-  '@apollosproject/ui-passes': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-passes/`
-  ),
-  '@apollosproject/ui-prayer': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-prayer/`
-  ),
-  '@apollosproject/ui-scripture': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-scripture/`
-  ),
-  '@apollosproject/ui-storybook': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-storybook/`
-  ),
-  '@apollosproject/ui-test-utils': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-ui-test-utils/`
-  ),
-  '@apollosproject/eslint-config': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/apollos-eslint-config/`
-  ),
-  '@apollosproject/babel-preset-apollos': path.resolve(
-    `${__dirname}/../../apollos-apps/packages/babel-preset-apollos/`
-  ),
-};
-
 const watchFolders = [
   path.resolve(`${__dirname}/../../apollos-apps/node_modules/`),
   path.resolve(`${__dirname}/node_modules/`),
@@ -106,7 +48,16 @@ const watchFolders = [
 
 const blacklistRE = blacklist([
   /.*\/apollos-apps\/packages\/.*\/node_modules\/react-native\/.*/,
+  /.*\/apollos-apps\/packages\/.*\/node_modules\/react-native-screens\/.*/,
+  /.*\/apollos-apps\/node_modules\/.*\/node_modules\/react-native\/.*/,
+  /.*\/apollos-apps\/node_modules\/.*\/node_modules\/react-native-screens\/.*/,
   /.*\/apollos-apps\/node_modules\/react-native\/.*/,
+  /.*\/apollos-apps\/node_modules\/react-native-gesture-handler\/.*/,
+  /.*\/apollos-apps\/node_modules\/react-native-linear-gradient\/.*/,
+  /.*\/apollos-apps\/node_modules\/react-native-svg\/.*/,
+  /.*\/apollos-apps\/node_modules\/apollo-client\/.*/,
+  /.*\/apollos-apps\/node_modules\/react-apollo\/.*/,
+  /.*\/apollos-apps\/node_modules\/react\/.*/,
 ]);
 
 const extraNodeModules2 = new Proxy(
