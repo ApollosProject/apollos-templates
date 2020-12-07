@@ -2,6 +2,7 @@ const path = require('path');
 const blacklist = require('metro-config/src/defaults/blacklist');
 
 const extraNodeModules = {
+  'react-native': path.resolve(`${__dirname}/node_modules/react-native`),
   '@apollosproject/config': path.resolve(
     `${__dirname}/../../apollos-apps/packages/apollos-config/`
   ),
@@ -47,6 +48,9 @@ const extraNodeModules = {
   '@apollosproject/ui-storybook': path.resolve(
     `${__dirname}/../../apollos-apps/packages/apollos-ui-storybook/`
   ),
+  '@apollosproject/ui-test-utils': path.resolve(
+    `${__dirname}/../../apollos-apps/packages/apollos-ui-test-utils/`
+  ),
   '@apollosproject/eslint-config': path.resolve(
     `${__dirname}/../../apollos-apps/packages/apollos-eslint-config/`
   ),
@@ -54,7 +58,10 @@ const extraNodeModules = {
     `${__dirname}/../../apollos-apps/packages/babel-preset-apollos/`
   ),
 };
+
 const watchFolders = [
+  path.resolve(`${__dirname}/../../apollos-apps/node_modules/`),
+  path.resolve(`${__dirname}/node_modules/`),
   path.resolve(`${__dirname}/../../apollos-apps/packages/apollos-config/`),
   path.resolve(
     `${__dirname}/../../apollos-apps/packages/apollos-ui-analytics/`
@@ -87,6 +94,9 @@ const watchFolders = [
     `${__dirname}/../../apollos-apps/packages/apollos-ui-storybook/`
   ),
   path.resolve(
+    `${__dirname}/../../apollos-apps/packages/apollos-ui-test-utils/`
+  ),
+  path.resolve(
     `${__dirname}/../../apollos-apps/packages/apollos-eslint-config/`
   ),
   path.resolve(
@@ -96,12 +106,31 @@ const watchFolders = [
 
 const blacklistRE = blacklist([
   /.*\/apollos-apps\/packages\/.*\/node_modules\/react-native\/.*/,
+  /.*\/apollos-apps\/node_modules\/react-native\/.*/,
 ]);
+
+const extraNodeModules2 = new Proxy(
+  {
+    // If we would have an actual package with "package.json" it would go here.
+    // e.g. if @local/core would be a package:
+    // '@local/core': path.resolve(__dirname, '../../local-packages/core/'),
+  },
+  {
+    get: (target, name) => {
+      if (target.hasOwnProperty(name)) {
+        return target[name];
+      }
+      // Redirect dependencies referenced from shared folders to mobile package node_modules
+      return path.join(process.cwd(), `node_modules/${name}`);
+    },
+  }
+);
 
 module.exports = {
   resolver: {
-    extraNodeModules,
+    extraNodeModules: extraNodeModules2,
     blacklistRE,
+    sourceExts: ['ts', 'tsx', 'js', 'jsx'],
   },
   watchFolders,
 };

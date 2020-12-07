@@ -139,6 +139,8 @@ PODS:
     - React
   - RNCAsyncStorage (1.9.0):
     - React
+  - RNCMaskedView (0.1.10):
+    - React
   - RNDateTimePicker (3.0.3):
     - React-Core
   - RNDeviceInfo (4.0.1):
@@ -196,6 +198,7 @@ DEPENDENCIES:
   - "RNAnalytics (from `../node_modules/@metarouter/analytics-react-native`)"
   - RNBootSplash (from `../node_modules/react-native-bootsplash`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
+  - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - "RNDateTimePicker (from `../node_modules/@react-native-community/datetimepicker`)"
   - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
@@ -295,6 +298,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-bootsplash"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
+  RNCMaskedView:
+    :path: "../node_modules/@react-native-community/masked-view"
   RNDateTimePicker:
     :path: "../node_modules/@react-native-community/datetimepicker"
   RNDeviceInfo:
@@ -359,6 +364,7 @@ SPEC CHECKSUMS:
   RNAnalytics: 360b0680753d0e1d37152a25d47aa34a015cab72
   RNBootSplash: fbf76a4bf1c03e9acd1dd08ce064847f26d6d8bf
   RNCAsyncStorage: 453cd7c335ec9ba3b877e27d02238956b76f3268
+  RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNDateTimePicker: 6f62fd42ac8b58bcc30c43ac3620e5097e8a227f
   RNDeviceInfo: 687c1b2ab6d86ff1ca1208783320cd144138c7f2
   RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
