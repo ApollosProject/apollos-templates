@@ -2,11 +2,10 @@
   "name": "apollos-templates",
   "scripts": {
     "setup": "lerna run setup",
-    "start": "yarn watch:client & lerna run start:dev --parallel",
-    "watch:client": "(cd apolloschurchapp && yarn wml start)",
-    "link-packages": "watchman watch-del-all && yarn && lerna run link-packages --parallel && (cd apollos-church-api && yalc update)",
+    "start": "lerna run start:dev --parallel",
+    "link-packages": "watchman watch-del-all && yarn && lerna run link-packages",
     "link-doctor": "node ./scripts/link-doctor.js",
-    "unlink-packages": "lerna run unlink-packages --parallel && yarn --check-files",
+    "unlink-packages": "lerna run unlink-packages && yarn --check-files",
     "lint": "lerna run lint --stream",
     "test": "lerna run test --stream",
     "ios": "lerna run ios --parallel",
@@ -20,8 +19,6 @@
   "private": true,
   "devDependencies": {
     "lerna": "^3.20.2",
-    "wml": "^0.0.83",
-    "yalc": "^1.0.0-pre.35",
     "chalk": "^4.0.0"
   },
   "dependencies": {},
