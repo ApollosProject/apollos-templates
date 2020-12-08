@@ -6,13 +6,16 @@
   "scripts": {
     "setup": "./scripts/init.sh",
     "start": "yarn start:prod",
-    "start:dev": "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
+    "start:dev":
+      "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
     "start:prod": "NODE_ENV=production node ./lib/index.js",
     "postinstall": "yarn build",
-    "link-packages": "node ./scripts/link-packages",
+    "link-packages": "node ./scripts/link-packages && yarn yalc update",
     "unlink-packages": "node ./scripts/link-packages remove",
-    "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
-    "test": "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
+    "build":
+      "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
+    "test":
+      "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
     "lint": "eslint ./src --ext .js"
   },
   "engines": {
@@ -62,6 +65,7 @@
     "eslint-plugin-jest": "^21.15.2",
     "eslint-plugin-prettier": "^2.6.0",
     "linkemon": "^0.1.1",
-    "nodemon": "1.18.7"
+    "nodemon": "1.18.7",
+    "yalc": "^1.0.0-pre.47"
   }
 }
