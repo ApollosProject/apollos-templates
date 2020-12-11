@@ -53,7 +53,7 @@ class Home extends PureComponent {
         {(openUrl) => (
           <BackgroundView>
             <SafeAreaView edges={['top', 'left', 'right']}>
-              <Query query={GET_HOME_FEED}>
+              <Query query={GET_HOME_FEED} fetchPolicy="cache-and-network">
                 {({ data }) => (
                   <FeaturesFeedConnected
                     openUrl={openUrl}

@@ -42,7 +42,7 @@ const ContentSingle = (props) => {
         }}
       />
       <NodeSingleConnected nodeId={nodeId}>
-        {/* <ActionContainer itemId={nodeId} /> */}
+        <ActionContainer itemId={nodeId} />
       </NodeSingleConnected>
     </ThemeMixinConnected>
   );
