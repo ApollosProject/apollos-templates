@@ -14,20 +14,18 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1C48DCDE11AC47C48E918489 /* Inter-UI-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC74A378C1CC40E4B6192D7F /* Inter-UI-Medium.otf */; };
-		2AE17F608689DAE577F28E4D /* libPods-apolloschurchapp-apolloschurchappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A74AE0179367F1A848F8866 /* libPods-apolloschurchapp-apolloschurchappTests.a */; };
+		2AE17F608689DAE577F28E4D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2D16E6881FA4F8E400B85C8A /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D16E6891FA4F8E400B85C8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* apolloschurchappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* apolloschurchappTests.m */; };
+		4CA6A042251BC0BF00DD0D97 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA6A041251BC0BF00DD0D97 /* SplashScreen.storyboard */; };
+		4CA6A043251BC0BF00DD0D97 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA6A041251BC0BF00DD0D97 /* SplashScreen.storyboard */; };
 		578FFEC1D7D54C9B871A9E5B /* Inter-UI-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A5A2BC2998547F4816B82E4 /* Inter-UI-BlackItalic.otf */; };
 		5C75E4776A19FEDDCD05813E /* libPods-apolloschurchapp-tvOS-apolloschurchapp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC02408E578A898123910157 /* libPods-apolloschurchapp-tvOS-apolloschurchapp-tvOSTests.a */; };
 		68D1351E80AA4A2C96288FD9 /* Inter-UI-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC21254B449443F99016EBFD /* Inter-UI-Black.otf */; };
 		7FBC6BC3CE8D48298F9850A9 /* Inter-UI-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D5157D807E164356ADE87867 /* Inter-UI-Bold.otf */; };
-		82AAE52E24187BB500D1EEC7 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AAE52D24187BB500D1EEC7 /* BootSplash.storyboard */; };
-		82AAE52F24187BB500D1EEC7 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AAE52D24187BB500D1EEC7 /* BootSplash.storyboard */; };
-		82AAE53024187BB500D1EEC7 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AAE52D24187BB500D1EEC7 /* BootSplash.storyboard */; };
-		82AAE53124187BB500D1EEC7 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82AAE52D24187BB500D1EEC7 /* BootSplash.storyboard */; };
 		82AAE537241888D100D1EEC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		82AAE538241888D200D1EEC7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		894732A70B4740678E85B593 /* Inter-UI-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2F5410F239E9477B9C2E86BD /* Inter-UI-BoldItalic.otf */; };
@@ -40,6 +38,7 @@
 		E875558F3FB8FA2024EF7DC2 /* libPods-apolloschurchapp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DDB6B5B7B6A0D1ECB68CF0DD /* libPods-apolloschurchapp.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
+		EF3A30A2E55D4F8352E116D3 /* libPods-apolloschurchapp-apolloschurchappTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12D0F1F316A88242D1FD60FB /* libPods-apolloschurchapp-apolloschurchappTests.a */; };
 		FCB3069DB5DD4170B2CAEFC4 /* Inter-UI-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A460FD7884FD4574A818005A /* Inter-UI-MediumItalic.otf */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +65,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* apolloschurchappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = apolloschurchappTests.m; sourceTree = "<group>"; };
 		0D480D95FC7F4569B8B934E3 /* libRCTOneSignal.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOneSignal.a; sourceTree = "<group>"; };
+		12D0F1F316A88242D1FD60FB /* libPods-apolloschurchapp-apolloschurchappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-apolloschurchapp-apolloschurchappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* apolloschurchapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apolloschurchapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = apolloschurchapp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = apolloschurchapp/AppDelegate.m; sourceTree = "<group>"; };
@@ -79,6 +79,7 @@
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F5410F239E9477B9C2E86BD /* Inter-UI-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-BoldItalic.otf"; path = "../assets/fonts/Inter-UI-BoldItalic.otf"; sourceTree = "<group>"; };
 		38B9762ACA099D28C28DBB31 /* libPods-apolloschurchapp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-apolloschurchapp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CA6A041251BC0BF00DD0D97 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
 		4D3B523797B74698347A5317 /* Pods-apolloschurchapp-tvOS-apolloschurchapp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp-tvOS-apolloschurchapp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp-tvOS-apolloschurchapp-tvOSTests/Pods-apolloschurchapp-tvOS-apolloschurchapp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		4E007B33EDD74B82AEF02C24 /* DroidSerif-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DroidSerif-Regular.ttf"; path = "../assets/fonts/DroidSerif-Regular.ttf"; sourceTree = "<group>"; };
 		54F271B8EB67A4997A2C7D96 /* Pods-apolloschurchapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp.debug.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp/Pods-apolloschurchapp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -86,8 +87,6 @@
 		5A5A2BC2998547F4816B82E4 /* Inter-UI-BlackItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-BlackItalic.otf"; path = "../assets/fonts/Inter-UI-BlackItalic.otf"; sourceTree = "<group>"; };
 		63F6EE53A9B44B4388B5F1C2 /* Inter-UI-Italic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Italic.otf"; path = "../assets/fonts/Inter-UI-Italic.otf"; sourceTree = "<group>"; };
 		745C835CA2F1E1EC2425152A /* Pods-apolloschurchapp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apolloschurchapp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-apolloschurchapp-tvOS/Pods-apolloschurchapp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		7A74AE0179367F1A848F8866 /* libPods-apolloschurchapp-apolloschurchappTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-apolloschurchapp-apolloschurchappTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		82AAE52D24187BB500D1EEC7 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = apolloschurchapp/BootSplash.storyboard; sourceTree = "<group>"; };
 		A460FD7884FD4574A818005A /* Inter-UI-MediumItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-MediumItalic.otf"; path = "../assets/fonts/Inter-UI-MediumItalic.otf"; sourceTree = "<group>"; };
 		A613256118404CB691DE2C8E /* Inter-UI-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Inter-UI-Regular.otf"; path = "../assets/fonts/Inter-UI-Regular.otf"; sourceTree = "<group>"; };
 		A93F9D112A034626A9421759 /* DroidSerif-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "DroidSerif-BoldItalic.ttf"; path = "../assets/fonts/DroidSerif-BoldItalic.ttf"; sourceTree = "<group>"; };
@@ -116,7 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE17F608689DAE577F28E4D /* libPods-apolloschurchapp-apolloschurchappTests.a in Frameworks */,
+				2AE17F608689DAE577F28E4D /* BuildFile in Frameworks */,
+				EF3A30A2E55D4F8352E116D3 /* libPods-apolloschurchapp-apolloschurchappTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,9 +175,9 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
-				82AAE52D24187BB500D1EEC7 /* BootSplash.storyboard */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				4CA6A041251BC0BF00DD0D97 /* SplashScreen.storyboard */,
 				BFC9F08325757C2D00FF49D7 /* File.swift */,
 				BFC9F08225757C2D00FF49D7 /* apolloschurchapp-Bridging-Header.h */,
 			);
@@ -192,8 +192,8 @@
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
 				DDB6B5B7B6A0D1ECB68CF0DD /* libPods-apolloschurchapp.a */,
 				38B9762ACA099D28C28DBB31 /* libPods-apolloschurchapp-tvOS.a */,
-				7A74AE0179367F1A848F8866 /* libPods-apolloschurchapp-apolloschurchappTests.a */,
 				AC02408E578A898123910157 /* libPods-apolloschurchapp-tvOS-apolloschurchapp-tvOSTests.a */,
+				12D0F1F316A88242D1FD60FB /* libPods-apolloschurchapp-apolloschurchappTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -419,7 +419,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				82AAE537241888D100D1EEC7 /* Images.xcassets in Resources */,
-				82AAE52F24187BB500D1EEC7 /* BootSplash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +439,7 @@
 				1C48DCDE11AC47C48E918489 /* Inter-UI-Medium.otf in Resources */,
 				FCB3069DB5DD4170B2CAEFC4 /* Inter-UI-MediumItalic.otf in Resources */,
 				AB3BD177B8A14193A5EEDDF8 /* Inter-UI-Regular.otf in Resources */,
-				82AAE52E24187BB500D1EEC7 /* BootSplash.storyboard in Resources */,
+				4CA6A042251BC0BF00DD0D97 /* SplashScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,7 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */,
-				82AAE53024187BB500D1EEC7 /* BootSplash.storyboard in Resources */,
+				4CA6A043251BC0BF00DD0D97 /* SplashScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,7 +457,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				82AAE538241888D200D1EEC7 /* Images.xcassets in Resources */,
-				82AAE53124187BB500D1EEC7 /* BootSplash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

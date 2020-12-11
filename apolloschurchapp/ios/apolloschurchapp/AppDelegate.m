@@ -12,8 +12,8 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <React/RCTLinkingManager.h>
-#import "RNBootSplash.h"
 #import <GoogleCast/GoogleCast.h>
+#import "RNSplashScreen.h"
 
 #ifdef FB_SONARKIT_ENABLED
 #import <FlipperKit/FlipperClient.h>
@@ -75,13 +75,11 @@ static void InitializeFlipper(UIApplication *application) {
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
-
-  [RNBootSplash initWithStoryboard:@"BootSplash" rootView:rootView];
-
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
 
-  [RNBootSplash initialShow];
+  [RNSplashScreen show];
+
   return YES;
 }
 

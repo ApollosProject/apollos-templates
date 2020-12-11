@@ -3,7 +3,7 @@ import React from 'react';
 import { StatusBar, Platform } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
-import RNBootSplash from 'react-native-bootsplash';
+import SplashScreen from 'react-native-splash-screen';
 import 'react-native-gesture-handler'; // required for react-navigation
 import { enableScreens } from 'react-native-screens';
 
@@ -16,7 +16,6 @@ import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 
-import { RockAuthedWebView as UserWebBrowser } from '@apollosproject/ui-connected';
 import Providers from './Providers';
 import ContentSingle from './content-single';
 import NodeSingle from './node-single';
@@ -33,7 +32,7 @@ const AppStatusBar = withTheme(({ theme }) => ({
 }))(StatusBar);
 
 const ProtectedRouteWithSplashScreen = (props) => {
-  const handleOnRouteChange = () => RNBootSplash.hide({ duration: 250 });
+  const handleOnRouteChange = () => SplashScreen.hide();
 
   return <ProtectedRoute {...props} onRouteChange={handleOnRouteChange} />;
 };

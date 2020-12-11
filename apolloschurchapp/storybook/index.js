@@ -3,7 +3,7 @@ import StorybookUI, {
   addApollosProviderDecorator,
   configure,
 } from '@apollosproject/ui-storybook';
-import RNBootSplash from 'react-native-bootsplash';
+import SplashScreen from 'react-native-splash-screen';
 import Providers from '../src/Providers';
 
 import { loadStories } from './storyLoader';
@@ -15,7 +15,7 @@ configure(() => {
   loadStories();
   loadApollosStories();
 
-  RNBootSplash.hide({ duration: 250 });
+  SplashScreen.hide();
 }, module);
 
 export default StorybookUI;

@@ -277,6 +277,8 @@ PODS:
     - React
   - react-native-safe-area-context (3.0.7):
     - React
+  - react-native-splash-screen (3.2.0):
+    - React
   - react-native-video (5.0.2):
     - React
     - react-native-video/Video (= 5.0.2)
@@ -351,8 +353,6 @@ PODS:
   - RNAnalytics (1.1.5):
     - AstronomerAnalytics
     - React
-  - RNBootSplash (2.2.7):
-    - React-Core
   - RNCAsyncStorage (1.12.1):
     - React-Core
   - RNCMaskedView (0.1.10):
@@ -430,6 +430,7 @@ DEPENDENCIES:
   - react-native-passkit-wallet (from `../node_modules/react-native-passkit-wallet`)
   - react-native-safari-view (from `../node_modules/react-native-safari-view`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
+  - react-native-splash-screen (from `../node_modules/react-native-splash-screen`)
   - react-native-video (from `../node_modules/react-native-video`)
   - react-native-webview (from `../node_modules/react-native-webview`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
@@ -445,7 +446,6 @@ DEPENDENCIES:
   - rn-fetch-blob (from `../node_modules/rn-fetch-blob`)
   - "RNAirplay (from `../node_modules/@apollosproject/react-native-airplay-btn`)"
   - "RNAnalytics (from `../node_modules/@metarouter/analytics-react-native`)"
-  - RNBootSplash (from `../node_modules/react-native-bootsplash`)
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
@@ -536,6 +536,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-safari-view"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
+  react-native-splash-screen:
+    :path: "../node_modules/react-native-splash-screen"
   react-native-video:
     :path: "../node_modules/react-native-video"
   react-native-webview:
@@ -566,8 +568,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@apollosproject/react-native-airplay-btn"
   RNAnalytics:
     :path: "../node_modules/@metarouter/analytics-react-native"
-  RNBootSplash:
-    :path: "../node_modules/react-native-bootsplash"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
   RNCMaskedView:
@@ -637,6 +637,7 @@ SPEC CHECKSUMS:
   react-native-passkit-wallet: 51e3babdaeec4c10b5736786ebd1bfb470fcaa36
   react-native-safari-view: 955d7160d159241b8e9395d12d10ea0ef863dcdd
   react-native-safe-area-context: ef6f16c66b0797ecae1bf86c103dfb3dc16fc33d
+  react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-video: d01ed7ff1e38fa7dcc6c15c94cf505e661b7bfd0
   react-native-webview: db4682f1698ab4b17a5e88f951031d203ff8aea8
   React-RCTActionSheet: 910163b6b09685a35c4ebbc52b66d1bfbbe39fc5
@@ -652,7 +653,6 @@ SPEC CHECKSUMS:
   rn-fetch-blob: 651b8d076b43d0d7aa294a3d9ec16c00aab8bef9
   RNAirplay: 75777dd55dafbd3687703c3eb9c290ea6cc43248
   RNAnalytics: 360b0680753d0e1d37152a25d47aa34a015cab72
-  RNBootSplash: a902017918cfd3e1f016ec7faef78fdf4c4e3cd0
   RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNCPicker: 2c31098349f499e7ab4da6c1ce26f7537d271062
