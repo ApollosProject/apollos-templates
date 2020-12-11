@@ -13,8 +13,8 @@
     "android": "SIM=\"$($HOME/Library/Android/sdk/emulator/emulator -list-avds | sed -n 1p)\" && $HOME/Library/Android/sdk/emulator/emulator -avd \"${SIM}\" & react-native run-android --appId com.differential.apollos",
     "codecov": "cat ./coverage/lcov.info | codecov",
     "ios": "react-native run-ios --simulator=\"iPhone 11\"",
-    "link-packages": "yarn --check-files --ignore-scripts && node ./scripts/link-packages",
-    "unlink-packages": "rm -rf ./node_modules/@apollosproject/* && ../node_modules/.bin/wml rm all",
+    "link-packages": "node ./scripts/link-packages && yarn yalc update",
+    "unlink-packages": "node ./scripts/link-packages remove",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js",
     "get-schema": "eval $(grep ^APP_DATA_URL .env) && sleep 5 && get-graphql-schema $APP_DATA_URL > schema.graphql",
@@ -121,7 +121,6 @@
     "recompose": "^0.30.0",
     "rn-fetch-blob": "^0.10.16",
     "stream": "^0.0.2",
-    "wml": "^0.0.83",
     "yup": "0.26.6"
   },
   "devDependencies": {
@@ -132,6 +131,7 @@
     "@babel/runtime": "^7.8.4",
     "@react-native-community/eslint-config": "^2.0.0",
     "@react-native-community/eslint-plugin": "^1.1.0",
+    "@carimus/metro-symlinked-deps": "^1.1.0",
     "babel-eslint": "10.0.1",
     "babel-jest": "^25.1.0",
     "babel-plugin-module-resolver": "^4.0.0",
@@ -160,7 +160,8 @@
     "react-dom": "16.6.3",
     "react-native-storybook-loader": "1.8.0",
     "react-test-renderer": "16.13.1",
-    "waait": "1.0.2"
+    "waait": "1.0.2",
+    "yalc": "^1.0.0-pre.47"
   },
   "rnpm": {
     "assets": [
