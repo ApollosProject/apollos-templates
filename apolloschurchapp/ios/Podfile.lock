@@ -247,7 +247,7 @@ PODS:
     - React-cxxreact (= 0.63.2)
     - React-jsi (= 0.63.2)
   - React-jsinspector (0.63.2)
-  - "react-native-apollos-player (2.0.0-alpha.9+59aaa970)":
+  - "react-native-apollos-player (2.0.0-alpha.15+9ef8d244)":
     - React
   - react-native-config (0.11.7):
     - React
@@ -626,7 +626,7 @@ SPEC CHECKSUMS:
   React-jsi: 54245e1d5f4b690dec614a73a3795964eeef13a8
   React-jsiexecutor: 8ca588cc921e70590820ce72b8789b02c67cce38
   React-jsinspector: b14e62ebe7a66e9231e9581279909f2fc3db6606
-  react-native-apollos-player: b7f4321a01cb656a57e790b0bbabb05e9c1c899a
+  react-native-apollos-player: 1d8cc7d9d36a87c91e8c9bf0e33c701a4160b1cc
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-google-cast: 410619ef162b8b91815ecf7271502224998dee8e
