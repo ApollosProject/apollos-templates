@@ -1,6 +1,6 @@
 import React from 'react';
 import { Platform, View } from 'react-native';
-import { useSafeAreaFrame } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import PropTypes from 'prop-types';
 import { SideBySideView, styled } from '@apollosproject/ui-kit';
 import {
@@ -24,9 +24,9 @@ const Container = styled(({ theme, safeAreaMargin }) => ({
 }))(View);
 
 const ActionContainer = ({ itemId }) => {
-  const { y } = useSafeAreaFrame();
+  const { bottom } = useSafeAreaInsets();
   return (
-    <Container safeAreaMargin={y / 4}>
+    <Container safeAreaMargin={bottom}>
       <PositioningView>
         <LikeButtonConnected itemId={itemId} />
         <ShareButtonConnected itemId={itemId} />
