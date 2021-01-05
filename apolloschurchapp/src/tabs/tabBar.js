@@ -1,3 +1,4 @@
+import { Platform } from 'react-native';
 import { compose } from 'recompose';
 import { BottomTabBar } from 'react-navigation';
 
@@ -9,7 +10,9 @@ const ThemedBottomTabBar = compose(
     showLabel: true,
     activeTintColor: theme.colors.secondary,
     inactiveTintColor: theme.colors.text.tertiary,
-    safeAreaInset: { bottom: 0 },
+    safeAreaInset: {
+      bottom: Platform.OS === 'android' ? theme.sizing.baseUnit * 0.5 : 0,
+    },
   })),
   styled(({ theme }) => ({
     borderTopWidth: 0,
