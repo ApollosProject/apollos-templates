@@ -58,8 +58,9 @@ jobs:
       run: npm install -g yarn
 
     - name: Install Dependencies
-      run: yarn --ignore-scripts
+      run: yarn
+      working-directory: apollos-church-api
 
     - name: Start Server and Check
-      run: yarn start:dev & sleep 30 && if [ $(curl "https://localhost:4000/health") != "ok" ]; then exit 1; fi
+      run: yarn start & sleep 30 && if [[ "$(curl 'https://localhost:4000/health')" != "ok" ]]; then exit 1; fi
       working-directory: apollos-church-api
