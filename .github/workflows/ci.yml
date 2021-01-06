@@ -61,5 +61,5 @@ jobs:
       run: yarn --ignore-scripts
 
     - name: Start Server and Check
-      run: yarn start & sleep 30 && if [ $(curl "https://apollos-church-api.herokuapp.com/health") != "ok" ]; then exit 1; fi
+      run: yarn start & sleep 30 && if [ $(curl "https://localhost:4000/health") != "ok" ]; then exit 1; fi
       working-directory: apollos-church-api
