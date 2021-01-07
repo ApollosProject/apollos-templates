@@ -35,6 +35,13 @@ import {
   Event,
   PrayerRequest,
 } from '@apollosproject/data-connector-rock';
+
+import {
+  ContentItem as DbContentItem,
+  Media as DbMedia,
+  ContentChannel as DbContentChannel,
+} from '@apollosproject/data-connector-postgres';
+
 import * as Theme from './theme';
 
 // This module is used to attach Rock User updating to the OneSignal module.
@@ -73,6 +80,9 @@ const data = {
   Event,
   Cache,
   PrayerRequest,
+  DbContentItem,
+  DbMedia,
+  DbContentChannel,
 };
 
 const {

@@ -31,6 +31,7 @@
     "@apollosproject/data-connector-redis-cache": "^2.0.0-alpha.15",
     "@apollosproject/data-connector-rock": "^2.0.0-alpha.15",
     "@apollosproject/data-connector-twilio": "^2.0.0-alpha.15",
+    "@apollosproject/data-connector-postgres": "^2.0.0-alpha.15",
     "@apollosproject/data-schema": "^2.0.0-alpha.15",
     "@apollosproject/rock-apollo-data-source": "^2.0.0-alpha.15",
     "@apollosproject/server-core": "^2.0.0-alpha.15",

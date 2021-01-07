@@ -1,0 +1,23 @@
+0 silly argv { _: [ 'run' ],
+0 silly argv   parallel: true,
+0 silly argv   lernaVersion: '3.22.1',
+0 silly argv   '$0':
+0 silly argv    '/Users/vincent/differential-projects/apollos/apollos-templates/node_modules/.bin/lerna',
+0 silly argv   script: 'start:dev' }
+1 notice cli v3.22.1
+2 verbose rootPath /Users/vincent/differential-projects/apollos/apollos-templates
+3 info Executing command in 2 packages: "npm run start:dev"
+4 silly npmRunScript.stream [ 'start:dev', [], 'apollos-church-api' ]
+5 silly getExecOpts /Users/vincent/differential-projects/apollos/apollos-templates/apollos-church-api undefined
+6 silly npmRunScript.stream [ 'start:dev', [], 'apolloschurchapp' ]
+7 silly getExecOpts /Users/vincent/differential-projects/apollos/apollos-templates/apolloschurchapp undefined
+8 error MaxBufferError: stdout maxBuffer exceeded
+8 error     at PassThrough.stream.on (/Users/vincent/differential-projects/apollos/apollos-templates/node_modules/lerna/node_modules/get-stream/index.js:41:19)
+8 error     at PassThrough.emit (events.js:203:15)
+8 error     at addChunk (_stream_readable.js:288:12)
+8 error     at readableAddChunk (_stream_readable.js:265:13)
+8 error     at PassThrough.Readable.push (_stream_readable.js:224:10)
+8 error     at PassThrough.Transform.push (_stream_transform.js:151:32)
+8 error     at PassThrough.afterTransform (_stream_transform.js:92:10)
+8 error     at PassThrough._transform (_stream_passthrough.js:42:3)
+8 error     at PassThrough.Transform._read (_stream_transform.js:190:10)
