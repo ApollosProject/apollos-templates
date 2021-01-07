@@ -14,7 +14,7 @@
     "codecov": "cat ./coverage/lcov.info | codecov",
     "ios": "react-native run-ios --simulator=\"iPhone 11\"",
     "link-packages": "node ./scripts/link-packages && yarn yalc update",
-    "unlink-packages": "node ./scripts/link-packages remove",
+    "unlink-packages": "node ./scripts/link-packages remove && rm -rf ./node_modules",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js",
     "get-schema": "eval $(grep ^APP_DATA_URL .env) && sleep 5 && get-graphql-schema $APP_DATA_URL > schema.graphql",
