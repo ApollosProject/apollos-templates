@@ -92,7 +92,7 @@ apolloServer.applyMiddleware({ app, path: '/' });
 // make sure this is called last.
 // (or at least after the apollos server setup)
 (async () => {
-  await sync();
+  // await sync();
   await seed();
 })();
 
