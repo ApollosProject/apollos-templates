@@ -101,8 +101,8 @@ jobs:
       - name: Use Yarn
         run: |
           cp yarn.lock apollos-church-api/yarn.lock
-          git config --global user.email "apps@apollos.app"
-          git config --global user.name "Apollos Admin"
+          git config --global user.email ${{secrets.HEROKU_EMAIL}}
+          git config --global user.name "Github Actions"
           git add apollos-church-api/yarn.lock
           git commit -am "added yarn.lock"
 
@@ -110,13 +110,9 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.5.6
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "apollos-church-api"
-          heroku_email: "apps@apollos.app"
+          heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
           appdir: apollos-church-api
-          healthcheck: ${{ secrets.APP_DATA_URL }}/health
-          rollbackonhealthcheckfailed: true
-          checkstring: "ok"
-          delay: 300
 
       - name: Setup Node
         uses: actions/setup-node@v1

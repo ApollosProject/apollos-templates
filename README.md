@@ -17,10 +17,21 @@ We are assuming you're using a Mac for this guide. Install tools necessary.
 Clone down your new repo, and run the setup script to set up environments
 
 ```
+yarn
 yarn setup
 ```
 
 ### API
+
+#### Local Development
+
+If you want to test that you're API is functional fill out the `ROCK_API` and `ROCK_TOKEN` (must have admin rights) in your `.env` file and start the server
+
+```
+yarn start
+```
+
+#### Deploy
 
 We use Heroku by default because it's free and easy to get started. If you'd like to use another platform to host your API, you can skip this section.
 
@@ -31,24 +42,25 @@ brew install heroku/brew/heroku
 heroku login
 ```
 
-Create your app and upload to Heroku.
+Create your app on Heroku
 
 ```
-heroku create apollos-api
-git push heroku master
+heroku create APP_NAME [-t OPTIONAL_TEAM]
 ```
 
-_NOTE: If you have a [team](https://devcenter.heroku.com/articles/heroku-teams) you'd like to use on Heroku to manage billing, you can use the `-t <teamname>` flag in the `create` command above._
+We deploy through the Github workflow. You need to set three new [Github secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) in your new repository:
 
-Open the GraphQL Playground on your API to test the deploy
+- `HEROKU_API_KEY`: This comes from your Heroku account dashboard and is used to upload
+- `HEROKU_APP_NAME`: This is the Heroku app name from above when you created the server
+- `APP_DATA_URL`: The URL of your server. You can get this by running `heroku info` and using "Web URL"
+
+![github secret](https://files-5eu5fyz6u.vercel.app)
+
+Simply commit to `master` and push or re-run the action if you haven't made any changes yet. Once the API Deploy action is finished, you should be able to open up the app in the browser
 
 ```
 heroku open
 ```
-
-To deploy automatically through the Github workflow, copy your [Heroku API key](https://dashboard.heroku.com/account) and set a [Github secret](https://docs.github.com/en/actions/reference/encrypted-secrets) in your new repository called `HEROKU_API_KEY`.
-
-![github secret](https://files-5eu5fyz6u.vercel.app)
 
 To get started with different API integrations, check out our [docs](https://apollosapp.io)!
 
