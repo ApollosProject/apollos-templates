@@ -17,7 +17,7 @@
     "unlink-packages": "node ./scripts/link-packages remove",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js",
-    "get-schema": "eval $(grep ^APP_DATA_URL .env) && sleep 5 && get-graphql-schema $APP_DATA_URL > schema.graphql",
+    "get-schema": "eval $(grep ^APP_DATA_URL .env) && sleep 10 && get-graphql-schema $APP_DATA_URL > schema.graphql",
     "prestart": "yarn generate-stories & yarn get-schema && node ./scripts/get-introspection-data.js",
     "postinstall": "jetify && yarn pods",
     "pods": "(bundle install && cd ios && bundle exec pod install --repo-update)",
