@@ -22,7 +22,7 @@
     "postinstall": "jetify && yarn pods",
     "pods": "(bundle install && cd ios && bundle exec pod install --repo-update)",
     "start": "yarn start:dev",
-    "start:dev": "react-native start",
+    "start:dev": "yarn prestart && react-native start",
     "test": "TZ=UTC jest",
     "latest": "./scripts/add-packages.sh latest",
     "beta": "./scripts/add-packages.sh beta",
