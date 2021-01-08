@@ -68,20 +68,21 @@ To get started with different API integrations, check out our [docs](https://apo
 
 This will outline the steps required to get your Android and iOS apps up and running. You will need a functioning production API from the previous section before moving forward.
 
-Rename your app
+Rename your app, this should be the name you want displayed on the phone screen
 
 ```
 cd apolloschurchapp
-npx react-native-rename <church name>
+npx react-native-rename "<church name>"
 ```
 
 Create new [icons](https://appicon.co) and [splash screens](https://github.com/zoontek/react-native-bootsplash#setup).
 
 ## Develop
 
-Install dependencies, cocoapods, start the bundler
+Install dependencies and start the server and bundler
 
 ```
+cd ..
 yarn
 yarn start
 ```
