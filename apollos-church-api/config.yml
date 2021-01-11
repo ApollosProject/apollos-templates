@@ -126,12 +126,14 @@ ROCK_MAPPINGS:
     # Id of the category used to store all persona dataviews
     PersonaId: 210
 
-  # Apollos will pull these content channels and expose them in the app on the discover screen.
+  # TODO deprecated
+  # used for the contentChannels root level query
   DISCOVER_CONTENT_CHANNEL_IDS:
     - 3
     - 5
     - 6
     - 8
+
   # Apollos will pull content items from these channels and expose them on the user feed
   # However, it will not expose the channel itself.
   # These channels are also pulled when indexing searchable content.

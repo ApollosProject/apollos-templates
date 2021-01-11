@@ -25,7 +25,11 @@ yarn setup
 
 #### Development
 
-If you want to test that your API is functional fill out the `ROCK_API` and `ROCK_TOKEN` (must have admin rights) in your `.env` file and start the server
+If you want to test that your API is functional fill out the `ROCK_API` and `ROCK_TOKEN` in your `.env` file. `ROCK_API` is the URL of your Rock instance with `/api` appended to the end. `ROCK_TOKEN` is the REST key of an admin user. You can get this from "Admin Tools" > "Apollos Dashboard" after you've installed the Apollos Plugin.
+
+![apollos dashboard](https://files-hf537e5zm.vercel.app)
+
+Now simply start the server
 
 ```
 yarn start
