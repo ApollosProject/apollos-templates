@@ -62,6 +62,12 @@ PASS_SIGNER_KEY=<signerKey.pem>
 PASS_SIGNER_PASSPHRASE=<new-password>
 ```
 
+Set the API URL as an environment variable to pull the template file from
+
+```
+ROOT_URL=http://localhost:4000
+```
+
 Start up the server and check this query works properly:
 
 ```

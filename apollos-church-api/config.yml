@@ -18,7 +18,7 @@ BUGSNAG:
   ## Optional, but you'll need to remove references to @apollosproject/bugsnag if you don't wish to use.
   API_KEY: ${BUGSNAG_KEY}
 ROCK:
-  API_URL: https://rock.apollos.app/api
+  API_URL: ${ROCK_API}
   API_TOKEN: ${ROCK_TOKEN}
   IMAGE_URL: https://rock.apollos.app/GetImage.ashx
   SHARE_URL: https://rock.apollos.app
