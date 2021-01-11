@@ -87,9 +87,30 @@ yarn
 yarn start
 ```
 
-Start the sims _in separate tabs_
+Couple final steps you'll need to get the app booted in development mode.
+
+### iOS
+
+For iOS, you will need to change the app identifier and clear out certificates to boot in Development mode. Use Xcode to edit the settings:
+
+[PIC]
+
+Now run the command to start the simulator in a separate tab:
 
 ```
 yarn ios
+```
+
+### Android
+
+Android uses Google Maps for its map service so you will need to register a [Google Maps API Key](https://developers.google.com/maps/documentation/android-sdk/get-api-key). Once you have that, define it in your `.env` file:
+
+```
+GOOGLE_MAPS_API_KEY=<KEY>
+```
+
+Then start the app on the default installed emulator in a separate tab.
+
+```
 yarn android
 ```
