@@ -23,9 +23,9 @@ yarn setup
 
 ### API
 
-#### Local Development
+#### Development
 
-If you want to test that you're API is functional fill out the `ROCK_API` and `ROCK_TOKEN` (must have admin rights) in your `.env` file and start the server
+If you want to test that your API is functional fill out the `ROCK_API` and `ROCK_TOKEN` (must have admin rights) in your `.env` file and start the server
 
 ```
 yarn start
