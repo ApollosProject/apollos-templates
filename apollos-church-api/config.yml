@@ -42,7 +42,7 @@ ONE_SIGNAL:
   APP_ID: b6e75a77-003f-4466-95ca-82cc5cdc407b
   REST_KEY: ${ONE_SIGNAL_REST_KEY}
 CHURCH_ONLINE:
-  URL: https://apollos.online.church/
+  URL: ${CHURCH_ONLINE_URL}
   MEDIA_URLS: []
   WEB_VIEW_URL: https://apollos.online.church/
 ALGOLIA:
