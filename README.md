@@ -85,9 +85,14 @@ cd apolloschurchapp
 npx react-native-rename "<church name>"
 ```
 
-Create new [icons](https://appicon.co) and [splash screens](https://github.com/zoontek/react-native-bootsplash#setup).
+Add new icons and splash screen. For customization, see [react-native-make](#)
 
-## Develop
+```
+yarn icons icon.png
+yarn splash icon.png
+```
+
+#### Development
 
 Install dependencies and start the server and bundler
 
@@ -99,9 +104,13 @@ yarn start
 
 Couple final steps you'll need to get the app booted in development mode.
 
-### iOS
+##### iOS
 
-For iOS, you will need to change the app identifier and clear out certificates to boot in Development mode. Use Xcode to edit the settings:
+For iOS, you will need to choose a new app identifier and clear out certificates to boot in Development mode. Set the app identifier in the Apple Developer dashboard
+
+[PIC]
+
+Use Xcode to edit the settings:
 
 [PIC]
 
@@ -111,7 +120,7 @@ Now run the command to start the simulator in a separate tab:
 yarn ios
 ```
 
-### Android
+##### Android
 
 Android uses Google Maps for its map service so you will need to register a [Google Maps API Key](https://developers.google.com/maps/documentation/android-sdk/get-api-key). Once you have that, define it in your `.env` file:
 
@@ -124,3 +133,30 @@ Then start the app on the default installed emulator in a separate tab.
 ```
 yarn android
 ```
+
+#### Deploy
+
+We use [Fastlane](#) through Github Actions to manage certificates and build uploads. This will walk you through everything you need to get set up with automated deployments.
+
+##### iOS
+
+First thing we'll do is configure the certificates. Change the following values in the `Matchfile`:
+
+`git_url`: This is the _private_ repo you are going to store the certificates
+`app_identifier`: The App ID you chose for your app in the Apple Developer Dashboard
+`username`: Admin level Apple Developer account, used to manage certificates and profiles
+
+Inside the app directory run `match` to configure the certificates
+
+```
+bundle exec faslane ios certificates
+```
+
+Next, the `Fastfile`, change all instances of `apolloshchurchapp` and `apolloschurchappprod` to your projects condensed name. It's probably Whatever name you defined earlier with no spaces. You can be sure from `ios/<name>.xcodeproj`
+
+Lastly, in the `Appfile` change, the following variables:
+
+- `app_identifier` - same ID you specified in the `Matchfile`
+- `apple_id` - The Apple ID you want responsible for uploads, must be at least "App Manager" level
+- `itc_team_id` - iTunes Connect Team ID
+- `team_id` - [Apple Developer Portal Team ID](https://developer.apple.com/account/#/membership)

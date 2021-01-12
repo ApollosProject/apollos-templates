@@ -41,9 +41,7 @@ jobs:
         APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
 
     - name: Fastlane Deploy
-      run: |
-        git diff # this is just for debug, remove later
-        bundle exec fastlane ios deploy
+      run: bundle exec fastlane ios deploy
       env:
         MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
