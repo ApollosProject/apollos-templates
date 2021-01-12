@@ -1,5 +1,7 @@
 # REDIS Setup
 
+This will explain how to set up REDIS. Currently, we use it for server level caching as well as job scheduling through Bull, such as indexing content for search.
+
 For local usage, we recommend installing REDIS with homebrew
 
 ```
