@@ -78,18 +78,21 @@ To get started with different API integrations, check out our [docs](https://apo
 
 This will outline the steps required to get your Android and iOS apps up and running. You will need a functioning production API from the previous section before moving forward.
 
-Rename your app, this should be the name you want displayed on the phone screen
+Rename your project
 
 ```
 cd apolloschurchapp
 npx react-native-rename "<church name>"
 ```
 
-Add new icons and splash screen. For customization, see [react-native-make](#)
+Add new icons and splash screen. For customization, see [react-native-make](#). Icons should be 1024 jpgs and splash should be 3000h transparent png.
+
+![icons](https://files-lrt96nsk5.vercel.app)
 
 ```
-yarn icons icon.png
-yarn splash icon.png
+yarn icons icon-ios.png --platform ios
+yarn icons icon-android.jpg --platform android
+yarn splash splash.png
 ```
 
 #### Development
@@ -106,13 +109,17 @@ Couple final steps you'll need to get the app booted in development mode.
 
 ##### iOS
 
-For iOS, you will need to choose a new app identifier and clear out certificates to boot in Development mode. Set the app identifier in the Apple Developer dashboard
+For iOS, you will need to choose a new app identifier and clear out certificates to boot in Development mode. Set the app identifier in the Apple Developer [dashboard](https://developer.apple.com/account/resources/identifiers/list)
 
-[PIC]
+![apple developer dashboard](https://files-g3cz9dm34.vercel.app)
 
 Use Xcode to edit the settings:
 
-[PIC]
+![certificates](https://files-gd7d6gcqz.vercel.app)
+
+Change the display name of the app
+
+![display name](https://files-h2vqr0xje.vercel.app)
 
 Now run the command to start the simulator in a separate tab:
 
@@ -126,6 +133,12 @@ Android uses Google Maps for its map service so you will need to register a [Goo
 
 ```
 GOOGLE_MAPS_API_KEY=<KEY>
+```
+
+Change the `app-name` in `apolloschurchapp/android/app/src/main/res/values/strings.xml`
+
+```
+<string name="app_name">NEW NAME</string>
 ```
 
 Then start the app on the default installed emulator in a separate tab.
