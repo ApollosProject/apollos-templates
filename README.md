@@ -78,11 +78,11 @@ To get started with different API integrations, check out our [docs](https://apo
 
 This will outline the steps required to get your Android and iOS apps up and running. You will need a functioning production API from the previous section before moving forward.
 
-Rename your project
+Rename your project, **_no spaces_**!
 
 ```
 cd apolloschurchapp
-npx react-native-rename "<church name>"
+npx react-native-rename "<ChurchName>"
 ```
 
 Add new icons and splash screen. For customization, see [react-native-make](#). Icons should be 1024 jpgs and splash should be 3000h transparent png.
@@ -159,11 +159,22 @@ First thing we'll do is configure the certificates. Change the following values 
 `app_identifier`: The App ID you chose for your app in the Apple Developer Dashboard
 `username`: Admin level Apple Developer account, used to manage certificates and profiles
 
+You'll need to create a personal access token in Github and use that to authenticate to your certificates repo. Once you have the token, you'll need to encode it to base64.
+
+```
+python -c "import base64;print(base64.b64encode('<github username>:<token>'))"
+```
+
+**_NOTE:_** If this is a new app, you will need to add at least one device to the developer portal. Easiest way is to have Xcode do it by turning off and on "Automatic Code Signing" with an iPhone plugged in.
+
 Inside the app directory run `match` to configure the certificates
 
 ```
-bundle exec faslane ios certificates
+MATCH_GIT_BASIC_AUTHORIZATION=<encoded token> bundle exec fastlane match development
+MATCH_GIT_BASIC_AUTHORIZATION=<encoded token> bundle exec fastlane match appstore
 ```
+
+Match will ask you to enter a password, remember it! You'll need to decrypt on the CI for automatic deploys.
 
 Next, the `Fastfile`, change all instances of `apolloshchurchapp` and `apolloschurchappprod` to your projects condensed name. It's probably Whatever name you defined earlier with no spaces. You can be sure from `ios/<name>.xcodeproj`
 
@@ -173,3 +184,11 @@ Lastly, in the `Appfile` change, the following variables:
 - `apple_id` - The Apple ID you want responsible for uploads, must be at least "App Manager" level
 - `itc_team_id` - iTunes Connect Team ID
 - `team_id` - [Apple Developer Portal Team ID](https://developer.apple.com/account/#/membership)
+
+Test the deployment:
+
+```
+bundle exec fastlane ios deploy
+```
+
+Now configure Github Actions for automated deploys. Add `MATCH_GIT_BASIC_AUTHORIZATION` and `MATCH_PASSWORD` (the one I told you to remember) as repo secrets.
