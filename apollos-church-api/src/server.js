@@ -93,7 +93,7 @@ apolloServer.applyMiddleware({ app, path: '/' });
 // (or at least after the apollos server setup)
 (async () => {
   await sync();
-  await seed();
+  // await seed();
 })();
 
 export default app;

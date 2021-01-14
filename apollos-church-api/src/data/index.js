@@ -37,9 +37,8 @@ import {
 } from '@apollosproject/data-connector-rock';
 
 import {
-  ContentItem as DbContentItem,
-  Media as DbMedia,
-  ContentChannel as DbContentChannel,
+  Comment,
+  CommentRelationship,
 } from '@apollosproject/data-connector-postgres';
 
 import * as Theme from './theme';
@@ -80,9 +79,8 @@ const data = {
   Event,
   Cache,
   PrayerRequest,
-  DbContentItem,
-  DbMedia,
-  DbContentChannel,
+  Comment,
+  CommentRelationship,
 };
 
 const {
