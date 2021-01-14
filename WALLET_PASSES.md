@@ -31,7 +31,7 @@ Fill Prompts with this info:
 Country Name (2 letter code) [AU]: US
 State or Province Name [Some-State]: United States
 Locality Name []:
-Organization Name [Internet Widgits Pty Ltd]: Apple Inc.
+Organization Name []: Apple Inc.
 Organizational Unit Name []: Apple Worldwide Developer Relations
 Common Name []: Apple Worldwide Developer Relations Certification Authority
 Email Address []: your-email
