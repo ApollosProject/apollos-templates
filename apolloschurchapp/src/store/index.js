@@ -16,6 +16,7 @@ export const schema = `
 
   type Mutation {
     cacheMarkLoaded
+    cacheMarkLoading
     updateDevicePushId(pushId: String!)
     updatePushPermissions(enabled: Boolean!)
   }
@@ -35,6 +36,14 @@ const GET_LOGGED_IN = gql`
 
 export const resolvers = {
   Mutation: {
+    cacheMarkLoading: (root, args, { cache }) => {
+      cache.writeQuery({
+        query: CACHE_LOADED,
+        data: {
+          cacheLoaded: false,
+        },
+      });
+    },
     cacheMarkLoaded: async (root, args, { cache, client }) => {
       cache.writeQuery({
         query: CACHE_LOADED,

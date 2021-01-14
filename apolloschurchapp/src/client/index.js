@@ -14,6 +14,7 @@ import { resolvers, schema, defaults } from '../store';
 import httpLink from './httpLink';
 import cache, { ensureCacheHydration } from './cache';
 import MARK_CACHE_LOADED from './markCacheLoaded';
+import MARK_CACHE_LOADING from './markCacheLoading';
 
 const goToAuth = () => NavigationService.resetToAuth();
 const wipeData = () => cache.writeData({ data: defaults });
