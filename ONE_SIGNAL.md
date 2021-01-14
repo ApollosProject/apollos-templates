@@ -2,6 +2,8 @@
 
 This will explain how to use One Signal to set up push notifications
 
+## iOS
+
 First, you will need to create a certificate from Apple for iOS. Click on your app in the [identifiers list](https://developer.apple.com/account/resources/identifiers/list) in the Apple Developer Portal and then scroll down to configure a push certificate.
 
 ![push certificate](https://files-2h6hsvm7p.vercel.app)
