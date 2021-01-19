@@ -39,7 +39,7 @@ UNIVERSAL_LINKS:
   # https://docs.getsocial.im/knowledge-base/android-signing-key-sha256/
   GOOGLE_KEYSTORE_SHA256: EC:6E:B5:5A:62:53:1E:53:FF:C4:BA:A7:CB:29:77:57:71:9D:65:2F:AF:69:41:A3:AD:2B:C4:55:A1:7A:07:03
 ONE_SIGNAL:
-  APP_ID: b6e75a77-003f-4466-95ca-82cc5cdc407b
+  APP_ID: ${ONE_SIGNAL_APP_ID}
   REST_KEY: ${ONE_SIGNAL_REST_KEY}
 CHURCH_ONLINE:
   URL: ${CHURCH_ONLINE_URL}
@@ -78,7 +78,7 @@ ANALYTICS:
   # on the accompanying service
   SEGMENT_KEY:
   GA_ID:
-  USE_ROCK: true
+  USE_ROCK: false
 BIBLE_API:
   KEY: ${BIBLE_API_KEY}
   BIBLE_ID:
