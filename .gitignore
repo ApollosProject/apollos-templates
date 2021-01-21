@@ -12,3 +12,4 @@ node_modules/
 .yalc/
 yalc.lock
 yarn-error.log
+lerna-debug.log
