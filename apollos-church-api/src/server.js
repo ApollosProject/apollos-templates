@@ -9,7 +9,7 @@ import { get } from 'lodash';
 import { setupUniversalLinks } from '@apollosproject/server-core';
 import { BugsnagPlugin } from '@apollosproject/bugsnag';
 import { sync } from '@apollosproject/data-connector-postgres';
-import { seed } from '../seeds';
+// import { seed } from '../seeds';
 import {
   resolvers,
   schema,
