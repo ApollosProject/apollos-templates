@@ -247,7 +247,7 @@ PODS:
     - React-cxxreact (= 0.63.2)
     - React-jsi (= 0.63.2)
   - React-jsinspector (0.63.2)
-  - "react-native-apollos-player (2.0.0-alpha.5+12504e7b)":
+  - react-native-apollos-player (2.0.0-beta.0):
     - React
   - react-native-config (0.11.7):
     - React
@@ -419,7 +419,7 @@ DEPENDENCIES:
   - React-jsi (from `../node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
-  - "react-native-apollos-player (from `../.yalc/@apollosproject/ui-media-player`)"
+  - "react-native-apollos-player (from `../node_modules/@apollosproject/ui-media-player`)"
   - react-native-config (from `../node_modules/react-native-config`)
   - "react-native-geolocation (from `../node_modules/@react-native-community/geolocation`)"
   - react-native-google-cast (from `../node_modules/react-native-google-cast/ios`)
@@ -515,7 +515,7 @@ EXTERNAL SOURCES:
   React-jsinspector:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   react-native-apollos-player:
-    :path: "../.yalc/@apollosproject/ui-media-player"
+    :path: "../node_modules/@apollosproject/ui-media-player"
   react-native-config:
     :path: "../node_modules/react-native-config"
   react-native-geolocation:
@@ -626,7 +626,7 @@ SPEC CHECKSUMS:
   React-jsi: 54245e1d5f4b690dec614a73a3795964eeef13a8
   React-jsiexecutor: 8ca588cc921e70590820ce72b8789b02c67cce38
   React-jsinspector: b14e62ebe7a66e9231e9581279909f2fc3db6606
-  react-native-apollos-player: 5220fa2189af81374d5ddc769f766b613cfb49ed
+  react-native-apollos-player: 8d7cd85ef8a057c3ff7f10135155ca2548a0e1d9
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-google-cast: 410619ef162b8b91815ecf7271502224998dee8e
