@@ -96,3 +96,6 @@ packages/**/docs/generated/*
 
 # shared secrets
 .env.shared
+
+# development database
+development.db
