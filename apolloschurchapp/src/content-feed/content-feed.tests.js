@@ -97,13 +97,22 @@ describe('content feed query component', () => {
       })
     );
 
-    const tree = await renderWithApolloData(
+    const initialTree = await renderWithApolloData(
       <Providers
         MockedProvider={MockedProvider}
         mocks={[mock, ...additionalMocks]}
       >
         <ContentFeed route={{ params: { itemId: 'ContentChannel:123' } }} />
       </Providers>
+    );
+    const tree = await renderWithApolloData(
+      <Providers
+        MockedProvider={MockedProvider}
+        mocks={[mock, ...additionalMocks]}
+      >
+        <ContentFeed route={{ params: { itemId: 'ContentChannel:123' } }} />
+      </Providers>,
+      initialTree
     );
     expect(tree).toMatchSnapshot();
   });
