@@ -60,7 +60,7 @@ jobs:
     - name: Install Dependencies
       run: yarn --ignore-scripts
 
-    - name: Install sqlite3y
+    - name: Install sqlite3
       run: (cd ./apollos-church-api/node_modules/sqlite3 && yarn install)
 
     - name: Start Server and Check
