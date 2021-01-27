@@ -8,6 +8,8 @@ import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
 import { get } from 'lodash';
 import { setupUniversalLinks } from '@apollosproject/server-core';
 import { BugsnagPlugin } from '@apollosproject/bugsnag';
+import { sync } from '@apollosproject/data-connector-postgres';
+// import { seed } from '../seeds';
 import {
   resolvers,
   schema,
@@ -86,5 +88,12 @@ setupUniversalLinks({ app });
 
 apolloServer.applyMiddleware({ app });
 apolloServer.applyMiddleware({ app, path: '/' });
+
+// make sure this is called last.
+// (or at least after the apollos server setup)
+(async () => {
+  await sync();
+  // await seed();
+})();
 
 export default app;
