@@ -60,6 +60,9 @@ jobs:
     - name: Install Dependencies
       run: yarn --ignore-scripts
 
+    - name: Install sqlite3
+      run: (cd node_modules/sqlite3 && yarn install)
+
     - name: Start Server and Check
       run: yarn start:dev & sleep 30 && if [[ "$(curl 'http://localhost:4000/health')" != "ok" ]]; then exit 1; fi
       working-directory: apollos-church-api
