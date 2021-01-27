@@ -151,6 +151,18 @@ type CardListItem {
 """A rgb color string"""
 scalar Color
 
+type Comment implements Node {
+  id: ID!
+  person: Person
+  text: String
+}
+
+type CommentListFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  comments: [Comment]
+}
+
 type ContentChannel implements Node {
   id: ID!
   name: String
@@ -440,6 +452,7 @@ type Mutation {
   updateUserPushSettings(input: PushSettingsInput!): Person
   updateUserCampus(campusId: String!): Person
   addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
+  addComment(parentId: ID!, text: String!): Comment
 }
 
 interface Node {
@@ -530,7 +543,7 @@ type Query {
   _placeholder: Boolean
   node(id: ID!): Node
   likedContent(first: Int, after: String): ContentItemsConnection
-  contentChannels: [ContentChannel]
+  contentChannels: [ContentChannel] @deprecated(reason: "No longer supported.")
   campaigns: ContentItemsConnection
   userFeed(first: Int, after: String): ContentItemsConnection
   personaFeed(first: Int, after: String): ContentItemsConnection

@@ -29,7 +29,7 @@ jobs:
       run: yarn
 
     # required to build
-    - name: Generate Stores
+    - name: Generate Stories
       run: yarn generate-stories
 
     - name: Get Introspection Data
@@ -38,7 +38,9 @@ jobs:
         APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
 
     - name: Fastlane Deploy
-      run: bundle exec fastlane ios deploy
+      run: |
+        git diff # this is just for debug, remove later
+        bundle exec fastlane ios deploy
       env:
         MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
