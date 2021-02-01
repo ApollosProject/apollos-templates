@@ -62,7 +62,7 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>$(PRODUCT_NAME) would like to use your location for determining your closest campus</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like to your microphone (for videos)</string>string>
+	<string>$(PRODUCT_NAME) would like to your microphone (for videos)</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>DroidSerif-Bold.ttf</string>
