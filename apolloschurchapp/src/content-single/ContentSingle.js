@@ -21,7 +21,7 @@ const ContentSingle = (props) => {
   const nodeId = props.route?.params?.itemId;
   const { data, loading } = useQuery(
     gql`
-      query getContentNodeTitle($nodeId: ID) {
+      query getContentNodeTitle($nodeId: ID!) {
         node(id: $nodeId) {
           id
           ... on ContentNode {
