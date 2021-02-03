@@ -55,8 +55,6 @@
 	</dict>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>$(PRODUCT_NAME) would like access to bluetooth (for playing audio)</string>
-	<key>NSCameraUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like to use your camera (for uploading profile pictures)</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>$(PRODUCT_NAME) would like to use your location for determining your closest campus</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
@@ -65,10 +63,6 @@
 	<string>$(PRODUCT_NAME) would like to use your location for determining your closest campus</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>$(PRODUCT_NAME) would like to your microphone (for videos)</string>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like to save photos to your photo gallery (for uploading profile pictures)</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like access to your photo gallery (for uploading profile pictures)</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>DroidSerif-Bold.ttf</string>
@@ -85,7 +79,7 @@
 		<string>Inter-UI-Regular.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
-	<string>BootSplash</string>
+	<string>SplashScreen</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

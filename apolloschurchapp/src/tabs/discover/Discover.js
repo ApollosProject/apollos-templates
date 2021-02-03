@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 
-import SafeAreaView from 'react-native-safe-area-view';
-import PropTypes from 'prop-types';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 
 import { throttle } from 'lodash';
 
@@ -69,17 +68,5 @@ function Discover({ navigation }) {
     </RockAuthedWebBrowser>
   );
 }
-
-Discover.navigationOptions = () => ({
-  header: null,
-});
-
-Discover.propTypes = {
-  navigation: PropTypes.shape({
-    getParam: PropTypes.func,
-    setParams: PropTypes.func,
-    navigate: PropTypes.func,
-  }),
-};
 
 export default Discover;

@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import moment from 'moment';
 
-import Providers from '../Providers';
+import { Providers } from '@apollosproject/ui-test-utils';
 
 import Event from './Event';
 

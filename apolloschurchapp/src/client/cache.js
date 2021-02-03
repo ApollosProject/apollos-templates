@@ -1,13 +1,18 @@
-import {
-  InMemoryCache,
-  IntrospectionFragmentMatcher,
-} from 'apollo-cache-inmemory';
+import { InMemoryCache } from '@apollo/client/cache';
 import AsyncStorage from '@react-native-community/async-storage';
-import { CachePersistor } from 'apollo-cache-persist';
+import { CachePersistor } from 'apollo3-cache-persist';
 import ApollosConfig from '@apollosproject/config';
 
 import introspectionQueryResultData from './fragmentTypes.json';
 
+const finalPossibleTypes = {};
+introspectionQueryResultData.__schema.types.forEach((supertype) => {
+  if (supertype.possibleTypes) {
+    finalPossibleTypes[supertype.name] = [
+      ...supertype.possibleTypes.map((subtype) => subtype.name),
+    ];
+  }
+});
 // We reset our apollo cache based an env value and static number.
 // In the future, we should also look at resetting the app when an error occurs related to Apollo.
 // You can also increment this number to force a manual reset of the cache.
@@ -18,9 +23,7 @@ const nodeCacheRedirect = (_, { id }, { getCacheKey }) =>
   id ? getCacheKey({ __typename: id.split(':')[0], id }) : null;
 
 const cache = new InMemoryCache({
-  fragmentMatcher: new IntrospectionFragmentMatcher({
-    introspectionQueryResultData,
-  }),
+  possibleTypes: finalPossibleTypes,
   cacheRedirects: {
     Query: {
       node: nodeCacheRedirect,

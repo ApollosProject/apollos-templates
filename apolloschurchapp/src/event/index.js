@@ -1,17 +1,25 @@
-import { createStackNavigator } from 'react-navigation';
+import React from 'react';
+import { createStackNavigator } from '@react-navigation/stack';
 
+import PropTypes from 'prop-types';
+import NavigationHeader from '../ui/NavigationHeader';
 import Event from './EventConnected';
 
-const EventNavigator = createStackNavigator(
-  {
-    Event,
-  },
-  {
-    initialRouteName: 'Event',
-    headerMode: 'float',
-    headerTransitionPreset: 'fade-in-place',
-    navigationOptions: { header: null },
-  }
+const { Navigator, Screen } = createStackNavigator();
+
+const EventNavigator = ({ route, ...props }) => (
+  <Navigator
+    {...props}
+    screenOptions={{ header: NavigationHeader, headerTransparent: true }}
+  >
+    <Screen name="Event" initialParams={route.params} component={Event} />
+  </Navigator>
 );
+
+EventNavigator.propTypes = {
+  route: PropTypes.shape({
+    params: PropTypes.shape({}),
+  }),
+};
 
 export default EventNavigator;

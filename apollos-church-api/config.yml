@@ -111,7 +111,7 @@ ROCK_MAPPINGS:
       ContentChannelTypeId: [6]
     DevotionalContentItem:
       EntityType: ContentChannelItem
-      ContentChannelTypeId: []
+      ContentChannelId: [7]
     MediaContentItem:
       EntityType: ContentChannelItem
     UniversalContentItem:
@@ -220,6 +220,20 @@ DISCOVER_FEATURES:
         __typename: ContentChannel
         id: 5
         name: Podcasts
+  - algorithms:
+      - type: CONTENT_CHANNEL
+        arguments:
+          contentChannelId: 7
+          limit: 3
+    type: HorizontalCardList
+    subtitle: Devotionals
+    primaryAction:
+      action: OPEN_CHANNEL
+      title: 'Read More'
+      relatedNode:
+        __typename: ContentChannel
+        id: 7
+        name: Devotionals
   - algorithms:
       - type: CONTENT_CHANNEL
         arguments:

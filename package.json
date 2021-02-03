@@ -11,7 +11,8 @@
     "ios": "lerna run ios --parallel",
     "android": "lerna run android --parallel",
     "pods": "lerna run pods --parallel",
-    "bump": "yarn unlink-packages && ./scripts/bump.sh",
+    "postinstall": "lerna run postinstall --parallel",
+    "bump": "./scripts/bump.sh",
     "canary": "./scripts/add-packages.sh canary && yarn",
     "next": "./scripts/add-packages.sh next && yarn",
     "secrets": "./scripts/secrets.sh"

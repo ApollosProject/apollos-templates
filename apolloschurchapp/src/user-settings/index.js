@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
-import { Query, Mutation } from 'react-apollo';
+import { Query, Mutation } from '@apollo/client/react/components';
 import { getVersion, getBuildNumber } from 'react-native-device-info';
 
 import {
@@ -23,28 +23,16 @@ import {
 } from '@apollosproject/ui-connected';
 
 class UserSettings extends PureComponent {
-  static navigationOptions = (props) => ({
-    title: 'Settings',
-    headerStyle: { backgroundColor: props.screenProps.headerBackgroundColor },
-  });
-
   static propTypes = {
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       navigate: PropTypes.func,
-    }),
-    screenProps: PropTypes.shape({
-      headerBackgroundColor: PropTypes.string,
-      headerTitleStyle: PropTypes.shape({
-        color: PropTypes.string,
-      }),
     }),
   };
 
   render() {
     return (
       <Query query={GET_LOGIN_STATE} fetchPolicy="cache-and-network">
-        {({ data: { isLoggedIn = false, loading } }) => {
+        {({ data: { isLoggedIn = false }, loading }) => {
           if (loading) return <ActivityIndicator />;
           if (!isLoggedIn) return null;
           return (
@@ -57,16 +45,8 @@ class UserSettings extends PureComponent {
                     <>
                       <TableView>
                         <Touchable
-                          onPress={async () => {
-                            await this.props.navigation.navigate(
-                              'PersonalDetails',
-                              {
-                                backgroundColor: this.props.screenProps
-                                  .headerBackgroundColor,
-                                headerTitleColor: this.props.screenProps
-                                  .headerTitleStyle.color,
-                              }
-                            );
+                          onPress={() => {
+                            this.props.navigation.navigate('PersonalDetails');
                           }}
                         >
                           <Cell>
@@ -76,13 +56,8 @@ class UserSettings extends PureComponent {
                         </Touchable>
                         <Divider />
                         <Touchable
-                          onPress={async () => {
-                            await this.props.navigation.navigate('Location', {
-                              backgroundColor: this.props.screenProps
-                                .headerBackgroundColor,
-                              headerTitleColor: this.props.screenProps
-                                .headerTitleStyle.color,
-                            });
+                          onPress={() => {
+                            this.props.navigation.navigate('Location');
                           }}
                         >
                           <Cell>
@@ -92,16 +67,8 @@ class UserSettings extends PureComponent {
                         </Touchable>
                         <Divider />
                         <Touchable
-                          onPress={async () => {
-                            await this.props.navigation.navigate(
-                              'ChangePassword',
-                              {
-                                backgroundColor: this.props.screenProps
-                                  .headerBackgroundColor,
-                                headerTitleColor: this.props.screenProps
-                                  .headerTitleStyle.color,
-                              }
-                            );
+                          onPress={() => {
+                            this.props.navigation.navigate('ChangePassword');
                           }}
                         >
                           <Cell>
