@@ -14,6 +14,7 @@ APP:
   ROOT_API_URL: ${ROOT_URL}
   JOBS_USERNAME: ${JOBS_USERNAME}
   JOBS_PASSWORD: ${JOBS_PASSWORD}
+  FLAG_LIMIT: 1
 BUGSNAG:
   ## Optional, but you'll need to remove references to @apollosproject/bugsnag if you don't wish to use.
   API_KEY: ${BUGSNAG_KEY}
@@ -152,15 +153,15 @@ ROCK_MAPPINGS:
 HOME_FEATURES:
   - type: ActionBar
     title: Welcome to Apollos
-    actions: [{
-      title: Check In,
-      icon: check,
-      action: OPEN_URL,
-      relatedNode: {
-        __typename: Url,
-        url: 'https://www.google.com'
-      }
-    }]
+    actions:
+      [
+        {
+          title: Check In,
+          icon: check,
+          action: OPEN_URL,
+          relatedNode: { __typename: Url, url: 'https://www.google.com' },
+        },
+      ]
   - algorithms: [USER_FEED]
     type: HeroList
     primaryAction:
