@@ -3,6 +3,7 @@ import { gql } from 'apollo-server';
 import {
   createApolloServerConfig,
   Interfaces,
+  Theme,
 } from '@apollosproject/server-core';
 
 import * as Analytics from '@apollosproject/data-connector-analytics';
@@ -37,8 +38,6 @@ import {
 } from '@apollosproject/data-connector-rock';
 
 import { Comment, UserFlag } from '@apollosproject/data-connector-postgres';
-
-import * as Theme from './theme';
 
 // This module is used to attach Rock User updating to the OneSignal module.
 // This module includes a Resolver that overides a resolver defined in `OneSignal`
