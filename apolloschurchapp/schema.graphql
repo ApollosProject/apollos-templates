@@ -42,6 +42,14 @@ type ActionListFeature implements Feature & Node {
   primaryAction: FeatureAction
 }
 
+type AddCommentFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  relatedNode: Node!
+  addPrompt: String
+  initialPrompt: String
+}
+
 input AnalyticsDeviceInfo {
   platform: AnalyticsPlatform
   deviceId: String
@@ -155,12 +163,19 @@ type Comment implements Node {
   id: ID!
   person: Person
   text: String
+  visibility: CommentVisibility
 }
 
 type CommentListFeature implements Feature & Node {
   id: ID!
   order: Int
   comments: [Comment]
+}
+
+enum CommentVisibility {
+  PUBLIC
+  PRIVATE
+  FOLLOWERS
 }
 
 type ContentChannel implements Node {
@@ -452,7 +467,8 @@ type Mutation {
   updateUserPushSettings(input: PushSettingsInput!): Person
   updateUserCampus(campusId: String!): Person
   addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
-  addComment(parentId: ID!, text: String!): Comment
+  addComment(parentId: ID!, text: String!, visibility: CommentVisibility): Comment
+  flagComment(commentId: ID!): Comment
 }
 
 interface Node {
@@ -510,6 +526,7 @@ type Person implements Node {
   devices: [Device]
   campus: Campus
   groups(type: GROUP_TYPE, asLeader: Boolean): [Group]
+  prayers: [PrayerRequest]
 }
 
 type PrayerListFeature implements Feature & Node {
@@ -713,6 +730,14 @@ type VerticalCardListFeature implements Feature & Node {
   subtitle: String
   isFeatured: Boolean
   cards: [CardListItem]
+}
+
+type VerticalPrayerListFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  title: String
+  subtitle: String
+  prayers: [PrayerRequest]
 }
 
 type VideoMedia implements Media {
