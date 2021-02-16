@@ -27,6 +27,7 @@ ROCK:
   TIMEZONE: 'America/New_York'
   USE_PLUGIN: true
   SHOW_INACTIVE_CONTENT: ${ROCK_SHOW_INACTIVE_CONTENT}
+  FORGOT_PASSWORD_URL: ${ROCK_FORGOT_PASSWORD_URL}
 UNIVERSAL_LINKS:
   # This should be your app's bundle ID, as found in your info.plist.
   APPLE_APP_ID: ${APPLE_APP_ID}
