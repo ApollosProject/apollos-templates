@@ -20,7 +20,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
-        node-version: 10.19.x
+        node-version: 12
 
     - name: Install Yarn
       run: npm install -g yarn
@@ -64,7 +64,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v1
       with:
-        node-version: 10.19.x
+        node-version: 12
 
     - name: Install Yarn
       run: npm install -g yarn
