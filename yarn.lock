@@ -202,10 +202,10 @@
     passkit-generator "1.5.9"
     qrcode "^1.3.3"
 
-"@apollosproject/data-connector-postgres@^2.0.1-canary.14":
-  version "2.0.1-canary.14"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-postgres/-/data-connector-postgres-2.0.1-canary.14.tgz#6ed37a6733a814a35eb80111f667ed6ad71f2b74"
-  integrity sha512-WyTBM5S2Av/K0UQax07yyo2MqY6dv1DhRB1DYDgx63sLWRWanzfZFwmkO7d2efzJR99ADL0EVIEPluC5Wg7MOA==
+"@apollosproject/data-connector-postgres@^2.0.1-canary.16":
+  version "2.0.1-canary.16"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-postgres/-/data-connector-postgres-2.0.1-canary.16.tgz#5063f29f61c41d057a2498819a321c65ec03213f"
+  integrity sha512-NwaSpXnx7fS9zAFCcg37cN/Sit/lv8ao/jIkQAigejxzkWGZG8cbap/+meUfUL+6QDo9D7tAFrQIUtXQOcUhHg==
   dependencies:
     "@apollosproject/data-schema" "^2.0.1-canary.0"
     "@apollosproject/server-core" "^2.0.1-canary.0"
@@ -213,7 +213,6 @@
     pg "^8.5.1"
     pg-hstore "^2.3.3"
     sequelize "^6.3.5"
-    sqlite3 "^5.0.0"
 
 "@apollosproject/data-connector-redis-cache@^1.8.0-alpha.11":
   version "1.8.0-alpha.11"
@@ -12121,11 +12120,6 @@ node-abi@^2.7.0:
   dependencies:
     semver "^5.4.1"
 
-node-addon-api@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-2.0.0.tgz#f9afb8d777a91525244b01775ea0ddbe1125483b"
-  integrity sha512-ASCL5U13as7HhOExbT6OlWJJUV/lLzL2voOSP1UVehpRD8FbSrSDjfScK/KwAvVTI5AS6r4VwbOMlIqtvRidnA==
-
 node-addon-api@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.1.0.tgz#98b21931557466c6729e51cb77cd39c965f42239"
@@ -15139,16 +15133,6 @@ sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
   integrity sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=
-
-sqlite3@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/sqlite3/-/sqlite3-5.0.0.tgz#1bfef2151c6bc48a3ab1a6c126088bb8dd233566"
-  integrity sha512-rjvqHFUaSGnzxDy2AHCwhHy6Zp6MNJzCPGYju4kD8yi6bze4d1/zMTg6C7JI49b7/EM7jKMTvyfN/4ylBKdwfw==
-  dependencies:
-    node-addon-api "2.0.0"
-    node-pre-gyp "^0.11.0"
-  optionalDependencies:
-    node-gyp "3.x"
 
 sqlite3@^5.0.1:
   version "5.0.1"
