@@ -3,7 +3,6 @@ import ApollosConfig from '@apollosproject/config';
 import { Providers, NavigationService } from '@apollosproject/ui-kit';
 import { AuthProvider } from '@apollosproject/ui-auth';
 import { AnalyticsProvider } from '@apollosproject/ui-analytics';
-import { MediaPlayerProvider } from '@apollosproject/ui-media-player';
 import { NotificationsProvider } from '@apollosproject/ui-notifications';
 import { LiveProvider } from '@apollosproject/ui-connected';
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
@@ -27,17 +26,15 @@ const AppProviders = (props) => (
           })
         }
       >
-        <MediaPlayerProvider>
-          <AnalyticsProvider>
-            <LiveProvider>
-              <Providers
-                themeInput={customTheme}
-                iconInput={customIcons}
-                {...props}
-              />
-            </LiveProvider>
-          </AnalyticsProvider>
-        </MediaPlayerProvider>
+        <AnalyticsProvider>
+          <LiveProvider>
+            <Providers
+              themeInput={customTheme}
+              iconInput={customIcons}
+              {...props}
+            />
+          </LiveProvider>
+        </AnalyticsProvider>
       </AuthProvider>
     </NotificationsProvider>
   </ClientProvider>

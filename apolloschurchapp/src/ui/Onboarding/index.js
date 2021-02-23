@@ -1,5 +1,5 @@
 import React from 'react';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import {
   checkNotifications,
   openSettings,
@@ -14,9 +14,7 @@ import {
 } from '@apollosproject/ui-kit';
 import {
   AskNotificationsConnected,
-  AskNameConnected,
   FeaturesConnected,
-  AboutYouConnected,
   LocationFinderConnected,
   OnboardingSwiper,
   onboardingComplete,
@@ -40,16 +38,7 @@ function Onboarding({ navigation }) {
       <OnboardingSwiper>
         {({ swipeForward }) => (
           <>
-            <AskNameConnected onPressPrimary={swipeForward} />
             <FeaturesConnected
-              onPressPrimary={swipeForward}
-              BackgroundComponent={
-                <StyledGradient
-                  source={'https://picsum.photos/640/640/?random'}
-                />
-              }
-            />
-            <AboutYouConnected
               onPressPrimary={swipeForward}
               BackgroundComponent={
                 <StyledGradient
@@ -69,12 +58,10 @@ function Onboarding({ navigation }) {
               }
             />
             <Query query={WITH_USER_ID} fetchPolicy="network-only">
-              {({
-                data: { currentUser: { id } = { currentUser: { id: null } } },
-              }) => (
+              {({ data }) => (
                 <AskNotificationsConnected
                   onPressPrimary={() => {
-                    onboardingComplete({ userId: id });
+                    onboardingComplete({ userId: data?.currentUser?.id });
                     navigation.dispatch(
                       NavigationService.resetAction({
                         navigatorName: 'Tabs',
@@ -110,11 +97,5 @@ function Onboarding({ navigation }) {
     </>
   );
 }
-
-Onboarding.navigationOptions = {
-  title: 'Onboarding',
-  header: null,
-  gesturesEnabled: false,
-};
 
 export default Onboarding;

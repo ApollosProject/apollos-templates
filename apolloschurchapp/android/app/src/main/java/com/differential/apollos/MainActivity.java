@@ -1,10 +1,10 @@
 package com.differential.apollos;
 import android.os.Bundle;
+import org.devio.rn.splashscreen.SplashScreen;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
 import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
-import com.zoontek.rnbootsplash.RNBootSplash;
 import com.facebook.react.GoogleCastActivity;
 
 public class MainActivity extends GoogleCastActivity {
@@ -19,8 +19,8 @@ public class MainActivity extends GoogleCastActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SplashScreen.show(this, R.style.SplashScreenTheme);
         super.onCreate(savedInstanceState);
-        RNBootSplash.init(R.drawable.bootsplash, com.differential.apollos.MainActivity.this);
     }
 
     @Override

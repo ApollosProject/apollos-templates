@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 import { Image } from 'react-native';
-import SafeAreaView from 'react-native-safe-area-view';
 import PropTypes from 'prop-types';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import gql from 'graphql-tag';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 
 import { styled, BackgroundView } from '@apollosproject/ui-kit';
 import {
@@ -40,13 +40,8 @@ export const GET_HOME_FEED = gql`
 `;
 
 class Home extends PureComponent {
-  static navigationOptions = () => ({
-    header: null,
-  });
-
   static propTypes = {
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       setParams: PropTypes.func,
       navigate: PropTypes.func,
     }),
@@ -57,8 +52,8 @@ class Home extends PureComponent {
       <RockAuthedWebBrowser>
         {(openUrl) => (
           <BackgroundView>
-            <SafeAreaView>
-              <Query query={GET_HOME_FEED}>
+            <SafeAreaView edges={['top', 'left', 'right']}>
+              <Query query={GET_HOME_FEED} fetchPolicy="cache-and-network">
                 {({ data }) => (
                   <FeaturesFeedConnected
                     openUrl={openUrl}

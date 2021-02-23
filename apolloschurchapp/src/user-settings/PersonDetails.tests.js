@@ -1,9 +1,8 @@
 import React from 'react';
+import { MockedProvider } from '@apollo/client/testing';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 import { GET_USER_PROFILE } from '../tabs/connect/UserAvatarHeader';
 
-import Providers from '../Providers';
-
-import { renderWithApolloData } from '../utils/testUtils';
 import PersonalDetails from './PersonalDetails';
 
 describe('PersonalDetails component', () => {
@@ -35,11 +34,10 @@ describe('PersonalDetails component', () => {
     };
     const navigation = {
       navigate: jest.fn(),
-      getParam: jest.fn(),
       goBack: jest.fn(),
     };
     const tree = await renderWithApolloData(
-      <Providers mocks={[mock]}>
+      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <PersonalDetails navigation={navigation} />
       </Providers>
     );

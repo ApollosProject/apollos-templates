@@ -133,7 +133,6 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
-project.xcworkspace
 
 # misc
 .env.local
@@ -149,6 +148,9 @@ fastlane/report.xml
 
 # symbols
 apolloschurchapp.app.dSYM.zip
+
+# iOS keys
+*.p8
 
 # Google Play authentication key
 key.json

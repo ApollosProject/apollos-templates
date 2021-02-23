@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Query } from 'react-apollo';
+import { Query } from '@apollo/client/react/components';
 import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
@@ -16,26 +16,17 @@ import GET_CONTENT_FEED from './getContentFeed';
  * A FeedView wrapped in a query to pull content data.
  */
 class ContentFeed extends PureComponent {
-  /** Function for React Navigation to set information in the header. */
-  static navigationOptions = ({ navigation, screenProps }) => {
-    const itemTitle = navigation.getParam('itemTitle', 'Content Channel');
-    return {
-      title: itemTitle,
-      headerStyle: {
-        backgroundColor: screenProps.headerBackgroundColor,
-        borderBottomWidth: 0,
-        elevation: 0,
-      },
-    };
-  };
-
   static propTypes = {
     /** Functions passed down from React Navigation to use in navigating to/from
      * items in the feed.
      */
     navigation: PropTypes.shape({
-      getParam: PropTypes.func,
       navigate: PropTypes.func,
+    }),
+    route: PropTypes.shape({
+      params: PropTypes.shape({
+        itemId: PropTypes.string,
+      }),
     }),
   };
 
@@ -49,8 +40,8 @@ class ContentFeed extends PureComponent {
     });
 
   render() {
-    const { navigation } = this.props;
-    const itemId = navigation.getParam('itemId', []);
+    const { route } = this.props;
+    const { itemId } = route.params;
     return (
       <BackgroundView>
         <Query

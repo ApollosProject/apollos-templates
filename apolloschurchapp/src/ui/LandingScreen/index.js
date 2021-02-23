@@ -20,8 +20,4 @@ const LandingScreenSlide = ({ navigation }) => (
   />
 );
 
-LandingScreenSlide.navigationOptions = {
-  header: null,
-};
-
 export default LandingScreenSlide;

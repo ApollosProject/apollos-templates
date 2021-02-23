@@ -4,6 +4,7 @@ enum ACTION_FEATURE_ACTION {
   READ_CONTENT
   READ_EVENT
   OPEN_URL
+  OPEN_AUTHENTICATED_URL
   OPEN_NODE
   OPEN_CHANNEL
 }
@@ -39,6 +40,14 @@ type ActionListFeature implements Feature & Node {
   subtitle: String
   actions: [ActionListAction]
   primaryAction: FeatureAction
+}
+
+type AddCommentFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  relatedNode: Node!
+  addPrompt: String
+  initialPrompt: String
 }
 
 input AnalyticsDeviceInfo {
@@ -150,6 +159,25 @@ type CardListItem {
 """A rgb color string"""
 scalar Color
 
+type Comment implements Node {
+  id: ID!
+  person: Person
+  text: String
+  visibility: CommentVisibility
+}
+
+type CommentListFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  comments: [Comment]
+}
+
+enum CommentVisibility {
+  PUBLIC
+  PRIVATE
+  FOLLOWERS
+}
+
 type ContentChannel implements Node {
   id: ID!
   name: String
@@ -167,6 +195,7 @@ interface ContentChildNode {
 interface ContentItem {
   id: ID!
   title(hyphenated: Boolean): String
+  publishDate: String
   coverImage: ImageMedia
   images: [ImageMedia]
   videos: [VideoMedia]
@@ -211,6 +240,7 @@ interface ContentParentNode {
 type ContentSeriesContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ProgressNode & LikableNode & ShareableNode & FeaturesNode {
   id: ID!
   title(hyphenated: Boolean): String
+  publishDate: String
   coverImage: ImageMedia
   images: [ImageMedia]
   videos: [VideoMedia]
@@ -240,6 +270,7 @@ type Device implements Node {
 type DevotionalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ScriptureNode & LikableNode & ShareableNode {
   id: ID!
   title(hyphenated: Boolean): String
+  publishDate: String
   coverImage: ImageMedia
   images: [ImageMedia]
   videos: [VideoMedia]
@@ -390,6 +421,7 @@ interface Media {
 type MediaContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ScriptureNode & LikableNode & ShareableNode {
   id: ID!
   title(hyphenated: Boolean): String
+  publishDate: String
   coverImage: ImageMedia
   images: [ImageMedia]
   videos: [VideoMedia]
@@ -435,6 +467,8 @@ type Mutation {
   updateUserPushSettings(input: PushSettingsInput!): Person
   updateUserCampus(campusId: String!): Person
   addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
+  addComment(parentId: ID!, text: String!, visibility: CommentVisibility): Comment
+  flagComment(commentId: ID!): Comment
 }
 
 interface Node {
@@ -492,6 +526,7 @@ type Person implements Node {
   devices: [Device]
   campus: Campus
   groups(type: GROUP_TYPE, asLeader: Boolean): [Group]
+  prayers: [PrayerRequest]
 }
 
 type PrayerListFeature implements Feature & Node {
@@ -525,7 +560,7 @@ type Query {
   _placeholder: Boolean
   node(id: ID!): Node
   likedContent(first: Int, after: String): ContentItemsConnection
-  contentChannels: [ContentChannel]
+  contentChannels: [ContentChannel] @deprecated(reason: "No longer supported.")
   campaigns: ContentItemsConnection
   userFeed(first: Int, after: String): ContentItemsConnection
   personaFeed(first: Int, after: String): ContentItemsConnection
@@ -639,6 +674,7 @@ enum ThemeType {
 type UniversalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & ShareableNode {
   id: ID!
   title(hyphenated: Boolean): String
+  publishDate: String
   coverImage: ImageMedia
   images: [ImageMedia]
   videos: [VideoMedia]
@@ -696,6 +732,14 @@ type VerticalCardListFeature implements Feature & Node {
   cards: [CardListItem]
 }
 
+type VerticalPrayerListFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  title: String
+  subtitle: String
+  prayers: [PrayerRequest]
+}
+
 type VideoMedia implements Media {
   name: String
   key: String
@@ -722,6 +766,7 @@ type WebviewFeature implements Feature & Node {
 type WeekendContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & LiveNode & ShareableNode & FeaturesNode {
   id: ID!
   title(hyphenated: Boolean): String
+  publishDate: String
   coverImage: ImageMedia
   images: [ImageMedia]
   videos: [VideoMedia]
