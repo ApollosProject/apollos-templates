@@ -1,4 +1,4 @@
-name: Deploy Client
+name: Deploy Mobile App
 
 on:
   push:
