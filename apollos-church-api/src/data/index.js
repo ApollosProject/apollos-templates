@@ -38,7 +38,7 @@ import {
 
 import { Comment, UserFlag } from '@apollosproject/data-connector-postgres';
 import * as PostgresPerson from '@apollosproject/data-connector-postgres/lib/people';
-import * as PostgresCampus from '@apollosproject/data-connector-postgres/lib/Campus';
+import * as PostgresCampus from '@apollosproject/data-connector-postgres/lib/campus';
 
 import * as Theme from './theme';
 
