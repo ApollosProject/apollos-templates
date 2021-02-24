@@ -17,6 +17,7 @@ SECRETS=(
 	"apollos-church-api/.env.shared"
 	"apolloschurchapp/android/key.json"
 	"apolloschurchapp/android/app/apollos.keystore"
+	"apolloschurchapp/ios/apollos.p8"
 )
 
 for file in "${SECRETS[@]}"; do

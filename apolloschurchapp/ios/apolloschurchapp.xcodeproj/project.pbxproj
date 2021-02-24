@@ -769,7 +769,7 @@
 				CODE_SIGN_ENTITLEMENTS = apolloschurchapp/apolloschurchapp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development: Apollos Apps (58685TNK9H)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 507;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7KS82J74VW;
 				HEADER_SEARCH_PATHS = (
@@ -803,7 +803,7 @@
 				CODE_SIGN_ENTITLEMENTS = apolloschurchapp/apolloschurchapp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: Differential Dev Shop, LLC (7KS82J74VW)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 507;
 				DEVELOPMENT_TEAM = 7KS82J74VW;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

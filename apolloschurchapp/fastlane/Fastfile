@@ -20,6 +20,7 @@ before_all do
 end
 
 platform :ios do
+
   desc 'Fetch certificates and provisioning profiles'
   lane :certificates do
     match(app_identifier: 'com.differential.apollos', type: 'development', readonly: true)
@@ -28,6 +29,11 @@ platform :ios do
 
   desc "Push a new beta build to TestFlight"
   lane :deploy do
+    app_store_connect_api_key(
+      key_id: "LV9F3XX57B",
+      issuer_id: "7943c4a3-c0cf-442e-93bd-b3c289bddec3",
+      key_filepath: "ios/apollos.p8",
+    )
     setup_ci
     certificates
     increment_build_number(build_number: number_of_commits, xcodeproj: "ios/apolloschurchapp.xcodeproj")
@@ -58,6 +64,6 @@ platform :android do
     bump_version_code
     gradle(task: 'clean', project_dir: 'android')
     gradle(task: 'bundle', build_type: 'Release', project_dir: 'android')
-    upload_to_play_store(track: "internal")
+    upload_to_play_store(track: "internal", skip_upload_apk: true)
   end
 end

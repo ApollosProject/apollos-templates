@@ -14,9 +14,7 @@ import {
 } from '@apollosproject/ui-kit';
 import {
   AskNotificationsConnected,
-  AskNameConnected,
   FeaturesConnected,
-  AboutYouConnected,
   LocationFinderConnected,
   OnboardingSwiper,
   onboardingComplete,
@@ -40,16 +38,7 @@ function Onboarding({ navigation }) {
       <OnboardingSwiper>
         {({ swipeForward }) => (
           <>
-            <AskNameConnected onPressPrimary={swipeForward} />
             <FeaturesConnected
-              onPressPrimary={swipeForward}
-              BackgroundComponent={
-                <StyledGradient
-                  source={'https://picsum.photos/640/640/?random'}
-                />
-              }
-            />
-            <AboutYouConnected
               onPressPrimary={swipeForward}
               BackgroundComponent={
                 <StyledGradient
