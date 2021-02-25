@@ -1,11 +1,6 @@
 import React from 'react';
 import { Query } from '@apollo/client/react/components';
-import {
-  checkNotifications,
-  openSettings,
-  requestNotifications,
-  RESULTS,
-} from 'react-native-permissions';
+import { requestPermissions } from '@apollosproject/ui-notifications';
 import {
   GradientOverlayImage,
   styled,
@@ -69,19 +64,7 @@ function Onboarding({ navigation }) {
                       })
                     );
                   }}
-                  onRequestPushPermissions={(update) => {
-                    checkNotifications().then((checkRes) => {
-                      if (checkRes.status === RESULTS.DENIED) {
-                        requestNotifications(['alert', 'badge', 'sound']).then(
-                          () => {
-                            update();
-                          }
-                        );
-                      } else {
-                        openSettings();
-                      }
-                    });
-                  }}
+                  onRequestPushPermissions={requestPermissions}
                   primaryNavText={'Finish'}
                   BackgroundComponent={
                     <StyledGradient
