@@ -14,7 +14,9 @@ import { styled } from '@apollosproject/ui-kit';
 import ActionContainer from './ActionContainer';
 
 const PaddedNodeSingleConnected = styled(
-  ({ theme: { sizing } }) => ({ paddingBottom: sizing.baseUnit * 5 })
+  ({ theme: { sizing } }) => ({
+    paddingBottom: sizing.baseUnit * 5
+  })
 )(NodeSingleConnected);
 
 const ContentSingle = (props) => {
