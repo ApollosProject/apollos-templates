@@ -34,7 +34,7 @@ import {
   Event,
   PrayerRequest,
   Persona,
-  RockPerson,
+  Person as RockPerson,
 } from '@apollosproject/data-connector-rock';
 
 import {
@@ -53,7 +53,7 @@ import * as Theme from './theme';
 import * as OneSignalWithRock from './oneSignalWithRock';
 // This modules ties together certain updates so they occurs in both Rock and Postgres.
 // Will be eliminated in the future through an enhancement to the Shovel
-import * RockWithPostgres from './rockWithPostgres';
+import * as RockWithPostgres from './rockWithPostgres';
 
 const data = {
   Interfaces,
