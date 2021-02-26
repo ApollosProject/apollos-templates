@@ -202,10 +202,10 @@
     passkit-generator "1.5.9"
     qrcode "^1.3.3"
 
-"@apollosproject/data-connector-postgres@^2.0.1-canary.16":
-  version "2.0.1-canary.16"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-postgres/-/data-connector-postgres-2.0.1-canary.16.tgz#5063f29f61c41d057a2498819a321c65ec03213f"
-  integrity sha512-NwaSpXnx7fS9zAFCcg37cN/Sit/lv8ao/jIkQAigejxzkWGZG8cbap/+meUfUL+6QDo9D7tAFrQIUtXQOcUhHg==
+"@apollosproject/data-connector-postgres@^2.0.1-canary.17":
+  version "2.0.1-canary.17"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-postgres/-/data-connector-postgres-2.0.1-canary.17.tgz#17ef664934d4fe0190ce1321dc256a5ae58f1da0"
+  integrity sha512-SXaS1ZujziInExRJR+jS/c/SU7ClY2LFxEZs95VglH7uvkDFCrSwNhItmbatQu5PlYZaNlCnYHAj/rxGPPjStQ==
   dependencies:
     "@apollosproject/data-schema" "^2.0.1-canary.0"
     "@apollosproject/server-core" "^2.0.1-canary.0"
@@ -330,33 +330,16 @@
     entities "^1.1.2"
     htmlparser2 "3.9.2"
 
-"@apollosproject/ui-kit@^2.0.1-canary.12":
-  version "2.0.1-canary.12"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-2.0.1-canary.12.tgz#2f56b033a6343e8a6109612dfe4116f3e223ce6a"
-  integrity sha512-nY0zFZFEQ5gawYAbgErJLkBQEgedqDvqdkbXimKifclQS2CG31r9Az5dcrfGK+JIiECLSxngnVhvdsMX4I4hdg==
+"@apollosproject/ui-kit@^2.0.1-canary.16":
+  version "2.0.1-canary.16"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-2.0.1-canary.16.tgz#2ec0910e2ef78c5469b6e9cc6a5d13e9b809dd1c"
+  integrity sha512-M8dQfnl4q4CZzCQ7k1XsL4edQCLBRNX9yvKJBlfWrQR9sJ1D1J0xw5g9/IwAd2cTTEBVRjNSrbRDXZmZfMb6Vw==
   dependencies:
     "@react-native-community/blur" "^3.6.0"
     color "^3.1.0"
     lodash "^4.17.11"
     moment "^2.24.0"
     numeral "^2.0.6"
-    react-native-appearance "^0.3.4"
-    react-native-modal-datetime-picker "8.7.1"
-    react-native-tab-view "1.0.2"
-    recompose "^0.30.0"
-    rn-placeholder "1.2.0"
-
-"@apollosproject/ui-kit@^2.0.1-canary.12+585590ce":
-  version "2.0.1-canary.17"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-2.0.1-canary.17.tgz#fe031229f945062dbf30cdbe5e056e96c00e4dcf"
-  integrity sha512-5SSRa9wmCZldxxoJ+fXrRE2jhgyWXIubEcihpzOc4Jg56GQ5m6VVbhip/tttDYdPtx7LVzr4YIVJPvRMiAeBxQ==
-  dependencies:
-    "@react-native-community/blur" "^3.6.0"
-    color "^3.1.0"
-    lodash "^4.17.11"
-    moment "^2.24.0"
-    numeral "^2.0.6"
-    react-native-appearance "^0.3.4"
     react-native-modal-datetime-picker "8.7.1"
     react-native-tab-view "1.0.2"
     recompose "^0.30.0"
@@ -401,12 +384,11 @@
     react-native-swiper "^1.5.14"
     yup "0.26.6"
 
-"@apollosproject/ui-passes@^2.0.1-canary.12":
-  version "2.0.1-canary.12"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-passes/-/ui-passes-2.0.1-canary.12.tgz#17cffdc3f501d26ce3cacef4003db5ecd9b9689c"
-  integrity sha512-KaGzvlEAHeb4/0DotBFe5g3jZL3cf1AvF7ukNjRCGCLpcYutKDBzw8JBZnBMys3/P8wGRrEp3Ohc6ccfEb32eg==
+"@apollosproject/ui-passes@^2.0.1-canary.16":
+  version "2.0.1-canary.16"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-passes/-/ui-passes-2.0.1-canary.16.tgz#6cc564df59067dc589508182aec4d22f854df5f3"
+  integrity sha512-V5nvC13hrozucExSYvbhQXxNCryz5mqoStZguIMtc2fZi0yxj9BL5HJ9QuHWVucJIwOJYldtXoEZLJ0zG9r8Uw==
   dependencies:
-    "@apollosproject/ui-kit" "^2.0.1-canary.12+585590ce"
     graphql-tag "^2.10.1"
 
 "@apollosproject/ui-prayer@^2.0.1-canary.0":
@@ -5223,7 +5205,7 @@ babel-plugin-macros@^2.0.0:
     cosmiconfig "^6.0.0"
     resolve "^1.12.0"
 
-babel-plugin-module-resolver@^3.1.1, babel-plugin-module-resolver@^3.2.0:
+babel-plugin-module-resolver@^3.1.1:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-module-resolver/-/babel-plugin-module-resolver-3.2.0.tgz#ddfa5e301e3b9aa12d852a9979f18b37881ff5a7"
   integrity sha512-tjR0GvSndzPew/Iayf4uICWZqjBwnlMWjSx6brryfQ81F9rxBVqwDJtFCV8oOs0+vJeefK9TmdZtkIFdFe1UnA==
@@ -8031,13 +8013,6 @@ fb-watchman@^2.0.0:
   dependencies:
     bser "2.1.1"
 
-fbemitter@^2.1.1:
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/fbemitter/-/fbemitter-2.1.1.tgz#523e14fdaf5248805bb02f62efc33be703f51865"
-  integrity sha1-Uj4U/a9SSIBbsC9i78M75wP1GGU=
-  dependencies:
-    fbjs "^0.8.4"
-
 fbjs-css-vars@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/fbjs-css-vars/-/fbjs-css-vars-1.0.2.tgz#216551136ae02fe255932c3ec8775f18e2c078b8"
@@ -8059,7 +8034,7 @@ fbjs-scripts@^1.1.0:
     semver "^5.1.0"
     through2 "^2.0.0"
 
-fbjs@^0.8.0, fbjs@^0.8.1, fbjs@^0.8.16, fbjs@^0.8.4:
+fbjs@^0.8.0, fbjs@^0.8.1, fbjs@^0.8.16:
   version "0.8.17"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
@@ -13693,15 +13668,6 @@ react-lifecycles-compat@^3.0.2, react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
-
-react-native-appearance@^0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/react-native-appearance/-/react-native-appearance-0.3.4.tgz#2cbcbc5142cdc1898c116684f519b16c879cbec2"
-  integrity sha512-Vz3zdJbAEiMDwuw6wH98TT1WVfBvWjvANutYtkIbl16KGRCigtSgt6IIiLsF3/TSS3y3FtHhWDelFeGw/rtuig==
-  dependencies:
-    fbemitter "^2.1.1"
-    invariant "^2.2.4"
-    use-subscription "^1.0.0"
 
 react-native-config@^0.11.7:
   version "0.11.7"

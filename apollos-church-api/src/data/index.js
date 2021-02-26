@@ -18,7 +18,6 @@ import {
   Followings,
   Interactions,
   RockConstants,
-  Person,
   ContentItem,
   ContentChannel,
   Sharable,
@@ -34,11 +33,17 @@ import {
   ActionAlgorithm,
   Event,
   PrayerRequest,
+  Persona,
 } from '@apollosproject/data-connector-rock';
 
-import { Comment, UserFlag } from '@apollosproject/data-connector-postgres';
-import * as PostgresPerson from '@apollosproject/data-connector-postgres/lib/people';
-import * as PostgresCampus from '@apollosproject/data-connector-postgres/lib/campus';
+import {
+  Comment,
+  UserFlag,
+  Campus as PostgresCampus,
+  Person,
+} from '@apollosproject/data-connector-postgres';
+// import * as PostgresPerson from '@apollosproject/data-connector-postgres/lib/people';
+// import * as PostgresCampus from '@apollosproject/data-connector-postgres/lib/campus';
 
 import * as Theme from './theme';
 
@@ -80,8 +85,8 @@ const data = {
   PrayerRequest,
   Comment,
   UserFlag,
-  PostgresPerson,
   PostgresCampus,
+  Persona,
 };
 
 const {
