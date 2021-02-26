@@ -34,6 +34,7 @@ import {
   Event,
   PrayerRequest,
   Persona,
+  RockPerson,
 } from '@apollosproject/data-connector-rock';
 
 import {
@@ -50,12 +51,16 @@ import * as Theme from './theme';
 // This module is used to attach Rock User updating to the OneSignal module.
 // This module includes a Resolver that overides a resolver defined in `OneSignal`
 import * as OneSignalWithRock from './oneSignalWithRock';
+// This modules ties together certain updates so they occurs in both Rock and Postgres.
+// Will be eliminated in the future through an enhancement to the Shovel
+import * RockWithPostgres from './rockWithPostgres';
 
 const data = {
   Interfaces,
   Followings,
   ContentChannel,
   ContentItem,
+  RockPerson, // This entry needs to come first
   Person,
   Cloudinary,
   Auth,
@@ -87,6 +92,7 @@ const data = {
   UserFlag,
   PostgresCampus,
   Persona,
+  RockWithPostgres,
 };
 
 const {
