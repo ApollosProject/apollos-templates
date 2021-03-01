@@ -13,7 +13,6 @@
     "unlink-packages": "node ./scripts/link-packages remove && rm -rf ./node_modules",
     "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
     "test": "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
-    "lint": "eslint ./src --ext .js"
     "lint": "eslint ./src --ext .js",
     "translate": "node scripts/translate.js"
   },

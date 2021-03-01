@@ -421,7 +421,7 @@
 "@apollosproject/ui-test-utils@^2.1.1":
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/@apollosproject/ui-test-utils/-/ui-test-utils-2.1.1.tgz#fff6467d2a4278124302d6ea34f37e30f9504021"
-  integrity sha512-QI1p/Hl6kLmKXWKUtTm1fmyM/+KoRM6vOnmbO9D7GBTdHeWAVrMKxV276TAQ4Ehb3mRmZZySB1D1oCEt+QFkhw=
+  integrity sha512-QI1p/Hl6kLmKXWKUtTm1fmyM/+KoRM6vOnmbO9D7GBTdHeWAVrMKxV276TAQ4Ehb3mRmZZySB1D1oCEt+QFkhw==
 
 "@babel/cli@^7.4.5":
   version "7.12.1"
