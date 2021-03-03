@@ -566,6 +566,7 @@ type Query {
   campaigns: ContentItemsConnection
   userFeed(first: Int, after: String): ContentItemsConnection
   personaFeed(first: Int, after: String): ContentItemsConnection
+  suggestedFollows: [Person]
   currentUser: AuthenticatedUser
   userExists(identity: String): USER_AUTH_STATUS
   liveStream: LiveStream @deprecated(reason: "Use liveStreams, there may be multiple.")
