@@ -36,7 +36,11 @@ import {
   PrayerRequest,
 } from '@apollosproject/data-connector-rock';
 
-import { Comment, UserFlag } from '@apollosproject/data-connector-postgres';
+import {
+  Comment,
+  UserFlag,
+  FollowRequest,
+} from '@apollosproject/data-connector-postgres';
 
 import * as Theme from './theme';
 
@@ -78,6 +82,7 @@ const data = {
   PrayerRequest,
   Comment,
   UserFlag,
+  FollowRequest,
 };
 
 const {
