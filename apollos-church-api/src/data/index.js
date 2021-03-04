@@ -40,7 +40,7 @@ import {
 import {
   Comment,
   UserFlag,
-  FollowRequest,
+  Follow,
   Campus as PostgresCampus,
   Person as PostgresPerson,
 } from '@apollosproject/data-connector-postgres';
@@ -92,7 +92,7 @@ const data = {
   PrayerRequest,
   Comment,
   UserFlag,
-  FollowRequest,
+  Follow,
   PostgresCampus,
   Persona,
   Person, // An extension of Postgres person. Will be eliminated in the near future so you can use just postgres/Person.
