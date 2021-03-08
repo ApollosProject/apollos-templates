@@ -320,7 +320,7 @@ interface FeaturesNode {
   featureFeed: FeatureFeed
 }
 
-type FollowResult {
+type Follow {
   followId: ID
   state: FollowState
   following: Boolean
@@ -483,9 +483,9 @@ type Mutation {
   addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
   addComment(parentId: ID!, text: String!, visibility: CommentVisibility): Comment
   flagComment(commentId: ID!): Comment
-  requestFollow(followedPersonId: ID!): FollowResult
-  ignoreFollowRequest(requestPersonId: ID!): FollowResult
-  acceptFollowRequest(requestPersonId: ID!): FollowResult
+  requestFollow(followedPersonId: ID!): Follow
+  ignoreFollowRequest(requestPersonId: ID!): Follow
+  acceptFollowRequest(requestPersonId: ID!): Follow
 }
 
 interface Node {
