@@ -320,6 +320,18 @@ interface FeaturesNode {
   featureFeed: FeatureFeed
 }
 
+type Follow {
+  followId: ID
+  state: FollowState
+  following: Boolean
+}
+
+enum FollowState {
+  REQUESTED
+  DECLINED
+  ACCEPTED
+}
+
 enum GENDER {
   Male
   Female
@@ -471,6 +483,9 @@ type Mutation {
   addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
   addComment(parentId: ID!, text: String!, visibility: CommentVisibility): Comment
   flagComment(commentId: ID!): Comment
+  requestFollow(followedPersonId: ID!): Follow
+  ignoreFollowRequest(requestPersonId: ID!): Follow
+  acceptFollowRequest(requestPersonId: ID!): Follow
 }
 
 interface Node {
