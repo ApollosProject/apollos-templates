@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import gql from 'graphql-tag';
 import { Query } from '@apollo/client/react/components';
-
-import { throttle } from 'lodash';
 
 import { BackgroundView } from '@apollosproject/ui-kit';
 import {
   FeaturesFeedConnected,
   FEATURE_FEED_ACTION_MAP,
   RockAuthedWebBrowser,
-  SearchInputHeader,
-  SearchFeedConnected,
 } from '@apollosproject/ui-connected';
 
 function handleOnPress({ action, ...props }) {
@@ -35,38 +31,24 @@ export const GET_DISCOVER_FEED = gql`
   }
 `;
 
-function Discover({ navigation }) {
-  const [searchText, setSearchText] = useState('');
-  const [isFocused, setIsFocused] = useState(false);
-
-  return (
-    <RockAuthedWebBrowser>
-      {(openUrl) => (
-        <BackgroundView>
-          <SafeAreaView>
-            <SearchInputHeader
-              onChangeText={throttle(setSearchText, 300)}
-              onFocus={setIsFocused}
-            />
-            {isFocused || searchText ? (
-              <SearchFeedConnected searchText={searchText} />
-            ) : (
-              <Query query={GET_DISCOVER_FEED}>
-                {({ data }) => (
-                  <FeaturesFeedConnected
-                    openUrl={openUrl}
-                    navigation={navigation}
-                    featureFeedId={data?.discoverFeedFeatures?.id}
-                    onPressActionItem={handleOnPress}
-                  />
-                )}
-              </Query>
+const Discover = () => (
+  <RockAuthedWebBrowser>
+    {(openUrl) => (
+      <BackgroundView>
+        <SafeAreaView edges={['right', 'top', 'left']}>
+          <Query query={GET_DISCOVER_FEED}>
+            {({ data }) => (
+              <FeaturesFeedConnected
+                openUrl={openUrl}
+                featureFeedId={data?.discoverFeedFeatures?.id}
+                onPressActionItem={handleOnPress}
+              />
             )}
-          </SafeAreaView>
-        </BackgroundView>
-      )}
-    </RockAuthedWebBrowser>
-  );
-}
+          </Query>
+        </SafeAreaView>
+      </BackgroundView>
+    )}
+  </RockAuthedWebBrowser>
+);
 
 export default Discover;

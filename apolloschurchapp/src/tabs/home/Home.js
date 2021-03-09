@@ -1,9 +1,9 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { Image } from 'react-native';
-import PropTypes from 'prop-types';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import gql from 'graphql-tag';
 import { Query } from '@apollo/client/react/components';
+import { useNavigation } from '@react-navigation/native';
 
 import { styled, BackgroundView } from '@apollosproject/ui-kit';
 import {
@@ -11,6 +11,8 @@ import {
   FEATURE_FEED_ACTION_MAP,
   RockAuthedWebBrowser,
 } from '@apollosproject/ui-connected';
+
+import HomeSearchButton from './HomeSearchButton';
 
 const LogoTitle = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
@@ -39,39 +41,35 @@ export const GET_HOME_FEED = gql`
   }
 `;
 
-class Home extends PureComponent {
-  static propTypes = {
-    navigation: PropTypes.shape({
-      setParams: PropTypes.func,
-      navigate: PropTypes.func,
-    }),
-  };
-
-  render() {
-    return (
-      <RockAuthedWebBrowser>
-        {(openUrl) => (
-          <BackgroundView>
-            <SafeAreaView edges={['top', 'left', 'right']}>
-              <Query query={GET_HOME_FEED} fetchPolicy="cache-and-network">
-                {({ data }) => (
-                  <FeaturesFeedConnected
-                    openUrl={openUrl}
-                    navigation={this.props.navigation}
-                    featureFeedId={data?.homeFeedFeatures?.id}
-                    onPressActionItem={handleOnPress}
-                    ListHeaderComponent={
+const Home = () => {
+  const navigation = useNavigation();
+  return (
+    <RockAuthedWebBrowser>
+      {(openUrl) => (
+        <BackgroundView>
+          <SafeAreaView edges={['top', 'left', 'right']}>
+            <Query query={GET_HOME_FEED} fetchPolicy="cache-and-network">
+              {({ data }) => (
+                <FeaturesFeedConnected
+                  openUrl={openUrl}
+                  featureFeedId={data?.homeFeedFeatures?.id}
+                  onPressActionItem={handleOnPress}
+                  ListHeaderComponent={
+                    <>
                       <LogoTitle source={require('./wordmark.png')} />
-                    }
-                  />
-                )}
-              </Query>
-            </SafeAreaView>
-          </BackgroundView>
-        )}
-      </RockAuthedWebBrowser>
-    );
-  }
-}
+                      <HomeSearchButton
+                        onPress={() => navigation.navigate('Search')}
+                      />
+                    </>
+                  }
+                />
+              )}
+            </Query>
+          </SafeAreaView>
+        </BackgroundView>
+      )}
+    </RockAuthedWebBrowser>
+  );
+};
 
 export default Home;
