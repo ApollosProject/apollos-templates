@@ -52,6 +52,7 @@ const Home = () => {
               {({ data }) => (
                 <FeaturesFeedConnected
                   openUrl={openUrl}
+                  navigation={navigation}
                   featureFeedId={data?.homeFeedFeatures?.id}
                   onPressActionItem={handleOnPress}
                   ListHeaderComponent={

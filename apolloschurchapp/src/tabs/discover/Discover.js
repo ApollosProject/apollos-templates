@@ -3,6 +3,7 @@ import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import gql from 'graphql-tag';
 import { Query } from '@apollo/client/react/components';
+import { useNavigation } from '@react-navigation/native';
 
 import { BackgroundView } from '@apollosproject/ui-kit';
 import {
@@ -31,24 +32,28 @@ export const GET_DISCOVER_FEED = gql`
   }
 `;
 
-const Discover = () => (
-  <RockAuthedWebBrowser>
-    {(openUrl) => (
-      <BackgroundView>
-        <SafeAreaView edges={['right', 'top', 'left']}>
-          <Query query={GET_DISCOVER_FEED}>
-            {({ data }) => (
-              <FeaturesFeedConnected
-                openUrl={openUrl}
-                featureFeedId={data?.discoverFeedFeatures?.id}
-                onPressActionItem={handleOnPress}
-              />
-            )}
-          </Query>
-        </SafeAreaView>
-      </BackgroundView>
-    )}
-  </RockAuthedWebBrowser>
-);
+const Discover = () => {
+  const navigation = useNavigation();
+  return (
+    <RockAuthedWebBrowser>
+      {(openUrl) => (
+        <BackgroundView>
+          <SafeAreaView edges={['right', 'top', 'left']}>
+            <Query query={GET_DISCOVER_FEED}>
+              {({ data }) => (
+                <FeaturesFeedConnected
+                  openUrl={openUrl}
+                  navigation={navigation}
+                  featureFeedId={data?.discoverFeedFeatures?.id}
+                  onPressActionItem={handleOnPress}
+                />
+              )}
+            </Query>
+          </SafeAreaView>
+        </BackgroundView>
+      )}
+    </RockAuthedWebBrowser>
+  );
+};
 
 export default Discover;
