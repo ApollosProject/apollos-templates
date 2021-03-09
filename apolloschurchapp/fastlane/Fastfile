@@ -23,8 +23,8 @@ platform :ios do
 
   desc 'Fetch certificates and provisioning profiles'
   lane :certificates do
-    match(app_identifier: 'com.differential.apollos', type: 'development', readonly: true)
-    match(app_identifier: 'com.differential.apollos', type: 'appstore', readonly: true)
+    match(app_identifier: 'com.differential.apollos', type: 'development', readonly: is_ci)
+    match(app_identifier: 'com.differential.apollos', type: 'appstore', readonly: is_ci)
   end
 
   desc "Push a new beta build to TestFlight"
