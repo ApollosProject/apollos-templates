@@ -208,6 +208,9 @@ HOME_FEATURES:
         arguments:
           contentChannelId: 13
       - type: UPCOMING_EVENTS
+  - subtitle: Up Next
+    type: HorizontalCardList
+    algorithms: [SERIES_IN_PROGRESS]
 
 DISCOVER_FEATURES:
   - algorithms:
