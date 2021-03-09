@@ -28,6 +28,16 @@ jobs:
     - name: Install Bundler
       run: gem install bundler
 
+    - name: Fill out config variables
+      run: |
+        grep -o '\$.*' .env.production | sed 's/\$\(.*\)/\1/' | xargs -I {} sh -c "sed -i '' 's@\$"{}"@'$"{}"'@' .env.production"
+        mv .env.production .env
+      env:
+        APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
+        ONE_SIGNAL_KEY: ${{ secrets.ONE_SIGNAL_KEY }}
+        GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+        AMPLITUDE_API_KEY: ${{ secrets.AMPLITUDE_API_KEY }}
+
     - name: Install Dependencies
       run: yarn
 
@@ -44,9 +54,7 @@ jobs:
       run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
 
     - name: Fastlane Deploy
-      run: |
-        git diff # this is just for debug, remove later
-        bundle exec fastlane ios deploy
+      run: bundle exec fastlane ios deploy
       env:
         MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
@@ -72,6 +80,19 @@ jobs:
     - name: Install Yarn
       run: npm install -g yarn
 
+    - name: Install Bundler
+      run: gem install bundler
+
+    - name: Fill out config variables
+      run: |
+        grep -o '\$.*' .env.production | sed 's/\$\(.*\)/\1/' | xargs -I {} sh -c "sed -i '' 's@\$"{}"@'$"{}"'@' .env.production"
+        mv .env.production .env
+      env:
+        APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
+        ONE_SIGNAL_KEY: ${{ secrets.ONE_SIGNAL_KEY }}
+        GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+        AMPLITUDE_API_KEY: ${{ secrets.AMPLITUDE_API_KEY }}
+
     - name: Install Dependencies
       run: yarn
 
@@ -84,7 +105,7 @@ jobs:
       env:
         APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
 
-    - name: Decrypt Secrets
+    - name: Decrypt Keystore
       run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
 
     - name: Fastlane Deploy
