@@ -57,6 +57,8 @@ import * as OneSignalWithRock from './oneSignalWithRock';
 // Will be eliminated in the future through an enhancement to the Shovel
 import * as Person from './rockWithPostgres';
 
+console.log(PostgresCampus);
+
 const data = {
   Interfaces,
   Followings,
@@ -105,6 +107,7 @@ const {
   context,
   applyServerMiddleware,
   setupJobs,
+  migrations,
 } = createApolloServerConfig(data);
 
 export {
@@ -114,6 +117,7 @@ export {
   context,
   applyServerMiddleware,
   setupJobs,
+  migrations,
 };
 
 // the upload Scalar is added

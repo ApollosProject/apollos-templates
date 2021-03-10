@@ -45,7 +45,8 @@
     "graphql": "14.6.0",
     "prettier": "1.12.1",
     "randomcolor": "0.5.3",
-    "sqlite3": "^5.0.1"
+    "sqlite3": "^5.0.1",
+    "umzug": "^3.0.0-beta.15"
   },
   "devDependencies": {
     "@apollosproject/apollo-server-env-mock": "^2.2.0",

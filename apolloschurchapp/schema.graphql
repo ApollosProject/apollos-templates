@@ -321,9 +321,8 @@ interface FeaturesNode {
 }
 
 type Follow {
-  followId: ID
+  id: ID
   state: FollowState
-  following: Boolean
 }
 
 enum FollowState {
@@ -544,6 +543,8 @@ type Person implements Node {
   campus: Campus
   groups(type: GROUP_TYPE, asLeader: Boolean): [Group]
   prayers: [PrayerRequest]
+  currentUserFollowing: Follow
+  followingCurrentUser: Follow
 }
 
 type PrayerListFeature implements Feature & Node {
@@ -581,6 +582,7 @@ type Query {
   campaigns: ContentItemsConnection
   userFeed(first: Int, after: String): ContentItemsConnection
   personaFeed(first: Int, after: String): ContentItemsConnection
+  suggestedFollows: [Person]
   currentUser: AuthenticatedUser
   userExists(identity: String): USER_AUTH_STATUS
   liveStream: LiveStream @deprecated(reason: "Use liveStreams, there may be multiple.")
