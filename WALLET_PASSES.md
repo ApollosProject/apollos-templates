@@ -31,7 +31,7 @@ Fill Prompts with this info:
 Country Name (2 letter code) [AU]: US
 State or Province Name [Some-State]: United States
 Locality Name []:
-Organization Name [Internet Widgits Pty Ltd]: Apple Inc.
+Organization Name []: Apple Inc.
 Organizational Unit Name []: Apple Worldwide Developer Relations
 Common Name []: Apple Worldwide Developer Relations Certification Authority
 Email Address []: your-email
@@ -60,6 +60,12 @@ PASS_WWDR_CERT=<WWDR.pem>
 PASS_SIGNER_CERT=<signerCert.pem>
 PASS_SIGNER_KEY=<signerKey.pem>
 PASS_SIGNER_PASSPHRASE=<new-password>
+```
+
+Set the API URL as an environment variable to pull the template file from
+
+```
+ROOT_URL=http://localhost:4000
 ```
 
 Start up the server and check this query works properly:

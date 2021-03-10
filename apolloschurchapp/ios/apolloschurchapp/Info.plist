@@ -30,7 +30,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>507</string>
+	<string>0</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
@@ -55,11 +55,9 @@
 	</dict>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>$(PRODUCT_NAME) would like access to bluetooth (for playing audio)</string>
-	<key>NSBluetoothPeripheralUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like access to bluetooth (for playing audio)</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>$(PRODUCT_NAME) would like to use your location for determining your closest campus</string>
 	<key>NSLocationAlwaysUsageDescription</key>
+	<string>$(PRODUCT_NAME) would like to use your location for determining your closest campus</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>$(PRODUCT_NAME) would like to use your location for determining your closest campus</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>$(PRODUCT_NAME) would like to use your location for determining your closest campus</string>
