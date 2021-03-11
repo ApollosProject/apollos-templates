@@ -11,9 +11,9 @@ const useStorybook = ApollosConfig.STORYBOOK === 'true';
 
 const MainApp = require('./src').default;
 
-let App = MainApp;
+const App = MainApp;
 if (useStorybook) {
-  App = Storybook;
+  // App = Storybook;
 }
 
 YellowBox.ignoreWarnings([
