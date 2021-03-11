@@ -804,4 +804,3 @@ type WeekendContentItem implements ContentItem & Node & ContentNode & Card & Vid
   features: [Feature] @deprecated(reason: "Use featureFeed")
   featureFeed: FeatureFeed
 }
-
