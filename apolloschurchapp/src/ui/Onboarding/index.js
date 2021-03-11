@@ -16,6 +16,7 @@ import {
   AskNotificationsConnected,
   FeaturesConnected,
   LocationFinderConnected,
+  FollowConnected,
   OnboardingSwiper,
   onboardingComplete,
   WITH_USER_ID,
@@ -51,6 +52,14 @@ function Onboarding({ navigation }) {
               onNavigate={() => {
                 navigation.navigate('Location');
               }}
+              BackgroundComponent={
+                <StyledGradient
+                  source={'https://picsum.photos/640/640/?random'}
+                />
+              }
+            />
+            <FollowConnected
+              onPressPrimary={swipeForward}
               BackgroundComponent={
                 <StyledGradient
                   source={'https://picsum.photos/640/640/?random'}
