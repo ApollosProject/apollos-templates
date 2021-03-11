@@ -15,11 +15,18 @@ APP:
   JOBS_USERNAME: ${JOBS_USERNAME}
   JOBS_PASSWORD: ${JOBS_PASSWORD}
   FLAG_LIMIT: 1
+DATABASE:
+  URL: ${DATABASE_URL}
+  OPTIONS:
+    dialectOptions:
+      ssl:
+        require: false
+        rejectUnauthorized: false
 BUGSNAG:
   ## Optional, but you'll need to remove references to @apollosproject/bugsnag if you don't wish to use.
   API_KEY: ${BUGSNAG_KEY}
 ROCK:
-  API_URL: https://rock.apollos.app/api
+  API_URL: ${ROCK_API}
   API_TOKEN: ${ROCK_TOKEN}
   IMAGE_URL: https://rock.apollos.app/GetImage.ashx
   SHARE_URL: https://rock.apollos.app
@@ -27,6 +34,7 @@ ROCK:
   TIMEZONE: 'America/New_York'
   USE_PLUGIN: true
   SHOW_INACTIVE_CONTENT: ${ROCK_SHOW_INACTIVE_CONTENT}
+  VERSION: 10
 UNIVERSAL_LINKS:
   # This should be your app's bundle ID, as found in your info.plist.
   APPLE_APP_ID: ${APPLE_APP_ID}
@@ -40,12 +48,17 @@ UNIVERSAL_LINKS:
   # https://docs.getsocial.im/knowledge-base/android-signing-key-sha256/
   GOOGLE_KEYSTORE_SHA256: ${GOOGLE_KEYSTORE_SHA256}
 ONE_SIGNAL:
-  APP_ID: b6e75a77-003f-4466-95ca-82cc5cdc407b
+  APP_ID: ${ONE_SIGNAL_APP_ID}
   REST_KEY: ${ONE_SIGNAL_REST_KEY}
 CHURCH_ONLINE:
-  URL: https://apollos.online.church/
+  URL: ${CHURCH_ONLINE_URL}
   MEDIA_URLS: []
   WEB_VIEW_URL: https://apollos.online.church/
+SUGGESTED_FOLLOWS:
+  - michael.neeley@differential.com
+  - 
+    email: vince@classyh.at
+    campusId: 45893d11-cd72-4a42-b3ee-08814a937e1a
 ALGOLIA:
   APPLICATION_ID: ${ALGOLIASEARCH_APPLICATION_ID}
   API_KEY: ${ALGOLIASEARCH_API_KEY}
@@ -79,7 +92,7 @@ ANALYTICS:
   # on the accompanying service
   SEGMENT_KEY:
   GA_ID:
-  USE_ROCK: true
+  USE_ROCK: false
 BIBLE_API:
   KEY: ${BIBLE_API_KEY}
   BIBLE_ID:
@@ -127,12 +140,14 @@ ROCK_MAPPINGS:
     # Id of the category used to store all persona dataviews
     PersonaId: 210
 
-  # Apollos will pull these content channels and expose them in the app on the discover screen.
+  # TODO deprecated
+  # used for the contentChannels root level query
   DISCOVER_CONTENT_CHANNEL_IDS:
     - 3
     - 5
     - 6
     - 8
+
   # Apollos will pull content items from these channels and expose them on the user feed
   # However, it will not expose the channel itself.
   # These channels are also pulled when indexing searchable content.
