@@ -32,6 +32,7 @@ jobs:
       run: |
         grep -o '\$.*' .env.production | sed 's/\$\(.*\)/\1/' | xargs -I {} sh -c "sed -i '' 's@\$"{}"@'$"{}"'@' .env.production"
         cp .env.production .env
+        git checkout .
       env:
         APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
         ONE_SIGNAL_KEY: ${{ secrets.ONE_SIGNAL_KEY }}
@@ -86,6 +87,7 @@ jobs:
       run: |
         grep -o '\$.*' .env.production | sed 's/\$\(.*\)/\1/' | xargs -I {} sh -c "sed -i '' 's@\$"{}"@'$"{}"'@' .env.production"
         cp .env.production .env
+        git checkout .
       env:
         APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
         ONE_SIGNAL_KEY: ${{ secrets.ONE_SIGNAL_KEY }}
