@@ -66,9 +66,9 @@ function Onboarding({ navigation }) {
             <FollowConnected
               onPressPrimary={swipeForward}
               BackgroundComponent={
-                <StyledGradient
-                  source={'https://picsum.photos/640/640/?random'}
-                />
+                <ImageContainer>
+                  <StyledImage source={require('./img/follow.jpg')} />
+                </ImageContainer>
               }
             />
             <Query query={WITH_USER_ID} fetchPolicy="network-only">
