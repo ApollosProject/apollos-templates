@@ -16,6 +16,7 @@ import {
   AskNotificationsConnected,
   FeaturesConnected,
   LocationFinderConnected,
+  FollowConnected,
   OnboardingSwiper,
   onboardingComplete,
   WITH_USER_ID,
@@ -60,6 +61,14 @@ function Onboarding({ navigation }) {
                 <ImageContainer>
                   <StyledImage source={require('./img/locations.jpg')} />
                 </ImageContainer>
+              }
+            />
+            <FollowConnected
+              onPressPrimary={swipeForward}
+              BackgroundComponent={
+                <StyledGradient
+                  source={'https://picsum.photos/640/640/?random'}
+                />
               }
             />
             <Query query={WITH_USER_ID} fetchPolicy="network-only">

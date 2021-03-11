@@ -619,6 +619,24 @@ Array [
             size="small"
           />
         </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "height": 1334,
+              "justifyContent": "center",
+              "width": 750,
+            }
+          }
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
       </View>
     </RCTScrollView>
     <View
@@ -647,6 +665,21 @@ Array [
           style={
             Object {
               "backgroundColor": "#00676D",
+              "borderRadius": 4,
+              "height": 8,
+              "margin": 4,
+              "width": 8,
+            }
+          }
+        />
+      </RCTSafeAreaView>
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
               "borderRadius": 4,
               "height": 8,
               "margin": 4,
