@@ -8,9 +8,17 @@ import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
 import { get } from 'lodash';
 import { setupUniversalLinks } from '@apollosproject/server-core';
 import { BugsnagPlugin } from '@apollosproject/bugsnag';
-import { sync } from '@apollosproject/data-connector-postgres';
-// import { seed } from '../seeds';
-import {
+// import { sync } from '@apollosproject/data-connector-postgres';
+
+let dataObj;
+
+if (ApollosConfig?.DATABASE?.ENABLED) {
+  dataObj = require('./data/index.postgres');
+} else {
+  dataObj = require('./data/index');
+}
+
+const {
   resolvers,
   schema,
   testSchema,
@@ -18,7 +26,7 @@ import {
   dataSources,
   applyServerMiddleware,
   setupJobs,
-} from './data';
+} = dataObj;
 
 export { resolvers, schema, testSchema };
 
@@ -91,9 +99,9 @@ apolloServer.applyMiddleware({ app, path: '/' });
 
 // make sure this is called last.
 // (or at least after the apollos server setup)
+// You only need this if you are using the postgres module.
 (async () => {
-  await sync();
-  // await seed();
+  // await sync();
 })();
 
 export default app;

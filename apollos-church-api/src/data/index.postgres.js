@@ -34,8 +34,16 @@ import {
   Event,
   PrayerRequest,
   Persona,
-  Person,
+  Person as RockPerson,
 } from '@apollosproject/data-connector-rock';
+
+import {
+  Comment,
+  UserFlag,
+  Follow,
+  Campus as PostgresCampus,
+  Person as PostgresPerson,
+} from '@apollosproject/data-connector-postgres';
 
 import * as Theme from './theme';
 
@@ -43,12 +51,18 @@ import * as Theme from './theme';
 // This module includes a Resolver that overides a resolver defined in `OneSignal`
 import * as OneSignalWithRock from './oneSignalWithRock';
 
+// This modules ties together certain updates so they occurs in both Rock and Postgres.
+// Will be eliminated in the future through an enhancement to the Shovel
+import * as Person from './rockWithPostgres';
+
 const data = {
   Interfaces,
   Followings,
   ContentChannel,
   ContentItem,
-  BinaryFiles,
+  RockPerson, // This entry needs to come before (postgres) Person
+  BinaryFiles, // This entry needs to come before (postgres) Person
+  PostgresPerson, // Postgres person for now, as we extend this dataSource in the 'rockWithPostgres' file
   Cloudinary,
   Auth,
   AuthSms,
@@ -74,8 +88,12 @@ const data = {
   Event,
   Cache,
   PrayerRequest,
+  Comment,
+  UserFlag,
+  Follow,
+  PostgresCampus,
   Persona,
-  Person,
+  Person, // An extension of Postgres person. Will be eliminated in the near future so you can use just postgres/Person.
 };
 
 const {
