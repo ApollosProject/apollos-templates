@@ -99,9 +99,10 @@ apolloServer.applyMiddleware({ app, path: '/' });
 
 // make sure this is called last.
 // (or at least after the apollos server setup)
-// You only need this if you are using the postgres module.
 (async () => {
-  await sync();
+  if (ApollosConfig?.DATABASE?.ENABLED) {
+    await sync();
+  }
 })();
 
 export default app;
