@@ -11,7 +11,7 @@ const useStorybook = ApollosConfig.STORYBOOK === 'true';
 
 const MainApp = require('./src').default;
 
-const App = MainApp;
+let App = MainApp;
 if (useStorybook) {
   App = Storybook;
 }
