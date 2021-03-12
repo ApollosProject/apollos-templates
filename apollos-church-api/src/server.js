@@ -8,7 +8,7 @@ import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
 import { get } from 'lodash';
 import { setupUniversalLinks } from '@apollosproject/server-core';
 import { BugsnagPlugin } from '@apollosproject/bugsnag';
-// import { sync } from '@apollosproject/data-connector-postgres';
+import { sync } from '@apollosproject/data-connector-postgres';
 
 let dataObj;
 
@@ -101,7 +101,7 @@ apolloServer.applyMiddleware({ app, path: '/' });
 // (or at least after the apollos server setup)
 // You only need this if you are using the postgres module.
 (async () => {
-  // await sync();
+  await sync();
 })();
 
 export default app;
