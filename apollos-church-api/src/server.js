@@ -12,7 +12,7 @@ import { sync } from '@apollosproject/data-connector-postgres';
 
 let dataObj;
 
-if (ApollosConfig?.DATABASE?.ENABLED) {
+if (ApollosConfig?.DATABASE?.DATABASE_URL) {
   dataObj = require('./data/index.postgres');
 } else {
   dataObj = require('./data/index');
@@ -100,7 +100,7 @@ apolloServer.applyMiddleware({ app, path: '/' });
 // make sure this is called last.
 // (or at least after the apollos server setup)
 (async () => {
-  if (ApollosConfig?.DATABASE?.ENABLED) {
+  if (ApollosConfig?.DATABASE?.DATABASE_URL) {
     await sync();
   }
 })();
