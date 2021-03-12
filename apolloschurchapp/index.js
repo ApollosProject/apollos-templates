@@ -13,7 +13,7 @@ const MainApp = require('./src').default;
 
 const App = MainApp;
 if (useStorybook) {
-  // App = Storybook;
+  App = Storybook;
 }
 
 YellowBox.ignoreWarnings([
