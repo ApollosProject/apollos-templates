@@ -113,6 +113,12 @@ type Authentication {
   token: String
 }
 
+type ButtonFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  action: FeatureAction
+}
+
 enum CacheControlScope {
   PUBLIC
   PRIVATE
@@ -461,6 +467,11 @@ interface MediaSource {
   uri: String
 }
 
+type Message implements Node {
+  id: ID!
+  message: String
+}
+
 type Mutation {
   _placeholder: Boolean
   updateLikeEntity(input: LikeEntityInput!): ContentItem @deprecated(reason: "Use the more general updateLikeNode instead")
@@ -595,6 +606,7 @@ type Query {
   userFeedFeatures: [Feature] @deprecated(reason: "Use homeFeedFeatures or discoverFeedFeatures")
   homeFeedFeatures(campusId: ID): FeatureFeed
   discoverFeedFeatures: FeatureFeed
+  followRequests: [Person]
 }
 
 type RockPersonDetails {
@@ -692,7 +704,7 @@ enum ThemeType {
   DARK
 }
 
-type UniversalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & ShareableNode {
+type UniversalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & ShareableNode & FeaturesNode {
   id: ID!
   title(hyphenated: Boolean): String
   publishDate: String
@@ -709,6 +721,8 @@ type UniversalContentItem implements ContentItem & Node & ContentNode & Card & V
   isLiked: Boolean
   likedCount: Int
   sharing: SharableContentItem
+  features: [Feature] @deprecated(reason: "Use featureFeed")
+  featureFeed: FeatureFeed
 }
 
 enum UPDATEABLE_PROFILE_FIELDS {
