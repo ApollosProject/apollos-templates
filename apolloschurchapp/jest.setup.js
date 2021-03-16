@@ -6,8 +6,6 @@ import 'react-native/Libraries/Animated/src/bezier';
 
 ApollosConfig.loadJs({ FRAGMENTS });
 
-jest.mock('@react-native-community/datetimepicker', () => 'DateTimePicker');
-
 ApollosConfig.loadJs({
   ONE_SIGNAL_KEY: 'doesntmatter',
 });
