@@ -25,12 +25,6 @@ Animated.spring = (value, config) => ({
   stop: () => ({}),
 });
 
-jest.mock('react-native-safari-view', () => ({
-  isAvailable: jest.fn().mockImplementation(() => Promise.resolve(true)),
-  show: jest.fn(),
-  default: require.requireActual('react-native').SafeAreaView,
-}));
-
 jest.mock('react-native-device-info', () => ({
   getUniqueId: () => 'id-123',
   getSystemVersion: () => 'sys-version-123',
