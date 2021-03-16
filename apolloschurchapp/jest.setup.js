@@ -1,4 +1,3 @@
-import React from 'react';
 import { Animated } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
 import FRAGMENTS from '@apollosproject/ui-fragments';
@@ -23,29 +22,5 @@ Animated.spring = (value, config) => ({
   },
   stop: () => ({}),
 });
-
-jest.mock('@apollosproject/ui-kit', () => ({
-  ...require.requireActual('@apollosproject/ui-kit'),
-  NavigationService: {
-    navigate: jest.fn(),
-    setTopLevelNavigator: jest.fn(),
-  },
-}));
-
-jest.mock('@apollosproject/ui-notifications', () => ({
-  NotificationsProvider: ({ children }) => children,
-}));
-
-jest.mock('@apollosproject/ui-mapview', () => ({
-  MapViewConnected: 'MapViewConnected',
-}));
-
-jest.mock('@apollosproject/ui-media-player', () => ({
-  MediaPlayerSpacer: ({ children }) => children,
-  MediaPlayer: () => 'MediaPlayer',
-  MediaPlayerProvider: ({ children }) => children,
-  playVideoMutation: 'mutation { playVideo }',
-  withTabBarMediaSpacer: () => ({ children }) => children,
-}));
 
 jest.mock('./src/client/index');
