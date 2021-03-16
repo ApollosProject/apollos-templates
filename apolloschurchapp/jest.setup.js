@@ -78,10 +78,4 @@ jest.mock('@apollosproject/ui-media-player', () => ({
 
 jest.mock('react-native-video', () => 'Video');
 
-// jest.mock('react-native/Libraries/EventEmitter/NativeEventEmitter');
-
-jest.mock(
-  'react-native/Libraries/Components/DatePicker/DatePickerIOS',
-  () => 'DatePicker'
-);
 jest.mock('./src/client/index');
