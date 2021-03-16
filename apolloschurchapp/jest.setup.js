@@ -4,9 +4,8 @@ import ApollosConfig from '@apollosproject/config';
 import FRAGMENTS from '@apollosproject/ui-fragments';
 import 'react-native/Libraries/Animated/src/bezier';
 
-ApollosConfig.loadJs({ FRAGMENTS });
-
 ApollosConfig.loadJs({
+  FRAGMENTS,
   ONE_SIGNAL_KEY: 'doesntmatter',
 });
 
@@ -24,16 +23,6 @@ Animated.spring = (value, config) => ({
   },
   stop: () => ({}),
 });
-
-jest.mock('@apollosproject/ui-analytics', () => ({
-  track: () => '',
-  AnalyticsConsumer: ({ children }) => children({ test: jest.fn() }),
-  AnalyticsProvider: ({ children }) => children,
-  CoreNavigationAnalytics: ({ children }) =>
-    children({ onNavigationStateChange: jest.fn() }),
-  TrackEventWhenLoaded: () => null,
-  withTrackOnPress: (Component) => (props) => <Component {...props} />,
-}));
 
 jest.mock('@apollosproject/ui-kit', () => ({
   ...require.requireActual('@apollosproject/ui-kit'),
