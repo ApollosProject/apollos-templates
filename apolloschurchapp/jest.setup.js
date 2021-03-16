@@ -24,7 +24,6 @@ Animated.spring = (value, config) => ({
   },
   stop: () => ({}),
 });
-// jest.mock('NativeAnimatedHelper');
 
 jest.mock('react-native-safari-view', () => ({
   isAvailable: jest.fn().mockImplementation(() => Promise.resolve(true)),
@@ -39,8 +38,6 @@ jest.mock('react-native-device-info', () => ({
   getVersion: () => 'version-123',
   getBuildNumber: () => 0,
 }));
-
-jest.mock('rn-fetch-blob', () => 'Fetch');
 
 jest.mock('@apollosproject/ui-analytics', () => ({
   track: () => '',
@@ -75,7 +72,5 @@ jest.mock('@apollosproject/ui-media-player', () => ({
   playVideoMutation: 'mutation { playVideo }',
   withTabBarMediaSpacer: () => ({ children }) => children,
 }));
-
-jest.mock('react-native-video', () => 'Video');
 
 jest.mock('./src/client/index');
