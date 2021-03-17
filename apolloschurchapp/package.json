@@ -10,9 +10,9 @@
   ],
   "scripts": {
     "setup": "./scripts/init.sh",
-    "android": "SIM=\"$($HOME/Library/Android/sdk/emulator/emulator -list-avds | sed -n 1p)\" && $HOME/Library/Android/sdk/emulator/emulator -avd \"${SIM}\" & react-native run-android --appId com.differential.apollos",
+    "ios": "react-native run-ios",
+    "android": "SIM=\"$($HOME/Library/Android/sdk/emulator/emulator -list-avds | sed -n 1p)\" && $HOME/Library/Android/sdk/emulator/emulator -avd \"${SIM}\" & react-native run-android",
     "codecov": "cat ./coverage/lcov.info | codecov",
-    "ios": "react-native run-ios --simulator=\"iPhone 11\"",
     "link-packages": "node ./scripts/link-packages && yarn yalc update",
     "unlink-packages": "node ./scripts/link-packages remove && rm -rf ./node_modules",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
@@ -23,9 +23,6 @@
     "start": "yarn start:dev",
     "start:dev": "yarn generate-stories & yarn get-schema && node ./scripts/get-introspection-data.js && react-native start",
     "test": "TZ=UTC jest",
-    "latest": "./scripts/add-packages.sh latest",
-    "beta": "./scripts/add-packages.sh beta",
-    "canary": "./scripts/add-packages.sh canary",
     "icons": "react-native set-icon --path",
     "splash": "react-native set-splash --path"
   },
