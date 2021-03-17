@@ -123,30 +123,19 @@ Array [
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "maxHeight": "40%",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "height": "40%",
                   }
                 }
               >
                 <Image
-                  fadeDuration={250}
-                  onLoad={[Function]}
                   source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "https://picsum.photos/640/640/?random",
-                        "url": "https://picsum.photos/640/640/?random",
-                      },
-                    ]
+                    Object {
+                      "testUri": "../../../src/ui/Onboarding/img/personalize.jpg",
+                    }
                   }
                   style={
                     Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
+                      "height": "100%",
                       "width": "100%",
                     }
                   }
@@ -447,30 +436,19 @@ Array [
               <View
                 style={
                   Object {
-                    "backgroundColor": "#A5A5A5",
-                    "maxHeight": "40%",
-                    "overflow": "hidden",
-                    "width": "100%",
+                    "height": "40%",
                   }
                 }
               >
                 <Image
-                  fadeDuration={250}
-                  onLoad={[Function]}
                   source={
-                    Array [
-                      Object {
-                        "cache": "force-cache",
-                        "uri": "https://picsum.photos/640/640/?random",
-                        "url": "https://picsum.photos/640/640/?random",
-                      },
-                    ]
+                    Object {
+                      "testUri": "../../../src/ui/Onboarding/img/locations.jpg",
+                    }
                   }
                   style={
                     Object {
-                      "aspectRatio": 1,
-                      "backgroundColor": "#A5A5A5",
-                      "resizeMode": "cover",
+                      "height": "100%",
                       "width": "100%",
                     }
                   }
@@ -641,6 +619,24 @@ Array [
             size="small"
           />
         </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "height": 1334,
+              "justifyContent": "center",
+              "width": 750,
+            }
+          }
+        >
+          <ActivityIndicator
+            animating={true}
+            color="#999999"
+            hidesWhenStopped={true}
+            size="small"
+          />
+        </View>
       </View>
     </RCTScrollView>
     <View
@@ -669,6 +665,21 @@ Array [
           style={
             Object {
               "backgroundColor": "#00676D",
+              "borderRadius": 4,
+              "height": 8,
+              "margin": 4,
+              "width": 8,
+            }
+          }
+        />
+      </RCTSafeAreaView>
+      <RCTSafeAreaView
+        emulateUnlessSupported={true}
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#A5A5A5",
               "borderRadius": 4,
               "height": 8,
               "margin": 4,

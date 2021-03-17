@@ -18,7 +18,6 @@ import {
   Followings,
   Interactions,
   RockConstants,
-  Person,
   ContentItem,
   ContentChannel,
   Sharable,
@@ -34,9 +33,9 @@ import {
   ActionAlgorithm,
   Event,
   PrayerRequest,
+  Persona,
+  Person,
 } from '@apollosproject/data-connector-rock';
-
-import { Comment, UserFlag } from '@apollosproject/data-connector-postgres';
 
 import * as Theme from './theme';
 
@@ -49,7 +48,7 @@ const data = {
   Followings,
   ContentChannel,
   ContentItem,
-  Person,
+  BinaryFiles,
   Cloudinary,
   Auth,
   AuthSms,
@@ -69,15 +68,14 @@ const data = {
   Template,
   Campus,
   Group,
-  BinaryFiles,
   Feature,
   FeatureFeed,
   ActionAlgorithm,
   Event,
   Cache,
   PrayerRequest,
-  Comment,
-  UserFlag,
+  Persona,
+  Person,
 };
 
 const {
@@ -87,6 +85,7 @@ const {
   context,
   applyServerMiddleware,
   setupJobs,
+  migrations,
 } = createApolloServerConfig(data);
 
 export {
@@ -96,6 +95,7 @@ export {
   context,
   applyServerMiddleware,
   setupJobs,
+  migrations,
 };
 
 // the upload Scalar is added

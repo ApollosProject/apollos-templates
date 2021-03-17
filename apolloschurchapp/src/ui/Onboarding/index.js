@@ -1,8 +1,8 @@
 import React from 'react';
+import { View, Image } from 'react-native';
 import { Query } from '@apollo/client/react/components';
 import { requestPermissions } from '@apollosproject/ui-notifications';
 import {
-  GradientOverlayImage,
   styled,
   BackgroundView,
   NavigationService,
@@ -11,6 +11,7 @@ import {
   AskNotificationsConnected,
   FeaturesConnected,
   LocationFinderConnected,
+  FollowConnected,
   OnboardingSwiper,
   onboardingComplete,
   WITH_USER_ID,
@@ -22,9 +23,14 @@ const FullscreenBackgroundView = styled({
   height: '100%',
 })(BackgroundView);
 
-const StyledGradient = styled({
-  maxHeight: '40%',
-})(GradientOverlayImage);
+const ImageContainer = styled({
+  height: '40%',
+})(View);
+
+const StyledImage = styled({
+  height: '100%',
+  width: '100%',
+})(Image);
 
 function Onboarding({ navigation }) {
   return (
@@ -36,9 +42,9 @@ function Onboarding({ navigation }) {
             <FeaturesConnected
               onPressPrimary={swipeForward}
               BackgroundComponent={
-                <StyledGradient
-                  source={'https://picsum.photos/640/640/?random'}
-                />
+                <ImageContainer>
+                  <StyledImage source={require('./img/personalize.jpg')} />
+                </ImageContainer>
               }
             />
             <LocationFinderConnected
@@ -47,9 +53,17 @@ function Onboarding({ navigation }) {
                 navigation.navigate('Location');
               }}
               BackgroundComponent={
-                <StyledGradient
-                  source={'https://picsum.photos/640/640/?random'}
-                />
+                <ImageContainer>
+                  <StyledImage source={require('./img/locations.jpg')} />
+                </ImageContainer>
+              }
+            />
+            <FollowConnected
+              onPressPrimary={swipeForward}
+              BackgroundComponent={
+                <ImageContainer>
+                  <StyledImage source={require('./img/follow.jpg')} />
+                </ImageContainer>
               }
             />
             <Query query={WITH_USER_ID} fetchPolicy="network-only">
@@ -67,9 +81,11 @@ function Onboarding({ navigation }) {
                   onRequestPushPermissions={requestPermissions}
                   primaryNavText={'Finish'}
                   BackgroundComponent={
-                    <StyledGradient
-                      source={'http://picsum.photos/640/640/?random'}
-                    />
+                    <ImageContainer>
+                      <StyledImage
+                        source={require('./img/notifications.jpg')}
+                      />
+                    </ImageContainer>
                   }
                 />
               )}

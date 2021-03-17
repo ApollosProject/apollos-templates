@@ -113,6 +113,12 @@ type Authentication {
   token: String
 }
 
+type ButtonFeature implements Feature & Node {
+  id: ID!
+  order: Int
+  action: FeatureAction
+}
+
 enum CacheControlScope {
   PUBLIC
   PRIVATE
@@ -267,7 +273,7 @@ type Device implements Node {
   notificationsEnabled: Boolean!
 }
 
-type DevotionalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ScriptureNode & LikableNode & ShareableNode {
+type DevotionalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & ScriptureNode & LikableNode & ShareableNode & FeaturesNode {
   id: ID!
   title(hyphenated: Boolean): String
   publishDate: String
@@ -285,6 +291,8 @@ type DevotionalContentItem implements ContentItem & Node & ContentNode & Card & 
   isLiked: Boolean
   likedCount: Int
   sharing: SharableContentItem
+  features: [Feature] @deprecated(reason: "Use featureFeed")
+  featureFeed: FeatureFeed
 }
 
 type Event implements Node {
@@ -316,6 +324,17 @@ type FeatureFeed implements Node {
 interface FeaturesNode {
   features: [Feature] @deprecated(reason: "Use featureFeed")
   featureFeed: FeatureFeed
+}
+
+type Follow {
+  id: ID
+  state: FollowState
+}
+
+enum FollowState {
+  REQUESTED
+  DECLINED
+  ACCEPTED
 }
 
 enum GENDER {
@@ -448,6 +467,11 @@ interface MediaSource {
   uri: String
 }
 
+type Message implements Node {
+  id: ID!
+  message: String
+}
+
 type Mutation {
   _placeholder: Boolean
   updateLikeEntity(input: LikeEntityInput!): ContentItem @deprecated(reason: "Use the more general updateLikeNode instead")
@@ -469,6 +493,9 @@ type Mutation {
   addPrayer(text: String!, isAnonymous: Boolean): PrayerRequest
   addComment(parentId: ID!, text: String!, visibility: CommentVisibility): Comment
   flagComment(commentId: ID!): Comment
+  requestFollow(followedPersonId: ID!): Follow
+  ignoreFollowRequest(requestPersonId: ID!): Follow
+  acceptFollowRequest(requestPersonId: ID!): Follow
 }
 
 interface Node {
@@ -527,6 +554,8 @@ type Person implements Node {
   campus: Campus
   groups(type: GROUP_TYPE, asLeader: Boolean): [Group]
   prayers: [PrayerRequest]
+  currentUserFollowing: Follow
+  followingCurrentUser: Follow
 }
 
 type PrayerListFeature implements Feature & Node {
@@ -576,6 +605,7 @@ type Query {
   userFeedFeatures: [Feature] @deprecated(reason: "Use homeFeedFeatures or discoverFeedFeatures")
   homeFeedFeatures(campusId: ID): FeatureFeed
   discoverFeedFeatures: FeatureFeed
+  followRequests: [Person]
 }
 
 type RockPersonDetails {
@@ -594,6 +624,7 @@ type Scripture implements Node {
 type ScriptureFeature implements Feature & Node {
   id: ID!
   order: Int
+  title: String
   scriptures: [Scripture]
   sharing: SharableFeature
 }
@@ -645,6 +676,7 @@ type SmsPinResult {
 type TextFeature implements Feature & Node {
   id: ID!
   order: Int
+  title: String
   body: String
   sharing: SharableFeature
 }
@@ -671,7 +703,7 @@ enum ThemeType {
   DARK
 }
 
-type UniversalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & ShareableNode {
+type UniversalContentItem implements ContentItem & Node & ContentNode & Card & VideoNode & AudioNode & ContentChildNode & ContentParentNode & ThemedNode & LikableNode & ShareableNode & FeaturesNode {
   id: ID!
   title(hyphenated: Boolean): String
   publishDate: String
@@ -688,6 +720,8 @@ type UniversalContentItem implements ContentItem & Node & ContentNode & Card & V
   isLiked: Boolean
   likedCount: Int
   sharing: SharableContentItem
+  features: [Feature] @deprecated(reason: "Use featureFeed")
+  featureFeed: FeatureFeed
 }
 
 enum UPDATEABLE_PROFILE_FIELDS {
@@ -758,8 +792,8 @@ interface VideoNode {
 type WebviewFeature implements Feature & Node {
   id: ID!
   order: Int
-  linkText: String
   title: String
+  linkText: String
   url: String
 }
 

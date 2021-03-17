@@ -21,12 +21,6 @@ end
 
 platform :ios do
 
-  desc 'Fetch certificates and provisioning profiles'
-  lane :certificates do
-    match(app_identifier: 'com.differential.apollos', type: 'development', readonly: true)
-    match(app_identifier: 'com.differential.apollos', type: 'appstore', readonly: true)
-  end
-
   desc "Push a new beta build to TestFlight"
   lane :deploy do
     app_store_connect_api_key(
@@ -35,7 +29,7 @@ platform :ios do
       key_filepath: "ios/apollos.p8",
     )
     setup_ci
-    certificates
+    match(type: 'appstore', readonly: true)
     increment_build_number(build_number: number_of_commits, xcodeproj: "ios/apolloschurchapp.xcodeproj")
     build_app(workspace: "ios/apolloschurchapp.xcworkspace", scheme: "apolloschurchappprod")
     upload_to_testflight
