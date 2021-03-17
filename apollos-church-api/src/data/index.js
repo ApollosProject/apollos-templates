@@ -85,6 +85,7 @@ const {
   context,
   applyServerMiddleware,
   setupJobs,
+  migrations,
 } = createApolloServerConfig(data);
 
 export {
@@ -94,6 +95,7 @@ export {
   context,
   applyServerMiddleware,
   setupJobs,
+  migrations,
 };
 
 // the upload Scalar is added

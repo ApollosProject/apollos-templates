@@ -8,7 +8,7 @@ import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
 import { get } from 'lodash';
 import { setupUniversalLinks } from '@apollosproject/server-core';
 import { BugsnagPlugin } from '@apollosproject/bugsnag';
-import { sync } from '@apollosproject/data-connector-postgres';
+import { sync, createMigrationRunner } from '@apollosproject/data-connector-postgres';
 
 let dataObj;
 
@@ -26,6 +26,7 @@ const {
   dataSources,
   applyServerMiddleware,
   setupJobs,
+  migrations,
 } = dataObj;
 
 export { resolvers, schema, testSchema };
@@ -101,6 +102,8 @@ apolloServer.applyMiddleware({ app, path: '/' });
 // (or at least after the apollos server setup)
 (async () => {
   if (ApollosConfig?.DATABASE?.DATABASE_URL) {
+    const migrationRunner = await createMigrationRunner({ migrations });
+    await migrationRunner.up();
     await sync();
   }
 })();
