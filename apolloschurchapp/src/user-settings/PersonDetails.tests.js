@@ -1,7 +1,7 @@
 import React from 'react';
 import { MockedProvider } from '@apollo/client/testing';
 import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
-import { GET_USER_PROFILE } from '../tabs/connect/UserAvatarHeader';
+import { GET_USER_PROFILE } from '@apollosproject/ui-connected';
 
 import PersonalDetails from './PersonalDetails';
 
