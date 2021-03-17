@@ -1,11 +1,6 @@
 #!/bin/bash
-# this script will bump versions in the packages using the add-packages.sh scripts and then bump the Apollos versions
-
-# insure working directory is clean first
-if [[ $(git diff --stat) != '' ]]; then
-	echo 'Working directory not clean!'
-	exit
-fi
+# this script will bump versions in the packages using the add-packages.sh scripts
+# and then bump the Apollos versions to be used by the upgrade tool
 
 # get latest apps version
 VERSION=$(
@@ -19,20 +14,14 @@ VERSION=$(
 		tr -d '[:space:]'
 )
 
-if [[ "$VERSION" == *beta* ]]; then
-	TAG=beta
-	PKG=$(npm show @apollosproject/config@beta version)
-else
-	TAG=latest
-	PKG=$(npm show @apollosproject/config version)
-fi
+PKG=$(npm show @apollosproject/config version)
 
 if [[ "$VERSION" != "$PKG" ]]; then
 	echo "Latest Github tag ($VERSION) and NPM version ($PKG) doesn't match"
 	exit 1
 fi
 
-./scripts/add-packages.sh $TAG
+./scripts/add-packages.sh latest
 (cd apollos-church-api && sed -i "" -E "s/\"[0-9].*\"/\"$VERSION\"/g" apollos.json)
 (cd apolloschurchapp && sed -i "" -E "s/\"[0-9].*\"/\"$VERSION\"/g" apollos.json)
 
