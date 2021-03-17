@@ -5,8 +5,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import {
   HorizontalLikedContentFeedConnected,
-  SuggestedFollowListConnected,
-  RequestedFollowListConnected,
+  // SuggestedFollowListConnected,
+  // RequestedFollowListConnected,
 } from '@apollosproject/ui-connected';
 import { BackgroundView } from '@apollosproject/ui-kit';
 
@@ -28,8 +28,9 @@ class Connect extends PureComponent {
           <ScrollView>
             <UserAvatarHeader />
             <ActionBar />
-            <RequestedFollowListConnected />
-            <SuggestedFollowListConnected />
+            {/* TODO: add these in once pkg includes these features */}
+            {/* <RequestedFollowListConnected />
+            <SuggestedFollowListConnected /> */}
             <HorizontalLikedContentFeedConnected />
             <ActionTable />
           </ScrollView>
