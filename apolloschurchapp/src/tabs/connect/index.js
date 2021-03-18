@@ -6,7 +6,6 @@ import { LikedContentFeedConnected } from '@apollosproject/ui-connected';
 import UserSettings from '../../user-settings';
 import PersonalDetails from '../../user-settings/PersonalDetails';
 import ChangePassword from '../../user-settings/ChangePassword';
-import TestingControlPanel from '../../testing-control-panel';
 
 import Connect from './Connect';
 
@@ -18,11 +17,6 @@ const ConnectNavigator = (props) => (
       component={Connect}
       name="Connect"
       options={{ headerShown: false }}
-    />
-    <Screen
-      component={TestingControlPanel}
-      name="TestingControlPanel"
-      options={{ headerTitle: 'Testing' }}
     />
     <Screen
       component={UserSettings}
