@@ -1,4 +1,4 @@
-/* eslint-disable import/prefer-default-export */
+/* eslint-disable import/prefer-default-export, max-classes-per-file */
 import { parseGlobalId } from '@apollosproject/server-core';
 import { Person as postgresPerson } from '@apollosproject/data-connector-postgres';
 import * as OneSignalOriginal from '@apollosproject/data-connector-onesignal';
