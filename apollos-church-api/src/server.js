@@ -15,7 +15,7 @@ import {
 
 let dataObj;
 
-if (ApollosConfig?.DATABASE?.DATABASE_URL) {
+if (ApollosConfig?.DATABASE?.URL) {
   dataObj = require('./data/index.postgres');
 } else {
   dataObj = require('./data/index');
@@ -104,10 +104,9 @@ apolloServer.applyMiddleware({ app, path: '/' });
 // make sure this is called last.
 // (or at least after the apollos server setup)
 (async () => {
-  if (ApollosConfig?.DATABASE?.DATABASE_URL) {
+  if (ApollosConfig?.DATABASE?.URL) {
     const migrationRunner = await createMigrationRunner({ migrations });
     await migrationRunner.up();
-    await sync();
   }
 })();
 
