@@ -15,13 +15,6 @@ import {
 } from '@apollosproject/ui-kit';
 import { RockAuthedWebBrowser } from '@apollosproject/ui-connected';
 
-const RowHeader = styled(({ theme }) => ({
-  flexDirection: 'row',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  paddingVertical: theme.sizing.baseUnit,
-}))(PaddedView);
-
 const Name = styled({
   flexGrow: 1,
 })(View);
@@ -32,11 +25,11 @@ const ActionTable = () => {
     <RockAuthedWebBrowser>
       {(openUrl) => (
         <View>
-          <RowHeader>
+          <PaddedView>
             <Name>
               <H4>{'Connect with Apollos'}</H4>
             </Name>
-          </RowHeader>
+          </PaddedView>
           <TableView>
             <Touchable
               onPress={() =>

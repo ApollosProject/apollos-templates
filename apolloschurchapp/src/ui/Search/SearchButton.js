@@ -1,31 +1,34 @@
 import React from 'react';
-import { Animated } from 'react-native';
+import { Animated, StyleSheet } from 'react-native';
 import PropTypes from 'prop-types';
 
-import { styled, withTheme, Touchable, Icon } from '@apollosproject/ui-kit';
+import { Touchable, Icon, useTheme } from '@apollosproject/ui-kit';
 
-const SearchIcon = withTheme(({ theme: { colors, sizing: { baseUnit } } }) => ({
-  name: 'search',
-  size: baseUnit * 2,
-  fill: colors.primary,
-}))(Icon);
-
-const SearchButtonContainer = styled(({ theme: { sizing: { baseUnit } } }) => ({
-  position: 'absolute',
-  right: baseUnit,
-  top: baseUnit / 2,
-}))(Animated.View);
-
-const HomeSearchButton = ({ onPress }) => (
-  <SearchButtonContainer>
-    <Touchable onPress={onPress}>
-      <SearchIcon />
-    </Touchable>
-  </SearchButtonContainer>
-);
+const HomeSearchButton = ({ onPress }) => {
+  const theme = useTheme();
+  return (
+    <Animated.View style={styles.container(theme)}>
+      <Touchable onPress={onPress}>
+        <Icon
+          name={'search'}
+          size={theme.sizing.baseUnit * 2}
+          fill={theme.colors.primary}
+        />
+      </Touchable>
+    </Animated.View>
+  );
+};
 
 HomeSearchButton.propTypes = {
   onPress: PropTypes.func,
 };
+
+const styles = StyleSheet.create({
+  container: (theme) => ({
+    position: 'absolute',
+    right: theme.sizing.baseUnit,
+    top: theme.sizing.baseUnit / 2,
+  }),
+});
 
 export default HomeSearchButton;
