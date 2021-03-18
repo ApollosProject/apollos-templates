@@ -1,18 +1,10 @@
 import React, { PureComponent } from 'react';
-import { ScrollView } from 'react-native';
 import PropTypes from 'prop-types';
-import { SafeAreaView } from 'react-native-safe-area-context';
 
-import {
-  HorizontalLikedContentFeedConnected,
-  // SuggestedFollowListConnected,
-  // RequestedFollowListConnected,
-} from '@apollosproject/ui-connected';
-import { BackgroundView } from '@apollosproject/ui-kit';
+import { ConnectScreenConnected } from '@apollosproject/ui-connected';
 
 import ActionTable from './ActionTable';
 import ActionBar from './ActionBar';
-import UserAvatarHeader from './UserAvatarHeader';
 
 class Connect extends PureComponent {
   static propTypes = {
@@ -23,19 +15,7 @@ class Connect extends PureComponent {
 
   render() {
     return (
-      <BackgroundView>
-        <SafeAreaView edges={['top', 'left', 'right']}>
-          <ScrollView>
-            <UserAvatarHeader />
-            <ActionBar />
-            {/* TODO: add these in once pkg includes these features */}
-            {/* <RequestedFollowListConnected />
-            <SuggestedFollowListConnected /> */}
-            <HorizontalLikedContentFeedConnected />
-            <ActionTable />
-          </ScrollView>
-        </SafeAreaView>
-      </BackgroundView>
+      <ConnectScreenConnected ActionTable={ActionTable} ActionBar={ActionBar} />
     );
   }
 }
