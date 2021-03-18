@@ -9,7 +9,6 @@ import { get } from 'lodash';
 import { setupUniversalLinks } from '@apollosproject/server-core';
 import { BugsnagPlugin } from '@apollosproject/bugsnag';
 import {
-  sync,
   createMigrationRunner,
 } from '@apollosproject/data-connector-postgres';
 
