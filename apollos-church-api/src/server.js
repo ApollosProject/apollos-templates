@@ -8,9 +8,7 @@ import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
 import { get } from 'lodash';
 import { setupUniversalLinks } from '@apollosproject/server-core';
 import { BugsnagPlugin } from '@apollosproject/bugsnag';
-import {
-  createMigrationRunner,
-} from '@apollosproject/data-connector-postgres';
+import { createMigrationRunner } from '@apollosproject/data-connector-postgres';
 
 let dataObj;
 
