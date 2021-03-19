@@ -30,7 +30,7 @@ const AppProviders = (props) => (
           <LiveProvider>
             <Providers
               themeInput={customTheme}
-              customTheme={customTheme}
+              theme={customTheme}
               iconInput={customIcons}
               {...props}
             />
