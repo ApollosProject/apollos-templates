@@ -89,7 +89,7 @@ import com.android.build.OutputFile
 
 project.ext.react = [
     entryFile: "index.js",
-    enableHermes: false,  // clean and rebuild if changing
+    enableHermes: true,  // clean and rebuild if changing
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
@@ -128,7 +128,17 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  * on project.ext.react, JavaScript will not be compiled to Hermes Bytecode
  * and the benefits of using Hermes will therefore be sharply reduced.
  */
-def enableHermes = project.ext.react.get("enableHermes", false);
+def enableHermes = project.ext.react.get("enableHermes", true);
+
+/**
+ * Trying to fix Hermes:
+ * https://github.com/facebook/react-native/issues/26400#issuecomment-539395814
+ */
+configurations.all {
+  resolutionStrategy {
+    force "com.facebook.soloader:soloader:0.8.2"
+  }
+}
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
