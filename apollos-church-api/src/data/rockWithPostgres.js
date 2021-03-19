@@ -74,7 +74,6 @@ export const resolver = {
             value: true,
           },
         ]);
-        console.log('setting apollos user');
       } catch (e) {
         console.warn(e);
       }
