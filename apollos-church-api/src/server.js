@@ -8,14 +8,11 @@ import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
 import { get } from 'lodash';
 import { setupUniversalLinks } from '@apollosproject/server-core';
 import { BugsnagPlugin } from '@apollosproject/bugsnag';
-import {
-  sync,
-  createMigrationRunner,
-} from '@apollosproject/data-connector-postgres';
+import { createMigrationRunner } from '@apollosproject/data-connector-postgres';
 
 let dataObj;
 
-if (ApollosConfig?.DATABASE?.DATABASE_URL) {
+if (ApollosConfig?.DATABASE?.URL) {
   dataObj = require('./data/index.postgres');
 } else {
   dataObj = require('./data/index');
@@ -104,10 +101,9 @@ apolloServer.applyMiddleware({ app, path: '/' });
 // make sure this is called last.
 // (or at least after the apollos server setup)
 (async () => {
-  if (ApollosConfig?.DATABASE?.DATABASE_URL) {
+  if (ApollosConfig?.DATABASE?.URL) {
     const migrationRunner = await createMigrationRunner({ migrations });
     await migrationRunner.up();
-    await sync();
   }
 })();
 
