@@ -219,6 +219,11 @@ exports[`The Onboarding LandingScreen component should pass additional props to 
     vertical={false}
   >
     <RCTSafeAreaView
+      edges={
+        Array [
+          "bottom",
+        ]
+      }
       emulateUnlessSupported={true}
     >
       <View

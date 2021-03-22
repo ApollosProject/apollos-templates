@@ -206,6 +206,11 @@ Array [
             vertical={false}
           >
             <RCTSafeAreaView
+              edges={
+                Array [
+                  "bottom",
+                ]
+              }
               emulateUnlessSupported={true}
             >
               <View
@@ -582,6 +587,11 @@ Array [
             vertical={false}
           >
             <RCTSafeAreaView
+              edges={
+                Array [
+                  "bottom",
+                ]
+              }
               emulateUnlessSupported={true}
             >
               <Text
