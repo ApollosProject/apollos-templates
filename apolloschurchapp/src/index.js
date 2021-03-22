@@ -79,7 +79,10 @@ const App = (props) => (
           <Screen
             name="ContentSingle"
             component={ContentSingle}
-            options={{ title: 'Content' }}
+            options={{
+              title: 'Content',
+              stackPresentation: 'push',
+            }}
           />
           <Screen
             name="NodeSingle"
