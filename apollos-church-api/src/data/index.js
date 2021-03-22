@@ -48,7 +48,6 @@ const data = {
   Followings,
   ContentChannel,
   ContentItem,
-  BinaryFiles,
   Cloudinary,
   Auth,
   AuthSms,
@@ -76,6 +75,7 @@ const data = {
   PrayerRequest,
   Persona,
   Person,
+  BinaryFiles,
 };
 
 const {
