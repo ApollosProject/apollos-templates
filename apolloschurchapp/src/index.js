@@ -8,18 +8,20 @@ import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import SplashScreen from 'react-native-splash-screen';
 import 'react-native-gesture-handler'; // required for react-navigation
 import { enableScreens } from 'react-native-screens';
-
 import {
+  ModalCloseButton,
+  ModalBackButton,
   BackgroundView,
   withTheme,
   NavigationService,
 } from '@apollosproject/ui-kit';
+
 import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 
 import Providers from './Providers';
-import ContentSingle from './content-single';
+import ContentSingle from './content-single/ContentSingle';
 import NodeSingle from './node-single';
 import Event from './event';
 import Tabs from './tabs';
@@ -63,13 +65,13 @@ const ThemedNavigator = withTheme(({ theme, ...props }) => ({
 }))(Navigator);
 
 const App = (props) => (
-  <Providers>
-    <BackgroundView>
+  <NavigationContainer
+    ref={NavigationService.setTopLevelNavigator}
+    onReady={NavigationService.setIsReady}
+  >
+    <Providers>
       <AppStatusBar />
-      <NavigationContainer
-        ref={NavigationService.setTopLevelNavigator}
-        onReady={NavigationService.setIsReady}
-      >
+      <BackgroundView>
         <ThemedNavigator initialRouteName="ProtectedRoute" {...props}>
           <Screen
             name="ProtectedRoute"
@@ -81,7 +83,13 @@ const App = (props) => (
             component={ContentSingle}
             options={{
               title: 'Content',
-              stackPresentation: 'push',
+              headerTranslucent: true,
+              headerStyle: { backgroundColor: 'transparent' },
+              headerHideShadow: true,
+              // headerRight: ModalCloseButton,
+              // headerLeft: ModalBackButton,
+              headerTitle: '',
+              headerTopInsetEnabled: false,
             }}
           />
           <Screen
@@ -125,9 +133,9 @@ const App = (props) => (
           />
           <Screen component={Search} name="Search" />
         </ThemedNavigator>
-      </NavigationContainer>
-    </BackgroundView>
-  </Providers>
+      </BackgroundView>
+    </Providers>
+  </NavigationContainer>
 );
 
 export default App;
