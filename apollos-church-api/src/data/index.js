@@ -27,7 +27,6 @@ import {
   AuthSms,
   Campus,
   Group,
-  BinaryFiles,
   Feature,
   FeatureFeed,
   ActionAlgorithm,
@@ -35,6 +34,7 @@ import {
   PrayerRequest,
   Persona,
   Person,
+  BinaryFiles,
 } from '@apollosproject/data-connector-rock';
 
 import * as Theme from './theme';
@@ -48,7 +48,6 @@ const data = {
   Followings,
   ContentChannel,
   ContentItem,
-  BinaryFiles,
   Cloudinary,
   Auth,
   AuthSms,
@@ -76,6 +75,7 @@ const data = {
   PrayerRequest,
   Persona,
   Person,
+  BinaryFiles,
 };
 
 const {
