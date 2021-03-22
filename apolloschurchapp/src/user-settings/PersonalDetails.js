@@ -17,7 +17,7 @@ import {
   styled,
 } from '@apollosproject/ui-kit';
 
-import { GET_USER_PROFILE } from '../tabs/connect/UserAvatarHeader';
+import { GET_USER_PROFILE } from '@apollosproject/ui-connected';
 import UPDATE_CURRENT_USER from './updateCurrentUser';
 
 const Footer = styled({
