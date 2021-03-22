@@ -27,7 +27,6 @@ import {
   AuthSms,
   Campus,
   Group,
-  BinaryFiles,
   Feature,
   FeatureFeed,
   ActionAlgorithm,
@@ -35,6 +34,7 @@ import {
   PrayerRequest,
   Persona,
   Person,
+  BinaryFiles,
 } from '@apollosproject/data-connector-rock';
 
 import * as Theme from './theme';
