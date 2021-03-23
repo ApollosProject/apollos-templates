@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Image } from 'react-native';
 import { Query } from '@apollo/client/react/components';
+import PropTypes from 'prop-types';
 import {
   checkNotifications,
   openSettings,
@@ -37,14 +38,17 @@ const StyledImage = styled({
   width: '100%',
 })(Image);
 
-function Onboarding({ navigation }) {
+function Onboarding({ navigation, route }) {
+  const userVersion = route?.params?.userVersion || 0;
+  const onboardingVersion = 2;
   return (
     <>
       <FullscreenBackgroundView />
-      <OnboardingSwiper>
+      <OnboardingSwiper navigation={navigation} userVersion={userVersion}>
         {({ swipeForward }) => (
           <>
             <FeaturesConnected
+              userVersion={userVersion}
               onPressPrimary={swipeForward}
               BackgroundComponent={
                 <ImageContainer>
@@ -53,6 +57,7 @@ function Onboarding({ navigation }) {
               }
             />
             <LocationFinderConnected
+              userVersion={userVersion}
               onPressPrimary={swipeForward}
               onNavigate={() => {
                 navigation.navigate('Location');
@@ -64,7 +69,9 @@ function Onboarding({ navigation }) {
               }
             />
             <FollowConnected
+              userVersion={userVersion}
               onPressPrimary={swipeForward}
+              version={2}
               BackgroundComponent={
                 <ImageContainer>
                   <StyledImage source={require('./img/follow.jpg')} />
@@ -74,8 +81,12 @@ function Onboarding({ navigation }) {
             <Query query={WITH_USER_ID} fetchPolicy="network-only">
               {({ data }) => (
                 <AskNotificationsConnected
+                  userVersion={userVersion}
                   onPressPrimary={() => {
-                    onboardingComplete({ userId: data?.currentUser?.id });
+                    onboardingComplete({
+                      userId: data?.currentUser?.id,
+                      version: onboardingVersion,
+                    });
                     navigation.dispatch(
                       NavigationService.resetAction({
                         navigatorName: 'Tabs',
@@ -113,5 +124,13 @@ function Onboarding({ navigation }) {
     </>
   );
 }
+
+Onboarding.propTypes = {
+  route: PropTypes.shape({
+    params: PropTypes.shape({
+      userVersion: PropTypes.number,
+    }),
+  }),
+};
 
 export default Onboarding;
