@@ -22,6 +22,7 @@ if [[ "$VERSION" != "$PKG" ]]; then
 fi
 
 ./scripts/add-packages.sh latest
+yarn # this is to update Pods
 (cd apollos-church-api && sed -i "" -E "s/\"[0-9].*\"/\"$VERSION\"/g" apollos.json)
 (cd apolloschurchapp && sed -i "" -E "s/\"[0-9].*\"/\"$VERSION\"/g" apollos.json)
 
