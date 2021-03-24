@@ -11,7 +11,7 @@ import {
 import { useApolloClient, useQuery, gql } from '@apollo/client';
 import TouchableCell from './TouchableCell';
 
-export default function TestingControlPanel(props) {
+export default function TestingControlPanel() {
   const client = useApolloClient();
   const { data } = useQuery(gql`
     query currentUserId {
