@@ -1,19 +1,54 @@
-import React, { PureComponent } from 'react';
-import { TableView, BackgroundView } from '@apollosproject/ui-kit';
+import React from 'react';
+import {
+  TableView,
+  BackgroundView,
+  NavigationService,
+} from '@apollosproject/ui-kit';
+import {
+  checkOnboardingStatusAndNavigate,
+  onboardingComplete,
+} from '@apollosproject/ui-onboarding';
+import { useApolloClient, useQuery, gql } from '@apollo/client';
 import TouchableCell from './TouchableCell';
 
-export default class TestingControlPanel extends PureComponent {
-  render() {
-    return (
-      <BackgroundView>
-        <TableView>
-          <TouchableCell
-            handlePress={() => this.props.navigation.navigate('Onboarding')}
-            iconName="Avatar"
-            cellText={`Launch Onboarding`}
-          />
-        </TableView>
-      </BackgroundView>
-    );
-  }
+export default function TestingControlPanel(props) {
+  const client = useApolloClient();
+  const { data } = useQuery(gql`
+    query currentUserId {
+      currentUser {
+        id
+      }
+    }
+  `);
+  return (
+    <BackgroundView>
+      <TableView>
+        <TouchableCell
+          handlePress={() =>
+            checkOnboardingStatusAndNavigate({
+              latestOnboardingVersion: 2,
+              navigation: NavigationService,
+              client,
+            })
+          }
+          iconName="Avatar"
+          cellText={`Launch Onboarding`}
+        />
+      </TableView>
+      <TouchableCell
+        handlePress={() =>
+          onboardingComplete({ version: 0, userId: data?.currentUser?.id })
+        }
+        iconName="Avatar"
+        cellText={`Reset Onboarding to Unseen`}
+      />
+      <TouchableCell
+        handlePress={() =>
+          onboardingComplete({ version: 1, userId: data?.currentUser?.id })
+        }
+        iconName="Avatar"
+        cellText={`Reset Onboarding to Seen v1`}
+      />
+    </BackgroundView>
+  );
 }
