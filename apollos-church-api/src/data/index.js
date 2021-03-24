@@ -37,14 +37,6 @@ import {
   BinaryFiles,
 } from '@apollosproject/data-connector-rock';
 
-import {
-  Comment,
-  UserFlag,
-  Follow,
-  Campus as PostgresCampus,
-  Person as PostgresPerson,
-} from '@apollosproject/data-connector-postgres';
-
 import * as Theme from './theme';
 
 // This module is used to attach Rock User updating to the OneSignal module.
@@ -88,13 +80,7 @@ const data = {
   Persona,
   Person,
   BinaryFiles,
-  // postgres stuff, we include these so the schema matches the mock resolvers
-  Comment,
-  UserFlag,
-  Follow,
-  PostgresPerson,
-  PostgresCampus,
-  NoPostgres, // mock resolvers, this must come last
+  NoPostgres,
 };
 
 const {

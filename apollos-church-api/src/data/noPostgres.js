@@ -1,7 +1,22 @@
 // The purpose of this file is to mock the postgres resolvers to null so the API doesn't fail when
 // there's no database. This will not be necessary when Postgres is required by all Apollos APIs.
+import gql from 'graphql-tag';
+import {
+  Comment,
+  UserFlag,
+  Follow,
+  Person,
+  Campus,
+} from '@apollosproject/data-connector-postgres';
 
 export default {
+  schema: gql`
+    ${Comment.schema}
+    ${UserFlag.schema}
+    ${Follow.schema}
+    ${Person.schema}
+    ${Campus.schema}
+  `,
   resolver: {
     Query: {
       followRequests: null,
