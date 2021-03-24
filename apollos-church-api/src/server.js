@@ -10,7 +10,13 @@ import { setupUniversalLinks } from '@apollosproject/server-core';
 import { BugsnagPlugin } from '@apollosproject/bugsnag';
 import { createMigrationRunner } from '@apollosproject/data-connector-postgres';
 
-import * as data from './data';
+let dataObj;
+
+if (ApollosConfig?.DATABASE?.URL) {
+  dataObj = require('./data/index.postgres');
+} else {
+  dataObj = require('./data/index');
+}
 
 const {
   resolvers,
@@ -21,7 +27,7 @@ const {
   applyServerMiddleware,
   setupJobs,
   migrations,
-} = data;
+} = dataObj;
 
 export { resolvers, schema, testSchema };
 
@@ -76,8 +82,8 @@ app.get('/health', cors(), (req, res) => {
 // apollos version
 app.get('/version', cors(), (req, res) => {
   try {
-    const file = fs.readFileSync(path.join(__dirname, '..', 'apollos.json'));
-    const { version } = JSON.parse(file);
+    const data = fs.readFileSync(path.join(__dirname, '..', 'apollos.json'));
+    const { version } = JSON.parse(data);
     res.send(version);
   } catch (e) {
     res.send('unknown');

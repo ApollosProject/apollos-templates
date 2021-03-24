@@ -1,10 +1,8 @@
 // The purpose of this file is to mock the postgres resolvers to null so the API doesn't fail when
 // there's no database. This will not be necessary when Postgres is required by all Apollos APIs.
-import { Person } from '@apollosproject/data-connector-rock';
 
 export default {
   resolver: {
-    ...Person.resolver,
     Query: {
       followRequests: null,
       suggestedFollows: null,
