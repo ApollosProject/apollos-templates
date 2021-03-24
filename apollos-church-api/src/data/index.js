@@ -43,6 +43,10 @@ import * as Theme from './theme';
 // This module includes a Resolver that overides a resolver defined in `OneSignal`
 import * as OneSignalWithRock from './oneSignalWithRock';
 
+// This is to mock any postgres resolvers so we don't throw API errors for unresolved
+// typedefs
+import NoPostgres from './noPostgres';
+
 const data = {
   Interfaces,
   Followings,
@@ -76,6 +80,7 @@ const data = {
   Persona,
   Person,
   BinaryFiles,
+  NoPostgres,
 };
 
 const {
