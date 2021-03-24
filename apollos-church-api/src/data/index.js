@@ -27,7 +27,6 @@ import {
   AuthSms,
   Campus,
   Group,
-  BinaryFiles,
   Feature,
   FeatureFeed,
   ActionAlgorithm,
@@ -35,6 +34,7 @@ import {
   PrayerRequest,
   Persona,
   Person,
+  BinaryFiles,
 } from '@apollosproject/data-connector-rock';
 
 import * as Theme from './theme';
@@ -43,12 +43,15 @@ import * as Theme from './theme';
 // This module includes a Resolver that overides a resolver defined in `OneSignal`
 import * as OneSignalWithRock from './oneSignalWithRock';
 
+// This is to mock any postgres resolvers so we don't throw API errors for unresolved
+// typedefs
+import NoPostgres from './noPostgres';
+
 const data = {
   Interfaces,
   Followings,
   ContentChannel,
   ContentItem,
-  BinaryFiles,
   Cloudinary,
   Auth,
   AuthSms,
@@ -76,6 +79,8 @@ const data = {
   PrayerRequest,
   Persona,
   Person,
+  BinaryFiles,
+  NoPostgres,
 };
 
 const {
