@@ -43,7 +43,7 @@ const filterDependencies = (deps) =>
             (err, tags) => {
               const currentTagMatch = tags.match(new RegExp(`${tag}: (.*)`));
               const currentTagVersion = semver.coerce(currentTagMatch[1]);
-              const shouldUpdate = semver.gt(currentTagVersion, dep.version);
+              const shouldUpdate = semver.gte(currentTagVersion, dep.version);
               resolve({ shouldUpdate, pkg: dep.pkg });
             }
           );
