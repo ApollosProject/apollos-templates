@@ -10,9 +10,9 @@ export default {
   `,
   resolver: {
     Query: {
-      followRequests: () => null,
-      suggestedFollows: () => null,
-      searchPeople: () => null,
+      followRequests: () => [],
+      suggestedFollows: () => [],
+      searchPeople: () => {},
     },
     Mutation: {
       addComment: () => null,
@@ -39,7 +39,7 @@ export default {
       followingCurrentUser: () => null,
     },
     SearchPeopleResultsConnection: {
-      edges: () => null,
+      edges: () => [],
       pageInfo: () => null,
     },
   },
