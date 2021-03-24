@@ -27,6 +27,14 @@
   },
   "configurations": {
     "ios": {
+      "type": "ios.simulator",
+      "binaryPath": "ios/build/Build/Products/Release-iphonesimulator/apolloschurchapp.app",
+      "build": "xcodebuild -workspace ios/apolloschurchapp.xcworkspace -scheme apolloschurchappprod -configuration Release -sdk iphonesimulator -derivedDataPath ios/build",
+      "device": {
+        "type": "iPhone 11"
+      }
+    },
+    "ios-default": {
       "device": "simulator",
       "app": "ios"
     },

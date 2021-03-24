@@ -150,6 +150,7 @@
     "get-graphql-schema": "^2.1.2",
     "graphql-import": "^0.7.1",
     "jest": "^25.1.0",
+    "jest-circus": "^26.6.3",
     "jetifier": "^1.6.4",
     "metro-react-native-babel-preset": "^0.59.0",
     "nodemon": "1.18.7",
