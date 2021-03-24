@@ -49,20 +49,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node 12.x.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.x.x
-
-    - name: Install Yarn
-      run: npm install -g yarn
+    - uses: actions/setup-node@v2
 
     - name: Install Dependencies
       run: yarn --ignore-scripts
 
-    - name: Install sqlite3
-      run: (cd ./apollos-church-api/node_modules/sqlite3 && yarn install)
-
     - name: Start Server and Check
-      run: yarn start:dev & sleep 30 && if [[ "$(curl 'http://localhost:4000/health')" != "ok" ]]; then exit 1; fi
+      run: yarn start:dev & sleep 30 && if [[ "$(curl 'http://localhost:4000/.well-known/apollo/server-health')" != "HTTP/1.1 200 OK" ]]; then exit 1; fi
       working-directory: apollos-church-api

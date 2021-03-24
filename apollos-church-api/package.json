@@ -6,12 +6,16 @@
   "scripts": {
     "setup": "./scripts/init.sh",
     "start": "NODE_ENV=production node ./lib/index.js",
-    "start:dev": "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
+    "start:dev":
+      "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
     "postinstall": "yarn build",
     "link-packages": "node ./scripts/link-packages && yarn yalc update",
-    "unlink-packages": "node ./scripts/link-packages remove && rm -rf ./node_modules",
-    "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
-    "test": "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
+    "unlink-packages":
+      "node ./scripts/link-packages remove && rm -rf ./node_modules",
+    "build":
+      "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
+    "test":
+      "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
     "lint": "eslint ./src --ext .js",
     "translate": "node scripts/translate.js"
   },
@@ -38,7 +42,6 @@
     "apollo-server": "^2.14.2",
     "apollo-server-express": "2.14.2",
     "color": "3.0.0",
-    "cors": "^2.8.5",
     "dotenv": "6.0.0",
     "express": "^4.17.0",
     "graphql": "14.6.0",
