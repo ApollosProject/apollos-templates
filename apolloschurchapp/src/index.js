@@ -9,8 +9,6 @@ import SplashScreen from 'react-native-splash-screen';
 import 'react-native-gesture-handler'; // required for react-navigation
 import { enableScreens } from 'react-native-screens';
 import {
-  ModalCloseButton,
-  ModalBackButton,
   BackgroundView,
   withTheme,
   NavigationService,
@@ -21,7 +19,7 @@ import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 
 import Providers from './Providers';
-import ContentSingle from './content-single/ContentSingle';
+import ContentSingle from './content-single';
 import NodeSingle from './node-single';
 import Event from './event';
 import Tabs from './tabs';
@@ -65,13 +63,13 @@ const ThemedNavigator = withTheme(({ theme, ...props }) => ({
 }))(Navigator);
 
 const App = (props) => (
-  <NavigationContainer
-    ref={NavigationService.setTopLevelNavigator}
-    onReady={NavigationService.setIsReady}
-  >
-    <Providers>
+  <Providers>
+          <BackgroundView>
+    <NavigationContainer
+      ref={NavigationService.setTopLevelNavigator}
+      onReady={NavigationService.setIsReady}
+    >
       <AppStatusBar />
-      <BackgroundView>
         <ThemedNavigator initialRouteName="ProtectedRoute" {...props}>
           <Screen
             name="ProtectedRoute"
@@ -127,9 +125,9 @@ const App = (props) => (
           />
           <Screen component={Search} name="Search" />
         </ThemedNavigator>
-      </BackgroundView>
-    </Providers>
-  </NavigationContainer>
+    </NavigationContainer>
+      </BackgroundView>    
+  </Providers>
 );
 
 export default App;
