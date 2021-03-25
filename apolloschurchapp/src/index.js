@@ -8,6 +8,7 @@ import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import SplashScreen from 'react-native-splash-screen';
 import 'react-native-gesture-handler'; // required for react-navigation
 import { enableScreens } from 'react-native-screens';
+
 import {
   BackgroundView,
   withTheme,
