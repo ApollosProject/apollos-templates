@@ -13,7 +13,6 @@ import {
   withTheme,
   NavigationService,
 } from '@apollosproject/ui-kit';
-
 import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
@@ -65,11 +64,11 @@ const ThemedNavigator = withTheme(({ theme, ...props }) => ({
 const App = (props) => (
   <Providers>
     <BackgroundView>
+      <AppStatusBar />
       <NavigationContainer
         ref={NavigationService.setTopLevelNavigator}
         onReady={NavigationService.setIsReady}
       >
-        <AppStatusBar />
         <ThemedNavigator initialRouteName="ProtectedRoute" {...props}>
           <Screen
             name="ProtectedRoute"
