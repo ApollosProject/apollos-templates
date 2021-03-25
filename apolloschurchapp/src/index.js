@@ -83,13 +83,7 @@ const App = (props) => (
             component={ContentSingle}
             options={{
               title: 'Content',
-              headerTranslucent: true,
-              headerStyle: { backgroundColor: 'transparent' },
-              headerHideShadow: true,
-              // headerRight: ModalCloseButton,
-              // headerLeft: ModalBackButton,
-              headerTitle: '',
-              headerTopInsetEnabled: false,
+              stackPresentation: 'push',
             }}
           />
           <Screen

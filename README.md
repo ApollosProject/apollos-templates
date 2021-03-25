@@ -25,7 +25,7 @@ yarn setup
 
 #### Development
 
-If you want to test that your API is functional fill out the `ROCK_API` and `ROCK_TOKEN` in your `.env` file. `ROCK_API` is the URL of your Rock instance with `/api` appended to the end. `ROCK_TOKEN` is the REST key of an admin user. You can get this from "Admin Tools" > "Apollos Dashboard" after you've installed the Apollos Plugin.
+A working [Rock RMS](https://www.rockrms.com) instance is required for our API to run. If you want to test that your API is functional fill out the `ROCK_API` and `ROCK_TOKEN` in your `.env` file. `ROCK_API` is the URL of your Rock instance with `/api` appended to the end. `ROCK_TOKEN` is the REST key of an admin user. You can get this info on your Rock instance from "Admin Tools" > "Apollos Dashboard" after you've installed the Apollos Plugin.
 
 ![apollos dashboard](https://files-hf537e5zm.vercel.app)
 

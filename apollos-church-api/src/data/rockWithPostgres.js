@@ -1,8 +1,9 @@
-/* eslint-disable import/prefer-default-export */
+/* eslint-disable import/prefer-default-export, max-classes-per-file */
 import { parseGlobalId } from '@apollosproject/server-core';
-import { Person } from '@apollosproject/data-connector-postgres';
+import { Person as postgresPerson } from '@apollosproject/data-connector-postgres';
+import * as OneSignalOriginal from '@apollosproject/data-connector-onesignal';
 
-export class dataSource extends Person.dataSource {
+class personDataSource extends postgresPerson.dataSource {
   async create(attributes) {
     const rockPersonId = await this.context.dataSources.RockPerson.create(
       attributes
@@ -17,7 +18,7 @@ export class dataSource extends Person.dataSource {
 }
 
 // These resolvers make sure that calls to updating profile fields update both the
-export const resolver = {
+const personResolver = {
   Mutation: {
     updateProfileField: async (
       root,
@@ -56,5 +57,71 @@ export const resolver = {
         { field: 'campusId', value: campus.id },
       ]); // updates in Postgres
     },
+    updateUserPushSettings: async (root, { input }, { dataSources }) => {
+      // register the changes w/ one signal
+      const returnValue = await dataSources.OneSignal.updatePushSettings(input);
+
+      // if the pushProviderUserId is changing, we need ot register the device with rock.
+      if (input.pushProviderUserId != null) {
+        await dataSources.PersonalDevice.addPersonalDevice({
+          pushId: input.pushProviderUserId,
+        });
+      }
+
+      try {
+        await dataSources.Person.updateProfile([
+          {
+            field: 'apollosUser',
+            value: true,
+          },
+        ]);
+      } catch (e) {
+        console.warn(e);
+      }
+
+      // return the original return value (which is currentPerson)
+      return returnValue;
+    },
   },
+};
+
+export const Person = {
+  dataSource: personDataSource,
+  resolver: personResolver,
+};
+
+class oneSignalDataSource extends OneSignalOriginal.dataSource {
+  async createNotification({
+    toUserIds = [],
+    to,
+    content = '',
+    heading,
+    subtitle,
+    ...args
+  }) {
+    if (to && to.originId && to.originType === 'rock') {
+      const person = await this.context.dataSources.RockPerson.getFromId(
+        to.originId
+      );
+      return super.createNotification({
+        toUserIds: [person.primaryAliasId],
+        content,
+        heading,
+        subtitle,
+        ...args,
+      });
+    }
+    return super.createNotification({
+      toUserIds,
+      content,
+      heading,
+      subtitle,
+      ...args,
+    });
+  }
+}
+
+export const OneSignal = {
+  ...OneSignalOriginal,
+  dataSource: oneSignalDataSource,
 };
