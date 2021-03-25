@@ -18,6 +18,7 @@ const ContentSingleNavigator = ({ route, navigation, ...props }) => (
       headerRight: ModalCloseButton,
       headerLeft: ModalBackButton,
       headerTitle: '',
+      headerTopInsetEnabled: false,
     }}
   >
     <Screen
