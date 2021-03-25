@@ -64,12 +64,12 @@ const ThemedNavigator = withTheme(({ theme, ...props }) => ({
 
 const App = (props) => (
   <Providers>
-          <BackgroundView>
-    <NavigationContainer
-      ref={NavigationService.setTopLevelNavigator}
-      onReady={NavigationService.setIsReady}
-    >
-      <AppStatusBar />
+    <BackgroundView>
+      <NavigationContainer
+        ref={NavigationService.setTopLevelNavigator}
+        onReady={NavigationService.setIsReady}
+      >
+        <AppStatusBar />
         <ThemedNavigator initialRouteName="ProtectedRoute" {...props}>
           <Screen
             name="ProtectedRoute"
@@ -125,8 +125,8 @@ const App = (props) => (
           />
           <Screen component={Search} name="Search" />
         </ThemedNavigator>
-    </NavigationContainer>
-      </BackgroundView>    
+      </NavigationContainer>
+    </BackgroundView>
   </Providers>
 );
 
