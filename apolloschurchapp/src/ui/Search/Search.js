@@ -18,6 +18,8 @@ const HeaderContainer = styled({
   paddingTop: 8,
 })(View);
 
+const SearchContainer = styled({ height: '100%' })(View);
+
 function Search(props) {
   const [searchText, setSearchText] = useState('');
   const [isFocused, setIsFocused] = useState(true);
@@ -47,9 +49,9 @@ function Search(props) {
             inputRef={searchRef}
           />
         </HeaderContainer>
-        <View style={{ height: '100%' }}>
+        <SearchContainer>
           <SearchFeedConnected searchText={searchText} />
-        </View>
+        </SearchContainer>
       </SafeAreaView>
     </SearchBackground>
   );
