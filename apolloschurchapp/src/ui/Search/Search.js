@@ -4,11 +4,15 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import PropTypes from 'prop-types';
 import { throttle } from 'lodash';
 
-import { styled, BackgroundView } from '@apollosproject/ui-kit';
+import { styled } from '@apollosproject/ui-kit';
 import {
   SearchFeedConnected,
   SearchInputHeader,
 } from '@apollosproject/ui-connected';
+
+const SearchBackground = styled(({ theme }) => ({
+  backgroundColor: theme.colors.background.paper,
+}))(View);
 
 const HeaderContainer = styled({
   paddingTop: 8,
@@ -34,8 +38,8 @@ function Search(props) {
   );
 
   return (
-    <BackgroundView>
-      <SafeAreaView edges={['right', 'top', 'left']}>
+    <SearchBackground>
+      <SafeAreaView edges={['right', 'left']}>
         <HeaderContainer>
           <SearchInputHeader
             onChangeText={throttle(setSearchText, 300)}
@@ -43,11 +47,11 @@ function Search(props) {
             inputRef={searchRef}
           />
         </HeaderContainer>
-        <View>
+        <View style={{ height: '100%' }}>
           <SearchFeedConnected searchText={searchText} />
         </View>
       </SafeAreaView>
-    </BackgroundView>
+    </SearchBackground>
   );
 }
 
