@@ -26,6 +26,7 @@ BUGSNAG:
   ## Optional, but you'll need to remove references to @apollosproject/bugsnag if you don't wish to use.
   API_KEY: ${BUGSNAG_KEY}
 ROCK:
+  URL: ${ROCK_URL}
   API_URL: ${ROCK_API}
   API_TOKEN: ${ROCK_TOKEN}
   IMAGE_URL: https://rock.apollos.app/GetImage.ashx
@@ -56,7 +57,7 @@ CHURCH_ONLINE:
   WEB_VIEW_URL: https://apollos.online.church/
 SUGGESTED_FOLLOWS:
   - michael.neeley@differential.com
-  - 
+  -
     email: vince@classyh.at
     campusId: 45893d11-cd72-4a42-b3ee-08814a937e1a
 ALGOLIA:
