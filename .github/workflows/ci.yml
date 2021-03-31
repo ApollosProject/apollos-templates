@@ -57,7 +57,6 @@ jobs:
     - name: Start Server and Check
       run: |
         yarn start:dev & sleep 30
-        STATUS=`curl -I -s 'http://localhost:4000/.well-known/apollo/server-health' | grep HTTP`
-        echo $STATUS
+        STATUS=`curl -I -s 'http://localhost:4000/.well-known/apollo/server-health' | grep HTTP | tr -d "\r"`
         if [[ "$STATUS" != "HTTP/1.1 200 OK" ]]; then exit 1; fi
       working-directory: apollos-church-api
