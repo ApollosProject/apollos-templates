@@ -1,14 +1,13 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import moment from 'moment';
 
-import { Providers } from '@apollosproject/ui-test-utils';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
 
 import Event from './Event';
 
 describe('The Event component', () => {
-  it('should render', () => {
-    const tree = renderer.create(
+  it('should render', async () => {
+    const tree = await renderWithApolloData(
       <Providers>
         <Event
           event={{
