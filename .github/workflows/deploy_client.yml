@@ -18,12 +18,7 @@ jobs:
         fetch-depth: 0
 
     - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12
-
-    - name: Install Yarn
-      run: npm install -g yarn
+      uses: actions/setup-node@v2
 
     - name: Install Bundler
       run: gem install bundler
@@ -46,12 +41,15 @@ jobs:
     - name: Generate Stories
       run: yarn generate-stories
 
-    - name: Get Introspection Data
+    - name: Generate Schema
+      run: yarn get-schema
+
+    - name: Generate Fragment Types
       run: node ./scripts/get-introspection-data.js
       env:
         APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
 
-    - name: Decrypt Secrets
+    - name: Decrypt Apple API Key
       run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
 
     - name: Fastlane Deploy
@@ -73,12 +71,7 @@ jobs:
         fetch-depth: 0
 
     - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12
-
-    - name: Install Yarn
-      run: npm install -g yarn
+      uses: actions/setup-node@v2
 
     - name: Install Bundler
       run: gem install bundler
@@ -98,10 +91,13 @@ jobs:
       run: yarn
 
     # required to build
-    - name: Generate Stores
+    - name: Generate Stories
       run: yarn generate-stories
 
-    - name: Get Introspection Data
+    - name: Generate Schema
+      run: yarn get-schema
+
+    - name: Generate Fragment Types
       run: node ./scripts/get-introspection-data.js
       env:
         APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
