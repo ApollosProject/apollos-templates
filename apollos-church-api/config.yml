@@ -10,7 +10,8 @@
 APP:
   # This variable is used for generating deep links.
   # It should match whatver is in your Info.plist `CFBundleURLTypes`
-  DEEP_LINK_HOST: apolloschurchapp
+  DEEP_LINK_HOST: ${DEEP_LINK_HOST}
+  UNIVERSAL_LINK_HOST: ${UNIVERSAL_LINK_HOST}
   ROOT_API_URL: ${ROOT_URL}
   JOBS_USERNAME: ${JOBS_USERNAME}
   JOBS_PASSWORD: ${JOBS_PASSWORD}
