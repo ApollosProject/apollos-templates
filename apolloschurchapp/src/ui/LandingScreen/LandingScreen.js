@@ -12,7 +12,6 @@ import {
 } from '@apollosproject/ui-kit';
 
 import { Slide } from '@apollosproject/ui-onboarding';
-import ApollosConfig from '@apollosproject/config';
 
 const Content = styled({
   flex: 1,
@@ -51,7 +50,6 @@ const LandingScreen = ({
         <BrandIcon color={textColor} />
         <Title color={textColor}>{slideTitle}</Title>
         <StyledH4 color={textColor}>{description}</StyledH4>
-        <H4>{`DEBUG: ${ApollosConfig.APP_DATA_URL}`}</H4>
       </Content>
     </Slide>
   </BackgroundView>
