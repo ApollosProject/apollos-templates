@@ -96,15 +96,15 @@
   dependencies:
     xss "^1.0.6"
 
-"@apollosproject/apollo-server-env-mock@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/apollo-server-env-mock/-/apollo-server-env-mock-2.11.0.tgz#a5d8170866f93a3dde6d219dca62a5bf112f05c8"
-  integrity sha512-JCgDiwzcuIZGlrsBvCFn8G7q79HqaohUUKBA6UY5cY+FybSswfFAcNvG9lkLL+HxxCeek95CtkOV1E7C4Z2PJQ==
+"@apollosproject/apollo-server-env-mock@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/apollo-server-env-mock/-/apollo-server-env-mock-2.12.0.tgz#5d9ffc95ef1cf733ce526a837e6dcd1a6ca5d9d4"
+  integrity sha512-y8DK1szrSgp7o6O9qMNrknjJtW8CLUDDiheBERTiUrHrIqoYddTJB9y/4lIiKEuAdLDBaS1Py80As6nmh25mpw==
 
-"@apollosproject/babel-preset-apollos@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/babel-preset-apollos/-/babel-preset-apollos-2.11.0.tgz#11988c6ed3ee51453cf36c9aadadcb1b7b9ced97"
-  integrity sha512-B/5PDXsSLDM/Zz0sMXUW73ucShXJw8WIpzXkNHrCfUBAXjISe23eLx1W8MyaocwmLret6SRYibQbLoxtidZL8w==
+"@apollosproject/babel-preset-apollos@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/babel-preset-apollos/-/babel-preset-apollos-2.12.0.tgz#6d64dbdb7551ed4862af2a4fdb2a5557d1a5ba34"
+  integrity sha512-gylhaMRNsoN1ZuQQo/VrFrMiU5eVKBk+yspsVcwA2E/41eEkHJVha3Lnb+v0/9naYu4tRCoFNYlLBfdLWT9vFQ==
   dependencies:
     "@babel/plugin-proposal-class-properties" "7.4.0"
     "@babel/plugin-proposal-decorators" "7.4.0"
@@ -126,109 +126,108 @@
     "@babel/preset-env" "7.4.2"
     babel-plugin-module-resolver "^3.1.1"
 
-"@apollosproject/bugsnag@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/bugsnag/-/bugsnag-2.11.0.tgz#9988294161193a84e67d8f97a6343f216653925b"
-  integrity sha512-1G8GN/Lg6NUbu310RfNY6lQ1um3AgZWxxFLdeywpxIdO0TkUCVAxWEcaxTGI6G7UX+R2tVVP403G9jSnnalTbw==
+"@apollosproject/bugsnag@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/bugsnag/-/bugsnag-2.12.0.tgz#d324902e389babe6b5814f286adcb99866335c94"
+  integrity sha512-d0RNblkXgnK2Gv4xzDP0jN3Tu8tPnuI4YSraCP1M0pnpaJYutgqG/L+9rNAOIhQrGKya1A9lcMZrN0db5tx0eg==
   dependencies:
     "@bugsnag/js" "7.2.1"
 
-"@apollosproject/config@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/config/-/config-2.11.0.tgz#d270f839c24ecd2f5fa9cf834d41ce47d16b5cd6"
-  integrity sha512-aTMkWcE868W7fVwEVEBSqzrjgP36vVWNE4AQdMOwiQM9Rpq33WBxBdsDoCJFbtVPKriqlgPBKc9OoHR9ZMxU2Q==
+"@apollosproject/config@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/config/-/config-2.12.0.tgz#49ed9f96789842252316460bdd987c0c2aa58818"
+  integrity sha512-pzeMg6wtk+8/TlDXWrfOZrrXhmC8e5QcA8rwlpi9oX0ZB4ps178rySvOUthNxyp1eisGPH3gxMsXLZCKAMrhoQ==
   dependencies:
     js-yaml "^3.12.0"
 
-"@apollosproject/data-connector-algolia-search@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-algolia-search/-/data-connector-algolia-search-2.11.0.tgz#79ed6d054010f30925a7322007d1261e9f1cc843"
-  integrity sha512-sHgYHRtSSHrVQcThTSW3vfrAdcrWAaapYZi1e6G7/50yMqzpPH0kxYqbpRrmU+dfb5mFcreTeJqMlvUcjY2apw==
+"@apollosproject/data-connector-algolia-search@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-algolia-search/-/data-connector-algolia-search-2.12.0.tgz#74823f26926c16720c80f42a9b7ba297993291d1"
+  integrity sha512-/bJjvKCp0swOkQxVeZMncItxH0H8snNQpViLJGPpDdZPbIMESeI6cLPUOANy8m0TIvRQrvDgTEgFiOfMJaG/7A==
   dependencies:
-    "@apollosproject/server-core" "^2.11.0"
+    "@apollosproject/server-core" "^2.12.0"
     algoliasearch "^3.34.0"
     apollo-datasource-rest "^0.6.4"
 
-"@apollosproject/data-connector-analytics@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-analytics/-/data-connector-analytics-2.11.0.tgz#32e1711d7f7da8cda8ee1e260b786ca4d72cca3c"
-  integrity sha512-QrBkKoNVNQp8ZiHbeUlA6CgmXJ4MiB/EzGV7N89i4nAtouFnhWGAiXJDDxfIwsS8ZoacljxOQId1JfkWgrQhQQ==
+"@apollosproject/data-connector-analytics@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-analytics/-/data-connector-analytics-2.12.0.tgz#df31fff5bc5e6bd93f0620dccc8b350cdf601cd5"
+  integrity sha512-5lbjbWTpc2eLA+C5xS5e8YR2+pWqvDEi3e9nR7S/2+DSgvB6w2SIne1Qq7nPqRJ4DPRrVBiC30UrN3slhh0e6Q==
   dependencies:
     analytics-node "^3.4.0-beta.1"
     apollo-datasource "^0.2.0"
     universal-analytics "^0.4.20"
 
-"@apollosproject/data-connector-bible@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-bible/-/data-connector-bible-2.11.0.tgz#35b089678546f82e9e181fa30b13ecfd3fbaa460"
-  integrity sha512-X8cNSLEDyL7bNbrgNlRj+9aIl8d9Rpvbo3xYL1ecdyQnrmQfvqJk7Kq5rHzdbpoooaEry2bbeYecHl6QyXGOIw==
+"@apollosproject/data-connector-bible@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-bible/-/data-connector-bible-2.12.0.tgz#72fde9bcbd04e558c3898122f0ba899c07d6d446"
+  integrity sha512-EfoXPwT709zpB46ZrIh3Xp7CsKv5TU9ekCGK2Fg3Q0IA235TmG+jSmbOqGQXaZnpt1bSbTBM0+GubZZnc3vz9Q==
   dependencies:
-    "@apollosproject/server-core" "^2.11.0"
+    "@apollosproject/server-core" "^2.12.0"
     apollo-datasource-rest "^0.6.4"
     lodash "^4.17.11"
 
-"@apollosproject/data-connector-church-online@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-church-online/-/data-connector-church-online-2.11.0.tgz#435400b856cc54714d8c4c0961e2030d9f51d803"
-  integrity sha512-rSat+UXZQHNasQ3msknborRd+NsQvdRLsM5g19DbxugYgZuSw42cgQghg7RM2rbNBVuGqwPFrIwTZmXkXWm4hg==
+"@apollosproject/data-connector-church-online@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-church-online/-/data-connector-church-online-2.12.0.tgz#10ef5a43a36c5de7d66b9b2600fff3da976d1f06"
+  integrity sha512-EZjWKvkurAv2zteJEYUM10rZ2XksUEnoP9HpU10VfFfJXfJMgWXSqIXsZUJboUh7AT+zxTjY8Z/R9+pMuf3iPw==
   dependencies:
-    "@apollosproject/server-core" "^2.11.0"
+    "@apollosproject/server-core" "^2.12.0"
     apollo-datasource-rest "^0.6.4"
 
-"@apollosproject/data-connector-cloudinary@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-cloudinary/-/data-connector-cloudinary-2.11.0.tgz#0c336b7a91f09231f4f3206123a62c63334d1174"
-  integrity sha512-xqPWqF/q6rVBW7k4zTwZqekZxEomn2l4XfwoIgUef9cgCS7jvK4AteM3X0/bOR3NaTbOW6SK9cqPTOEvUbP77w==
+"@apollosproject/data-connector-cloudinary@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-cloudinary/-/data-connector-cloudinary-2.12.0.tgz#1d24362a0f0cdd619274ac4b02ef94874e889c59"
+  integrity sha512-75gs269r/UmMWINk9TnOct4grSKYqfeM/f8fsLk8Oo9HGeEDgMUa4L+NQ8rfVnKvogmqJbE7Sx/xxEIOJ2LN9A==
   dependencies:
     cloudinary "1.14.0"
 
-"@apollosproject/data-connector-onesignal@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-onesignal/-/data-connector-onesignal-2.11.0.tgz#917dabe771b97816f6f41bf2c893ecc898d9a64b"
-  integrity sha512-kNdrPJ8EwRLDhx2TMR/jNrrEIgaVWhF9ieUMkUVLLpyevQ5DeNLyFqaKm/TA+FuGjO+J/Si3jDcVwM/VcIhUEQ==
+"@apollosproject/data-connector-onesignal@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-onesignal/-/data-connector-onesignal-2.12.0.tgz#e10ace4acdfd786ea76e45990d6bb457efc3d17e"
+  integrity sha512-e0iTKKiI/46gfyRx/cI/YUkLAxd+mmjhER4InKgFBraz9cNVMfzdXjyfRIx/DNZw787VDakiLmA3u3JKG587bw==
   dependencies:
-    "@apollosproject/server-core" "^2.11.0"
+    "@apollosproject/server-core" "^2.12.0"
     apollo-datasource-rest "^0.6.4"
 
-"@apollosproject/data-connector-passes@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-passes/-/data-connector-passes-2.11.0.tgz#b895372e6cd12d8aab5852cc6ffb6586f545a5f6"
-  integrity sha512-yWd71CNvd+YrYDfaFW1c3w8Y8veEnVleLOJhjgFZhssdIOC/UrCSnu2JXDs1zPNju4gFHJlODlCpDJ+1hLM4tQ==
+"@apollosproject/data-connector-passes@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-passes/-/data-connector-passes-2.12.0.tgz#d7ce584f27c2a8413bb5ccf1e6bae9fdd7d90006"
+  integrity sha512-/3sAyBL3C55xAVOrLnT/z8jToCMW2JMrZZAmFtCl1jiGICIw96aIjy0h+bLCn3D8y5QQ+q6yMBae3X+/XGgOkQ==
   dependencies:
-    "@apollosproject/server-core" "^2.11.0"
+    "@apollosproject/server-core" "^2.12.0"
     apollo-datasource "^0.4.0"
     datauri "^1.1.0"
     lodash "^4.17.11"
     passkit-generator "1.5.9"
     qrcode "^1.3.3"
 
-"@apollosproject/data-connector-postgres@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-postgres/-/data-connector-postgres-2.11.0.tgz#e5fa0d12c98febf199bdcff9d5db15c5062ead23"
-  integrity sha512-r5UMcq5SsmbXqtG2p5rNP8SbFrXbi4cn5q4oX2FFt64swj1hkvuFzGFr89QSYtOS0Povi4meByqiW4pHTaH12w==
+"@apollosproject/data-connector-postgres@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-postgres/-/data-connector-postgres-2.12.0.tgz#d1ce1fe11ad74a243a2fffe53f337d8b9c6b546c"
+  integrity sha512-wduVmIlNhDWa0VCrQnMjEre0cfnbcD7t73fRd9QvWaM9iiLWPKhDJEJ+K8LNMwXaVMGMRvIihE7sWCLFXIOUSQ==
   dependencies:
-    "@apollosproject/data-schema" "^2.11.0"
-    "@apollosproject/server-core" "^2.11.0"
+    "@apollosproject/data-schema" "^2.12.0"
+    "@apollosproject/server-core" "^2.12.0"
     lodash "^4.17.11"
     pg "^8.5.1"
     pg-hstore "^2.3.3"
     sequelize "^6.3.5"
     umzug "^3.0.0-beta.15"
 
-"@apollosproject/data-connector-redis-cache@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-redis-cache/-/data-connector-redis-cache-2.11.0.tgz#b20f7dbf7ffb768a864f7c284ece1dba8010d817"
-  integrity sha512-aQ8xDEc7IFwcQewIPCM6IwDNTKQQJnghcums6GaUwGI67j9P0gs0yOrvLiA/FentGVLUmnRB3ulr/DwiXK45Rw==
+"@apollosproject/data-connector-redis-cache@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-redis-cache/-/data-connector-redis-cache-2.12.0.tgz#130532ebec076792b36083df942815005b2c5a8d"
+  integrity sha512-JZ6AaGaQfXToGFd/KqXn5St0PvnPCq+jpTQD2zsP1W0KPcmrNUDRUUKSifsZCjtO3AhGy7W6zz403FT8z+tRdQ==
   dependencies:
     apollo-datasource "^0.2.0"
     ioredis "4.14.1"
 
-"@apollosproject/data-connector-rock@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-rock/-/data-connector-rock-2.11.0.tgz#a3d145aa88c0a27c8b78fdbd393c7444e5014f43"
-  integrity sha512-bBilV04WWWdvqkqelD33cwq19GeH46SSC5uUXB3TXvViiCd3J6+hh2fbBBE0Nda45/1tc+Q/Ur45MRHLHYK0OA==
+"@apollosproject/data-connector-rock@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-rock/-/data-connector-rock-2.12.0.tgz#aba825e84a892f2a80817bb96922833a149c6f94"
+  integrity sha512-i06O50ZMdMmxtFplRhS4zbBX7RfpcUu5wP/LkzBeL+QwYg+OFnEVnsjbnlT71YsJm/SBtA2mqWH3992ggN0ONA==
   dependencies:
-    "@apollosproject/server-core" "^2.11.0"
     awesome-phonenumber "^2.4.2"
     form-data "^2.3.3"
     hyphenation.en-us "^0.2.1"
@@ -241,47 +240,47 @@
     natural "^0.6.2"
     sanitize-html "^1.19.3"
 
-"@apollosproject/data-connector-twilio@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-twilio/-/data-connector-twilio-2.11.0.tgz#342e770254114db2728acaedf6dbc24d987cc99c"
-  integrity sha512-2yI1KnS7lEWZkRkyvNWdMzISc2jHIHmw4+fAtE3YyANm5x38JJPIiMCZVAaZ+8p+xYymiUw8rHrfn7+yHzj6eQ==
+"@apollosproject/data-connector-twilio@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-connector-twilio/-/data-connector-twilio-2.12.0.tgz#c58d398ca0ea1b56ae9ed96518757d40cb86bf20"
+  integrity sha512-IiHFi8sBLR0Ufz54p20XPM6i88gygY76zfV2gcP2fCPcEB7S9ojGcq/P7lCzHocjOS6RzExKyTolK74bjMmZBw==
   dependencies:
     apollo-datasource "^0.2.0"
     twilio "^3.28.0"
 
-"@apollosproject/data-schema@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/data-schema/-/data-schema-2.11.0.tgz#b62e48c078dbdf22173aad4a07407d71e21ebe44"
-  integrity sha512-q1TQgCUQ347JQKRgvg6YTpVdRlCGI9guxG9xEXuYxyDoPJbfqER/xe4Xtw0W28E71XDmvI3D7XOVq5sNLpMGyQ==
+"@apollosproject/data-schema@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/data-schema/-/data-schema-2.12.0.tgz#beb73d183e1e3ff5a8c96e11d381de78ccb0b552"
+  integrity sha512-WH68bwHpHa/gtd/XTAEAzYydIZGpqg2ZWqVQVG824XoMH8kOoBpeiUmuRl2/Xv+fMGFzEQm0xd5oiC4rMhV0kw==
   dependencies:
     graphql-tag "^2.10.0"
 
-"@apollosproject/eslint-config@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/eslint-config/-/eslint-config-2.11.0.tgz#c4eb69c0d230d95d05adf041ad2dffda206155d9"
-  integrity sha512-O0UoyBJSbVYJvISq4n/TC5LcGs2EVgke7AFk/TRjXHL8pny2644cv1jEo4vRkUsyrZzS+adLxQpJ2cvIjgC11Q==
+"@apollosproject/eslint-config@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/eslint-config/-/eslint-config-2.12.0.tgz#eb8ffa077c2f6e298541d1077474acb39c247291"
+  integrity sha512-Mm146ZxXm6zZKXNvn+KEVCD7N7Oym14W7LmXjbDAIIli7zfJ/syqbV7xhgpBI4igZ9lB3bXEIgOK5d4+/bpNlg==
 
 "@apollosproject/react-native-airplay-btn@^0.2.0":
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/@apollosproject/react-native-airplay-btn/-/react-native-airplay-btn-0.2.0.tgz#19c1c7154e6c04fd4d5a5587faf6a69cb34d8a79"
   integrity sha512-yf5TRao2v+jq9LtzqAt4MBZ4OgYR01YsyfbU9TC8/D+M9TWkYTsU8uhWpwYyxN4K1dWBd9jagyDMU0fpcLhkPg==
 
-"@apollosproject/rock-apollo-data-source@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/rock-apollo-data-source/-/rock-apollo-data-source-2.11.0.tgz#d10864976a4b56d3ae3fbb1216872b7bf5a398ab"
-  integrity sha512-AU7ZGWrgf0NJFqBwo0mKMtkeF0pLTankNhWMLmWNI/xmdNZSGITPPp5D2FcrzaPNJ6NUoclCcedPxnEefPzCRA==
+"@apollosproject/rock-apollo-data-source@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/rock-apollo-data-source/-/rock-apollo-data-source-2.12.0.tgz#a5a9af22f2f59d212702d600555489759a28715f"
+  integrity sha512-BJocvCfPg0rFTQLfmijb7d+/wZ9I+knwjI6ItRHigJYOdHohXDddQkjxF+ujby80JaJTdQuGcg5+xN0SAq0pfw==
   dependencies:
     apollo-datasource-rest "^0.6.4"
     apollo-server-env "^2.3.0"
     lodash "^4.17.11"
     with-query "^1.1.2"
 
-"@apollosproject/server-core@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/server-core/-/server-core-2.11.0.tgz#f4112121970fd3a92480f0a23cfefe3a4f1edfc1"
-  integrity sha512-L/qtHhp3FBEaio+oSMjKhWM+IoibIhIYsR0aKjz42yIz2bfKPiZ3cYu3+QGCOwv9q9qrz2mmFMqUQJ7b6QdQrg==
+"@apollosproject/server-core@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/server-core/-/server-core-2.12.0.tgz#4f98206ec779510f3539a357bf490085880a10a5"
+  integrity sha512-hLkggsaYnNefgtBszMX+eNxEd1lMzshbsx1N3HF2cashzdXKTVusEKdMbuvfJ9+61WL+dklqgwzp5MWeWiT7ow==
   dependencies:
-    "@apollosproject/data-schema" "^2.11.0"
+    "@apollosproject/data-schema" "^2.12.0"
     apollo-server-caching "^0.4.0"
     bull "^3.11.0"
     bull-board "^0.1.1"
@@ -290,51 +289,51 @@
     graphql-tag "^2.10.0"
     lodash "^4.17.11"
 
-"@apollosproject/ui-analytics@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-analytics/-/ui-analytics-2.11.0.tgz#ce088ab6dd9b0b0db6dca5bd7109b101eaacaeda"
-  integrity sha512-QqBdVoU4yv12jgCJWB2brnaNvgJs36WvEVzyesE/+obxRdtvuE7Hl6kaRGTCrBDGi2vebDuu+PlJMSl9Iyg2rQ==
+"@apollosproject/ui-analytics@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-analytics/-/ui-analytics-2.12.0.tgz#97d4c0f907a9e26a935f1dfa7f650253138488bb"
+  integrity sha512-fA2EbCtyGQWV5iasAIT/BdNMEas9Uij2W0wUg0lrfqO6sXdugeoCaX5FzYKjD11TEywn2H+3h0/ha2JDp+JwDA==
   dependencies:
     graphql-tag "2.9.2"
     react-native-device-info "^4.0.1"
 
-"@apollosproject/ui-auth@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-auth/-/ui-auth-2.11.0.tgz#1b5cdfc257897ddcdd2bb4d792b62d8f230abc19"
-  integrity sha512-1GvHdtSYr0TU7A3xdaRpk+UB3j7wlBpxyIyhrMCFgxS0TU2ZdGMKVqI4XitvwtNu5XDY6KIUvRrmlvvEDmFjDg==
+"@apollosproject/ui-auth@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-auth/-/ui-auth-2.12.0.tgz#22da85516edda305c7d26136f34bece3bfc34a9e"
+  integrity sha512-8k2gIuG2P4EHdSxNN6+A3BGJs7AZsD6NgivpjZ6DrImSWGW3/8ptgqwTrTvZyOQYWYhrvJ411FnX48L0ZYoMpA==
   dependencies:
     formik "1.5.1"
     graphql-tag "2.9.2"
     yup "^0.27.0"
 
-"@apollosproject/ui-connected@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-connected/-/ui-connected-2.11.0.tgz#05ba3c6641aa92a7c6f06b8c3961f2919229e233"
-  integrity sha512-YY5dexX4Lk4vHIj5B5/sZul/nyAyO+xZDI9ZqE/Z8Lfi1OKa7okTlscBI0C3KuNhVX9XMwqcsmhu9726DClsbA==
+"@apollosproject/ui-connected@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-connected/-/ui-connected-2.12.0.tgz#bff8492912410bf63de7b58091eda531e0d09f48"
+  integrity sha512-9tsKMTKXefvTMRAcO1S2W6XVopC3YoKuJYrdiWppMQXc6JQSV4Wu0iWEbMg7KdPFwkJrF14LjxzO3a8m240oPA==
   dependencies:
     apollo-upload-client "14.1.3"
     graphql-tag "2.9.2"
     lodash "^4.17.11"
 
-"@apollosproject/ui-fragments@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-fragments/-/ui-fragments-2.11.0.tgz#ab482aaaecf0add75795569e9942f3dfc0e487b2"
-  integrity sha512-7KNlSpiJSwAw2oIC7NVDZf9u/hPZcGiFMu4yTiPfvCSt+Uby7Q1EZsz2K0mXdsZB4uZw55VffrpJJhZO/qeeYw==
+"@apollosproject/ui-fragments@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-fragments/-/ui-fragments-2.12.0.tgz#5d27bfa91da8d63a81c64d3f0df212fc932e2622"
+  integrity sha512-FN7Wof4k+LacSlDhO966kLwl0JGpeTqQUVYRyBqNO5VJ3lSB5M+x7La1NLUmBFDMnCIjufXjFtzYU96g57lqJg==
   dependencies:
     graphql-tag "2.9.2"
 
-"@apollosproject/ui-htmlview@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-htmlview/-/ui-htmlview-2.11.0.tgz#9b27a3682f86cf400d51202135e46d4978737451"
-  integrity sha512-s7Yhb4n0YmTxV6uqrcxqXH87AglQHeqQQ97lHLTvrE8U784nc3NRI1vcQxpGiFJqf/9zkkMeMUXph1sZTxCo/Q==
+"@apollosproject/ui-htmlview@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-htmlview/-/ui-htmlview-2.12.0.tgz#6a638bcdf2ab1d8d17d85f05a3c2c01a267c9ddb"
+  integrity sha512-dUfS4Xp/mCIUbXfl4YtPcyOWip3ANvebl+GFYgj0xGPrWnVf+jYamZtLQSpjHB1JlPu2M1y116KvlTvh8UmkEA==
   dependencies:
     entities "^1.1.2"
     htmlparser2 "3.9.2"
 
-"@apollosproject/ui-kit@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-2.11.0.tgz#33caa89d2e721981e3c3900815d2c8eb5131f826"
-  integrity sha512-yrTGmbOzPRcv58ndmJ9Hz+0SLH1xlmIZ5C1qGijaD6cDwVMEHiXq6wk9gNYf7R0aFAT19XPj72X6byWBJyn1qA==
+"@apollosproject/ui-kit@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-kit/-/ui-kit-2.12.0.tgz#ebe8e69312b267e244a701410eb875a5d54d9f44"
+  integrity sha512-CS5C6mIVgdA2TNxdvdFTzlIpU6iN5QsRWEeu4fG8LNnKIvjlirpGiTAy1MwlSxfPLMqnnTgC9i/AS2gRujYD8Q==
   dependencies:
     "@react-native-community/blur" "^3.6.0"
     color "^3.1.0"
@@ -347,36 +346,36 @@
     recompose "^0.30.0"
     rn-placeholder "1.2.0"
 
-"@apollosproject/ui-mapview@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-mapview/-/ui-mapview-2.11.0.tgz#56e382cc05f30ca2f63bc8896ef93cff8f86561e"
-  integrity sha512-nF3yLEy1TeBwmRQIqxxqZOqRkK5axCIbMBVcT5UDRz9TucDpMDr9929RR0KcMDwKOu/6hlxkXMIuP20da75YVA==
+"@apollosproject/ui-mapview@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-mapview/-/ui-mapview-2.12.0.tgz#5344153361b18e9487d3755ea8b0c318843fb179"
+  integrity sha512-OLBXXOHtj14eK4VRijKYW9at4Ugvn7oOWRLS60gVCeJQa+o6WEW1EFYmiCsiLPTiHwU5/W8UHN53yv9z06EWeg==
   dependencies:
     graphql-tag "2.9.2"
 
-"@apollosproject/ui-media-player@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-media-player/-/ui-media-player-2.11.0.tgz#2976f510099734f94da51553f088136d7e8a04a7"
-  integrity sha512-o+ELe0j11hJ31ikz419Bhc6dJxA67MpurOHtCbZybxwW1Ho0voaiuls1fPnB6czFuFbWhSSPDJUmixW1LwqFNg==
+"@apollosproject/ui-media-player@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-media-player/-/ui-media-player-2.12.0.tgz#ed3fa083617f4e296d8b665fce4f51e1851b8f46"
+  integrity sha512-dijPg5SwPNX5EYJx+emlFQgec0NNeQ0UaZ16015p24HP0ZqUmZSLF5kcrTYRhzLyt6YQ5ze+7ExTL3O+ctqyqA==
   dependencies:
     "@types/color" "^3.0.1"
     color "^3.1.2"
     use-debounce "5.1.0"
 
-"@apollosproject/ui-notifications@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-notifications/-/ui-notifications-2.11.0.tgz#b46ce32a7f1f0ad17309afd18128c9db640ef051"
-  integrity sha512-kaeTbVQjESctJXv3MEOKu3ZvxPMch6t8y6sIi3v/yh82bKo+8+FPYY2WZc/F0TxqOGY8zqEnCJ157XdFmLWVaA==
+"@apollosproject/ui-notifications@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-notifications/-/ui-notifications-2.12.0.tgz#9dcdd034c23028c156d505c482078fb0cda4e74f"
+  integrity sha512-PVFT1tsM6jpx3Gf6hs/Qufxqrg4/mVSmhOcG27CZ6h0Kp012OZ0kcWWoiwyvBKuNDaSebqsn7xbXWnTBAu5c5A==
   dependencies:
     graphql-tag "2.9.2"
     lodash "^4.17.11"
     react-native-permissions "^2.0.5"
     url "^0.11.0"
 
-"@apollosproject/ui-onboarding@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-onboarding/-/ui-onboarding-2.11.0.tgz#c1e72285670b27a2c422d1b308fd7d5cc20e9a5c"
-  integrity sha512-Krq1H3UIK7/04l9/8EfKBhJZ5MK8+IS7sL02qzh9WlKOXc69DPPKQMS4fI/36YKG/uKAUb4WPrxZdRfjpGetXA==
+"@apollosproject/ui-onboarding@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-onboarding/-/ui-onboarding-2.12.0.tgz#b816b063e4240cdb928d6ba5794a8001cfba911e"
+  integrity sha512-TfGnls5l7yDFpCcPeqObWybUPBH9Q984bLGuddTVdBNM8b2vYWrmVdRAR/pOS+mIhvDxT/3sKrk7n2YfhDp0nA==
   dependencies:
     "@react-native-community/async-storage" "^1.5.1"
     formik "1.5.1"
@@ -387,17 +386,17 @@
     react-native-swiper "^1.5.14"
     yup "0.26.6"
 
-"@apollosproject/ui-passes@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-passes/-/ui-passes-2.11.0.tgz#f12cedd64fe2a8503f8c4bd949978be56de7b2f8"
-  integrity sha512-IKRKsdiNVFTW07fv4AzzxKnhnU9xNGpFWshI+H9YJufFFgbct4zZzVzUtQBvlDd8I4wXCxXkI6wS8bsJksFncg==
+"@apollosproject/ui-passes@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-passes/-/ui-passes-2.12.0.tgz#2a51d3d666212335906130fc065faf26dc1f4461"
+  integrity sha512-qAqK96rApAtEG1V207MKuzIm35+p0EUUpsOlY7GzaCYAknh5CLZJQbAkUynp6wOUe6TZ2eCo0TvJ3EqOUOoiKA==
   dependencies:
     graphql-tag "^2.10.1"
 
-"@apollosproject/ui-prayer@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-prayer/-/ui-prayer-2.11.0.tgz#4a9c001060743bc13e586c4ca6aca422cfdaafe2"
-  integrity sha512-FxisOfCzFtBEPbEMfE+1l7ZN+h520/okWIr4jVpjPP4CJJ+62EyJ9hKBGoek0UFQHh+lVy6uh7fE05RgQqG3AQ==
+"@apollosproject/ui-prayer@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-prayer/-/ui-prayer-2.12.0.tgz#ccc8525147eeee316abc4c2cba90bd9cd6f09f50"
+  integrity sha512-du69cCdADPuze1DfaoviqnvuBdvYUvIrB75H4YbMiZJeWZSYjKpVauHzMuv1EzzPgq5oAbJNCvAG9Ddz4BR1Ng==
   dependencies:
     formik "1.5.1"
     graphql-tag "2.9.2"
@@ -406,25 +405,25 @@
     react-native-swiper "^1.6.0"
     yup "0.26.6"
 
-"@apollosproject/ui-scripture@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-scripture/-/ui-scripture-2.11.0.tgz#d5e997a138dd993baa7ba1ef74427d48b95f43e6"
-  integrity sha512-sYlOjZxww8s8yCmrHMOHHs5GrN1xdTOolGCjEPN0SrZXvkX/Nzac5NdVGO8+2L3XPfkuLJbrJPEr4XpgeeU7Xw==
+"@apollosproject/ui-scripture@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-scripture/-/ui-scripture-2.12.0.tgz#b62d8ae6abbbe076b1401aa3bb9760684f47c08b"
+  integrity sha512-3+07pEhV32LhAytqmhB5iApzh+DAq4ZA8LcrSrqlTePT19OiHJBYmFnzD0XRGMx7uG9iXc4YDDjy335zmkWl/Q==
 
-"@apollosproject/ui-storybook@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-storybook/-/ui-storybook-2.11.0.tgz#33d80f6c829e44bc4c069f04a691e68ffa5781f2"
-  integrity sha512-qND+Nz1BEo7Efc2U1Jtwr9Ay2Lr2kRa1aVb0vc0N6dncDD4d1x/HdBXio2u+FTUOwkFnUABSL3ACkI3suOIHxQ==
+"@apollosproject/ui-storybook@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-storybook/-/ui-storybook-2.12.0.tgz#011e0d3e71d9c994a2317f9c3a81098b383d4203"
+  integrity sha512-qsYLFR/j8ztztBF0gbPyHYtLt7RKkfFFOCripVuNk9nzOay5AmDnviM/6xHZK+u4XSRK6Y8eWej+GekNUa4T6g==
   dependencies:
     "@storybook/addon-actions" "6.0.28"
     "@storybook/addon-links" "6.0.28"
     "@storybook/addons" "6.0.28"
     "@storybook/react-native" "5.3.23"
 
-"@apollosproject/ui-test-utils@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@apollosproject/ui-test-utils/-/ui-test-utils-2.11.0.tgz#0c429c5efe28d86814eebfa46c0e6bd3692710a9"
-  integrity sha512-Tqb1C9u886MTtvXesdQL/Du+sOqH1iVei9qYjNHjnAVHLAItIlgDhohInyJ0O/JgHP8vt0KPMr6x/OAEZ0VIQQ==
+"@apollosproject/ui-test-utils@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@apollosproject/ui-test-utils/-/ui-test-utils-2.12.0.tgz#3ca7c77d3f72602a8a502460947cc5b6655a8ed1"
+  integrity sha512-Z3sfCvcJR1zwPN9HuyYM5jDMn62nyhSIcpBMkHGpEfdr19O9ZtfQXaEhgWC4+hYk+R3MffS0qaym2ttJF3fiAg==
 
 "@babel/cli@^7.4.5":
   version "7.12.1"
