@@ -2,6 +2,9 @@
 # this script will bump versions in the packages using the add-packages.sh scripts
 # and then bump the Apollos versions to be used by the upgrade tool
 
+#DEBUG
+curl 'https://api.github.com/repos/apollosproject/apollos-apps/tags'
+
 # get latest apps version
 VERSION=$(
 	curl -s 'https://api.github.com/repos/apollosproject/apollos-apps/tags' |
