@@ -7,14 +7,8 @@ curl 'https://api.github.com/repos/apollosproject/apollos-apps/tags'
 
 # get latest apps version
 VERSION=$(
-	curl -s 'https://api.github.com/repos/apollosproject/apollos-apps/tags' |
-		python -m json.tool |
-		grep '\"name\"' |
-		cut -d ':' -f 2 |
-		sed 's/&quot;/\"/g' |
-		sed -E 's/\"v(.*)\".*/\1/g' |
-		sed -n 1p |
-		tr -d '[:space:]'
+	curl -s "https://api.github.com/repos/apollosproject/apollos-apps/tags" |
+		python -c "import sys, json; print json.load(sys.stdin)[0]['name']"
 )
 
 PKG=$(npm show @apollosproject/config version)
