@@ -8,7 +8,7 @@ curl 'https://api.github.com/repos/apollosproject/apollos-apps/tags'
 # get latest apps version
 VERSION=$(
 	curl -s "https://api.github.com/repos/apollosproject/apollos-apps/tags" |
-		python -c "import sys, json; print json.load(sys.stdin)[0]['name']"
+		python -c "import sys, json; print json.load(sys.stdin)[0]['name'][1:]"
 )
 
 PKG=$(npm show @apollosproject/config version)
