@@ -29,6 +29,10 @@
 			</array>
 		</dict>
 	</array>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>mailto</string>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>0</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
