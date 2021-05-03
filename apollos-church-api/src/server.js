@@ -72,7 +72,7 @@ const apolloServer = new ApolloServer({
 const app = express();
 
 // password reset
-app.get('/forgot-password', cors(), (req, res) => {
+app.get('/forgot-password', (req, res) => {
   res.redirect(ROCK.FORGOT_PASSWORD_URL);
 });
 
