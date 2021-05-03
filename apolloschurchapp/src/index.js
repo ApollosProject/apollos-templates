@@ -21,7 +21,6 @@ import ApollosConfig from '@apollosproject/config';
 
 import Providers from './Providers';
 import ContentSingle from './content-single';
-import NodeSingle from './node-single';
 import Event from './event';
 import Tabs from './tabs';
 import LandingScreen from './ui/LandingScreen';
@@ -92,11 +91,6 @@ const App = (props) => (
               title: 'Content',
               stackPresentation: 'push',
             }}
-          />
-          <Screen
-            name="NodeSingle"
-            component={NodeSingle}
-            options={{ title: 'Node' }}
           />
           <Screen name="Event" component={Event} options={{ title: 'Event' }} />
           <Screen
