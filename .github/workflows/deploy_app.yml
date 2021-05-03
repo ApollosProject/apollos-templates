@@ -5,6 +5,22 @@ on:
     branches: [ master ]
 
 jobs:
+  codecov:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+
+    - name: Install Dependencies
+      run: yarn --ignore-scripts
+
+    - name: Jest
+      run: yarn test -- -- -- --forceExit
+
+    - name: Codecov
+      uses: codecov/codecov-action@v1
+
   ios:
     defaults:
       run:
