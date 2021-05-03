@@ -10,7 +10,8 @@
 APP:
   # This variable is used for generating deep links.
   # It should match whatver is in your Info.plist `CFBundleURLTypes`
-  DEEP_LINK_HOST: apolloschurchapp
+  DEEP_LINK_HOST: ${DEEP_LINK_HOST}
+  UNIVERSAL_LINK_HOST: ${UNIVERSAL_LINK_HOST}
   ROOT_API_URL: ${ROOT_URL}
   JOBS_USERNAME: ${JOBS_USERNAME}
   JOBS_PASSWORD: ${JOBS_PASSWORD}
@@ -150,14 +151,9 @@ ROCK_MAPPINGS:
     - 6
     - 8
 
-  # Apollos will pull content items from these channels and expose them on the user feed
-  # However, it will not expose the channel itself.
   # These channels are also pulled when indexing searchable content.
-  FEED_CONTENT_CHANNEL_IDS:
+  ACTIVE_CONTENT_CHANNEL_IDS:
     - 6
-
-  CAMPAIGN_CHANNEL_IDS:
-    - 11
 
   SERMON_CHANNEL_ID: 5
 
@@ -179,7 +175,11 @@ HOME_FEATURES:
           relatedNode: { __typename: Url, url: 'https://www.google.com' },
         },
       ]
-  - algorithms: [USER_FEED]
+  - algorithms:
+    - type: CONTENT_FEED
+      arguments:
+        channelIds:
+          - 6
     type: HeroList
     primaryAction:
       # Right now, you hardcode exactly what GraphQL should return.
@@ -193,9 +193,13 @@ HOME_FEATURES:
     isCard: false
     type: PrayerList
     title: Daily Prayer
-  - algorithms: [CAMPAIGN_ITEMS]
+  - algorithms:
+      - type: CAMPAIGN_ITEMS
+        channelIds:
+          - 9
     type: HeroList
     isFeatured: true
+    subtitle: Featured
   - title: FOR YOU
     algorithms: [SERMON_CHILDREN, PERSONA_FEED]
     subtitle: Explore what God calls you to today
@@ -211,23 +215,26 @@ HOME_FEATURES:
     subtitle: What's happening at apollos?
     type: ActionList
     algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 13
+          channelIds:
+            - 13
       - type: UPCOMING_EVENTS
 
 DISCOVER_FEATURES:
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 3
+          channelIds:
+            - 3
           limit: 3
     type: HorizontalCardList
     subtitle: Sermons
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 5
+          channelIds:
+            - 5
           limit: 3
     type: HorizontalCardList
     subtitle: Podcasts
@@ -239,9 +246,10 @@ DISCOVER_FEATURES:
         id: 5
         name: Podcasts
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 7
+          channelIds:
+            - 7
           limit: 3
     type: HorizontalCardList
     subtitle: Devotionals
@@ -253,9 +261,10 @@ DISCOVER_FEATURES:
         id: 7
         name: Devotionals
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 6
+          channelIds:
+            - 6
           limit: 3
     type: HorizontalCardList
     title: Videos
@@ -267,9 +276,10 @@ DISCOVER_FEATURES:
         id: 6
         name: Videos
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 8
+          channelIds:
+            - 8
           limit: 3
     type: HorizontalCardList
     subtitle: Something Else
