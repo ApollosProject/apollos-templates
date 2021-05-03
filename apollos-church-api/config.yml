@@ -150,10 +150,8 @@ ROCK_MAPPINGS:
     - 6
     - 8
 
-  # Apollos will pull content items from these channels and expose them on the user feed
-  # However, it will not expose the channel itself.
   # These channels are also pulled when indexing searchable content.
-  FEED_CONTENT_CHANNEL_IDS:
+  ACTIVE_CONTENT_CHANNEL_IDS:
     - 6
 
   CAMPAIGN_CHANNEL_IDS:
@@ -179,7 +177,11 @@ HOME_FEATURES:
           relatedNode: { __typename: Url, url: 'https://www.google.com' },
         },
       ]
-  - algorithms: [USER_FEED]
+  - algorithms:
+    - type: CONTENT_FEED
+      arguments:
+        channelIds:
+          - 6
     type: HeroList
     primaryAction:
       # Right now, you hardcode exactly what GraphQL should return.
@@ -211,23 +213,26 @@ HOME_FEATURES:
     subtitle: What's happening at apollos?
     type: ActionList
     algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 13
+          channelIds:
+            - 13
       - type: UPCOMING_EVENTS
 
 DISCOVER_FEATURES:
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 3
+          channelIds:
+            - 3
           limit: 3
     type: HorizontalCardList
     subtitle: Sermons
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 5
+          channelIds:
+            - 5
           limit: 3
     type: HorizontalCardList
     subtitle: Podcasts
@@ -239,9 +244,10 @@ DISCOVER_FEATURES:
         id: 5
         name: Podcasts
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 7
+          channelIds:
+            - 7
           limit: 3
     type: HorizontalCardList
     subtitle: Devotionals
@@ -253,9 +259,10 @@ DISCOVER_FEATURES:
         id: 7
         name: Devotionals
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 6
+          channelIds:
+            - 6
           limit: 3
     type: HorizontalCardList
     title: Videos
@@ -267,9 +274,10 @@ DISCOVER_FEATURES:
         id: 6
         name: Videos
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 8
+          channelIds:
+            - 8
           limit: 3
     type: HorizontalCardList
     subtitle: Something Else
