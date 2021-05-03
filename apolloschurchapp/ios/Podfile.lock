@@ -70,9 +70,6 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
-  - google-cast-sdk (4.3.0):
-    - google-cast-sdk/Core (= 4.3.0)
-  - google-cast-sdk/Core (4.3.0)
   - OneSignal (2.15.2)
   - OpenSSL-Universal (1.0.2.20):
     - OpenSSL-Universal/Static (= 1.0.2.20)
@@ -254,15 +251,6 @@ PODS:
   - react-native-geolocation (2.0.2):
     - React
   - react-native-geolocation-service (5.1.1):
-    - React
-  - react-native-google-cast (3.3.0):
-    - React
-    - react-native-google-cast/Default (= 3.3.0)
-  - react-native-google-cast/Default (3.3.0):
-    - google-cast-sdk (<= 4.3.0)
-    - React
-    - react-native-google-cast/RNGoogleCast
-  - react-native-google-cast/RNGoogleCast (3.3.0):
     - React
   - react-native-image-picker (3.1.4):
     - React-Core
@@ -452,7 +440,6 @@ DEPENDENCIES:
   - react-native-config (from `../node_modules/react-native-config`)
   - "react-native-geolocation (from `../node_modules/@react-native-community/geolocation`)"
   - react-native-geolocation-service (from `../node_modules/react-native-geolocation-service`)
-  - react-native-google-cast (from `../node_modules/react-native-google-cast/ios`)
   - react-native-image-picker (from `../node_modules/react-native-image-picker`)
   - react-native-maps (from `../node_modules/react-native-maps`)
   - react-native-music-control (from `../node_modules/react-native-music-control`)
@@ -502,7 +489,6 @@ SPEC REPOS:
     - Flipper-PeerTalk
     - Flipper-RSocket
     - FlipperKit
-    - google-cast-sdk
     - OneSignal
     - OpenSSL-Universal
     - YogaKit
@@ -552,8 +538,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/geolocation"
   react-native-geolocation-service:
     :path: "../node_modules/react-native-geolocation-service"
-  react-native-google-cast:
-    :path: "../node_modules/react-native-google-cast/ios"
   react-native-image-picker:
     :path: "../node_modules/react-native-image-picker"
   react-native-maps:
@@ -643,7 +627,6 @@ SPEC CHECKSUMS:
   FlipperKit: ab353d41aea8aae2ea6daaf813e67496642f3d7d
   Folly: b73c3869541e86821df3c387eb0af5f65addfab4
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
-  google-cast-sdk: 57cd67b4a0966802b2738fcbbc103125c98cc8a1
   OneSignal: 9531e385388565f4d31797ddadbe0fcc786430ec
   OpenSSL-Universal: ff34003318d5e1163e9529b08470708e389ffcdd
   Permission-Notifications: 9c6b5cc4f0e6599e9fc3395b77cebddc48f1be41
@@ -662,7 +645,6 @@ SPEC CHECKSUMS:
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-geolocation-service: f33626f1ae12381ca2ae60f98b2f5edd676bf95a
-  react-native-google-cast: 410619ef162b8b91815ecf7271502224998dee8e
   react-native-image-picker: 28d8d1f5a643119876b8b2c7d4d1dcfb2b232dd4
   react-native-maps: f4b89da81626ad7f151a8bfcb79733295d31ce5c
   react-native-music-control: dcfe5b61e56a15898c4618579cb8ce612c9d21a8
@@ -700,6 +682,6 @@ SPEC CHECKSUMS:
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: ff0b6ccfe0571b896a44f129ac11790a8b809329
+PODFILE CHECKSUM: c67533126ff38a48c4160887e4bd22b95af73953
 
 COCOAPODS: 1.10.1
