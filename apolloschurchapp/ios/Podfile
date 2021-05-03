@@ -11,7 +11,6 @@ target 'apolloschurchapp' do
 
   pod 'Permission-PhotoLibrary', :path => "#{permissions_path}/PhotoLibrary.podspec"
   pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications.podspec"
-  # pod 'react-native-google-cast/NoBluetooth', path: '../node_modules/react-native-google-cast/ios/'
 
   target 'apolloschurchappTests' do
     inherit! :complete
@@ -36,7 +35,7 @@ target 'apolloschurchapp' do
          target.build_phases << phase
          target.build_phases.move(phase,0)
        end
-      end    
+      end
   end
 end
 

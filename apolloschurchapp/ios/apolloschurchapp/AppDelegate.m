@@ -12,7 +12,6 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import <React/RCTLinkingManager.h>
-#import <GoogleCast/GoogleCast.h>
 #import "RNSplashScreen.h"
 
 #ifdef FB_SONARKIT_ENABLED
@@ -63,12 +62,6 @@ static void InitializeFlipper(UIApplication *application) {
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"apolloschurchapp"
                                             initialProperties:nil];
-
-  // Initialize Google Cast
-  GCKDiscoveryCriteria *criteria = [[GCKDiscoveryCriteria alloc] initWithApplicationID:kGCKDefaultMediaReceiverApplicationID];
-  GCKCastOptions* options = [[GCKCastOptions alloc] initWithDiscoveryCriteria:criteria];
-  options.physicalVolumeButtonsWillControlDeviceVolume = YES;
-  [GCKCastContext setSharedInstanceWithOptions:options];
 
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
 
