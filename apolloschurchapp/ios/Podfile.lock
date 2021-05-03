@@ -247,7 +247,7 @@ PODS:
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
   - React-jsinspector (0.63.4)
-  - react-native-apollos-player (2.11.0):
+  - react-native-apollos-player (2.13.1):
     - React
   - react-native-config (0.11.7):
     - React
@@ -286,8 +286,8 @@ PODS:
     - react-native-video/Video (= 5.0.2)
   - react-native-video/Video (5.0.2):
     - React
-  - react-native-webview (7.6.0):
-    - React
+  - react-native-webview (11.4.1):
+    - React-Core
   - React-RCTActionSheet (0.63.4):
     - React-Core/RCTActionSheetHeaders (= 0.63.4)
   - React-RCTAnimation (0.63.4):
@@ -658,7 +658,7 @@ SPEC CHECKSUMS:
   React-jsi: a0418934cf48f25b485631deb27c64dc40fb4c31
   React-jsiexecutor: 93bd528844ad21dc07aab1c67cb10abae6df6949
   React-jsinspector: 58aef7155bc9a9683f5b60b35eccea8722a4f53a
-  react-native-apollos-player: 48e38b8e198b2591eb5bf01c89f8d4fba847168d
+  react-native-apollos-player: 57d7621e9261faa577dfc284d7b47e232f60f967
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-geolocation-service: f33626f1ae12381ca2ae60f98b2f5edd676bf95a
@@ -672,7 +672,7 @@ SPEC CHECKSUMS:
   react-native-safe-area-context: ef6f16c66b0797ecae1bf86c103dfb3dc16fc33d
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-video: d01ed7ff1e38fa7dcc6c15c94cf505e661b7bfd0
-  react-native-webview: db4682f1698ab4b17a5e88f951031d203ff8aea8
+  react-native-webview: 4024b67e9c91810450a5960dff60ae708fd5acd1
   React-RCTActionSheet: 89a0ca9f4a06c1f93c26067af074ccdce0f40336
   React-RCTAnimation: 1bde3ecc0c104c55df246eda516e0deb03c4e49b
   React-RCTBlob: a97d378b527740cc667e03ebfa183a75231ab0f0
@@ -702,4 +702,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: ff0b6ccfe0571b896a44f129ac11790a8b809329
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.1
