@@ -8,13 +8,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node 12.x.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.x.x
-
-    - name: Install Yarn
-      run: npm install -g yarn
+    - uses: actions/setup-node@v2
 
     - name: Install Dependencies
       run: yarn --ignore-scripts
@@ -27,13 +21,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node 12.x.x
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.x.x
-
-    - name: Install Yarn
-      run: npm install -g yarn
+    - uses: actions/setup-node@v2
 
     - name: Install Dependencies
       run: yarn --ignore-scripts
