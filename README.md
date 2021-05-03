@@ -116,17 +116,13 @@ Couple final steps you'll need to get the app booted in development mode.
 
 ##### iOS
 
-For iOS, you will need to choose a new app identifier and clear out certificates to boot in Development mode. Set the app identifier in the Apple Developer [dashboard](https://developer.apple.com/account/resources/identifiers/list)
+Enable automatic code signing (we'll switch back to manual later when ready to deploy) and pick a new ID.
 
-![apple developer dashboard](https://files-g3cz9dm34.vercel.app)
+![xcode signing](https://files-o16fn2ymm-redreceipt.vercel.app)
 
-Use Xcode to edit the settings:
+Add the new schemes to the workspace. You should see them by going to Xcode > Product > Scheme > Manage Schemes.
 
-![certificates](https://files-gd7d6gcqz.vercel.app)
-
-Change the display name of the app
-
-![display name](https://files-h2vqr0xje.vercel.app)
+![schemes](https://files-7i6cjwshd-redreceipt.vercel.app)
 
 Now run the command to start the simulator in a separate tab:
 
