@@ -17,6 +17,7 @@ import {
 import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
+import ApollosConfig from '@apollosproject/config';
 
 import Providers from './Providers';
 import ContentSingle from './content-single';
@@ -39,8 +40,16 @@ const ProtectedRouteWithSplashScreen = (props) => {
   return <ProtectedRoute {...props} onRouteChange={handleOnRouteChange} />;
 };
 
+const { APP_DATA_URL } = ApollosConfig;
+
 // Hack to avoid needing to pass emailRequired through the navigator.navigate
-const EnhancedAuth = (props) => <Auth {...props} emailRequired />;
+const EnhancedAuth = (props) => (
+  <Auth
+    {...props}
+    emailRequired
+    forgotPasswordURL={`${APP_DATA_URL}/forgot-password`}
+  />
+);
 // 😑
 hoistNonReactStatic(EnhancedAuth, Auth);
 
