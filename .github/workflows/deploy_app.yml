@@ -5,6 +5,22 @@ on:
     branches: [ master ]
 
 jobs:
+  codecov:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+
+    - name: Install Dependencies
+      run: yarn --ignore-scripts
+
+    - name: Jest
+      run: yarn test -- -- -- --forceExit
+
+    - name: Codecov
+      uses: codecov/codecov-action@v1
+
   ios:
     defaults:
       run:
@@ -18,15 +34,15 @@ jobs:
         fetch-depth: 0
 
     - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12
-
-    - name: Install Yarn
-      run: npm install -g yarn
+      uses: actions/setup-node@v2
 
     - name: Install Bundler
       run: gem install bundler
+
+    - name: Decrypt Environment Variables and Apple API Key
+      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
+
+    - run: cp .env.shared .env
 
     - name: Install Dependencies
       run: yarn
@@ -35,22 +51,19 @@ jobs:
     - name: Generate Stories
       run: yarn generate-stories
 
-    - name: Get Introspection Data
+    - name: Generate Schema
+      run: yarn get-schema
+
+    - name: Generate Fragment Types
       run: node ./scripts/get-introspection-data.js
       env:
         APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
 
-    - name: Decrypt Secrets
-      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
-
     - name: Fastlane Deploy
-      run: |
-        git diff # this is just for debug, remove later
-        bundle exec fastlane ios deploy
+      run: bundle exec fastlane ios deploy
       env:
         MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
-        FASTLANE_PASSWORD: ${{ secrets.FASTLANE_PASSWORD }}
 
   android:
     defaults:
@@ -65,27 +78,30 @@ jobs:
         fetch-depth: 0
 
     - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12
+      uses: actions/setup-node@v2
 
-    - name: Install Yarn
-      run: npm install -g yarn
+    - name: Install Bundler
+      run: gem install bundler
+
+    - name: Decrypt Environment Variables and Keystore
+      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
+
+    - run: cp .env.shared .env
 
     - name: Install Dependencies
       run: yarn
 
     # required to build
-    - name: Generate Stores
+    - name: Generate Stories
       run: yarn generate-stories
 
-    - name: Get Introspection Data
+    - name: Generate Schema
+      run: yarn get-schema
+
+    - name: Generate Fragment Types
       run: node ./scripts/get-introspection-data.js
       env:
         APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
-
-    - name: Decrypt Secrets
-      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
 
     - name: Fastlane Deploy
       run: bundle exec fastlane android deploy

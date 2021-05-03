@@ -1,12 +1,10 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import { KeyboardAvoidingView, Platform } from 'react-native';
 import {
-  KeyboardAvoidingView,
-  StyleSheet,
-  StatusBar,
-  Platform,
-} from 'react-native';
-import { Header } from '@react-navigation/stack';
+  useSafeAreaInsets,
+  SafeAreaView,
+} from 'react-native-safe-area-context';
 import { Query, Mutation } from '@apollo/client/react/components';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -19,8 +17,7 @@ import {
   styled,
 } from '@apollosproject/ui-kit';
 
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { GET_USER_PROFILE } from '../tabs/connect/UserAvatarHeader';
+import { GET_USER_PROFILE } from '@apollosproject/ui-connected';
 import UPDATE_CURRENT_USER from './updateCurrentUser';
 
 const Footer = styled({
@@ -29,9 +26,22 @@ const Footer = styled({
 })(SafeAreaView);
 
 const StyledKeyboardAvoidingView = styled(({ theme }) => ({
-  ...StyleSheet.absoluteFill,
+  flex: 1,
   backgroundColor: theme.colors.background.paper,
 }))(KeyboardAvoidingView);
+
+const KeyboardAvoidingViewWithHeaderHeight = (props) => {
+  const statusBarInset = useSafeAreaInsets().top; // inset of the status bar
+  // https://github.com/software-mansion/react-native-screens/tree/master/native-stack#measuring-headers-height-on-ios
+  const largeHeaderInset = statusBarInset + 96; // inset to use for a large header since it's frame is equal to 96 + the frame of status bar
+  return (
+    <StyledKeyboardAvoidingView
+      behavior="padding"
+      keyboardVerticalOffset={Platform.OS === 'android' ? 0 : largeHeaderInset}
+      {...props}
+    />
+  );
+};
 
 class PersonalDetails extends PureComponent {
   static propTypes = {
@@ -43,13 +53,7 @@ class PersonalDetails extends PureComponent {
 
   renderForm = (props) => (
     // have to add the offset to account for @react-navigation/native header
-    <StyledKeyboardAvoidingView
-      behavior={'padding'}
-      keyboardVerticalOffset={
-        Header.HEIGHT +
-        (Platform.OS === 'android' ? StatusBar.currentHeight : 0)
-      }
-    >
+    <KeyboardAvoidingViewWithHeaderHeight behavior={'padding'}>
       <FlexedView>
         <PaddedView>
           <TextInput
@@ -85,7 +89,7 @@ class PersonalDetails extends PureComponent {
           </PaddedView>
         </Footer>
       </FlexedView>
-    </StyledKeyboardAvoidingView>
+    </KeyboardAvoidingViewWithHeaderHeight>
   );
 
   render() {

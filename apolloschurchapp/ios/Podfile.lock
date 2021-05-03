@@ -70,9 +70,6 @@ PODS:
     - DoubleConversion
     - glog
   - glog (0.3.5)
-  - google-cast-sdk (4.3.0):
-    - google-cast-sdk/Core (= 4.3.0)
-  - google-cast-sdk/Core (4.3.0)
   - OneSignal (2.15.2)
   - OpenSSL-Universal (1.0.2.20):
     - OpenSSL-Universal/Static (= 1.0.2.20)
@@ -247,22 +244,13 @@ PODS:
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
   - React-jsinspector (0.63.4)
-  - react-native-apollos-player (2.0.0):
+  - react-native-apollos-player (2.13.1):
     - React
   - react-native-config (0.11.7):
     - React
   - react-native-geolocation (2.0.2):
     - React
   - react-native-geolocation-service (5.1.1):
-    - React
-  - react-native-google-cast (3.3.0):
-    - React
-    - react-native-google-cast/Default (= 3.3.0)
-  - react-native-google-cast/Default (3.3.0):
-    - google-cast-sdk (<= 4.3.0)
-    - React
-    - react-native-google-cast/RNGoogleCast
-  - react-native-google-cast/RNGoogleCast (3.3.0):
     - React
   - react-native-image-picker (3.1.4):
     - React-Core
@@ -286,8 +274,8 @@ PODS:
     - react-native-video/Video (= 5.0.2)
   - react-native-video/Video (5.0.2):
     - React
-  - react-native-webview (7.6.0):
-    - React
+  - react-native-webview (11.4.1):
+    - React-Core
   - React-RCTActionSheet (0.63.4):
     - React-Core/RCTActionSheetHeaders (= 0.63.4)
   - React-RCTAnimation (0.63.4):
@@ -365,16 +353,43 @@ PODS:
     - React-Core
   - RNDeviceInfo (4.0.1):
     - React
-  - RNGestureHandler (1.6.1):
-    - React
+  - RNGestureHandler (1.10.3):
+    - React-Core
   - RNInAppBrowser (3.5.1):
     - React-Core
   - RNPermissions (2.2.2):
     - React-Core
-  - RNReanimated (1.9.0):
+  - RNReanimated (2.0.0):
+    - DoubleConversion
+    - FBLazyVector
+    - FBReactNativeSpec
+    - Folly
+    - glog
+    - RCTRequired
+    - RCTTypeSafety
     - React
-  - RNScreens (2.9.0):
-    - React
+    - React-callinvoker
+    - React-Core
+    - React-Core/DevSupport
+    - React-Core/RCTWebSocket
+    - React-CoreModules
+    - React-cxxreact
+    - React-jsi
+    - React-jsiexecutor
+    - React-jsinspector
+    - React-RCTActionSheet
+    - React-RCTAnimation
+    - React-RCTBlob
+    - React-RCTImage
+    - React-RCTLinking
+    - React-RCTNetwork
+    - React-RCTSettings
+    - React-RCTText
+    - React-RCTVibration
+    - ReactCommon/turbomodule/core
+    - Yoga
+  - RNScreens (2.18.1):
+    - React-Core
   - RNSVG (9.13.6):
     - React
   - Yoga (1.14.0)
@@ -425,7 +440,6 @@ DEPENDENCIES:
   - react-native-config (from `../node_modules/react-native-config`)
   - "react-native-geolocation (from `../node_modules/@react-native-community/geolocation`)"
   - react-native-geolocation-service (from `../node_modules/react-native-geolocation-service`)
-  - react-native-google-cast (from `../node_modules/react-native-google-cast/ios`)
   - react-native-image-picker (from `../node_modules/react-native-image-picker`)
   - react-native-maps (from `../node_modules/react-native-maps`)
   - react-native-music-control (from `../node_modules/react-native-music-control`)
@@ -475,7 +489,6 @@ SPEC REPOS:
     - Flipper-PeerTalk
     - Flipper-RSocket
     - FlipperKit
-    - google-cast-sdk
     - OneSignal
     - OpenSSL-Universal
     - YogaKit
@@ -525,8 +538,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/geolocation"
   react-native-geolocation-service:
     :path: "../node_modules/react-native-geolocation-service"
-  react-native-google-cast:
-    :path: "../node_modules/react-native-google-cast/ios"
   react-native-image-picker:
     :path: "../node_modules/react-native-image-picker"
   react-native-maps:
@@ -616,7 +627,6 @@ SPEC CHECKSUMS:
   FlipperKit: ab353d41aea8aae2ea6daaf813e67496642f3d7d
   Folly: b73c3869541e86821df3c387eb0af5f65addfab4
   glog: 40a13f7840415b9a77023fbcae0f1e6f43192af3
-  google-cast-sdk: 57cd67b4a0966802b2738fcbbc103125c98cc8a1
   OneSignal: 9531e385388565f4d31797ddadbe0fcc786430ec
   OpenSSL-Universal: ff34003318d5e1163e9529b08470708e389ffcdd
   Permission-Notifications: 9c6b5cc4f0e6599e9fc3395b77cebddc48f1be41
@@ -631,11 +641,10 @@ SPEC CHECKSUMS:
   React-jsi: a0418934cf48f25b485631deb27c64dc40fb4c31
   React-jsiexecutor: 93bd528844ad21dc07aab1c67cb10abae6df6949
   React-jsinspector: 58aef7155bc9a9683f5b60b35eccea8722a4f53a
-  react-native-apollos-player: 407ae8570ca05a666aea3036a346fb9a0c59a6d1
+  react-native-apollos-player: 57d7621e9261faa577dfc284d7b47e232f60f967
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-geolocation-service: f33626f1ae12381ca2ae60f98b2f5edd676bf95a
-  react-native-google-cast: 410619ef162b8b91815ecf7271502224998dee8e
   react-native-image-picker: 28d8d1f5a643119876b8b2c7d4d1dcfb2b232dd4
   react-native-maps: f4b89da81626ad7f151a8bfcb79733295d31ce5c
   react-native-music-control: dcfe5b61e56a15898c4618579cb8ce612c9d21a8
@@ -645,7 +654,7 @@ SPEC CHECKSUMS:
   react-native-safe-area-context: ef6f16c66b0797ecae1bf86c103dfb3dc16fc33d
   react-native-splash-screen: 200d11d188e2e78cea3ad319964f6142b6384865
   react-native-video: d01ed7ff1e38fa7dcc6c15c94cf505e661b7bfd0
-  react-native-webview: db4682f1698ab4b17a5e88f951031d203ff8aea8
+  react-native-webview: 4024b67e9c91810450a5960dff60ae708fd5acd1
   React-RCTActionSheet: 89a0ca9f4a06c1f93c26067af074ccdce0f40336
   React-RCTAnimation: 1bde3ecc0c104c55df246eda516e0deb03c4e49b
   React-RCTBlob: a97d378b527740cc667e03ebfa183a75231ab0f0
@@ -664,15 +673,15 @@ SPEC CHECKSUMS:
   RNCPicker: 2c31098349f499e7ab4da6c1ce26f7537d271062
   RNDateTimePicker: 3d1931e387248cb8f1d1d33740d4a1a82dfe622a
   RNDeviceInfo: 687c1b2ab6d86ff1ca1208783320cd144138c7f2
-  RNGestureHandler: 8f09cd560f8d533eb36da5a6c5a843af9f056b38
+  RNGestureHandler: a479ebd5ed4221a810967000735517df0d2db211
   RNInAppBrowser: 48b95ba7a4eaff5cc223bca338d3e319561dbd1b
   RNPermissions: 5df468064df661a4c8c017e2791ce90d7695eea5
-  RNReanimated: b5ccb50650ba06f6e749c7c329a1bc3ae0c88b43
-  RNScreens: c526239bbe0e957b988dacc8d75ac94ec9cb19da
+  RNReanimated: 5231286440b796e09df3bfa5c1b12b02bfe07664
+  RNScreens: f7ad633b2e0190b77b6a7aab7f914fad6f198d8d
   RNSVG: 8ba35cbeb385a52fd960fd28db9d7d18b4c2974f
   Yoga: 4bd86afe9883422a7c4028c00e34790f560923d6
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: ff0b6ccfe0571b896a44f129ac11790a8b809329
+PODFILE CHECKSUM: c67533126ff38a48c4160887e4bd22b95af73953
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.1

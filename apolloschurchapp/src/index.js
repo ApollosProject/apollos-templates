@@ -25,6 +25,7 @@ import Event from './event';
 import Tabs from './tabs';
 import LandingScreen from './ui/LandingScreen';
 import Onboarding from './ui/Onboarding';
+import Search from './ui/Search';
 
 enableScreens(); // improves performance for react-navigation
 
@@ -78,7 +79,10 @@ const App = (props) => (
           <Screen
             name="ContentSingle"
             component={ContentSingle}
-            options={{ title: 'Content' }}
+            options={{
+              title: 'Content',
+              stackPresentation: 'push',
+            }}
           />
           <Screen
             name="NodeSingle"
@@ -119,6 +123,7 @@ const App = (props) => (
             component={LandingScreen}
             options={{ headerShown: false }}
           />
+          <Screen component={Search} name="Search" />
         </ThemedNavigator>
       </NavigationContainer>
     </BackgroundView>

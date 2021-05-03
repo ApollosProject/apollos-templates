@@ -1,38 +1,26 @@
 #!/bin/bash
-# this script will bump versions in the packages using the add-packages.sh scripts and then bump the Apollos versions
+# this script will bump versions in the packages using the add-packages.sh scripts
+# and then bump the Apollos versions to be used by the upgrade tool
 
-# insure working directory is clean first
-if [[ $(git diff --stat) != '' ]]; then
-	echo 'Working directory not clean!'
-	exit
-fi
+#DEBUG
+curl 'https://api.github.com/repos/apollosproject/apollos-apps/tags'
 
 # get latest apps version
 VERSION=$(
-	curl -s 'https://api.github.com/repos/apollosproject/apollos-apps/tags' |
-		python -m json.tool |
-		grep '\"name\"' |
-		cut -d ':' -f 2 |
-		sed 's/&quot;/\"/g' |
-		sed -E 's/\"v(.*)\".*/\1/g' |
-		sed -n 1p |
-		tr -d '[:space:]'
+	curl -s "https://api.github.com/repos/apollosproject/apollos-apps/tags" |
+		python -c "import sys, json; print json.load(sys.stdin)[0]['name'][1:]"
 )
 
-if [[ "$VERSION" == *beta* ]]; then
-	TAG=beta
-	PKG=$(npm show @apollosproject/config@beta version)
-else
-	TAG=latest
-	PKG=$(npm show @apollosproject/config version)
-fi
+PKG=$(npm show @apollosproject/config version)
 
 if [[ "$VERSION" != "$PKG" ]]; then
 	echo "Latest Github tag ($VERSION) and NPM version ($PKG) doesn't match"
 	exit 1
 fi
 
-./scripts/add-packages.sh $TAG
+./scripts/add-packages.sh latest
+yarn                                  # this is to update Pods
+(cd apolloschurchapp && yarn test -u) # this is update snaps
 (cd apollos-church-api && sed -i "" -E "s/\"[0-9].*\"/\"$VERSION\"/g" apollos.json)
 (cd apolloschurchapp && sed -i "" -E "s/\"[0-9].*\"/\"$VERSION\"/g" apollos.json)
 
