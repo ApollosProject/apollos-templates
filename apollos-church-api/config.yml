@@ -36,6 +36,7 @@ ROCK:
   TIMEZONE: 'America/New_York'
   USE_PLUGIN: true
   SHOW_INACTIVE_CONTENT: ${ROCK_SHOW_INACTIVE_CONTENT}
+  FORGOT_PASSWORD_URL: ${ROCK_FORGOT_PASSWORD_URL}
   VERSION: 10
 UNIVERSAL_LINKS:
   # This should be your app's bundle ID, as found in your info.plist.
@@ -154,9 +155,6 @@ ROCK_MAPPINGS:
   ACTIVE_CONTENT_CHANNEL_IDS:
     - 6
 
-  CAMPAIGN_CHANNEL_IDS:
-    - 11
-
   SERMON_CHANNEL_ID: 5
 
   SERVING_GROUP_TYPE_ID: 23
@@ -195,9 +193,13 @@ HOME_FEATURES:
     isCard: false
     type: PrayerList
     title: Daily Prayer
-  - algorithms: [CAMPAIGN_ITEMS]
+  - algorithms:
+      - type: CAMPAIGN_ITEMS
+        channelIds:
+          - 9
     type: HeroList
     isFeatured: true
+    subtitle: Featured
   - title: FOR YOU
     algorithms: [SERMON_CHILDREN, PERSONA_FEED]
     subtitle: Explore what God calls you to today

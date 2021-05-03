@@ -43,7 +43,7 @@ const cacheOptions = isDev
       },
     };
 
-const { ENGINE } = ApollosConfig;
+const { ENGINE, ROCK } = ApollosConfig;
 
 const apolloServer = new ApolloServer({
   typeDefs: schema,
@@ -70,6 +70,11 @@ const apolloServer = new ApolloServer({
 });
 
 const app = express();
+
+// password reset
+app.get('/forgot-password', (req, res) => {
+  res.redirect(ROCK.FORGOT_PASSWORD_URL);
+});
 
 applyServerMiddleware({ app, dataSources, context });
 setupJobs({ app, dataSources, context });
