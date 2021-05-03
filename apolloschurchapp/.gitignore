@@ -149,9 +149,16 @@ fastlane/report.xml
 # symbols
 apolloschurchapp.app.dSYM.zip
 
+# iOS keys
+*.p8
+
 # Google Play authentication key
 key.json
 *.keystore
 
 # shared secrets
 .env.shared
+
+# GraphQL info
+schema.graphql
+fragmentTypes.json

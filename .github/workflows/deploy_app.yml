@@ -1,0 +1,112 @@
+name: Deploy Mobile App
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  codecov:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+
+    - name: Install Dependencies
+      run: yarn --ignore-scripts
+
+    - name: Jest
+      run: yarn test -- -- -- --forceExit
+
+    - name: Codecov
+      uses: codecov/codecov-action@v1
+
+  ios:
+    defaults:
+      run:
+        working-directory: apolloschurchapp
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node
+      uses: actions/setup-node@v2
+
+    - name: Install Bundler
+      run: gem install bundler
+
+    - name: Decrypt Environment Variables and Apple API Key
+      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
+
+    - run: cp .env.shared .env
+
+    - name: Install Dependencies
+      run: yarn
+
+    # required to build
+    - name: Generate Stories
+      run: yarn generate-stories
+
+    - name: Generate Schema
+      run: yarn get-schema
+
+    - name: Generate Fragment Types
+      run: node ./scripts/get-introspection-data.js
+      env:
+        APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
+
+    - name: Fastlane Deploy
+      run: bundle exec fastlane ios deploy
+      env:
+        MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
+        MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
+
+  android:
+    defaults:
+      run:
+        working-directory: apolloschurchapp
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node
+      uses: actions/setup-node@v2
+
+    - name: Install Bundler
+      run: gem install bundler
+
+    - name: Decrypt Environment Variables and Keystore
+      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
+
+    - run: cp .env.shared .env
+
+    - name: Install Dependencies
+      run: yarn
+
+    # required to build
+    - name: Generate Stories
+      run: yarn generate-stories
+
+    - name: Generate Schema
+      run: yarn get-schema
+
+    - name: Generate Fragment Types
+      run: node ./scripts/get-introspection-data.js
+      env:
+        APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
+
+    - name: Fastlane Deploy
+      run: bundle exec fastlane android deploy
+      env:
+        KEYSTORE_FILE: apollos.keystore
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        KEY_ALIAS: apollos
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}

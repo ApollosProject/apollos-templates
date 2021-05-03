@@ -9,7 +9,13 @@ import {
   ThemeMixinConnected,
 } from '@apollosproject/ui-connected';
 
+import { styled } from '@apollosproject/ui-kit';
+
 import ActionContainer from './ActionContainer';
+
+const PaddedNodeSingleConnected = styled(({ theme: { sizing } }) => ({
+  paddingBottom: sizing.baseUnit * 5,
+}))(NodeSingleConnected);
 
 const ContentSingle = (props) => {
   const nodeId = props.route?.params?.itemId;
@@ -17,8 +23,8 @@ const ContentSingle = (props) => {
     gql`
       query getContentNodeTitle($nodeId: ID!) {
         node(id: $nodeId) {
+          id
           ... on ContentNode {
-            id
             title
           }
         }
@@ -41,9 +47,9 @@ const ContentSingle = (props) => {
           itemId: nodeId,
         }}
       />
-      <NodeSingleConnected nodeId={nodeId}>
+      <PaddedNodeSingleConnected nodeId={nodeId}>
         <ActionContainer itemId={nodeId} />
-      </NodeSingleConnected>
+      </PaddedNodeSingleConnected>
     </ThemeMixinConnected>
   );
 };

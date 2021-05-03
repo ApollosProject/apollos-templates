@@ -3,8 +3,8 @@
   "scripts": {
     "setup": "lerna run setup",
     "start": "lerna run start:dev --parallel",
-    "link-packages": "watchman watch-del-all && yarn && lerna run link-packages",
     "link-doctor": "node ./scripts/link-doctor.js",
+    "link-packages": "watchman watch-del-all && lerna run link-packages",
     "unlink-packages": "lerna run unlink-packages && yarn --check-files",
     "lint": "lerna run lint --stream",
     "test": "lerna run test --stream",
@@ -18,6 +18,7 @@
     "secrets": "./scripts/secrets.sh"
   },
   "private": true,
+  "node": ">=12.x.x",
   "devDependencies": {
     "lerna": "^3.20.2",
     "chalk": "^4.0.0"

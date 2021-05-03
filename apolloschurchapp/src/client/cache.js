@@ -3,7 +3,9 @@ import AsyncStorage from '@react-native-community/async-storage';
 import { CachePersistor } from 'apollo3-cache-persist';
 import ApollosConfig from '@apollosproject/config';
 
-import introspectionQueryResultData from './fragmentTypes.json';
+// NOTE: this file is generated at runtime
+// eslint-disable-next-line
+import introspectionQueryResultData from "./fragmentTypes.json";
 
 const finalPossibleTypes = {};
 introspectionQueryResultData.__schema.types.forEach((supertype) => {
