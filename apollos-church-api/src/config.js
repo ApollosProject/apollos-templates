@@ -7,13 +7,24 @@ ApollosConfig.loadYaml({
   configPath: path.join(__dirname, '..', 'config.yml'),
 });
 
-// autodetect Apollos plugin
+// autodetect some settings
 (async () => {
   if (!ApollosConfig.ROCK) return;
-  const res = await fetch(
+
+  let res;
+  // plugin
+  res = await fetch(
     `${ApollosConfig.ROCK.URL}/api/Apollos/GetContentChannelItemsByIds?ids=0`
   );
   const usePlugin = res.status === 200;
   if (usePlugin) console.log('Apollos Rock plugin detected!');
   ApollosConfig.loadJs({ ROCK: { USE_PLUGIN: usePlugin } });
+
+  // plugin
+  res = await fetch(
+    `${ApollosConfig.ROCK.URL}/api/Utility/GetRockSemanticVersionNumber`
+  );
+  const version = res.text().split('.');
+  console.log(`Apollos Version: ${version}`);
+  ApollosConfig.loadJs({ ROCK: { VERSION: version[1] } });
 })();
