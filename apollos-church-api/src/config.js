@@ -14,11 +14,13 @@ ApollosConfig.loadYaml({
   let res;
   // plugin
   res = await fetch(
-    `${ApollosConfig.ROCK.URL}/api/Apollos/GetContentChannelItemsByIds?ids=0`
+    `${
+      ApollosConfig.ROCK.URL
+    }/api/RestControllers/RestControllerNames?includeObsolete=false`
   );
-  const usePlugin = res.status === 200;
-  if (usePlugin) console.log('Apollos Rock plugin detected!');
-  ApollosConfig.loadJs({ ROCK: { USE_PLUGIN: usePlugin } });
+  const hasPlugin = res.text().includes('Apollos');
+  if (hasPlugin) console.log('Apollos Rock plugin detected!');
+  ApollosConfig.loadJs({ ROCK: { USE_PLUGIN: hasPlugin } });
 
   // version
   res = await fetch(
