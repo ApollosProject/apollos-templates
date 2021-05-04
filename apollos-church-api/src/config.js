@@ -30,6 +30,6 @@ ApollosConfig.loadYaml({
     { headers: { 'Authorization-Token': ApollosConfig.ROCK.API_TOKEN } }
   );
   const version = (await res.text()).split('.');
-  console.log(`Apollos Version: ${version[1]}`);
+  console.log(`Rock Version: ${version[1]}`);
   ApollosConfig.loadJs({ ROCK: { VERSION: version[1] } });
 })();
