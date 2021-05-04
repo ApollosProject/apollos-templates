@@ -20,7 +20,7 @@ ApollosConfig.loadYaml({
   if (usePlugin) console.log('Apollos Rock plugin detected!');
   ApollosConfig.loadJs({ ROCK: { USE_PLUGIN: usePlugin } });
 
-  // plugin
+  // version
   res = await fetch(
     `${ApollosConfig.ROCK.URL}/api/Utility/GetRockSemanticVersionNumber`
   );
