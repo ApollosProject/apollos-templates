@@ -58,13 +58,20 @@ Add your config variables to the remote application
 heroku config:set ROCK_API=<url> ROCK_TOKEN=<token>
 ```
 
-We deploy through the Github workflow. You need to set three new [Github secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) in your new repository:
+We deploy through the Github workflow. You need to set three new [Github secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) in your new repository. First [Install the Github CLI](https://cli.github.com)
 
-- `HEROKU_API_KEY`: This comes from your Heroku account dashboard and is used to upload
-- `HEROKU_APP_NAME`: This is the Heroku app name from above when you created the server
-- `APP_DATA_URL`: The URL of your server. You can get this by running `heroku info` and using "Web URL"
+```
+brew install gh
+gh auth login
+```
 
-![github secret](https://files-5eu5fyz6u.vercel.app)
+Now set the secrets you need to deploy
+
+```
+gh secret set HEROKU_API_KEY -b <Your user API key>
+gh secret set HEROKU_APP_NAME -b <App name from creation step above>
+gh secret set APP_DATA_URL -b <Full Heroku app URL>
+```
 
 Simply commit to `master` and push or re-run the action if you haven't made any changes yet. Once the API Deploy action is finished, you should be able to open up the app in the browser
 
@@ -109,17 +116,13 @@ Couple final steps you'll need to get the app booted in development mode.
 
 ##### iOS
 
-For iOS, you will need to choose a new app identifier and clear out certificates to boot in Development mode. Set the app identifier in the Apple Developer [dashboard](https://developer.apple.com/account/resources/identifiers/list)
+Enable automatic code signing (we'll switch back to manual later when ready to deploy) and pick a new ID.
 
-![apple developer dashboard](https://files-g3cz9dm34.vercel.app)
+![xcode signing](https://files-o16fn2ymm-redreceipt.vercel.app)
 
-Use Xcode to edit the settings:
+Add the new schemes to the workspace. You should see them by going to Xcode > Product > Scheme > Manage Schemes.
 
-![certificates](https://files-gd7d6gcqz.vercel.app)
-
-Change the display name of the app
-
-![display name](https://files-h2vqr0xje.vercel.app)
+![schemes](https://files-7i6cjwshd-redreceipt.vercel.app)
 
 Now run the command to start the simulator in a separate tab:
 
