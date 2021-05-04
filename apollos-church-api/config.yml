@@ -56,11 +56,6 @@ CHURCH_ONLINE:
   URL: ${CHURCH_ONLINE_URL}
   MEDIA_URLS: []
   WEB_VIEW_URL: https://apollos.online.church/
-SUGGESTED_FOLLOWS:
-  - michael.neeley@differential.com
-  -
-    email: vince@classyh.at
-    campusId: 45893d11-cd72-4a42-b3ee-08814a937e1a
 ALGOLIA:
   APPLICATION_ID: ${ALGOLIASEARCH_APPLICATION_ID}
   API_KEY: ${ALGOLIASEARCH_API_KEY}
