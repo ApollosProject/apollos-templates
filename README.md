@@ -69,6 +69,7 @@ Now set the secrets you need to deploy
 
 ```
 gh secret set HEROKU_API_KEY -b <Your user API key>
+gh secret set HEROKU_EMAIL -b <Your email address>
 gh secret set HEROKU_APP_NAME -b <App name from creation step above>
 gh secret set APP_DATA_URL -b <Full Heroku app URL>
 ```

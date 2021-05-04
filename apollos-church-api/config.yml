@@ -34,9 +34,7 @@ ROCK:
   SHARE_URL: https://rock.apollos.app
   # This should match the timezone of the Rock server
   TIMEZONE: 'America/New_York'
-  USE_PLUGIN: true
   SHOW_INACTIVE_CONTENT: ${ROCK_SHOW_INACTIVE_CONTENT}
-  VERSION: 10
 UNIVERSAL_LINKS:
   # This should be your app's bundle ID, as found in your info.plist.
   APPLE_APP_ID: ${APPLE_APP_ID}
