@@ -64,8 +64,8 @@ const apolloServer = new ApolloServer({
   },
   ...cacheOptions,
   engine: {
-    apiKey: ENGINE.API_KEY,
-    schemaTag: ENGINE.SCHEMA_TAG,
+    apiKey: process.env.ENGINE_API_KEY,
+    schemaTag: process.env.ENGINE_SCHEMA_TAG,
   },
 });
 
