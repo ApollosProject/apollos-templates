@@ -12,21 +12,24 @@ ApollosConfig.loadYaml({
   if (!ApollosConfig.ROCK) return;
 
   let res;
+
   // plugin
   res = await fetch(
-    `${
-      ApollosConfig.ROCK.URL
-    }/api/RestControllers/RestControllerNames?includeObsolete=false`
+    `${ApollosConfig.ROCK.URL}/api/RestControllers?$select=Name`,
+    { headers: { 'Authorization-Token': ApollosConfig.ROCK.API_TOKEN } }
   );
-  const hasPlugin = res.text().includes('Apollos');
+  const hasPlugin = (await res.json())
+    .map(({ Name }) => Name)
+    .includes('Apollos');
   if (hasPlugin) console.log('Apollos Rock plugin detected!');
   ApollosConfig.loadJs({ ROCK: { USE_PLUGIN: hasPlugin } });
 
   // version
   res = await fetch(
-    `${ApollosConfig.ROCK.URL}/api/Utility/GetRockSemanticVersionNumber`
+    `${ApollosConfig.ROCK.URL}/api/Utility/GetRockSemanticVersionNumber`,
+    { headers: { 'Authorization-Token': ApollosConfig.ROCK.API_TOKEN } }
   );
-  const version = res.text().split('.');
-  console.log(`Apollos Version: ${version}`);
+  const version = (await res.text()).split('.');
+  console.log(`Apollos Version: ${version[1]}`);
   ApollosConfig.loadJs({ ROCK: { VERSION: version[1] } });
 })();
