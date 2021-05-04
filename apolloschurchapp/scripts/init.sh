@@ -31,3 +31,6 @@ echo "App name: "
 read -r APP
 CLEAN_APP=$(echo "$APP" | tr -d '[:space:]')
 npx react-native-rename "$CLEAN_APP"
+
+sed -i "" -E "s/Apollos Church/$APP/g" apolloschurchapp/ios/Info.plist
+sed -i "" -E "s/Apollos Church/$APP/g" apolloschurchapp/android/app/src/main/res/values/strings.xml
