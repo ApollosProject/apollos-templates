@@ -169,9 +169,9 @@ We use [Fastlane](#) through Github Actions to manage certificates and build upl
 
 First thing we'll do is configure the certificates. Change the following values in the `Matchfile`:
 
-`git_url`: This is the _private_ repo you are going to store the certificates
-`app_identifier`: The App ID you chose for your app in the Apple Developer Dashboard
-`username`: Admin level Apple Developer account, used to manage certificates and profiles
+- `git_url`: This is the _private_ repo you are going to store the certificates
+- `app_identifier`: The App ID you chose for your app in the Apple Developer Dashboard
+- `username`: Admin level Apple Developer account, used to manage certificates and profiles
 
 You'll need to create a personal access token in Github and use that to authenticate to your certificates repo. Once you have the token, you'll need to encode it to base64.
 
