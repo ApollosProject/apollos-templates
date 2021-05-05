@@ -69,6 +69,7 @@ Now set the secrets you need to deploy
 
 ```
 gh secret set HEROKU_API_KEY -b <Your user API key>
+gh secret set HEROKU_EMAIL -b <Your email address>
 gh secret set HEROKU_APP_NAME -b <App name from creation step above>
 gh secret set APP_DATA_URL -b <Full Heroku app URL>
 ```
@@ -168,23 +169,21 @@ We use [Fastlane](#) through Github Actions to manage certificates and build upl
 
 First thing we'll do is configure the certificates. Change the following values in the `Matchfile`:
 
-`git_url`: This is the _private_ repo you are going to store the certificates
-`app_identifier`: The App ID you chose for your app in the Apple Developer Dashboard
-`username`: Admin level Apple Developer account, used to manage certificates and profiles
+- `git_url`: This is the _private_ repo you are going to store the certificates
+- `app_identifier`: The App ID you chose for your app in the Apple Developer Dashboard
+- `username`: Admin level Apple Developer account, used to manage certificates and profiles
 
 You'll need to create a personal access token in Github and use that to authenticate to your certificates repo. Once you have the token, you'll need to encode it to base64.
 
 ```
-python -c "import base64;print(base64.b64encode('<github username>:<token>'))"
+echo -n "<github username>:<token>" | base64
 ```
 
 Add the encoded token to your `.env` file
 
 ```
-MATCH_BASIC_GIT_AUTHORIZATION=<token>
+MATCH_BASIC_GIT_AUTHORIZATION=<base64 encoded token>
 ```
-
-**_NOTE:_** If this is a new app, you will need to add at least one device to the developer portal. Easiest way is to have Xcode do it by turning off and on "Automatic Code Signing" with an iPhone plugged in.
 
 Inside the app directory run `match` to configure the certificates
 
