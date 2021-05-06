@@ -200,9 +200,17 @@ MATCH_PASSWORD=<password>
 
 Use Xcode to switch the certificate and profile settings to "Manual" and choose the new certificates and profiles that you just created.
 
-[PIC]
+<img width="803" alt="Screen Shot 2021-05-06 at 8 07 44 AM" src="https://user-images.githubusercontent.com/2659478/117295710-2cf10680-ae42-11eb-899a-e88c81f5d248.png">
 
 Next, in the `Fastfile`, change all instances of `apolloshchurchapp` and `apolloschurchappprod` to your projects condensed name. It's probably Whatever name you defined earlier with no spaces. You can be sure from `ios/<name>.xcodeproj`
+
+Now we will create an API key to manage authentication to Apple and upload builds from the CI. Create the key on the Apple Developer Portal and then download the `key.p8` file. You will also need the key ID and issuer ID, both can be found in the portal. Add the following variables to your `.env` file:
+
+```
+APP_STORE_CONNECT_API_KEY_KEY_ID=<key ID>
+APP_STORE_CONNECT_API_KEY_ISSUER_ID=<issuer ID>
+APP_STORE_CONNECT_API_KEY_FILEPATH=<path/to/the/key.p8>
+```
 
 Lastly, in the `Appfile` change, the following variables:
 
