@@ -5,3 +5,9 @@ This will explain how to get Apollo Engine schema reporting and metrics set up o
 ```
 ENGINE_API_KEY=<apollo graph key>
 ```
+
+Now to publish the schema for the first time, simply run the server with the key in the environment
+
+```
+ENGINE_API_KEY=<key> yarn start
+```
