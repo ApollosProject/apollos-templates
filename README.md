@@ -198,7 +198,11 @@ Match will ask you to enter a password. Go ahead and add it to your `.env` file.
 MATCH_PASSWORD=<password>
 ```
 
-Next, the `Fastfile`, change all instances of `apolloshchurchapp` and `apolloschurchappprod` to your projects condensed name. It's probably Whatever name you defined earlier with no spaces. You can be sure from `ios/<name>.xcodeproj`
+Use Xcode to switch the certificate and profile settings to "Manual" and choose the new certificates and profiles that you just created.
+
+[PIC]
+
+Next, in the `Fastfile`, change all instances of `apolloshchurchapp` and `apolloschurchappprod` to your projects condensed name. It's probably Whatever name you defined earlier with no spaces. You can be sure from `ios/<name>.xcodeproj`
 
 Lastly, in the `Appfile` change, the following variables:
 
