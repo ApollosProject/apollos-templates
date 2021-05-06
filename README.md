@@ -169,23 +169,21 @@ We use [Fastlane](#) through Github Actions to manage certificates and build upl
 
 First thing we'll do is configure the certificates. Change the following values in the `Matchfile`:
 
-`git_url`: This is the _private_ repo you are going to store the certificates
-`app_identifier`: The App ID you chose for your app in the Apple Developer Dashboard
-`username`: Admin level Apple Developer account, used to manage certificates and profiles
+- `git_url`: This is the _private_ repo you are going to store the certificates
+- `app_identifier`: The App ID you chose for your app in the Apple Developer Dashboard
+- `username`: Admin level Apple Developer account, used to manage certificates and profiles
 
 You'll need to create a personal access token in Github and use that to authenticate to your certificates repo. Once you have the token, you'll need to encode it to base64.
 
 ```
-python -c "import base64;print(base64.b64encode('<github username>:<token>'))"
+echo -n "<github username>:<token>" | base64
 ```
 
 Add the encoded token to your `.env` file
 
 ```
-MATCH_BASIC_GIT_AUTHORIZATION=<token>
+MATCH_BASIC_GIT_AUTHORIZATION=<base64 encoded token>
 ```
-
-**_NOTE:_** If this is a new app, you will need to add at least one device to the developer portal. Easiest way is to have Xcode do it by turning off and on "Automatic Code Signing" with an iPhone plugged in.
 
 Inside the app directory run `match` to configure the certificates
 
@@ -200,7 +198,19 @@ Match will ask you to enter a password. Go ahead and add it to your `.env` file.
 MATCH_PASSWORD=<password>
 ```
 
-Next, the `Fastfile`, change all instances of `apolloshchurchapp` and `apolloschurchappprod` to your projects condensed name. It's probably Whatever name you defined earlier with no spaces. You can be sure from `ios/<name>.xcodeproj`
+Use Xcode to switch the certificate and profile settings to "Manual" and choose the new certificates and profiles that you just created.
+
+<img width="803" alt="Screen Shot 2021-05-06 at 8 07 44 AM" src="https://user-images.githubusercontent.com/2659478/117295710-2cf10680-ae42-11eb-899a-e88c81f5d248.png">
+
+Next, in the `Fastfile`, change all instances of `apolloshchurchapp` and `apolloschurchappprod` to your projects condensed name. It's probably Whatever name you defined earlier with no spaces. You can be sure from `ios/<name>.xcodeproj`
+
+Now we will create an API key to manage authentication to Apple and upload builds from the CI. Create the key on the Apple Developer Portal and then download the `key.p8` file. You will also need the key ID and issuer ID, both can be found in the portal. Add the following variables to your `.env` file:
+
+```
+APP_STORE_CONNECT_API_KEY_KEY_ID=<key ID>
+APP_STORE_CONNECT_API_KEY_ISSUER_ID=<issuer ID>
+APP_STORE_CONNECT_API_KEY_FILEPATH=<path/to/the/key.p8>
+```
 
 Lastly, in the `Appfile` change, the following variables:
 
