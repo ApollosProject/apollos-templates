@@ -1,8 +1,9 @@
-name: Deploy Mobile App
+name: Deploy
 
 on:
   push:
     branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   codecov:
@@ -20,6 +21,36 @@ jobs:
 
     - name: Codecov
       uses: codecov/codecov-action@v1
+
+  api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # heroku only uses yarn if there's a yarn.lock file
+      - name: Use Yarn
+        run: |
+          cp yarn.lock apollos-church-api/yarn.lock
+          git config --global user.email "apps@apollos.app"
+          git config --global user.name "Apollos Admin"
+          git add apollos-church-api/yarn.lock
+          git commit -am "added yarn.lock"
+
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.5.6
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+          appdir: apollos-church-api
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+
+      - name: Publish Schema
+        run: npx apollo schema:publish --endpoint=${{ secrets.APP_DATA_URL }}
+        env:
+          ENGINE_API_KEY: ${{ secrets.ENGINE_API_KEY }}
 
   ios:
     defaults:
