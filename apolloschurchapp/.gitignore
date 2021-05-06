@@ -147,7 +147,7 @@ DerivedData
 fastlane/report.xml
 
 # symbols
-apolloschurchapp.app.dSYM.zip
+*.app.dSYM.zip
 
 # iOS keys
 *.p8
