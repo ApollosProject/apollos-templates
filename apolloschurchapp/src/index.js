@@ -21,6 +21,7 @@ import ApollosConfig from '@apollosproject/config';
 
 import Providers from './Providers';
 import ContentSingle from './content-single';
+import ContentFeed from './content-feed';
 import Event from './event';
 import Tabs from './tabs';
 import LandingScreen from './ui/LandingScreen';
@@ -92,6 +93,14 @@ const App = (props) => (
               stackPresentation: 'push',
             }}
           />
+          <Screen
+            component={ContentFeed}
+            name="ContentFeed"
+            options={({ route }) => ({
+              title: route.params.itemTitle || 'Content Feed',
+            })}
+          />
+
           <Screen name="Event" component={Event} options={{ title: 'Event' }} />
           <Screen
             name="Auth"

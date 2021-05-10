@@ -212,7 +212,38 @@ HOME_FEATURES:
             - 13
       - type: UPCOMING_EVENTS
 
-DISCOVER_FEATURES:
+READ_FEATURES:
+  - algorithms:
+      - type: CONTENT_FEED
+        arguments:
+          channelIds:
+            - 7
+          limit: 3
+    type: HorizontalCardList
+    subtitle: Devotionals
+    primaryAction:
+      action: OPEN_CHANNEL
+      title: 'Read More'
+      relatedNode:
+        __typename: ContentChannel
+        id: 7
+        name: Devotionals
+
+WATCH_FEATURES:
+  - algorithms:
+      - type: LATEST_SERIES_CHILDREN
+        arguments:
+          channelId: 4
+    type: HeroList
+    title: Catch up
+    subtitle: Latest Series
+  - algorithms:
+      - type: CONTENT_FEED
+        arguments:
+          channelIds:
+            - 4
+    type: VerticalCardList
+    subtitle: All series
   - algorithms:
       - type: CONTENT_FEED
         arguments:
@@ -240,21 +271,6 @@ DISCOVER_FEATURES:
       - type: CONTENT_FEED
         arguments:
           channelIds:
-            - 7
-          limit: 3
-    type: HorizontalCardList
-    subtitle: Devotionals
-    primaryAction:
-      action: OPEN_CHANNEL
-      title: 'Read More'
-      relatedNode:
-        __typename: ContentChannel
-        id: 7
-        name: Devotionals
-  - algorithms:
-      - type: CONTENT_FEED
-        arguments:
-          channelIds:
             - 6
           limit: 3
     type: HorizontalCardList
@@ -274,6 +290,14 @@ DISCOVER_FEATURES:
           limit: 3
     type: HorizontalCardList
     subtitle: Something Else
+
+PRAY_FEATURES:
+  - algorithms: [DAILY_PRAYER]
+    isCard: false
+    type: PrayerList
+    title: Daily Prayer
+  - type: VerticalPrayerList
+    title: Your Prayers
 
 # Default mapping of field types -> ids. There's probably no reason to edit this.
 ROCK_CONSTANTS:

@@ -3,24 +3,35 @@ import { Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { withTheme } from '@apollosproject/ui-kit';
 
+import Tab from './Tab';
 import Connect from './connect';
-import Home from './home';
-import Discover from './discover';
 import tabBarIcon from './tabBarIcon';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
-const TabNavigator = (props) => (
-  <Navigator {...props} lazy>
+const TabNavigator = () => (
+  <Navigator lazy>
     <Screen
       name="Home"
-      component={Home}
+      component={() => (
+        <Tab queryName={'homeFeedFeatures'} showHeader showTitle={false} />
+      )}
       options={{ tabBarIcon: tabBarIcon('home') }}
     />
     <Screen
-      name="Discover"
-      component={Discover}
+      name="Read"
+      component={() => <Tab queryName={'readFeedFeatures'} />}
       options={{ tabBarIcon: tabBarIcon('sections') }}
+    />
+    <Screen
+      name="Watch"
+      component={() => <Tab queryName={'watchFeedFeatures'} />}
+      options={{ tabBarIcon: tabBarIcon('video') }}
+    />
+    <Screen
+      name="Pray"
+      component={() => <Tab queryName={'prayFeedFeatures'} />}
+      options={{ tabBarIcon: tabBarIcon('heart') }}
     />
     <Screen
       name="Connect"
