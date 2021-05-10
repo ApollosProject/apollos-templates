@@ -102,7 +102,7 @@
     "react-native-maps": "^0.27.1",
     "react-native-modal-datetime-picker": "9.0.0",
     "react-native-music-control": "0.10.8",
-    "react-native-onesignal": "3.9.1",
+    "react-native-onesignal": "4.0.8",
     "react-native-passkit-wallet": "^0.1.4",
     "react-native-permissions": "^2.0.5",
     "react-native-reanimated": "^2.0.0",
