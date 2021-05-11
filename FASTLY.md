@@ -10,4 +10,4 @@ Install the addon using the Heroku CLI:
 heroku addons:create fastly:quick
 ```
 
-Now on your server and in your app build process, edit the `ROOT_URL` variable on the API and the `APP_DATA_URL` variable on the client to match the new `FASTLY_CDN_URL`.
+Get the new `FASTLY_CDN_URL` and add/replace the `ROOT_URL` variable on the API (local and remote) and the `APP_DATA_URL` variable on the app (local and remote)
