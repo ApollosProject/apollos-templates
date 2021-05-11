@@ -139,27 +139,11 @@ Android uses Google Maps for its map service so you will need to register a [Goo
 GOOGLE_MAPS_API_KEY=<KEY>
 ```
 
-Change the `app-name` in `apolloschurchapp/android/app/src/main/res/values/strings.xml`
-
-```
-<string name="app_name">NEW NAME</string>
-```
-
 Then start the app on the default installed emulator in a separate tab.
 
 ```
 yarn android
 ```
-
-The last thing you'll want to do to make sure you don't lose your important keys and credentials is encrypt them and add them to the repo. Copy the `.env` file in both API and app directories to a new file, `.env.shared`. Then from the root directory, run the encryption command.
-
-```
-yarn secrets -e <password>
-```
-
-Make sure to remember that password as we'll use it later for automatic Android deploys. Add it to Github as a secret
-
-`ENCRYPTION_PASSWORD=<password>`
 
 #### Deploy
 
@@ -167,13 +151,17 @@ We use [Fastlane](#) through Github Actions to manage certificates and build upl
 
 ##### iOS
 
-First thing we'll do is configure the certificates. Change the following values in the `Matchfile`:
+First thing we'll do is configure the certificates. Add the following values to your `.env` file:
 
-- `git_url`: This is the _private_ repo you are going to store the certificates
-- `app_identifier`: The App ID you chose for your app in the Apple Developer Dashboard
-- `username`: Admin level Apple Developer account, used to manage certificates and profiles
+```
+MATCH_PASSWORD=<some unique password>
+MATCH_GIT_URL=<private repo to store certs and profiles>
+MATCH_APP_IDENTIFIER=<bundle ID of app>
+FASTLANE_ITC_TEAM_NAME=<developer team name>
+FASTLANE_TEAM_ID=<developer team ID>
+```
 
-You'll need to create a personal access token in Github and use that to authenticate to your certificates repo. Once you have the token, you'll need to encode it to base64.
+For the CI, You'll need to create a personal access token in Github and use that to authenticate to your certificates repo. Once you have the token, you'll need to encode it to base64.
 
 ```
 echo -n "<github username>:<token>" | base64
@@ -192,32 +180,16 @@ bundle exec fastlane match development
 bundle exec fastlane match appstore
 ```
 
-Match will ask you to enter a password. Go ahead and add it to your `.env` file. You'll need to decrypt on the CI for automatic deploys.
-
-```
-MATCH_PASSWORD=<password>
-```
-
 Use Xcode to switch the certificate and profile settings to "Manual" and choose the new certificates and profiles that you just created.
 
 <img width="803" alt="Screen Shot 2021-05-06 at 8 07 44 AM" src="https://user-images.githubusercontent.com/2659478/117295710-2cf10680-ae42-11eb-899a-e88c81f5d248.png">
 
-Next, in the `Fastfile`, change all instances of `apolloshchurchapp` and `apolloschurchappprod` to your projects condensed name. It's probably Whatever name you defined earlier with no spaces. You can be sure from `ios/<name>.xcodeproj`
-
-Now we will create an API key to manage authentication to Apple and upload builds from the CI. Create the key on the Apple Developer Portal and then download the `key.p8` file. You will also need the key ID and issuer ID, both can be found in the portal. Add the following variables to your `.env` file:
+Now we will create an API key to manage authentication to Apple and upload builds from the CI. Create the key on the Apple Developer Portal, download the file, and move it to `ios/apollos.p8`. You will also need the key ID and issuer ID, both can be found in the portal. Add the following variables to your `.env` file:
 
 ```
 APP_STORE_CONNECT_API_KEY_KEY_ID=<key ID>
 APP_STORE_CONNECT_API_KEY_ISSUER_ID=<issuer ID>
-APP_STORE_CONNECT_API_KEY_FILEPATH=<path/to/the/key.p8>
 ```
-
-Lastly, in the `Appfile` change, the following variables:
-
-- `app_identifier` - same ID you specified in the `Matchfile`
-- `apple_id` - The Apple ID you want responsible for uploads, must be at least "App Manager" level
-- `itc_team_id` - App Store Connect Team ID
-- `team_id` - [Apple Developer Portal Team ID](https://developer.apple.com/account/#/membership)
 
 Test the deployment:
 
@@ -225,22 +197,28 @@ Test the deployment:
 bundle exec fastlane ios deploy
 ```
 
-When it asks you choose the "team ID", copy the number and replace the `itc_connect_id` variable in the `Appfile`. This will be used by the CI.
+The last thing you'll want to do to make sure you don't lose your important keys and credentials is encrypt them and add them to the repo. Copy the `.env` file to a new file, `.env.shared`. Then from the root directory, run the encryption command. You can also use this through for the API directory as well as important Android secrets when we get there.
 
-Now configure Github Actions for automated deploys. Add `MATCH_GIT_BASIC_AUTHORIZATION` and `MATCH_PASSWORD` (the one I told you to remember) as repo secrets.
+```
+yarn secrets -e <password>
+```
+
+Make sure to remember that password as we'll use it later for automatic Android deploys. Add it to Github as a secret
+
+`ENCRYPTION_PASSWORD=<password>`
+
+Now push the changes and watch the app deploy!
 
 ##### Android
 
-First, you'll need to have the Developer account owner generate an upload key.json file
+First, you'll need to have the Developer account owner generate an upload key.
 
 ![upload key](https://files-2w1r6fc7m.vercel.app)
 
-Drop that file here: `apolloschurchapp/android/key.json`
-
-You can validate the upload key with this command
+Move that file to `android/key.json` once you have it. You can validate the upload key with this command
 
 ```
-fastlane run validate_play_store_json_key json_key:/path/to/your/downloaded/file.json
+fastlane run validate_play_store_json_key --json_key android/key.json
 ```
 
 Next, you'll need to generate a new signing key. Keep the passwords it asks you for.
@@ -267,8 +245,8 @@ Change the `package_name` variable in the `Appfile` to your new bundle ID. You c
 You will need to upload the bundle manually the first time, Fastlane can't do it for you. Run the command to create a release build
 
 ```
-bundle exec fastlane gradle task:clean project_dir:android
-bundle exec fastlane gradle task:bundle build_type:Release project_dir:android
+bundle exec fastlane gradle --task clean --project_dir android
+bundle exec fastlane gradle --task bundle --build_type Release --project_dir android
 ```
 
 Upload to the store on the internal track
@@ -288,5 +266,3 @@ Lastly, to get automated deploys working on the CI, re-run the encryption comman
 ```
 yarn secrets -e <password>
 ```
-
-And add that password as a Github secret `ENCRYPTION_PASSWORD`

@@ -92,9 +92,6 @@ jobs:
 
     - name: Fastlane Deploy
       run: bundle exec fastlane ios deploy
-      env:
-        MATCH_GIT_BASIC_AUTHORIZATION: ${{ secrets.MATCH_GIT_BASIC_AUTHORIZATION }}
-        MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }}
 
   android:
     defaults:
