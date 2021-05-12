@@ -13,25 +13,23 @@ const TabNavigator = () => (
   <Navigator lazy>
     <Screen
       name="Home"
-      component={() => (
-        <Tab queryName={'homeFeedFeatures'} showHeader showTitle={false} />
-      )}
+      component={() => <Tab tab={'HOME'} showHeader showTitle={false} />}
       options={{ tabBarIcon: tabBarIcon('home') }}
     />
     <Screen
       name="Read"
-      component={() => <Tab queryName={'readFeedFeatures'} />}
+      component={() => <Tab tab={'READ'} />}
       options={{ tabBarIcon: tabBarIcon('sections') }}
     />
     <Screen
       name="Watch"
-      component={() => <Tab queryName={'watchFeedFeatures'} />}
+      component={() => <Tab tab={'WATCH'} />}
       options={{ tabBarIcon: tabBarIcon('video') }}
     />
     <Screen
       name="Pray"
-      component={() => <Tab queryName={'prayFeedFeatures'} />}
-      options={{ tabBarIcon: tabBarIcon('heart') }}
+      component={() => <Tab tab={'PRAY'} />}
+      options={{ tabBarIcon: tabBarIcon('like') }}
     />
     <Screen
       name="Connect"

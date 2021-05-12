@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { Image } from 'react-native';
 import PropTypes from 'prop-types';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Query } from '@apollo/client/react/components';
-import { useApolloClient, gql } from '@apollo/client';
+import { useApolloClient, gql, useQuery } from '@apollo/client';
 import { useNavigation } from '@react-navigation/native';
 
 import {
@@ -42,9 +41,19 @@ const TabTitle = styled(({ theme }) => ({
   paddingTop: theme.sizing.baseUnit * 2,
 }))(H2);
 
-const Tab = ({ queryName, showHeader = false, showTitle = true }) => {
+const Tab = ({ tab, showHeader, showTitle }) => {
   const client = useApolloClient();
   const navigation = useNavigation();
+  const { data } = useQuery(
+    gql`
+      query GetTabFeatures($tab: Tab!) {
+        tabFeedFeatures(tab: $tab) {
+          id
+        }
+      }
+    `,
+    { variables: { tab }, fetchPolicy: 'cache-and-network' }
+  );
 
   // this is only used by the tab loaded first
   // if there is a new version of the onboarding flow,
@@ -72,27 +81,14 @@ const Tab = ({ queryName, showHeader = false, showTitle = true }) => {
                 <SearchButton onPress={() => navigation.navigate('Search')} />
               </PaddedView>
             ) : null}
-            <Query
-              query={gql`
-              query {
-                ${queryName} {
-                  id
-                }
+            <FeaturesFeedConnected
+              openUrl={openUrl}
+              featureFeedId={data?.tabFeedFeatures?.id}
+              onPressActionItem={handleOnPress}
+              ListHeaderComponent={
+                showTitle ? <TabTitle>TITLE</TabTitle> : null
               }
-            `}
-              fetchPolicy="cache-and-network"
-            >
-              {({ data }) => (
-                <FeaturesFeedConnected
-                  openUrl={openUrl}
-                  featureFeedId={data[queryName].id}
-                  onPressActionItem={handleOnPress}
-                  ListHeaderComponent={
-                    showTitle ? <TabTitle>TITLE</TabTitle> : null
-                  }
-                />
-              )}
-            </Query>
+            />
           </SafeAreaView>
         </BackgroundView>
       )}
@@ -101,9 +97,14 @@ const Tab = ({ queryName, showHeader = false, showTitle = true }) => {
 };
 
 Tab.propTypes = {
-  queryName: PropTypes.string,
+  tab: PropTypes.string,
   showHeader: PropTypes.bool,
   showTitle: PropTypes.bool,
+};
+
+Tab.defaultProps = {
+  showHeader: false,
+  showTitle: true,
 };
 
 export default Tab;
