@@ -13,11 +13,13 @@
 # Uncomment the line if you want fastlane to automatically update itself
 #update_fastlane
 
-before_all do
-  ensure_git_branch
-  ensure_git_status_clean
-  git_pull
-end
+# before_all do
+#   ensure_git_branch
+#   ensure_git_status_clean
+#   git_pull
+# end
+
+app_id = "com.apollos."
 
 platform :ios do
 
@@ -27,9 +29,9 @@ platform :ios do
     # get project name
     proj = Dir.glob("../ios/*.xcworkspace")[0][7..-13]
 
-    app_store_connect_api_key(key_filepath: "ios/apollos.p8")
+    app_store_connect_api_key(key_filepath: "ios/apollos.p8", in_house: false)
     setup_ci
-    match(type: 'appstore', readonly: true)
+    match(type: 'appstore', app_identifier: ["com.differential.apollos", "com.differential.apollos.OneSignalNotificationServiceExtension"])
     increment_build_number(build_number: number_of_commits, xcodeproj: "ios/" << proj << ".xcodeproj")
     build_app(workspace: "ios/" << proj << ".xcworkspace", scheme: proj)
     changelog_from_git_commits

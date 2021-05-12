@@ -468,7 +468,7 @@
 					BF49AE832649A852001C7B78 = {
 						CreatedOnToolsVersion = 12.5;
 						DevelopmentTeam = 7KS82J74VW;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -892,7 +892,7 @@
 				CODE_SIGN_ENTITLEMENTS = apolloschurchapp/apolloschurchapp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 507;
+				CURRENT_PROJECT_VERSION = 669;
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = 7KS82J74VW;
 				HEADER_SEARCH_PATHS = (
@@ -926,7 +926,7 @@
 				CODE_SIGN_ENTITLEMENTS = apolloschurchapp/apolloschurchapp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: Differential Dev Shop, LLC (7KS82J74VW)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 507;
+				CURRENT_PROJECT_VERSION = 669;
 				DEVELOPMENT_TEAM = 7KS82J74VW;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -941,7 +941,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.differential.apollos;
 				PRODUCT_NAME = apolloschurchapp;
-				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.differential.apollos";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.differential.apollos 1620756270";
 				SWIFT_OBJC_BRIDGING_HEADER = "apolloschurchapp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1211,7 +1211,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development: Apollos Apps (58685TNK9H)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = 7KS82J74VW;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1222,6 +1222,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.differential.apollos.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.differential.apollos.OneSignalNotificationServiceExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1243,7 +1244,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_ENTITLEMENTS = OneSignalNotificationServiceExtension/OneSignalNotificationServiceExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution: Differential Dev Shop, LLC (7KS82J74VW)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 7KS82J74VW;
@@ -1254,6 +1255,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.differential.apollos.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.differential.apollos.OneSignalNotificationServiceExtension";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
