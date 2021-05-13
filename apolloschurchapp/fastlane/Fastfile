@@ -21,11 +21,11 @@ def product_bundle_id(path:)
   build_configuration.build_settings['PRODUCT_BUNDLE_IDENTIFIER']
 end
 
-# before_all do
-#   ensure_git_branch
-#   ensure_git_status_clean
-#   git_pull
-# end
+before_all do
+  ensure_git_branch
+  ensure_git_status_clean
+  git_pull
+end
 
 app_id = "com.apollos."
 
