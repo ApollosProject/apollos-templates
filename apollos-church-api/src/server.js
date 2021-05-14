@@ -43,7 +43,7 @@ const cacheOptions = isDev
       },
     };
 
-const { ENGINE, ROCK, APP } = ApollosConfig;
+const { ROCK, APP } = ApollosConfig;
 
 const apolloServer = new ApolloServer({
   typeDefs: schema,
