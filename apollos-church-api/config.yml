@@ -10,7 +10,8 @@
 APP:
   # This variable is used for generating deep links.
   # It should match whatver is in your Info.plist `CFBundleURLTypes`
-  DEEP_LINK_HOST: apolloschurchapp
+  DEEP_LINK_HOST: ${DEEP_LINK_HOST}
+  UNIVERSAL_LINK_HOST: ${UNIVERSAL_LINK_HOST}
   ROOT_API_URL: ${ROOT_URL}
   JOBS_USERNAME: ${JOBS_USERNAME}
   JOBS_PASSWORD: ${JOBS_PASSWORD}
@@ -26,15 +27,13 @@ BUGSNAG:
   ## Optional, but you'll need to remove references to @apollosproject/bugsnag if you don't wish to use.
   API_KEY: ${BUGSNAG_KEY}
 ROCK:
+  URL: ${ROCK_URL}
   API_URL: ${ROCK_API}
   API_TOKEN: ${ROCK_TOKEN}
   IMAGE_URL: https://rock.apollos.app/GetImage.ashx
   SHARE_URL: https://rock.apollos.app
   # This should match the timezone of the Rock server
   TIMEZONE: 'America/New_York'
-  USE_PLUGIN: true
-  SHOW_INACTIVE_CONTENT: ${ROCK_SHOW_INACTIVE_CONTENT}
-  VERSION: 10
 UNIVERSAL_LINKS:
   # This should be your app's bundle ID, as found in your info.plist.
   APPLE_APP_ID: ${APPLE_APP_ID}
@@ -54,11 +53,6 @@ CHURCH_ONLINE:
   URL: ${CHURCH_ONLINE_URL}
   MEDIA_URLS: []
   WEB_VIEW_URL: https://apollos.online.church/
-SUGGESTED_FOLLOWS:
-  - michael.neeley@differential.com
-  - 
-    email: vince@classyh.at
-    campusId: 45893d11-cd72-4a42-b3ee-08814a937e1a
 ALGOLIA:
   APPLICATION_ID: ${ALGOLIASEARCH_APPLICATION_ID}
   API_KEY: ${ALGOLIASEARCH_API_KEY}
@@ -148,14 +142,9 @@ ROCK_MAPPINGS:
     - 6
     - 8
 
-  # Apollos will pull content items from these channels and expose them on the user feed
-  # However, it will not expose the channel itself.
   # These channels are also pulled when indexing searchable content.
-  FEED_CONTENT_CHANNEL_IDS:
+  ACTIVE_CONTENT_CHANNEL_IDS:
     - 6
-
-  CAMPAIGN_CHANNEL_IDS:
-    - 11
 
   SERMON_CHANNEL_ID: 5
 
@@ -177,7 +166,11 @@ HOME_FEATURES:
           relatedNode: { __typename: Url, url: 'https://www.google.com' },
         },
       ]
-  - algorithms: [USER_FEED]
+  - algorithms:
+    - type: CONTENT_FEED
+      arguments:
+        channelIds:
+          - 6
     type: HeroList
     primaryAction:
       # Right now, you hardcode exactly what GraphQL should return.
@@ -191,9 +184,13 @@ HOME_FEATURES:
     isCard: false
     type: PrayerList
     title: Daily Prayer
-  - algorithms: [CAMPAIGN_ITEMS]
+  - algorithms:
+      - type: CAMPAIGN_ITEMS
+        channelIds:
+          - 9
     type: HeroList
     isFeatured: true
+    subtitle: Featured
   - title: FOR YOU
     algorithms: [SERMON_CHILDREN, PERSONA_FEED]
     subtitle: Explore what God calls you to today
@@ -209,23 +206,26 @@ HOME_FEATURES:
     subtitle: What's happening at apollos?
     type: ActionList
     algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 13
+          channelIds:
+            - 13
       - type: UPCOMING_EVENTS
 
 DISCOVER_FEATURES:
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 3
+          channelIds:
+            - 3
           limit: 3
     type: HorizontalCardList
     subtitle: Sermons
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 5
+          channelIds:
+            - 5
           limit: 3
     type: HorizontalCardList
     subtitle: Podcasts
@@ -237,9 +237,10 @@ DISCOVER_FEATURES:
         id: 5
         name: Podcasts
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 7
+          channelIds:
+            - 7
           limit: 3
     type: HorizontalCardList
     subtitle: Devotionals
@@ -251,9 +252,10 @@ DISCOVER_FEATURES:
         id: 7
         name: Devotionals
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 6
+          channelIds:
+            - 6
           limit: 3
     type: HorizontalCardList
     title: Videos
@@ -265,9 +267,10 @@ DISCOVER_FEATURES:
         id: 6
         name: Videos
   - algorithms:
-      - type: CONTENT_CHANNEL
+      - type: CONTENT_FEED
         arguments:
-          contentChannelId: 8
+          channelIds:
+            - 8
           limit: 3
     type: HorizontalCardList
     subtitle: Something Else
