@@ -15,7 +15,6 @@ APP:
   ROOT_API_URL: ${ROOT_URL}
   JOBS_USERNAME: ${JOBS_USERNAME}
   JOBS_PASSWORD: ${JOBS_PASSWORD}
-  FLAG_LIMIT: 1
 DATABASE:
   URL: ${DATABASE_URL}
   OPTIONS:
@@ -24,48 +23,26 @@ DATABASE:
         require: false
         rejectUnauthorized: false
 BUGSNAG:
-  ## Optional, but you'll need to remove references to @apollosproject/bugsnag if you don't wish to use.
   API_KEY: ${BUGSNAG_KEY}
 ROCK:
   URL: ${ROCK_URL}
   API_TOKEN: ${ROCK_TOKEN}
-  # This should match the timezone of the Rock server
-  TIMEZONE: 'America/New_York'
 UNIVERSAL_LINKS:
-  # This should be your app's bundle ID, as found in your info.plist.
   APPLE_APP_ID: ${APPLE_APP_ID}
-  # This should be your app's team ID, as found in Xcode
   APPLE_TEAM_ID: ${APPLE_TEAM_ID}
-  # Where should a user be redirected if they don't have your app installed?
   APP_STORE_LINK: ${IOS_REDIRECT}
   PLAY_STORE_LINK: ${ANDROID_REDIRECT}
-  # Your app Id, as found in your app/build.gradle.
   GOOGLE_APP_ID: ${GOOGLE_APP_ID}
-  # https://docs.getsocial.im/knowledge-base/android-signing-key-sha256/
   GOOGLE_KEYSTORE_SHA256: ${GOOGLE_KEYSTORE_SHA256}
 ONE_SIGNAL:
   APP_ID: ${ONE_SIGNAL_APP_ID}
   REST_KEY: ${ONE_SIGNAL_REST_KEY}
 CHURCH_ONLINE:
   URL: ${CHURCH_ONLINE_URL}
-  MEDIA_URLS: []
   WEB_VIEW_URL: https://apollos.online.church/
 ALGOLIA:
   APPLICATION_ID: ${ALGOLIASEARCH_APPLICATION_ID}
   API_KEY: ${ALGOLIASEARCH_API_KEY}
-  SEARCH_INDEX: prod_ContentItem
-  # Configure Algolia custom settings here
-  # https://www.algolia.com/doc/api-reference/settings-api-parameters/
-  CONFIGURATION:
-    searchableAttributes:
-      - title
-      - unordered(summary)
-    #customRankings:
-    # NOT CURRENTLY INCLUDED
-    # This just demonstrates what's possible
-    # To include likedCount (or any other field) override search package
-    # and add field to config below
-    #- desc(likedCount)
 TWILIO:
   ACCOUNT_SID: ${TWILIO_ACCOUNT_SID}
   AUTH_TOKEN: ${TWILIO_AUTH_TOKEN}
@@ -78,25 +55,13 @@ PASS:
     SIGNER_CERT: ${PASS_SIGNER_CERT}
     SIGNER_KEY: ${PASS_SIGNER_KEY}
     SIGNER_KEY_PASSPHRASE: ${PASS_SIGNER_PASSPHRASE}
-ANALYTICS:
-  # Filling out these fields will automatically enable analytics tracking
-  # on the accompanying service
-  SEGMENT_KEY:
-  GA_ID:
-  USE_ROCK: false
 BIBLE_API:
   KEY: ${BIBLE_API_KEY}
   BIBLE_ID:
     WEB: '9879dbb7cfe39e4d-01'
     KJV: 'de4e12af7f28f599-02'
 CLOUDINARY:
-  # Cloudinary is used to improve image loading
-  # value should look something like
-  # cloudinary://123123123:adkfnla_adASDv_adAS@test
   URL: ${CLOUDINARY_URL}
-ENGINE:
-  API_KEY: ${ENGINE_API_KEY}
-  SCHEMA_TAG: ${ENGINE_SCHEMA_TAG}
 
 # This key holds various properties that allow our GraphQL server to map to your Rock Instance
 ROCK_MAPPINGS:
