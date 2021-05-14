@@ -58,13 +58,21 @@ Add your config variables to the remote application
 heroku config:set ROCK_API=<url> ROCK_TOKEN=<token>
 ```
 
-We deploy through the Github workflow. You need to set three new [Github secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) in your new repository:
+We deploy through the Github workflow. You need to set three new [Github secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) in your new repository. First [Install the Github CLI](https://cli.github.com)
 
-- `HEROKU_API_KEY`: This comes from your Heroku account dashboard and is used to upload
-- `HEROKU_APP_NAME`: This is the Heroku app name from above when you created the server
-- `APP_DATA_URL`: The URL of your server. You can get this by running `heroku info` and using "Web URL"
+```
+brew install gh
+gh auth login
+```
 
-![github secret](https://files-5eu5fyz6u.vercel.app)
+Now set the secrets you need to deploy
+
+```
+gh secret set HEROKU_API_KEY -b <Your user API key>
+gh secret set HEROKU_EMAIL -b <Your email address>
+gh secret set HEROKU_APP_NAME -b <App name from creation step above>
+gh secret set APP_DATA_URL -b <Full Heroku app URL>
+```
 
 Simply commit to `master` and push or re-run the action if you haven't made any changes yet. Once the API Deploy action is finished, you should be able to open up the app in the browser
 
@@ -109,17 +117,13 @@ Couple final steps you'll need to get the app booted in development mode.
 
 ##### iOS
 
-For iOS, you will need to choose a new app identifier and clear out certificates to boot in Development mode. Set the app identifier in the Apple Developer [dashboard](https://developer.apple.com/account/resources/identifiers/list)
+Enable automatic code signing (we'll switch back to manual later when ready to deploy) and pick a new ID.
 
-![apple developer dashboard](https://files-g3cz9dm34.vercel.app)
+![xcode signing](https://files-o16fn2ymm-redreceipt.vercel.app)
 
-Use Xcode to edit the settings:
+Add the new schemes to the workspace. You should see them by going to Xcode > Product > Scheme > Manage Schemes.
 
-![certificates](https://files-gd7d6gcqz.vercel.app)
-
-Change the display name of the app
-
-![display name](https://files-h2vqr0xje.vercel.app)
+![schemes](https://files-7i6cjwshd-redreceipt.vercel.app)
 
 Now run the command to start the simulator in a separate tab:
 
@@ -135,19 +139,65 @@ Android uses Google Maps for its map service so you will need to register a [Goo
 GOOGLE_MAPS_API_KEY=<KEY>
 ```
 
-Change the `app-name` in `apolloschurchapp/android/app/src/main/res/values/strings.xml`
-
-```
-<string name="app_name">NEW NAME</string>
-```
-
 Then start the app on the default installed emulator in a separate tab.
 
 ```
 yarn android
 ```
 
-The last thing you'll want to do to make sure you don't lose your important keys and credentials is encrypt them and add them to the repo. Copy the `.env` file in both API and app directories to a new file, `.env.shared`. Then from the root directory, run the encryption command.
+#### Deploy
+
+We use [Fastlane](#) through Github Actions to manage certificates and build uploads. This will walk you through everything you need to get set up with automated deployments.
+
+##### iOS
+
+First thing we'll do is configure the certificates. Add the following values to your `.env` file:
+
+```
+MATCH_PASSWORD=<some unique password>
+MATCH_GIT_URL=<private repo to store certs and profiles>
+MATCH_APP_IDENTIFIER=<bundle ID of app>
+FASTLANE_ITC_TEAM_NAME=<developer team name>
+FASTLANE_TEAM_ID=<developer team ID>
+```
+
+For the CI, You'll need to create a personal access token in Github and use that to authenticate to your certificates repo. Once you have the token, you'll need to encode it to base64.
+
+```
+echo -n "<github username>:<token>" | base64
+```
+
+Add the encoded token to your `.env` file
+
+```
+MATCH_BASIC_GIT_AUTHORIZATION=<base64 encoded token>
+```
+
+Inside the app directory run `match` to configure the certificates
+
+```
+bundle exec fastlane match development
+bundle exec fastlane match appstore
+```
+
+Use Xcode to switch the certificate and profile settings to "Manual" and choose the new certificates and profiles that you just created.
+
+<img width="803" alt="Screen Shot 2021-05-06 at 8 07 44 AM" src="https://user-images.githubusercontent.com/2659478/117295710-2cf10680-ae42-11eb-899a-e88c81f5d248.png">
+
+Now we will create an API key to manage authentication to Apple and upload builds from the CI. Create the key on the Apple Developer Portal, download the file, and move it to `ios/apollos.p8`. You will also need the key ID and issuer ID, both can be found in the portal. Add the following variables to your `.env` file:
+
+```
+APP_STORE_CONNECT_API_KEY_KEY_ID=<key ID>
+APP_STORE_CONNECT_API_KEY_ISSUER_ID=<issuer ID>
+```
+
+Test the deployment:
+
+```
+bundle exec fastlane ios deploy
+```
+
+The last thing you'll want to do to make sure you don't lose your important keys and credentials is encrypt them and add them to the repo. Copy the `.env` file to a new file, `.env.shared`. Then from the root directory, run the encryption command. You can also use this through for the API directory as well as important Android secrets when we get there.
 
 ```
 yarn secrets -e <password>
@@ -157,76 +207,18 @@ Make sure to remember that password as we'll use it later for automatic Android 
 
 `ENCRYPTION_PASSWORD=<password>`
 
-#### Deploy
-
-We use [Fastlane](#) through Github Actions to manage certificates and build uploads. This will walk you through everything you need to get set up with automated deployments.
-
-##### iOS
-
-First thing we'll do is configure the certificates. Change the following values in the `Matchfile`:
-
-`git_url`: This is the _private_ repo you are going to store the certificates
-`app_identifier`: The App ID you chose for your app in the Apple Developer Dashboard
-`username`: Admin level Apple Developer account, used to manage certificates and profiles
-
-You'll need to create a personal access token in Github and use that to authenticate to your certificates repo. Once you have the token, you'll need to encode it to base64.
-
-```
-python -c "import base64;print(base64.b64encode('<github username>:<token>'))"
-```
-
-Add the encoded token to your `.env` file
-
-```
-MATCH_BASIC_GIT_AUTHORIZATION=<token>
-```
-
-**_NOTE:_** If this is a new app, you will need to add at least one device to the developer portal. Easiest way is to have Xcode do it by turning off and on "Automatic Code Signing" with an iPhone plugged in.
-
-Inside the app directory run `match` to configure the certificates
-
-```
-bundle exec fastlane match development
-bundle exec fastlane match appstore
-```
-
-Match will ask you to enter a password. Go ahead and add it to your `.env` file. You'll need to decrypt on the CI for automatic deploys.
-
-```
-MATCH_PASSWORD=<password>
-```
-
-Next, the `Fastfile`, change all instances of `apolloshchurchapp` and `apolloschurchappprod` to your projects condensed name. It's probably Whatever name you defined earlier with no spaces. You can be sure from `ios/<name>.xcodeproj`
-
-Lastly, in the `Appfile` change, the following variables:
-
-- `app_identifier` - same ID you specified in the `Matchfile`
-- `apple_id` - The Apple ID you want responsible for uploads, must be at least "App Manager" level
-- `itc_team_id` - App Store Connect Team ID
-- `team_id` - [Apple Developer Portal Team ID](https://developer.apple.com/account/#/membership)
-
-Test the deployment:
-
-```
-bundle exec fastlane ios deploy
-```
-
-When it asks you choose the "team ID", copy the number and replace the `itc_connect_id` variable in the `Appfile`. This will be used by the CI.
-
-Now configure Github Actions for automated deploys. Add `MATCH_GIT_BASIC_AUTHORIZATION` and `MATCH_PASSWORD` (the one I told you to remember) as repo secrets.
+Now push the changes and watch the app deploy!
 
 ##### Android
 
-First, you'll need to have the Developer account owner generate an upload key.json file
+First, you'll need to have the Developer account owner generate an upload key.
 
 ![upload key](https://files-2w1r6fc7m.vercel.app)
 
-Drop that file here: `apolloschurchapp/android/key.json`
-
-You can validate the upload key with this command
+Move that file to `android/key.json` once you have it. You can validate the upload key with this command
 
 ```
-fastlane run validate_play_store_json_key json_key:/path/to/your/downloaded/file.json
+fastlane run validate_play_store_json_key --json_key android/key.json
 ```
 
 Next, you'll need to generate a new signing key. Keep the passwords it asks you for.
@@ -253,8 +245,8 @@ Change the `package_name` variable in the `Appfile` to your new bundle ID. You c
 You will need to upload the bundle manually the first time, Fastlane can't do it for you. Run the command to create a release build
 
 ```
-bundle exec fastlane gradle task:clean project_dir:android
-bundle exec fastlane gradle task:bundle build_type:Release project_dir:android
+bundle exec fastlane gradle --task clean --project_dir android
+bundle exec fastlane gradle --task bundle --build_type Release --project_dir android
 ```
 
 Upload to the store on the internal track
@@ -274,5 +266,3 @@ Lastly, to get automated deploys working on the CI, re-run the encryption comman
 ```
 yarn secrets -e <password>
 ```
-
-And add that password as a Github secret `ENCRYPTION_PASSWORD`

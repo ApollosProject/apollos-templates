@@ -1,0 +1,140 @@
+name: Deploy
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  codecov:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+
+    - name: Install Dependencies
+      run: yarn --ignore-scripts
+
+    - name: Jest
+      run: yarn test -- -- -- --forceExit
+
+    - name: Codecov
+      uses: codecov/codecov-action@v1
+
+  api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      # heroku only uses yarn if there's a yarn.lock file
+      - name: Use Yarn
+        run: |
+          cp yarn.lock apollos-church-api/yarn.lock
+          git config --global user.email "apps@apollos.app"
+          git config --global user.name "Apollos Admin"
+          git add apollos-church-api/yarn.lock
+          git commit -am "added yarn.lock"
+
+      - name: Deploy to Heroku
+        uses: akhileshns/heroku-deploy@v3.5.6
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
+          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+          appdir: apollos-church-api
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+
+      - name: Publish Schema
+        run: npx apollo schema:publish --endpoint=${{ secrets.APP_DATA_URL }}
+        env:
+          ENGINE_API_KEY: ${{ secrets.ENGINE_API_KEY }}
+
+  ios:
+    defaults:
+      run:
+        working-directory: apolloschurchapp
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node
+      uses: actions/setup-node@v2
+
+    - name: Install Bundler
+      run: gem install bundler
+
+    - name: Decrypt Environment Variables and Apple API Key
+      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
+
+    - run: cp .env.shared .env
+
+    - name: Install Dependencies
+      run: yarn
+
+    # required to build
+    - name: Generate Stories
+      run: yarn generate-stories
+
+    - name: Generate Schema
+      run: yarn get-schema
+
+    - name: Generate Fragment Types
+      run: node ./scripts/get-introspection-data.js
+      env:
+        APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
+
+    - name: Fastlane Deploy
+      run: bundle exec fastlane ios deploy
+
+  android:
+    defaults:
+      run:
+        working-directory: apolloschurchapp
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Setup Node
+      uses: actions/setup-node@v2
+
+    - name: Install Bundler
+      run: gem install bundler
+
+    - name: Decrypt Environment Variables and Keystore
+      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
+
+    - run: cp .env.shared .env
+
+    - name: Install Dependencies
+      run: yarn
+
+    # required to build
+    - name: Generate Stories
+      run: yarn generate-stories
+
+    - name: Generate Schema
+      run: yarn get-schema
+
+    - name: Generate Fragment Types
+      run: node ./scripts/get-introspection-data.js
+      env:
+        APP_DATA_URL: ${{ secrets.APP_DATA_URL }}
+
+    - name: Fastlane Deploy
+      run: bundle exec fastlane android deploy
+      env:
+        KEYSTORE_FILE: apollos.keystore
+        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+        KEY_ALIAS: apollos
+        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
