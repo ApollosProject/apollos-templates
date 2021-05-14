@@ -1,17 +1,8 @@
 import React, { useEffect } from 'react';
-import { Image } from 'react-native';
 import PropTypes from 'prop-types';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { useApolloClient, gql, useQuery } from '@apollo/client';
-import { useNavigation } from '@react-navigation/native';
 
-import {
-  BackgroundView,
-  PaddedView,
-  NavigationService,
-  styled,
-  H2,
-} from '@apollosproject/ui-kit';
+import { BackgroundView, NavigationService } from '@apollosproject/ui-kit';
 import {
   FeaturesFeedConnected,
   FEATURE_FEED_ACTION_MAP,
@@ -21,7 +12,6 @@ import {
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
 
 import { ONBOARDING_VERSION } from '../ui/Onboarding';
-import { SearchButton } from '../ui/Search';
 
 function handleOnPress({ action, ...props }) {
   if (FEATURE_FEED_ACTION_MAP[action]) {
@@ -29,21 +19,8 @@ function handleOnPress({ action, ...props }) {
   }
 }
 
-const HeaderLogo = styled(({ theme }) => ({
-  height: theme.sizing.baseUnit,
-  margin: theme.sizing.baseUnit,
-  alignSelf: 'center',
-  resizeMode: 'contain',
-}))(Image);
-
-const TabTitle = styled(({ theme }) => ({
-  paddingLeft: theme.sizing.baseUnit,
-  paddingTop: theme.sizing.baseUnit * 2,
-}))(H2);
-
-const Tab = ({ tab, showHeader, showTitle }) => {
+const Tab = ({ tab }) => {
   const client = useApolloClient();
-  const navigation = useNavigation();
   const { data } = useQuery(
     gql`
       query GetTabFeatures($tab: Tab!) {
@@ -74,22 +51,11 @@ const Tab = ({ tab, showHeader, showTitle }) => {
     <RockAuthedWebBrowser>
       {(openUrl) => (
         <BackgroundView>
-          <SafeAreaView edges={['top', 'left', 'right']}>
-            {showHeader ? (
-              <PaddedView>
-                <HeaderLogo source={require('./wordmark.png')} />
-                <SearchButton onPress={() => navigation.navigate('Search')} />
-              </PaddedView>
-            ) : null}
-            <FeaturesFeedConnected
-              openUrl={openUrl}
-              featureFeedId={data?.tabFeedFeatures?.id}
-              onPressActionItem={handleOnPress}
-              ListHeaderComponent={
-                showTitle ? <TabTitle>TITLE</TabTitle> : null
-              }
-            />
-          </SafeAreaView>
+          <FeaturesFeedConnected
+            openUrl={openUrl}
+            featureFeedId={data?.tabFeedFeatures?.id}
+            onPressActionItem={handleOnPress}
+          />
         </BackgroundView>
       )}
     </RockAuthedWebBrowser>
@@ -97,14 +63,7 @@ const Tab = ({ tab, showHeader, showTitle }) => {
 };
 
 Tab.propTypes = {
-  tab: PropTypes.string,
-  showHeader: PropTypes.bool,
-  showTitle: PropTypes.bool,
-};
-
-Tab.defaultProps = {
-  showHeader: false,
-  showTitle: true,
+  tab: PropTypes.string.isRequired,
 };
 
 export default Tab;

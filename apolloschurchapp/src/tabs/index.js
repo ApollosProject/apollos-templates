@@ -1,34 +1,101 @@
 import React from 'react';
-import { Platform } from 'react-native';
+import { Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { withTheme } from '@apollosproject/ui-kit';
+import { createNativeStackNavigator } from 'react-native-screens/native-stack';
+import { styled } from '@apollosproject/ui-kit';
 
+import { SearchButton } from '../ui/Search';
 import Tab from './Tab';
 import Connect from './connect';
 import tabBarIcon from './tabBarIcon';
 
+const HeaderLogo = styled(({ theme }) => ({
+  height: theme.sizing.baseUnit,
+  resizeMode: 'contain',
+}))(Image);
+
+const HeaderCenter = () => <HeaderLogo source={require('./wordmark.png')} />;
+const HeaderRight = () => {
+  const navigation = useNavigation();
+  return <SearchButton onPress={() => navigation.navigate('Search')} />;
+};
+
+// we nest stack inside of tabs so we can use all the fancy native header features
+const HomeStack = createNativeStackNavigator();
+const Home = () => <Tab tab={'HOME'} />;
+const HomeTab = () => (
+  <HomeStack.Navigator
+    screenOptions={{
+      headerHideShadow: true,
+      headerCenter: HeaderCenter,
+      headerRight: HeaderRight,
+    }}
+  >
+    <HomeStack.Screen name="Home" component={Home} />
+  </HomeStack.Navigator>
+);
+
+const ReadStack = createNativeStackNavigator();
+const Read = () => <Tab tab={'READ'} />;
+const ReadTab = () => (
+  <ReadStack.Navigator
+    screenOptions={{
+      headerHideShadow: true,
+      headerLargeTitle: true,
+    }}
+  >
+    <ReadStack.Screen name="Read" component={Read} />
+  </ReadStack.Navigator>
+);
+
+const WatchStack = createNativeStackNavigator();
+const Watch = () => <Tab tab={'WATCH'} />;
+const WatchTab = () => (
+  <WatchStack.Navigator
+    screenOptions={{
+      headerHideShadow: true,
+      headerLargeTitle: true,
+    }}
+  >
+    <WatchStack.Screen name="Watch" component={Watch} />
+  </WatchStack.Navigator>
+);
+
+const PrayStack = createNativeStackNavigator();
+const Pray = () => <Tab tab={'READ'} />;
+const PrayTab = () => (
+  <PrayStack.Navigator
+    screenOptions={{
+      headerHideShadow: true,
+      headerLargeTitle: true,
+    }}
+  >
+    <PrayStack.Screen name="Pray" component={Pray} />
+  </PrayStack.Navigator>
+);
 const { Navigator, Screen } = createBottomTabNavigator();
 
 const TabNavigator = () => (
   <Navigator lazy>
     <Screen
       name="Home"
-      component={() => <Tab tab={'HOME'} showHeader showTitle={false} />}
+      component={HomeTab}
       options={{ tabBarIcon: tabBarIcon('home') }}
     />
     <Screen
       name="Read"
-      component={() => <Tab tab={'READ'} />}
+      component={ReadTab}
       options={{ tabBarIcon: tabBarIcon('sections') }}
     />
     <Screen
       name="Watch"
-      component={() => <Tab tab={'WATCH'} />}
+      component={WatchTab}
       options={{ tabBarIcon: tabBarIcon('video') }}
     />
     <Screen
       name="Pray"
-      component={() => <Tab tab={'PRAY'} />}
+      component={PrayTab}
       options={{ tabBarIcon: tabBarIcon('like') }}
     />
     <Screen
@@ -39,16 +106,4 @@ const TabNavigator = () => (
   </Navigator>
 );
 
-const ThemedTabNavigator = withTheme(({ theme }) => ({
-  tabBarOptions: {
-    activeTintColor: theme?.colors?.secondary,
-    inactiveTintColor: theme?.colors?.text?.tertiary,
-    style: {
-      backgroundColor: theme?.colors?.background?.paper,
-      borderTopColor: theme?.colors?.shadows.default,
-      ...Platform.select(theme?.shadows.default),
-    },
-  },
-}))(TabNavigator);
-
-export default ThemedTabNavigator;
+export default TabNavigator;
