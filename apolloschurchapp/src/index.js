@@ -97,6 +97,7 @@ const App = () => (
             name="ContentFeed"
             options={({ route }) => ({
               title: route.params.itemTitle || 'Content Feed',
+              stackPresentation: 'push',
             })}
           />
 
