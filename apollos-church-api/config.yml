@@ -28,10 +28,7 @@ BUGSNAG:
   API_KEY: ${BUGSNAG_KEY}
 ROCK:
   URL: ${ROCK_URL}
-  API_URL: ${ROCK_API}
   API_TOKEN: ${ROCK_TOKEN}
-  IMAGE_URL: https://rock.apollos.app/GetImage.ashx
-  SHARE_URL: https://rock.apollos.app
   # This should match the timezone of the Rock server
   TIMEZONE: 'America/New_York'
 UNIVERSAL_LINKS:
