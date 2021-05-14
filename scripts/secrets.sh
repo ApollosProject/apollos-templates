@@ -1,7 +1,7 @@
 #!/bin/bash
 if [ $# -ne 2 ]; then
 	echo "Usage: secrets.sh -e|-d KEY"
-	exit
+	exit 1
 fi
 
 function encrypt() {
@@ -26,7 +26,7 @@ for file in "${SECRETS[@]}"; do
 	elif [ "$1" = "-d" ]; then
 		decrypt "$file" "$2"
 	else
-		echo "Usage: secrets.sh KEY -e|-d"
-		exit
+		echo "Usage: secrets.sh -e|-d KEY"
+		exit 1
 	fi
 done
