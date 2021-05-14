@@ -30,7 +30,6 @@ ROCK:
   API_TOKEN: ${ROCK_TOKEN}
   IMAGE_URL: https://rock.apollos.app/GetImage.ashx
   SHARE_URL: https://rock.apollos.app
-  SHOW_INACTIVE_CONTENT: ${ROCK_SHOW_INACTIVE_CONTENT}
 UNIVERSAL_LINKS:
   APPLE_APP_ID: ${APPLE_APP_ID}
   APPLE_TEAM_ID: ${APPLE_TEAM_ID}
@@ -44,11 +43,6 @@ ONE_SIGNAL:
 CHURCH_ONLINE:
   URL: ${CHURCH_ONLINE_URL}
   WEB_VIEW_URL: https://apollos.online.church/
-SUGGESTED_FOLLOWS:
-  - michael.neeley@differential.com
-  -
-    email: vince@classyh.at
-    campusId: 45893d11-cd72-4a42-b3ee-08814a937e1a
 ALGOLIA:
   APPLICATION_ID: ${ALGOLIASEARCH_APPLICATION_ID}
   API_KEY: ${ALGOLIASEARCH_API_KEY}
