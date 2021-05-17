@@ -216,3 +216,13 @@ DISCOVER_FEATURES:
           limit: 3
     type: HorizontalCardList
     subtitle: Something Else
+
+TABS:
+  CONNECT:
+    - type: LinkTable
+      title: Connect to Apollos
+      links:
+        - url: https://google.com
+          text: Google
+        - url: https://facebook.com
+          text: Facebook
