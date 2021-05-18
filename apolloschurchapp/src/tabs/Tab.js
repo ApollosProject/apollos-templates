@@ -14,6 +14,7 @@ import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { useNavigation } from '@react-navigation/native';
 
 import { ONBOARDING_VERSION } from '../ui/Onboarding';
+import ContentFeed from '../content-feed';
 
 function handleOnPress({ action, ...props }) {
   if (FEATURE_FEED_ACTION_MAP[action]) {
@@ -33,6 +34,14 @@ export const createFeatureFeedTab = ({ tabName, screenOptions, feedName }) => {
       }}
     >
       <TabStack.Screen name={tabName} component={TabComponent} />
+      <TabStack.Screen
+        component={ContentFeed}
+        name="ContentFeed"
+        options={({ route }) => ({
+          title: route?.params?.itemTitle || 'Content Feed',
+          stackPresentation: 'push',
+        })}
+      />
     </TabStack.Navigator>
   );
   return TabNav;
