@@ -219,10 +219,18 @@ DISCOVER_FEATURES:
 
 TABS:
   CONNECT:
-    - type: LinkTable
+    - type: ActionTable
       title: Connect to Apollos
-      links:
-        - url: https://google.com
-          text: Google
-        - url: https://facebook.com
-          text: Facebook
+      actions:
+        [
+          {
+            title: Google,
+            action: OPEN_URL,
+            relatedNode: { __typename: Url, url: 'https://www.google.com' },
+          },
+          {
+            title: Facebook,
+            action: OPEN_URL,
+            relatedNode: { __typename: Url, url: 'https://www.facebook.com' },
+          },
+        ]
