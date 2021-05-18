@@ -1,19 +1,17 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import { useApolloClient, gql, useQuery } from '@apollo/client';
+import { gql, useQuery } from '@apollo/client';
 
-import { BackgroundView, NavigationService } from '@apollosproject/ui-kit';
+import { BackgroundView } from '@apollosproject/ui-kit';
 import {
   FeaturesFeedConnected,
   FEATURE_FEED_ACTION_MAP,
   RockAuthedWebBrowser,
 } from '@apollosproject/ui-connected';
 
-import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { useNavigation } from '@react-navigation/native';
 
-import { ONBOARDING_VERSION } from '../ui/Onboarding';
 import ContentFeed from '../content-feed';
 
 function handleOnPress({ action, ...props }) {
@@ -48,7 +46,6 @@ export const createFeatureFeedTab = ({ tabName, screenOptions, feedName }) => {
 };
 
 const Tab = ({ tab }) => {
-  const client = useApolloClient();
   const navigation = useNavigation();
   const { data } = useQuery(
     gql`
@@ -59,21 +56,6 @@ const Tab = ({ tab }) => {
       }
     `,
     { variables: { tab }, fetchPolicy: 'cache-and-network' }
-  );
-
-  // this is only used by the tab loaded first
-  // if there is a new version of the onboarding flow,
-  // we'll navigate there first to show new screens
-  useEffect(
-    () => {
-      checkOnboardingStatusAndNavigate({
-        client,
-        navigation: NavigationService,
-        latestOnboardingVersion: ONBOARDING_VERSION,
-        navigateHome: false,
-      });
-    },
-    [client]
   );
 
   return (
