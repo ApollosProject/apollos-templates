@@ -20,9 +20,9 @@ function handleOnPress({ action, ...props }) {
   }
 }
 
-export const createTab = ({ tabName, screenOptions, ...props }) => {
+export const createFeatureFeedTab = ({ tabName, screenOptions, feedName }) => {
   const TabStack = createNativeStackNavigator();
-  const TabComponent = () => <Tab tab={tabName.toUpperCase()} />;
+  const TabComponent = () => <Tab tab={feedName} />;
   const TabNav = () => (
     <TabStack.Navigator
       screenOptions={{
@@ -31,7 +31,7 @@ export const createTab = ({ tabName, screenOptions, ...props }) => {
         ...screenOptions,
       }}
     >
-      <TabStack.Screen name={tabName} component={TabComponent} {...props} />
+      <TabStack.Screen name={tabName} component={TabComponent} />
     </TabStack.Navigator>
   );
   return TabNav;

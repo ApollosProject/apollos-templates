@@ -5,7 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { styled } from '@apollosproject/ui-kit';
 
 import { SearchButton } from '../ui/Search';
-import { createTab } from './Tab';
+import { createFeatureFeedTab } from './Tab';
 import Connect from './connect';
 import tabBarIcon from './tabBarIcon';
 
@@ -21,7 +21,7 @@ const HeaderRight = () => {
 };
 
 // we nest stack inside of tabs so we can use all the fancy native header features
-const HomeTab = createTab({
+const HomeTab = createFeatureFeedTab({
   screenOptions: {
     headerHideShadow: true,
     headerCenter: HeaderCenter,
@@ -29,18 +29,22 @@ const HomeTab = createTab({
     headerLargeTitle: false,
   },
   tabName: 'Home',
+  feedName: 'HOME',
 });
 
-const ReadTab = createTab({
+const ReadTab = createFeatureFeedTab({
   tabName: 'Read',
+  feedName: 'READ',
 });
 
-const WatchTab = createTab({
+const WatchTab = createFeatureFeedTab({
   tabName: 'Watch',
+  feedName: 'WATCH',
 });
 
-const PrayTab = createTab({
+const PrayTab = createFeatureFeedTab({
   tabName: 'Pray',
+  feedName: 'PRAY',
 });
 
 const { Navigator, Screen } = createBottomTabNavigator();
