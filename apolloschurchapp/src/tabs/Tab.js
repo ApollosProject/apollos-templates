@@ -10,6 +10,7 @@ import {
 } from '@apollosproject/ui-connected';
 
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
+import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 
 import { ONBOARDING_VERSION } from '../ui/Onboarding';
 
@@ -18,6 +19,23 @@ function handleOnPress({ action, ...props }) {
     FEATURE_FEED_ACTION_MAP[action]({ action, ...props });
   }
 }
+
+export const createTab = ({ tabName, screenOptions, ...props }) => {
+  const TabStack = createNativeStackNavigator();
+  const TabComponent = () => <Tab tab={tabName.toUpperCase()} />;
+  const TabNav = () => (
+    <TabStack.Navigator
+      screenOptions={{
+        headerHideShadow: true,
+        headerLargeTitle: true,
+        ...screenOptions,
+      }}
+    >
+      <TabStack.Screen name={tabName} component={TabComponent} {...props} />
+    </TabStack.Navigator>
+  );
+  return TabNav;
+};
 
 const Tab = ({ tab }) => {
   const client = useApolloClient();

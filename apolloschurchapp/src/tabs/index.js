@@ -2,11 +2,10 @@ import React from 'react';
 import { Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { styled } from '@apollosproject/ui-kit';
 
 import { SearchButton } from '../ui/Search';
-import Tab from './Tab';
+import { createTab } from './Tab';
 import Connect from './connect';
 import tabBarIcon from './tabBarIcon';
 
@@ -22,58 +21,28 @@ const HeaderRight = () => {
 };
 
 // we nest stack inside of tabs so we can use all the fancy native header features
-const HomeStack = createNativeStackNavigator();
-const Home = () => <Tab tab={'HOME'} />;
-const HomeTab = () => (
-  <HomeStack.Navigator
-    screenOptions={{
-      headerHideShadow: true,
-      headerCenter: HeaderCenter,
-      headerRight: HeaderRight,
-    }}
-  >
-    <HomeStack.Screen name="Home" component={Home} />
-  </HomeStack.Navigator>
-);
+const HomeTab = createTab({
+  screenOptions: {
+    headerHideShadow: true,
+    headerCenter: HeaderCenter,
+    headerRight: HeaderRight,
+    headerLargeTitle: false,
+  },
+  tabName: 'Home',
+});
 
-const ReadStack = createNativeStackNavigator();
-const Read = () => <Tab tab={'READ'} />;
-const ReadTab = () => (
-  <ReadStack.Navigator
-    screenOptions={{
-      headerHideShadow: true,
-      headerLargeTitle: true,
-    }}
-  >
-    <ReadStack.Screen name="Read" component={Read} />
-  </ReadStack.Navigator>
-);
+const ReadTab = createTab({
+  tabName: 'Read',
+});
 
-const WatchStack = createNativeStackNavigator();
-const Watch = () => <Tab tab={'WATCH'} />;
-const WatchTab = () => (
-  <WatchStack.Navigator
-    screenOptions={{
-      headerHideShadow: true,
-      headerLargeTitle: true,
-    }}
-  >
-    <WatchStack.Screen name="Watch" component={Watch} />
-  </WatchStack.Navigator>
-);
+const WatchTab = createTab({
+  tabName: 'Watch',
+});
 
-const PrayStack = createNativeStackNavigator();
-const Pray = () => <Tab tab={'READ'} />;
-const PrayTab = () => (
-  <PrayStack.Navigator
-    screenOptions={{
-      headerHideShadow: true,
-      headerLargeTitle: true,
-    }}
-  >
-    <PrayStack.Screen name="Pray" component={Pray} />
-  </PrayStack.Navigator>
-);
+const PrayTab = createTab({
+  tabName: 'Pray',
+});
+
 const { Navigator, Screen } = createBottomTabNavigator();
 
 const TabNavigator = () => (
