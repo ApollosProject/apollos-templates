@@ -73,7 +73,7 @@ const App = () => (
     <BackgroundView>
       <AppStatusBar />
       <ThemedNavigationContainer
-        ref={NavigationService.setTopLevelNavigator}
+        containerRef={NavigationService.setTopLevelNavigator}
         onReady={NavigationService.setIsReady}
       >
         <Navigator
