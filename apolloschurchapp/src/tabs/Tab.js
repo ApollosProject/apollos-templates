@@ -11,6 +11,7 @@ import {
 
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
+import { useNavigation } from '@react-navigation/native';
 
 import { ONBOARDING_VERSION } from '../ui/Onboarding';
 
@@ -39,6 +40,7 @@ export const createFeatureFeedTab = ({ tabName, screenOptions, feedName }) => {
 
 const Tab = ({ tab }) => {
   const client = useApolloClient();
+  const navigation = useNavigation();
   const { data } = useQuery(
     gql`
       query GetTabFeatures($tab: Tab!) {
@@ -73,6 +75,7 @@ const Tab = ({ tab }) => {
             openUrl={openUrl}
             featureFeedId={data?.tabFeedFeatures?.id}
             onPressActionItem={handleOnPress}
+            navigation={navigation}
           />
         </BackgroundView>
       )}
