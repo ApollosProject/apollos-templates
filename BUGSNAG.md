@@ -6,10 +6,32 @@ This will explain how you can set up error logging in your Apollos app with Bugs
 
 First, go to Bugsnag's website and create a new project. Use "Server" > "Node" > "Express" in the onboarding. This will give you an API key to use.
 
-Our API comes precoonfigured with Bugsnag. All you have to do is add the `BUGSNAG_KEY` variable to your `.env` file and as a config variable on your remote server. On Heroku:
+We have a plugin that gives you useful server data. First, add the `BUGSNAG_KEY` variable to your `.env` file and as a config variable on your remote server. On Heroku:
 
 ```
 heroku config:set BUGSNAG_KEY=<key>
+```
+
+Next, add our official integration:
+
+```
+cd apollos-church-api
+yarn add @apollosproject/bugsnag
+```
+
+And then import the plugin and add it to your server config:
+
+```js
+server.js
+---------
+
+import { BugsnagPlugin } from '@apollosproject/bugsnag';
+
+const apolloServer = new ApolloServer({
+  ...
+  ...
+  ...
+  plugins: [new BugsnagPlugin()],
 ```
 
 ## App
@@ -28,7 +50,7 @@ cp ../yarn.lock yarn.lock
 yarn bugsnag-react-native-cli init
 ```
 
-***Make sure to not commit the local `yarn.lock` file!***
+**_Make sure to not commit the local `yarn.lock` file!_**
 
 ```
 rm yarn.lock

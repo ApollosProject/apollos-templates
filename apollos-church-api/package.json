@@ -19,7 +19,6 @@
     "node": ">=12.x.x"
   },
   "dependencies": {
-    "@apollosproject/bugsnag": "^2.14.0",
     "@apollosproject/config": "^2.14.0",
     "@apollosproject/data-connector-algolia-search": "^2.14.0",
     "@apollosproject/data-connector-analytics": "^2.14.0",
