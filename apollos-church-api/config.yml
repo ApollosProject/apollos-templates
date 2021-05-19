@@ -20,8 +20,8 @@ DATABASE:
   OPTIONS:
     dialectOptions:
       ssl:
-        require: false
-        rejectUnauthorized: false
+        require: true
+        rejectUnauthorized: true
 BUGSNAG:
   API_KEY: ${BUGSNAG_KEY}
 ROCK:
