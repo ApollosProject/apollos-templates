@@ -11,7 +11,6 @@ import { authLink, buildErrorLink } from '@apollosproject/ui-auth';
 import { NavigationService } from '@apollosproject/ui-kit';
 import { resolvers, schema, defaults, GET_ALL_DATA } from '../store';
 
-// import httpLink from './httpLink';
 import cache, { ensureCacheHydration } from './cache';
 import MARK_CACHE_LOADED from './markCacheLoaded';
 
