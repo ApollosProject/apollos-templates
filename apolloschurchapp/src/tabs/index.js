@@ -50,6 +50,11 @@ const PrayTab = createFeatureFeedTab({
   feedName: 'PRAY',
 });
 
+const ConnectTab = createFeatureFeedTab({
+  tabName: 'Connect',
+  feedName: 'CONNECT',
+});
+
 const { Navigator, Screen } = createBottomTabNavigator();
 
 const TabNavigator = () => {
@@ -92,7 +97,7 @@ const TabNavigator = () => {
       />
       <Screen
         name="Connect"
-        component={Connect}
+        component={ConnectTab}
         options={{ tabBarIcon: tabBarIcon('profile') }}
       />
     </Navigator>

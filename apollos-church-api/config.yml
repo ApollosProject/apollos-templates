@@ -241,3 +241,19 @@ TABS:
       title: Daily Prayer
     - type: VerticalPrayerList
       title: Your Prayers
+  CONNECT:
+     - type: ActionTable
+       title: Connect to Apollos
+       actions:
+         [
+           {
+             title: Google,
+             action: OPEN_URL,
+             relatedNode: { __typename: Url, url: 'https://www.google.com' },
+           },
+           {
+             title: Facebook,
+             action: OPEN_URL,
+             relatedNode: { __typename: Url, url: 'https://www.facebook.com' },
+           },
+         ]
