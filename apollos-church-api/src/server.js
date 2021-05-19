@@ -61,10 +61,6 @@ const apolloServer = new ApolloServer({
     },
   },
   ...cacheOptions,
-  engine: {
-    apiKey: process.env.ENGINE_API_KEY,
-    schemaTag: process.env.ENGINE_SCHEMA_TAG,
-  },
 });
 
 const app = express();
