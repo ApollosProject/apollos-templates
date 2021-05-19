@@ -65,13 +65,11 @@ const apolloServer = new ApolloServer({
         client: new Redis(process.env.REDIS_URL),
       })
     : null,
-  cacheControl: isDev
-    ? {}
-    : {
-        stripFormattedExtensions: false,
-        calculateHttpHeaders: true,
-        defaultMaxAge: 3600,
-      },
+  cacheControl: {
+    stripFormattedExtensions: false,
+    calculateHttpHeaders: true,
+    defaultMaxAge: 3600,
+  },
 });
 
 const app = express();
