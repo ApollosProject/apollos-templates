@@ -17,11 +17,6 @@ APP:
   JOBS_PASSWORD: ${JOBS_PASSWORD}
 DATABASE:
   URL: ${DATABASE_URL}
-  OPTIONS:
-    dialectOptions:
-      ssl:
-        require: true
-        rejectUnauthorized: true
 BUGSNAG:
   API_KEY: ${BUGSNAG_KEY}
 ROCK:
