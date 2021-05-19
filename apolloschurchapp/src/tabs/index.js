@@ -1,45 +1,102 @@
-import React from 'react';
-import { Platform } from 'react-native';
+import React, { useEffect } from 'react';
+import { Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { withTheme } from '@apollosproject/ui-kit';
+import { styled, NavigationService } from '@apollosproject/ui-kit';
+import { useApolloClient } from '@apollo/client';
 
+import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
+import { SearchButton } from '../ui/Search';
+import { ONBOARDING_VERSION } from '../ui/Onboarding';
+import { createFeatureFeedTab } from './Tab';
 import Connect from './connect';
-import Home from './home';
-import Discover from './discover';
 import tabBarIcon from './tabBarIcon';
+
+const HeaderLogo = styled(({ theme }) => ({
+  height: theme.sizing.baseUnit,
+  resizeMode: 'contain',
+}))(Image);
+
+const HeaderCenter = () => <HeaderLogo source={require('./wordmark.png')} />;
+const HeaderRight = () => {
+  const navigation = useNavigation();
+  return <SearchButton onPress={() => navigation.navigate('Search')} />;
+};
+
+// we nest stack inside of tabs so we can use all the fancy native header features
+const HomeTab = createFeatureFeedTab({
+  screenOptions: {
+    headerHideShadow: true,
+    headerCenter: HeaderCenter,
+    headerRight: HeaderRight,
+    headerLargeTitle: false,
+  },
+  tabName: 'Home',
+  feedName: 'HOME',
+});
+
+const ReadTab = createFeatureFeedTab({
+  tabName: 'Read',
+  feedName: 'READ',
+});
+
+const WatchTab = createFeatureFeedTab({
+  tabName: 'Watch',
+  feedName: 'WATCH',
+});
+
+const PrayTab = createFeatureFeedTab({
+  tabName: 'Pray',
+  feedName: 'PRAY',
+});
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
-const TabNavigator = (props) => (
-  <Navigator {...props} lazy>
-    <Screen
-      name="Home"
-      component={Home}
-      options={{ tabBarIcon: tabBarIcon('home') }}
-    />
-    <Screen
-      name="Discover"
-      component={Discover}
-      options={{ tabBarIcon: tabBarIcon('sections') }}
-    />
-    <Screen
-      name="Connect"
-      component={Connect}
-      options={{ tabBarIcon: tabBarIcon('profile') }}
-    />
-  </Navigator>
-);
-
-const ThemedTabNavigator = withTheme(({ theme }) => ({
-  tabBarOptions: {
-    activeTintColor: theme?.colors?.secondary,
-    inactiveTintColor: theme?.colors?.text?.tertiary,
-    style: {
-      backgroundColor: theme?.colors?.background?.paper,
-      borderTopColor: theme?.colors?.shadows.default,
-      ...Platform.select(theme?.shadows.default),
+const TabNavigator = () => {
+  const client = useApolloClient();
+  // this is only used by the tab loaded first
+  // if there is a new version of the onboarding flow,
+  // we'll navigate there first to show new screens
+  useEffect(
+    () => {
+      checkOnboardingStatusAndNavigate({
+        client,
+        navigation: NavigationService,
+        latestOnboardingVersion: ONBOARDING_VERSION,
+        navigateHome: false,
+      });
     },
-  },
-}))(TabNavigator);
+    [client]
+  );
+  return (
+    <Navigator lazy>
+      <Screen
+        name="Home"
+        component={HomeTab}
+        options={{ tabBarIcon: tabBarIcon('home') }}
+      />
+      <Screen
+        name="Read"
+        component={ReadTab}
+        options={{ tabBarIcon: tabBarIcon('sections') }}
+      />
+      <Screen
+        name="Watch"
+        component={WatchTab}
+        options={{ tabBarIcon: tabBarIcon('video') }}
+      />
+      <Screen
+        name="Pray"
+        component={PrayTab}
+        options={{ tabBarIcon: tabBarIcon('like') }}
+      />
+      <Screen
+        name="Connect"
+        component={Connect}
+        options={{ tabBarIcon: tabBarIcon('profile') }}
+      />
+    </Navigator>
+  );
+};
 
-export default ThemedTabNavigator;
+export default TabNavigator;

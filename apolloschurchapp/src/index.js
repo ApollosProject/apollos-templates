@@ -1,8 +1,13 @@
 /* eslint-disable react/jsx-handler-names */
 
 import React from 'react';
-import { StatusBar, Platform } from 'react-native';
-import { NavigationContainer, useNavigation } from '@react-navigation/native';
+import { StatusBar } from 'react-native';
+import {
+  NavigationContainer,
+  useNavigation,
+  DarkTheme,
+  DefaultTheme,
+} from '@react-navigation/native';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import SplashScreen from 'react-native-splash-screen';
 import 'react-native-gesture-handler'; // required for react-navigation
@@ -19,6 +24,7 @@ import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 
 import Providers from './Providers';
 import ContentSingle from './content-single';
+import ContentFeed from './content-feed';
 import Event from './event';
 import Tabs from './tabs';
 import LandingScreen from './ui/LandingScreen';
@@ -43,36 +49,41 @@ const ProtectedRouteWithSplashScreen = () => {
   );
 };
 
-const { Navigator, Screen } = createNativeStackNavigator();
-const ThemedNavigator = withTheme(({ theme }) => ({
-  screenOptions: {
-    headerTintColor: theme.colors.action.secondary,
-    headerTitleStyle: {
-      color: theme.colors.text.primary,
+const ThemedNavigationContainer = withTheme(({ theme, ...props }) => ({
+  theme: {
+    ...(theme.type === 'dark' ? DarkTheme : DefaultTheme),
+    dark: theme.type === 'dark',
+    colors: {
+      ...(theme.type === 'dark' ? DarkTheme.colors : DefaultTheme.colors),
+      primary: theme.colors.secondary,
+      background: theme.colors.background.screen,
+      card: theme.colors.background.paper,
+      text: theme.colors.text.primary,
     },
-    headerStyle: {
-      backgroundColor: theme.colors.background.paper,
-      ...Platform.select(theme.shadows.default),
-    },
-    headerShown: false,
-    stackPresentation: 'modal',
   },
-}))(Navigator);
+  ...props,
+}))(({ containerRef, ...props }) => (
+  <NavigationContainer ref={containerRef} {...props} />
+));
+
+const { Navigator, Screen } = createNativeStackNavigator();
 
 const App = () => (
   <Providers>
     <BackgroundView>
       <AppStatusBar />
-      <NavigationContainer
-        ref={NavigationService.setTopLevelNavigator}
+      <ThemedNavigationContainer
+        containerRef={NavigationService.setTopLevelNavigator}
         onReady={NavigationService.setIsReady}
       >
-        <ThemedNavigator>
+        <Navigator
+          screenOptions={{ headerShown: false, stackPresentation: 'modal' }}
+        >
           <Screen
             name="ProtectedRoute"
             component={ProtectedRouteWithSplashScreen}
           />
-          <Screen name="Tabs" component={Tabs} options={{ title: 'Home' }} />
+          <Screen name="Tabs" component={Tabs} />
           <Screen
             name="ContentSingle"
             component={ContentSingle}
@@ -81,6 +92,15 @@ const App = () => (
               stackPresentation: 'push',
             }}
           />
+          <Screen
+            component={ContentFeed}
+            name="ContentFeed"
+            options={({ route }) => ({
+              title: route.params.itemTitle || 'Content Feed',
+              stackPresentation: 'push',
+            })}
+          />
+
           <Screen name="Event" component={Event} options={{ title: 'Event' }} />
           <Screen
             name="Auth"
@@ -100,15 +120,14 @@ const App = () => (
             name="Onboarding"
             component={Onboarding}
             options={{
-              title: 'Onboarding',
               gestureEnabled: false,
               stackPresentation: 'push',
             }}
           />
           <Screen name="LandingScreen" component={LandingScreen} />
           <Screen component={Search} name="Search" />
-        </ThemedNavigator>
-      </NavigationContainer>
+        </Navigator>
+      </ThemedNavigationContainer>
     </BackgroundView>
   </Providers>
 );
