@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { styled, NavigationService } from '@apollosproject/ui-kit';
 import { useApolloClient } from '@apollo/client';
-
+import { styled, NavigationService } from '@apollosproject/ui-kit';
+import { UserAvatarConnected } from '@apollosproject/ui-connected';
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
 import { SearchButton } from '../ui/Search';
 import { ONBOARDING_VERSION } from '../ui/Onboarding';
@@ -22,6 +22,14 @@ const HeaderRight = () => {
   const navigation = useNavigation();
   return <SearchButton onPress={() => navigation.navigate('Search')} />;
 };
+const HeaderLeft = () => (
+  // const navigation = useNavigation();
+  <UserAvatarConnected
+    // onPressIcon={() => navigation.navigate('UserSettings')}
+    onPressIcon={() => null}
+    size={'s'}
+  />
+);
 
 // we nest stack inside of tabs so we can use all the fancy native header features
 const HomeTab = createFeatureFeedTab({
@@ -29,6 +37,7 @@ const HomeTab = createFeatureFeedTab({
     headerHideShadow: true,
     headerCenter: HeaderCenter,
     headerRight: HeaderRight,
+    headerLeft: HeaderLeft,
     headerLargeTitle: false,
   },
   tabName: 'Home',
