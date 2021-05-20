@@ -22,14 +22,16 @@ import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 
-import { ContentFeedConnected } from '@apollosproject/ui-connected';
+import {
+  ContentFeedConnected,
+  SearchScreenConnected,
+} from '@apollosproject/ui-connected';
 import Providers from './Providers';
 import ContentSingle from './content-single';
 import Event from './event';
 import Tabs from './tabs';
 import LandingScreen from './ui/LandingScreen';
 import Onboarding from './ui/Onboarding';
-import Search from './ui/Search';
 
 enableScreens(); // improves performance for react-navigation
 
@@ -125,7 +127,7 @@ const App = () => (
             }}
           />
           <Screen name="LandingScreen" component={LandingScreen} />
-          <Screen component={Search} name="Search" />
+          <Screen component={SearchScreenConnected} name="Search" />
         </Navigator>
       </ThemedNavigationContainer>
     </BackgroundView>

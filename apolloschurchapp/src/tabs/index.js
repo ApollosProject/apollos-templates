@@ -2,14 +2,31 @@ import React, { useEffect } from 'react';
 import { Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { styled, NavigationService } from '@apollosproject/ui-kit';
+import {
+  styled,
+  NavigationService,
+  withTheme,
+  Icon,
+  Touchable,
+} from '@apollosproject/ui-kit';
 import { useApolloClient } from '@apollo/client';
 import { createFeatureFeedTab } from '@apollosproject/ui-connected';
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
-import { SearchButton } from '../ui/Search';
 import { ONBOARDING_VERSION } from '../ui/Onboarding';
 import Connect from './connect';
 import tabBarIcon from './tabBarIcon';
+
+const SearchIcon = withTheme(({ theme: { colors, sizing: { baseUnit } } }) => ({
+  name: 'search',
+  size: baseUnit * 2,
+  fill: colors.primary,
+}))(Icon);
+
+const SearchButton = ({ onPress }) => (
+  <Touchable onPress={onPress}>
+    <SearchIcon />
+  </Touchable>
+);
 
 const HeaderLogo = styled(({ theme }) => ({
   height: theme.sizing.baseUnit,
