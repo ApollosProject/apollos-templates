@@ -22,9 +22,9 @@ import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 
+import { ContentFeedConnected } from '@apollosproject/ui-connected';
 import Providers from './Providers';
 import ContentSingle from './content-single';
-import ContentFeed from './content-feed';
 import Event from './event';
 import Tabs from './tabs';
 import LandingScreen from './ui/LandingScreen';
@@ -93,7 +93,7 @@ const App = () => (
             }}
           />
           <Screen
-            component={ContentFeed}
+            component={ContentFeedConnected}
             name="ContentFeed"
             options={({ route }) => ({
               title: route.params.itemTitle || 'Content Feed',

@@ -4,11 +4,10 @@ import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { styled, NavigationService } from '@apollosproject/ui-kit';
 import { useApolloClient } from '@apollo/client';
-
+import { createFeatureFeedTab } from '@apollosproject/ui-connected';
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
 import { SearchButton } from '../ui/Search';
 import { ONBOARDING_VERSION } from '../ui/Onboarding';
-import { createFeatureFeedTab } from './Tab';
 import Connect from './connect';
 import tabBarIcon from './tabBarIcon';
 
