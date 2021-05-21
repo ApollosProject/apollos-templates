@@ -4,7 +4,6 @@ import express from 'express';
 import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
 import { get } from 'lodash';
 import { setupUniversalLinks } from '@apollosproject/server-core';
-import { BugsnagPlugin } from '@apollosproject/bugsnag';
 import { createMigrationRunner } from '@apollosproject/data-connector-postgres';
 
 let dataObj;
@@ -43,7 +42,7 @@ const cacheOptions = isDev
       },
     };
 
-const { ENGINE, ROCK, APP } = ApollosConfig;
+const { ROCK, APP } = ApollosConfig;
 
 const apolloServer = new ApolloServer({
   typeDefs: schema,
@@ -52,7 +51,6 @@ const apolloServer = new ApolloServer({
   context,
   introspection: true,
   extensions,
-  plugins: [new BugsnagPlugin()],
   formatError: (error) => {
     console.error(get(error, 'extensions.exception.stacktrace', []).join('\n'));
     return error;
@@ -63,10 +61,6 @@ const apolloServer = new ApolloServer({
     },
   },
   ...cacheOptions,
-  engine: {
-    apiKey: ENGINE.API_KEY,
-    schemaTag: ENGINE.SCHEMA_TAG,
-  },
 });
 
 const app = express();
