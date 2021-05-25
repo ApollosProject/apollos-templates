@@ -16,7 +16,7 @@ ApollosConfig.loadJs({
 (async () => {
   if (!ApollosConfig.ROCK) return;
   if (!ApollosConfig.ROCK.URL || !ApollosConfig.ROCK.API_TOKEN)
-    throw new Error('ROCK_URL and ROCK_API_TOKEN variables are required!');
+    throw new Error('ROCK_URL and ROCK_TOKEN variables are required!');
 
   let res;
 
