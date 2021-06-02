@@ -90,9 +90,9 @@ const data = {
   Follow,
   PostgresCampus,
   Persona,
-  Person, // An extension of Postgres person. Will be eliminated in the near future so you can use just postgres/Person.
   Notification,
   NotificationPreference,
+  Person, // An extension of Postgres person. Will be eliminated in the near future so you can use just postgres/Person.
   OneSignal,
 };
 
