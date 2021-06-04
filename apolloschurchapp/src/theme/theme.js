@@ -1,6 +1,3 @@
-// import styleOverrides from './styleOverrides';
-// import propOverrides from './propOverrides';
-
 /* Add your custom theme definitions below. Anything that is supported in UI-Kit Theme can be
  overridden and/or customized here! */
 
@@ -51,9 +48,6 @@
  * }
  * ```
  */
-// const overrides = {
-//   ...styleOverrides,
-//   ...propOverrides,
-// };
+// const overrides = {};
 
 export default {};
