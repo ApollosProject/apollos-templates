@@ -70,7 +70,7 @@ const ThemedNavigationContainer = withTheme(({ theme, ...props }) => ({
 
 const LandingToAuth = () => {
   const navigation = useNavigation();
-  return <Landing onPressPrimary={navigation.navigate('Auth')} />;
+  return <Landing onPressPrimary={() => navigation.navigate('Auth')} />;
 };
 
 const { Navigator, Screen } = createNativeStackNavigator();
