@@ -23,29 +23,28 @@ platform :ios do
 
   desc "Push a new beta build to TestFlight"
   lane :deploy do
-    app_store_connect_api_key(
-      key_id: "LV9F3XX57B",
-      issuer_id: "7943c4a3-c0cf-442e-93bd-b3c289bddec3",
-      key_filepath: "ios/apollos.p8",
-    )
+
+    # get project name
+    proj = Dir.glob("../ios/*.xcworkspace")[0][7..-13]
+
+    app_store_connect_api_key(key_filepath: "ios/apollos.p8")
     setup_ci
     match(type: 'appstore', readonly: true)
-    increment_build_number(build_number: number_of_commits, xcodeproj: "ios/apolloschurchapp.xcodeproj")
-    build_app(workspace: "ios/apolloschurchapp.xcworkspace", scheme: "apolloschurchappprod")
+    increment_build_number(build_number: number_of_commits, xcodeproj: "ios/" << proj << ".xcodeproj")
+    build_app(workspace: "ios/" << proj << ".xcworkspace", scheme: proj)
     changelog_from_git_commits
-    upload_to_testflight
+    testflight
   end
 end
 
 platform :android do
 
-  # necessary because setting gradle properties doesn't seem to be working
   desc "Bumps Android versionCode"
   lane :bump_version_code do
     path = '../android/app/build.gradle'
     re = /versionCode\s+(\d+)/
 
-    s = File.read(path)
+    s = File.read("../android/app/build.gradle")
     versionCode = number_of_commits
     s[re, 1] = (versionCode).to_s
 
@@ -60,6 +59,17 @@ platform :android do
     gradle(task: 'clean', project_dir: 'android')
     gradle(task: 'bundle', build_type: 'Release', project_dir: 'android')
     changelog_from_git_commits
-    upload_to_play_store(track: "internal", skip_upload_apk: true)
+
+    path = '../android/app/build.gradle'
+    re = /applicationId\s+"([\w+\.]*)"/
+    s = File.read("../android/app/build.gradle")
+    package_name = s[re, 1]
+
+    upload_to_play_store(
+      track: "internal",
+      skip_upload_apk: true,
+      json_key: "android/key.json",
+      package_name: package_name
+    )
   end
 end

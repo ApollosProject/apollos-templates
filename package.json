@@ -3,9 +3,6 @@
   "scripts": {
     "setup": "lerna run setup",
     "start": "lerna run start:dev --parallel",
-    "link-doctor": "node ./scripts/link-doctor.js",
-    "link-packages": "watchman watch-del-all && yarn && lerna run link-packages",
-    "unlink-packages": "yarn && lerna run unlink-packages && yarn --check-files",
     "lint": "lerna run lint --stream",
     "test": "lerna run test --stream",
     "ios": "lerna run ios --parallel",

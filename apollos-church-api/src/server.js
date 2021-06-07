@@ -1,13 +1,9 @@
-import fs from 'fs';
-import path from 'path';
-import cors from 'cors';
 import { ApolloServer } from 'apollo-server-express';
 import ApollosConfig from '@apollosproject/config';
 import express from 'express';
 import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
 import { get } from 'lodash';
 import { setupUniversalLinks } from '@apollosproject/server-core';
-import { BugsnagPlugin } from '@apollosproject/bugsnag';
 import { createMigrationRunner } from '@apollosproject/data-connector-postgres';
 
 let dataObj;
@@ -46,7 +42,7 @@ const cacheOptions = isDev
       },
     };
 
-const { ENGINE } = ApollosConfig;
+const { ROCK, APP } = ApollosConfig;
 
 const apolloServer = new ApolloServer({
   typeDefs: schema,
@@ -55,7 +51,6 @@ const apolloServer = new ApolloServer({
   context,
   introspection: true,
   extensions,
-  plugins: [new BugsnagPlugin()],
   formatError: (error) => {
     console.error(get(error, 'extensions.exception.stacktrace', []).join('\n'));
     return error;
@@ -66,28 +61,13 @@ const apolloServer = new ApolloServer({
     },
   },
   ...cacheOptions,
-  engine: {
-    apiKey: ENGINE.API_KEY,
-    schemaTag: ENGINE.SCHEMA_TAG,
-  },
 });
 
 const app = express();
 
-// health check
-app.get('/health', cors(), (req, res) => {
-  res.send('ok');
-});
-
-// apollos version
-app.get('/version', cors(), (req, res) => {
-  try {
-    const data = fs.readFileSync(path.join(__dirname, '..', 'apollos.json'));
-    const { version } = JSON.parse(data);
-    res.send(version);
-  } catch (e) {
-    res.send('unknown');
-  }
+// password reset
+app.get('/forgot-password', (req, res) => {
+  res.redirect(APP.FORGOT_PASSWORD_URL || `${ROCK.URL}/page/56`);
 });
 
 applyServerMiddleware({ app, dataSources, context });

@@ -39,7 +39,10 @@ import {
 import {
   Comment,
   UserFlag,
+  UserLike,
   Follow,
+  Notification,
+  NotificationPreference,
   Campus as PostgresCampus,
   Person as PostgresPerson,
 } from '@apollosproject/data-connector-postgres';
@@ -69,7 +72,6 @@ const data = {
   RockConstants,
   Sharable,
   Analytics,
-  OneSignal,
   PersonalDevice,
   Pass,
   Search,
@@ -83,11 +85,15 @@ const data = {
   Cache,
   PrayerRequest,
   Comment,
+  UserLike,
   UserFlag,
   Follow,
   PostgresCampus,
   Persona,
+  Notification,
+  NotificationPreference,
   Person, // An extension of Postgres person. Will be eliminated in the near future so you can use just postgres/Person.
+  OneSignal,
 };
 
 const {
