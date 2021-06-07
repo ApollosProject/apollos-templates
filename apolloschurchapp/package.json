@@ -13,8 +13,6 @@
     "ios": "react-native run-ios",
     "android": "SIM=\"$($HOME/Library/Android/sdk/emulator/emulator -list-avds | sed -n 1p)\" && $HOME/Library/Android/sdk/emulator/emulator -avd \"${SIM}\" & react-native run-android",
     "codecov": "cat ./coverage/lcov.info | codecov",
-    "link-packages": "node ./scripts/link-packages && yarn yalc update",
-    "unlink-packages": "node ./scripts/link-packages remove && rm -rf ./node_modules",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js",
     "postinstall": "jetify && yarn pods",
@@ -152,8 +150,7 @@
     "react-dom": "16.6.3",
     "react-native-storybook-loader": "1.8.0",
     "react-test-renderer": "16.13.1",
-    "waait": "1.0.2",
-    "yalc": "^1.0.0-pre.47"
+    "waait": "1.0.2"
   },
   "rnpm": {
     "assets": [
