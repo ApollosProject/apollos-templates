@@ -44,14 +44,6 @@ jobs:
           heroku_email: ${{ secrets.HEROKU_EMAIL }}
           appdir: apollos-church-api
 
-      - name: Setup Node
-        uses: actions/setup-node@v1
-
-      - name: Publish Schema
-        run: npx apollo schema:publish --endpoint=${{ secrets.APP_DATA_URL }}
-        env:
-          ENGINE_API_KEY: ${{ secrets.ENGINE_API_KEY }}
-
   ios:
     defaults:
       run:
@@ -81,9 +73,6 @@ jobs:
     # required to build
     - name: Generate Stories
       run: yarn generate-stories
-
-    - name: Generate Schema
-      run: yarn get-schema
 
     - name: Generate Fragment Types
       run: node ./scripts/get-introspection-data.js
@@ -122,9 +111,6 @@ jobs:
     # required to build
     - name: Generate Stories
       run: yarn generate-stories
-
-    - name: Generate Schema
-      run: yarn get-schema
 
     - name: Generate Fragment Types
       run: node ./scripts/get-introspection-data.js

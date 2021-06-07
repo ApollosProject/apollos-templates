@@ -58,6 +58,14 @@ const personResolver = {
       ]); // updates in Postgres
     },
     updateUserPushSettings: async (root, { input }, { dataSources }) => {
+      // register the changes w/ postgres
+      await dataSources.NotificationPreference.updateUserNotificationPreference(
+        {
+          notificationProviderId: input.pushProviderUserId,
+          notificationProviderType: 'one_signal', // hard coded for now
+          enabled: input.enabled,
+        }
+      );
       // register the changes w/ one signal
       const returnValue = await dataSources.OneSignal.updatePushSettings(input);
 
