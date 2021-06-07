@@ -71,6 +71,17 @@ platform :android do
     gradle(task: 'clean', project_dir: 'android')
     gradle(task: 'bundle', build_type: 'Release', project_dir: 'android')
     changelog_from_git_commits
-    upload_to_play_store(track: "internal", skip_upload_apk: true, json_key_file: "android/key.json")
+
+    path = '../android/app/build.gradle'
+    re = /applicationId\s+"([\w+\.]*)"/
+    s = File.read("../android/app/build.gradle")
+    package_name = s[re, 1]
+
+    upload_to_play_store(
+      track: "internal",
+      skip_upload_apk: true,
+      json_key: "android/key.json",
+      package_name: package_name
+    )
   end
 end
