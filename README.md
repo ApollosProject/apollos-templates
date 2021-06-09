@@ -241,7 +241,6 @@ KEY_PASSWORD=<alias password>
 ```
 
 You will need to upload the bundle manually the first time, exporting your private signing key from Android Studio. [Follow these instructions](https://developer.android.com/studio/publish/app-signing#generate-key) to export the key. Then upload the bundle to the internal test track, opting into Google Play Signing with your exported `*.pepk` file. 
-```
 
 ![play store](https://files-rglw2353v.vercel.app)
 
