@@ -240,14 +240,8 @@ KEY_ALIAS=apollos
 KEY_PASSWORD=<alias password>
 ```
 
-You will need to upload the bundle manually the first time, Fastlane can't do it for you. Run the command to create a release build
-
+You will need to upload the bundle manually the first time, exporting your private signing key from Android Studio. [Follow these instructions](https://developer.android.com/studio/publish/app-signing#generate-key) to export the key. Then upload the bundle to the internal test track, opting into Google Play Signing with your exported `*.pepk` file. 
 ```
-bundle exec fastlane gradle --task clean --project_dir android
-bundle exec fastlane gradle --task bundle --build_type Release --project_dir android
-```
-
-Upload to the store on the internal track
 
 ![play store](https://files-rglw2353v.vercel.app)
 
