@@ -21,7 +21,7 @@ end
 
 platform :ios do
 
-  desc "Push a new beta build to TestFlight"
+  desc "Push a new internal build to TestFlight"
   lane :deploy do
 
     # get project name
@@ -34,6 +34,7 @@ platform :ios do
     build_app(workspace: "ios/" << proj << ".xcworkspace", scheme: proj)
     changelog_from_git_commits
     testflight
+    slack(message: "Apollos iOS internal release failed", success: false)
   end
 end
 
@@ -71,5 +72,6 @@ platform :android do
       json_key: "android/key.json",
       package_name: package_name
     )
+    slack(message: "Apollos Android internal release failed", success: false)
   end
 end
