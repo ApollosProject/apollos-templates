@@ -1,7 +1,10 @@
 import React from 'react';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { withTheme } from '@apollosproject/ui-kit';
-import { LikedContentFeedConnected } from '@apollosproject/ui-connected';
+import {
+  LikedContentFeedConnected,
+  FollowingListConnected,
+} from '@apollosproject/ui-connected';
 import { NotificationSettingsConnected } from '@apollosproject/ui-notifications';
 
 import UserSettings from '../../user-settings';
@@ -24,6 +27,11 @@ const ConnectNavigator = (props) => (
       component={TestingControlPanel}
       name="TestingControlPanel"
       options={{ headerTitle: 'Testing' }}
+    />
+    <Screen
+      component={FollowingListConnected}
+      name="Following List"
+      options={{ headerTitle: 'Following List' }}
     />
     <Screen
       component={NotificationSettingsConnected}

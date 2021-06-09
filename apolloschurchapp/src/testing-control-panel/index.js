@@ -49,6 +49,11 @@ export default function TestingControlPanel() {
         iconName="Avatar"
         cellText={`Reset Onboarding to Seen v1`}
       />
+      <TouchableCell
+        handlePress={() => NavigationService.navigate('Following List')}
+        iconName="Avatar"
+        cellText={`Following List`}
+      />
     </BackgroundView>
   );
 }
