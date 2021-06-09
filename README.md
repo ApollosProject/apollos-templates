@@ -231,7 +231,7 @@ Drop the keystore file here: `apolloschurchapp/android/app/apollos.keystore`
 
 **_NOTE:_** You may also want to save this keystore and credentials somewhere safe outside this repo, it's the only keystore you can ever use for this app and if you lose it, it's very difficult to get a new one.
 
-Now just load these environment variables in your local `.env` file and as Github secrets for the CI
+Now just load these environment variables in your `.env.shared` file
 
 ```
 KEYSTORE_FILE=apollos.keystore
@@ -239,8 +239,6 @@ KEYSTORE_PASSWORD=<keystore password>
 KEY_ALIAS=apollos
 KEY_PASSWORD=<alias password>
 ```
-
-Change the `package_name` variable in the `Appfile` to your new bundle ID. You can get this from your `android/app/build.gradle` file.
 
 You will need to upload the bundle manually the first time, Fastlane can't do it for you. Run the command to create a release build
 
