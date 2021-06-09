@@ -160,5 +160,4 @@ key.json
 .env.shared
 
 # GraphQL info
-schema.graphql
 fragmentTypes.json

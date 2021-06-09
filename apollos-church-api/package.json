@@ -6,12 +6,13 @@
   "scripts": {
     "setup": "./scripts/init.sh",
     "start": "NODE_ENV=production node ./lib/index.js",
-    "start:dev": "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
+    "start:dev":
+      "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
     "postinstall": "yarn build",
-    "link-packages": "node ./scripts/link-packages && yarn yalc update",
-    "unlink-packages": "node ./scripts/link-packages remove && rm -rf ./node_modules",
-    "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
-    "test": "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
+    "build":
+      "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
+    "test":
+      "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
     "lint": "eslint ./src --ext .js",
     "translate": "node scripts/translate.js"
   },
@@ -19,21 +20,21 @@
     "node": ">=12.x.x"
   },
   "dependencies": {
-    "@apollosproject/config": "^2.16.0",
-    "@apollosproject/data-connector-algolia-search": "^2.16.0",
-    "@apollosproject/data-connector-analytics": "^2.16.0",
-    "@apollosproject/data-connector-bible": "^2.16.0",
-    "@apollosproject/data-connector-church-online": "^2.16.0",
-    "@apollosproject/data-connector-cloudinary": "^2.16.0",
-    "@apollosproject/data-connector-onesignal": "^2.16.0",
-    "@apollosproject/data-connector-passes": "^2.16.0",
-    "@apollosproject/data-connector-postgres": "^2.16.0",
-    "@apollosproject/data-connector-redis-cache": "^2.16.0",
-    "@apollosproject/data-connector-rock": "^2.16.0",
-    "@apollosproject/data-connector-twilio": "^2.16.0",
-    "@apollosproject/data-schema": "^2.16.0",
-    "@apollosproject/rock-apollo-data-source": "^2.16.0",
-    "@apollosproject/server-core": "^2.16.0",
+    "@apollosproject/config": "^2.19.0",
+    "@apollosproject/data-connector-algolia-search": "^2.19.0",
+    "@apollosproject/data-connector-analytics": "^2.19.0",
+    "@apollosproject/data-connector-bible": "^2.19.0",
+    "@apollosproject/data-connector-church-online": "^2.19.0",
+    "@apollosproject/data-connector-cloudinary": "^2.19.0",
+    "@apollosproject/data-connector-onesignal": "^2.19.0",
+    "@apollosproject/data-connector-passes": "^2.19.0",
+    "@apollosproject/data-connector-postgres": "^2.19.0",
+    "@apollosproject/data-connector-redis-cache": "^2.19.0",
+    "@apollosproject/data-connector-rock": "^2.19.0",
+    "@apollosproject/data-connector-twilio": "^2.19.0",
+    "@apollosproject/data-schema": "^2.19.0",
+    "@apollosproject/rock-apollo-data-source": "^2.19.0",
+    "@apollosproject/server-core": "^2.19.0",
     "apollo-server": "^2.24.1",
     "apollo-server-express": "2.14.2",
     "color": "3.0.0",
@@ -43,9 +44,9 @@
     "randomcolor": "0.5.3"
   },
   "devDependencies": {
-    "@apollosproject/apollo-server-env-mock": "^2.16.0",
-    "@apollosproject/babel-preset-apollos": "^2.16.0",
-    "@apollosproject/eslint-config": "^2.16.0",
+    "@apollosproject/apollo-server-env-mock": "^2.19.0",
+    "@apollosproject/babel-preset-apollos": "^2.19.0",
+    "@apollosproject/eslint-config": "^2.19.0",
     "@babel/cli": "^7.4.5",
     "@babel/core": "^7.4.5",
     "@babel/node": "^7.7.4",
@@ -60,7 +61,6 @@
     "eslint-plugin-prettier": "^2.6.0",
     "linkemon": "^0.1.1",
     "nodemon": "1.18.7",
-    "prettier": "1.12.1",
-    "yalc": "^1.0.0-pre.47"
+    "prettier": "1.12.1"
   }
 }
