@@ -26,7 +26,7 @@ import {
   ContentFeedConnected,
   SearchScreenConnected,
 } from '@apollosproject/ui-connected';
-import Onboarding from '@apollosproject/ui-onboarding';
+import { Onboarding } from '@apollosproject/ui-onboarding';
 import Providers from './Providers';
 import ContentSingle from './content-single';
 import Event from './event';
