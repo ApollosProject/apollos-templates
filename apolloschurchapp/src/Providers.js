@@ -9,7 +9,6 @@ import {
   ACCEPT_FOLLOW_REQUEST,
 } from '@apollosproject/ui-connected';
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
-import { ONBOARDING_VERSION } from './ui/Onboarding';
 
 import ClientProvider, { client } from './client';
 import customTheme, { customIcons } from './theme';
@@ -47,7 +46,6 @@ const AppProviders = (props) => (
           checkOnboardingStatusAndNavigate({
             client,
             navigation: NavigationService,
-            latestOnboardingVersion: ONBOARDING_VERSION,
           })
         }
       >

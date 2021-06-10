@@ -13,7 +13,6 @@ import {
 import { useApolloClient } from '@apollo/client';
 import { createFeatureFeedTab } from '@apollosproject/ui-connected';
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
-import { ONBOARDING_VERSION } from '../ui/Onboarding';
 import Connect from './connect';
 import tabBarIcon from './tabBarIcon';
 
@@ -83,7 +82,6 @@ const TabNavigator = () => {
       checkOnboardingStatusAndNavigate({
         client,
         navigation: NavigationService,
-        latestOnboardingVersion: ONBOARDING_VERSION,
         navigateHome: false,
       });
     },
