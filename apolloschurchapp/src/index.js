@@ -25,10 +25,10 @@ import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 import {
   ContentFeedConnected,
   SearchScreenConnected,
+  EventConnected,
 } from '@apollosproject/ui-connected';
 import Providers from './Providers';
 import ContentSingle from './content-single';
-import Event from './event';
 import Tabs from './tabs';
 import LandingScreen from './ui/LandingScreen';
 import Onboarding from './ui/Onboarding';
@@ -102,8 +102,11 @@ const App = () => (
               stackPresentation: 'push',
             })}
           />
-
-          <Screen name="Event" component={Event} options={{ title: 'Event' }} />
+          <Screen
+            name="Event"
+            component={EventConnected}
+            options={{ title: 'Event' }}
+          />
           <Screen
             name="Auth"
             component={Auth}
