@@ -231,7 +231,7 @@ Drop the keystore file here: `apolloschurchapp/android/app/apollos.keystore`
 
 **_NOTE:_** You may also want to save this keystore and credentials somewhere safe outside this repo, it's the only keystore you can ever use for this app and if you lose it, it's very difficult to get a new one.
 
-Now just load these environment variables in your local `.env` file and as Github secrets for the CI
+Now just load these environment variables in your `.env.shared` file
 
 ```
 KEYSTORE_FILE=apollos.keystore
@@ -240,18 +240,9 @@ KEY_ALIAS=apollos
 KEY_PASSWORD=<alias password>
 ```
 
-Change the `package_name` variable in the `Appfile` to your new bundle ID. You can get this from your `android/app/build.gradle` file.
+You will need to upload the bundle manually the first time, exporting your private signing key from Android Studio. [Follow these instructions](https://developer.android.com/studio/publish/app-signing#generate-key) to export the key. Then upload the bundle to the internal test track, opting into Google Play Signing with your exported `*.pepk` file. 
 
-You will need to upload the bundle manually the first time, Fastlane can't do it for you. Run the command to create a release build
-
-```
-bundle exec fastlane gradle --task clean --project_dir android
-bundle exec fastlane gradle --task bundle --build_type Release --project_dir android
-```
-
-Upload to the store on the internal track
-
-![play store](https://files-rglw2353v.vercel.app)
+![play store](https://files-l4eap9235-redreceipt.vercel.app)
 
 Go through the steps to finish your first release.
 
