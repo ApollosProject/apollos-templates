@@ -21,7 +21,7 @@ end
 
 platform :ios do
 
-  desc "Push a new beta build to TestFlight"
+  desc "Push a new internal build to TestFlight"
   lane :deploy do
 
     # get project name
@@ -72,4 +72,8 @@ platform :android do
       package_name: package_name
     )
   end
+end
+
+error do |lane, exception|
+   slack(message: exception.to_s, success: false)
 end

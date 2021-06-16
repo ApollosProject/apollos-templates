@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
-  styled,
   NavigationService,
   withTheme,
   Icon,
@@ -15,6 +15,18 @@ import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding'
 import { ONBOARDING_VERSION } from '../ui/Onboarding';
 import Connect from './connect';
 import tabBarIcon from './tabBarIcon';
+
+const HeaderLogo = withTheme(({ theme }) => ({
+  style: {
+    height: theme.sizing.baseUnit * 2.5,
+    width: '70%',
+    resizeMode: 'contain',
+  },
+  source:
+    theme.type === 'light'
+      ? require('./wordmark.png')
+      : require('./wordmark.dark.png'),
+}))(Image);
 
 const SearchIcon = withTheme(({ theme: { colors, sizing: { baseUnit } } }) => ({
   name: 'search',
@@ -28,10 +40,9 @@ const SearchButton = ({ onPress }) => (
   </Touchable>
 );
 
-const HeaderLogo = styled(({ theme }) => ({
-  height: theme.sizing.baseUnit,
-  resizeMode: 'contain',
-}))(Image);
+SearchButton.propTypes = {
+  onPress: PropTypes.func,
+};
 
 const HeaderCenter = () => <HeaderLogo source={require('./wordmark.png')} />;
 const HeaderRight = () => {

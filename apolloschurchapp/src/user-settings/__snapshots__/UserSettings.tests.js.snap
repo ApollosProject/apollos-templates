@@ -550,8 +550,6 @@ Array [
               Object {
                 "backgroundColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "height": 0.5,
-                "marginLeft": 10.666666666666666,
-                "width": "100%",
               }
             }
           />
@@ -727,8 +725,6 @@ Array [
               Object {
                 "backgroundColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "height": 0.5,
-                "marginLeft": 10.666666666666666,
-                "width": "100%",
               }
             }
           />
@@ -1433,8 +1429,6 @@ Array [
               Object {
                 "backgroundColor": "rgba(0, 0, 0, 0.09999999999999998)",
                 "height": 0.5,
-                "marginLeft": 10.666666666666666,
-                "width": "100%",
               }
             }
           />

@@ -127,7 +127,7 @@ const App = () => (
             }}
           />
           <Screen name="LandingScreen" component={LandingScreen} />
-          <Screen component={SearchScreenConnected} name="Search" />
+          <Screen name="Search" component={SearchScreenConnected} />
         </Navigator>
       </ThemedNavigationContainer>
     </BackgroundView>
