@@ -40,7 +40,7 @@ platform :ios do
 
     app_store_connect_api_key(key_filepath: "ios/apollos.p8", in_house: false)
     setup_ci
-    match(type: 'appstore', app_identifier: [identifier, "#{identifier}.OneSignalNotificationServiceExtension"])
+    match(type: 'appstore', app_identifier: [identifier, "#{identifier}.OneSignalNotificationServiceExtension"], readonly: true)
     increment_build_number(build_number: number_of_commits, xcodeproj: "ios/" << proj << ".xcodeproj")
     build_app(workspace: "ios/" << proj << ".xcworkspace", scheme: proj)
     changelog_from_git_commits
