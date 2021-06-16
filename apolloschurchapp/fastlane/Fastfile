@@ -18,7 +18,7 @@ def product_bundle_id(path:)
   project = Xcodeproj::Project.open(path)
   scheme = project.native_targets.first
   build_configuration = scheme.build_configurations.first
-  build_configuration.build_settings['PRODUCT_BUNDLE_IDENTIFIER'].strip
+  build_configuration.build_settings['PRODUCT_BUNDLE_IDENTIFIER']
 end
 
 before_all do
@@ -27,7 +27,6 @@ before_all do
   git_pull
 end
 
-app_id = "com.apollos."
 
 platform :ios do
 
