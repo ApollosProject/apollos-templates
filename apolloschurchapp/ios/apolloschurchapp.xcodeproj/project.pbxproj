@@ -14,7 +14,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1C48DCDE11AC47C48E918489 /* Inter-UI-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = DC74A378C1CC40E4B6192D7F /* Inter-UI-Medium.otf */; };
-		2AE17F608689DAE577F28E4D /* BuildFile in Frameworks */ = {isa = PBXBuildFile; };
+		2AE17F608689DAE577F28E4D /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		4CA6A042251BC0BF00DD0D97 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CA6A041251BC0BF00DD0D97 /* SplashScreen.storyboard */; };
 		578FFEC1D7D54C9B871A9E5B /* Inter-UI-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5A5A2BC2998547F4816B82E4 /* Inter-UI-BlackItalic.otf */; };
 		68D1351E80AA4A2C96288FD9 /* Inter-UI-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = EC21254B449443F99016EBFD /* Inter-UI-Black.otf */; };
@@ -89,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AE17F608689DAE577F28E4D /* BuildFile in Frameworks */,
+				2AE17F608689DAE577F28E4D /* (null) in Frameworks */,
 				EF3A30A2E55D4F8352E116D3 /* libPods-apolloschurchapp-apolloschurchappTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +357,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		2C62ED438C51D0F43EC7017B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
