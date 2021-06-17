@@ -4,7 +4,6 @@ import { Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
-  styled,
   NavigationService,
   withTheme,
   Icon,
@@ -13,13 +12,19 @@ import {
 import { useApolloClient } from '@apollo/client';
 import { createFeatureFeedTab } from '@apollosproject/ui-connected';
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
-import { ONBOARDING_VERSION } from '../ui/Onboarding';
 import Connect from './connect';
 import tabBarIcon from './tabBarIcon';
 
-const HeaderLogo = styled(({ theme }) => ({
-  height: theme.sizing.baseUnit,
-  resizeMode: 'contain',
+const HeaderLogo = withTheme(({ theme }) => ({
+  style: {
+    height: theme.sizing.baseUnit * 2.5,
+    width: '70%',
+    resizeMode: 'contain',
+  },
+  source:
+    theme.type === 'light'
+      ? require('./wordmark.png')
+      : require('./wordmark.dark.png'),
 }))(Image);
 
 const SearchIcon = withTheme(({ theme: { colors, sizing: { baseUnit } } }) => ({
@@ -83,7 +88,6 @@ const TabNavigator = () => {
       checkOnboardingStatusAndNavigate({
         client,
         navigation: NavigationService,
-        latestOnboardingVersion: ONBOARDING_VERSION,
         navigateHome: false,
       });
     },
