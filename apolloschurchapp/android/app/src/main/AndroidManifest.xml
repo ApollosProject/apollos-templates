@@ -22,9 +22,8 @@
         android:name=".MainActivity"
         android:label="@string/app_name"
         android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
-        android:windowSoftInputMode="adjustPan"
-        android:exported="true"
-        android:launchMode="singleTask">
+        android:launchMode="singleTask"
+        android:windowSoftInputMode="adjustResize">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
@@ -41,7 +40,5 @@
           <data android:scheme="http" />
         </intent-filter>
       </activity>
-
-      <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
     </application>
 </manifest>
