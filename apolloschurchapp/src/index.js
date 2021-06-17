@@ -21,13 +21,12 @@ import {
 import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
-import { Landing } from '@apollosproject/ui-onboarding';
+import { Landing, Onboarding } from '@apollosproject/ui-onboarding';
 
 import {
   ContentFeedConnected,
   SearchScreenConnected,
 } from '@apollosproject/ui-connected';
-import { Onboarding } from '@apollosproject/ui-onboarding';
 import Providers from './Providers';
 import ContentSingle from './content-single';
 import Event from './event';
