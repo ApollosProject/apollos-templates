@@ -9,13 +9,9 @@
     "android": "lerna run android --parallel",
     "pods": "lerna run pods --parallel",
     "postinstall": "lerna run postinstall --parallel",
-    "bump": "./scripts/bump.sh",
-    "canary": "./scripts/add-packages.sh canary && yarn",
-    "next": "./scripts/add-packages.sh next && yarn",
-    "secrets": "./scripts/secrets.sh"
+    "bump": "./scripts/bump.sh"
   },
   "private": true,
-  "node": ">=12.x.x",
   "devDependencies": {
     "lerna": "^3.20.2",
     "chalk": "^4.0.0"
