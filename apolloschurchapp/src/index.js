@@ -27,11 +27,11 @@ import {
   ContentFeedConnected,
   SearchScreenConnected,
 } from '@apollosproject/ui-connected';
+import { Onboarding } from '@apollosproject/ui-onboarding';
 import Providers from './Providers';
 import ContentSingle from './content-single';
 import Event from './event';
 import Tabs from './tabs';
-import Onboarding from './ui/Onboarding';
 
 enableScreens(); // improves performance for react-navigation
 
