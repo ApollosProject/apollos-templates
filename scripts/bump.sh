@@ -2,14 +2,21 @@
 # this script will bump versions in the packages using the add-packages.sh scripts
 # and then bump the Apollos versions to be used by the upgrade tool
 
-#DEBUG
-curl 'https://api.github.com/repos/apollosproject/apollos-apps/tags'
+# On github, we need use the github token
+# Otherwise we run into rate limits since all MacOS images share the same IP
+if [ -z ${GITHUB_TOKEN+x} ]; then
+	TAGS=$(curl https://api.github.com/repos/apollosproject/apollos-apps/tags);
+else
+	TAGS=$(curl https://api.github.com/repos/apollosproject/apollos-apps/tags -H"Authorization: Bearer ${GITHUB_TOKEN}");
+fi
 
 # get latest apps version
 VERSION=$(
-	curl -s "https://api.github.com/repos/apollosproject/apollos-apps/tags" |
-		python -c "import sys, json; print json.load(sys.stdin)[0]['name'][1:]"
+	echo $TAGS |
+			python -c "import sys, json; print json.load(sys.stdin)[0]['name'][1:]"
 )
+
+echo $VERSION
 
 PKG=$(npm show @apollosproject/config version)
 
