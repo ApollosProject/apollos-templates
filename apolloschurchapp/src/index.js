@@ -17,6 +17,7 @@ import {
   BackgroundView,
   withTheme,
   NavigationService,
+  Providers as ThemeProvider,
 } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
@@ -32,6 +33,7 @@ import ContentSingle from './content-single';
 import Event from './event';
 import Tabs from './tabs';
 import LandingScreen from './ui/LandingScreen';
+import customTheme, { customIcons } from './theme';
 
 enableScreens(); // improves performance for react-navigation
 
@@ -71,67 +73,73 @@ const ThemedNavigationContainer = withTheme(({ theme, ...props }) => ({
 const { Navigator, Screen } = createNativeStackNavigator();
 
 const App = () => (
-  <Providers>
+  <ThemeProvider themeInput={customTheme} iconInput={customIcons}>
     <BackgroundView>
       <AppStatusBar />
       <ThemedNavigationContainer
         containerRef={NavigationService.setTopLevelNavigator}
         onReady={NavigationService.setIsReady}
       >
-        <Navigator
-          screenOptions={{ headerShown: false, stackPresentation: 'modal' }}
-        >
-          <Screen
-            name="ProtectedRoute"
-            component={ProtectedRouteWithSplashScreen}
-          />
-          <Screen name="Tabs" component={Tabs} />
-          <Screen
-            name="ContentSingle"
-            component={ContentSingle}
-            options={{
-              title: 'Content',
-              stackPresentation: 'push',
-            }}
-          />
-          <Screen
-            component={ContentFeedConnected}
-            name="ContentFeed"
-            options={({ route }) => ({
-              title: route.params.itemTitle || 'Content Feed',
-              stackPresentation: 'push',
-            })}
-          />
+        <Providers>
+          <Navigator
+            screenOptions={{ headerShown: false, stackPresentation: 'modal' }}
+          >
+            <Screen
+              name="ProtectedRoute"
+              component={ProtectedRouteWithSplashScreen}
+            />
+            <Screen name="Tabs" component={Tabs} />
+            <Screen
+              name="ContentSingle"
+              component={ContentSingle}
+              options={{
+                title: 'Content',
+                stackPresentation: 'push',
+              }}
+            />
+            <Screen
+              component={ContentFeedConnected}
+              name="ContentFeed"
+              options={({ route }) => ({
+                title: route.params.itemTitle || 'Content Feed',
+                stackPresentation: 'push',
+              })}
+            />
 
-          <Screen name="Event" component={Event} options={{ title: 'Event' }} />
-          <Screen
-            name="Auth"
-            component={Auth}
-            options={{
-              gestureEnabled: false,
-              stackPresentation: 'push',
-            }}
-          />
-          <Screen name="Location" component={Location} />
-          <Screen
-            name="Passes"
-            component={Passes}
-            options={{ title: 'Check-In Pass' }}
-          />
-          <Screen
-            name="Onboarding"
-            component={Onboarding}
-            options={{
-              gestureEnabled: false,
-              stackPresentation: 'push',
-            }}
-          />
-          <Screen name="LandingScreen" component={LandingScreen} />
-          <Screen name="Search" component={SearchScreenConnected} />
-        </Navigator>
+            <Screen
+              name="Event"
+              component={Event}
+              options={{ title: 'Event' }}
+            />
+            <Screen
+              name="Auth"
+              component={Auth}
+              options={{
+                gestureEnabled: false,
+                stackPresentation: 'push',
+              }}
+            />
+            <Screen name="Location" component={Location} />
+            <Screen
+              name="Passes"
+              component={Passes}
+              options={{ title: 'Check-In Pass' }}
+            />
+            <Screen
+              name="Onboarding"
+              component={Onboarding}
+              options={{
+                gestureEnabled: false,
+                stackPresentation: 'push',
+              }}
+            />
+            <Screen name="LandingScreen" component={LandingScreen} />
+            <Screen name="Search" component={SearchScreenConnected} />
+          </Navigator>
+        </Providers>
       </ThemedNavigationContainer>
     </BackgroundView>
-  </Providers>
+  </ThemeProvider>
 );
 
 export default App;
