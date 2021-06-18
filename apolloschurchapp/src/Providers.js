@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ApollosConfig from '@apollosproject/config';
-import { Providers, NavigationService } from '@apollosproject/ui-kit';
+import { NavigationService } from '@apollosproject/ui-kit';
 import { AuthProvider } from '@apollosproject/ui-auth';
 import { AnalyticsProvider } from '@apollosproject/ui-analytics';
 import { NotificationsProvider } from '@apollosproject/ui-notifications';
@@ -11,7 +12,6 @@ import {
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
 
 import ClientProvider, { client } from './client';
-import customTheme, { customIcons } from './theme';
 
 const AppProviders = (props) => (
   <ClientProvider {...props}>
@@ -50,17 +50,15 @@ const AppProviders = (props) => (
         }
       >
         <AnalyticsProvider>
-          <LiveProvider>
-            <Providers
-              themeInput={customTheme}
-              iconInput={customIcons}
-              {...props}
-            />
-          </LiveProvider>
+          <LiveProvider>{props.children}</LiveProvider>
         </AnalyticsProvider>
       </AuthProvider>
     </NotificationsProvider>
   </ClientProvider>
 );
+
+AppProviders.propTypes = {
+  children: PropTypes.shape({}),
+};
 
 export default AppProviders;
