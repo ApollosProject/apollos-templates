@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import ApollosConfig from '@apollosproject/config';
 import { NavigationService } from '@apollosproject/ui-kit';
 import { AuthProvider } from '@apollosproject/ui-auth';
@@ -55,5 +56,9 @@ const AppProviders = (props) => (
     </NotificationsProvider>
   </ClientProvider>
 );
+
+AppProviders.propTypes = {
+  children: PropTypes.shape({}),
+};
 
 export default AppProviders;
