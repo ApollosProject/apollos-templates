@@ -227,7 +227,7 @@ Drop the keystore file here: `apolloschurchapp/android/app/apollos.keystore`
 
 **_NOTE:_** You may also want to save this keystore and credentials somewhere safe outside this repo, it's the only keystore you can ever use for this app and if you lose it, it's very difficult to get a new one.
 
-Now just load these environment variables in your `.env.shared` file
+Now just load these environment variables in your `.env` and `.env.shared` files
 
 ```
 KEYSTORE_FILE=apollos.keystore
