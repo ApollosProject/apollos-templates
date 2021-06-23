@@ -63,7 +63,7 @@ jobs:
       run: gem install bundler
 
     - name: Decrypt Environment Variables and Apple API Key
-      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
+      run: (npx @apollosproject/apollos-cli secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
 
     - run: cp .env.shared .env
 
@@ -101,7 +101,7 @@ jobs:
       run: gem install bundler
 
     - name: Decrypt Environment Variables and Keystore
-      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
+      run: (npx @apollosproject/apollos-cli secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
 
     - run: cp .env.shared .env
 
