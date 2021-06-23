@@ -176,8 +176,8 @@ MATCH_BASIC_GIT_AUTHORIZATION=<base64 encoded token>
 Inside the app directory run `match` to configure the certificates
 
 ```
-bundle exec fastlane match development
-bundle exec fastlane match appstore
+fastlane match development
+fastlane match appstore
 ```
 
 Use Xcode to switch the certificate and profile settings to "Manual" and choose the new certificates and profiles that you just created.
@@ -194,7 +194,7 @@ APP_STORE_CONNECT_API_KEY_ISSUER_ID=<issuer ID>
 Test the deployment:
 
 ```
-bundle exec fastlane ios deploy
+fastlane ios deploy
 ```
 
 The last thing you'll want to do to make sure you don't lose your important keys and credentials is encrypt them and add them to the repo. Copy the `.env` file to a new file, `.env.shared`. Then run the following encryption command from within the APP directory, `/apolloschurchapp`. You can also use this same process in the API directory, `/apollos-church-api`. The `<TOKEN>` is an encryption password that you will use for automatic Android deploys.
@@ -211,17 +211,13 @@ Now push the changes and watch the app deploy!
 
 ##### Android
 
-First, you'll need to have the Developer account owner generate an upload key.
-
-![upload key](https://files-2w1r6fc7m.vercel.app)
-
-Move that file to `android/key.json` once you have it. You can validate the upload key with this command
+First, you'll need to have the Developer account owner generate an upload key. [Create a service account](https://developers.google.com/android-publisher/getting_started#using_a_service_account) and add it to the Play Console with "Release Manager" role. Move the downloaded JSON file to `android/key.json` once you have it. You can validate the upload key with this command
 
 ```
 fastlane run validate_play_store_json_key --json_key android/key.json
 ```
 
-Next, you'll need to generate a new signing key. Keep the passwords it asks you for.
+Next, you'll need to generate a new keystore. Keep the passwords it asks you for.
 
 ```
 keytool -genkey -v -keystore apollos.keystore -alias apollos -keyalg RSA -keysize 2048 -validity 10000
@@ -240,19 +236,32 @@ KEY_ALIAS=apollos
 KEY_PASSWORD=<alias password>
 ```
 
-You will need to upload the bundle manually the first time, exporting your private signing key from Android Studio. [Follow these instructions](https://developer.android.com/studio/publish/app-signing#generate-key) to export the key. Then upload the bundle to the internal test track, opting into Google Play Signing with your exported `*.pepk` file.
+You will need to upload the bundle manually the first time. First set the Application ID to something unique in the `android/app/build.gradle` file:
 
-![play store](https://files-l4eap9235-redreceipt.vercel.app)
+```
+    defaultConfig {
+        applicationId "com.company.appname"
+        ...
+        ...
+        ...
+    }
+```
+
+Run the fastlane commands to generate a release build:
+
+```
+fastlane android bump_version_code
+fastlane run gradle task:clean project_dir:android
+fastlane run gradle task:bundle build_type:Release project_dir:android
+```
+
+You can find the bundle in `android/app/build/outputs/bundle/release/app-release.aab`. Upload the bundle to the internal test track.
+
+![play store](https://files-6ngafis8q-redreceipt.vercel.app)
 
 Go through the steps to finish your first release.
 
-Now you're ready to test the deploy
-
-```
-bundle exec fastlane android deploy
-```
-
-Lastly, to get automated deploys working on the CI, re-run the encryption command from a previous step, using the same `<TOKEN>`, to add the new keystore and upload key to the repo
+Lastly, to get automated deploys working on the CI, move the keystore variables to `.env.shared` and re-run the encryption command from a previous step, using the same token from the iOS steps above:
 
 ```
 npx @apollosproject/apollos-cli secrets -e <TOKEN>
