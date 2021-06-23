@@ -264,3 +264,17 @@ Lastly, to get automated deploys working on the CI, move the keystore variables 
 ```
 npx @apollosproject/apollos-cli secrets -e <TOKEN>
 ```
+
+Change the metadata information for the Android release:
+
+- `fastlane/metadata/android/en-US/full_description.txt`
+- `fastlane/metadata/android/en-US/short_description.txt`
+- `fastlane/metadata/android/en-US/title.txt`
+
+Add new images and screenshots
+
+- `fastlane/metadata/android/en-US/images/phoneScreenshots/` (three images)
+- `fastlane/metadata/android/en-US/images/icon.png` (512 x 512 jpg)
+- `fastlane/metadata/android/en-US/images/featureGraphic.png` (1024 x 500 jpg)
+
+Now when you push to master, you should be all set for automatic deploys!
