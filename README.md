@@ -197,13 +197,13 @@ Test the deployment:
 bundle exec fastlane ios deploy
 ```
 
-The last thing you'll want to do to make sure you don't lose your important keys and credentials is encrypt them and add them to the repo. Copy the `.env` file to a new file, `.env.shared`. Then from the root directory, run the encryption command. You can also use this through for the API directory as well as important Android secrets when we get there.
+The last thing you'll want to do to make sure you don't lose your important keys and credentials is encrypt them and add them to the repo. Copy the `.env` file to a new file, `.env.shared`. Then run the following encryption command from within the APP directory, `/apolloschurchapp`. You can also use this same process in the API directory, `/apollos-church-api`. The `<TOKEN>` is an encryption password that you will use for automatic Android deploys.
 
 ```
-yarn secrets -e <password>
+npx @apollosproject/apollos-cli secrets -e <TOKEN>
 ```
 
-Make sure to remember that password as we'll use it later for automatic Android deploys. Add it to Github as a secret
+Make sure to remember that password and add it to Github as a secret.
 
 `ENCRYPTION_PASSWORD=<password>`
 
@@ -240,7 +240,7 @@ KEY_ALIAS=apollos
 KEY_PASSWORD=<alias password>
 ```
 
-You will need to upload the bundle manually the first time, exporting your private signing key from Android Studio. [Follow these instructions](https://developer.android.com/studio/publish/app-signing#generate-key) to export the key. Then upload the bundle to the internal test track, opting into Google Play Signing with your exported `*.pepk` file. 
+You will need to upload the bundle manually the first time, exporting your private signing key from Android Studio. [Follow these instructions](https://developer.android.com/studio/publish/app-signing#generate-key) to export the key. Then upload the bundle to the internal test track, opting into Google Play Signing with your exported `*.pepk` file.
 
 ![play store](https://files-l4eap9235-redreceipt.vercel.app)
 
@@ -252,8 +252,8 @@ Now you're ready to test the deploy
 bundle exec fastlane android deploy
 ```
 
-Lastly, to get automated deploys working on the CI, re-run the encryption command from a previous step to add the new keystore and upload key to the repo
+Lastly, to get automated deploys working on the CI, re-run the encryption command from a previous step, using the same `<TOKEN>`, to add the new keystore and upload key to the repo
 
 ```
-yarn secrets -e <password>
+npx @apollosproject/apollos-cli secrets -e <TOKEN>
 ```
