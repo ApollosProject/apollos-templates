@@ -18,13 +18,21 @@ openssl req -new -key myprivate.key -out csr.certSigningRequest
 Fill Prompts with this info:
 
 ```
-Country Name (2 letter code) [AU]: US
-State or Province Name [Some-State]: United States
-Locality Name []:
-Organization Name []: Apple Inc.
-Organizational Unit Name []: Apple Worldwide Developer Relations
-Common Name []: Apple Worldwide Developer Relations Certification Authority
+Country Name (2 letter code) []: US
+State or Province Name (full name) []: United States
+Locality Name (eg, city) []:
+Organization Name (eg, company) []: Apple Inc.
+Organizational Unit Name (eg, section) []: Apple Worldwide Developer Relations
+Common Name (eg, fully qualified host name) []: Apple Worldwide Developer Relations Certification Authority
 Email Address []: your-email
+```
+
+You will then be asked for a challenge password, which you will need in the next step.
+
+```
+Please enter the following 'extra' attributes
+to be sent with your certificate request
+A challenge password []:
 ```
 
 Upload new CSR to download a `.cer` file from Apple, then convert to `.p12`, **_remember the password!_**
