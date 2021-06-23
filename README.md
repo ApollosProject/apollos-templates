@@ -247,11 +247,9 @@ You will need to upload the bundle manually the first time. First set the Applic
     }
 ```
 
-Run the fastlane commands to generate a release build:
+Run the fastlane command to generate a release build:
 
 ```
-fastlane android bump_version_code
-fastlane run gradle task:clean project_dir:android
 fastlane run gradle task:bundle build_type:Release project_dir:android
 ```
 
