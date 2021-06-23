@@ -36,7 +36,9 @@ const apolloServer = new ApolloServer({
 
 ## App
 
-First add the CLI to the app dev dependencies
+First, go to Bugsnag's website and create a new project. Use "Mobile" > "React Native" > "React Native" in the onboarding. This will give you an API key to use.
+
+Then, make sure you are in the `apolloschurchapp` folder and add the CLI to the app dev dependencies.
 
 ```
 cd apolloschurchapp
@@ -50,7 +52,7 @@ cp ../yarn.lock yarn.lock
 yarn bugsnag-react-native-cli init
 ```
 
-**_Make sure to not commit the local `yarn.lock` file!_**
+**_Make sure to not commit the local `yarn.lock` file in the `apolloschurchapp` folder!_**
 
 ```
 rm yarn.lock
@@ -59,6 +61,8 @@ rm yarn.lock
 You can verify it's working by throwing an error right after Bugsnag is initialized on the `index.js` file
 
 ```
+import Bugsnag from "@bugsnag/react-native";
+
 Bugsnag.start();
 Bugsnag.notify(new Error('Test error'));
 ```
