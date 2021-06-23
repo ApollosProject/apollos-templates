@@ -97,8 +97,8 @@ const data = {
   Notification,
   NotificationPreference,
   OneSignal,
-  Person,
-} // An extension of Postgres person. Will be eliminated in the near future so you can use just postgres/Person.
+  Person, // An extension of Postgres person. Will be eliminated in the near future so you can use just postgres/Person.
+};
 
 const {
   dataSources,
