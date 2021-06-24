@@ -6,15 +6,18 @@
   "scripts": {
     "setup": "./scripts/init.sh",
     "start": "NODE_ENV=production node ./lib/index.js",
-    "start:dev": "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
+    "start:dev":
+      "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
     "postinstall": "yarn build",
-    "build": "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
-    "test": "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
+    "build":
+      "NODE_ENV=production rm -rf ./lib && mkdir -p lib && babel ./src -d ./lib",
+    "test":
+      "echo \"No tests in apollos-church-api, all tested code is located in @apollosproject npm modules\"",
     "lint": "eslint ./src --ext .js",
     "translate": "node scripts/translate.js"
   },
   "engines": {
-    "node": ">=12.x.x"
+    "node": "12"
   },
   "dependencies": {
     "@apollosproject/config": "^2.22.0",
