@@ -214,7 +214,7 @@ Now push the changes and watch the app deploy!
 First, you'll need to have the Developer account owner generate an upload key. [Create a service account](https://developers.google.com/android-publisher/getting_started#using_a_service_account) and add it to the Play Console with "Release Manager" role. Move the downloaded JSON file to `android/key.json` once you have it. You can validate the upload key with this command
 
 ```
-fastlane run validate_play_store_json_key --json_key android/key.json
+fastlane run validate_play_store_json_key json_key:./android/key.json
 ```
 
 Next, you'll need to generate a new keystore. Keep the passwords it asks you for.
