@@ -81,5 +81,5 @@ end
 error do |lane, exception|
   s = File.read("../app.json")
   app_name = s[/"name": "(.*)",/, 1]
-  slack(message: name << " - " << exception.to_s, success: false)
+  slack(message: app_name << " - " << exception.to_s, success: false)
 end
