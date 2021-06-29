@@ -1,13 +1,7 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Platform,
-  KeyboardAvoidingView,
-  StyleSheet,
-  StatusBar,
-} from 'react-native';
+import { KeyboardAvoidingView } from 'react-native';
 import { Mutation } from '@apollo/client/react/components';
-import { Header } from '@react-navigation/stack';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
@@ -17,6 +11,7 @@ import {
   PaddedView,
   FlexedView,
   styled,
+  ModalView,
 } from '@apollosproject/ui-kit';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -28,11 +23,6 @@ const Footer = styled({
   justifyContent: 'flex-end',
 })(SafeAreaView);
 
-const StyledKeyboardAvoidingView = styled(({ theme }) => ({
-  ...StyleSheet.absoluteFill,
-  backgroundColor: theme.colors.background.paper,
-}))(KeyboardAvoidingView);
-
 class ChangePassword extends PureComponent {
   static propTypes = {
     navigation: PropTypes.shape({
@@ -42,46 +32,42 @@ class ChangePassword extends PureComponent {
   };
 
   renderForm = (props) => (
-    <StyledKeyboardAvoidingView
-      behavior={'padding'}
-      keyboardVerticalOffset={
-        Header.HEIGHT +
-        (Platform.OS === 'android' ? StatusBar.currentHeight : 0)
-      }
-    >
-      <FlexedView>
-        <PaddedView>
-          <TextInput
-            label="New Password"
-            type="password"
-            value={props.values.password}
-            error={props.touched.password && props.errors.password}
-            onChangeText={(text) => props.setFieldValue('password', text)}
-          />
-          <TextInput
-            label="Confirm Password"
-            type="password"
-            value={props.values.confirmPassword}
-            error={
-              props.touched.confirmPassword && props.errors.confirmPassword
-            }
-            onChangeText={(text) =>
-              props.setFieldValue('confirmPassword', text)
-            }
-          />
-        </PaddedView>
-        <Footer>
+    <KeyboardAvoidingView behavior="padding">
+      <ModalView>
+        <FlexedView>
           <PaddedView>
-            <Button
-              disabled={props.isSubmitting}
-              onPress={props.handleSubmit}
-              title="Save"
-              loading={props.isSubmitting}
+            <TextInput
+              label="New Password"
+              type="password"
+              value={props.values.password}
+              error={props.touched.password && props.errors.password}
+              onChangeText={(text) => props.setFieldValue('password', text)}
+            />
+            <TextInput
+              label="Confirm Password"
+              type="password"
+              value={props.values.confirmPassword}
+              error={
+                props.touched.confirmPassword && props.errors.confirmPassword
+              }
+              onChangeText={(text) =>
+                props.setFieldValue('confirmPassword', text)
+              }
             />
           </PaddedView>
-        </Footer>
-      </FlexedView>
-    </StyledKeyboardAvoidingView>
+          <Footer>
+            <PaddedView>
+              <Button
+                disabled={props.isSubmitting}
+                onPress={props.handleSubmit}
+                title="Save"
+                loading={props.isSubmitting}
+              />
+            </PaddedView>
+          </Footer>
+        </FlexedView>
+      </ModalView>
+    </KeyboardAvoidingView>
   );
 
   render() {

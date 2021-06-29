@@ -16,6 +16,7 @@ import {
   NavigationService,
   H4,
   PaddedView,
+  ModalView,
 } from '@apollosproject/ui-kit';
 import {
   checkOnboardingStatusAndNavigate,
@@ -46,176 +47,178 @@ const UserSettings = () => {
   if (loading) return <ActivityIndicator />;
   if (!isLoggedIn) return null;
   return (
-    <BackgroundView>
-      <ScrollView>
-        <UserAvatarUpdate />
+    <ModalView>
+      <BackgroundView>
+        <ScrollView>
+          <UserAvatarUpdate />
 
-        <RockAuthedWebBrowser>
-          {(openUrl) => (
-            <>
-              <TableView>
-                <Touchable
-                  onPress={() => {
-                    navigation.navigate('LikedContentFeedConnected');
-                  }}
-                >
+          <RockAuthedWebBrowser>
+            {(openUrl) => (
+              <>
+                <TableView>
+                  <Touchable
+                    onPress={() => {
+                      navigation.navigate('LikedContentFeedConnected');
+                    }}
+                  >
+                    <Cell>
+                      <CellText>Likes</CellText>
+                      <CellIcon name="arrow-next" />
+                    </Cell>
+                  </Touchable>
+                  <Divider />
+                  <Touchable
+                    onPress={() => {
+                      navigation.navigate('PersonalDetails');
+                    }}
+                  >
+                    <Cell>
+                      <CellText>Personal Details</CellText>
+                      <CellIcon name="arrow-next" />
+                    </Cell>
+                  </Touchable>
+                  <Divider />
+                  <Touchable
+                    onPress={() => {
+                      navigation.navigate('Location');
+                    }}
+                  >
+                    <Cell>
+                      <CellText>Location</CellText>
+                      <CellIcon name="arrow-next" />
+                    </Cell>
+                  </Touchable>
+                  <Divider />
+                  <Touchable
+                    onPress={() => {
+                      navigation.navigate('ChangePassword');
+                    }}
+                  >
+                    <Cell>
+                      <CellText>Change Password</CellText>
+                      <CellIcon name="arrow-next" />
+                    </Cell>
+                  </Touchable>
+                  <Touchable
+                    onPress={() => {
+                      navigation.navigate('Notifications');
+                    }}
+                  >
+                    <Cell>
+                      <CellText>Notification Settings</CellText>
+                      <CellIcon name="arrow-next" />
+                    </Cell>
+                  </Touchable>
+                </TableView>
+                <TableView>
+                  <Touchable
+                    onPress={() => {
+                      openUrl('mailto:support@apollos.app');
+                    }}
+                  >
+                    <Cell>
+                      <CellText>Give Feedback</CellText>
+                      <CellIcon name="arrow-next" />
+                    </Cell>
+                  </Touchable>
+                </TableView>
+                <TableView>
+                  <Touchable
+                    onPress={() => openUrl('https://apollosrock.newspring.cc/')}
+                  >
+                    <Cell>
+                      <CellText>Privacy Policy</CellText>
+                      <CellIcon name="arrow-next" />
+                    </Cell>
+                  </Touchable>
+                  <Divider />
+                  <Touchable
+                    onPress={() => openUrl('https://apollosrock.newspring.cc/')}
+                  >
+                    <Cell>
+                      <CellText>Terms of Use</CellText>
+                      <CellIcon name="arrow-next" />
+                    </Cell>
+                  </Touchable>
+                </TableView>
+                <TableView>
+                  <Touchable
+                    onPress={async () => {
+                      await logout();
+                      // This resets the navigation stack, and the navigates to the first auth screen.
+                      // This ensures that user isn't navigated to a subscreen of Auth, like the pin entry screen.
+                      NavigationService.resetToAuth();
+                    }}
+                  >
+                    <Cell>
+                      <CellText>Logout</CellText>
+                      <CellIcon name="arrow-next" />
+                    </Cell>
+                  </Touchable>
+                </TableView>
+                <TableView>
                   <Cell>
-                    <CellText>Likes</CellText>
-                    <CellIcon name="arrow-next" />
+                    <CellText>
+                      {`App Version: ${getVersion()}.${getBuildNumber()}`}
+                    </CellText>
                   </Cell>
-                </Touchable>
-                <Divider />
-                <Touchable
-                  onPress={() => {
-                    navigation.navigate('PersonalDetails');
-                  }}
-                >
-                  <Cell>
-                    <CellText>Personal Details</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-                <Divider />
-                <Touchable
-                  onPress={() => {
-                    navigation.navigate('Location');
-                  }}
-                >
-                  <Cell>
-                    <CellText>Location</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-                <Divider />
-                <Touchable
-                  onPress={() => {
-                    navigation.navigate('ChangePassword');
-                  }}
-                >
-                  <Cell>
-                    <CellText>Change Password</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-                <Touchable
-                  onPress={() => {
-                    navigation.navigate('Notifications');
-                  }}
-                >
-                  <Cell>
-                    <CellText>Notification Settings</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-              </TableView>
-              <TableView>
-                <Touchable
-                  onPress={() => {
-                    openUrl('mailto:support@apollos.app');
-                  }}
-                >
-                  <Cell>
-                    <CellText>Give Feedback</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-              </TableView>
-              <TableView>
-                <Touchable
-                  onPress={() => openUrl('https://apollosrock.newspring.cc/')}
-                >
-                  <Cell>
-                    <CellText>Privacy Policy</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-                <Divider />
-                <Touchable
-                  onPress={() => openUrl('https://apollosrock.newspring.cc/')}
-                >
-                  <Cell>
-                    <CellText>Terms of Use</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-              </TableView>
-              <TableView>
-                <Touchable
-                  onPress={async () => {
-                    await logout();
-                    // This resets the navigation stack, and the navigates to the first auth screen.
-                    // This ensures that user isn't navigated to a subscreen of Auth, like the pin entry screen.
-                    NavigationService.resetToAuth();
-                  }}
-                >
-                  <Cell>
-                    <CellText>Logout</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-              </TableView>
-              <TableView>
-                <Cell>
-                  <CellText>
-                    {`App Version: ${getVersion()}.${getBuildNumber()}`}
-                  </CellText>
-                </Cell>
-              </TableView>
+                </TableView>
 
-              {/* testing panel */}
-              {process.env.NODE_ENV !== 'production' ? (
-                <>
-                  <PaddedView>
-                    <H4>For development only</H4>
-                  </PaddedView>
-                  <TableView>
-                    <Touchable
-                      onPress={() =>
-                        checkOnboardingStatusAndNavigate({
-                          latestOnboardingVersion: 2,
-                          navigation: NavigationService,
-                          client,
-                        })
-                      }
-                    >
-                      <Cell>
-                        <CellText>Launch Onboarding</CellText>
-                      </Cell>
-                    </Touchable>
-                    <Divider />
-                    <Touchable
-                      onPress={() =>
-                        onboardingComplete({
-                          version: 0,
-                          userId: data?.currentUser?.id,
-                        })
-                      }
-                    >
-                      <Cell>
-                        <CellText>Reset Onboarding to Unseen</CellText>
-                      </Cell>
-                    </Touchable>
-                    <Divider />
-                    <Touchable
-                      onPress={() =>
-                        onboardingComplete({
-                          version: 1,
-                          userId: data?.currentUser?.id,
-                        })
-                      }
-                    >
-                      <Cell>
-                        <CellText>Reset Onboarding to Seen v1</CellText>
-                      </Cell>
-                    </Touchable>
-                  </TableView>
-                </>
-              ) : null}
-            </>
-          )}
-        </RockAuthedWebBrowser>
-      </ScrollView>
-    </BackgroundView>
+                {/* testing panel */}
+                {process.env.NODE_ENV !== 'production' ? (
+                  <>
+                    <PaddedView>
+                      <H4>For development only</H4>
+                    </PaddedView>
+                    <TableView>
+                      <Touchable
+                        onPress={() =>
+                          checkOnboardingStatusAndNavigate({
+                            latestOnboardingVersion: 2,
+                            navigation: NavigationService,
+                            client,
+                          })
+                        }
+                      >
+                        <Cell>
+                          <CellText>Launch Onboarding</CellText>
+                        </Cell>
+                      </Touchable>
+                      <Divider />
+                      <Touchable
+                        onPress={() =>
+                          onboardingComplete({
+                            version: 0,
+                            userId: data?.currentUser?.id,
+                          })
+                        }
+                      >
+                        <Cell>
+                          <CellText>Reset Onboarding to Unseen</CellText>
+                        </Cell>
+                      </Touchable>
+                      <Divider />
+                      <Touchable
+                        onPress={() =>
+                          onboardingComplete({
+                            version: 1,
+                            userId: data?.currentUser?.id,
+                          })
+                        }
+                      >
+                        <Cell>
+                          <CellText>Reset Onboarding to Seen v1</CellText>
+                        </Cell>
+                      </Touchable>
+                    </TableView>
+                  </>
+                ) : null}
+              </>
+            )}
+          </RockAuthedWebBrowser>
+        </ScrollView>
+      </BackgroundView>
+    </ModalView>
   );
 };
 
