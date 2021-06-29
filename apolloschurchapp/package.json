@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "engines": {
-    "node": ">=12.x.x"
+    "node": "12"
   },
   "files": [
     "src"
@@ -13,15 +13,12 @@
     "ios": "react-native run-ios",
     "android": "SIM=\"$($HOME/Library/Android/sdk/emulator/emulator -list-avds | sed -n 1p)\" && $HOME/Library/Android/sdk/emulator/emulator -avd \"${SIM}\" & react-native run-android",
     "codecov": "cat ./coverage/lcov.info | codecov",
-    "link-packages": "node ./scripts/link-packages && yarn yalc update",
-    "unlink-packages": "node ./scripts/link-packages remove && rm -rf ./node_modules",
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js",
-    "get-schema": "eval $(grep ^APP_DATA_URL .env) && sleep 10 && get-graphql-schema $APP_DATA_URL > schema.graphql",
     "postinstall": "jetify && yarn pods",
     "pods": "(bundle install && cd ios && bundle exec pod install --repo-update)",
     "start": "yarn start:dev",
-    "start:dev": "yarn generate-stories & yarn get-schema && node ./scripts/get-introspection-data.js && react-native start",
+    "start:dev": "yarn generate-stories && node ./scripts/get-introspection-data.js && react-native start",
     "test": "TZ=UTC jest",
     "icons": "react-native set-icon --path",
     "splash": "react-native set-splash --path"
@@ -46,23 +43,23 @@
   "dependencies": {
     "@apollo/client": "3.3.0-rc.2",
     "@apollo/react-hooks": "^3.1.3",
-    "@apollosproject/config": "^2.14.0",
+    "@apollosproject/config": "^2.24.0",
     "@apollosproject/react-native-airplay-btn": "^0.2.0",
-    "@apollosproject/ui-analytics": "^2.14.0",
-    "@apollosproject/ui-auth": "^2.14.0",
-    "@apollosproject/ui-connected": "^2.14.0",
-    "@apollosproject/ui-fragments": "^2.14.0",
-    "@apollosproject/ui-htmlview": "^2.14.0",
-    "@apollosproject/ui-kit": "^2.14.0",
-    "@apollosproject/ui-mapview": "^2.14.0",
-    "@apollosproject/ui-media-player": "^2.14.0",
-    "@apollosproject/ui-notifications": "^2.14.0",
-    "@apollosproject/ui-onboarding": "^2.14.0",
-    "@apollosproject/ui-passes": "^2.14.0",
-    "@apollosproject/ui-prayer": "^2.14.0",
-    "@apollosproject/ui-scripture": "^2.14.0",
-    "@apollosproject/ui-storybook": "^2.14.0",
-    "@apollosproject/ui-test-utils": "^2.14.0",
+    "@apollosproject/ui-analytics": "^2.24.0",
+    "@apollosproject/ui-auth": "^2.24.0",
+    "@apollosproject/ui-connected": "^2.24.0",
+    "@apollosproject/ui-fragments": "^2.24.0",
+    "@apollosproject/ui-htmlview": "^2.24.0",
+    "@apollosproject/ui-kit": "^2.24.0",
+    "@apollosproject/ui-mapview": "^2.24.0",
+    "@apollosproject/ui-media-player": "^2.24.0",
+    "@apollosproject/ui-notifications": "^2.24.0",
+    "@apollosproject/ui-onboarding": "^2.24.0",
+    "@apollosproject/ui-passes": "^2.24.0",
+    "@apollosproject/ui-prayer": "^2.24.0",
+    "@apollosproject/ui-scripture": "^2.24.0",
+    "@apollosproject/ui-storybook": "^2.24.0",
+    "@apollosproject/ui-test-utils": "^2.24.0",
     "@gorhom/bottom-sheet": "3.4.1",
     "@metarouter/analytics-react-native": "^1.1.5",
     "@react-native-community/async-storage": "^1.5.1",
@@ -101,7 +98,7 @@
     "react-native-linear-gradient": "^2.5.4",
     "react-native-maps": "^0.27.1",
     "react-native-music-control": "0.10.8",
-    "react-native-onesignal": "3.9.1",
+    "react-native-onesignal": "4.0.8",
     "react-native-passkit-wallet": "^0.1.4",
     "react-native-permissions": "^2.0.5",
     "react-native-reanimated": "^2.0.0",
@@ -119,7 +116,7 @@
     "yup": "0.26.6"
   },
   "devDependencies": {
-    "@apollosproject/eslint-config": "^2.14.0",
+    "@apollosproject/eslint-config": "^2.24.0",
     "@babel/core": "^7.8.4",
     "@babel/runtime": "^7.8.4",
     "@bam.tech/react-native-make": "^3.0.0",
@@ -143,7 +140,6 @@
     "eslint-plugin-react-hooks": "^4.0.2",
     "eslint-plugin-react-native": "^3.2.1",
     "get-dev-paths": "^0.1.0",
-    "get-graphql-schema": "^2.1.2",
     "graphql-import": "^0.7.1",
     "jest": "^25.1.0",
     "jetifier": "^1.6.4",
@@ -154,8 +150,7 @@
     "react-dom": "16.6.3",
     "react-native-storybook-loader": "1.8.0",
     "react-test-renderer": "16.13.1",
-    "waait": "1.0.2",
-    "yalc": "^1.0.0-pre.47"
+    "waait": "1.0.2"
   },
   "rnpm": {
     "assets": [

@@ -41,8 +41,13 @@ import {
   UserFlag,
   UserLike,
   Follow,
+  Notification,
+  NotificationPreference,
   Campus as PostgresCampus,
   Person as PostgresPerson,
+  Media as PostgresMedia,
+  ContentItem as PostgresContentItem,
+  ContentItemsConnection,
 } from '@apollosproject/data-connector-postgres';
 
 import * as Theme from './theme';
@@ -59,6 +64,9 @@ const data = {
   RockPerson, // This entry needs to come before (postgres) Person
   BinaryFiles, // This entry needs to come before (postgres) Person
   PostgresPerson, // Postgres person for now, as we extend this dataSource in the 'rockWithPostgres' file
+  PostgresMedia,
+  PostgresContentItem,
+  ContentItemsConnection,
   Cloudinary,
   Auth,
   AuthSms,
@@ -70,7 +78,6 @@ const data = {
   RockConstants,
   Sharable,
   Analytics,
-  OneSignal,
   PersonalDevice,
   Pass,
   Search,
@@ -89,6 +96,9 @@ const data = {
   Follow,
   PostgresCampus,
   Persona,
+  Notification,
+  NotificationPreference,
+  OneSignal,
   Person, // An extension of Postgres person. Will be eliminated in the near future so you can use just postgres/Person.
 };
 

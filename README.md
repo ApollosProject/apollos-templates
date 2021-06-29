@@ -176,8 +176,8 @@ MATCH_BASIC_GIT_AUTHORIZATION=<base64 encoded token>
 Inside the app directory run `match` to configure the certificates
 
 ```
-bundle exec fastlane match development
-bundle exec fastlane match appstore
+fastlane match development
+fastlane match appstore
 ```
 
 Use Xcode to switch the certificate and profile settings to "Manual" and choose the new certificates and profiles that you just created.
@@ -194,16 +194,16 @@ APP_STORE_CONNECT_API_KEY_ISSUER_ID=<issuer ID>
 Test the deployment:
 
 ```
-bundle exec fastlane ios deploy
+fastlane ios deploy
 ```
 
-The last thing you'll want to do to make sure you don't lose your important keys and credentials is encrypt them and add them to the repo. Copy the `.env` file to a new file, `.env.shared`. Then from the root directory, run the encryption command. You can also use this through for the API directory as well as important Android secrets when we get there.
+The last thing you'll want to do to make sure you don't lose your important keys and credentials is encrypt them and add them to the repo. Copy the `.env` file to a new file, `.env.shared`. Then run the following encryption command from within the APP directory, `/apolloschurchapp`. You can also use this same process in the API directory, `/apollos-church-api`. The `<TOKEN>` is an encryption password that you will use for automatic Android deploys.
 
 ```
-yarn secrets -e <password>
+npx @apollosproject/apollos-cli secrets -e <TOKEN>
 ```
 
-Make sure to remember that password as we'll use it later for automatic Android deploys. Add it to Github as a secret
+Make sure to remember that password and add it to Github as a secret.
 
 `ENCRYPTION_PASSWORD=<password>`
 
@@ -211,17 +211,13 @@ Now push the changes and watch the app deploy!
 
 ##### Android
 
-First, you'll need to have the Developer account owner generate an upload key.
-
-![upload key](https://files-2w1r6fc7m.vercel.app)
-
-Move that file to `android/key.json` once you have it. You can validate the upload key with this command
+First, you'll need to have the Developer account owner generate an upload key. [Create a service account](https://developers.google.com/android-publisher/getting_started#using_a_service_account) and add it to the Play Console with "Release Manager" role. Move the downloaded JSON file to `android/key.json` once you have it. You can validate the upload key with this command
 
 ```
-fastlane run validate_play_store_json_key --json_key android/key.json
+fastlane run validate_play_store_json_key json_key:./android/key.json
 ```
 
-Next, you'll need to generate a new signing key. Keep the passwords it asks you for.
+Next, you'll need to generate a new keystore. Keep the passwords it asks you for.
 
 ```
 keytool -genkey -v -keystore apollos.keystore -alias apollos -keyalg RSA -keysize 2048 -validity 10000
@@ -231,7 +227,7 @@ Drop the keystore file here: `apolloschurchapp/android/app/apollos.keystore`
 
 **_NOTE:_** You may also want to save this keystore and credentials somewhere safe outside this repo, it's the only keystore you can ever use for this app and if you lose it, it's very difficult to get a new one.
 
-Now just load these environment variables in your local `.env` file and as Github secrets for the CI
+Now just load these environment variables in your `.env` and `.env.shared` files
 
 ```
 KEYSTORE_FILE=apollos.keystore
@@ -240,29 +236,45 @@ KEY_ALIAS=apollos
 KEY_PASSWORD=<alias password>
 ```
 
-Change the `package_name` variable in the `Appfile` to your new bundle ID. You can get this from your `android/app/build.gradle` file.
-
-You will need to upload the bundle manually the first time, Fastlane can't do it for you. Run the command to create a release build
+You will need to upload the bundle manually the first time. First set the Application ID to something unique in the `android/app/build.gradle` file:
 
 ```
-bundle exec fastlane gradle --task clean --project_dir android
-bundle exec fastlane gradle --task bundle --build_type Release --project_dir android
+    defaultConfig {
+        applicationId "com.company.appname"
+        ...
+        ...
+        ...
+    }
 ```
 
-Upload to the store on the internal track
+Run the fastlane command to generate a release build:
 
-![play store](https://files-rglw2353v.vercel.app)
+```
+fastlane run gradle task:bundle build_type:Release project_dir:android
+```
+
+You can find the bundle in `android/app/build/outputs/bundle/release/app-release.aab`. Upload the bundle to the **closed testing** track the first time. The app must have been "released" before we push anything to internal.
+
+![play store](https://files-6ngafis8q-redreceipt.vercel.app)
 
 Go through the steps to finish your first release.
 
-Now you're ready to test the deploy
+Lastly, to get automated deploys working on the CI, move the keystore variables to `.env.shared` and re-run the encryption command from a previous step, using the same token from the iOS steps above:
 
 ```
-bundle exec fastlane android deploy
+npx @apollosproject/apollos-cli secrets -e <TOKEN>
 ```
 
-Lastly, to get automated deploys working on the CI, re-run the encryption command from a previous step to add the new keystore and upload key to the repo
+Change the metadata information for the Android release:
 
-```
-yarn secrets -e <password>
-```
+- `fastlane/metadata/android/en-US/full_description.txt`
+- `fastlane/metadata/android/en-US/short_description.txt`
+- `fastlane/metadata/android/en-US/title.txt`
+
+Add new images and screenshots
+
+- `fastlane/metadata/android/en-US/images/phoneScreenshots/` (three images)
+- `fastlane/metadata/android/en-US/images/icon.png` (512 x 512 jpg)
+- `fastlane/metadata/android/en-US/images/featureGraphic.png` (1024 x 500 jpg)
+
+Now when you push to master, you should be all set for automatic deploys!
