@@ -10,7 +10,10 @@ import {
   Touchable,
 } from '@apollosproject/ui-kit';
 import { useApolloClient } from '@apollo/client';
-import { createFeatureFeedTab, UserAvatarConnected } from '@apollosproject/ui-connected';
+import {
+  createFeatureFeedTab,
+  UserAvatarConnected,
+} from '@apollosproject/ui-connected';
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
 import Connect from './connect';
 import tabBarIcon from './tabBarIcon';
@@ -48,14 +51,14 @@ const HeaderRight = () => {
   const navigation = useNavigation();
   return <SearchButton onPress={() => navigation.navigate('Search')} />;
 };
-const HeaderLeft = () => (
-  // const navigation = useNavigation();
-  <UserAvatarConnected
-    // onPressIcon={() => navigation.navigate('UserSettings')}
-    onPressIcon={() => null}
-    size={'s'}
-  />
-);
+const HeaderLeft = () => {
+  const navigation = useNavigation();
+  return (
+    <Touchable onPress={() => navigation.navigate('UserSettings')}>
+      <UserAvatarConnected size={'small'} />
+    </Touchable>
+  );
+};
 
 // we nest stack inside of tabs so we can use all the fancy native header features
 const HomeTab = createFeatureFeedTab({

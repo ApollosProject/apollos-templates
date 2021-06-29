@@ -56,6 +56,17 @@ const UserSettings = () => {
               <TableView>
                 <Touchable
                   onPress={() => {
+                    navigation.navigate('LikedContentFeedConnected');
+                  }}
+                >
+                  <Cell>
+                    <CellText>Likes</CellText>
+                    <CellIcon name="arrow-next" />
+                  </Cell>
+                </Touchable>
+                <Divider />
+                <Touchable
+                  onPress={() => {
                     navigation.navigate('PersonalDetails');
                   }}
                 >
