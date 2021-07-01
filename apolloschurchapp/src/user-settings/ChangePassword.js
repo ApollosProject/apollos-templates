@@ -11,7 +11,6 @@ import {
   PaddedView,
   FlexedView,
   styled,
-  ModalView,
 } from '@apollosproject/ui-kit';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -33,40 +32,38 @@ class ChangePassword extends PureComponent {
 
   renderForm = (props) => (
     <KeyboardAvoidingView behavior="padding">
-      <ModalView>
-        <FlexedView>
+      <FlexedView>
+        <PaddedView>
+          <TextInput
+            label="New Password"
+            type="password"
+            value={props.values.password}
+            error={props.touched.password && props.errors.password}
+            onChangeText={(text) => props.setFieldValue('password', text)}
+          />
+          <TextInput
+            label="Confirm Password"
+            type="password"
+            value={props.values.confirmPassword}
+            error={
+              props.touched.confirmPassword && props.errors.confirmPassword
+            }
+            onChangeText={(text) =>
+              props.setFieldValue('confirmPassword', text)
+            }
+          />
+        </PaddedView>
+        <Footer>
           <PaddedView>
-            <TextInput
-              label="New Password"
-              type="password"
-              value={props.values.password}
-              error={props.touched.password && props.errors.password}
-              onChangeText={(text) => props.setFieldValue('password', text)}
-            />
-            <TextInput
-              label="Confirm Password"
-              type="password"
-              value={props.values.confirmPassword}
-              error={
-                props.touched.confirmPassword && props.errors.confirmPassword
-              }
-              onChangeText={(text) =>
-                props.setFieldValue('confirmPassword', text)
-              }
+            <Button
+              disabled={props.isSubmitting}
+              onPress={props.handleSubmit}
+              title="Save"
+              loading={props.isSubmitting}
             />
           </PaddedView>
-          <Footer>
-            <PaddedView>
-              <Button
-                disabled={props.isSubmitting}
-                onPress={props.handleSubmit}
-                title="Save"
-                loading={props.isSubmitting}
-              />
-            </PaddedView>
-          </Footer>
-        </FlexedView>
-      </ModalView>
+        </Footer>
+      </FlexedView>
     </KeyboardAvoidingView>
   );
 

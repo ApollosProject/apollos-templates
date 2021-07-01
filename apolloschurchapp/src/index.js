@@ -27,18 +27,14 @@ import { Landing, Onboarding } from '@apollosproject/ui-onboarding';
 import {
   ContentFeedConnected,
   SearchScreenConnected,
-  LikedContentFeedConnected,
 } from '@apollosproject/ui-connected';
-import { NotificationSettingsConnected } from '@apollosproject/ui-notifications';
 import Providers from './Providers';
 import ContentSingle from './content-single';
 import Event from './event';
 import Tabs from './tabs';
 import customTheme, { customIcons } from './theme';
 
-import UserSettings from './user-settings';
-import PersonalDetails from './user-settings/PersonalDetails';
-import ChangePassword from './user-settings/ChangePassword';
+import UserSettingsNavigator from './user-settings';
 
 enableScreens(); // improves performance for react-navigation
 
@@ -145,15 +141,8 @@ const App = () => (
             <Screen name="LandingScreen" component={LandingToAuth} />
             <Screen name="Search" component={SearchScreenConnected} />
             <Screen
-              component={NotificationSettingsConnected}
-              name="Notifications"
-            />
-            <Screen component={UserSettings} name="UserSettings" />
-            <Screen name="PersonalDetails" component={PersonalDetails} />
-            <Screen name="ChangePassword" component={ChangePassword} />
-            <Screen
-              component={LikedContentFeedConnected}
-              name="LikedContentFeedConnected"
+              name="UserSettingsNavigator"
+              component={UserSettingsNavigator}
             />
           </Navigator>
         </Providers>

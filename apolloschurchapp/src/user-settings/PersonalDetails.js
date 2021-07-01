@@ -34,43 +34,41 @@ class PersonalDetails extends PureComponent {
   renderForm = (props) => (
     // have to add the offset to account for @react-navigation/native header
     <KeyboardAvoidingView behavior="padding">
-      <ModalView>
-        <FlexedView>
+      <FlexedView>
+        <PaddedView>
+          <TextInput
+            label="First Name"
+            type="text"
+            value={props.values.firstName}
+            error={props.touched.firstName && props.errors.firstName}
+            onChangeText={(text) => props.setFieldValue('firstName', text)}
+          />
+          <TextInput
+            label="Last Name"
+            type="text"
+            value={props.values.lastName}
+            error={props.touched.lastName && props.errors.lastName}
+            onChangeText={(text) => props.setFieldValue('lastName', text)}
+          />
+          <TextInput
+            label="Email"
+            type="email"
+            value={props.values.email}
+            error={props.touched.email && props.errors.email}
+            onChangeText={(text) => props.setFieldValue('email', text)}
+          />
+        </PaddedView>
+        <Footer>
           <PaddedView>
-            <TextInput
-              label="First Name"
-              type="text"
-              value={props.values.firstName}
-              error={props.touched.firstName && props.errors.firstName}
-              onChangeText={(text) => props.setFieldValue('firstName', text)}
-            />
-            <TextInput
-              label="Last Name"
-              type="text"
-              value={props.values.lastName}
-              error={props.touched.lastName && props.errors.lastName}
-              onChangeText={(text) => props.setFieldValue('lastName', text)}
-            />
-            <TextInput
-              label="Email"
-              type="email"
-              value={props.values.email}
-              error={props.touched.email && props.errors.email}
-              onChangeText={(text) => props.setFieldValue('email', text)}
+            <Button
+              disabled={!props.isValid || props.isSubmitting}
+              onPress={props.handleSubmit}
+              title="Save"
+              loading={props.isSubmitting}
             />
           </PaddedView>
-          <Footer>
-            <PaddedView>
-              <Button
-                disabled={!props.isValid || props.isSubmitting}
-                onPress={props.handleSubmit}
-                title="Save"
-                loading={props.isSubmitting}
-              />
-            </PaddedView>
-          </Footer>
-        </FlexedView>
-      </ModalView>
+        </Footer>
+      </FlexedView>
     </KeyboardAvoidingView>
   );
 
