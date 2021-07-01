@@ -12,7 +12,6 @@ import {
   FlexedView,
   Button,
   styled,
-  ModalView,
 } from '@apollosproject/ui-kit';
 
 import { GET_USER_PROFILE } from '@apollosproject/ui-connected';
