@@ -362,13 +362,13 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                                     onBlur={[Function]}
                                     onChangeText={[Function]}
                                     onFocus={[Function]}
-                                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                                    placeholderTextColor="rgba(39, 39, 46, 0.6)"
                                     rejectResponderTermination={true}
                                     returnKeyType="done"
                                     style={
                                       Array [
                                         Object {
-                                          "color": "#303030",
+                                          "color": "#27272E",
                                           "fontFamily": "InterUI-Bold",
                                           "fontSize": 14,
                                           "height": 38,
@@ -409,7 +409,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                                     style={
                                       Object {
                                         "backgroundColor": "transparent",
-                                        "color": "#505050",
+                                        "color": "rgba(39, 39, 46, 0.6)",
                                         "fontFamily": "InterUI-Medium",
                                         "fontSize": 14,
                                         "lineHeight": 21,
@@ -522,13 +522,13 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                                     onBlur={[Function]}
                                     onChangeText={[Function]}
                                     onFocus={[Function]}
-                                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                                    placeholderTextColor="rgba(39, 39, 46, 0.6)"
                                     rejectResponderTermination={true}
                                     returnKeyType="done"
                                     style={
                                       Array [
                                         Object {
-                                          "color": "#303030",
+                                          "color": "#27272E",
                                           "fontFamily": "InterUI-Bold",
                                           "fontSize": 14,
                                           "height": 38,
@@ -569,7 +569,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                                     style={
                                       Object {
                                         "backgroundColor": "transparent",
-                                        "color": "#505050",
+                                        "color": "rgba(39, 39, 46, 0.6)",
                                         "fontFamily": "InterUI-Medium",
                                         "fontSize": 14,
                                         "lineHeight": 21,
@@ -685,13 +685,13 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                                     onBlur={[Function]}
                                     onChangeText={[Function]}
                                     onFocus={[Function]}
-                                    placeholderTextColor="rgba(48, 48, 48, 0.6)"
+                                    placeholderTextColor="rgba(39, 39, 46, 0.6)"
                                     rejectResponderTermination={true}
                                     returnKeyType="done"
                                     style={
                                       Array [
                                         Object {
-                                          "color": "#303030",
+                                          "color": "#27272E",
                                           "fontFamily": "InterUI-Bold",
                                           "fontSize": 14,
                                           "height": 38,
@@ -732,7 +732,7 @@ exports[`PersonalDetails component renders PersonalDetails when logged in 1`] = 
                                     style={
                                       Object {
                                         "backgroundColor": "transparent",
-                                        "color": "#505050",
+                                        "color": "rgba(39, 39, 46, 0.6)",
                                         "fontFamily": "InterUI-Medium",
                                         "fontSize": 14,
                                         "lineHeight": 21,
