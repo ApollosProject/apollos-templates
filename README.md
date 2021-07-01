@@ -278,3 +278,9 @@ Add new images and screenshots
 - `fastlane/metadata/android/en-US/images/featureGraphic.png` (1024 x 500 jpg)
 
 Now when you push to master, you should be all set for automatic deploys!
+
+### What's next?
+
+You are ready to continue working through the other `.md` files.
+
+Start with [Redis](./REDIS.md), [Bull](./BULL.md), then [Algolia](./ALGOLIA.md). These three depend on each other. After that, work through the `.md` files in any order you wish.
