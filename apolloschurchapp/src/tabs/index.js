@@ -52,15 +52,11 @@ const HeaderRight = () => {
   return <SearchButton onPress={() => navigation.navigate('Search')} />;
 };
 
-const SmallAvatar = withTheme(({ theme }) => ({
-  // size: theme.sizing.baseUnit,
-}))(UserAvatarConnected);
-
 const HeaderLeft = () => {
   const navigation = useNavigation();
   return (
     <Touchable onPress={() => navigation.navigate('UserSettingsNavigator')}>
-      <SmallAvatar />
+      <UserAvatarConnected />
     </Touchable>
   );
 };
