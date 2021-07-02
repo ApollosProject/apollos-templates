@@ -55,7 +55,7 @@ heroku create APP_NAME [-t OPTIONAL_TEAM]
 Add your config variables to the remote application
 
 ```
-heroku config:set ROCK_API=<url> ROCK_TOKEN=<token>
+heroku config:set ROCK_URL=<url> ROCK_TOKEN=<token>
 ```
 
 We deploy through the Github workflow. You need to set three new [Github secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) in your new repository. First [Install the Github CLI](https://cli.github.com)
