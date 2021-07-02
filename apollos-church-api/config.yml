@@ -94,7 +94,6 @@ ROCK_MAPPINGS:
 TABS:
   HOME:
     - type: ActionBar
-      title: Welcome to Apollos
       actions:
         [
           {
@@ -149,6 +148,21 @@ TABS:
             channelIds:
               - 13
         - type: UPCOMING_EVENTS
+    - type: ActionTable
+      title: Legal Stuff
+      actions:
+        [
+          {
+            title: Privacy
+            action: OPEN_URL,
+            relatedNode: { __typename: Url, url: 'https://www.google.com' },
+          },
+          {
+            title: Terms
+            action: OPEN_URL,
+            relatedNode: { __typename: Url, url: 'https://www.google.com' },
+          },
+        ]
 
   READ:
     - algorithms:
