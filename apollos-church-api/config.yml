@@ -153,12 +153,12 @@ TABS:
       actions:
         [
           {
-            title: Privacy
+            title: Privacy,
             action: OPEN_URL,
             relatedNode: { __typename: Url, url: 'https://www.google.com' },
           },
           {
-            title: Terms
+            title: Terms,
             action: OPEN_URL,
             relatedNode: { __typename: Url, url: 'https://www.google.com' },
           },
