@@ -71,17 +71,6 @@ const ActionTable = () => {
               </Cell>
             </Touchable>
           </TableView>
-          <TableView>
-            <Touchable
-              onPress={() => navigation.navigate('TestingControlPanel')}
-            >
-              <Cell>
-                <CellIcon name="settings" />
-                <CellText>Open Testing Panel</CellText>
-                <CellIcon name="arrow-next" />
-              </Cell>
-            </Touchable>
-          </TableView>
         </View>
       )}
     </RockAuthedWebBrowser>
