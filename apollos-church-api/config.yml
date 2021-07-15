@@ -58,38 +58,9 @@ BIBLE_API:
 CLOUDINARY:
   URL: ${CLOUDINARY_URL}
 
-# This key holds various properties that allow our GraphQL server to map to your Rock Instance
-ROCK_MAPPINGS:
-  CONTENT_ITEM:
-    ContentSeriesContentItem:
-      # When resolving "ContentSeriesContentItem" look in rock for a "ContentChannelItem"
-      EntityType: ContentChannelItem
-      # Used to define the subset of content channels types that use this specific type.
-      ContentChannelTypeId: [6]
-    DevotionalContentItem:
-      EntityType: ContentChannelItem
-      ContentChannelId: [7]
-    MediaContentItem:
-      EntityType: ContentChannelItem
-    UniversalContentItem:
-      EntityType: ContentChannelItem
-    WeekendContentItem:
-      ContentChannelId: [5]
-      EntityType: ContentChannelItem
-    ContentItem:
-      EntityType: ContentChannelItem
+CONTENT:
+  SERMON_CHANNEL_ID: cbc0994a-97f1-471a-a7d5-4eff59d8a389
 
-  DATAVIEW_CATEGORIES:
-    # Id of the category used to store all persona dataviews
-    PersonaId: 210
-
-  ALL_CONTENT_CHANNELS:
-    - 3
-    - 5
-    - 6
-    - 8
-
-  SERMON_CHANNEL_ID: 5
 
 TABS:
   HOME:
@@ -108,7 +79,7 @@ TABS:
       - type: CONTENT_FEED
         arguments:
           channelIds:
-            - 6
+            - a2e29b57-3697-416f-a9e4-355fd00dfbd1
       type: HeroList
       primaryAction:
         # Right now, you hardcode exactly what GraphQL should return.
@@ -117,7 +88,7 @@ TABS:
         title: 'Read More'
         relatedNode:
           __typename: UniversalContentItem
-          id: 21
+          id: a32b6019-e817-4b6e-904e-e002e2014485
     - algorithms: [DAILY_PRAYER]
       isCard: false
       type: PrayerList
@@ -125,7 +96,7 @@ TABS:
     - algorithms:
         - type: CAMPAIGN_ITEMS
           channelIds:
-            - 9
+            - 0a269d99-2e1a-4fd3-aedf-7e0abc10e948
       type: HeroList
       isFeatured: true
       subtitle: Featured
@@ -133,7 +104,7 @@ TABS:
       algorithms: [SERMON_CHILDREN, PERSONA_FEED]
       subtitle: Explore what God calls you to today
       type: ActionList
-    - algorithms: [PERSONA_FEED]
+    - algorithms: [SERIES_IN_PROGRESS]
       subtitle: Continue
       type: HorizontalCardList
     - title: RECOMMENDED
@@ -155,7 +126,7 @@ TABS:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - 7
+              - faa5bd29-7446-4d55-b6b3-f0511d831b8f
             limit: 3
       type: HorizontalCardList
       subtitle: Devotionals
@@ -164,14 +135,14 @@ TABS:
         title: 'Read More'
         relatedNode:
           __typename: ContentChannel
-          id: 7
+          id: faa5bd29-7446-4d55-b6b3-f0511d831b8f
           name: Devotionals
 
   WATCH:
     - algorithms:
         - type: LATEST_SERIES_CHILDREN
           arguments:
-            channelId: 4
+            channelId: 41fd706b-ab55-446c-a3a0-e16663146c99
       type: HeroList
       title: Catch up
       subtitle: Latest Series
@@ -179,14 +150,14 @@ TABS:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - 4
+              - 41fd706b-ab55-446c-a3a0-e16663146c99
       type: VerticalCardList
       subtitle: All series
     - algorithms:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - 3
+              - a2e29b57-3697-416f-a9e4-355fd00dfbd1
             limit: 3
       type: HorizontalCardList
       subtitle: Sermons
@@ -194,7 +165,7 @@ TABS:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - 5
+              - cbc0994a-97f1-471a-a7d5-4eff59d8a389
             limit: 3
       type: HorizontalCardList
       subtitle: Podcasts
@@ -203,13 +174,13 @@ TABS:
         title: 'Read More'
         relatedNode:
           __typename: ContentChannel
-          id: 5
+          id: cbc0994a-97f1-471a-a7d5-4eff59d8a389
           name: Podcasts
     - algorithms:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - 6
+              - 0a269d99-2e1a-4fd3-aedf-7e0abc10e948
             limit: 3
       type: HorizontalCardList
       title: Videos
@@ -218,13 +189,13 @@ TABS:
         title: 'Read More'
         relatedNode:
           __typename: ContentChannel
-          id: 6
+          id: 0a269d99-2e1a-4fd3-aedf-7e0abc10e948
           name: Videos
     - algorithms:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - 8
+              - a980918d-4b1c-46b5-a960-39864428eb84
             limit: 3
       type: HorizontalCardList
       subtitle: Something Else
