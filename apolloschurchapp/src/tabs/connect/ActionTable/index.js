@@ -1,6 +1,5 @@
 import React from 'react';
 import { View } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
 
 import {
   TableView,
@@ -26,56 +25,47 @@ const Name = styled({
   flexGrow: 1,
 })(View);
 
-const ActionTable = () => {
-  const navigation = useNavigation();
-  return (
-    <RockAuthedWebBrowser>
-      {(openUrl) => (
-        <View>
-          <RowHeader>
-            <Name>
-              <H4>{'Connect with Apollos'}</H4>
-            </Name>
-          </RowHeader>
-          <TableView>
-            <Touchable
-              onPress={() =>
-                openUrl('https://apollosrock.newspring.cc/page/235')
-              }
-            >
-              <Cell>
-                <CellText>Find a serving opportunity</CellText>
-                <CellIcon name="arrow-next" />
-              </Cell>
-            </Touchable>
-            <Divider />
-            <Touchable
-              onPress={() =>
-                openUrl('https://apollosrock.newspring.cc/page/236')
-              }
-            >
-              <Cell>
-                <CellText>Join a small group</CellText>
-                <CellIcon name="arrow-next" />
-              </Cell>
-            </Touchable>
-            <Divider />
-            <Touchable
-              onPress={() =>
-                openUrl('https://apollosrock.newspring.cc/page/233')
-              }
-            >
-              <Cell>
-                <CellText>I need prayer</CellText>
-                <CellIcon name="arrow-next" />
-              </Cell>
-            </Touchable>
-          </TableView>
-        </View>
-      )}
-    </RockAuthedWebBrowser>
-  );
-};
+const ActionTable = () => (
+  <RockAuthedWebBrowser>
+    {(openUrl) => (
+      <View>
+        <RowHeader>
+          <Name>
+            <H4>{'Connect with Apollos'}</H4>
+          </Name>
+        </RowHeader>
+        <TableView>
+          <Touchable
+            onPress={() => openUrl('https://apollosrock.newspring.cc/page/235')}
+          >
+            <Cell>
+              <CellText>Find a serving opportunity</CellText>
+              <CellIcon name="arrow-next" />
+            </Cell>
+          </Touchable>
+          <Divider />
+          <Touchable
+            onPress={() => openUrl('https://apollosrock.newspring.cc/page/236')}
+          >
+            <Cell>
+              <CellText>Join a small group</CellText>
+              <CellIcon name="arrow-next" />
+            </Cell>
+          </Touchable>
+          <Divider />
+          <Touchable
+            onPress={() => openUrl('https://apollosrock.newspring.cc/page/233')}
+          >
+            <Cell>
+              <CellText>I need prayer</CellText>
+              <CellIcon name="arrow-next" />
+            </Cell>
+          </Touchable>
+        </TableView>
+      </View>
+    )}
+  </RockAuthedWebBrowser>
+);
 
 const StyledActionTable = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 100,
