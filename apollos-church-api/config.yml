@@ -60,6 +60,13 @@ CLOUDINARY:
 
 CONTENT:
   SERMON_CHANNEL_ID: cbc0994a-97f1-471a-a7d5-4eff59d8a389
+  TYPES:
+    - ContentSeriesContentItem
+    - DevotionalContentItem
+    - MediaContentItem
+    - UniversalContentItem
+    - WeekendContentItem
+    - ContentItem
 
 
 TABS:

@@ -17,7 +17,6 @@ import {
   Followings,
   Interactions,
   RockConstants,
-  ContentChannel,
   Sharable,
   Auth,
   PersonalDevice,
@@ -47,7 +46,7 @@ import {
   Tag,
   ContentItem,
   ContentItemsConnection,
-  ContentItemCategory,
+  ContentItemCategory as ContentChannel,
   ActionAlgorithm,
 } from '@apollosproject/data-connector-postgres';
 
@@ -55,12 +54,16 @@ import * as Theme from './theme';
 
 // This modules ties together certain updates so they occurs in both Rock and Postgres.
 // Will be eliminated in the future through an enhancement to the Shovel
-import { Person, OneSignal } from './rockWithPostgres';
+import {
+  Person,
+  OneSignal,
+  Followings as FollowingsPostgresBridge,
+} from './rockWithPostgres';
 
 const data = {
   Interfaces,
   Followings,
-  ContentChannel,
+  FollowingsPostgresBridge,
   FeatureFeed,
   ActionAlgorithm,
   RockPerson, // This entry needs to come before (postgres) Person
@@ -71,7 +74,7 @@ const data = {
   Tag,
   ContentItem,
   ContentItemsConnection,
-  ContentItemCategory,
+  ContentChannel,
   Cloudinary,
   Auth,
   AuthSms,
@@ -89,6 +92,7 @@ const data = {
   Template,
   Campus,
   Group,
+  // ActionAlgorithm,
   Event,
   Cache,
   PrayerRequest,
