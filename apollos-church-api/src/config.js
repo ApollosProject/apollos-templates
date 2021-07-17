@@ -3,13 +3,9 @@ import fetch from 'node-fetch';
 import dotenv from "dotenv/config"; // eslint-disable-line
 import ApollosConfig from '@apollosproject/config';
 
+// load in tab features
 ApollosConfig.loadYaml({
   configPath: path.join(__dirname, '..', 'config.yml'),
-});
-
-// defaults
-ApollosConfig.loadJs({
-  ROCK: { TIMEZONE: ApollosConfig?.ROCK?.TIMEZONE || 'America/New_York' },
 });
 
 // autodetect some settings
