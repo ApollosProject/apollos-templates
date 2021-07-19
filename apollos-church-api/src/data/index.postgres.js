@@ -28,7 +28,6 @@ import {
   FeatureFeed,
   Event,
   PrayerRequest,
-  Persona,
   Person as RockPerson,
 } from '@apollosproject/data-connector-rock';
 
@@ -63,7 +62,7 @@ import {
 const data = {
   Interfaces,
   Followings,
-  FollowingsPostgresBridge,
+  FollowingsPostgresBridge, // This entry needs to come after Followings.
   FeatureFeed,
   ActionAlgorithm,
   RockPerson, // This entry needs to come before (postgres) Person
@@ -101,7 +100,6 @@ const data = {
   UserFlag,
   Follow,
   PostgresCampus,
-  Persona,
   Notification,
   NotificationPreference,
   OneSignal,
