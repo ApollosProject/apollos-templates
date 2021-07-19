@@ -56,4 +56,6 @@ Moving forward, typenames are pre-determined for content items. The API no longe
 
 Once you have the shovel up and running, you'll want to connect to it via your favorite postgres client. Inside your `config.yml`, you'll want to replace references to the Rock integer IDS with the new Postgres UUIDs. This is easily done, by cross referencing the Integer IDs with the Postgres Database, and then copying in the appropriate UUIDS. You'll find the "ContentChannelItems" in the "contentChannel" table, and the "ContentChannel"s in the "ContentItemsCategory" table. 
 
+When using `relatedNodes`, you will want to use the apollosId field instead of the `id` field.
+
 
