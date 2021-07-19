@@ -86,7 +86,8 @@ TABS:
       - type: CONTENT_FEED
         arguments:
           channelIds:
-            - a2e29b57-3697-416f-a9e4-355fd00dfbd1
+            - c7f43eb9-2200-4267-ab28-871e0d5e785f
+            - 3dfe7149-136b-4134-bd91-fdd935ef2221
       type: HeroList
       primaryAction:
         # Right now, you hardcode exactly what GraphQL should return.
@@ -95,7 +96,7 @@ TABS:
         title: 'Read More'
         relatedNode:
           __typename: UniversalContentItem
-          id: a32b6019-e817-4b6e-904e-e002e2014485
+          id: a2c42d1d-98c8-46fb-aeea-603bc569cf7d
     - algorithms: [DAILY_PRAYER]
       isCard: false
       type: PrayerList
@@ -103,7 +104,7 @@ TABS:
     - algorithms:
         - type: CAMPAIGN_ITEMS
           channelIds:
-            - 0a269d99-2e1a-4fd3-aedf-7e0abc10e948
+            - 4b23ebc9-248e-4092-99f9-8829e1b6f1cc
       type: HeroList
       isFeatured: true
       subtitle: Featured
@@ -133,7 +134,22 @@ TABS:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - faa5bd29-7446-4d55-b6b3-f0511d831b8f
+              - c7f43eb9-2200-4267-ab28-871e0d5e785f
+            limit: 3
+      type: HorizontalCardList
+      subtitle: Podcast Messages
+      primaryAction:
+        action: OPEN_CHANNEL
+        title: 'Read More'
+        relatedNode:
+          __typename: ContentChannel
+          apollosId: ContentChannel:f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
+          title: Podcast Messages
+    - algorithms:
+        - type: CONTENT_FEED
+          arguments:
+            channelIds:
+              - d9da719f-84ef-4cf0-9875-22fea4bf09eb
             limit: 3
       type: HorizontalCardList
       subtitle: Devotionals
@@ -142,14 +158,14 @@ TABS:
         title: 'Read More'
         relatedNode:
           __typename: ContentChannel
-          id: faa5bd29-7446-4d55-b6b3-f0511d831b8f
-          name: Devotionals
+          apollosId: ContentChannel:d9da719f-84ef-4cf0-9875-22fea4bf09eb
+          title: Devotionals
 
   WATCH:
     - algorithms:
         - type: LATEST_SERIES_CHILDREN
           arguments:
-            channelId: 41fd706b-ab55-446c-a3a0-e16663146c99
+            channelId: 8f0a93f5-ccec-4cc1-8fd8-06afe5982f7b
       type: HeroList
       title: Catch up
       subtitle: Latest Series
@@ -157,14 +173,14 @@ TABS:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - 41fd706b-ab55-446c-a3a0-e16663146c99
+              - f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
       type: VerticalCardList
       subtitle: All series
     - algorithms:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - a2e29b57-3697-416f-a9e4-355fd00dfbd1
+              - 8f0a93f5-ccec-4cc1-8fd8-06afe5982f7b
             limit: 3
       type: HorizontalCardList
       subtitle: Sermons
@@ -172,7 +188,7 @@ TABS:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - cbc0994a-97f1-471a-a7d5-4eff59d8a389
+              - f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
             limit: 3
       type: HorizontalCardList
       subtitle: Podcasts
@@ -181,13 +197,13 @@ TABS:
         title: 'Read More'
         relatedNode:
           __typename: ContentChannel
-          id: cbc0994a-97f1-471a-a7d5-4eff59d8a389
-          name: Podcasts
+          apollosId: ContentChannel:f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
+          title: Podcasts
     - algorithms:
         - type: CONTENT_FEED
           arguments:
             channelIds:
-              - 0a269d99-2e1a-4fd3-aedf-7e0abc10e948
+              - f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
             limit: 3
       type: HorizontalCardList
       title: Videos
@@ -196,16 +212,8 @@ TABS:
         title: 'Read More'
         relatedNode:
           __typename: ContentChannel
-          id: 0a269d99-2e1a-4fd3-aedf-7e0abc10e948
-          name: Videos
-    - algorithms:
-        - type: CONTENT_FEED
-          arguments:
-            channelIds:
-              - a980918d-4b1c-46b5-a960-39864428eb84
-            limit: 3
-      type: HorizontalCardList
-      subtitle: Something Else
+          apollosId: ContentChannel:f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
+          title: Videos
 
   PRAY:
     - algorithms: [DAILY_PRAYER]
