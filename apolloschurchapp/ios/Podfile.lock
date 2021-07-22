@@ -61,7 +61,7 @@ PODS:
     - FlipperKit/FlipperKitNetworkPlugin
   - glog (0.3.5)
   - libevent (2.1.12)
-  - OneSignal (2.15.2)
+  - OneSignal (3.4.3)
   - OpenSSL-Universal (1.1.180)
   - Permission-Notifications (2.2.2):
     - RNPermissions
@@ -260,7 +260,7 @@ PODS:
     - React-jsi (= 0.64.2)
     - React-perflogger (= 0.64.2)
   - React-jsinspector (0.64.2)
-  - react-native-apollos-player (2.21.0):
+  - react-native-apollos-player (2.27.2):
     - React
   - react-native-config (0.11.7):
     - React
@@ -272,10 +272,10 @@ PODS:
     - React-Core
   - react-native-maps (0.27.1):
     - React
-  - react-native-music-control (0.10.8):
-    - React
-  - react-native-onesignal (3.9.1):
-    - OneSignal (= 2.15.2)
+  - react-native-music-control (1.4.0):
+    - React-Core
+  - react-native-onesignal (4.0.8):
+    - OneSignal (= 3.4.3)
     - React (< 1.0.0, >= 0.13.0)
   - react-native-passkit-wallet (0.1.4):
     - React
@@ -441,6 +441,7 @@ DEPENDENCIES:
   - FlipperKit/FlipperKitUserDefaultsPlugin (= 0.75.1)
   - FlipperKit/SKIOSNetworkPlugin (= 0.75.1)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - OneSignal (< 4.0, >= 3.0)
   - Permission-Notifications (from `../node_modules/react-native-permissions/ios/Notifications.podspec`)
   - Permission-PhotoLibrary (from `../node_modules/react-native-permissions/ios/PhotoLibrary.podspec`)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
@@ -652,7 +653,7 @@ SPEC CHECKSUMS:
   FlipperKit: 8a20b5c5fcf9436cac58551dc049867247f64b00
   glog: 73c2498ac6884b13ede40eda8228cb1eee9d9d62
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
-  OneSignal: 9531e385388565f4d31797ddadbe0fcc786430ec
+  OneSignal: e4dfb1912410f302dc9661ce98fc829f6c18ff6a
   OpenSSL-Universal: 1aa4f6a6ee7256b83db99ec1ccdaa80d10f9af9b
   Permission-Notifications: 9c6b5cc4f0e6599e9fc3395b77cebddc48f1be41
   Permission-PhotoLibrary: 8227a6ed9f6a971537afe63742d54f5f23a38fe2
@@ -667,14 +668,14 @@ SPEC CHECKSUMS:
   React-jsi: 67747b9722f6dab2ffe15b011bcf6b3f2c3f1427
   React-jsiexecutor: 80c46bd381fd06e418e0d4f53672dc1d1945c4c3
   React-jsinspector: cc614ec18a9ca96fd275100c16d74d62ee11f0ae
-  react-native-apollos-player: 61af1c30ce4b521e38be01d2334a4dad1408ef78
+  react-native-apollos-player: 14ddc69f09fbb367ed798c21e7cab7f42fa8b44d
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-geolocation-service: f33626f1ae12381ca2ae60f98b2f5edd676bf95a
   react-native-image-picker: 28d8d1f5a643119876b8b2c7d4d1dcfb2b232dd4
   react-native-maps: f4b89da81626ad7f151a8bfcb79733295d31ce5c
-  react-native-music-control: dcfe5b61e56a15898c4618579cb8ce612c9d21a8
-  react-native-onesignal: ad2eaab1517951e50d19fa3eccd16d3048167181
+  react-native-music-control: 93b521377efdf2e49b46ccade8457f9503359b38
+  react-native-onesignal: 50b047c674b79ba700218338fdefb45220da4db5
   react-native-passkit-wallet: 51e3babdaeec4c10b5736786ebd1bfb470fcaa36
   react-native-safari-view: 955d7160d159241b8e9395d12d10ea0ef863dcdd
   react-native-safe-area-context: ef6f16c66b0797ecae1bf86c103dfb3dc16fc33d
@@ -710,6 +711,6 @@ SPEC CHECKSUMS:
   Yoga: 575c581c63e0d35c9a83f4b46d01d63abc1100ac
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 7c1cc92bf8a221a3c1fa8fb092c461c7bcf8e4d8
+PODFILE CHECKSUM: f16a1b76b786ae6104c99d682d91f693f9b7fca0
 
 COCOAPODS: 1.10.1

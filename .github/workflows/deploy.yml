@@ -58,12 +58,14 @@ jobs:
 
     - name: Setup Node
       uses: actions/setup-node@v2
+      with:
+        node-version: 12
 
     - name: Install Bundler
       run: gem install bundler
 
     - name: Decrypt Environment Variables and Apple API Key
-      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
+      run: (npx @apollosproject/apollos-cli secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
 
     - run: cp .env.shared .env
 
@@ -96,12 +98,14 @@ jobs:
 
     - name: Setup Node
       uses: actions/setup-node@v2
+      with:
+        node-version: 12
 
     - name: Install Bundler
       run: gem install bundler
 
     - name: Decrypt Environment Variables and Keystore
-      run: (cd .. && yarn secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
+      run: (npx @apollosproject/apollos-cli secrets -d ${{ secrets.ENCRYPTION_PASSWORD }})
 
     - run: cp .env.shared .env
 
@@ -119,8 +123,3 @@ jobs:
 
     - name: Fastlane Deploy
       run: bundle exec fastlane android deploy
-      env:
-        KEYSTORE_FILE: apollos.keystore
-        KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
-        KEY_ALIAS: apollos
-        KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
