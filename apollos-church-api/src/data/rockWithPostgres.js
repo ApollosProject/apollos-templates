@@ -133,3 +133,92 @@ export const OneSignal = {
   ...OneSignalOriginal,
   dataSource: oneSignalDataSource,
 };
+
+const defaultContentItemResolvers = {
+  likedCount: (root, args, { dataSources }) =>
+    console.log(root, root.apollosId, root.originId) ||
+    dataSources.Followings.getFollowingsCountByNodeId({
+      nodeId: root.apollosId,
+      originId: root.originId,
+    }),
+
+  isLiked: async (root, args, { dataSources }) =>
+    dataSources.Followings.getIsLikedForCurrentUserAndNode({
+      nodeId: root.apollosId,
+      originId: root.originId,
+      isLiked: null,
+    }),
+};
+
+const followingsResolvers = {
+  Mutation: {
+    updateLikeEntity: async (
+      root,
+      { input: { nodeId, operation } },
+      { dataSources },
+      resolveInfo
+    ) => {
+      const { originId } = await dataSources.ContentItem.getFromId(
+        nodeId.split(':')[1]
+      );
+      return dataSources.Followings.updateLikeContentItem({
+        nodeId,
+        originId,
+        operation,
+        resolveInfo,
+      });
+    },
+    updateLikeNode: async (
+      root,
+      { input: { nodeId, operation } },
+      { dataSources },
+      resolveInfo
+    ) => {
+      const { originId } = await dataSources.ContentItem.getFromId(
+        nodeId.split(':')[1]
+      );
+      return dataSources.Followings.updateLikeNode({
+        nodeId,
+        originId,
+        operation,
+        resolveInfo,
+      });
+    },
+  },
+  Query: {
+    likedContent: async (root, { after, first }, { dataSources }) => {
+      const followingsPaginated = await dataSources.Followings.paginatedGetFollowingsForCurrentUser(
+        { type: 'ContentItem', after, first }
+      );
+
+      const followings = await followingsPaginated.edges;
+      const ids = followings.map((f) => f.node.entityId);
+      const contentItems = await dataSources.ContentItem.getFromOriginIds(ids);
+      const contentItemEdges = contentItems.map((contentItem) => ({
+        node: contentItem,
+        following: followings.find(
+          (f) => String(f.node.entityId) === contentItem.originId
+        ).node,
+        cursor: followings.find(
+          (f) => String(f.node.entityId) === contentItem.originId
+        ).cursor,
+      }));
+      const sortedContentItemEdges = contentItemEdges.sort(
+        (a, b) =>
+          new Date(a.following.createdDateTime) <
+          new Date(b.following.createdDateTime)
+      );
+
+      return { edges: sortedContentItemEdges };
+    },
+  },
+  UniversalContentItem: defaultContentItemResolvers,
+  DevotionalContentItem: defaultContentItemResolvers,
+  ContentSeriesContentItem: defaultContentItemResolvers,
+  WeekendContentItem: defaultContentItemResolvers,
+  MediaContentItem: defaultContentItemResolvers,
+};
+
+export const Followings = {
+  resolver: followingsResolvers,
+};
