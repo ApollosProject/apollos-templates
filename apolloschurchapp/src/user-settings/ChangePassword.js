@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {
   Platform,
@@ -6,9 +6,9 @@ import {
   StyleSheet,
   StatusBar,
 } from 'react-native';
-import { Mutation } from '@apollo/client/react/components';
-import { Header } from '@react-navigation/stack';
-import { Formik } from 'formik';
+import {Mutation} from '@apollo/client/react/components';
+import {Header} from '@react-navigation/stack';
+import {Formik} from 'formik';
 import * as Yup from 'yup';
 
 import {
@@ -19,7 +19,7 @@ import {
   styled,
 } from '@apollosproject/ui-kit';
 
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import GET_AUTH_TOKEN from '../store/getAuthToken';
 import CHANGE_PASSWORD from './passwordChange';
 
@@ -28,7 +28,7 @@ const Footer = styled({
   justifyContent: 'flex-end',
 })(SafeAreaView);
 
-const StyledKeyboardAvoidingView = styled(({ theme }) => ({
+const StyledKeyboardAvoidingView = styled(({theme}) => ({
   ...StyleSheet.absoluteFill,
   backgroundColor: theme.colors.background.paper,
 }))(KeyboardAvoidingView);
@@ -41,14 +41,13 @@ class ChangePassword extends PureComponent {
     }),
   };
 
-  renderForm = (props) => (
+  renderForm = props => (
     <StyledKeyboardAvoidingView
       behavior={'padding'}
       keyboardVerticalOffset={
         Header.HEIGHT +
         (Platform.OS === 'android' ? StatusBar.currentHeight : 0)
-      }
-    >
+      }>
       <FlexedView>
         <PaddedView>
           <TextInput
@@ -56,7 +55,7 @@ class ChangePassword extends PureComponent {
             type="password"
             value={props.values.password}
             error={props.touched.password && props.errors.password}
-            onChangeText={(text) => props.setFieldValue('password', text)}
+            onChangeText={text => props.setFieldValue('password', text)}
           />
           <TextInput
             label="Confirm Password"
@@ -65,9 +64,7 @@ class ChangePassword extends PureComponent {
             error={
               props.touched.confirmPassword && props.errors.confirmPassword
             }
-            onChangeText={(text) =>
-              props.setFieldValue('confirmPassword', text)
-            }
+            onChangeText={text => props.setFieldValue('confirmPassword', text)}
           />
         </PaddedView>
         <Footer>
@@ -88,18 +85,17 @@ class ChangePassword extends PureComponent {
     return (
       <Mutation
         mutation={CHANGE_PASSWORD}
-        update={async (cache, { data: { token } }) => {
+        update={async (cache, {data: {token}}) => {
           await cache.writeQuery({
             query: GET_AUTH_TOKEN,
-            data: { authToken: token },
+            data: {authToken: token},
           });
 
           await cache.writeData({
-            data: { authToken: token },
+            data: {authToken: token},
           });
-        }}
-      >
-        {(updatePassword) => (
+        }}>
+        {updatePassword => (
           <Formik
             validationSchema={Yup.object().shape({
               password: Yup.string()
@@ -110,23 +106,22 @@ class ChangePassword extends PureComponent {
                 .oneOf([Yup.ref('password')], 'Passwords must match.')
                 .required('Password confirm is required'),
             })}
-            onSubmit={async (variables, { setSubmitting, setFieldError }) => {
+            onSubmit={async (variables, {setSubmitting, setFieldError}) => {
               try {
-                await updatePassword({ variables });
+                await updatePassword({variables});
 
                 await this.props.navigation.goBack();
               } catch (e) {
-                const { graphQLErrors } = e;
+                const {graphQLErrors} = e;
                 if (graphQLErrors.length) {
                   setFieldError(
                     'confirmPassword',
-                    'Unknown error. Please try again later.'
+                    'Unknown error. Please try again later.',
                   );
                 }
               }
               setSubmitting(false);
-            }}
-          >
+            }}>
             {this.renderForm}
           </Formik>
         )}

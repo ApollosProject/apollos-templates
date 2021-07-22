@@ -1,7 +1,7 @@
 import React from 'react';
-import { Paragraph, BodyText } from '@apollosproject/ui-kit';
+import {Paragraph, BodyText} from '@apollosproject/ui-kit';
 
-import { Slide, SlideContent } from '@apollosproject/ui-onboarding';
+import {Slide, SlideContent} from '@apollosproject/ui-onboarding';
 
 const Intro = () => (
   <Slide>

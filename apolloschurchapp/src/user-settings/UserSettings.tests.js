@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { GET_LOGIN_STATE } from '@apollosproject/ui-auth';
+import {GET_LOGIN_STATE} from '@apollosproject/ui-auth';
 import {
   renderWithApolloData,
   Providers,
   WithReactNavigator,
 } from '@apollosproject/ui-test-utils';
-import { gql } from '@apollo/client';
-import { MockedProvider } from '@apollo/client/testing';
-import { InMemoryCache } from '@apollo/client/cache';
+import {gql} from '@apollo/client';
+import {MockedProvider} from '@apollo/client/testing';
+import {InMemoryCache} from '@apollo/client/cache';
 
 import UserSettings from '.';
 
@@ -36,14 +36,14 @@ describe('UserSettings component', () => {
     const cache = new InMemoryCache();
     cache.writeQuery({
       query: GET_LOGIN_STATE,
-      data: { isLoggedIn: true },
+      data: {isLoggedIn: true},
     });
     const tree = await renderWithApolloData(
       WithReactNavigator(
         <Providers cache={cache} MockedProvider={MockedProvider} mocks={[mock]}>
           <UserSettings />
-        </Providers>
-      )
+        </Providers>,
+      ),
     );
     expect(tree).toMatchSnapshot();
   });

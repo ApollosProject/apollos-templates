@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 
-import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import {Providers, renderWithApolloData} from '@apollosproject/ui-test-utils';
 
 import Event from './Event';
 
@@ -20,10 +20,10 @@ describe('The Event component', () => {
               .utc()
               .toJSON(),
             location: 'Willow Creek, Chicago',
-            image: { sources: [{ url: 'https://url.com/image.jpg' }] },
+            image: {sources: [{url: 'https://url.com/image.jpg'}]},
           }}
         />
-      </Providers>
+      </Providers>,
     );
     expect(tree).toMatchSnapshot();
   });

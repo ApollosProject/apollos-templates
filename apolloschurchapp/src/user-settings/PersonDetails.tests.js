@@ -1,7 +1,7 @@
 import React from 'react';
-import { MockedProvider } from '@apollo/client/testing';
-import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
-import { GET_USER_PROFILE } from '@apollosproject/ui-connected';
+import {MockedProvider} from '@apollo/client/testing';
+import {Providers, renderWithApolloData} from '@apollosproject/ui-test-utils';
+import {GET_USER_PROFILE} from '@apollosproject/ui-connected';
 
 import PersonalDetails from './PersonalDetails';
 
@@ -39,7 +39,7 @@ describe('PersonalDetails component', () => {
     const tree = await renderWithApolloData(
       <Providers MockedProvider={MockedProvider} mocks={[mock]}>
         <PersonalDetails navigation={navigation} />
-      </Providers>
+      </Providers>,
     );
 
     expect(tree).toMatchSnapshot();

@@ -1,1 +1,1 @@
-module.exports = { NotificationsProvider: ({ children }) => children };
+module.exports = {NotificationsProvider: ({children}) => children};

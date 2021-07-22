@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import {View} from 'react-native';
 
 import {
   TableView,
@@ -12,9 +12,9 @@ import {
   PaddedView,
   H4,
 } from '@apollosproject/ui-kit';
-import { RockAuthedWebBrowser } from '@apollosproject/ui-connected';
+import {RockAuthedWebBrowser} from '@apollosproject/ui-connected';
 
-const RowHeader = styled(({ theme }) => ({
+const RowHeader = styled(({theme}) => ({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
@@ -27,7 +27,7 @@ const Name = styled({
 
 const ActionTable = () => (
   <RockAuthedWebBrowser>
-    {(openUrl) => (
+    {openUrl => (
       <View>
         <RowHeader>
           <Name>
@@ -36,8 +36,9 @@ const ActionTable = () => (
         </RowHeader>
         <TableView>
           <Touchable
-            onPress={() => openUrl('https://apollosrock.newspring.cc/page/235')}
-          >
+            onPress={() =>
+              openUrl('https://apollosrock.newspring.cc/page/235')
+            }>
             <Cell>
               <CellText>Find a serving opportunity</CellText>
               <CellIcon name="arrow-next" />
@@ -45,8 +46,9 @@ const ActionTable = () => (
           </Touchable>
           <Divider />
           <Touchable
-            onPress={() => openUrl('https://apollosrock.newspring.cc/page/236')}
-          >
+            onPress={() =>
+              openUrl('https://apollosrock.newspring.cc/page/236')
+            }>
             <Cell>
               <CellText>Join a small group</CellText>
               <CellIcon name="arrow-next" />
@@ -54,8 +56,9 @@ const ActionTable = () => (
           </Touchable>
           <Divider />
           <Touchable
-            onPress={() => openUrl('https://apollosrock.newspring.cc/page/233')}
-          >
+            onPress={() =>
+              openUrl('https://apollosrock.newspring.cc/page/233')
+            }>
             <Cell>
               <CellText>I need prayer</CellText>
               <CellIcon name="arrow-next" />
@@ -67,7 +70,7 @@ const ActionTable = () => (
   </RockAuthedWebBrowser>
 );
 
-const StyledActionTable = styled(({ theme }) => ({
+const StyledActionTable = styled(({theme}) => ({
   paddingBottom: theme.sizing.baseUnit * 100,
 }))(ActionTable);
 

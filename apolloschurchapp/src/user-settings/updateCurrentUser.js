@@ -8,9 +8,9 @@ export default gql`
   ) {
     updateProfileFields(
       input: [
-        { field: FirstName, value: $firstName }
-        { field: LastName, value: $lastName }
-        { field: Email, value: $email }
+        {field: FirstName, value: $firstName}
+        {field: LastName, value: $lastName}
+        {field: Email, value: $email}
       ]
     ) {
       firstName

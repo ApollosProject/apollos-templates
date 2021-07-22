@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
-import { schema as mediaPlayerSchema } from '@apollosproject/ui-media-player';
-import { updatePushId } from '@apollosproject/ui-notifications';
+import {schema as mediaPlayerSchema} from '@apollosproject/ui-media-player';
+import {updatePushId} from '@apollosproject/ui-notifications';
 import CACHE_LOADED from '../client/getCacheLoaded'; // eslint-disable-line
 
 // TODO: this will require more organization...ie...not keeping everything in one file.
@@ -43,18 +43,18 @@ export const GET_ALL_DATA = gql`
 
 export const resolvers = {
   Mutation: {
-    cacheMarkLoaded: async (root, args, { cache, client }) => {
+    cacheMarkLoaded: async (root, args, {cache, client}) => {
       cache.writeQuery({
         query: CACHE_LOADED,
         data: {
           cacheLoaded: true,
         },
       });
-      const { data: { isLoggedIn } = {} } = await client.query({
+      const {data: {isLoggedIn} = {}} = await client.query({
         query: GET_LOGGED_IN,
       });
 
-      const { pushId } = cache.readQuery({
+      const {pushId} = cache.readQuery({
         query: gql`
           query {
             pushId @client
@@ -63,7 +63,7 @@ export const resolvers = {
       });
 
       if (isLoggedIn && pushId) {
-        updatePushId({ pushId, client });
+        updatePushId({pushId, client});
       }
       return null;
     },

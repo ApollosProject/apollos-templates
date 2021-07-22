@@ -1,8 +1,8 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
-import { useQuery, useMutation, useApolloClient, gql } from '@apollo/client';
-import { useNavigation } from '@react-navigation/native';
-import { getVersion, getBuildNumber } from 'react-native-device-info';
+import {ScrollView} from 'react-native';
+import {useQuery, useMutation, useApolloClient, gql} from '@apollo/client';
+import {useNavigation} from '@react-navigation/native';
+import {getVersion, getBuildNumber} from 'react-native-device-info';
 
 import {
   BackgroundView,
@@ -21,7 +21,7 @@ import {
   checkOnboardingStatusAndNavigate,
   onboardingComplete,
 } from '@apollosproject/ui-onboarding';
-import { GET_LOGIN_STATE, LOGOUT } from '@apollosproject/ui-auth';
+import {GET_LOGIN_STATE, LOGOUT} from '@apollosproject/ui-auth';
 import {
   RockAuthedWebBrowser,
   UserAvatarUpdate,
@@ -30,12 +30,12 @@ import {
 const UserSettings = () => {
   const navigation = useNavigation();
   const {
-    data: { isLoggedIn = false },
+    data: {isLoggedIn = false},
     loading,
-  } = useQuery(GET_LOGIN_STATE, { fetchPolicy: 'cache-and-network' });
+  } = useQuery(GET_LOGIN_STATE, {fetchPolicy: 'cache-and-network'});
   const [logout] = useMutation(LOGOUT);
   const client = useApolloClient();
-  const { data } = useQuery(gql`
+  const {data} = useQuery(gql`
     query currentUserId {
       currentUser {
         id
@@ -43,22 +43,25 @@ const UserSettings = () => {
     }
   `);
 
-  if (loading) return <ActivityIndicator />;
-  if (!isLoggedIn) return null;
+  if (loading) {
+    return <ActivityIndicator />;
+  }
+  if (!isLoggedIn) {
+    return null;
+  }
   return (
     <BackgroundView>
       <ScrollView>
         <UserAvatarUpdate />
 
         <RockAuthedWebBrowser>
-          {(openUrl) => (
+          {openUrl => (
             <>
               <TableView>
                 <Touchable
                   onPress={() => {
                     navigation.navigate('PersonalDetails');
-                  }}
-                >
+                  }}>
                   <Cell>
                     <CellText>Personal Details</CellText>
                     <CellIcon name="arrow-next" />
@@ -68,8 +71,7 @@ const UserSettings = () => {
                 <Touchable
                   onPress={() => {
                     navigation.navigate('Location');
-                  }}
-                >
+                  }}>
                   <Cell>
                     <CellText>Location</CellText>
                     <CellIcon name="arrow-next" />
@@ -79,8 +81,7 @@ const UserSettings = () => {
                 <Touchable
                   onPress={() => {
                     navigation.navigate('ChangePassword');
-                  }}
-                >
+                  }}>
                   <Cell>
                     <CellText>Change Password</CellText>
                     <CellIcon name="arrow-next" />
@@ -89,8 +90,7 @@ const UserSettings = () => {
                 <Touchable
                   onPress={() => {
                     navigation.navigate('Notifications');
-                  }}
-                >
+                  }}>
                   <Cell>
                     <CellText>Notification Settings</CellText>
                     <CellIcon name="arrow-next" />
@@ -101,8 +101,7 @@ const UserSettings = () => {
                 <Touchable
                   onPress={() => {
                     openUrl('mailto:support@apollos.app');
-                  }}
-                >
+                  }}>
                   <Cell>
                     <CellText>Give Feedback</CellText>
                     <CellIcon name="arrow-next" />
@@ -111,8 +110,7 @@ const UserSettings = () => {
               </TableView>
               <TableView>
                 <Touchable
-                  onPress={() => openUrl('https://apollosrock.newspring.cc/')}
-                >
+                  onPress={() => openUrl('https://apollosrock.newspring.cc/')}>
                   <Cell>
                     <CellText>Privacy Policy</CellText>
                     <CellIcon name="arrow-next" />
@@ -120,8 +118,7 @@ const UserSettings = () => {
                 </Touchable>
                 <Divider />
                 <Touchable
-                  onPress={() => openUrl('https://apollosrock.newspring.cc/')}
-                >
+                  onPress={() => openUrl('https://apollosrock.newspring.cc/')}>
                   <Cell>
                     <CellText>Terms of Use</CellText>
                     <CellIcon name="arrow-next" />
@@ -135,8 +132,7 @@ const UserSettings = () => {
                     // This resets the navigation stack, and the navigates to the first auth screen.
                     // This ensures that user isn't navigated to a subscreen of Auth, like the pin entry screen.
                     NavigationService.resetToAuth();
-                  }}
-                >
+                  }}>
                   <Cell>
                     <CellText>Logout</CellText>
                     <CellIcon name="arrow-next" />
@@ -165,8 +161,7 @@ const UserSettings = () => {
                           navigation: NavigationService,
                           client,
                         })
-                      }
-                    >
+                      }>
                       <Cell>
                         <CellText>Launch Onboarding</CellText>
                       </Cell>
@@ -178,8 +173,7 @@ const UserSettings = () => {
                           version: 0,
                           userId: data?.currentUser?.id,
                         })
-                      }
-                    >
+                      }>
                       <Cell>
                         <CellText>Reset Onboarding to Unseen</CellText>
                       </Cell>
@@ -191,8 +185,7 @@ const UserSettings = () => {
                           version: 1,
                           userId: data?.currentUser?.id,
                         })
-                      }
-                    >
+                      }>
                       <Cell>
                         <CellText>Reset Onboarding to Seen v1</CellText>
                       </Cell>

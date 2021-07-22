@@ -1,6 +1,6 @@
-import { InMemoryCache } from '@apollo/client/cache';
+import {InMemoryCache} from '@apollo/client/cache';
 import AsyncStorage from '@react-native-community/async-storage';
-import { CachePersistor } from 'apollo3-cache-persist';
+import {CachePersistor} from 'apollo3-cache-persist';
 import ApollosConfig from '@apollosproject/config';
 
 // NOTE: this file is generated at runtime
@@ -8,10 +8,10 @@ import ApollosConfig from '@apollosproject/config';
 import introspectionQueryResultData from "./fragmentTypes.json";
 
 const finalPossibleTypes = {};
-introspectionQueryResultData.__schema.types.forEach((supertype) => {
+introspectionQueryResultData.__schema.types.forEach(supertype => {
   if (supertype.possibleTypes) {
     finalPossibleTypes[supertype.name] = [
-      ...supertype.possibleTypes.map((subtype) => subtype.name),
+      ...supertype.possibleTypes.map(subtype => subtype.name),
     ];
   }
 });
@@ -21,8 +21,8 @@ introspectionQueryResultData.__schema.types.forEach((supertype) => {
 const SCHEMA_VERSION = `${ApollosConfig.SCHEMA_VERSION}-1`; // Must be a string.
 const SCHEMA_VERSION_KEY = 'apollo-schema-version';
 
-const nodeCacheRedirect = (_, { id }, { getCacheKey }) =>
-  id ? getCacheKey({ __typename: id.split(':')[0], id }) : null;
+const nodeCacheRedirect = (_, {id}, {getCacheKey}) =>
+  id ? getCacheKey({__typename: id.split(':')[0], id}) : null;
 
 const cache = new InMemoryCache({
   possibleTypes: finalPossibleTypes,

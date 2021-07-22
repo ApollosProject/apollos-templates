@@ -1,21 +1,21 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
-import { Image } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {Image} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {
   NavigationService,
   withTheme,
   Icon,
   Touchable,
 } from '@apollosproject/ui-kit';
-import { useApolloClient } from '@apollo/client';
-import { createFeatureFeedTab } from '@apollosproject/ui-connected';
-import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
+import {useApolloClient} from '@apollo/client';
+import {createFeatureFeedTab} from '@apollosproject/ui-connected';
+import {checkOnboardingStatusAndNavigate} from '@apollosproject/ui-onboarding';
 import Connect from './connect';
 import tabBarIcon from './tabBarIcon';
 
-const HeaderLogo = withTheme(({ theme }) => ({
+const HeaderLogo = withTheme(({theme}) => ({
   style: {
     height: theme.sizing.baseUnit * 2.5,
     width: '70%',
@@ -27,13 +27,13 @@ const HeaderLogo = withTheme(({ theme }) => ({
       : require('./wordmark.dark.png'),
 }))(Image);
 
-const SearchIcon = withTheme(({ theme: { colors, sizing: { baseUnit } } }) => ({
+const SearchIcon = withTheme(({theme: {colors, sizing: {baseUnit}}}) => ({
   name: 'search',
   size: baseUnit * 2,
   fill: colors.primary,
 }))(Icon);
 
-const SearchButton = ({ onPress }) => (
+const SearchButton = ({onPress}) => (
   <Touchable onPress={onPress}>
     <SearchIcon />
   </Touchable>
@@ -76,7 +76,7 @@ const PrayTab = createFeatureFeedTab({
   feedName: 'PRAY',
 });
 
-const { Navigator, Screen } = createBottomTabNavigator();
+const {Navigator, Screen} = createBottomTabNavigator();
 
 const TabNavigator = () => {
   const client = useApolloClient();
@@ -91,34 +91,34 @@ const TabNavigator = () => {
         navigateHome: false,
       });
     },
-    [client]
+    [client],
   );
   return (
     <Navigator lazy>
       <Screen
         name="Home"
         component={HomeTab}
-        options={{ tabBarIcon: tabBarIcon('home') }}
+        options={{tabBarIcon: tabBarIcon('home')}}
       />
       <Screen
         name="Read"
         component={ReadTab}
-        options={{ tabBarIcon: tabBarIcon('sections') }}
+        options={{tabBarIcon: tabBarIcon('sections')}}
       />
       <Screen
         name="Watch"
         component={WatchTab}
-        options={{ tabBarIcon: tabBarIcon('video') }}
+        options={{tabBarIcon: tabBarIcon('video')}}
       />
       <Screen
         name="Pray"
         component={PrayTab}
-        options={{ tabBarIcon: tabBarIcon('like') }}
+        options={{tabBarIcon: tabBarIcon('like')}}
       />
       <Screen
         name="Connect"
         component={Connect}
-        options={{ tabBarIcon: tabBarIcon('profile') }}
+        options={{tabBarIcon: tabBarIcon('profile')}}
       />
     </Navigator>
   );

@@ -6,14 +6,14 @@ import fragmentTypes from './src/client/fragmentTypes.json';
 // If UniversalContentItem implements Node, Card, and ContentNode,
 // our typemap would be { UniversalContentItem: ['Node', 'Card', 'ContentNode'] }
 const TYPEMAP = fragmentTypes.__schema.types.reduce((acc, curr) => {
-  const { name } = curr;
+  const {name} = curr;
   const types = Object.fromEntries(
-    curr.possibleTypes.map((type) => [type.name, name])
+    curr.possibleTypes.map(type => [type.name, name]),
   );
-  Object.keys(types).forEach((key) => {
+  Object.keys(types).forEach(key => {
     acc[key] = acc[key] ? [...acc[key], types[key]] : [types[key]];
   });
   return acc;
 }, {});
 
-ApollosConfig.loadJs({ FRAGMENTS, TYPEMAP });
+ApollosConfig.loadJs({FRAGMENTS, TYPEMAP});

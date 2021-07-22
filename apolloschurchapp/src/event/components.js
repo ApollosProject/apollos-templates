@@ -1,11 +1,11 @@
 import React from 'react';
-import { Animated, View } from 'react-native';
+import {Animated, View} from 'react-native';
 import PropTypes from 'prop-types';
-import { styled, withTheme, H6, H4, Icon } from '@apollosproject/ui-kit';
+import {styled, withTheme, H6, H4, Icon} from '@apollosproject/ui-kit';
 
-const FlexedScrollView = styled({ flex: 1 })(Animated.ScrollView);
+const FlexedScrollView = styled({flex: 1})(Animated.ScrollView);
 
-const StyledIcon = withTheme(({ theme: { colors, sizing } }) => ({
+const StyledIcon = withTheme(({theme: {colors, sizing}}) => ({
   fill: colors.text.tertiary,
   size: sizing.baseUnit * 1.5,
   style: {
@@ -13,19 +13,19 @@ const StyledIcon = withTheme(({ theme: { colors, sizing } }) => ({
   },
 }))(Icon);
 
-const StyledH6 = styled(({ theme: { colors, sizing } }) => ({
+const StyledH6 = styled(({theme: {colors, sizing}}) => ({
   color: colors.text.tertiary,
   fontSize: sizing.baseUnit * 0.875,
   marginTop: sizing.baseUnit / 4,
 }))(H6);
 
-const EventInfoContainer = styled({ marginBottom: 24, flexDirection: 'row' })(
-  View
+const EventInfoContainer = styled({marginBottom: 24, flexDirection: 'row'})(
+  View,
 );
 
-const TextContainer = styled({ flexDirection: 'column' })(View);
+const TextContainer = styled({flexDirection: 'column'})(View);
 
-const EventInfoItem = ({ icon, title, subtitle }) => (
+const EventInfoItem = ({icon, title, subtitle}) => (
   <EventInfoContainer>
     <StyledIcon name={icon} />
     <TextContainer>
@@ -41,4 +41,4 @@ EventInfoItem.propTypes = {
   subtitle: PropTypes.string,
 };
 
-export { FlexedScrollView, EventInfoItem };
+export {FlexedScrollView, EventInfoItem};

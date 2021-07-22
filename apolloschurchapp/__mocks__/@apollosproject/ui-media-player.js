@@ -1,7 +1,7 @@
 module.exports = {
-  MediaPlayerSpacer: ({ children }) => children,
+  MediaPlayerSpacer: ({children}) => children,
   MediaPlayer: () => 'MediaPlayer',
-  MediaPlayerProvider: ({ children }) => children,
+  MediaPlayerProvider: ({children}) => children,
   playVideoMutation: 'mutation { playVideo }',
-  withTabBarMediaSpacer: () => ({ children }) => children,
+  withTabBarMediaSpacer: () => ({children}) => children,
 };
