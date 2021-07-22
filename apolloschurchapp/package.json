@@ -24,7 +24,7 @@
     "preset": "react-native",
     "collectCoverage": true,
     "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@react-native-picker/picker))"
+      "node_modules/(?!((jest-)?react-native|@react-native|rn-*|react-clone-referenced-element|@react-navigation/native|@react-navigation/stack|@apollosproject|@react-native-picker/picker))"
     ],
     "testMatch": [
       "<rootDir>/src/**/?(*.)(test|tests).{js,jsx,mjs}"
@@ -118,14 +118,14 @@
     "@bam.tech/react-native-make": "^3.0.0",
     "@carimus/metro-symlinked-deps": "^1.1.0",
     "@react-native-community/eslint-config": "^3.0.0",
-    "babel-jest": "^27.0.2",
+    "babel-jest": "^26",
     "babel-plugin-module-resolver": "^4.0.0",
     "codecov": "3.7.2",
     "eslint": "^7.28.0",
     "eslint-import-resolver-babel-module": "^5.0.0-beta.0",
     "get-dev-paths": "^0.1.0",
     "graphql-import": "^0.7.1",
-    "jest": "^27.0.4",
+    "jest": "^26",
     "jetifier": "^1.6.4",
     "metro-react-native-babel-preset": "^0.66.0",
     "nodemon": "1.18.7",

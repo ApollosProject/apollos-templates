@@ -1,7 +1,6 @@
 import {Animated} from 'react-native';
 import ApollosConfig from '@apollosproject/config';
 import FRAGMENTS from '@apollosproject/ui-fragments';
-import 'react-native/Libraries/Animated/src/bezier';
 
 ApollosConfig.loadJs({
   FRAGMENTS,
