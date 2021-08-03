@@ -21,6 +21,15 @@ def product_bundle_id(path:)
   build_configuration.build_settings['PRODUCT_BUNDLE_IDENTIFIER']
 end
 
+def bump_version_code()
+    s = File.read("../android/app/build.gradle")
+    versionCode = number_of_commits
+    s[/versionCode\s+(\d+)/, 1] = (versionCode).to_s
+    f = File.new('../android/app/build.gradle', 'w')
+    f.write(s)
+    f.close
+end
+
 before_all do
   ensure_git_branch
   ensure_git_status_clean
@@ -50,20 +59,6 @@ end
 
 platform :android do
 
-  desc "Bumps Android versionCode"
-  lane :bump_version_code do
-    path = '../android/app/build.gradle'
-    re = /versionCode\s+(\d+)/
-
-    s = File.read("../android/app/build.gradle")
-    versionCode = number_of_commits
-    s[re, 1] = (versionCode).to_s
-
-    f = File.new(path, 'w')
-    f.write(s)
-    f.close
-  end
-
   desc "Deploy a new version to the Google Play"
   lane :deploy do
     bump_version_code
@@ -71,10 +66,8 @@ platform :android do
     gradle(task: 'bundle', build_type: 'Release', project_dir: 'android')
     changelog_from_git_commits
 
-    path = '../android/app/build.gradle'
-    re = /applicationId\s+"([\w+\.]*)"/
     s = File.read("../android/app/build.gradle")
-    package_name = s[re, 1]
+    package_name = s[/applicationId\s+"([\w+\.]*)"/, 1]
 
     upload_to_play_store(
       track: "internal",
@@ -86,5 +79,7 @@ platform :android do
 end
 
 error do |lane, exception|
-   slack(message: exception.to_s, success: false)
+  s = File.read("../app.json")
+  app_name = s[/"name": "(.*)",/, 1]
+  slack(message: app_name << " - " << exception.to_s, success: false)
 end

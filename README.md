@@ -55,7 +55,7 @@ heroku create APP_NAME [-t OPTIONAL_TEAM]
 Add your config variables to the remote application
 
 ```
-heroku config:set ROCK_API=<url> ROCK_TOKEN=<token>
+heroku config:set ROCK_URL=<url> ROCK_TOKEN=<token>
 ```
 
 We deploy through the Github workflow. You need to set three new [Github secrets](https://docs.github.com/en/actions/reference/encrypted-secrets) in your new repository. First [Install the Github CLI](https://cli.github.com)
@@ -253,7 +253,7 @@ Run the fastlane command to generate a release build:
 fastlane run gradle task:bundle build_type:Release project_dir:android
 ```
 
-You can find the bundle in `android/app/build/outputs/bundle/release/app-release.aab`. Upload the bundle to the **closed testing** track the first time. The app must have been "released" before we push anything to internal.
+You can find the bundle in `android/app/build/outputs/bundle/release/app-release.aab`. Upload the bundle to the **closed testing** track the first time. The app must have been "released" before we push anything to internal. Fastlane will take care of uploading to internal, so you only need to upload to closed testing.
 
 ![play store](https://files-6ngafis8q-redreceipt.vercel.app)
 
