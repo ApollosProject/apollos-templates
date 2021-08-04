@@ -14,7 +14,7 @@
     "translate": "node scripts/translate.js"
   },
   "engines": {
-    "node": "14"
+    "node": ">=14"
   },
   "dependencies": {
     "@apollosproject/config": "^2.27.2",
