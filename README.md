@@ -253,7 +253,7 @@ Run the fastlane command to generate a release build:
 fastlane run gradle task:bundle build_type:Release project_dir:android
 ```
 
-You can find the bundle in `android/app/build/outputs/bundle/release/app-release.aab`. Upload the bundle to the **closed testing** track the first time. The app must have been "released" before we push anything to internal.
+You can find the bundle in `android/app/build/outputs/bundle/release/app-release.aab`. Upload the bundle to the **closed testing** track the first time. The app must have been "released" before we push anything to internal. Fastlane will take care of uploading to internal, so you only need to upload to closed testing.
 
 ![play store](https://files-6ngafis8q-redreceipt.vercel.app)
 
