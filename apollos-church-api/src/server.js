@@ -60,6 +60,7 @@ const apolloServer = new ApolloServer({
       'editor.cursorShape': 'line',
     },
   },
+  uploads: false,
   ...cacheOptions,
 });
 
