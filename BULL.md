@@ -11,4 +11,4 @@ JOBS_USERNAME=<whatever>
 JOBS_PASSWORD=<whatever>
 ```
 
-You can view and manage jobs through the `/admin/queues` endpoint
+You can view and manage jobs through the `<YourHerokuAppUrl>/admin/queues` endpoint
