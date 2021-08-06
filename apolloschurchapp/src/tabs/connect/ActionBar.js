@@ -19,11 +19,6 @@ const Toolbar = () => {
             icon="download"
             label="Give"
           />
-          <ActionBarItem
-            onPress={() => navigation.navigate('TestingControlPanel')}
-            icon="information"
-            label="Test"
-          />
         </ActionBar>
       )}
     </RockAuthedWebBrowser>

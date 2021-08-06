@@ -3,8 +3,12 @@ import fetch from 'node-fetch';
 import dotenv from "dotenv/config"; // eslint-disable-line
 import ApollosConfig from '@apollosproject/config';
 
+const configName = process.env.DATABASE_URL
+  ? 'config.postgres.yml'
+  : 'config.yml';
+
 ApollosConfig.loadYaml({
-  configPath: path.join(__dirname, '..', 'config.yml'),
+  configPath: path.join(__dirname, '..', configName),
 });
 
 // defaults
@@ -15,6 +19,8 @@ ApollosConfig.loadJs({
 // autodetect some settings
 (async () => {
   if (!ApollosConfig.ROCK) return;
+  if (!ApollosConfig.ROCK.URL || !ApollosConfig.ROCK.API_TOKEN)
+    throw new Error('ROCK_URL and ROCK_TOKEN variables are required!');
 
   let res;
 
