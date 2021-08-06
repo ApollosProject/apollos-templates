@@ -60,6 +60,7 @@ const apolloServer = new ApolloServer({
       'editor.cursorShape': 'line',
     },
   },
+  uploads: false,
   cache: process.env.REDIS_URL
     ? new BaseRedisCache({
         client: new Redis(process.env.REDIS_URL),

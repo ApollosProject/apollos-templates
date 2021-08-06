@@ -7,7 +7,6 @@ import { NotificationSettingsConnected } from '@apollosproject/ui-notifications'
 import UserSettings from '../../user-settings';
 import PersonalDetails from '../../user-settings/PersonalDetails';
 import ChangePassword from '../../user-settings/ChangePassword';
-import TestingControlPanel from '../../testing-control-panel';
 
 import Connect from './Connect';
 
@@ -21,11 +20,6 @@ const ConnectNavigator = (props) => (
       options={{ headerShown: false }}
     />
     <Screen
-      component={TestingControlPanel}
-      name="TestingControlPanel"
-      options={{ headerTitle: 'Testing' }}
-    />
-    <Screen
       component={NotificationSettingsConnected}
       name="Notifications"
       options={{ headerTitle: 'Notifications' }}
@@ -35,7 +29,6 @@ const ConnectNavigator = (props) => (
       name="UserSettings"
       options={{ headerTitle: 'Settings' }}
     />
-
     <Screen
       name="PersonalDetails"
       component={PersonalDetails}
