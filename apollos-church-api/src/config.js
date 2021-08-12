@@ -3,9 +3,10 @@ import fetch from 'node-fetch';
 import dotenv from "dotenv/config"; // eslint-disable-line
 import ApollosConfig from '@apollosproject/config';
 
-const configName = process.env.DATABASE_URL
-  ? 'config.postgres.yml'
-  : 'config.yml';
+const configName =
+  process.env.DATABASE_URL && process.env.DATABASE_CONTENT === 'true'
+    ? 'config.postgres.yml'
+    : 'config.yml';
 
 ApollosConfig.loadYaml({
   configPath: path.join(__dirname, '..', configName),
