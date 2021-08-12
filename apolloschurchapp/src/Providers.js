@@ -39,7 +39,8 @@ const AppProviders = (props) => (
             mutation: ACCEPT_FOLLOW_REQUEST,
             variables: { personId: requestPersonId },
           }),
-      }}>
+      }}
+    >
       <AuthProvider
         navigateToAuth={() => NavigationService.navigate('Auth')}
         navigate={NavigationService.navigate}
@@ -48,7 +49,8 @@ const AppProviders = (props) => (
             client,
             navigation: NavigationService,
           })
-        }>
+        }
+      >
         <AnalyticsProvider>
           <LiveProvider>{props.children}</LiveProvider>
         </AnalyticsProvider>

@@ -82,10 +82,12 @@ const App = () => (
       <AppStatusBar />
       <ThemedNavigationContainer
         containerRef={NavigationService.setTopLevelNavigator}
-        onReady={NavigationService.setIsReady}>
+        onReady={NavigationService.setIsReady}
+      >
         <Providers>
           <Navigator
-            screenOptions={{ headerShown: false, stackPresentation: 'modal' }}>
+            screenOptions={{ headerShown: false, stackPresentation: 'modal' }}
+          >
             <Screen
               name="ProtectedRoute"
               component={ProtectedRouteWithSplashScreen}

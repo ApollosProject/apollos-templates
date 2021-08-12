@@ -10,7 +10,8 @@ const { Navigator, Screen } = createStackNavigator();
 const EventNavigator = ({ route, ...props }) => (
   <Navigator
     {...props}
-    screenOptions={{ header: NavigationHeader, headerTransparent: true }}>
+    screenOptions={{ header: NavigationHeader, headerTransparent: true }}
+  >
     <Screen name="Event" initialParams={route.params} component={Event} />
   </Navigator>
 );

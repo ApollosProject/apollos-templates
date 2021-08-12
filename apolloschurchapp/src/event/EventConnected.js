@@ -44,7 +44,8 @@ class EventConnected extends PureComponent {
         mixin={{
           type: get(theme, 'type', 'light').toLowerCase(),
           colors: get(theme, 'colors'),
-        }}>
+        }}
+      >
         <TrackEventWhenLoaded
           loaded={!!(!loading && event.name)}
           eventName={'View Event'}
@@ -68,7 +69,8 @@ class EventConnected extends PureComponent {
       <Query
         query={GET_EVENT}
         fetchPolicy="network-only"
-        variables={this.queryVariables}>
+        variables={this.queryVariables}
+      >
         {this.renderWithData}
       </Query>
     );

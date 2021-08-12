@@ -61,7 +61,8 @@ const UserSettings = () => {
                 <Touchable
                   onPress={() => {
                     navigation.navigate('PersonalDetails');
-                  }}>
+                  }}
+                >
                   <Cell>
                     <CellText>Personal Details</CellText>
                     <CellIcon name="arrow-next" />
@@ -71,7 +72,8 @@ const UserSettings = () => {
                 <Touchable
                   onPress={() => {
                     navigation.navigate('Location');
-                  }}>
+                  }}
+                >
                   <Cell>
                     <CellText>Location</CellText>
                     <CellIcon name="arrow-next" />
@@ -81,7 +83,8 @@ const UserSettings = () => {
                 <Touchable
                   onPress={() => {
                     navigation.navigate('ChangePassword');
-                  }}>
+                  }}
+                >
                   <Cell>
                     <CellText>Change Password</CellText>
                     <CellIcon name="arrow-next" />
@@ -90,7 +93,8 @@ const UserSettings = () => {
                 <Touchable
                   onPress={() => {
                     navigation.navigate('Notifications');
-                  }}>
+                  }}
+                >
                   <Cell>
                     <CellText>Notification Settings</CellText>
                     <CellIcon name="arrow-next" />
@@ -101,7 +105,8 @@ const UserSettings = () => {
                 <Touchable
                   onPress={() => {
                     openUrl('mailto:support@apollos.app');
-                  }}>
+                  }}
+                >
                   <Cell>
                     <CellText>Give Feedback</CellText>
                     <CellIcon name="arrow-next" />
@@ -110,7 +115,8 @@ const UserSettings = () => {
               </TableView>
               <TableView>
                 <Touchable
-                  onPress={() => openUrl('https://apollosrock.newspring.cc/')}>
+                  onPress={() => openUrl('https://apollosrock.newspring.cc/')}
+                >
                   <Cell>
                     <CellText>Privacy Policy</CellText>
                     <CellIcon name="arrow-next" />
@@ -118,7 +124,8 @@ const UserSettings = () => {
                 </Touchable>
                 <Divider />
                 <Touchable
-                  onPress={() => openUrl('https://apollosrock.newspring.cc/')}>
+                  onPress={() => openUrl('https://apollosrock.newspring.cc/')}
+                >
                   <Cell>
                     <CellText>Terms of Use</CellText>
                     <CellIcon name="arrow-next" />
@@ -132,7 +139,8 @@ const UserSettings = () => {
                     // This resets the navigation stack, and the navigates to the first auth screen.
                     // This ensures that user isn't navigated to a subscreen of Auth, like the pin entry screen.
                     NavigationService.resetToAuth();
-                  }}>
+                  }}
+                >
                   <Cell>
                     <CellText>Logout</CellText>
                     <CellIcon name="arrow-next" />
@@ -161,7 +169,8 @@ const UserSettings = () => {
                           navigation: NavigationService,
                           client,
                         })
-                      }>
+                      }
+                    >
                       <Cell>
                         <CellText>Launch Onboarding</CellText>
                       </Cell>
@@ -173,7 +182,8 @@ const UserSettings = () => {
                           version: 0,
                           userId: data?.currentUser?.id,
                         })
-                      }>
+                      }
+                    >
                       <Cell>
                         <CellText>Reset Onboarding to Unseen</CellText>
                       </Cell>
@@ -185,7 +195,8 @@ const UserSettings = () => {
                           version: 1,
                           userId: data?.currentUser?.id,
                         })
-                      }>
+                      }
+                    >
                       <Cell>
                         <CellText>Reset Onboarding to Seen v1</CellText>
                       </Cell>

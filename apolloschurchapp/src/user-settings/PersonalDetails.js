@@ -116,7 +116,8 @@ class PersonalDetails extends PureComponent {
                     },
                   },
                 });
-              }}>
+              }}
+            >
               {(updateDetails) => (
                 <Formik
                   initialValues={{ firstName, lastName, email }}
@@ -154,7 +155,8 @@ class PersonalDetails extends PureComponent {
                       }
                     }
                     setSubmitting(false);
-                  }}>
+                  }}
+                >
                   {this.renderForm}
                 </Formik>
               )}

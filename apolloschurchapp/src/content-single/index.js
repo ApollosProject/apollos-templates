@@ -19,7 +19,8 @@ const ContentSingleNavigator = ({ route, navigation, ...props }) => (
       headerLeft: ModalBackButton,
       headerTitle: '',
       headerTopInsetEnabled: false,
-    }}>
+    }}
+  >
     <Screen
       name="ContentSingle"
       component={ContentSingle}

@@ -47,7 +47,8 @@ class ChangePassword extends PureComponent {
       keyboardVerticalOffset={
         Header.HEIGHT +
         (Platform.OS === 'android' ? StatusBar.currentHeight : 0)
-      }>
+      }
+    >
       <FlexedView>
         <PaddedView>
           <TextInput
@@ -96,7 +97,8 @@ class ChangePassword extends PureComponent {
           await cache.writeData({
             data: { authToken: token },
           });
-        }}>
+        }}
+      >
         {(updatePassword) => (
           <Formik
             validationSchema={Yup.object().shape({
@@ -123,7 +125,8 @@ class ChangePassword extends PureComponent {
                 }
               }
               setSubmitting(false);
-            }}>
+            }}
+          >
             {this.renderForm}
           </Formik>
         )}
