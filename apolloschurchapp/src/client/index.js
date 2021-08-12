@@ -1,19 +1,20 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {ApolloProvider, ApolloClient, ApolloLink} from '@apollo/client';
-import {getVersion, getApplicationName} from 'react-native-device-info';
+import { ApolloProvider, ApolloClient, ApolloLink } from '@apollo/client';
+import { getVersion, getApplicationName } from 'react-native-device-info';
 
-import {authLink, buildErrorLink} from '@apollosproject/ui-auth';
+import { authLink, buildErrorLink } from '@apollosproject/ui-auth';
 
-import {NavigationService} from '@apollosproject/ui-kit';
-import {resolvers, schema, defaults, GET_ALL_DATA} from '../store';
+import { NavigationService } from '@apollosproject/ui-kit';
+import { resolvers, schema, defaults, GET_ALL_DATA } from '../store';
 
 import httpLink from './httpLink';
-import cache, {ensureCacheHydration} from './cache';
+import cache, { ensureCacheHydration } from './cache';
 import MARK_CACHE_LOADED from './markCacheLoaded';
 
 const goToAuth = () => NavigationService.resetToAuth();
-const wipeData = () => cache.writeQuery({query: GET_ALL_DATA, data: defaults});
+const wipeData = () =>
+  cache.writeQuery({ query: GET_ALL_DATA, data: defaults });
 
 let clearStore;
 let storeIsResetting = false;
@@ -86,12 +87,12 @@ class ClientProvider extends PureComponent {
     } catch (e) {
       throw e;
     } finally {
-      client.mutate({mutation: MARK_CACHE_LOADED});
+      client.mutate({ mutation: MARK_CACHE_LOADED });
     }
   }
 
   render() {
-    const {children, ...otherProps} = this.props;
+    const { children, ...otherProps } = this.props;
     return (
       <ApolloProvider {...otherProps} client={client}>
         {children}

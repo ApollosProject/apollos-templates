@@ -1,5 +1,5 @@
 import './loadConfig';
-import {AppRegistry, YellowBox} from 'react-native';
+import { AppRegistry, YellowBox } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
 
 // temp fix for the promise.finally

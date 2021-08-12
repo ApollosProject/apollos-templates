@@ -1,7 +1,7 @@
 import React from 'react';
 
-import {Providers, renderWithApolloData} from '@apollosproject/ui-test-utils';
-import {MockedProvider} from '@apollo/client/testing';
+import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import { MockedProvider } from '@apollo/client/testing';
 import ChangePassword from './ChangePassword';
 
 describe('Change Password component', () => {
@@ -13,7 +13,7 @@ describe('Change Password component', () => {
     const tree = await renderWithApolloData(
       <Providers MockedProvider={MockedProvider}>
         <ChangePassword navigation={navigation} />
-      </Providers>,
+      </Providers>
     );
     expect(tree).toMatchSnapshot();
   });

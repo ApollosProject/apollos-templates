@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {Icon} from '@apollosproject/ui-kit';
+import { Icon } from '@apollosproject/ui-kit';
 
-const tabBarIcon = name => {
-  function TabBarIcon({color}) {
+const tabBarIcon = (name) => {
+  function TabBarIcon({ color }) {
     return <Icon name={name} fill={color} size={24} />;
   }
   TabBarIcon.propTypes = {

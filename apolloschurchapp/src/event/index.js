@@ -1,16 +1,16 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import PropTypes from 'prop-types';
 import NavigationHeader from '../ui/NavigationHeader';
 import Event from './EventConnected';
 
-const {Navigator, Screen} = createStackNavigator();
+const { Navigator, Screen } = createStackNavigator();
 
-const EventNavigator = ({route, ...props}) => (
+const EventNavigator = ({ route, ...props }) => (
   <Navigator
     {...props}
-    screenOptions={{header: NavigationHeader, headerTransparent: true}}>
+    screenOptions={{ header: NavigationHeader, headerTransparent: true }}>
     <Screen name="Event" initialParams={route.params} component={Event} />
   </Navigator>
 );

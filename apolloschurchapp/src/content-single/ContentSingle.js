@@ -1,23 +1,23 @@
 import React from 'react';
-import {gql, useQuery} from '@apollo/client';
+import { gql, useQuery } from '@apollo/client';
 import PropTypes from 'prop-types';
 
-import {TrackEventWhenLoaded} from '@apollosproject/ui-analytics';
+import { TrackEventWhenLoaded } from '@apollosproject/ui-analytics';
 import {
   InteractWhenLoadedConnected,
   NodeSingleConnected,
   ThemeMixinConnected,
 } from '@apollosproject/ui-connected';
 
-import {styled} from '@apollosproject/ui-kit';
+import { styled } from '@apollosproject/ui-kit';
 
-const PaddedNodeSingleConnected = styled(({theme: {sizing}}) => ({
+const PaddedNodeSingleConnected = styled(({ theme: { sizing } }) => ({
   paddingBottom: sizing.baseUnit * 5,
 }))(NodeSingleConnected);
 
-const ContentSingle = props => {
+const ContentSingle = (props) => {
   const nodeId = props.route?.params?.itemId;
-  const {data, loading} = useQuery(
+  const { data, loading } = useQuery(
     gql`
       query getContentNodeTitle($nodeId: ID!) {
         node(id: $nodeId) {
@@ -28,7 +28,7 @@ const ContentSingle = props => {
         }
       }
     `,
-    {variables: {nodeId}},
+    { variables: { nodeId } }
   );
   return (
     <ThemeMixinConnected nodeId={nodeId}>

@@ -1,4 +1,4 @@
-import {Animated} from 'react-native';
+import { Animated } from 'react-native';
 import ApollosConfig from '@apollosproject/config';
 import FRAGMENTS from '@apollosproject/ui-fragments';
 
@@ -8,16 +8,16 @@ ApollosConfig.loadJs({
 });
 
 Animated.timing = (value, config) => ({
-  start: callback => {
+  start: (callback) => {
     value.setValue(config.toValue);
-    callback && callback({finished: true});
+    callback && callback({ finished: true });
   },
   stop: () => ({}),
 });
 Animated.spring = (value, config) => ({
-  start: callback => {
+  start: (callback) => {
     value.setValue(config.toValue);
-    callback && callback({finished: true});
+    callback && callback({ finished: true });
   },
   stop: () => ({}),
 });

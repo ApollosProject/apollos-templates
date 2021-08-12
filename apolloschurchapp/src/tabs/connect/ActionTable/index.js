@@ -1,5 +1,5 @@
 import React from 'react';
-import {View} from 'react-native';
+import { View } from 'react-native';
 
 import {
   TableView,
@@ -12,9 +12,9 @@ import {
   PaddedView,
   H4,
 } from '@apollosproject/ui-kit';
-import {RockAuthedWebBrowser} from '@apollosproject/ui-connected';
+import { RockAuthedWebBrowser } from '@apollosproject/ui-connected';
 
-const RowHeader = styled(({theme}) => ({
+const RowHeader = styled(({ theme }) => ({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
@@ -27,7 +27,7 @@ const Name = styled({
 
 const ActionTable = () => (
   <RockAuthedWebBrowser>
-    {openUrl => (
+    {(openUrl) => (
       <View>
         <RowHeader>
           <Name>
@@ -70,7 +70,7 @@ const ActionTable = () => (
   </RockAuthedWebBrowser>
 );
 
-const StyledActionTable = styled(({theme}) => ({
+const StyledActionTable = styled(({ theme }) => ({
   paddingBottom: theme.sizing.baseUnit * 100,
 }))(ActionTable);
 

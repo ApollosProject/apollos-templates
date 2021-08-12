@@ -1,11 +1,11 @@
-import React, {PureComponent} from 'react';
-import {Query} from '@apollo/client/react/components';
-import {get} from 'lodash';
+import React, { PureComponent } from 'react';
+import { Query } from '@apollo/client/react/components';
+import { get } from 'lodash';
 import PropTypes from 'prop-types';
 
-import {ErrorCard, ThemeMixin} from '@apollosproject/ui-kit';
+import { ErrorCard, ThemeMixin } from '@apollosproject/ui-kit';
 
-import {TrackEventWhenLoaded} from '@apollosproject/ui-analytics';
+import { TrackEventWhenLoaded } from '@apollosproject/ui-analytics';
 
 import Event from './Event';
 import GET_EVENT from './getEvent';
@@ -27,17 +27,17 @@ class EventConnected extends PureComponent {
   }
 
   get queryVariables() {
-    return {eventId: this.eventId};
+    return { eventId: this.eventId };
   }
 
-  renderWithData = ({loading, error, data}) => {
+  renderWithData = ({ loading, error, data }) => {
     if (error) {
       return <ErrorCard error={error} />;
     }
 
     const event = data?.node || {};
 
-    const {theme = {}} = event;
+    const { theme = {} } = event;
 
     return (
       <ThemeMixin

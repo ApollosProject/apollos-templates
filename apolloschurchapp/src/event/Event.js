@@ -1,5 +1,5 @@
 import React from 'react';
-import {get} from 'lodash';
+import { get } from 'lodash';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import InAppBrowser from 'react-native-inappbrowser-reborn';
@@ -13,18 +13,18 @@ import {
 } from '@apollosproject/ui-kit';
 import HTMLView from '@apollosproject/ui-htmlview';
 
-import {FlexedScrollView, EventInfoItem} from './components';
+import { FlexedScrollView, EventInfoItem } from './components';
 
-const handlePressAnchor = url => {
+const handlePressAnchor = (url) => {
   InAppBrowser.open(url);
 };
 
-const Event = ({event, loading}) => {
+const Event = ({ event, loading }) => {
   const coverImageSources = get(event, 'image.sources', []);
   return (
     <BackgroundView>
       <StretchyView>
-        {({Stretchy, ...scrollViewProps}) => (
+        {({ Stretchy, ...scrollViewProps }) => (
           <FlexedScrollView {...scrollViewProps}>
             {coverImageSources.length || loading ? (
               <Stretchy>
@@ -43,7 +43,7 @@ const Event = ({event, loading}) => {
                   icon={'time'}
                   title={moment(event.start).format('ddd, MMMM Do, YYYY')}
                   subtitle={`${moment(event.start).format('LT')} — ${moment(
-                    event.end,
+                    event.end
                   ).format('LT')}`}
                 />
                 <EventInfoItem icon={'pin'} title={event.location} />

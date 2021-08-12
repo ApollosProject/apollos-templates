@@ -1,8 +1,8 @@
 import React from 'react';
-import {ScrollView} from 'react-native';
-import {useQuery, useMutation, useApolloClient, gql} from '@apollo/client';
-import {useNavigation} from '@react-navigation/native';
-import {getVersion, getBuildNumber} from 'react-native-device-info';
+import { ScrollView } from 'react-native';
+import { useQuery, useMutation, useApolloClient, gql } from '@apollo/client';
+import { useNavigation } from '@react-navigation/native';
+import { getVersion, getBuildNumber } from 'react-native-device-info';
 
 import {
   BackgroundView,
@@ -21,7 +21,7 @@ import {
   checkOnboardingStatusAndNavigate,
   onboardingComplete,
 } from '@apollosproject/ui-onboarding';
-import {GET_LOGIN_STATE, LOGOUT} from '@apollosproject/ui-auth';
+import { GET_LOGIN_STATE, LOGOUT } from '@apollosproject/ui-auth';
 import {
   RockAuthedWebBrowser,
   UserAvatarUpdate,
@@ -30,12 +30,12 @@ import {
 const UserSettings = () => {
   const navigation = useNavigation();
   const {
-    data: {isLoggedIn = false},
+    data: { isLoggedIn = false },
     loading,
-  } = useQuery(GET_LOGIN_STATE, {fetchPolicy: 'cache-and-network'});
+  } = useQuery(GET_LOGIN_STATE, { fetchPolicy: 'cache-and-network' });
   const [logout] = useMutation(LOGOUT);
   const client = useApolloClient();
-  const {data} = useQuery(gql`
+  const { data } = useQuery(gql`
     query currentUserId {
       currentUser {
         id
@@ -55,7 +55,7 @@ const UserSettings = () => {
         <UserAvatarUpdate />
 
         <RockAuthedWebBrowser>
-          {openUrl => (
+          {(openUrl) => (
             <>
               <TableView>
                 <Touchable

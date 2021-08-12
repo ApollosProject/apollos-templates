@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Animated} from 'react-native';
-import {ModalViewHeader} from '@apollosproject/ui-kit';
+import { Animated } from 'react-native';
+import { ModalViewHeader } from '@apollosproject/ui-kit';
 
-const NavigationHeader = ({previous, scene, navigation}) => {
+const NavigationHeader = ({ previous, scene, navigation }) => {
   let onBack = null;
   if (previous?.route?.name === 'ContentSingle') {
     onBack = () => navigation.pop();
@@ -14,7 +14,7 @@ const NavigationHeader = ({previous, scene, navigation}) => {
 
   const progress = Animated.add(
     scene.progress.current,
-    scene.progress.next || 0,
+    scene.progress.next || 0
   );
 
   const opacity = progress.interpolate({
@@ -23,7 +23,7 @@ const NavigationHeader = ({previous, scene, navigation}) => {
   });
 
   return (
-    <Animated.View style={{opacity}}>
+    <Animated.View style={{ opacity }}>
       <ModalViewHeader onClose={onClose} onBack={onBack} navigationHeader />
     </Animated.View>
   );

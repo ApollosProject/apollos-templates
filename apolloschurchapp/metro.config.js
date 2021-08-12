@@ -22,5 +22,5 @@ module.exports = applyConfigForLinkedDependencies(
       '@storybook',
     ],
     resolveNodeModulesAtRoot: true,
-  },
+  }
 );

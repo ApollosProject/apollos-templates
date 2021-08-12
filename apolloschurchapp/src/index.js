@@ -1,17 +1,17 @@
 /* eslint-disable react/jsx-handler-names */
 
 import React from 'react';
-import {StatusBar} from 'react-native';
+import { StatusBar } from 'react-native';
 import {
   NavigationContainer,
   useNavigation,
   DarkTheme,
   DefaultTheme,
 } from '@react-navigation/native';
-import {createNativeStackNavigator} from 'react-native-screens/native-stack';
+import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import SplashScreen from 'react-native-splash-screen';
 import 'react-native-gesture-handler'; // required for react-navigation
-import {enableScreens} from 'react-native-screens';
+import { enableScreens } from 'react-native-screens';
 
 import {
   BackgroundView,
@@ -20,9 +20,9 @@ import {
   Providers as ThemeProvider,
 } from '@apollosproject/ui-kit';
 import Passes from '@apollosproject/ui-passes';
-import {MapViewConnected as Location} from '@apollosproject/ui-mapview';
-import Auth, {ProtectedRoute} from '@apollosproject/ui-auth';
-import {Landing, Onboarding} from '@apollosproject/ui-onboarding';
+import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
+import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
+import { Landing, Onboarding } from '@apollosproject/ui-onboarding';
 
 import {
   ContentFeedConnected,
@@ -32,11 +32,11 @@ import Providers from './Providers';
 import ContentSingle from './content-single';
 import Event from './event';
 import Tabs from './tabs';
-import customTheme, {customIcons} from './theme';
+import customTheme, { customIcons } from './theme';
 
 enableScreens(); // improves performance for react-navigation
 
-const AppStatusBar = withTheme(({theme}) => ({
+const AppStatusBar = withTheme(({ theme }) => ({
   barStyle: theme.barStyle,
   backgroundColor: theme.colors.background.paper,
 }))(StatusBar);
@@ -52,7 +52,7 @@ const ProtectedRouteWithSplashScreen = () => {
   );
 };
 
-const ThemedNavigationContainer = withTheme(({theme, ...props}) => ({
+const ThemedNavigationContainer = withTheme(({ theme, ...props }) => ({
   theme: {
     ...(theme.type === 'dark' ? DarkTheme : DefaultTheme),
     dark: theme.type === 'dark',
@@ -65,7 +65,7 @@ const ThemedNavigationContainer = withTheme(({theme, ...props}) => ({
     },
   },
   ...props,
-}))(({containerRef, ...props}) => (
+}))(({ containerRef, ...props }) => (
   <NavigationContainer ref={containerRef} {...props} />
 ));
 
@@ -74,7 +74,7 @@ const LandingToAuth = () => {
   return <Landing onPressPrimary={() => navigation.navigate('Auth')} />;
 };
 
-const {Navigator, Screen} = createNativeStackNavigator();
+const { Navigator, Screen } = createNativeStackNavigator();
 
 const App = () => (
   <ThemeProvider themeInput={customTheme} iconInput={customIcons}>
@@ -85,7 +85,7 @@ const App = () => (
         onReady={NavigationService.setIsReady}>
         <Providers>
           <Navigator
-            screenOptions={{headerShown: false, stackPresentation: 'modal'}}>
+            screenOptions={{ headerShown: false, stackPresentation: 'modal' }}>
             <Screen
               name="ProtectedRoute"
               component={ProtectedRouteWithSplashScreen}
@@ -102,12 +102,16 @@ const App = () => (
             <Screen
               component={ContentFeedConnected}
               name="ContentFeed"
-              options={({route}) => ({
+              options={({ route }) => ({
                 title: route.params.itemTitle || 'Content Feed',
                 stackPresentation: 'push',
               })}
             />
-            <Screen name="Event" component={Event} options={{title: 'Event'}} />
+            <Screen
+              name="Event"
+              component={Event}
+              options={{ title: 'Event' }}
+            />
             <Screen
               name="Auth"
               component={Auth}
@@ -120,7 +124,7 @@ const App = () => (
             <Screen
               name="Passes"
               component={Passes}
-              options={{title: 'Check-In Pass'}}
+              options={{ title: 'Check-In Pass' }}
             />
             <Screen
               name="Onboarding"
