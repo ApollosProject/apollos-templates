@@ -93,6 +93,11 @@ apolloServer.applyMiddleware({ app, path: '/' });
         '\x1b[0m'
       );
       console.log(pending);
+      console.log(
+        `Keep in mind, you are currently connected to ${
+          migrationRunner?.options?.context?.sequelize?.options?.host
+        }`
+      );
       console.log('\x1b[31m', '██████████████████████████████████', '\x1b[0m');
     }
     if (ApollosConfig.AUTO_MIGRATE) await migrationRunner.up();
