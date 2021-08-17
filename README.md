@@ -82,6 +82,19 @@ heroku open
 
 To get started with different API integrations, check out our [docs](https://apollosapp.io)!
 
+#### Migrations
+
+Database migrations can be run locally via
+```
+yarn migrator up
+```
+and in production / heroku via
+
+```
+heroku --app YOUR_HEROKU_APP_NAME_HERE run yarn migrator up
+```
+**Make sure you `yarn build` before running `yarn migrator` if you have made any changes to your app.**
+
 ### Mobile App
 
 This will outline the steps required to get your Android and iOS apps up and running. You will need a functioning production API from the previous section before moving forward.
@@ -253,7 +266,7 @@ Run the fastlane command to generate a release build:
 fastlane run gradle task:bundle build_type:Release project_dir:android
 ```
 
-You can find the bundle in `android/app/build/outputs/bundle/release/app-release.aab`. Upload the bundle to the **closed testing** track the first time. The app must have been "released" before we push anything to internal.
+You can find the bundle in `android/app/build/outputs/bundle/release/app-release.aab`. Upload the bundle to the **closed testing** track the first time. The app must have been "released" before we push anything to internal. Fastlane will take care of uploading to internal, so you only need to upload to closed testing.
 
 ![play store](https://files-6ngafis8q-redreceipt.vercel.app)
 
