@@ -5,6 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "setup": "./scripts/init.sh",
+    "migrator": "node ./lib/migrator.js",
+    "migrator:production": "heroku --app YOUR_HEROKU_APP_NAME_HERE run yarn migrator up",
     "start": "NODE_ENV=production node ./lib/index.js",
     "start:dev": "linkemon ./src/index.js --exec babel-node --delay 2 -e js,yaml,json,yml",
     "postinstall": "yarn build",
