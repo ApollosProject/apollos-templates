@@ -20,6 +20,7 @@ let storeIsResetting = false;
 const onAuthError = async () => {
   if (!storeIsResetting) {
     storeIsResetting = true;
+    await client.stop();
     await client.clearStore();
   }
   storeIsResetting = false;
