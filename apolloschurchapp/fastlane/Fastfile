@@ -1,4 +1,3 @@
-require 'xcodeproj'
 # This file contains the fastlane.tools configuration
 # You can find the documentation at https://docs.fastlane.tools
 #
@@ -13,13 +12,6 @@ require 'xcodeproj'
 
 # Uncomment the line if you want fastlane to automatically update itself
 #update_fastlane
-
-def product_bundle_id(path:)
-  project = Xcodeproj::Project.open(path)
-  scheme = project.native_targets.first
-  build_configuration = scheme.build_configurations.first
-  build_configuration.build_settings['PRODUCT_BUNDLE_IDENTIFIER']
-end
 
 def bump_version_code()
     s = File.read("../android/app/build.gradle")
@@ -45,11 +37,9 @@ platform :ios do
     # get project name
     proj = Dir.glob("../ios/*.xcworkspace")[0][7..-13]
 
-    identifier = product_bundle_id(path: "../ios/" << proj << ".xcodeproj")
-
     app_store_connect_api_key(key_filepath: "ios/apollos.p8", in_house: false)
     setup_ci
-    match(type: 'appstore', app_identifier: [identifier, "#{identifier}.OneSignalNotificationServiceExtension"], readonly: true)
+    match(type: 'appstore', readonly: true)
     increment_build_number(build_number: number_of_commits, xcodeproj: "ios/" << proj << ".xcodeproj")
     build_app(workspace: "ios/" << proj << ".xcworkspace", scheme: proj)
     changelog_from_git_commits
