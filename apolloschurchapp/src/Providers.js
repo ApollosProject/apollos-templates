@@ -1,6 +1,6 @@
+import querystring from 'querystring';
 import React from 'react';
 import PropTypes from 'prop-types';
-import querystring from 'querystring';
 import ApollosConfig from '@apollosproject/config';
 import { NavigationService } from '@apollosproject/ui-kit';
 import { AuthProvider } from '@apollosproject/ui-auth';
@@ -20,7 +20,7 @@ const AppProviders = (props) => (
       oneSignalKey={ApollosConfig.ONE_SIGNAL_KEY}
       // TODO deprecated prop
       navigate={NavigationService.navigate}
-            handleExternalLink={(url) => {
+      handleExternalLink={(url) => {
         const path = url.split('app-link/')[1];
         const [route, location] = path.split('/');
         if (route === 'content')
@@ -35,7 +35,6 @@ const AppProviders = (props) => (
           );
         }
       }}
-
       actionMap={{
         // accept a follow request when someone taps "accept" in a follow request push notification
         acceptFollowRequest: ({ requestPersonId }) =>
