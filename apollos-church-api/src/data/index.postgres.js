@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 import { gql } from 'apollo-server';
 
 import {
