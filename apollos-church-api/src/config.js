@@ -1,4 +1,3 @@
-import fs from 'fs';
 import path from 'path';
 import fetch from 'node-fetch';
 import dotenv from "dotenv/config"; // eslint-disable-line
@@ -8,7 +7,7 @@ ApollosConfig.loadYaml({
   configPath: path.join(
     __dirname,
     '..',
-    fs.existsSync(path.join(__dirname, '..', 'config.postgres.yml'))
+    process.env.DATABASE_CONTENT === 'true'
       ? 'config.postgres.yml'
       : 'config.yml'
   ),

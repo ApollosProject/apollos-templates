@@ -90,7 +90,7 @@ const data = {
   RockPerson, // This entry needs to come before (postgres) Person
   BinaryFiles, // This entry needs to come before (postgres) Person
   PostgresPerson, // Postgres person for now, as we extend this dataSource in the 'rockWithPostgres' file
-  ...(fs.existsSync(path.join(__dirname, '../..', 'config.postgres.yml'))
+  ...(process.env.DATABASE_CONTENT
     ? postgresContentModules
     : rockContentModules),
   Cloudinary,
