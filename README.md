@@ -82,8 +82,7 @@ heroku open
 
 To get started with different API integrations, check out our [docs](https://apollosapp.io)!
 
-#### 
-rations
+#### Migrations
 
 Database migrations can be run locally via
 ```
