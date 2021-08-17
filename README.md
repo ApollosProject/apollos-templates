@@ -82,7 +82,8 @@ heroku open
 
 To get started with different API integrations, check out our [docs](https://apollosapp.io)!
 
-#### Migrations
+#### 
+rations
 
 Database migrations can be run locally via
 ```
@@ -93,7 +94,7 @@ and in production / heroku via
 ```
 heroku --app YOUR_HEROKU_APP_NAME_HERE run yarn migrator up
 ```
-**Make sure you `yarn build` before running `yarn migrator` if you have made any changes to your app.
+**Make sure you `yarn build` before running `yarn migrator` if you have made any changes to your app.**
 
 ### Mobile App
 
