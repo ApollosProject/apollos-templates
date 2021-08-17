@@ -1,14 +1,17 @@
+import fs from 'fs';
 import path from 'path';
 import fetch from 'node-fetch';
 import dotenv from "dotenv/config"; // eslint-disable-line
 import ApollosConfig from '@apollosproject/config';
 
-const configName = process.env.DATABASE_URL
-  ? 'config.postgres.yml'
-  : 'config.yml';
-
 ApollosConfig.loadYaml({
-  configPath: path.join(__dirname, '..', configName),
+  configPath: path.join(
+    __dirname,
+    '..',
+    fs.existsSync(path.join(__dirname, '..', 'config.postgres.yml'))
+      ? 'config.postgres.yml'
+      : 'config.yml'
+  ),
 });
 
 // defaults
