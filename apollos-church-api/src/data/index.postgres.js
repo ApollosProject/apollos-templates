@@ -91,8 +91,8 @@ const data = {
   BinaryFiles, // This entry needs to come before (postgres) Person
   PostgresPerson, // Postgres person for now, as we extend this dataSource in the 'rockWithPostgres' file
   ...(fs.existsSync(path.join(__dirname, '../..', 'config.postgres.yml'))
-    ? console.log('using postgres') || postgresContentModules
-    : console.log('using rock') || rockContentModules),
+    ? postgresContentModules
+    : rockContentModules),
   Cloudinary,
   Auth,
   AuthSms,
