@@ -1,3 +1,4 @@
+import querystring from 'querystring';
 import React from 'react';
 import PropTypes from 'prop-types';
 import ApollosConfig from '@apollosproject/config';
@@ -26,9 +27,12 @@ const AppProviders = (props) => (
           NavigationService.navigate('ContentSingle', { itemId: location });
         }
         if (route === 'nav') {
+          const [component, params] = location.split('?');
+          const args = querystring.parse(params);
           NavigationService.navigate(
             // turns "home" into "Home"
-            location[0].toUpperCase() + location.substring(1)
+            component[0].toUpperCase() + component.substring(1),
+            args
           );
         }
       }}
