@@ -150,6 +150,7 @@ fastlane/report.xml
 *.app.dSYM.zip
 
 # iOS keys
+push.pem
 *.p8
 
 # Google Play authentication key
