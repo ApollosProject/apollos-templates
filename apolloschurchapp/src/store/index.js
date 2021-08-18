@@ -2,7 +2,7 @@ import gql from 'graphql-tag';
 
 import { schema as mediaPlayerSchema } from '@apollosproject/ui-media-player';
 import { updatePushId } from '@apollosproject/ui-notifications';
-import CACHE_LOADED from '../client/getCacheLoaded'; // eslint-disable-line
+import CACHE_LOADED from '../client/getCacheLoaded';
 
 // TODO: this will require more organization...ie...not keeping everything in one file.
 // But this is simple while our needs our small.
@@ -25,6 +25,8 @@ ${mediaPlayerSchema}
 export const defaults = {
   __typename: 'Query',
   cacheLoaded: false,
+  isLoggedIn: false,
+  notificationsEnabled: false,
 };
 
 const GET_LOGGED_IN = gql`
