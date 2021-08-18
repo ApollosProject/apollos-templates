@@ -45,9 +45,8 @@ const getIntrospectionData = async () => {
   } catch (e) {
     if (attempts < maxAttempts) {
       console.log(
-        `Error writing fragmentTypes (-api probably hasn't started yet). Trying again after wait. Attempt: ${
-          attempts + 1
-        } of ${maxAttempts}`
+        `Error writing fragmentTypes (-api probably hasn't started yet). Trying again after wait. Attempt: ${attempts +
+          1} of ${maxAttempts}`
       );
       await new Promise((resolve) => setTimeout(resolve, timeBetweenAttempts)); // try again after waiting
       getIntrospectionData();
