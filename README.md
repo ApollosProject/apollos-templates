@@ -82,6 +82,19 @@ heroku open
 
 To get started with different API integrations, check out our [docs](https://apollosapp.io)!
 
+#### Migrations
+
+Database migrations can be run locally via
+```
+yarn migrator up
+```
+and in production / heroku via
+
+```
+heroku --app YOUR_HEROKU_APP_NAME_HERE run yarn migrator up
+```
+**Make sure you `yarn build` before running `yarn migrator` if you have made any changes to your app.**
+
 ### Mobile App
 
 This will outline the steps required to get your Android and iOS apps up and running. You will need a functioning production API from the previous section before moving forward.

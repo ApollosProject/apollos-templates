@@ -30,7 +30,6 @@ import {
 } from '@apollosproject/ui-connected';
 import Providers from './Providers';
 import ContentSingle from './content-single';
-import Event from './event';
 import Tabs from './tabs';
 import customTheme, { customIcons } from './theme';
 
@@ -108,11 +107,6 @@ const App = () => (
                 title: route.params.itemTitle || 'Content Feed',
                 stackPresentation: 'push',
               })}
-            />
-            <Screen
-              name="Event"
-              component={Event}
-              options={{ title: 'Event' }}
             />
             <Screen
               name="Auth"
