@@ -93,7 +93,23 @@ apolloServer.applyMiddleware({ app, path: '/' });
 (async () => {
   if (ApollosConfig?.DATABASE?.URL) {
     const migrationRunner = await createMigrationRunner({ migrations });
-    await migrationRunner.up();
+    const pending = await migrationRunner.pending();
+    if (pending.length) {
+      console.log('\x1b[31m', '██████████████████████████████████', '\x1b[0m');
+      console.log(
+        '\x1b[36m',
+        'You currently have a number of pending migrations',
+        '\x1b[0m'
+      );
+      console.log(pending);
+      console.log(
+        `Keep in mind, you are currently connected to ${
+          migrationRunner?.options?.context?.sequelize?.options?.host
+        }`
+      );
+      console.log('\x1b[31m', '██████████████████████████████████', '\x1b[0m');
+    }
+    if (ApollosConfig.AUTO_MIGRATE) await migrationRunner.up();
   }
 })();
 

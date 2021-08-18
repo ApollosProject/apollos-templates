@@ -18,12 +18,12 @@ const goToAuth = () => NavigationService.resetToAuth();
 const wipeData = () =>
   cache.writeQuery({ query: GET_ALL_DATA, data: defaults });
 
-let clearStore;
 let storeIsResetting = false;
 const onAuthError = async () => {
   if (!storeIsResetting) {
     storeIsResetting = true;
-    await clearStore();
+    await client.stop();
+    await client.clearStore();
   }
   storeIsResetting = false;
   goToAuth();
@@ -65,10 +65,6 @@ export const client = new ApolloClient({
     },
   },
 });
-
-// Hack to give auth link access to method on client;
-// eslint-disable-next-line prefer-destructuring
-clearStore = client.clearStore;
 
 wipeData();
 // Ensure that media player still works after logout.
