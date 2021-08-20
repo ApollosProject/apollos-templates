@@ -111,11 +111,12 @@ npx react-native-rename "<ChurchName>"
 
 Add new icons and splash screen. For customization, see [react-native-make](#). Icons should be 1024 jpgs and splash should be 3000h transparent png.
 
-![icons](https://files-lrt96nsk5.vercel.app)
+![icons](https://user-images.githubusercontent.com/72768221/130254147-fdea1e83-05b0-4466-bf85-7cec05cfddc7.png)
+
 
 ```
 yarn icons icon-ios.png --platform ios
-yarn icons icon-android.jpg --platform android
+yarn icons icon-android.png --platform android
 yarn splash splash.png
 ```
 
