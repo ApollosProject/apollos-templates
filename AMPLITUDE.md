@@ -11,7 +11,6 @@ AMPLITUDE_API_KEY=<key>
 Next we need to add the package to the app. Install with yarn.
 
 `yarn add @amplitude/react-native@latest`
-`cd ios && pod install`
 
 Add the following snippet to your `src/Providers.js` file:
 
