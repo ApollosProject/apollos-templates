@@ -85,14 +85,17 @@ To get started with different API integrations, check out our [docs](https://apo
 #### Migrations
 
 Database migrations can be run locally via
+
 ```
 yarn migrator up
 ```
+
 and in production / heroku via
 
 ```
 heroku --app YOUR_HEROKU_APP_NAME_HERE run yarn migrator up
 ```
+
 **Make sure you `yarn build` before running `yarn migrator` if you have made any changes to your app.**
 
 ### Mobile App
@@ -183,7 +186,7 @@ echo -n "<github username>:<token>" | base64
 Add the encoded token to your `.env` file
 
 ```
-MATCH_BASIC_GIT_AUTHORIZATION=<base64 encoded token>
+MATCH_GIT_BASIC_AUTHORIZATION=<base64 encoded token>
 ```
 
 Inside the app directory run `match` to configure the certificates
@@ -218,7 +221,9 @@ npx @apollosproject/apollos-cli secrets -e <TOKEN>
 
 Make sure to remember that password and add it to Github as a secret.
 
-`ENCRYPTION_PASSWORD=<password>`
+```
+gh secret set ENCRYPTION_PASSWORD -b <password>
+```
 
 Now push the changes and watch the app deploy!
 
