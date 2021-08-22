@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { ApolloProvider, ApolloClient, ApolloLink } from '@apollo/client';
 import { createPersistedQueryLink } from '@apollo/client/link/persisted-queries';
-import { sha256 } from 'crypto-hash';
+import { sha256 } from 'react-native-sha256';
 import { getVersion, getApplicationName } from 'react-native-device-info';
 import { Platform } from 'react-native';
 import { createUploadLink } from 'apollo-upload-client';
@@ -38,7 +38,7 @@ const androidUri = ApollosConfig.ANDROID_URL || '10.0.2.2';
 if (Platform.OS === 'android') uri = uri.replace('localhost', androidUri);
 
 const errorLink = buildErrorLink(onAuthError);
-const persistedQueryLink = createPersistedQueryLink({
+const apqLink = createPersistedQueryLink({
   sha256,
   useGETForHashedQueries: true,
 });
@@ -46,12 +46,11 @@ const persistedQueryLink = createPersistedQueryLink({
 const link = ApolloLink.from([
   authLink,
   errorLink,
-  persistedQueryLink,
+  apqLink,
   createUploadLink({ uri }),
 ]);
 
 export const client = new ApolloClient({
-  uri,
   link,
   cache,
   queryDeduplication: false,
