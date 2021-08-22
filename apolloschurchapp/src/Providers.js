@@ -14,8 +14,8 @@ import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding'
 
 import ClientProvider, { client } from './client';
 
-const AppProviders = (props) => (
-  <ClientProvider {...props}>
+const AppProviders = ({ children }) => (
+  <ClientProvider>
     <NotificationsProvider
       oneSignalKey={ApollosConfig.ONE_SIGNAL_KEY}
       // TODO deprecated prop
@@ -55,7 +55,7 @@ const AppProviders = (props) => (
         }
       >
         <AnalyticsProvider>
-          <LiveProvider>{props.children}</LiveProvider>
+          <LiveProvider>{children}</LiveProvider>
         </AnalyticsProvider>
       </AuthProvider>
     </NotificationsProvider>

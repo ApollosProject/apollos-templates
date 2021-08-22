@@ -7,6 +7,7 @@ import {
   StatusBar,
 } from 'react-native';
 import { Mutation } from '@apollo/client/react/components';
+import { gql } from '@apollo/client';
 import { Header } from '@react-navigation/stack';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
@@ -20,7 +21,6 @@ import {
 } from '@apollosproject/ui-kit';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
-import GET_AUTH_TOKEN from '../store/getAuthToken';
 import CHANGE_PASSWORD from './passwordChange';
 
 const Footer = styled({
@@ -90,11 +90,11 @@ class ChangePassword extends PureComponent {
         mutation={CHANGE_PASSWORD}
         update={async (cache, { data: { token } }) => {
           await cache.writeQuery({
-            query: GET_AUTH_TOKEN,
-            data: { authToken: token },
-          });
-
-          await cache.writeData({
+            query: gql`
+              query authToken {
+                authToken @client
+              }
+            `,
             data: { authToken: token },
           });
         }}
