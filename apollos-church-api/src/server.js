@@ -61,11 +61,13 @@ const apolloServer = new ApolloServer({
     },
   },
   uploads: false,
-  cache: process.env.REDIS_URL
-    ? new BaseRedisCache({
-        client: new Redis(process.env.REDIS_URL),
-      })
-    : null,
+  ...(process.env.REDIS_URL
+    ? {
+        cache: new BaseRedisCache({
+          client: new Redis(process.env.REDIS_URL),
+        }),
+      }
+    : {}),
   cacheControl: {
     stripFormattedExtensions: false,
     calculateHttpHeaders: true,
