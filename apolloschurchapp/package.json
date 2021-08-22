@@ -16,6 +16,8 @@
     "generate-stories": "rnstl --searchDir ./src --pattern **/*.stories.js",
     "lint": "eslint ./src --ext .js",
     "postinstall": "jetify && yarn pods",
+    "bump": "yarn version --patch",
+    "postversion": "react-native-version --amend --never-increment-build && git push --follow-tags",
     "pods": "(bundle install && cd ios && bundle exec pod install --repo-update)",
     "start": "yarn start:dev",
     "start:dev": "yarn generate-stories && node ./scripts/get-introspection-data.js && react-native start",
@@ -151,6 +153,7 @@
     "prop-types": "15.6.1",
     "react-dom": "16.6.3",
     "react-native-storybook-loader": "1.8.0",
+    "react-native-version": "^4.0.0",
     "react-test-renderer": "16.13.1",
     "waait": "1.0.2"
   }

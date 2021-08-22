@@ -31,6 +31,14 @@ end
 
 platform :ios do
 
+  desc "Generate new provisioning profiles and certificates for app and push notifications"
+  lane :certs do
+    app_store_connect_api_key(key_filepath: "ios/apollos.p8")
+    match(type: 'development')
+    match(type: 'appstore')
+    get_push_certificate(pem_name: 'push.pem')
+  end
+
   desc "Push a new internal build to TestFlight"
   lane :deploy do
 
