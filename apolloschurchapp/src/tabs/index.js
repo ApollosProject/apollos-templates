@@ -15,18 +15,6 @@ import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding'
 import Connect from './connect';
 import tabBarIcon from './tabBarIcon';
 
-const HeaderLogo = withTheme(({ theme }) => ({
-  style: {
-    height: theme.sizing.baseUnit * 2.5,
-    width: '70%',
-    resizeMode: 'contain',
-  },
-  source:
-    theme.type === 'light'
-      ? require('./wordmark.png')
-      : require('./wordmark.dark.png'),
-}))(Image);
-
 const SearchIcon = withTheme(({ theme: { colors, sizing: { baseUnit } } }) => ({
   name: 'search',
   size: baseUnit * 2,
@@ -43,7 +31,6 @@ SearchButton.propTypes = {
   onPress: PropTypes.func,
 };
 
-const HeaderCenter = () => <HeaderLogo source={require('./wordmark.png')} />;
 const HeaderRight = () => {
   const navigation = useNavigation();
   return <SearchButton onPress={() => navigation.navigate('Search')} />;
@@ -53,7 +40,6 @@ const HeaderRight = () => {
 const HomeTab = createFeatureFeedTab({
   screenOptions: {
     headerHideShadow: true,
-    headerCenter: HeaderCenter,
     headerRight: HeaderRight,
     headerLargeTitle: false,
   },
