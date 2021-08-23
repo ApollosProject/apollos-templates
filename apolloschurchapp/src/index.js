@@ -31,7 +31,6 @@ import {
 import Providers from './Providers';
 import ContentSingle from './content-single';
 import Tabs from './tabs';
-import customTheme, { customIcons } from './theme';
 
 enableScreens(); // improves performance for react-navigation
 
@@ -76,7 +75,7 @@ const LandingToAuth = () => {
 const { Navigator, Screen } = createNativeStackNavigator();
 
 const App = () => (
-  <ThemeProvider themeInput={customTheme} iconInput={customIcons}>
+  <ThemeProvider>
     <BackgroundView>
       <AppStatusBar />
       <ThemedNavigationContainer
