@@ -15,7 +15,6 @@ import * as Cache from '@apollosproject/data-connector-redis-cache';
 import * as Sms from '@apollosproject/data-connector-twilio';
 import {
   Followings,
-  Interactions,
   RockConstants,
   Sharable,
   Auth,
@@ -43,6 +42,7 @@ import {
   Notification,
   NotificationPreference,
   Tag,
+  Interactions,
   Campus as PostgresCampus,
   Person as PostgresPerson,
   Media as PostgresMedia,
