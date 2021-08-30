@@ -70,7 +70,7 @@ jobs:
     - run: cp .env.shared .env
 
     - name: Install Dependencies
-      run: yarn
+      run: yarn config set network-timeout 300000 && yarn
 
     # required to build
     - name: Generate Stories
@@ -110,7 +110,7 @@ jobs:
     - run: cp .env.shared .env
 
     - name: Install Dependencies
-      run: yarn
+      run: yarn config set network-timeout 300000 && yarn
 
     # required to build
     - name: Generate Stories

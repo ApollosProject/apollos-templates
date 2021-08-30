@@ -10,20 +10,24 @@ AMPLITUDE_API_KEY=<key>
 
 Next we need to add the package to the app. Install with yarn.
 
-`yarn add react-native-amplitude-analytics`
+`yarn add @amplitude/react-native@latest`
 
 Add the following snippet to your `src/Providers.js` file:
 
 ```
-import RNAmplitude from 'react-native-amplitude-analytics';
+import { Amplitude } from '@amplitude/react-native';
 
-const amplitude = new RNAmplitude(ApollosConfig.AMPLITUDE_API_KEY);
+const amplitude = Amplitude.getInstance();
+amplitude.init(ApollosConfig.AMPLITUDE_API_KEY);
 ```
 
 Now add Amplitudes `logEvent` to our `AnalyticsProvider`
 
 ```
-<AnalyticsProvider trackFunctions={
-  [({eventName, properties}) => amplitude.logEvent(eventName, properties)]
-}>
+<AnalyticsProvider
+  trackFunctions={[
+    ({ eventName, properties }) =>
+      amplitude.logEvent(eventName, properties),
+  ]}
+>
 ```
