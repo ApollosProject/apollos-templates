@@ -64,7 +64,11 @@ const HeaderLeft = () => {
 };
 
 const CustomConnectScreen = () => (
-  <ConnectScreenConnected ActionTable={ActionTable} ActionBar={ActionBar} />
+  <ConnectScreenConnected
+    showAvatar={false}
+    ActionTable={ActionTable}
+    ActionBar={ActionBar}
+  />
 );
 
 // we nest stack inside of tabs so we can use all the fancy native header features
