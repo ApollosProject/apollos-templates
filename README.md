@@ -82,6 +82,22 @@ heroku open
 
 To get started with different API integrations, check out our [docs](https://apollosapp.io)!
 
+#### Migrations
+
+Database migrations can be run locally via
+
+```
+yarn migrator up
+```
+
+and in production / heroku via
+
+```
+heroku --app YOUR_HEROKU_APP_NAME_HERE run yarn migrator up
+```
+
+**Make sure you `yarn build` before running `yarn migrator` if you have made any changes to your app.**
+
 ### Mobile App
 
 This will outline the steps required to get your Android and iOS apps up and running. You will need a functioning production API from the previous section before moving forward.
@@ -95,11 +111,12 @@ npx react-native-rename "<ChurchName>"
 
 Add new icons and splash screen. For customization, see [react-native-make](#). Icons should be 1024 jpgs and splash should be 3000h transparent png.
 
-![icons](https://files-lrt96nsk5.vercel.app)
+![icons](https://user-images.githubusercontent.com/72768221/130254147-fdea1e83-05b0-4466-bf85-7cec05cfddc7.png)
+
 
 ```
 yarn icons icon-ios.png --platform ios
-yarn icons icon-android.jpg --platform android
+yarn icons icon-android.png --platform android
 yarn splash splash.png
 ```
 
@@ -170,7 +187,7 @@ echo -n "<github username>:<token>" | base64
 Add the encoded token to your `.env` file
 
 ```
-MATCH_BASIC_GIT_AUTHORIZATION=<base64 encoded token>
+MATCH_GIT_BASIC_AUTHORIZATION=<base64 encoded token>
 ```
 
 Inside the app directory run `match` to configure the certificates
@@ -205,7 +222,9 @@ npx @apollosproject/apollos-cli secrets -e <TOKEN>
 
 Make sure to remember that password and add it to Github as a secret.
 
-`ENCRYPTION_PASSWORD=<password>`
+```
+gh secret set ENCRYPTION_PASSWORD -b <password>
+```
 
 Now push the changes and watch the app deploy!
 

@@ -15,7 +15,6 @@ import * as Cache from '@apollosproject/data-connector-redis-cache';
 import * as Sms from '@apollosproject/data-connector-twilio';
 import {
   Followings,
-  Interactions,
   RockConstants,
   Sharable,
   Auth,
@@ -29,6 +28,11 @@ import {
   Event,
   PrayerRequest,
   Person as RockPerson,
+  ContentItem as RockContentItem,
+  ContentChannel,
+  Feature as RockFeature,
+  ActionAlgorithm as RockActionAlgorithm,
+  Interactions as PostgresInteractions,
 } from '@apollosproject/data-connector-rock';
 
 import {
@@ -38,15 +42,17 @@ import {
   Follow,
   Notification,
   NotificationPreference,
+  Tag,
+  Interactions,
   Campus as PostgresCampus,
   Person as PostgresPerson,
   Media as PostgresMedia,
-  Feature,
-  Tag,
-  ContentItem,
+  Feature as PostgresFeature,
+  ContentItem as PostgresContentItem,
   ContentItemsConnection,
-  ContentItemCategory as ContentChannel,
-  ActionAlgorithm,
+  ContentItemCategory,
+  ActionAlgorithm as PostgresActionAlgorithm,
+  PrayerRequest as PostgresPrayerRequest,
 } from '@apollosproject/data-connector-postgres';
 
 import * as Theme from './theme';
@@ -59,21 +65,38 @@ import {
   Followings as FollowingsPostgresBridge,
 } from './rockWithPostgres';
 
+const postgresContentModules = {
+  ActionAlgorithm: PostgresActionAlgorithm,
+  Feature: PostgresFeature,
+  PostgresMedia,
+  Tag,
+  ContentItem: PostgresContentItem,
+  ContentItemsConnection,
+  ContentChannel: ContentItemCategory,
+  Interactions,
+  PrayerRequest: PostgresPrayerRequest,
+};
+
+const rockContentModules = {
+  ActionAlgorithm: RockActionAlgorithm,
+  Feature: RockFeature,
+  ContentItem: RockContentItem,
+  ContentChannel,
+  Interactions: PostgresInteractions,
+  PrayerRequest,
+};
+
 const data = {
   Interfaces,
   Followings,
   FollowingsPostgresBridge, // This entry needs to come after Followings.
   FeatureFeed,
-  ActionAlgorithm,
   RockPerson, // This entry needs to come before (postgres) Person
   BinaryFiles, // This entry needs to come before (postgres) Person
   PostgresPerson, // Postgres person for now, as we extend this dataSource in the 'rockWithPostgres' file
-  PostgresMedia,
-  Feature,
-  Tag,
-  ContentItem,
-  ContentItemsConnection,
-  ContentChannel,
+  ...(process.env.DATABASE_CONTENT
+    ? postgresContentModules
+    : rockContentModules),
   Cloudinary,
   Auth,
   AuthSms,
@@ -81,7 +104,6 @@ const data = {
   LiveStream,
   Theme,
   Scripture,
-  Interactions,
   RockConstants,
   Sharable,
   Analytics,
@@ -91,10 +113,8 @@ const data = {
   Template,
   Campus,
   Group,
-  // ActionAlgorithm,
   Event,
   Cache,
-  PrayerRequest,
   Comment,
   UserLike,
   UserFlag,
