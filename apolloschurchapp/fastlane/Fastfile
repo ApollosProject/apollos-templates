@@ -34,9 +34,9 @@ platform :ios do
   desc "Generate new provisioning profiles and certificates for app and push notifications"
   lane :certs do
     app_store_connect_api_key(key_filepath: "ios/apollos.p8")
-    match(type: 'development')
-    match(type: 'appstore')
-    get_push_certificate(pem_name: 'push.pem')
+    match(type: 'development', app_identifier: [ENV["DELIVER_APP_IDENTIFIER"], "#{ENV["DELIVER_APP_IDENTIFIER"]}.OneSignalNotificationServiceExtension"],)
+    match(type: 'appstore', app_identifier: [ENV["DELIVER_APP_IDENTIFIER"], "#{ENV["DELIVER_APP_IDENTIFIER"]}.OneSignalNotificationServiceExtension"],)
+    get_push_certificate
   end
 
   desc "Push a new internal build to TestFlight"
@@ -47,11 +47,32 @@ platform :ios do
 
     app_store_connect_api_key(key_filepath: "ios/apollos.p8", in_house: false)
     setup_ci
-    match(type: 'appstore', readonly: true)
+    match(
+      type: 'appstore',
+      app_identifier: [ENV["DELIVER_APP_IDENTIFIER"], "#{ENV["DELIVER_APP_IDENTIFIER"]}.OneSignalNotificationServiceExtension"],
+      readonly: true
+    )
     increment_build_number(build_number: number_of_commits, xcodeproj: "ios/" << proj << ".xcodeproj")
     build_app(workspace: "ios/" << proj << ".xcworkspace", scheme: proj)
     changelog_from_git_commits
     testflight
+  end
+
+  desc "Promote the most recent Testflight version to production"
+  lane :production do
+    app_store_connect_api_key(key_filepath: "ios/apollos.p8", in_house: false)
+    deliver(
+      skip_binary_upload: true,
+      skip_screenshots: true,
+      skip_metadata: true,
+      submit_for_review: true,
+      automatic_release: true,
+      submission_information: {
+        add_id_info_uses_idfa: false
+      },
+      reject_if_possible: true,
+      run_precheck_before_submit: false
+    )
   end
 end
 
