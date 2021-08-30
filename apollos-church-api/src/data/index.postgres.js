@@ -32,6 +32,7 @@ import {
   ContentChannel,
   Feature as RockFeature,
   ActionAlgorithm as RockActionAlgorithm,
+  Interactions as PostgresInteractions,
 } from '@apollosproject/data-connector-rock';
 
 import {
@@ -71,6 +72,7 @@ const postgresContentModules = {
   ContentItem: PostgresContentItem,
   ContentItemsConnection,
   ContentChannel: ContentItemCategory,
+  Interactions,
 };
 
 const rockContentModules = {
@@ -78,6 +80,7 @@ const rockContentModules = {
   Feature: RockFeature,
   ContentItem: RockContentItem,
   ContentChannel,
+  Interactions: PostgresInteractions,
 };
 
 const data = {
@@ -98,7 +101,6 @@ const data = {
   LiveStream,
   Theme,
   Scripture,
-  Interactions,
   RockConstants,
   Sharable,
   Analytics,
