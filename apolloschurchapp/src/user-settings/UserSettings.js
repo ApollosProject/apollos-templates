@@ -63,7 +63,8 @@ const UserSettings = () => {
                     <CellIcon name="arrow-next" />
                   </Cell>
                 </Touchable>
-                <Divider />
+              </TableView>
+              <TableView>
                 <Touchable
                   onPress={() => {
                     navigation.navigate('PersonalDetails');

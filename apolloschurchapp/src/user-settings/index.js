@@ -1,14 +1,33 @@
 import React from 'react';
+import { Text } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 
+import { withTheme } from '@apollosproject/ui-kit';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
-import { ModalCloseButton, ModalBackButton } from '@apollosproject/ui-kit';
 import { LikedContentFeedConnected } from '@apollosproject/ui-connected';
 import { NotificationSettingsConnected } from '@apollosproject/ui-notifications';
 
 import PersonalDetails from './PersonalDetails';
 import ChangePassword from './ChangePassword';
 import UserSettings from './UserSettings';
+
+const StyledText = withTheme(({ theme }) => ({
+  style: {
+    color: theme.colors.secondary,
+    fontSize: theme.sizing.baseUnit * 1.1,
+  },
+}))(Text);
+
+const ModalCloseText = () => {
+  const navigation = useNavigation();
+  const onPress = () => navigation.goBack();
+  return (
+    <StyledText name={'close'} onPress={onPress}>
+      Done
+    </StyledText>
+  );
+};
 
 const { Screen, Navigator } = createNativeStackNavigator();
 
@@ -17,8 +36,8 @@ const UserSettingsNavigator = () => (
     screenOptions={{
       // headerStyle: { backgroundColor: 'transparent' },
       headerHideShadow: true,
-      headerRight: ModalCloseButton,
-      headerLeft: ModalBackButton,
+      headerRight: ModalCloseText,
+      // headerLeft: ModalBackButton,
       // headerTitle: '',
       // headerTopInsetEnabled: false,
     }}

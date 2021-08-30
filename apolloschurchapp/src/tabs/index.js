@@ -48,6 +48,13 @@ SearchButton.propTypes = {
   onPress: PropTypes.func,
 };
 
+const Avatar = withTheme(({ theme: { sizing: { baseUnit } } }) => ({
+  size: 'small',
+  containerStyle: {
+    paddingBottom: baseUnit * 0.25,
+  },
+}))(UserAvatarConnected);
+
 const HeaderCenter = () => <HeaderLogo source={require('./wordmark.png')} />;
 const HeaderRight = () => {
   const navigation = useNavigation();
@@ -58,7 +65,7 @@ const HeaderLeft = () => {
   const navigation = useNavigation();
   return (
     <Touchable onPress={() => navigation.navigate('UserSettingsNavigator')}>
-      <UserAvatarConnected />
+      <Avatar />
     </Touchable>
   );
 };
