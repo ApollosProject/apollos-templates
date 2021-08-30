@@ -1327,14 +1327,6 @@ exports[`UserSettings component renders UserSettings when logged in 1`] = `
                             </View>
                           </View>
                           <View
-                            style={
-                              Object {
-                                "backgroundColor": "rgba(0, 0, 0, 0.09999999999999998)",
-                                "height": 0.5,
-                              }
-                            }
-                          />
-                          <View
                             accessible={true}
                             focusable={true}
                             onClick={[Function]}
