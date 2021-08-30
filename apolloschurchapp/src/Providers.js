@@ -1,7 +1,6 @@
 import querystring from 'querystring';
 import React from 'react';
 import PropTypes from 'prop-types';
-import ApollosConfig from '@apollosproject/config';
 import { NavigationService } from '@apollosproject/ui-kit';
 import { AuthProvider } from '@apollosproject/ui-auth';
 import { AnalyticsProvider } from '@apollosproject/ui-analytics';
@@ -17,7 +16,6 @@ import ClientProvider, { client } from './client';
 const AppProviders = ({ children }) => (
   <ClientProvider>
     <NotificationsProvider
-      oneSignalKey={ApollosConfig.ONE_SIGNAL_KEY}
       // TODO deprecated prop
       navigate={NavigationService.navigate}
       handleExternalLink={(url) => {
