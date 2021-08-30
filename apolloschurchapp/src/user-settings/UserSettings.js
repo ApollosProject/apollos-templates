@@ -96,6 +96,7 @@ const UserSettings = () => {
                     <CellIcon name="arrow-next" />
                   </Cell>
                 </Touchable>
+                <Divider />
                 <Touchable
                   onPress={() => {
                     navigation.navigate('Notifications');
