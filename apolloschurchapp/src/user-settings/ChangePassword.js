@@ -5,22 +5,21 @@ import { Mutation } from '@apollo/client/react/components';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import {
-  Button,
-  TextInput,
-  PaddedView,
-  FlexedView,
-  styled,
-} from '@apollosproject/ui-kit';
+import { Button, TextInput, PaddedView, styled } from '@apollosproject/ui-kit';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import GET_AUTH_TOKEN from '../store/getAuthToken';
 import CHANGE_PASSWORD from './passwordChange';
 
-const Footer = styled({
+const FlexedKeyboardAvoidingView = styled({
+  flex: 1,
+})(KeyboardAvoidingView);
+
+const Footer = styled(({ theme }) => ({
   flex: 1,
   justifyContent: 'flex-end',
-})(SafeAreaView);
+  marginBottom: theme.sizing.baseUnit * 5,
+}))(SafeAreaView);
 
 class ChangePassword extends PureComponent {
   static propTypes = {
@@ -31,40 +30,34 @@ class ChangePassword extends PureComponent {
   };
 
   renderForm = (props) => (
-    <KeyboardAvoidingView behavior="padding">
-      <FlexedView>
+    <FlexedKeyboardAvoidingView behavior="padding">
+      <PaddedView>
+        <TextInput
+          label="New Password"
+          type="password"
+          value={props.values.password}
+          error={props.touched.password && props.errors.password}
+          onChangeText={(text) => props.setFieldValue('password', text)}
+        />
+        <TextInput
+          label="Confirm Password"
+          type="password"
+          value={props.values.confirmPassword}
+          error={props.touched.confirmPassword && props.errors.confirmPassword}
+          onChangeText={(text) => props.setFieldValue('confirmPassword', text)}
+        />
+      </PaddedView>
+      <Footer>
         <PaddedView>
-          <TextInput
-            label="New Password"
-            type="password"
-            value={props.values.password}
-            error={props.touched.password && props.errors.password}
-            onChangeText={(text) => props.setFieldValue('password', text)}
-          />
-          <TextInput
-            label="Confirm Password"
-            type="password"
-            value={props.values.confirmPassword}
-            error={
-              props.touched.confirmPassword && props.errors.confirmPassword
-            }
-            onChangeText={(text) =>
-              props.setFieldValue('confirmPassword', text)
-            }
+          <Button
+            disabled={props.isSubmitting}
+            onPress={props.handleSubmit}
+            title="Save"
+            loading={props.isSubmitting}
           />
         </PaddedView>
-        <Footer>
-          <PaddedView>
-            <Button
-              disabled={props.isSubmitting}
-              onPress={props.handleSubmit}
-              title="Save"
-              loading={props.isSubmitting}
-            />
-          </PaddedView>
-        </Footer>
-      </FlexedView>
-    </KeyboardAvoidingView>
+      </Footer>
+    </FlexedKeyboardAvoidingView>
   );
 
   render() {

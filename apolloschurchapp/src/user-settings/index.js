@@ -14,25 +14,45 @@ const { Screen, Navigator } = createNativeStackNavigator();
 
 const UserSettingsNavigator = () => (
   <Navigator
-    headerMode="float"
     screenOptions={{
-      headerTranslucent: true,
-      headerStyle: { backgroundColor: 'transparent' },
+      // headerStyle: { backgroundColor: 'transparent' },
       headerHideShadow: true,
       headerRight: ModalCloseButton,
       headerLeft: ModalBackButton,
-      headerTitle: '',
-      headerTopInsetEnabled: false,
+      // headerTitle: '',
+      // headerTopInsetEnabled: false,
     }}
   >
-    <Screen component={UserSettings} name="UserSettings" />
-    <Screen name="Location" component={Location} />
-    <Screen component={NotificationSettingsConnected} name="Notifications" />
-    <Screen name="PersonalDetails" component={PersonalDetails} />
-    <Screen name="ChangePassword" component={ChangePassword} />
+    <Screen
+      component={UserSettings}
+      name="UserSettings"
+      options={{ title: 'User Settings' }}
+    />
+
+    <Screen
+      name="Location"
+      component={Location}
+      options={{ title: 'Campuses' }}
+    />
+    <Screen
+      component={NotificationSettingsConnected}
+      name="Notifications"
+      options={{ title: 'Notification Settings' }}
+    />
+    <Screen
+      name="PersonalDetails"
+      component={PersonalDetails}
+      options={{ title: 'Personal Details' }}
+    />
+    <Screen
+      name="ChangePassword"
+      component={ChangePassword}
+      options={{ title: 'Change Password' }}
+    />
     <Screen
       component={LikedContentFeedConnected}
       name="LikedContentFeedConnected"
+      options={{ title: 'Liked Content' }}
     />
   </Navigator>
 );

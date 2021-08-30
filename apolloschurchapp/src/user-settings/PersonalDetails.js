@@ -6,21 +6,20 @@ import { Query, Mutation } from '@apollo/client/react/components';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import {
-  TextInput,
-  PaddedView,
-  FlexedView,
-  Button,
-  styled,
-} from '@apollosproject/ui-kit';
+import { TextInput, PaddedView, Button, styled } from '@apollosproject/ui-kit';
 
 import { GET_USER_PROFILE } from '@apollosproject/ui-connected';
 import UPDATE_CURRENT_USER from './updateCurrentUser';
 
-const Footer = styled({
+const FlexedKeyboardAvoidingView = styled({
+  flex: 1,
+})(KeyboardAvoidingView);
+
+const Footer = styled(({ theme }) => ({
   flex: 1,
   justifyContent: 'flex-end',
-})(SafeAreaView);
+  marginBottom: theme.sizing.baseUnit * 5,
+}))(SafeAreaView);
 
 class PersonalDetails extends PureComponent {
   static propTypes = {
@@ -32,43 +31,41 @@ class PersonalDetails extends PureComponent {
 
   renderForm = (props) => (
     // have to add the offset to account for @react-navigation/native header
-    <KeyboardAvoidingView behavior="padding">
-      <FlexedView>
+    <FlexedKeyboardAvoidingView behavior="padding">
+      <PaddedView>
+        <TextInput
+          label="First Name"
+          type="text"
+          value={props.values.firstName}
+          error={props.touched.firstName && props.errors.firstName}
+          onChangeText={(text) => props.setFieldValue('firstName', text)}
+        />
+        <TextInput
+          label="Last Name"
+          type="text"
+          value={props.values.lastName}
+          error={props.touched.lastName && props.errors.lastName}
+          onChangeText={(text) => props.setFieldValue('lastName', text)}
+        />
+        <TextInput
+          label="Email"
+          type="email"
+          value={props.values.email}
+          error={props.touched.email && props.errors.email}
+          onChangeText={(text) => props.setFieldValue('email', text)}
+        />
+      </PaddedView>
+      <Footer>
         <PaddedView>
-          <TextInput
-            label="First Name"
-            type="text"
-            value={props.values.firstName}
-            error={props.touched.firstName && props.errors.firstName}
-            onChangeText={(text) => props.setFieldValue('firstName', text)}
-          />
-          <TextInput
-            label="Last Name"
-            type="text"
-            value={props.values.lastName}
-            error={props.touched.lastName && props.errors.lastName}
-            onChangeText={(text) => props.setFieldValue('lastName', text)}
-          />
-          <TextInput
-            label="Email"
-            type="email"
-            value={props.values.email}
-            error={props.touched.email && props.errors.email}
-            onChangeText={(text) => props.setFieldValue('email', text)}
+          <Button
+            disabled={!props.isValid || props.isSubmitting}
+            onPress={props.handleSubmit}
+            title="Save"
+            loading={props.isSubmitting}
           />
         </PaddedView>
-        <Footer>
-          <PaddedView>
-            <Button
-              disabled={!props.isValid || props.isSubmitting}
-              onPress={props.handleSubmit}
-              title="Save"
-              loading={props.isSubmitting}
-            />
-          </PaddedView>
-        </Footer>
-      </FlexedView>
-    </KeyboardAvoidingView>
+      </Footer>
+    </FlexedKeyboardAvoidingView>
   );
 
   render() {
