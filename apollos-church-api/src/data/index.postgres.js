@@ -15,7 +15,6 @@ import * as Cache from '@apollosproject/data-connector-redis-cache';
 import * as Sms from '@apollosproject/data-connector-twilio';
 import {
   Followings,
-  Interactions,
   RockConstants,
   Sharable,
   Auth,
@@ -33,6 +32,7 @@ import {
   ContentChannel,
   Feature as RockFeature,
   ActionAlgorithm as RockActionAlgorithm,
+  Interactions as PostgresInteractions,
 } from '@apollosproject/data-connector-rock';
 
 import {
@@ -43,6 +43,7 @@ import {
   Notification,
   NotificationPreference,
   Tag,
+  Interactions,
   Campus as PostgresCampus,
   Person as PostgresPerson,
   Media as PostgresMedia,
@@ -51,6 +52,7 @@ import {
   ContentItemsConnection,
   ContentItemCategory,
   ActionAlgorithm as PostgresActionAlgorithm,
+  PrayerRequest as PostgresPrayerRequest,
 } from '@apollosproject/data-connector-postgres';
 
 import * as Theme from './theme';
@@ -71,6 +73,8 @@ const postgresContentModules = {
   ContentItem: PostgresContentItem,
   ContentItemsConnection,
   ContentChannel: ContentItemCategory,
+  Interactions,
+  PrayerRequest: PostgresPrayerRequest,
 };
 
 const rockContentModules = {
@@ -78,6 +82,8 @@ const rockContentModules = {
   Feature: RockFeature,
   ContentItem: RockContentItem,
   ContentChannel,
+  Interactions: PostgresInteractions,
+  PrayerRequest,
 };
 
 const data = {
@@ -98,7 +104,6 @@ const data = {
   LiveStream,
   Theme,
   Scripture,
-  Interactions,
   RockConstants,
   Sharable,
   Analytics,
@@ -110,7 +115,6 @@ const data = {
   Group,
   Event,
   Cache,
-  PrayerRequest,
   Comment,
   UserLike,
   UserFlag,
