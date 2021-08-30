@@ -52,6 +52,7 @@ import {
   ContentItemsConnection,
   ContentItemCategory,
   ActionAlgorithm as PostgresActionAlgorithm,
+  PrayerRequest as PostgresPrayerRequest,
 } from '@apollosproject/data-connector-postgres';
 
 import * as Theme from './theme';
@@ -73,6 +74,7 @@ const postgresContentModules = {
   ContentItemsConnection,
   ContentChannel: ContentItemCategory,
   Interactions,
+  PrayerRequest: PostgresPrayerRequest,
 };
 
 const rockContentModules = {
@@ -81,6 +83,7 @@ const rockContentModules = {
   ContentItem: RockContentItem,
   ContentChannel,
   Interactions: PostgresInteractions,
+  PrayerRequest,
 };
 
 const data = {
@@ -112,7 +115,6 @@ const data = {
   Group,
   Event,
   Cache,
-  PrayerRequest,
   Comment,
   UserLike,
   UserFlag,
