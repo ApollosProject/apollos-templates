@@ -25,11 +25,11 @@ import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 import { Landing, Onboarding } from '@apollosproject/ui-onboarding';
 
 import {
+  ContentSingleConnected,
   ContentFeedConnected,
   SearchScreenConnected,
 } from '@apollosproject/ui-connected';
 import Providers from './Providers';
-import ContentSingle from './content-single';
 import Tabs from './tabs';
 import customTheme, { customIcons } from './theme';
 
@@ -96,7 +96,7 @@ const App = () => (
             <Screen name="Tabs" component={Tabs} />
             <Screen
               name="ContentSingle"
-              component={ContentSingle}
+              component={ContentSingleConnected}
               options={{
                 title: 'Content',
                 stackPresentation: 'push',
