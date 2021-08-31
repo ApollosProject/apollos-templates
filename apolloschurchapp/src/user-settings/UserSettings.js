@@ -17,6 +17,7 @@ import {
   H4,
   H6,
   PaddedView,
+  withTheme,
 } from '@apollosproject/ui-kit';
 import {
   checkOnboardingStatusAndNavigate,
@@ -27,6 +28,14 @@ import {
   RockAuthedWebBrowser,
   UserAvatarUpdate,
 } from '@apollosproject/ui-connected';
+
+const StyledPaddedView = withTheme(({ theme }) => ({
+  style: {
+    paddingLeft: theme.sizing.baseUnit,
+    paddingBottom: theme.sizing.baseUnit * 0.5,
+    paddingTop: 0,
+  },
+}))(PaddedView);
 
 const UserSettings = () => {
   const navigation = useNavigation();
@@ -60,14 +69,14 @@ const UserSettings = () => {
                   }}
                 >
                   <Cell>
+                    <CellIcon name="like" />
                     <CellText>Likes</CellText>
-                    <CellIcon name="arrow-next" />
                   </Cell>
                 </Touchable>
               </TableView>
-              <PaddedView style={{ paddingTop: 0, paddingBottom: 0 }}>
+              <StyledPaddedView>
                 <H6>Your Profile</H6>
-              </PaddedView>
+              </StyledPaddedView>
               <TableView>
                 <Touchable
                   onPress={() => {
@@ -113,9 +122,9 @@ const UserSettings = () => {
                   </Cell>
                 </Touchable>
               </TableView>
-              <PaddedView style={{ paddingTop: 0, paddingBottom: 0 }}>
+              <StyledPaddedView>
                 <H6>Help & Feedback</H6>
-              </PaddedView>
+              </StyledPaddedView>
               <TableView>
                 <Touchable
                   onPress={() => {
@@ -162,8 +171,11 @@ const UserSettings = () => {
                   }}
                 >
                   <Cell>
+                    {
+                      // Uncomment this once this icon is merged to master in core
+                      // <CellIcon name="arrow-down-right" />
+                    }
                     <CellText>Logout</CellText>
-                    <CellIcon name="arrow-next" />
                   </Cell>
                 </Touchable>
               </TableView>
