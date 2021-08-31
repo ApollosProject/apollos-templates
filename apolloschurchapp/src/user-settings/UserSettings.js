@@ -41,7 +41,7 @@ const StyledPaddedView = withTheme(({ theme }) => ({
 }))(PaddedView);
 
 const StyledCellIcon = withTheme(({ theme }) => ({
-  fill: theme.colors.secondary,
+  fill: theme.colors.neutral.gray2,
 }))(CellIcon);
 
 const Container = styled({
