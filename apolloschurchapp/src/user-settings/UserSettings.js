@@ -3,6 +3,7 @@ import { ScrollView } from 'react-native';
 import { useQuery, useMutation, useApolloClient, gql } from '@apollo/client';
 import { useNavigation } from '@react-navigation/native';
 import { getVersion, getBuildNumber } from 'react-native-device-info';
+import { get } from 'lodash';
 
 import {
   BackgroundView,
@@ -14,10 +15,12 @@ import {
   Touchable,
   ActivityIndicator,
   NavigationService,
+  H3,
   H4,
   H6,
   PaddedView,
   withTheme,
+  styled,
 } from '@apollosproject/ui-kit';
 import {
   checkOnboardingStatusAndNavigate,
@@ -37,6 +40,15 @@ const StyledPaddedView = withTheme(({ theme }) => ({
   },
 }))(PaddedView);
 
+const StyledCellIcon = withTheme(({ theme }) => ({
+  fill: theme.colors.secondary,
+}))(CellIcon);
+
+const Container = styled({
+  alignItems: 'center',
+  justifyContent: 'center',
+})(PaddedView);
+
 const UserSettings = () => {
   const navigation = useNavigation();
   const {
@@ -49,16 +61,26 @@ const UserSettings = () => {
     query currentUserId {
       currentUser {
         id
+        profile {
+          firstName
+          lastName
+        }
       }
     }
   `);
+
+  const firstName = get(data, 'currentUser.profile.firstName');
+  const lastName = get(data, 'currentUser.profile.lastName');
 
   if (loading) return <ActivityIndicator />;
   if (!isLoggedIn) return null;
   return (
     <BackgroundView>
       <ScrollView>
-        <UserAvatarUpdate />
+        <Container>
+          <UserAvatarUpdate />
+          <H3>{firstName && lastName ? `${firstName} ${lastName}` : ''}</H3>
+        </Container>
         <RockAuthedWebBrowser>
           {(openUrl) => (
             <>
@@ -69,7 +91,7 @@ const UserSettings = () => {
                   }}
                 >
                   <Cell>
-                    <CellIcon name="like" />
+                    <StyledCellIcon name="like" />
                     <CellText>Likes</CellText>
                   </Cell>
                 </Touchable>
@@ -85,7 +107,7 @@ const UserSettings = () => {
                 >
                   <Cell>
                     <CellText>Personal Details</CellText>
-                    <CellIcon name="arrow-next" />
+                    <StyledCellIcon name="arrow-next" />
                   </Cell>
                 </Touchable>
                 <Divider />
@@ -96,7 +118,7 @@ const UserSettings = () => {
                 >
                   <Cell>
                     <CellText>Location</CellText>
-                    <CellIcon name="arrow-next" />
+                    <StyledCellIcon name="arrow-next" />
                   </Cell>
                 </Touchable>
                 <Divider />
@@ -107,7 +129,7 @@ const UserSettings = () => {
                 >
                   <Cell>
                     <CellText>Change Password</CellText>
-                    <CellIcon name="arrow-next" />
+                    <StyledCellIcon name="arrow-next" />
                   </Cell>
                 </Touchable>
                 <Divider />
@@ -118,7 +140,7 @@ const UserSettings = () => {
                 >
                   <Cell>
                     <CellText>Notification Settings</CellText>
-                    <CellIcon name="arrow-next" />
+                    <StyledCellIcon name="arrow-next" />
                   </Cell>
                 </Touchable>
               </TableView>
@@ -133,7 +155,7 @@ const UserSettings = () => {
                 >
                   <Cell>
                     <CellText>Give Feedback</CellText>
-                    <CellIcon name="arrow-next" />
+                    <StyledCellIcon name="arrow-next" />
                   </Cell>
                 </Touchable>
                 <Divider />
@@ -142,7 +164,7 @@ const UserSettings = () => {
                 >
                   <Cell>
                     <CellText>Privacy Policy</CellText>
-                    <CellIcon name="arrow-next" />
+                    <StyledCellIcon name="arrow-next" />
                   </Cell>
                 </Touchable>
                 <Divider />
@@ -151,7 +173,7 @@ const UserSettings = () => {
                 >
                   <Cell>
                     <CellText>Terms of Use</CellText>
-                    <CellIcon name="arrow-next" />
+                    <StyledCellIcon name="arrow-next" />
                   </Cell>
                 </Touchable>
                 <Divider />
@@ -173,7 +195,7 @@ const UserSettings = () => {
                   <Cell>
                     {
                       // Uncomment this once this icon is merged to master in core
-                      // <CellIcon name="arrow-down-right" />
+                      // <StyledCellIcon name="arrow-down-right" />
                     }
                     <CellText>Logout</CellText>
                   </Cell>

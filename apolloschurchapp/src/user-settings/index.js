@@ -45,7 +45,7 @@ const UserSettingsNavigator = () => (
     <Screen
       component={UserSettings}
       name="UserSettings"
-      options={{ title: 'User Settings' }}
+      options={{ title: 'Profile' }}
     />
 
     <Screen
