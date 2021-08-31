@@ -93,7 +93,7 @@ yarn migrator up
 and in production / heroku via
 
 ```
-heroku --app YOUR_HEROKU_APP_NAME_HERE run yarn migrator up
+heroku run -a YOUR_HEROKU_APP_NAME_HERE yarn migrator up
 ```
 
 **Make sure you `yarn build` before running `yarn migrator` if you have made any changes to your app.**
@@ -112,7 +112,6 @@ npx react-native-rename "<ChurchName>"
 Add new icons and splash screen. For customization, see [react-native-make](#). Icons should be 1024 jpgs and splash should be 3000h transparent png.
 
 ![icons](https://user-images.githubusercontent.com/72768221/130254147-fdea1e83-05b0-4466-bf85-7cec05cfddc7.png)
-
 
 ```
 yarn icons icon-ios.png --platform ios
