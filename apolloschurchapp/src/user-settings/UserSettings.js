@@ -15,6 +15,7 @@ import {
   ActivityIndicator,
   NavigationService,
   H4,
+  H6,
   PaddedView,
 } from '@apollosproject/ui-kit';
 import {
@@ -64,6 +65,9 @@ const UserSettings = () => {
                   </Cell>
                 </Touchable>
               </TableView>
+              <PaddedView style={{ paddingTop: 0, paddingBottom: 0 }}>
+                <H6>Your Profile</H6>
+              </PaddedView>
               <TableView>
                 <Touchable
                   onPress={() => {
@@ -109,6 +113,9 @@ const UserSettings = () => {
                   </Cell>
                 </Touchable>
               </TableView>
+              <PaddedView style={{ paddingTop: 0, paddingBottom: 0 }}>
+                <H6>Help & Feedback</H6>
+              </PaddedView>
               <TableView>
                 <Touchable
                   onPress={() => {
@@ -120,8 +127,7 @@ const UserSettings = () => {
                     <CellIcon name="arrow-next" />
                   </Cell>
                 </Touchable>
-              </TableView>
-              <TableView>
+                <Divider />
                 <Touchable
                   onPress={() => openUrl('https://apollosrock.newspring.cc/')}
                 >
@@ -139,6 +145,12 @@ const UserSettings = () => {
                     <CellIcon name="arrow-next" />
                   </Cell>
                 </Touchable>
+                <Divider />
+                <Cell>
+                  <CellText>
+                    {`App Version: ${getVersion()}.${getBuildNumber()}`}
+                  </CellText>
+                </Cell>
               </TableView>
               <TableView>
                 <Touchable
@@ -154,13 +166,6 @@ const UserSettings = () => {
                     <CellIcon name="arrow-next" />
                   </Cell>
                 </Touchable>
-              </TableView>
-              <TableView>
-                <Cell>
-                  <CellText>
-                    {`App Version: ${getVersion()}.${getBuildNumber()}`}
-                  </CellText>
-                </Cell>
               </TableView>
 
               {/* testing panel */}
