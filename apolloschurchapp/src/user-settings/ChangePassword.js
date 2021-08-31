@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { KeyboardAvoidingView } from 'react-native';
 import { Mutation } from '@apollo/client/react/components';
 import { gql } from '@apollo/client';
-import { Header } from '@react-navigation/stack';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
