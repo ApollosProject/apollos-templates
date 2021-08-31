@@ -2,13 +2,14 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { KeyboardAvoidingView } from 'react-native';
 import { Mutation } from '@apollo/client/react/components';
+import { gql } from '@apollo/client';
+import { Header } from '@react-navigation/stack';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
 import { Button, TextInput, PaddedView, styled } from '@apollosproject/ui-kit';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
-import GET_AUTH_TOKEN from '../store/getAuthToken';
 import CHANGE_PASSWORD from './passwordChange';
 
 const FlexedKeyboardAvoidingView = styled({
@@ -66,11 +67,11 @@ class ChangePassword extends PureComponent {
         mutation={CHANGE_PASSWORD}
         update={async (cache, { data: { token } }) => {
           await cache.writeQuery({
-            query: GET_AUTH_TOKEN,
-            data: { authToken: token },
-          });
-
-          await cache.writeData({
+            query: gql`
+              query authToken {
+                authToken @client
+              }
+            `,
             data: { authToken: token },
           });
         }}
