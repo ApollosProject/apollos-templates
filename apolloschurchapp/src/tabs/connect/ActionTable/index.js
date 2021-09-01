@@ -42,29 +42,44 @@ const ActionTable = () => (
           </Name>
         </RowHeader>
         <TableView>
-          <Touchable
-            onPress={() => openUrl('https://apollosrock.newspring.cc/page/235')}
-          >
+          <Touchable onPress={() => openUrl('https://www.google.com')}>
             <Cell>
-              <CellText>Find a serving opportunity</CellText>
+              <CellText>Contact us</CellText>
               <CellIcon name="arrow-next" />
             </Cell>
           </Touchable>
           <Divider />
-          <Touchable
-            onPress={() => openUrl('https://apollosrock.newspring.cc/page/236')}
-          >
-            <Cell>
-              <CellText>Join a small group</CellText>
-              <CellIcon name="arrow-next" />
-            </Cell>
-          </Touchable>
-          <Divider />
-          <Touchable
-            onPress={() => openUrl('https://apollosrock.newspring.cc/page/233')}
-          >
+          <Touchable onPress={() => openUrl('https://www.google.com')}>
             <Cell>
               <CellText>I need prayer</CellText>
+              <CellIcon name="arrow-next" />
+            </Cell>
+          </Touchable>
+          <Divider />
+          <Touchable onPress={() => openUrl('https://www.google.com')}>
+            <Cell>
+              <CellText>Get baptized</CellText>
+              <CellIcon name="arrow-next" />
+            </Cell>
+          </Touchable>
+          <Divider />
+          <Touchable onPress={() => openUrl('https://www.google.com')}>
+            <Cell>
+              <CellText>Get care</CellText>
+              <CellIcon name="arrow-next" />
+            </Cell>
+          </Touchable>
+          <Divider />
+          <Touchable onPress={() => openUrl('https://www.google.com')}>
+            <Cell>
+              <CellText>Our locations</CellText>
+              <CellIcon name="arrow-next" />
+            </Cell>
+          </Touchable>
+          <Divider />
+          <Touchable onPress={() => openUrl('https://www.google.com')}>
+            <Cell>
+              <CellText>Report an issue</CellText>
               <CellIcon name="arrow-next" />
             </Cell>
           </Touchable>
