@@ -14,11 +14,7 @@ const { Screen, Navigator } = createNativeStackNavigator();
 
 const ConnectNavigator = (props) => (
   <Navigator {...props}>
-    <Screen
-      component={Connect}
-      name="Connect"
-      options={{ headerShown: false }}
-    />
+    <Screen component={Connect} name="Connect" />
     <Screen
       component={NotificationSettingsConnected}
       name="Notifications"
