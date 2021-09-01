@@ -11,6 +11,7 @@ import {
   styled,
   PaddedView,
   H4,
+  withTheme,
 } from '@apollosproject/ui-kit';
 import { RockAuthedWebBrowser } from '@apollosproject/ui-connected';
 
@@ -25,13 +26,19 @@ const Name = styled({
   flexGrow: 1,
 })(View);
 
+const ThemedH4 = withTheme(({ theme }) => ({
+  style: {
+    color: theme.colors.text.secondary,
+  },
+}))(H4);
+
 const ActionTable = () => (
   <RockAuthedWebBrowser>
     {(openUrl) => (
       <View>
         <RowHeader>
           <Name>
-            <H4>{'Connect with Apollos'}</H4>
+            <ThemedH4>{'Connect'}</ThemedH4>
           </Name>
         </RowHeader>
         <TableView>
