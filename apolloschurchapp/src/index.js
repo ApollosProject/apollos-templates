@@ -106,7 +106,7 @@ const App = () => (
               component={ContentSingleConnected}
               options={{
                 title: 'Content',
-                stackPresentation: 'push',
+                stackPresentation: 'containedModal',
               }}
             />
             <Screen
