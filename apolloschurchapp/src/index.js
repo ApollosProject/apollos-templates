@@ -23,6 +23,7 @@ import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 import { Landing, Onboarding } from '@apollosproject/ui-onboarding';
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 
 import {
   ContentSingleConnected,
@@ -52,6 +53,12 @@ const ProtectedRouteWithSplashScreen = () => {
     />
   );
 };
+
+const WrappedContentSingleConnected = (props) => (
+  <BottomSheetModalProvider>
+    <ContentSingleConnected {...props} />
+  </BottomSheetModalProvider>
+);
 
 const ThemedNavigationContainer = withTheme(({ theme, ...props }) => ({
   theme: {
@@ -103,10 +110,10 @@ const App = () => (
             />
             <Screen
               name="ContentSingle"
-              component={ContentSingleConnected}
+              component={WrappedContentSingleConnected}
               options={{
                 title: 'Content',
-                stackPresentation: 'containedModal',
+                stackPresentation: 'fullScreenModal',
               }}
             />
             <Screen
