@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Image } from 'react-native';
+import { Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
@@ -56,25 +56,15 @@ const Avatar = withTheme(({ theme: { sizing: { baseUnit } } }) => ({
 }))(UserAvatarConnected);
 
 const ProfileButton = ({ onPress }) => (
-  <Touchable onPress={() => onPress}>
-    <Avatar />
+  <Touchable onPress={onPress}>
+    <View>
+      <Avatar />
+    </View>
   </Touchable>
 );
 
 ProfileButton.propTypes = {
   onPress: PropTypes.func,
-};
-
-const HeaderCenter = () => <HeaderLogo source={require('./wordmark.png')} />;
-const HeaderRight = () => {
-  const navigation = useNavigation();
-  return (
-    <SearchButton
-      onPress={() => {
-        navigation.navigate('Search');
-      }}
-    />
-  );
 };
 
 const HeaderLeft = () => {
@@ -83,6 +73,17 @@ const HeaderLeft = () => {
     <ProfileButton
       onPress={() => {
         navigation.navigate('UserSettingsNavigator');
+      }}
+    />
+  );
+};
+const HeaderCenter = () => <HeaderLogo source={require('./wordmark.png')} />;
+const HeaderRight = () => {
+  const navigation = useNavigation();
+  return (
+    <SearchButton
+      onPress={() => {
+        navigation.navigate('Search');
       }}
     />
   );
