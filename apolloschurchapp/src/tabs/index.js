@@ -55,18 +55,36 @@ const Avatar = withTheme(({ theme: { sizing: { baseUnit } } }) => ({
   },
 }))(UserAvatarConnected);
 
+const ProfileButton = ({ onPress }) => (
+  <Touchable onPress={() => onPress}>
+    <Avatar />
+  </Touchable>
+);
+
+ProfileButton.propTypes = {
+  onPress: PropTypes.func,
+};
+
 const HeaderCenter = () => <HeaderLogo source={require('./wordmark.png')} />;
 const HeaderRight = () => {
   const navigation = useNavigation();
-  return <SearchButton onPress={() => navigation.navigate('Search')} />;
+  return (
+    <SearchButton
+      onPress={() => {
+        navigation.navigate('Search');
+      }}
+    />
+  );
 };
 
 const HeaderLeft = () => {
   const navigation = useNavigation();
   return (
-    <Touchable onPress={() => navigation.navigate('UserSettingsNavigator')}>
-      <Avatar />
-    </Touchable>
+    <ProfileButton
+      onPress={() => {
+        navigation.navigate('UserSettingsNavigator');
+      }}
+    />
   );
 };
 
