@@ -77,7 +77,7 @@ const postgresContentModules = {
   ContentChannel: ContentItemCategory,
   Interactions,
   PrayerRequest: PostgresPrayerRequest,
-  RockCampus,
+  RockCampus: { dataSource: RockCampus.dataSource },
   Campus,
   PostgresDefaultCampusOverride,
 };
