@@ -1,37 +1,25 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Platform,
-  KeyboardAvoidingView,
-  StyleSheet,
-  StatusBar,
-} from 'react-native';
+import { KeyboardAvoidingView } from 'react-native';
 import { Mutation } from '@apollo/client/react/components';
 import { gql } from '@apollo/client';
-import { Header } from '@react-navigation/stack';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import {
-  Button,
-  TextInput,
-  PaddedView,
-  FlexedView,
-  styled,
-} from '@apollosproject/ui-kit';
+import { Button, TextInput, PaddedView, styled } from '@apollosproject/ui-kit';
 
 import { SafeAreaView } from 'react-native-safe-area-context';
 import CHANGE_PASSWORD from './passwordChange';
 
-const Footer = styled({
+const FlexedKeyboardAvoidingView = styled({
+  flex: 1,
+})(KeyboardAvoidingView);
+
+const Footer = styled(({ theme }) => ({
   flex: 1,
   justifyContent: 'flex-end',
-})(SafeAreaView);
-
-const StyledKeyboardAvoidingView = styled(({ theme }) => ({
-  ...StyleSheet.absoluteFill,
-  backgroundColor: theme.colors.background.paper,
-}))(KeyboardAvoidingView);
+  marginBottom: theme.sizing.baseUnit * 5,
+}))(SafeAreaView);
 
 class ChangePassword extends PureComponent {
   static propTypes = {
@@ -42,46 +30,34 @@ class ChangePassword extends PureComponent {
   };
 
   renderForm = (props) => (
-    <StyledKeyboardAvoidingView
-      behavior={'padding'}
-      keyboardVerticalOffset={
-        Header.HEIGHT +
-        (Platform.OS === 'android' ? StatusBar.currentHeight : 0)
-      }
-    >
-      <FlexedView>
+    <FlexedKeyboardAvoidingView behavior="padding">
+      <PaddedView>
+        <TextInput
+          label="New Password"
+          type="password"
+          value={props.values.password}
+          error={props.touched.password && props.errors.password}
+          onChangeText={(text) => props.setFieldValue('password', text)}
+        />
+        <TextInput
+          label="Confirm Password"
+          type="password"
+          value={props.values.confirmPassword}
+          error={props.touched.confirmPassword && props.errors.confirmPassword}
+          onChangeText={(text) => props.setFieldValue('confirmPassword', text)}
+        />
+      </PaddedView>
+      <Footer>
         <PaddedView>
-          <TextInput
-            label="New Password"
-            type="password"
-            value={props.values.password}
-            error={props.touched.password && props.errors.password}
-            onChangeText={(text) => props.setFieldValue('password', text)}
-          />
-          <TextInput
-            label="Confirm Password"
-            type="password"
-            value={props.values.confirmPassword}
-            error={
-              props.touched.confirmPassword && props.errors.confirmPassword
-            }
-            onChangeText={(text) =>
-              props.setFieldValue('confirmPassword', text)
-            }
+          <Button
+            disabled={props.isSubmitting}
+            onPress={props.handleSubmit}
+            title="Save"
+            loading={props.isSubmitting}
           />
         </PaddedView>
-        <Footer>
-          <PaddedView>
-            <Button
-              disabled={props.isSubmitting}
-              onPress={props.handleSubmit}
-              title="Save"
-              loading={props.isSubmitting}
-            />
-          </PaddedView>
-        </Footer>
-      </FlexedView>
-    </StyledKeyboardAvoidingView>
+      </Footer>
+    </FlexedKeyboardAvoidingView>
   );
 
   render() {

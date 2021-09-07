@@ -23,6 +23,7 @@ import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 import { Landing, Onboarding } from '@apollosproject/ui-onboarding';
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 
 import {
   ContentSingleConnected,
@@ -32,6 +33,8 @@ import {
 import Providers from './Providers';
 import Tabs from './tabs';
 import customTheme, { customIcons } from './theme';
+
+import UserSettingsNavigator from './user-settings';
 
 enableScreens(); // improves performance for react-navigation
 
@@ -50,6 +53,12 @@ const ProtectedRouteWithSplashScreen = () => {
     />
   );
 };
+
+const WrappedContentSingleConnected = (props) => (
+  <BottomSheetModalProvider>
+    <ContentSingleConnected {...props} />
+  </BottomSheetModalProvider>
+);
 
 const ThemedNavigationContainer = withTheme(({ theme, ...props }) => ({
   theme: {
@@ -101,10 +110,10 @@ const App = () => (
             />
             <Screen
               name="ContentSingle"
-              component={ContentSingleConnected}
+              component={WrappedContentSingleConnected}
               options={{
                 title: 'Content',
-                stackPresentation: 'push',
+                stackPresentation: 'fullScreenModal',
               }}
             />
             <Screen
@@ -139,6 +148,10 @@ const App = () => (
             />
             <Screen name="LandingScreen" component={LandingToAuth} />
             <Screen name="Search" component={SearchScreenConnected} />
+            <Screen
+              name="UserSettingsNavigator"
+              component={UserSettingsNavigator}
+            />
           </Navigator>
         </Providers>
       </ThemedNavigationContainer>
