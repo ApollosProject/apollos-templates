@@ -5,6 +5,7 @@ This guide will describe how to set up universal links. This will allow you to c
 First, set the following environment variables locally to test and on your server:
 
 ```
+UNIVERSAL_LINK_HOST=<API Url>
 APPLE_APP_ID=<com.church.app>
 APPLE_TEAM_ID=<XXXXXXX>
 IOS_REDIRECT=<url of app in App store>
