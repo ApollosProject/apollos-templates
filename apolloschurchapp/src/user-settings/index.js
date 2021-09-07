@@ -1,212 +1,79 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
-import { useQuery, useMutation, useApolloClient, gql } from '@apollo/client';
+import { Text } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import { getVersion, getBuildNumber } from 'react-native-device-info';
+import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 
-import {
-  BackgroundView,
-  TableView,
-  Cell,
-  CellIcon,
-  CellText,
-  Divider,
-  Touchable,
-  ActivityIndicator,
-  NavigationService,
-  H4,
-  PaddedView,
-} from '@apollosproject/ui-kit';
-import {
-  checkOnboardingStatusAndNavigate,
-  onboardingComplete,
-} from '@apollosproject/ui-onboarding';
-import { GET_LOGIN_STATE, LOGOUT } from '@apollosproject/ui-auth';
-import {
-  RockAuthedWebBrowser,
-  UserAvatarUpdate,
-} from '@apollosproject/ui-connected';
+import { withTheme } from '@apollosproject/ui-kit';
+import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
+import { LikedContentFeedConnected } from '@apollosproject/ui-connected';
+import { NotificationSettingsConnected } from '@apollosproject/ui-notifications';
 
-const UserSettings = () => {
+import PersonalDetails from './PersonalDetails';
+import ChangePassword from './ChangePassword';
+import UserSettings from './UserSettings';
+
+const StyledText = withTheme(({ theme }) => ({
+  style: {
+    color: theme.colors.secondary,
+    fontSize: theme.sizing.baseUnit * 1.1,
+  },
+}))(Text);
+
+const ModalCloseText = () => {
   const navigation = useNavigation();
-  const {
-    data: { isLoggedIn = false },
-    loading,
-  } = useQuery(GET_LOGIN_STATE, { fetchPolicy: 'cache-and-network' });
-  const [logout] = useMutation(LOGOUT);
-  const client = useApolloClient();
-  const { data } = useQuery(gql`
-    query currentUserId {
-      currentUser {
-        id
-      }
-    }
-  `);
-
-  if (loading) return <ActivityIndicator />;
-  if (!isLoggedIn) return null;
+  const onPress = () => navigation.goBack();
   return (
-    <BackgroundView>
-      <ScrollView>
-        <UserAvatarUpdate />
-
-        <RockAuthedWebBrowser>
-          {(openUrl) => (
-            <>
-              <TableView>
-                <Touchable
-                  onPress={() => {
-                    navigation.navigate('PersonalDetails');
-                  }}
-                >
-                  <Cell>
-                    <CellText>Personal Details</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-                <Divider />
-                <Touchable
-                  onPress={() => {
-                    navigation.navigate('Location');
-                  }}
-                >
-                  <Cell>
-                    <CellText>Location</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-                <Divider />
-                <Touchable
-                  onPress={() => {
-                    navigation.navigate('ChangePassword');
-                  }}
-                >
-                  <Cell>
-                    <CellText>Change Password</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-                <Divider />
-                <Touchable
-                  onPress={() => {
-                    navigation.navigate('Notifications');
-                  }}
-                >
-                  <Cell>
-                    <CellText>Notification Settings</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-              </TableView>
-              <TableView>
-                <Touchable
-                  onPress={() => {
-                    openUrl('mailto:support@apollos.app');
-                  }}
-                >
-                  <Cell>
-                    <CellText>Give Feedback</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-              </TableView>
-              <TableView>
-                <Touchable
-                  onPress={() => openUrl('https://apollosrock.newspring.cc/')}
-                >
-                  <Cell>
-                    <CellText>Privacy Policy</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-                <Divider />
-                <Touchable
-                  onPress={() => openUrl('https://apollosrock.newspring.cc/')}
-                >
-                  <Cell>
-                    <CellText>Terms of Use</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-              </TableView>
-              <TableView>
-                <Touchable
-                  onPress={async () => {
-                    await logout();
-                    // This resets the navigation stack, and the navigates to the first auth screen.
-                    // This ensures that user isn't navigated to a subscreen of Auth, like the pin entry screen.
-                    NavigationService.resetToAuth();
-                  }}
-                >
-                  <Cell>
-                    <CellText>Logout</CellText>
-                    <CellIcon name="arrow-next" />
-                  </Cell>
-                </Touchable>
-              </TableView>
-              <TableView>
-                <Cell>
-                  <CellText>
-                    {`App Version: ${getVersion()}.${getBuildNumber()}`}
-                  </CellText>
-                </Cell>
-              </TableView>
-
-              {/* testing panel */}
-              {process.env.NODE_ENV !== 'production' ? (
-                <>
-                  <PaddedView>
-                    <H4>For development only</H4>
-                  </PaddedView>
-                  <TableView>
-                    <Touchable
-                      onPress={() =>
-                        checkOnboardingStatusAndNavigate({
-                          latestOnboardingVersion: 2,
-                          navigation: NavigationService,
-                          client,
-                        })
-                      }
-                    >
-                      <Cell>
-                        <CellText>Launch Onboarding</CellText>
-                      </Cell>
-                    </Touchable>
-                    <Divider />
-                    <Touchable
-                      onPress={() =>
-                        onboardingComplete({
-                          version: 0,
-                          userId: data?.currentUser?.id,
-                        })
-                      }
-                    >
-                      <Cell>
-                        <CellText>Reset Onboarding to Unseen</CellText>
-                      </Cell>
-                    </Touchable>
-                    <Divider />
-                    <Touchable
-                      onPress={() =>
-                        onboardingComplete({
-                          version: 1,
-                          userId: data?.currentUser?.id,
-                        })
-                      }
-                    >
-                      <Cell>
-                        <CellText>Reset Onboarding to Seen v1</CellText>
-                      </Cell>
-                    </Touchable>
-                  </TableView>
-                </>
-              ) : null}
-            </>
-          )}
-        </RockAuthedWebBrowser>
-      </ScrollView>
-    </BackgroundView>
+    <StyledText name={'close'} onPress={onPress}>
+      Done
+    </StyledText>
   );
 };
 
-export default UserSettings;
+const { Screen, Navigator } = createNativeStackNavigator();
+
+const UserSettingsNavigator = () => (
+  <Navigator
+    screenOptions={{
+      // headerStyle: { backgroundColor: 'transparent' },
+      headerHideShadow: true,
+      headerRight: ModalCloseText,
+      // headerLeft: ModalBackButton,
+      // headerTitle: '',
+      // headerTopInsetEnabled: false,
+    }}
+  >
+    <Screen
+      component={UserSettings}
+      name="UserSettings"
+      options={{ title: 'Profile' }}
+    />
+
+    <Screen
+      name="Location"
+      component={Location}
+      options={{ title: 'Campuses' }}
+    />
+    <Screen
+      component={NotificationSettingsConnected}
+      name="Notifications"
+      options={{ title: 'Notification Settings' }}
+    />
+    <Screen
+      name="PersonalDetails"
+      component={PersonalDetails}
+      options={{ title: 'Personal Details' }}
+    />
+    <Screen
+      name="ChangePassword"
+      component={ChangePassword}
+      options={{ title: 'Change Password' }}
+    />
+    <Screen
+      component={LikedContentFeedConnected}
+      name="LikedContentFeedConnected"
+      options={{ title: 'Liked Content' }}
+    />
+  </Navigator>
+);
+
+export default UserSettingsNavigator;
