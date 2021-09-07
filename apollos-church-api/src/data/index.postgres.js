@@ -21,7 +21,6 @@ import {
   PersonalDevice,
   Template,
   AuthSms,
-  Campus,
   Group,
   BinaryFiles,
   FeatureFeed,
@@ -29,6 +28,7 @@ import {
   PrayerRequest,
   Person as RockPerson,
   ContentItem as RockContentItem,
+  Campus as RockCampus,
   ContentChannel,
   Feature as RockFeature,
   ActionAlgorithm as RockActionAlgorithm,
@@ -44,7 +44,7 @@ import {
   NotificationPreference,
   Tag,
   Interactions,
-  Campus as PostgresCampus,
+  Campus,
   Person as PostgresPerson,
   Media as PostgresMedia,
   Feature as PostgresFeature,
@@ -63,6 +63,8 @@ import {
   Person,
   OneSignal,
   Followings as FollowingsPostgresBridge,
+  PostgresDefaultCampusOverride,
+  RockDefaultCampusOverride,
 } from './rockWithPostgres';
 
 const postgresContentModules = {
@@ -75,6 +77,9 @@ const postgresContentModules = {
   ContentChannel: ContentItemCategory,
   Interactions,
   PrayerRequest: PostgresPrayerRequest,
+  RockCampus: { dataSource: RockCampus.dataSource },
+  Campus,
+  PostgresDefaultCampusOverride,
 };
 
 const rockContentModules = {
@@ -84,6 +89,9 @@ const rockContentModules = {
   ContentChannel,
   Interactions: PostgresInteractions,
   PrayerRequest,
+  PostgresCampus: { dataSource: Campus.dataSource },
+  Campus: RockCampus,
+  RockDefaultCampusOverride,
 };
 
 const data = {
@@ -111,7 +119,6 @@ const data = {
   Pass,
   Search,
   Template,
-  Campus,
   Group,
   Event,
   Cache,
@@ -119,7 +126,6 @@ const data = {
   UserLike,
   UserFlag,
   Follow,
-  PostgresCampus,
   Notification,
   NotificationPreference,
   OneSignal,

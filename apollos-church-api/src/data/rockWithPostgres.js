@@ -42,21 +42,6 @@ const personResolver = {
       ]); // updates in Postgres. Reuses already uploaded imageUrl
       // return dataSources.Person.uploadProfileImage(file, size); // updates in Postgres. Performs the upload again.
     },
-    updateUserCampus: async (root, { campusId }, { dataSources }) => {
-      await dataSources.Campus.updateCurrentUserCampus({ campusId }); // updates in Rock
-
-      const { id: rockCampusId } = parseGlobalId(campusId);
-      const campus = await dataSources.PostgresCampus.getFromId(
-        rockCampusId,
-        null,
-        {
-          originType: 'rock',
-        }
-      ); // finds the postgres campus id
-      return dataSources.Person.updateProfile([
-        { field: 'campusId', value: campus.id },
-      ]); // updates in Postgres
-    },
     updateUserPushSettings: async (root, { input }, { dataSources }) => {
       // register the changes w/ postgres
       await dataSources.NotificationPreference.updateUserNotificationPreference(
@@ -221,4 +206,42 @@ const followingsResolvers = {
 
 export const Followings = {
   resolver: followingsResolvers,
+};
+
+// Used when IDs coming from the API are Rock APIS.
+export const RockDefaultCampusOverride = {
+  resolver: {
+    Mutation: {
+      updateUserCampus: async (root, { campusId }, { dataSources }) => {
+        await dataSources.Campus.updateCurrentUserCampus({ campusId }); // updates in Rock
+
+        const { id: rockCampusId } = parseGlobalId(campusId);
+        const campus = await dataSources.PostgresCampus.getFromId(
+          rockCampusId,
+          null,
+          {
+            originType: 'rock',
+          }
+        ); // finds the postgres campus id
+        return dataSources.Person.updateProfile([
+          { field: 'campusId', value: campus.id },
+        ]); // updates in Postgres
+      },
+    },
+  },
+};
+
+// Used when IDs coming from the API are Postgres APIS.
+export const PostgresDefaultCampusOverride = {
+  resolver: {
+    Mutation: {
+      updateUserCampus: async (root, { campusId }, { dataSources }) => {
+        const campus = await dataSources.Campus.getFromId(campusId); // finds the postgres campus id
+        await dataSources.Person.updateProfile([
+          { field: 'campusId', value: campus.originId },
+        ]); // updates in Rock
+        return dataSources.Campus.updateCurrentUserCampus({ campusId }); // updates in Rock
+      },
+    },
+  },
 };
