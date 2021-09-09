@@ -263,8 +263,9 @@ export const PrayerRequest = {
       addPrayer: async (root, args, { dataSources }) => {
         const { id } = await dataSources.RockPrayerRequest.addPrayer(args);
         return dataSources.PrayerRequest.addPrayer({
-          ...args,
+          text: args.text,
           originId: String(id),
+          originType: 'rock',
         });
       },
     },
