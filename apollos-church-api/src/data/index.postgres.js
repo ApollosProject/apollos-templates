@@ -66,6 +66,7 @@ import {
   PostgresDefaultCampusOverride,
   RockDefaultCampusOverride,
   PrayerRequest,
+  // RockPrayerRequest,
 } from './rockWithPostgres';
 
 const postgresContentModules = {
