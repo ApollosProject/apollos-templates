@@ -62,7 +62,6 @@ import * as Theme from './theme';
 import {
   Person,
   OneSignal,
-  Followings as FollowingsPostgresBridge,
   PostgresDefaultCampusOverride,
   RockDefaultCampusOverride,
   PrayerRequest,
@@ -85,6 +84,8 @@ const postgresContentModules = {
 };
 
 const rockContentModules = {
+  Interactions: RockInteractions,
+  Followings,
   ActionAlgorithm: RockActionAlgorithm,
   Feature: RockFeature,
   ContentItem: RockContentItem,
