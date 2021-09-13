@@ -42,7 +42,7 @@ localhost:4000/.well-known/assetlinks.json
 
 Here you should see a JSON object with `package_name` set to `<GOOGLE_APP_ID>` and `sha256_cert_fingerprints` set to `<GOOGLE_KEYSTORE_SHA256>`.
 
-You can also test iOS and Android by running the following commands while the app is running in the simulator. Get a link by sharing a content item in the app and copying the link there.
+You can also test iOS and Android by running the following commands while the app is running in the simulator. Get a link by sharing a content item in the app and copying the link there. These two commands will not work properly unless the app is released and in the public Apple or Google Play Stores.
 
 ##### iOS
 
