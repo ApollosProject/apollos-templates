@@ -33,7 +33,21 @@ For Android, you will make this change manually. Head to the `apolloschurchapp >
 
 # Testing
 
-In order to test this functionality, you need to confirm that the Apple App Site Association file and Android Assetlinks files are returned from the server. You should also confirm that Sharing URLs on content items are complete.
+In order to test this functionality, you need to confirm that the Apple App Site Association file and Android Assetlinks files are returned from the server. You should also confirm that Sharing URLs on content items are complete. There are several ways to test this functionality.
+
+## Testing via website
+
+You can use these two websites to test your server for AASA and assetlinks files.
+
+##### iOS
+
+https://developers.google.com/digital-asset-links/tools/generator
+
+##### Android
+
+https://branch.io/resources/aasa-validator/
+
+## Testing the server directly
 
 While the API is running you can navigate to
 
@@ -50,6 +64,8 @@ localhost:4000/.well-known/assetlinks.json
 ```
 
 Here you should see a JSON object with `package_name` set to `<GOOGLE_APP_ID>` and `sha256_cert_fingerprints` set to `<GOOGLE_KEYSTORE_SHA256>`.
+
+## Testing via the console
 
 You can also test iOS and Android by running the following commands while the app is running in the simulator. Get a link by sharing a content item in the app and copying the link there. These two commands will not work properly unless the app is released and in the public Apple or Google Play Stores.
 
