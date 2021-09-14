@@ -22,6 +22,15 @@ In Xcode, open your application, go to the Signing & Capabilities tab, and add a
 applinks:<UNIVERSAL_LINK_HOST>
 ```
 
+For Android, you will make this change manually. Head to the `apolloschurchapp > android > app > src > main > AndroidManifest.xml` and add the correct associated domain information where indicated. You do need to retype the Universal Link Host here manually.
+
+```
+<data android:scheme="https"
+    android:host="<UNIVERSAL_LINK_HOST>"
+    android:pathPrefix="/app-link" />
+<data android:scheme="http" />
+```
+
 # Testing
 
 In order to test this functionality, you need to confirm that the Apple App Site Association file and Android Assetlinks files are returned from the server. You should also confirm that Sharing URLs on content items are complete.

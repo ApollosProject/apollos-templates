@@ -35,10 +35,8 @@
           <category android:name="android.intent.category.BROWSABLE" />
 
           <!-- Handle urls starting with "http://www.example.com/products" -->
-          <data android:scheme="https"
-                android:host="@string/APP_DATA_URL"
-                android:pathPrefix="/app-link" />
-          <data android:scheme="http" />
+          <!-- Add Universal Link information here -->
+          
         </intent-filter>
       </activity>
 
