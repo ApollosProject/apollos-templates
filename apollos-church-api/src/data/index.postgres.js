@@ -25,7 +25,6 @@ import {
   BinaryFiles,
   FeatureFeed,
   Event,
-  PrayerRequest as RockPrayerRequest,
   Person as RockPerson,
   ContentItem as RockContentItem,
   Campus as RockCampus,
@@ -62,10 +61,11 @@ import * as Theme from './theme';
 import {
   Person,
   OneSignal,
+  Followings as FollowingsPostgresBridge,
   PostgresDefaultCampusOverride,
   RockDefaultCampusOverride,
   PrayerRequest,
-  // RockPrayerRequest,
+  RockPrayerRequest,
 } from './rockWithPostgres';
 
 const postgresContentModules = {
@@ -84,8 +84,6 @@ const postgresContentModules = {
 };
 
 const rockContentModules = {
-  Interactions: RockInteractions,
-  Followings,
   ActionAlgorithm: RockActionAlgorithm,
   Feature: RockFeature,
   ContentItem: RockContentItem,
