@@ -151,7 +151,7 @@ export const PostgresDefaultCampusOverride = {
           parseGlobalId(campusId).id
         ); // finds the postgres campus id
         await dataSources.RockCampus.updateCurrentUserCampus({
-          id: campus.originId,
+          rockId: campus.originId,
         }); // updates in Rock
         return dataSources.Campus.updateCurrentUserCampus({ campusId }); // updates in Postgres
       },
