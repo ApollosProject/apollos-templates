@@ -147,10 +147,12 @@ export const PostgresDefaultCampusOverride = {
   resolver: {
     Mutation: {
       updateUserCampus: async (root, { campusId }, { dataSources }) => {
-        const campus = await dataSources.Campus.getFromId(campusId); // finds the postgres campus id
-        await dataSources.RockPerson.updateProfile([
-          { field: 'campusId', value: campus.originId },
-        ]); // updates in Rock
+        const campus = await dataSources.Campus.getFromId(
+          parseGlobalId(campusId).id
+        ); // finds the postgres campus id
+        await dataSources.RockCampus.updateCurrentUserCampus({
+          rockId: campus.originId,
+        }); // updates in Rock
         return dataSources.Campus.updateCurrentUserCampus({ campusId }); // updates in Postgres
       },
     },
