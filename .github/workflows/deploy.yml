@@ -27,6 +27,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Check For API Changes
+        run: if [[ $(git diff HEAD~1 apollos-church-api) == "" ]]; then exit; fi
+
       # heroku only uses yarn if there's a yarn.lock file
       - name: Use Yarn
         run: |
@@ -55,6 +58,9 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
+
+    - name: Check For App Changes
+      run: if [[ $(git diff HEAD~1 apolloschurchapp) == "" ]]; then exit; fi
 
     - name: Setup Node
       uses: actions/setup-node@v2
@@ -95,6 +101,9 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
+
+    - name: Check For App Changes
+      run: if [[ $(git diff HEAD~1 apolloschurchapp) == "" ]]; then exit; fi
 
     - name: Setup Node
       uses: actions/setup-node@v2
