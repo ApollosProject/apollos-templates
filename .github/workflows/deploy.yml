@@ -78,10 +78,6 @@ jobs:
     - name: Install Dependencies
       run: yarn config set network-timeout 300000 && yarn
 
-    # required to build
-    - name: Generate Stories
-      run: yarn generate-stories
-
     - name: Generate Fragment Types
       run: node ./scripts/get-introspection-data.js
       env:
@@ -120,10 +116,6 @@ jobs:
 
     - name: Install Dependencies
       run: yarn config set network-timeout 300000 && yarn
-
-    # required to build
-    - name: Generate Stories
-      run: yarn generate-stories
 
     - name: Generate Fragment Types
       run: node ./scripts/get-introspection-data.js
