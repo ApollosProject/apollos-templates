@@ -19,16 +19,21 @@ You can get your keystore hash from your Google developer app console.
 In Xcode, open your application, go to the Signing & Capabilities tab, and add a new Associated Domain. You will need to retype the Universal Link Host here manually.
 
 ```
-applinks:<UNIVERSAL_LINK_HOST>
+applinks:[URL HOST]
 ```
 
-For Android, you will make this change manually. Head to the `apolloschurchapp > android > app > src > main > AndroidManifest.xml` and add the correct associated domain information where indicated. You do need to retype the Universal Link Host here manually.
+For Android, you will make this change manually. Head to the `apolloschurchapp > android > app > src > main > AndroidManifest.xml` and add the following intent:
 
-```
-<data android:scheme="https"
-    android:host="<UNIVERSAL_LINK_HOST>"
-    android:pathPrefix="/app-link" />
-<data android:scheme="http" />
+```xml
+<intent-filter android:autoVerify="true">
+  <action android:name="android.intent.action.VIEW" />
+  <category android:name="android.intent.category.DEFAULT" />
+  <category android:name="android.intent.category.BROWSABLE" />
+  <data android:scheme="https"
+        android:host="[URL HOST]"
+        android:pathPrefix="/app-link" />
+  <data android:scheme="http" />
+</intent-filter>
 ```
 
 # Testing
