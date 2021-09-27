@@ -16,13 +16,20 @@ GOOGLE_KEYSTORE_SHA256=<XX:XX:XX:XX>
 
 You can get your keystore hash from your Google developer app console.
 
-In Xcode, open your application, go to the Signing & Capabilities tab, and add a new Associated Domain. You will need to retype the Universal Link Host here manually.
+## iOS
+
+Edit the `[App Name].entitlements` file and add the following key:
 
 ```
-applinks:[URL HOST]
+<key>com.apple.developer.associated-domains</key>
+<array>
+    <string>applinks:[URL HOST]</string>
+</array>
 ```
 
-For Android, you will make this change manually. Head to the `apolloschurchapp > android > app > src > main > AndroidManifest.xml` and add the following intent:
+## Android
+
+Edit the `main/AndroidManifest.xml` file and add the following intent:
 
 ```xml
 <intent-filter android:autoVerify="true">
