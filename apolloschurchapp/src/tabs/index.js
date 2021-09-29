@@ -50,7 +50,7 @@ SearchButton.propTypes = {
 };
 
 const Avatar = withTheme(({ theme: { sizing: { baseUnit } } }) => ({
-  size: 'small',
+  size: 'xsmall',
   containerStyle: {
     paddingBottom: baseUnit * 0.25,
   },
