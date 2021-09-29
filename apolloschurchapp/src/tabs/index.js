@@ -112,7 +112,7 @@ const ReadTab = createFeatureFeedTab({
 });
 
 const WatchTab = createFeatureFeedTab({
-  screenOptions: {
+  options: {
     headerLeft: HeaderLeft,
   },
   tabName: 'Watch',
