@@ -135,6 +135,7 @@ const ConnectTabStack = createNativeStackNavigator();
 const ConnectTabStackNavigator = () => (
   <ConnectTabStack.Navigator
     options={{
+      headerHideShadow: true,
       headerLargeTitle: true,
       headerLeft: HeaderLeft,
     }}
