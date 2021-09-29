@@ -134,7 +134,7 @@ const CustomConnectScreen = () => (
 const ConnectTabStack = createNativeStackNavigator();
 const ConnectTabStackNavigator = () => (
   <ConnectTabStack.Navigator
-    screenOptions={{
+    options={{
       headerHideShadow: true,
       headerLargeTitle: true,
       headerLeft: HeaderLeft,
