@@ -120,7 +120,7 @@ const WatchTab = createFeatureFeedTab({
 });
 
 const PrayTab = createFeatureFeedTab({
-  screenOptions: {
+  options: {
     headerLeft: HeaderLeft,
   },
   tabName: 'Pray',
