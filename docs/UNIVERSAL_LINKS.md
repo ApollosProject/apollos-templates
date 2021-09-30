@@ -16,19 +16,31 @@ GOOGLE_KEYSTORE_SHA256=<XX:XX:XX:XX>
 
 You can get your keystore hash from your Google developer app console.
 
-In Xcode, open your application, go to the Signing & Capabilities tab, and add a new Associated Domain. You will need to retype the Universal Link Host here manually.
+## iOS
+
+Edit the `[App Name].entitlements` file and add the following key:
 
 ```
-applinks:<UNIVERSAL_LINK_HOST>
+<key>com.apple.developer.associated-domains</key>
+<array>
+    <string>applinks:[URL HOST]</string>
+</array>
 ```
 
-For Android, you will make this change manually. Head to the `apolloschurchapp > android > app > src > main > AndroidManifest.xml` and add the correct associated domain information where indicated. You do need to retype the Universal Link Host here manually.
+## Android
 
-```
-<data android:scheme="https"
-    android:host="<UNIVERSAL_LINK_HOST>"
-    android:pathPrefix="/app-link" />
-<data android:scheme="http" />
+Edit the `main/AndroidManifest.xml` file and add the following intent:
+
+```xml
+<intent-filter android:autoVerify="true">
+  <action android:name="android.intent.action.VIEW" />
+  <category android:name="android.intent.category.DEFAULT" />
+  <category android:name="android.intent.category.BROWSABLE" />
+  <data android:scheme="https"
+        android:host="[URL HOST]"
+        android:pathPrefix="/app-link" />
+  <data android:scheme="http" />
+</intent-filter>
 ```
 
 # Testing
@@ -41,11 +53,11 @@ You can use these two websites to test your server for AASA and assetlinks files
 
 ##### iOS
 
-https://developers.google.com/digital-asset-links/tools/generator
+https://branch.io/resources/aasa-validator/
 
 ##### Android
 
-https://branch.io/resources/aasa-validator/
+https://developers.google.com/digital-asset-links/tools/generator
 
 ## Testing the server directly
 

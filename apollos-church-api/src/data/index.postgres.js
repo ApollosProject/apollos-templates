@@ -90,6 +90,14 @@ const rockContentModules = {
   ContentChannel,
   Interactions: PostgresInteractions,
   PostgresCampus: Campus,
+  PrayerRequest,
+  PostgresCampus: {
+    // essentially everything but the resolvers
+    dataSource: Campus.dataSource,
+    models: Campus.models,
+    migrations: Campus.migrations,
+  },
+  Campus: RockCampus,
   RockDefaultCampusOverride,
 };
 
