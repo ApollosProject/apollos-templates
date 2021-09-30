@@ -4,7 +4,6 @@ import {
   Person as postgresPerson,
   PrayerRequest as postgresPrayerRequest,
 } from '@apollosproject/data-connector-postgres';
-import { PrayerRequest as rockPrayerRequest } from '@apollosproject/data-connector-rock';
 import * as OneSignalOriginal from '@apollosproject/data-connector-onesignal';
 
 class personDataSource extends postgresPerson.dataSource {
@@ -257,10 +256,6 @@ class prayerRequestDataSource extends postgresPrayerRequest.dataSource {
     return this.context.dataSources.Person.getFromId(personId);
   }
 }
-
-export const RockPrayerRequest = {
-  dataSource: rockPrayerRequest.dataSource,
-};
 
 export const PrayerRequest = {
   dataSource: prayerRequestDataSource,
