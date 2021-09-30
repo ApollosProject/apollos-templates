@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
   NavigationService,
@@ -89,14 +90,6 @@ const HeaderRight = () => {
   );
 };
 
-const CustomConnectScreen = () => (
-  <ConnectScreenConnected
-    showAvatar={false}
-    ActionTable={ActionTable}
-    ActionBar={ActionBar}
-  />
-);
-
 // we nest stack inside of tabs so we can use all the fancy native header features
 const HomeTab = createFeatureFeedTab({
   screenOptions: {
@@ -111,19 +104,50 @@ const HomeTab = createFeatureFeedTab({
 });
 
 const ReadTab = createFeatureFeedTab({
+  options: {
+    headerLeft: HeaderLeft,
+  },
   tabName: 'Read',
   feedName: 'READ',
 });
 
 const WatchTab = createFeatureFeedTab({
+  options: {
+    headerLeft: HeaderLeft,
+  },
   tabName: 'Watch',
   feedName: 'WATCH',
 });
 
 const PrayTab = createFeatureFeedTab({
+  options: {
+    headerLeft: HeaderLeft,
+  },
   tabName: 'Pray',
   feedName: 'PRAY',
 });
+
+const CustomConnectScreen = () => (
+  <ConnectScreenConnected ActionTable={ActionTable} ActionBar={ActionBar} />
+);
+
+const ConnectTabStack = createNativeStackNavigator();
+const ConnectTabStackNavigator = () => (
+  <ConnectTabStack.Navigator
+    screenOptions={{
+      headerHideShadow: true,
+      headerLargeTitle: true,
+    }}
+  >
+    <ConnectTabStack.Screen
+      name={'Connect'}
+      component={CustomConnectScreen}
+      options={{
+        headerLeft: HeaderLeft,
+      }}
+    />
+  </ConnectTabStack.Navigator>
+);
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -166,8 +190,10 @@ const TabNavigator = () => {
       />
       <Screen
         name="Connect"
-        component={CustomConnectScreen}
-        options={{ tabBarIcon: tabBarIcon('profile') }}
+        component={ConnectTabStackNavigator}
+        options={{
+          tabBarIcon: tabBarIcon('profile'),
+        }}
       />
     </Navigator>
   );
