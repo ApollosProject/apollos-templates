@@ -53,11 +53,11 @@ You can use these two websites to test your server for AASA and assetlinks files
 
 ##### iOS
 
-https://developers.google.com/digital-asset-links/tools/generator
+https://branch.io/resources/aasa-validator/
 
 ##### Android
 
-https://branch.io/resources/aasa-validator/
+https://developers.google.com/digital-asset-links/tools/generator
 
 ## Testing the server directly
 
