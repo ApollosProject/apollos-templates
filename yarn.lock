@@ -2751,11 +2751,6 @@
     npmlog "^4.1.2"
     write-file-atomic "^2.3.0"
 
-"@metarouter/analytics-react-native@^1.1.5":
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/@metarouter/analytics-react-native/-/analytics-react-native-1.1.5.tgz#a2e4f7679793be21eb7a396588ee0e09420a95e6"
-  integrity sha512-xEyazUyK/Dm7jthSRms/CGWJ5RGmYfyBLT93Uv4snb78xVgsBLF7I6pp4fa5j6Eo/LBWFMtp59k1CObCwt9ySQ==
-
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"
