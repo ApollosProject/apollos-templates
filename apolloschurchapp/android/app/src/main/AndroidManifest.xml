@@ -28,17 +28,6 @@
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
-        <intent-filter android:autoVerify="true">
-          <action android:name="android.intent.action.VIEW" />
-          <category android:name="android.intent.category.DEFAULT" />
-          <category android:name="android.intent.category.BROWSABLE" />
-
-          <!-- Handle urls starting with "http://www.example.com/products" -->
-          <data android:scheme="https"
-                android:host="@string/APP_DATA_URL"
-                android:pathPrefix="/app-link" />
-          <data android:scheme="http" />
-        </intent-filter>
       </activity>
     </application>
 </manifest>

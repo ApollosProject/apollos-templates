@@ -260,7 +260,7 @@ PODS:
     - React-jsi (= 0.64.2)
     - React-perflogger (= 0.64.2)
   - React-jsinspector (0.64.2)
-  - react-native-apollos-player (2.31.0):
+  - react-native-apollos-player (2.33.4):
     - React
   - react-native-config (0.11.7):
     - React
@@ -668,7 +668,7 @@ SPEC CHECKSUMS:
   React-jsi: 67747b9722f6dab2ffe15b011bcf6b3f2c3f1427
   React-jsiexecutor: 80c46bd381fd06e418e0d4f53672dc1d1945c4c3
   React-jsinspector: cc614ec18a9ca96fd275100c16d74d62ee11f0ae
-  react-native-apollos-player: 7f9841a8d8394316e67758bc25603550c95128e0
+  react-native-apollos-player: 4a6df36dcead81e327c38c3ed29660ce3b3e4412
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-geolocation-service: f33626f1ae12381ca2ae60f98b2f5edd676bf95a

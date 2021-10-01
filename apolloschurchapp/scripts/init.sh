@@ -29,8 +29,10 @@ rm ios/apollos.p8.enc
 # app name
 echo "App name: "
 read -r APP
+echo "Android App ID (ex: com.churchname.apollosapp): "
+read -r APP_ID
 CLEAN_APP=$(echo "$APP" | tr -d '[:space:]')
-npx react-native-rename "$CLEAN_APP"
+npx react-native-rename "$CLEAN_APP" -b "$APP_ID"
 
 sed -i "" -E "s/Apollos Church/$APP/g" apolloschurchapp/ios/Info.plist
 sed -i "" -E "s/Apollos Church/$APP/g" apolloschurchapp/android/app/src/main/res/values/strings.xml

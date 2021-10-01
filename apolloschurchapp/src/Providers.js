@@ -13,8 +13,8 @@ import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding'
 
 import ClientProvider, { client } from './client';
 
-const AppProviders = (props) => (
-  <ClientProvider {...props}>
+const AppProviders = ({ children }) => (
+  <ClientProvider>
     <NotificationsProvider
       // TODO deprecated prop
       navigate={NavigationService.navigate}
@@ -54,7 +54,7 @@ const AppProviders = (props) => (
         }
       >
         <AnalyticsProvider>
-          <LiveProvider>{props.children}</LiveProvider>
+          <LiveProvider>{children}</LiveProvider>
         </AnalyticsProvider>
       </AuthProvider>
     </NotificationsProvider>
