@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import {
+  Providers,
+  renderWithApolloData,
+  WithReactNavigator,
+} from '@apollosproject/ui-test-utils';
 import { MockedProvider } from '@apollo/client/testing';
 import ChangePassword from './ChangePassword';
 
@@ -11,9 +15,11 @@ describe('Change Password component', () => {
       goBack: jest.fn(),
     };
     const tree = await renderWithApolloData(
-      <Providers MockedProvider={MockedProvider}>
-        <ChangePassword navigation={navigation} />
-      </Providers>
+      WithReactNavigator(
+        <Providers MockedProvider={MockedProvider}>
+          <ChangePassword navigation={navigation} />
+        </Providers>
+      )
     );
     expect(tree).toMatchSnapshot();
   });

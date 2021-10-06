@@ -1,47 +1,25 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { KeyboardAvoidingView, Platform } from 'react-native';
-import {
-  useSafeAreaInsets,
-  SafeAreaView,
-} from 'react-native-safe-area-context';
+import { KeyboardAvoidingView } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { Query, Mutation } from '@apollo/client/react/components';
 import { Formik } from 'formik';
 import * as Yup from 'yup';
 
-import {
-  TextInput,
-  PaddedView,
-  FlexedView,
-  Button,
-  styled,
-} from '@apollosproject/ui-kit';
+import { TextInput, PaddedView, Button, styled } from '@apollosproject/ui-kit';
 
 import { GET_USER_PROFILE } from '@apollosproject/ui-connected';
 import UPDATE_CURRENT_USER from './updateCurrentUser';
 
-const Footer = styled({
+const FlexedKeyboardAvoidingView = styled({
+  flex: 1,
+})(KeyboardAvoidingView);
+
+const Footer = styled(({ theme }) => ({
   flex: 1,
   justifyContent: 'flex-end',
-})(SafeAreaView);
-
-const StyledKeyboardAvoidingView = styled(({ theme }) => ({
-  flex: 1,
-  backgroundColor: theme.colors.background.paper,
-}))(KeyboardAvoidingView);
-
-const KeyboardAvoidingViewWithHeaderHeight = (props) => {
-  const statusBarInset = useSafeAreaInsets().top; // inset of the status bar
-  // https://github.com/software-mansion/react-native-screens/tree/master/native-stack#measuring-headers-height-on-ios
-  const largeHeaderInset = statusBarInset + 96; // inset to use for a large header since it's frame is equal to 96 + the frame of status bar
-  return (
-    <StyledKeyboardAvoidingView
-      behavior="padding"
-      keyboardVerticalOffset={Platform.OS === 'android' ? 0 : largeHeaderInset}
-      {...props}
-    />
-  );
-};
+  marginBottom: theme.sizing.baseUnit * 5,
+}))(SafeAreaView);
 
 class PersonalDetails extends PureComponent {
   static propTypes = {
@@ -53,43 +31,41 @@ class PersonalDetails extends PureComponent {
 
   renderForm = (props) => (
     // have to add the offset to account for @react-navigation/native header
-    <KeyboardAvoidingViewWithHeaderHeight behavior={'padding'}>
-      <FlexedView>
+    <FlexedKeyboardAvoidingView behavior="padding">
+      <PaddedView>
+        <TextInput
+          label="First Name"
+          type="text"
+          value={props.values.firstName}
+          error={props.touched.firstName && props.errors.firstName}
+          onChangeText={(text) => props.setFieldValue('firstName', text)}
+        />
+        <TextInput
+          label="Last Name"
+          type="text"
+          value={props.values.lastName}
+          error={props.touched.lastName && props.errors.lastName}
+          onChangeText={(text) => props.setFieldValue('lastName', text)}
+        />
+        <TextInput
+          label="Email"
+          type="email"
+          value={props.values.email}
+          error={props.touched.email && props.errors.email}
+          onChangeText={(text) => props.setFieldValue('email', text)}
+        />
+      </PaddedView>
+      <Footer>
         <PaddedView>
-          <TextInput
-            label="First Name"
-            type="text"
-            value={props.values.firstName}
-            error={props.touched.firstName && props.errors.firstName}
-            onChangeText={(text) => props.setFieldValue('firstName', text)}
-          />
-          <TextInput
-            label="Last Name"
-            type="text"
-            value={props.values.lastName}
-            error={props.touched.lastName && props.errors.lastName}
-            onChangeText={(text) => props.setFieldValue('lastName', text)}
-          />
-          <TextInput
-            label="Email"
-            type="email"
-            value={props.values.email}
-            error={props.touched.email && props.errors.email}
-            onChangeText={(text) => props.setFieldValue('email', text)}
+          <Button
+            disabled={!props.isValid || props.isSubmitting}
+            onPress={props.handleSubmit}
+            title="Save"
+            loading={props.isSubmitting}
           />
         </PaddedView>
-        <Footer>
-          <PaddedView>
-            <Button
-              disabled={!props.isValid || props.isSubmitting}
-              onPress={props.handleSubmit}
-              title="Save"
-              loading={props.isSubmitting}
-            />
-          </PaddedView>
-        </Footer>
-      </FlexedView>
-    </KeyboardAvoidingViewWithHeaderHeight>
+      </Footer>
+    </FlexedKeyboardAvoidingView>
   );
 
   render() {

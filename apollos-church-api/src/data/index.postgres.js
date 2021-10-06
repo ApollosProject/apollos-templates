@@ -15,14 +15,13 @@ import * as Cache from '@apollosproject/data-connector-redis-cache';
 import * as Sms from '@apollosproject/data-connector-twilio';
 import {
   Followings,
-  Interactions,
+  Interactions as RockInteractions,
   RockConstants,
   Sharable,
   Auth,
   PersonalDevice,
   Template,
   AuthSms,
-  Campus,
   Group,
   BinaryFiles,
   FeatureFeed,
@@ -30,6 +29,7 @@ import {
   PrayerRequest,
   Person as RockPerson,
   ContentItem as RockContentItem,
+  Campus as RockCampus,
   ContentChannel,
   Feature as RockFeature,
   ActionAlgorithm as RockActionAlgorithm,
@@ -40,10 +40,12 @@ import {
   UserFlag,
   UserLike,
   Follow,
+  Interactions,
+  Likes,
   Notification,
   NotificationPreference,
   Tag,
-  Campus as PostgresCampus,
+  Campus,
   Person as PostgresPerson,
   Media as PostgresMedia,
   Feature as PostgresFeature,
@@ -51,6 +53,7 @@ import {
   ContentItemsConnection,
   ContentItemCategory,
   ActionAlgorithm as PostgresActionAlgorithm,
+  PrayerRequest as PostgresPrayerRequest,
 } from '@apollosproject/data-connector-postgres';
 
 import * as Theme from './theme';
@@ -60,10 +63,13 @@ import * as Theme from './theme';
 import {
   Person,
   OneSignal,
-  Followings as FollowingsPostgresBridge,
+  PostgresDefaultCampusOverride,
+  RockDefaultCampusOverride,
 } from './rockWithPostgres';
 
 const postgresContentModules = {
+  Interactions,
+  Likes,
   ActionAlgorithm: PostgresActionAlgorithm,
   Feature: PostgresFeature,
   PostgresMedia,
@@ -71,19 +77,32 @@ const postgresContentModules = {
   ContentItem: PostgresContentItem,
   ContentItemsConnection,
   ContentChannel: ContentItemCategory,
+  PrayerRequest: PostgresPrayerRequest,
+  RockCampus: { dataSource: RockCampus.dataSource },
+  Campus,
+  PostgresDefaultCampusOverride,
 };
 
 const rockContentModules = {
+  Interactions: RockInteractions,
+  Followings,
   ActionAlgorithm: RockActionAlgorithm,
   Feature: RockFeature,
   ContentItem: RockContentItem,
   ContentChannel,
+  PrayerRequest,
+  PostgresCampus: {
+    // essentially everything but the resolvers
+    dataSource: Campus.dataSource,
+    models: Campus.models,
+    migrations: Campus.migrations,
+  },
+  Campus: RockCampus,
+  RockDefaultCampusOverride,
 };
 
 const data = {
   Interfaces,
-  Followings,
-  FollowingsPostgresBridge, // This entry needs to come after Followings.
   FeatureFeed,
   RockPerson, // This entry needs to come before (postgres) Person
   BinaryFiles, // This entry needs to come before (postgres) Person
@@ -98,7 +117,6 @@ const data = {
   LiveStream,
   Theme,
   Scripture,
-  Interactions,
   RockConstants,
   Sharable,
   Analytics,
@@ -106,16 +124,13 @@ const data = {
   Pass,
   Search,
   Template,
-  Campus,
   Group,
   Event,
   Cache,
-  PrayerRequest,
   Comment,
   UserLike,
   UserFlag,
   Follow,
-  PostgresCampus,
   Notification,
   NotificationPreference,
   OneSignal,

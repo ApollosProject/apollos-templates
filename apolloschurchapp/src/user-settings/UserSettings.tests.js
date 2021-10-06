@@ -10,7 +10,7 @@ import { gql } from '@apollo/client';
 import { MockedProvider } from '@apollo/client/testing';
 import { InMemoryCache } from '@apollo/client/cache';
 
-import UserSettings from '.';
+import UserSettings from './UserSettings';
 
 const mock = {
   request: {

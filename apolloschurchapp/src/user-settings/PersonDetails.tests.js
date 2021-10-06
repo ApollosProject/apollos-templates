@@ -1,6 +1,10 @@
 import React from 'react';
 import { MockedProvider } from '@apollo/client/testing';
-import { Providers, renderWithApolloData } from '@apollosproject/ui-test-utils';
+import {
+  Providers,
+  renderWithApolloData,
+  WithReactNavigator,
+} from '@apollosproject/ui-test-utils';
 import { GET_USER_PROFILE } from '@apollosproject/ui-connected';
 
 import PersonalDetails from './PersonalDetails';
@@ -37,9 +41,11 @@ describe('PersonalDetails component', () => {
       goBack: jest.fn(),
     };
     const tree = await renderWithApolloData(
-      <Providers MockedProvider={MockedProvider} mocks={[mock]}>
-        <PersonalDetails navigation={navigation} />
-      </Providers>
+      WithReactNavigator(
+        <Providers MockedProvider={MockedProvider} mocks={[mock]}>
+          <PersonalDetails navigation={navigation} />
+        </Providers>
+      )
     );
 
     expect(tree).toMatchSnapshot();
