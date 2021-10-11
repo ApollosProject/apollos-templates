@@ -1,37 +1,36 @@
-import React, { useEffect } from "react";
-import PropTypes from "prop-types";
-import { Image, View } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import { createNativeStackNavigator } from "react-native-screens/native-stack";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import React, { useEffect } from 'react';
+import { Image, View } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import { createNativeStackNavigator } from 'react-native-screens/native-stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
   NavigationService,
   withTheme,
   useTheme,
   Icon,
   Touchable,
-} from "@apollosproject/ui-kit";
-import { useApolloClient } from "@apollo/client";
+} from '@apollosproject/ui-kit';
+import { useApolloClient } from '@apollo/client';
 import {
   createFeatureFeedTab,
   UserAvatarConnected,
   ConnectScreenConnected,
-} from "@apollosproject/ui-connected";
-import { checkOnboardingStatusAndNavigate } from "@apollosproject/ui-onboarding";
-import ActionTable from "../ui/ActionTable";
-import ActionBar from "../ui/ActionBar";
-import tabBarIcon from "./tabBarIcon";
+} from '@apollosproject/ui-connected';
+import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
+import ActionTable from '../ui/ActionTable';
+import ActionBar from '../ui/ActionBar';
+import tabBarIcon from './tabBarIcon';
 
 const HeaderLogo = withTheme(({ theme }) => ({
   style: {
     height: theme.sizing.baseUnit * 2.5,
-    width: "70%",
-    resizeMode: "contain",
+    width: '70%',
+    resizeMode: 'contain',
   },
   source:
-    theme.type === "light"
-      ? require("./wordmark.png")
-      : require("./wordmark.dark.png"),
+    theme.type === 'light'
+      ? require('./wordmark.png')
+      : require('./wordmark.dark.png'),
 }))(Image);
 
 const ProfileButton = () => {
@@ -39,7 +38,7 @@ const ProfileButton = () => {
   return (
     <Touchable
       onPress={() => {
-        navigation.navigate("UserSettingsNavigator");
+        navigation.navigate('UserSettingsNavigator');
       }}
     >
       <View>
@@ -55,10 +54,10 @@ const SearchButton = () => {
   return (
     <Touchable
       onPress={() => {
-        navigation.navigate("Search");
+        navigation.navigate('Search');
       }}
     >
-      <SearchIcon
+      <Icon
         name="search"
         size={theme.sizing.baseUnit * 2}
         fill={theme.colors.primary}
@@ -76,32 +75,32 @@ const HomeTab = createFeatureFeedTab({
     headerLeft: ProfileButton,
     headerLargeTitle: false,
   },
-  tabName: "Home",
-  feedName: "HOME",
+  tabName: 'Home',
+  feedName: 'HOME',
 });
 
 const ReadTab = createFeatureFeedTab({
   options: {
     headerLeft: ProfileButton,
   },
-  tabName: "Read",
-  feedName: "READ",
+  tabName: 'Read',
+  feedName: 'READ',
 });
 
 const WatchTab = createFeatureFeedTab({
   options: {
     headerLeft: ProfileButton,
   },
-  tabName: "Watch",
-  feedName: "WATCH",
+  tabName: 'Watch',
+  feedName: 'WATCH',
 });
 
 const PrayTab = createFeatureFeedTab({
   options: {
     headerLeft: ProfileButton,
   },
-  tabName: "Pray",
-  feedName: "PRAY",
+  tabName: 'Pray',
+  feedName: 'PRAY',
 });
 
 const CustomConnectScreen = () => (
@@ -117,7 +116,7 @@ const ConnectTabStackNavigator = () => (
     }}
   >
     <ConnectTabStack.Screen
-      name={"Connect"}
+      name={'Connect'}
       component={CustomConnectScreen}
       options={{
         headerLeft: ProfileButton,
@@ -133,40 +132,43 @@ const TabNavigator = () => {
   // this is only used by the tab loaded first
   // if there is a new version of the onboarding flow,
   // we'll navigate there first to show new screens
-  useEffect(() => {
-    checkOnboardingStatusAndNavigate({
-      client,
-      navigation: NavigationService,
-      navigateHome: false,
-    });
-  }, [client]);
+  useEffect(
+    () => {
+      checkOnboardingStatusAndNavigate({
+        client,
+        navigation: NavigationService,
+        navigateHome: false,
+      });
+    },
+    [client]
+  );
   return (
     <Navigator lazy>
       <Screen
         name="Home"
         component={HomeTab}
-        options={{ tabBarIcon: tabBarIcon("home") }}
+        options={{ tabBarIcon: tabBarIcon('home') }}
       />
       <Screen
         name="Read"
         component={ReadTab}
-        options={{ tabBarIcon: tabBarIcon("sections") }}
+        options={{ tabBarIcon: tabBarIcon('sections') }}
       />
       <Screen
         name="Watch"
         component={WatchTab}
-        options={{ tabBarIcon: tabBarIcon("video") }}
+        options={{ tabBarIcon: tabBarIcon('video') }}
       />
       <Screen
         name="Pray"
         component={PrayTab}
-        options={{ tabBarIcon: tabBarIcon("like") }}
+        options={{ tabBarIcon: tabBarIcon('like') }}
       />
       <Screen
         name="Connect"
         component={ConnectTabStackNavigator}
         options={{
-          tabBarIcon: tabBarIcon("profile"),
+          tabBarIcon: tabBarIcon('profile'),
         }}
       />
     </Navigator>
