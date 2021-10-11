@@ -132,6 +132,7 @@
     "nodemon": "1.18.7",
     "prop-types": "15.6.1",
     "react-native-version": "^4.0.0",
+    "react-test-renderer": "17.0.1",
     "waait": "1.0.2"
   }
 }
