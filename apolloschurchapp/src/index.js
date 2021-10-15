@@ -29,12 +29,11 @@ import {
   ContentSingleConnected,
   ContentFeedConnected,
   SearchScreenConnected,
+  UserSettingsConnected,
 } from '@apollosproject/ui-connected';
 import Providers from './Providers';
 import Tabs from './tabs';
 import customTheme, { customIcons } from './theme';
-
-import UserSettingsNavigator from './user-settings';
 
 enableScreens(); // improves performance for react-navigation
 
@@ -150,7 +149,7 @@ const App = () => (
             <Screen name="Search" component={SearchScreenConnected} />
             <Screen
               name="UserSettingsNavigator"
-              component={UserSettingsNavigator}
+              component={UserSettingsConnected}
             />
           </Navigator>
         </Providers>

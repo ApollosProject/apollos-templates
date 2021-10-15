@@ -20,7 +20,7 @@
     "pods": "(bundle install && cd ios && bundle exec pod install --repo-update)",
     "start": "yarn start:dev",
     "start:dev": "node ./scripts/get-introspection-data.js && react-native start",
-    "test": "TZ=UTC jest",
+    "test": "echo \"No tests\"",
     "icons": "react-native set-icon --path",
     "splash": "react-native set-splash --path"
   },
