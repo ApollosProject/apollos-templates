@@ -131,7 +131,11 @@ const App = () => (
                 stackPresentation: 'push',
               }}
             />
-            <Screen name="Location" component={Location} />
+            <Screen
+              name="Location"
+              component={Location}
+              options={{ title: 'Campuses' }}
+            />
             <Screen
               name="Passes"
               component={Passes}
