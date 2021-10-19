@@ -1,5 +1,4 @@
 PODS:
-  - AstronomerAnalytics (3.6.9)
   - boost-for-react-native (1.63.0)
   - BVLinearGradient (2.5.6):
     - React
@@ -242,7 +241,7 @@ PODS:
     - React-cxxreact (= 0.63.4)
     - React-jsi (= 0.63.4)
   - React-jsinspector (0.63.4)
-  - react-native-apollos-player (2.33.4):
+  - react-native-apollos-player (2.35.0):
     - React
   - react-native-config (0.11.7):
     - React
@@ -337,9 +336,6 @@ PODS:
   - rn-fetch-blob (0.10.16):
     - React-Core
   - RNAirplay (1.0.0):
-    - React
-  - RNAnalytics (1.1.5):
-    - AstronomerAnalytics
     - React
   - RNCAsyncStorage (1.12.1):
     - React-Core
@@ -461,7 +457,6 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - rn-fetch-blob (from `../node_modules/rn-fetch-blob`)
   - "RNAirplay (from `../node_modules/@apollosproject/react-native-airplay-btn`)"
-  - "RNAnalytics (from `../node_modules/@metarouter/analytics-react-native`)"
   - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - "RNCPicker (from `../node_modules/@react-native-picker/picker`)"
@@ -477,7 +472,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - AstronomerAnalytics
     - boost-for-react-native
     - CocoaAsyncSocket
     - Flipper
@@ -581,8 +575,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/rn-fetch-blob"
   RNAirplay:
     :path: "../node_modules/@apollosproject/react-native-airplay-btn"
-  RNAnalytics:
-    :path: "../node_modules/@metarouter/analytics-react-native"
   RNCAsyncStorage:
     :path: "../node_modules/@react-native-community/async-storage"
   RNCMaskedView:
@@ -609,7 +601,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  AstronomerAnalytics: 36f48678a387e41481650edd6247c6c95d994131
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
   BVLinearGradient: e3aad03778a456d77928f594a649e96995f1c872
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
@@ -640,7 +631,7 @@ SPEC CHECKSUMS:
   React-jsi: a0418934cf48f25b485631deb27c64dc40fb4c31
   React-jsiexecutor: 93bd528844ad21dc07aab1c67cb10abae6df6949
   React-jsinspector: 58aef7155bc9a9683f5b60b35eccea8722a4f53a
-  react-native-apollos-player: 4a6df36dcead81e327c38c3ed29660ce3b3e4412
+  react-native-apollos-player: af0449934fae6e2a84fbe2299692c8ecbefca01f
   react-native-config: 55548054279d92e0e4566ea15a8b9b81028ec342
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-geolocation-service: f33626f1ae12381ca2ae60f98b2f5edd676bf95a
@@ -666,7 +657,6 @@ SPEC CHECKSUMS:
   ReactCommon: 73d79c7039f473b76db6ff7c6b159c478acbbb3b
   rn-fetch-blob: 651b8d076b43d0d7aa294a3d9ec16c00aab8bef9
   RNAirplay: 75777dd55dafbd3687703c3eb9c290ea6cc43248
-  RNAnalytics: 360b0680753d0e1d37152a25d47aa34a015cab72
   RNCAsyncStorage: b03032fdbdb725bea0bd9e5ec5a7272865ae7398
   RNCMaskedView: 5a8ec07677aa885546a0d98da336457e2bea557f
   RNCPicker: 2c31098349f499e7ab4da6c1ce26f7537d271062
