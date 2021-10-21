@@ -132,16 +132,13 @@ const TabNavigator = () => {
   // this is only used by the tab loaded first
   // if there is a new version of the onboarding flow,
   // we'll navigate there first to show new screens
-  useEffect(
-    () => {
-      checkOnboardingStatusAndNavigate({
-        client,
-        navigation: NavigationService,
-        navigateHome: false,
-      });
-    },
-    [client]
-  );
+  useEffect(() => {
+    checkOnboardingStatusAndNavigate({
+      client,
+      navigation: NavigationService,
+      navigateHome: false,
+    });
+  }, [client]);
   return (
     <Navigator lazy>
       <Screen
