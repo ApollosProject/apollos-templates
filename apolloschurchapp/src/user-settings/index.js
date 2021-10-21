@@ -5,7 +5,10 @@ import { createNativeStackNavigator } from 'react-native-screens/native-stack';
 
 import { withTheme } from '@apollosproject/ui-kit';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
-import { LikedContentFeedConnected } from '@apollosproject/ui-connected';
+import {
+  LikedContentFeedConnected,
+  FollowingListConnected,
+} from '@apollosproject/ui-connected';
 import { NotificationSettingsConnected } from '@apollosproject/ui-notifications';
 
 import PersonalDetails from './PersonalDetails';
@@ -72,6 +75,11 @@ const UserSettingsNavigator = () => (
       component={LikedContentFeedConnected}
       name="LikedContentFeedConnected"
       options={{ title: 'Liked Content' }}
+    />
+    <Screen
+      component={FollowingListConnected}
+      name="FollowingListConnected"
+      options={{ title: 'Following' }}
     />
   </Navigator>
 );
