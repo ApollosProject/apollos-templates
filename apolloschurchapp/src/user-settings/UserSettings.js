@@ -72,8 +72,12 @@ const UserSettings = () => {
   const firstName = get(data, 'currentUser.profile.firstName');
   const lastName = get(data, 'currentUser.profile.lastName');
 
-  if (loading) return <ActivityIndicator />;
-  if (!isLoggedIn) return null;
+  if (loading) {
+    return <ActivityIndicator />;
+  }
+  if (!isLoggedIn) {
+    return null;
+  }
   return (
     <BackgroundView>
       <ScrollView>
