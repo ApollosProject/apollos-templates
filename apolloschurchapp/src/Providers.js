@@ -21,8 +21,9 @@ const AppProviders = ({ children }) => (
       handleExternalLink={(url) => {
         const path = url.split('app-link/')[1];
         const [route, location] = path.split('/');
-        if (route === 'content')
+        if (route === 'content') {
           NavigationService.navigate('ContentSingle', { itemId: location });
+        }
         if (route === 'nav') {
           const [component, params] = location.split('?');
           const args = querystring.parse(params);
