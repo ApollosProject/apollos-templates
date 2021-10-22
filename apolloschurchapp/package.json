@@ -124,6 +124,7 @@
     "codecov": "3.7.2",
     "eslint": "^7.28.0",
     "eslint-import-resolver-babel-module": "^5.0.0-beta.0",
+    "eslint-plugin-react": "^7.26.1",
     "get-dev-paths": "^0.1.0",
     "graphql-import": "^0.7.1",
     "jest": "^26",
