@@ -17,7 +17,12 @@ export default split(
     const { kind, operation } = getMainDefinition(query);
     return kind === 'OperationDefinition' && operation === 'mutation';
   },
-  createUploadLink({ uri }),
+  createUploadLink({
+    uri,
+    headers: {
+      'x-church': ApollosConfig.CHURCH_HEADER,
+    },
+  }),
   createHttpLink({
     uri,
     useGETForQueries: true,
