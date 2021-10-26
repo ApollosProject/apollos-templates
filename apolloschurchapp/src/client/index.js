@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ApolloProvider, ApolloClient, ApolloLink, gql } from '@apollo/client';
 import { getVersion, getApplicationName } from 'react-native-device-info';
