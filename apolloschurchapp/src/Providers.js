@@ -1,5 +1,4 @@
 import querystring from 'querystring';
-import React from 'react';
 import PropTypes from 'prop-types';
 import { NavigationService } from '@apollosproject/ui-kit';
 import { AuthProvider } from '@apollosproject/ui-auth';

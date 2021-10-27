@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-handler-names */
 
-import React from 'react';
 import { StatusBar } from 'react-native';
 import {
   NavigationContainer,

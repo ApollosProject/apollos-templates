@@ -11,7 +11,10 @@ const getIntrospectionData = async () => {
   try {
     const query = await fetch(process.env.APP_DATA_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        'x-church': process.env.CHURCH_HEADER,
+      },
       body: JSON.stringify({
         query: `
           {
