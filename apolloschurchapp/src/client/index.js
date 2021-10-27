@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ApolloProvider, ApolloClient, ApolloLink, gql } from '@apollo/client';
 import { createPersistedQueryLink } from '@apollo/client/link/persisted-queries';
@@ -57,7 +57,14 @@ const link = ApolloLink.from([
   authLink,
   errorLink,
   apqLink,
-  createUploadLink({ uri }),
+  createUploadLink({
+    uri,
+    headers: {
+      ...(ApollosConfig.CHURCH_HEADER
+        ? { 'x-church': ApollosConfig.CHURCH_HEADER }
+        : {}),
+    },
+  }),
 ]);
 
 export const client = new ApolloClient({

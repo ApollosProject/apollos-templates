@@ -1,5 +1,7 @@
 module.exports = {
-  extends: [
-    '@apollosproject/eslint-config/client',
-  ],
-}
+  root: true,
+  extends: ['@react-native-community', 'plugin:react/jsx-runtime'],
+  env: {
+    'jest/globals': true,
+  },
+};

@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 import { Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
@@ -7,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {
   NavigationService,
   withTheme,
+  useTheme,
   Icon,
   Touchable,
 } from '@apollosproject/ui-kit';
@@ -33,60 +33,36 @@ const HeaderLogo = withTheme(({ theme }) => ({
       : require('./wordmark.dark.png'),
 }))(Image);
 
-const SearchIcon = withTheme(({ theme: { colors, sizing: { baseUnit } } }) => ({
-  name: 'search',
-  size: baseUnit * 2,
-  fill: colors.primary,
-}))(Icon);
-
-const SearchButton = ({ onPress }) => (
-  <Touchable onPress={onPress}>
-    <SearchIcon />
-  </Touchable>
-);
-
-SearchButton.propTypes = {
-  onPress: PropTypes.func,
-};
-
-const Avatar = withTheme(({ theme: { sizing: { baseUnit } } }) => ({
-  size: 'xsmall',
-  containerStyle: {
-    paddingBottom: baseUnit * 0.25,
-  },
-}))(UserAvatarConnected);
-
-const ProfileButton = ({ onPress }) => (
-  <Touchable onPress={onPress}>
-    <View>
-      <Avatar />
-    </View>
-  </Touchable>
-);
-
-ProfileButton.propTypes = {
-  onPress: PropTypes.func,
-};
-
-const HeaderLeft = () => {
+const ProfileButton = () => {
   const navigation = useNavigation();
   return (
-    <ProfileButton
+    <Touchable
       onPress={() => {
         navigation.navigate('UserSettingsNavigator');
       }}
-    />
+    >
+      <View>
+        <UserAvatarConnected size="xsmall" />
+      </View>
+    </Touchable>
   );
 };
-const HeaderCenter = () => <HeaderLogo source={require('./wordmark.png')} />;
-const HeaderRight = () => {
+
+const SearchButton = () => {
   const navigation = useNavigation();
+  const theme = useTheme();
   return (
-    <SearchButton
+    <Touchable
       onPress={() => {
         navigation.navigate('Search');
       }}
-    />
+    >
+      <Icon
+        name="search"
+        size={theme.sizing.baseUnit * 2}
+        fill={theme.colors.primary}
+      />
+    </Touchable>
   );
 };
 
@@ -94,9 +70,9 @@ const HeaderRight = () => {
 const HomeTab = createFeatureFeedTab({
   screenOptions: {
     headerHideShadow: true,
-    headerCenter: HeaderCenter,
-    headerRight: HeaderRight,
-    headerLeft: HeaderLeft,
+    headerCenter: HeaderLogo,
+    headerRight: SearchButton,
+    headerLeft: ProfileButton,
     headerLargeTitle: false,
   },
   tabName: 'Home',
@@ -105,7 +81,7 @@ const HomeTab = createFeatureFeedTab({
 
 const ReadTab = createFeatureFeedTab({
   options: {
-    headerLeft: HeaderLeft,
+    headerLeft: ProfileButton,
   },
   tabName: 'Read',
   feedName: 'READ',
@@ -113,7 +89,7 @@ const ReadTab = createFeatureFeedTab({
 
 const WatchTab = createFeatureFeedTab({
   options: {
-    headerLeft: HeaderLeft,
+    headerLeft: ProfileButton,
   },
   tabName: 'Watch',
   feedName: 'WATCH',
@@ -121,7 +97,7 @@ const WatchTab = createFeatureFeedTab({
 
 const PrayTab = createFeatureFeedTab({
   options: {
-    headerLeft: HeaderLeft,
+    headerLeft: ProfileButton,
   },
   tabName: 'Pray',
   feedName: 'PRAY',
@@ -143,7 +119,7 @@ const ConnectTabStackNavigator = () => (
       name={'Connect'}
       component={CustomConnectScreen}
       options={{
-        headerLeft: HeaderLeft,
+        headerLeft: ProfileButton,
       }}
     />
   </ConnectTabStack.Navigator>
@@ -156,16 +132,13 @@ const TabNavigator = () => {
   // this is only used by the tab loaded first
   // if there is a new version of the onboarding flow,
   // we'll navigate there first to show new screens
-  useEffect(
-    () => {
-      checkOnboardingStatusAndNavigate({
-        client,
-        navigation: NavigationService,
-        navigateHome: false,
-      });
-    },
-    [client]
-  );
+  useEffect(() => {
+    checkOnboardingStatusAndNavigate({
+      client,
+      navigation: NavigationService,
+      navigateHome: false,
+    });
+  }, [client]);
   return (
     <Navigator lazy>
       <Screen

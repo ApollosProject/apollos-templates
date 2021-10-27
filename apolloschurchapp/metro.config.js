@@ -8,7 +8,7 @@ module.exports = applyConfigForLinkedDependencies(
       getTransformOptions: async () => ({
         transform: {
           experimentalImportSupport: false,
-          inlineRequires: false,
+          inlineRequires: true,
         },
       }),
     },

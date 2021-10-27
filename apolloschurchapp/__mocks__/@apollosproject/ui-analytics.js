@@ -1,5 +1,3 @@
-import React from 'react';
-
 module.exports = {
   track: () => '',
   AnalyticsConsumer: ({ children }) => children({ test: jest.fn() }),
