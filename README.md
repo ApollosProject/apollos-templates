@@ -21,9 +21,17 @@ yarn
 yarn setup
 ```
 
-### API
+## API
 
-#### Development
+---
+
+This section will outline the steps required to get your api up and running.
+
+<br />
+
+### Development
+
+---
 
 A working [Rock RMS](https://www.rockrms.com) instance is required for our API to run. If you want to test that your API is functional fill out the `ROCK_API` and `ROCK_TOKEN` in your `.env` file. `ROCK_API` is the URL of your Rock instance with `/api` appended to the end. `ROCK_TOKEN` is the REST key of an admin user. You can get this info on your Rock instance from "Admin Tools" > "Apollos Dashboard" after you've installed the Apollos Plugin.
 
@@ -35,7 +43,9 @@ Now simply start the server
 yarn start
 ```
 
-#### Deploy
+### Deploy
+
+---
 
 We use Heroku by default because it's free and easy to get started. If you'd like to use another platform to host your API, you can skip this section.
 
@@ -82,7 +92,7 @@ heroku open
 
 To get started with different API integrations, check out our [docs](https://apollosapp.io)!
 
-#### Migrations
+### Migrations
 
 Database migrations can be run locally via
 
@@ -98,13 +108,17 @@ heroku run -a YOUR_HEROKU_APP_NAME_HERE yarn migrator up
 
 **Make sure you `yarn build` before running `yarn migrator` if you have made any changes to your app.**
 
-### Mobile App
+<br />
 
-This will outline the steps required to get your Android and iOS apps up and running. You will need a functioning production API from the previous section before moving forward.
+## Mobile App
+
+---
+
+This section will outline the steps required to get your Android and iOS apps up and running. You will need a functioning production API from the previous section before moving forward.
 
 Rename your project, **_no spaces_**!
 
-```
+```sh
 cd apolloschurchapp
 npx react-native-rename "<ChurchName>"
 ```
@@ -119,11 +133,19 @@ yarn icons icon-android.png --platform android
 yarn splash splash.png
 ```
 
-#### Development
+You will also need to setup icons for Android notifications that are not handled by the above lines. This icon needs to be 256x256, and white with a transparent background (see below).
+
+<img src="https://user-images.githubusercontent.com/72768221/139331428-8d2b962e-a74c-4a81-a698-96b15be98c25.png" alt="longhollow icon" width="77"/>
+
+Use [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/icons-notification.html#source.type=clipart&source.clipart=ac_unit&source.space.trim=1&source.space.pad=0&name=ic_stat_onesignal_default), select `Image`, upload your image, then download the new images.
+
+Navigate to `apolloschurchapp/android/app/src/main/res`. Drop the newly downloaded images into the appropriate folders here. Delete the placeholder Apollos icons in those folders as well.
+
+### Development
 
 Install dependencies and start the server and bundler
 
-```
+```sh
 cd ..
 yarn
 yarn start
@@ -131,7 +153,11 @@ yarn start
 
 Couple final steps you'll need to get the app booted in development mode.
 
-##### iOS
+<br />
+
+#### iOS
+
+---
 
 Enable automatic code signing (we'll switch back to manual later when ready to deploy) and pick a new ID.
 
@@ -147,11 +173,13 @@ Now run the command to start the simulator in a separate tab:
 yarn ios
 ```
 
-##### Android
+#### Android
+
+---
 
 Android uses Google Maps for its map service so you will need to register a [Google Maps API Key](https://developers.google.com/maps/documentation/android-sdk/get-api-key). Once you have that, define it in your `.env` file:
 
-```
+```yml
 GOOGLE_MAPS_API_KEY=<KEY>
 ```
 
@@ -161,15 +189,21 @@ Then start the app on the default installed emulator in a separate tab.
 yarn android
 ```
 
-#### Deploy
+### Deploy
+
+---
 
 We use [Fastlane](#) through Github Actions to manage certificates and build uploads. This will walk you through everything you need to get set up with automated deployments.
 
-##### iOS
+<br />
+
+#### iOS
+
+---
 
 First thing we'll do is configure the certificates. Add the following values to your `.env` file:
 
-```
+```yml
 MATCH_PASSWORD=<some unique password>
 MATCH_GIT_URL=<private repo to store certs and profiles>
 MATCH_APP_IDENTIFIER=<bundle ID of app>
@@ -179,13 +213,13 @@ FASTLANE_TEAM_ID=<developer team ID>
 
 For the CI, You'll need to create a personal access token in Github and use that to authenticate to your certificates repo. Once you have the token, you'll need to encode it to base64.
 
-```
+```sh
 echo -n "<github username>:<token>" | base64
 ```
 
 Add the encoded token to your `.env` file
 
-```
+```yml
 MATCH_GIT_BASIC_AUTHORIZATION=<base64 encoded token>
 ```
 
@@ -202,7 +236,7 @@ Use Xcode to switch the certificate and profile settings to "Manual" and choose 
 
 Now we will create an API key to manage authentication to Apple and upload builds from the CI. Create the key on the Apple Developer Portal, download the file, and move it to `ios/apollos.p8`. You will also need the key ID and issuer ID, both can be found in the portal. Add the following variables to your `.env` file:
 
-```
+```yml
 APP_STORE_CONNECT_API_KEY_KEY_ID=<key ID>
 APP_STORE_CONNECT_API_KEY_ISSUER_ID=<issuer ID>
 ```
@@ -227,7 +261,11 @@ gh secret set ENCRYPTION_PASSWORD -b <password>
 
 Now push the changes and watch the app deploy!
 
-##### Android
+<br />
+
+#### Android
+
+---
 
 First, you'll need to have the Developer account owner generate an upload key. [Create a service account](https://developers.google.com/android-publisher/getting_started#using_a_service_account) and add it to the Play Console with "Release Manager" role. Move the downloaded JSON file to `android/key.json` once you have it. You can validate the upload key with this command
 
@@ -247,7 +285,7 @@ Drop the keystore file here: `apolloschurchapp/android/app/apollos.keystore`
 
 Now just load these environment variables in your `.env` and `.env.shared` files
 
-```
+```yml
 KEYSTORE_FILE=apollos.keystore
 KEYSTORE_PASSWORD=<keystore password>
 KEY_ALIAS=apollos
@@ -256,7 +294,7 @@ KEY_PASSWORD=<alias password>
 
 You will need to upload the bundle manually the first time. First set the Application ID to something unique in the `android/app/build.gradle` file:
 
-```
+```js
     defaultConfig {
         applicationId "com.company.appname"
         ...
