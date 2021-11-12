@@ -77,6 +77,9 @@ const HomeTab = createFeatureFeedTab({
   },
   tabName: 'Home',
   feedName: 'HOME',
+  tabProps: {
+    useTagFilter: true
+  }
 });
 
 const ReadTab = createFeatureFeedTab({

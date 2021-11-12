@@ -71,63 +71,12 @@ CONTENT:
 
 TABS:
   HOME:
-    - type: ActionBar
-      title: Welcome to Apollos
-      actions:
-        [
-          {
-            title: Check In,
-            icon: check,
-            action: OPEN_URL,
-            relatedNode: { __typename: Url, url: 'https://www.google.com' },
-          },
-        ]
     - algorithms:
       - type: CONTENT_FEED
         arguments:
           channelIds:
             - c7f43eb9-2200-4267-ab28-871e0d5e785f
-            - 3dfe7149-136b-4134-bd91-fdd935ef2221
-      type: HeroList
-      primaryAction:
-        # Right now, you hardcode exactly what GraphQL should return.
-        # Long term, we hope to have a more sophisticated mechanism for driving this field
-        action: OPEN_NODE
-        title: 'Read More'
-        relatedNode:
-          __typename: UniversalContentItem
-          id: a2c42d1d-98c8-46fb-aeea-603bc569cf7d
-    - algorithms: [DAILY_PRAYER]
-      isCard: false
-      type: PrayerList
-      title: Daily Prayer
-    - algorithms:
-        - type: CAMPAIGN_ITEMS
-          channelIds:
-            - 4b23ebc9-248e-4092-99f9-8829e1b6f1cc
-      type: HeroList
-      isFeatured: true
-      subtitle: Featured
-    - title: FOR YOU
-      algorithms: [SERMON_CHILDREN, PERSONA_FEED]
-      subtitle: Explore what God calls you to today
-      type: ActionList
-    - algorithms: [SERIES_IN_PROGRESS]
-      subtitle: Continue
-      type: HorizontalCardList
-    - title: RECOMMENDED
-      algorithms: [SERMON_CHILDREN]
-      subtitle: For Him
       type: VerticalCardList
-    - title: BULLETIN
-      subtitle: What's happening at apollos?
-      type: ActionList
-      algorithms:
-        - type: CONTENT_FEED
-          arguments:
-            channelIds:
-              - 13
-        - type: UPCOMING_EVENTS
 
   READ:
     - algorithms:
