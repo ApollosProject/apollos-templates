@@ -223,6 +223,10 @@ TABS:
     - type: VerticalPrayerList
       title: Your Prayers
   CONNECT:
+    - type: FollowPeople
+      suggestions:
+        - vincent@differential.com
+        - conrad@differential.com
     - type: ActionTable
       title: Connect to Apollos
       actions:
