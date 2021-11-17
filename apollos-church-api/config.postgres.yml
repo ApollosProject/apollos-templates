@@ -225,8 +225,10 @@ TABS:
   CONNECT:
     - type: FollowPeople
       suggestions:
-        - vincent@differential.com
-        - conrad@differential.com
+        -
+          email: vincent@differential.com
+        -
+          email: conrad@differential.com
     - type: ActionTable
       title: Connect to Apollos
       actions:
