@@ -167,10 +167,10 @@ Add the new schemes to the workspace. You should see them by going to Xcode > Pr
 
 ![schemes](https://files-7i6cjwshd-redreceipt.vercel.app)
 
-Now run the command to start the simulator in a separate tab:
+Now run the command to rebuild Pods and start the simulator:
 
 ```
-yarn ios
+yarn && yarn ios
 ```
 
 #### Android
