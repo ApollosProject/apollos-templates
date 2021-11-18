@@ -167,6 +167,8 @@ You need to have at least one device registered to make provisioning profiles. P
 
 ![devices](https://files-bm5voyhrc-redreceipt.vercel.app)
 
+_*NOTE:*_ Make sure to do these steps for the `OneSignalNotificationExtention` target as well!
+
 Add the new schemes to the workspace. You should see them by going to Xcode > Product > Scheme > Manage Schemes.
 
 ![schemes](https://files-7i6cjwshd-redreceipt.vercel.app)
