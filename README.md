@@ -234,8 +234,7 @@ MATCH_GIT_BASIC_AUTHORIZATION=<base64 encoded token>
 Inside the app directory run `match` to configure the certificates
 
 ```
-fastlane match development
-fastlane match appstore
+fastlane ios certs
 ```
 
 Use Xcode to switch the certificate and profile settings to "Manual" and choose the new certificates and profiles that you just created.
