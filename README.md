@@ -163,10 +163,6 @@ Enable automatic code signing (we'll switch back to manual later when ready to d
 
 ![xcode signing](https://files-o16fn2ymm-redreceipt.vercel.app)
 
-You need to have at least one device registered to make provisioning profiles. Plug in your phone and click "try again" if you see this error.
-
-![devices](https://files-bm5voyhrc-redreceipt.vercel.app)
-
 _*NOTE:*_ Make sure to do these steps for the `OneSignalNotificationExtention` target as well!
 
 Add the new schemes to the workspace. You should see them by going to Xcode > Product > Scheme > Manage Schemes.
@@ -230,6 +226,10 @@ Add the encoded token to your `.env` file
 ```yml
 MATCH_GIT_BASIC_AUTHORIZATION=<base64 encoded token>
 ```
+
+You need to have at least one device registered to make provisioning profiles. Plug in your phone and click "try again" if you see this error.
+
+![devices](https://files-bm5voyhrc-redreceipt.vercel.app)
 
 Inside the app directory run `match` to configure the certificates
 
