@@ -206,15 +206,17 @@ We use [Fastlane](#) through Github Actions to manage certificates and build upl
 #### iOS
 
 ---
-
-First thing we'll do is configure the certificates. Add the following values to your `.env` file:
+ 
+First thing we'll do is configure the certificates. We will create an API key to manage authentication to Apple and upload builds from the CI. Create the key on the Apple Developer Portal, download the file, and move it to ios/apollos.p8. You will also need the key ID and issuer ID, both can be found in the portal. Add the following variables to your .env file:
 
 ```yml
 MATCH_PASSWORD=<some unique password>
 MATCH_GIT_URL=<private repo to store certs and profiles>
-MATCH_APP_IDENTIFIER=<bundle ID of app>
+DELIVER_APP_IDENTIFIER=<bundle ID of app>
 FASTLANE_ITC_TEAM_NAME=<developer team name>
 FASTLANE_TEAM_ID=<developer team ID>
+APP_STORE_CONNECT_API_KEY_KEY_ID=<key ID>
+APP_STORE_CONNECT_API_KEY_ISSUER_ID=<issuer ID>
 ```
 
 For the CI, You'll need to create a personal access token in Github and use that to authenticate to your certificates repo. Once you have the token, you'll need to encode it to base64.
@@ -239,13 +241,6 @@ fastlane match appstore
 Use Xcode to switch the certificate and profile settings to "Manual" and choose the new certificates and profiles that you just created.
 
 <img width="803" alt="Screen Shot 2021-05-06 at 8 07 44 AM" src="https://user-images.githubusercontent.com/2659478/117295710-2cf10680-ae42-11eb-899a-e88c81f5d248.png">
-
-Now we will create an API key to manage authentication to Apple and upload builds from the CI. Create the key on the Apple Developer Portal, download the file, and move it to `ios/apollos.p8`. You will also need the key ID and issuer ID, both can be found in the portal. Add the following variables to your `.env` file:
-
-```yml
-APP_STORE_CONNECT_API_KEY_KEY_ID=<key ID>
-APP_STORE_CONNECT_API_KEY_ISSUER_ID=<issuer ID>
-```
 
 Test the deployment:
 
