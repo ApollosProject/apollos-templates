@@ -163,6 +163,10 @@ Enable automatic code signing (we'll switch back to manual later when ready to d
 
 ![xcode signing](https://files-o16fn2ymm-redreceipt.vercel.app)
 
+You need to have at least one device registered to make provisioning profiles. Plug in your phone and click "try again" if you see this error.
+
+![devices](https://files-bm5voyhrc-redreceipt.vercel.app)
+
 Add the new schemes to the workspace. You should see them by going to Xcode > Product > Scheme > Manage Schemes.
 
 ![schemes](https://files-7i6cjwshd-redreceipt.vercel.app)
