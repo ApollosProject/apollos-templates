@@ -145,19 +145,15 @@ Use [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/icons-
 
 Navigate to `apolloschurchapp/android/app/src/main/res`. Drop the newly downloaded images into the appropriate folders here. Delete the placeholder Apollos icons in those folders as well.
 
-### Development
+Install the dependencies
 
-Install dependencies and start the server and bundler
-
-```sh
-cd ..
+```
 yarn
-yarn start
 ```
 
-Couple final steps you'll need to get the app booted in development mode.
+### Development
 
-<br />
+Couple final steps you'll need to get the app booted in development mode.
 
 #### iOS
 
@@ -169,10 +165,10 @@ Enable automatic code signing (we'll switch back to manual later when ready to d
 
 _*NOTE:*_ Make sure to do these steps for the `OneSignalNotificationExtention` target as well!
 
-Now run the command to rebuild Pods and start the simulator:
+Now run the command to start the simulator:
 
 ```
-yarn && yarn ios
+yarn ios
 ```
 
 #### Android
