@@ -123,6 +123,10 @@ cd apolloschurchapp
 npx react-native-rename "<ChurchName>"
 ```
 
+Add the new schemes to the workspace. You should see them by going to Xcode > Product > Scheme > Manage Schemes.
+
+![schemes](https://files-7i6cjwshd-redreceipt.vercel.app)
+
 Add new icons and splash screen. For customization, see [react-native-make](#). Icons should be 1024 jpgs and splash should be 3000h transparent png.
 
 ![icons](https://user-images.githubusercontent.com/72768221/130254147-fdea1e83-05b0-4466-bf85-7cec05cfddc7.png)
@@ -164,10 +168,6 @@ Enable automatic code signing (we'll switch back to manual later when ready to d
 ![xcode signing](https://files-o16fn2ymm-redreceipt.vercel.app)
 
 _*NOTE:*_ Make sure to do these steps for the `OneSignalNotificationExtention` target as well!
-
-Add the new schemes to the workspace. You should see them by going to Xcode > Product > Scheme > Manage Schemes.
-
-![schemes](https://files-7i6cjwshd-redreceipt.vercel.app)
 
 Now run the command to rebuild Pods and start the simulator:
 
