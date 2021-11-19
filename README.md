@@ -288,7 +288,7 @@ KEY_ALIAS=apollos
 KEY_PASSWORD=<alias password>
 ```
 
-You will need to upload the bundle manually the first time. First set the Application ID to something unique in the `android/app/build.gradle` file:
+You will need to upload the bundle manually the first time. Create the app in the Play Store console and then set the Application ID in the `android/app/build.gradle` file:
 
 ```js
     defaultConfig {
