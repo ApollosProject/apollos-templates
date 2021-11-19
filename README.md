@@ -139,7 +139,7 @@ yarn splash splash.png
 
 You will also need to setup icons for Android notifications that are not handled by the above lines. This icon needs to be 256x256, and white with a transparent background (see below).
 
-<img src="https://user-images.githubusercontent.com/72768221/139331428-8d2b962e-a74c-4a81-a698-96b15be98c25.png" alt="longhollow icon" width="77"/>
+![notification icons](https://files-gurdw0ypj-redreceipt.vercel.app)
 
 Use [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/icons-notification.html#source.type=clipart&source.clipart=ac_unit&source.space.trim=1&source.space.pad=0&name=ic_stat_onesignal_default), select `Image`, upload your image, then download the new images.
 
