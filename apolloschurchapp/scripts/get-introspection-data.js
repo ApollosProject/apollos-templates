@@ -13,7 +13,9 @@ const getIntrospectionData = async () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-church': process.env.CHURCH_HEADER,
+        ...(process.env.CHURCH_HEADER
+          ? { 'x-church': process.env.CHURCH_HEADER }
+          : {}),
       },
       body: JSON.stringify({
         query: `
