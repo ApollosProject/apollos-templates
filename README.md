@@ -123,6 +123,10 @@ cd apolloschurchapp
 npx react-native-rename "<ChurchName>"
 ```
 
+Add the new schemes to the workspace. You should see them by going to Xcode > Product > Scheme > Manage Schemes.
+
+![schemes](https://files-7i6cjwshd-redreceipt.vercel.app)
+
 Add new icons and splash screen. For customization, see [react-native-make](#). Icons should be 1024 jpgs and splash should be 3000h transparent png.
 
 ![icons](https://user-images.githubusercontent.com/72768221/130254147-fdea1e83-05b0-4466-bf85-7cec05cfddc7.png)
@@ -135,25 +139,21 @@ yarn splash splash.png
 
 You will also need to setup icons for Android notifications that are not handled by the above lines. This icon needs to be 256x256, and white with a transparent background (see below).
 
-<img src="https://user-images.githubusercontent.com/72768221/139331428-8d2b962e-a74c-4a81-a698-96b15be98c25.png" alt="longhollow icon" width="77"/>
+![notification icons](https://files-gurdw0ypj-redreceipt.vercel.app)
 
 Use [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/icons-notification.html#source.type=clipart&source.clipart=ac_unit&source.space.trim=1&source.space.pad=0&name=ic_stat_onesignal_default), select `Image`, upload your image, then download the new images.
 
 Navigate to `apolloschurchapp/android/app/src/main/res`. Drop the newly downloaded images into the appropriate folders here. Delete the placeholder Apollos icons in those folders as well.
 
-### Development
+Install the dependencies
 
-Install dependencies and start the server and bundler
-
-```sh
-cd ..
+```
 yarn
-yarn start
 ```
 
-Couple final steps you'll need to get the app booted in development mode.
+### Development
 
-<br />
+Couple final steps you'll need to get the app booted in development mode.
 
 #### iOS
 
@@ -163,20 +163,12 @@ Enable automatic code signing (we'll switch back to manual later when ready to d
 
 ![xcode signing](https://files-o16fn2ymm-redreceipt.vercel.app)
 
-You need to have at least one device registered to make provisioning profiles. Plug in your phone and click "try again" if you see this error.
-
-![devices](https://files-bm5voyhrc-redreceipt.vercel.app)
-
 _*NOTE:*_ Make sure to do these steps for the `OneSignalNotificationExtention` target as well!
 
-Add the new schemes to the workspace. You should see them by going to Xcode > Product > Scheme > Manage Schemes.
-
-![schemes](https://files-7i6cjwshd-redreceipt.vercel.app)
-
-Now run the command to rebuild Pods and start the simulator:
+Now run the command to start the simulator:
 
 ```
-yarn && yarn ios
+yarn ios
 ```
 
 #### Android
@@ -206,15 +198,17 @@ We use [Fastlane](#) through Github Actions to manage certificates and build upl
 #### iOS
 
 ---
-
-First thing we'll do is configure the certificates. Add the following values to your `.env` file:
+ 
+First thing we'll do is configure the certificates. We will create an API key to manage authentication to Apple and upload builds from the CI. Create the key on the Apple Developer Portal, download the file, and move it to ios/apollos.p8. You will also need the key ID and issuer ID, both can be found in the portal. Add the following variables to your .env file:
 
 ```yml
 MATCH_PASSWORD=<some unique password>
 MATCH_GIT_URL=<private repo to store certs and profiles>
-MATCH_APP_IDENTIFIER=<bundle ID of app>
+DELIVER_APP_IDENTIFIER=<bundle ID of app>
 FASTLANE_ITC_TEAM_NAME=<developer team name>
 FASTLANE_TEAM_ID=<developer team ID>
+APP_STORE_CONNECT_API_KEY_KEY_ID=<key ID>
+APP_STORE_CONNECT_API_KEY_ISSUER_ID=<issuer ID>
 ```
 
 For the CI, You'll need to create a personal access token in Github and use that to authenticate to your certificates repo. Once you have the token, you'll need to encode it to base64.
@@ -229,23 +223,19 @@ Add the encoded token to your `.env` file
 MATCH_GIT_BASIC_AUTHORIZATION=<base64 encoded token>
 ```
 
+You need to have at least one device registered to make provisioning profiles. Plug in your phone and click "try again" if you see this error.
+
+![devices](https://files-bm5voyhrc-redreceipt.vercel.app)
+
 Inside the app directory run `match` to configure the certificates
 
 ```
-fastlane match development
-fastlane match appstore
+fastlane ios certs
 ```
 
 Use Xcode to switch the certificate and profile settings to "Manual" and choose the new certificates and profiles that you just created.
 
 <img width="803" alt="Screen Shot 2021-05-06 at 8 07 44 AM" src="https://user-images.githubusercontent.com/2659478/117295710-2cf10680-ae42-11eb-899a-e88c81f5d248.png">
-
-Now we will create an API key to manage authentication to Apple and upload builds from the CI. Create the key on the Apple Developer Portal, download the file, and move it to `ios/apollos.p8`. You will also need the key ID and issuer ID, both can be found in the portal. Add the following variables to your `.env` file:
-
-```yml
-APP_STORE_CONNECT_API_KEY_KEY_ID=<key ID>
-APP_STORE_CONNECT_API_KEY_ISSUER_ID=<issuer ID>
-```
 
 Test the deployment:
 
