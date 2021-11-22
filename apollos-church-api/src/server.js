@@ -3,7 +3,10 @@ import ApollosConfig from '@apollosproject/config';
 import express from 'express';
 import { RockLoggingExtension } from '@apollosproject/rock-apollo-data-source';
 import { get } from 'lodash';
-import { setupUniversalLinks } from '@apollosproject/server-core';
+import {
+  setupUniversalLinks,
+  useSimpleDonationRoute,
+} from '@apollosproject/server-core';
 import { createMigrationRunner } from '@apollosproject/data-connector-postgres';
 
 let dataObj;
@@ -65,6 +68,9 @@ const apolloServer = new ApolloServer({
 });
 
 const app = express();
+
+// Give Screen
+useSimpleDonationRoute({ app });
 
 // password reset
 app.get('/forgot-password', (req, res) => {
