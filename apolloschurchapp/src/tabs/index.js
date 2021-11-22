@@ -9,6 +9,7 @@ import {
   useTheme,
   Icon,
   Touchable,
+  GiveScreen
 } from '@apollosproject/ui-kit';
 import { useApolloClient } from '@apollo/client';
 import {
@@ -103,6 +104,15 @@ const PrayTab = createFeatureFeedTab({
   feedName: 'PRAY',
 });
 
+const GiveTab = createFeatureFeedTab({
+  options: {
+    headerLeft: ProfileButton,
+  },
+  tabName: 'Give',
+  feedName: 'GIVE',
+  TabComponent: GiveScreen,
+});
+
 const CustomConnectScreen = () => (
   <ConnectScreenConnected ActionTable={ActionTable} ActionBar={ActionBar} />
 );
@@ -160,6 +170,11 @@ const TabNavigator = () => {
         name="Pray"
         component={PrayTab}
         options={{ tabBarIcon: tabBarIcon('like') }}
+      />
+      <Screen
+        name="Give"
+        component={GiveTab}
+        options={{ tabBarIcon: tabBarIcon('credit') }}
       />
       <Screen
         name="Connect"
