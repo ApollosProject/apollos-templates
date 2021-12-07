@@ -21,9 +21,17 @@ yarn
 yarn setup
 ```
 
-### API
+## API
 
-#### Development
+---
+
+This section will outline the steps required to get your api up and running.
+
+<br />
+
+### Development
+
+---
 
 A working [Rock RMS](https://www.rockrms.com) instance is required for our API to run. If you want to test that your API is functional fill out the `ROCK_API` and `ROCK_TOKEN` in your `.env` file. `ROCK_API` is the URL of your Rock instance with `/api` appended to the end. `ROCK_TOKEN` is the REST key of an admin user. You can get this info on your Rock instance from "Admin Tools" > "Apollos Dashboard" after you've installed the Apollos Plugin.
 
@@ -35,7 +43,9 @@ Now simply start the server
 yarn start
 ```
 
-#### Deploy
+### Deploy
+
+---
 
 We use Heroku by default because it's free and easy to get started. If you'd like to use another platform to host your API, you can skip this section.
 
@@ -82,60 +92,92 @@ heroku open
 
 To get started with different API integrations, check out our [docs](https://apollosapp.io)!
 
-### Mobile App
+### Migrations
 
-This will outline the steps required to get your Android and iOS apps up and running. You will need a functioning production API from the previous section before moving forward.
+Database migrations can be run locally via
+
+```
+yarn migrator up
+```
+
+and in production / heroku via
+
+```
+heroku run -a YOUR_HEROKU_APP_NAME_HERE yarn migrator up
+```
+
+**Make sure you `yarn build` before running `yarn migrator` if you have made any changes to your app.**
+
+<br />
+
+## Mobile App
+
+---
+
+This section will outline the steps required to get your Android and iOS apps up and running. You will need a functioning production API from the previous section before moving forward.
 
 Rename your project, **_no spaces_**!
 
-```
+```sh
 cd apolloschurchapp
 npx react-native-rename "<ChurchName>"
 ```
-
-Add new icons and splash screen. For customization, see [react-native-make](#). Icons should be 1024 jpgs and splash should be 3000h transparent png.
-
-![icons](https://files-lrt96nsk5.vercel.app)
-
-```
-yarn icons icon-ios.png --platform ios
-yarn icons icon-android.jpg --platform android
-yarn splash splash.png
-```
-
-#### Development
-
-Install dependencies and start the server and bundler
-
-```
-cd ..
-yarn
-yarn start
-```
-
-Couple final steps you'll need to get the app booted in development mode.
-
-##### iOS
-
-Enable automatic code signing (we'll switch back to manual later when ready to deploy) and pick a new ID.
-
-![xcode signing](https://files-o16fn2ymm-redreceipt.vercel.app)
 
 Add the new schemes to the workspace. You should see them by going to Xcode > Product > Scheme > Manage Schemes.
 
 ![schemes](https://files-7i6cjwshd-redreceipt.vercel.app)
 
-Now run the command to start the simulator in a separate tab:
+Add new icons and splash screen. For customization, see [react-native-make](#). Icons should be 1024 jpgs and splash should be 3000h transparent png.
+
+![icons](https://user-images.githubusercontent.com/72768221/130254147-fdea1e83-05b0-4466-bf85-7cec05cfddc7.png)
+
+```
+yarn icons icon-ios.png --platform ios
+yarn icons icon-android.png --platform android
+yarn splash splash.png
+```
+
+You will also need to setup icons for Android notifications that are not handled by the above lines. This icon needs to be 256x256, and white with a transparent background (see below).
+
+![notification icons](https://files-gurdw0ypj-redreceipt.vercel.app)
+
+Use [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/icons-notification.html#source.type=clipart&source.clipart=ac_unit&source.space.trim=1&source.space.pad=0&name=ic_stat_onesignal_default), select `Image`, upload your image, then download the new images.
+
+Navigate to `apolloschurchapp/android/app/src/main/res`. Drop the newly downloaded images into the appropriate folders here. Delete the placeholder Apollos icons in those folders as well.
+
+Install the dependencies
+
+```
+yarn
+```
+
+### Development
+
+Couple final steps you'll need to get the app booted in development mode.
+
+#### iOS
+
+---
+
+Enable automatic code signing (we'll switch back to manual later when ready to deploy) and pick a new ID.
+
+![xcode signing](https://files-o16fn2ymm-redreceipt.vercel.app)
+
+_*NOTE:*_ Make sure to do these steps for the `OneSignalNotificationExtention` target as well!
+
+Now run the command to start the simulator:
 
 ```
 yarn ios
 ```
 
-##### Android
+#### Android
+
+---
 
 Android uses Google Maps for its map service so you will need to register a [Google Maps API Key](https://developers.google.com/maps/documentation/android-sdk/get-api-key). Once you have that, define it in your `.env` file:
 
-```
+```yml
 GOOGLE_MAPS_API_KEY=<KEY>
 ```
 
@@ -145,51 +187,55 @@ Then start the app on the default installed emulator in a separate tab.
 yarn android
 ```
 
-#### Deploy
+### Deploy
+
+---
 
 We use [Fastlane](#) through Github Actions to manage certificates and build uploads. This will walk you through everything you need to get set up with automated deployments.
 
-##### iOS
+<br />
 
-First thing we'll do is configure the certificates. Add the following values to your `.env` file:
+#### iOS
 
-```
+---
+ 
+First thing we'll do is configure the certificates. We will create an API key to manage authentication to Apple and upload builds from the CI. Create the key on the Apple Developer Portal, download the file, and move it to ios/apollos.p8. You will also need the key ID and issuer ID, both can be found in the portal. Add the following variables to your .env file:
+
+```yml
 MATCH_PASSWORD=<some unique password>
 MATCH_GIT_URL=<private repo to store certs and profiles>
-MATCH_APP_IDENTIFIER=<bundle ID of app>
+DELIVER_APP_IDENTIFIER=<bundle ID of app>
 FASTLANE_ITC_TEAM_NAME=<developer team name>
 FASTLANE_TEAM_ID=<developer team ID>
+APP_STORE_CONNECT_API_KEY_KEY_ID=<key ID>
+APP_STORE_CONNECT_API_KEY_ISSUER_ID=<issuer ID>
 ```
 
 For the CI, You'll need to create a personal access token in Github and use that to authenticate to your certificates repo. Once you have the token, you'll need to encode it to base64.
 
-```
+```sh
 echo -n "<github username>:<token>" | base64
 ```
 
 Add the encoded token to your `.env` file
 
+```yml
+MATCH_GIT_BASIC_AUTHORIZATION=<base64 encoded token>
 ```
-MATCH_BASIC_GIT_AUTHORIZATION=<base64 encoded token>
-```
+
+You need to have at least one device registered to make provisioning profiles. Plug in your phone and click "try again" if you see this error.
+
+![devices](https://files-bm5voyhrc-redreceipt.vercel.app)
 
 Inside the app directory run `match` to configure the certificates
 
 ```
-fastlane match development
-fastlane match appstore
+fastlane ios certs
 ```
 
 Use Xcode to switch the certificate and profile settings to "Manual" and choose the new certificates and profiles that you just created.
 
 <img width="803" alt="Screen Shot 2021-05-06 at 8 07 44 AM" src="https://user-images.githubusercontent.com/2659478/117295710-2cf10680-ae42-11eb-899a-e88c81f5d248.png">
-
-Now we will create an API key to manage authentication to Apple and upload builds from the CI. Create the key on the Apple Developer Portal, download the file, and move it to `ios/apollos.p8`. You will also need the key ID and issuer ID, both can be found in the portal. Add the following variables to your `.env` file:
-
-```
-APP_STORE_CONNECT_API_KEY_KEY_ID=<key ID>
-APP_STORE_CONNECT_API_KEY_ISSUER_ID=<issuer ID>
-```
 
 Test the deployment:
 
@@ -205,11 +251,17 @@ npx @apollosproject/apollos-cli secrets -e <TOKEN>
 
 Make sure to remember that password and add it to Github as a secret.
 
-`ENCRYPTION_PASSWORD=<password>`
+```
+gh secret set ENCRYPTION_PASSWORD -b <password>
+```
 
 Now push the changes and watch the app deploy!
 
-##### Android
+<br />
+
+#### Android
+
+---
 
 First, you'll need to have the Developer account owner generate an upload key. [Create a service account](https://developers.google.com/android-publisher/getting_started#using_a_service_account) and add it to the Play Console with "Release Manager" role. Move the downloaded JSON file to `android/key.json` once you have it. You can validate the upload key with this command
 
@@ -229,16 +281,16 @@ Drop the keystore file here: `apolloschurchapp/android/app/apollos.keystore`
 
 Now just load these environment variables in your `.env` and `.env.shared` files
 
-```
+```yml
 KEYSTORE_FILE=apollos.keystore
 KEYSTORE_PASSWORD=<keystore password>
 KEY_ALIAS=apollos
 KEY_PASSWORD=<alias password>
 ```
 
-You will need to upload the bundle manually the first time. First set the Application ID to something unique in the `android/app/build.gradle` file:
+You will need to upload the bundle manually the first time. Create the app in the Play Store console and then set the Application ID in the `android/app/build.gradle` file:
 
-```
+```js
     defaultConfig {
         applicationId "com.company.appname"
         ...

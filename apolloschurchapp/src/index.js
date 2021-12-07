@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-handler-names */
 
-import React from 'react';
 import { StatusBar } from 'react-native';
 import {
   NavigationContainer,
@@ -23,14 +22,15 @@ import Passes from '@apollosproject/ui-passes';
 import { MapViewConnected as Location } from '@apollosproject/ui-mapview';
 import Auth, { ProtectedRoute } from '@apollosproject/ui-auth';
 import { Landing, Onboarding } from '@apollosproject/ui-onboarding';
+import { BottomSheetModalProvider } from '@gorhom/bottom-sheet';
 
 import {
+  ContentSingleConnected,
   ContentFeedConnected,
   SearchScreenConnected,
+  UserSettingsConnected,
 } from '@apollosproject/ui-connected';
 import Providers from './Providers';
-import ContentSingle from './content-single';
-import Event from './event';
 import Tabs from './tabs';
 import customTheme, { customIcons } from './theme';
 
@@ -51,6 +51,12 @@ const ProtectedRouteWithSplashScreen = () => {
     />
   );
 };
+
+const WrappedContentSingleConnected = (props) => (
+  <BottomSheetModalProvider>
+    <ContentSingleConnected {...props} />
+  </BottomSheetModalProvider>
+);
 
 const ThemedNavigationContainer = withTheme(({ theme, ...props }) => ({
   theme: {
@@ -92,13 +98,20 @@ const App = () => (
               name="ProtectedRoute"
               component={ProtectedRouteWithSplashScreen}
             />
-            <Screen name="Tabs" component={Tabs} />
+            <Screen
+              name="Tabs"
+              component={Tabs}
+              options={{
+                gestureEnabled: false,
+                stackPresentation: 'push',
+              }}
+            />
             <Screen
               name="ContentSingle"
-              component={ContentSingle}
+              component={WrappedContentSingleConnected}
               options={{
                 title: 'Content',
-                stackPresentation: 'push',
+                stackPresentation: 'fullScreenModal',
               }}
             />
             <Screen
@@ -110,11 +123,6 @@ const App = () => (
               })}
             />
             <Screen
-              name="Event"
-              component={Event}
-              options={{ title: 'Event' }}
-            />
-            <Screen
               name="Auth"
               component={Auth}
               options={{
@@ -122,7 +130,11 @@ const App = () => (
                 stackPresentation: 'push',
               }}
             />
-            <Screen name="Location" component={Location} />
+            <Screen
+              name="Location"
+              component={Location}
+              options={{ title: 'Campuses' }}
+            />
             <Screen
               name="Passes"
               component={Passes}
@@ -138,6 +150,10 @@ const App = () => (
             />
             <Screen name="LandingScreen" component={LandingToAuth} />
             <Screen name="Search" component={SearchScreenConnected} />
+            <Screen
+              name="UserSettingsNavigator"
+              component={UserSettingsConnected}
+            />
           </Navigator>
         </Providers>
       </ThemedNavigationContainer>
