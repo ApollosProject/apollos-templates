@@ -68,6 +68,9 @@ CONTENT:
     - WeekendContentItem
     - ContentItem
 
+SUGGESTED_FOLLOWS:
+  - email: vincent@differential.com
+  - email: conrad@differential.com
 
 TABS:
   HOME:
@@ -223,6 +226,7 @@ TABS:
     - type: VerticalPrayerList
       title: Your Prayers
   CONNECT:
+    - type: FollowPeople
     - type: ActionTable
       title: Connect to Apollos
       actions:
