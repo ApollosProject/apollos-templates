@@ -36,7 +36,7 @@ platform :ios do
     app_store_connect_api_key(key_filepath: "ios/apollos.p8")
     match(type: 'development', app_identifier: [ENV["DELIVER_APP_IDENTIFIER"], "#{ENV["DELIVER_APP_IDENTIFIER"]}.OneSignalNotificationServiceExtension"],)
     match(type: 'appstore', app_identifier: [ENV["DELIVER_APP_IDENTIFIER"], "#{ENV["DELIVER_APP_IDENTIFIER"]}.OneSignalNotificationServiceExtension"],)
-    get_push_certificate
+    get_push_certificate(app_identifier: ENV["DELIVER_APP_IDENTIFIER"])
   end
 
   desc "Push a new internal build to TestFlight"
