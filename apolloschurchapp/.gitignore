@@ -115,6 +115,7 @@ keystore.properties
 apolloskeystoreupload.keystore
 local.properties
 *.iml
+*.hprof
 
 # Xcode
 build/

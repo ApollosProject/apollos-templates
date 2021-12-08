@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-handler-names */
 
-import React from 'react';
 import { StatusBar } from 'react-native';
 import {
   NavigationContainer,
@@ -76,11 +75,6 @@ const ThemedNavigationContainer = withTheme(({ theme, ...props }) => ({
   <NavigationContainer ref={containerRef} {...props} />
 ));
 
-const LandingToAuth = () => {
-  const navigation = useNavigation();
-  return <Landing onPressPrimary={() => navigation.navigate('Auth')} />;
-};
-
 const { Navigator, Screen } = createNativeStackNavigator();
 
 const App = () => (
@@ -149,7 +143,7 @@ const App = () => (
                 stackPresentation: 'push',
               }}
             />
-            <Screen name="LandingScreen" component={LandingToAuth} />
+            <Screen name="LandingScreen" component={Landing} />
             <Screen name="Search" component={SearchScreenConnected} />
             <Screen
               name="UserSettingsNavigator"

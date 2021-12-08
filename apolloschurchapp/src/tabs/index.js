@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
