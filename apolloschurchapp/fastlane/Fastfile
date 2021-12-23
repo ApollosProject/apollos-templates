@@ -78,7 +78,7 @@ platform :ios do
       skip_screenshots: false,
       skip_metadata: false,
       submit_for_review: true,
-      automatic_release: false,
+      automatic_release: true,
       submission_information: {
         add_id_info_uses_idfa: false
       },
