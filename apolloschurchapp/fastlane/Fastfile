@@ -105,6 +105,38 @@ platform :android do
       package_name: package_name
     )
   end
+
+  desc "Promote current build to beta"
+  lane :beta do
+    s = File.read("../android/app/build.gradle")
+    package_name = s[/applicationId\s+"([\w+\.]*)"/, 1]
+
+    upload_to_play_store(
+      track: "internal",
+      track_promote_to: "beta",
+      version_code: number_of_commits,
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      json_key: "android/key.json",
+      package_name: package_name
+    )
+  end
+
+  desc "Promote current build to production"
+  lane :production do
+    s = File.read("../android/app/build.gradle")
+    package_name = s[/applicationId\s+"([\w+\.]*)"/, 1]
+
+    upload_to_play_store(
+      track: "internal",
+      track_promote_to: "production",
+      version_code: number_of_commits,
+      skip_upload_apk: true,
+      skip_upload_aab: true,
+      json_key: "android/key.json",
+      package_name: package_name
+    )
+  end
 end
 
 error do |lane, exception|
