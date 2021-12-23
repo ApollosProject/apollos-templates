@@ -34,6 +34,8 @@ platform :ios do
   desc "Generate new provisioning profiles and certificates for app and push notifications"
   lane :certs do
     app_store_connect_api_key(key_filepath: "ios/apollos.p8")
+    match_nuke(type: "development", app_identifier: [ENV["DELIVER_APP_IDENTIFIER"], "#{ENV["DELIVER_APP_IDENTIFIER"]}.OneSignalNotificationServiceExtension"])
+    match_nuke(type: "distribution", app_identifier: [ENV["DELIVER_APP_IDENTIFIER"], "#{ENV["DELIVER_APP_IDENTIFIER"]}.OneSignalNotificationServiceExtension"])
     match(type: 'development', app_identifier: [ENV["DELIVER_APP_IDENTIFIER"], "#{ENV["DELIVER_APP_IDENTIFIER"]}.OneSignalNotificationServiceExtension"],)
     match(type: 'appstore', app_identifier: [ENV["DELIVER_APP_IDENTIFIER"], "#{ENV["DELIVER_APP_IDENTIFIER"]}.OneSignalNotificationServiceExtension"],)
     get_push_certificate(app_identifier: ENV["DELIVER_APP_IDENTIFIER"])
