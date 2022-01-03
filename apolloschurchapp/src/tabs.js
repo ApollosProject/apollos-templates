@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { Image, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from 'react-native-screens/native-stack';
@@ -17,19 +18,17 @@ import {
   ConnectScreenConnected,
 } from '@apollosproject/ui-connected';
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
-import tabBarIcon from './tabBarIcon';
 
-const HeaderLogo = withTheme(({ theme }) => ({
-  style: {
-    height: theme.sizing.baseUnit * 2.5,
-    width: '70%',
-    resizeMode: 'contain',
-  },
-  source:
-    theme.type === 'light'
-      ? require('./wordmark.png')
-      : require('./wordmark.dark.png'),
-}))(Image);
+const HeaderLogo = () => {
+  const theme = useTheme();
+  return (
+    <Icon
+      name="brand-icon"
+      size={theme.sizing.baseUnit * 1.5}
+      fill={theme.colors.primary}
+    />
+  );
+};
 
 const ProfileButton = () => {
   const navigation = useNavigation();
@@ -62,6 +61,16 @@ const SearchButton = () => {
       />
     </Touchable>
   );
+};
+
+const tabBarIcon = (name) => {
+  function TabBarIcon({ color }) {
+    return <Icon name={name} fill={color} size={24} />;
+  }
+  TabBarIcon.propTypes = {
+    color: PropTypes.string,
+  };
+  return TabBarIcon;
 };
 
 // we nest stack inside of tabs so we can use all the fancy native header features
