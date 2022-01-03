@@ -18,8 +18,6 @@ import {
   ConnectScreenConnected,
 } from '@apollosproject/ui-connected';
 import { checkOnboardingStatusAndNavigate } from '@apollosproject/ui-onboarding';
-import ActionTable from './ui/ActionTable';
-import ActionBar from './ui/ActionBar';
 
 const HeaderLogo = () => {
   const theme = useTheme();
@@ -112,27 +110,13 @@ const PrayTab = createFeatureFeedTab({
   feedName: 'PRAY',
 });
 
-const CustomConnectScreen = () => (
-  <ConnectScreenConnected ActionTable={ActionTable} ActionBar={ActionBar} />
-);
-
-const ConnectTabStack = createNativeStackNavigator();
-const ConnectTabStackNavigator = () => (
-  <ConnectTabStack.Navigator
-    screenOptions={{
-      headerHideShadow: true,
-      headerLargeTitle: true,
-    }}
-  >
-    <ConnectTabStack.Screen
-      name={'Connect'}
-      component={CustomConnectScreen}
-      options={{
-        headerLeft: ProfileButton,
-      }}
-    />
-  </ConnectTabStack.Navigator>
-);
+const ConnectTab = createFeatureFeedTab({
+  options: {
+    headerLeft: ProfileButton,
+  },
+  tabName: 'Connect',
+  feedName: 'CONNECT',
+});
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -172,10 +156,8 @@ const TabNavigator = () => {
       />
       <Screen
         name="Connect"
-        component={ConnectTabStackNavigator}
-        options={{
-          tabBarIcon: tabBarIcon('profile'),
-        }}
+        component={ConnectTab}
+        options={{ tabBarIcon: tabBarIcon('profile') }}
       />
     </Navigator>
   );
