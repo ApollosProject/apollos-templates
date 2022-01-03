@@ -101,6 +101,7 @@
     "react-native-safari-view": "2.1.0",
     "react-native-safe-area-context": "^3.0.7",
     "react-native-screens": "3.2.0",
+    "react-native-sha256": "^1.4.7",
     "react-native-splash-screen": "^3.2.0",
     "react-native-svg": "^9.4.0",
     "react-native-video": "^5.2.0",

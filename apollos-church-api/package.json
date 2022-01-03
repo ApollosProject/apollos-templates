@@ -34,11 +34,14 @@
     "@apollosproject/rock-apollo-data-source": "^2.41.0",
     "@apollosproject/server-core": "^2.41.0",
     "apollo-server": "^2.24.1",
+    "apollo-server-cache-redis": "^1.5.0",
     "apollo-server-express": "2.14.2",
+    "apollo-server-plugin-response-cache": "^0.8.0",
     "color": "3.0.0",
     "dotenv": "6.0.0",
     "express": "^4.17.0",
     "graphql": "14.6.0",
+    "ioredis": "^4.27.2",
     "randomcolor": "0.5.3"
   },
   "devDependencies": {
