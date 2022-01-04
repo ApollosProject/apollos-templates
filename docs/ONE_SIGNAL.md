@@ -51,3 +51,11 @@ Use the App ID it gives you and add this key to your app `.env` file.
 ```
 ONE_SIGNAL_KEY=<key>
 ```
+
+## Android
+
+You need to create a new Firebase project [here](console.firebase.google.com).
+
+Then, on your OneSignal project, go to Settings > Platforms and select Google Android.
+
+Check Settings > Cloud Messaging on your newly created Firebase project and copy the Server key and Sender ID over to OneSignal.

@@ -6,26 +6,13 @@ on:
   workflow_dispatch:
 
 jobs:
-  codecov:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
-
-    - name: Install Dependencies
-      run: yarn --ignore-scripts
-
-    - name: Jest
-      run: yarn test -- -- -- --forceExit
-
-    - name: Codecov
-      uses: codecov/codecov-action@v1
-
   api:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Check For API Changes
+        run: if [[ $(git diff HEAD~1 apollos-church-api) == "" ]]; then exit; fi
 
       # heroku only uses yarn if there's a yarn.lock file
       - name: Use Yarn
@@ -56,6 +43,9 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Check For App Changes
+      run: if [[ $(git diff HEAD~1 apolloschurchapp) == "" ]]; then exit; fi
+
     - name: Setup Node
       uses: actions/setup-node@v2
       with:
@@ -71,10 +61,6 @@ jobs:
 
     - name: Install Dependencies
       run: yarn config set network-timeout 300000 && yarn
-
-    # required to build
-    - name: Generate Stories
-      run: yarn generate-stories
 
     - name: Generate Fragment Types
       run: node ./scripts/get-introspection-data.js
@@ -96,6 +82,9 @@ jobs:
       with:
         fetch-depth: 0
 
+    - name: Check For App Changes
+      run: if [[ $(git diff HEAD~1 apolloschurchapp) == "" ]]; then exit; fi
+
     - name: Setup Node
       uses: actions/setup-node@v2
       with:
@@ -111,10 +100,6 @@ jobs:
 
     - name: Install Dependencies
       run: yarn config set network-timeout 300000 && yarn
-
-    # required to build
-    - name: Generate Stories
-      run: yarn generate-stories
 
     - name: Generate Fragment Types
       run: node ./scripts/get-introspection-data.js

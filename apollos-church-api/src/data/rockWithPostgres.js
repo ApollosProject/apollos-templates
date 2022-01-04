@@ -1,6 +1,9 @@
 /* eslint-disable import/prefer-default-export, max-classes-per-file */
 import { parseGlobalId } from '@apollosproject/server-core';
-import { Person as postgresPerson } from '@apollosproject/data-connector-postgres';
+import {
+  Person as postgresPerson,
+  PrayerRequest as postgresPrayerRequest,
+} from '@apollosproject/data-connector-postgres';
 import * as OneSignalOriginal from '@apollosproject/data-connector-onesignal';
 
 class personDataSource extends postgresPerson.dataSource {
@@ -147,11 +150,35 @@ export const PostgresDefaultCampusOverride = {
   resolver: {
     Mutation: {
       updateUserCampus: async (root, { campusId }, { dataSources }) => {
-        const campus = await dataSources.Campus.getFromId(campusId); // finds the postgres campus id
-        await dataSources.Person.updateProfile([
-          { field: 'campusId', value: campus.originId },
-        ]); // updates in Rock
-        return dataSources.Campus.updateCurrentUserCampus({ campusId }); // updates in Rock
+        const campus = await dataSources.Campus.getFromId(
+          parseGlobalId(campusId).id
+        ); // finds the postgres campus id
+        await dataSources.RockCampus.updateCurrentUserCampus({
+          rockId: campus.originId,
+        }); // updates in Rock
+        return dataSources.Campus.updateCurrentUserCampus({ campusId }); // updates in Postgres
+      },
+    },
+  },
+};
+
+class prayerRequestDataSource extends postgresPrayerRequest.dataSource {
+  async getRequestor({ personId }) {
+    return this.context.dataSources.Person.getFromId(personId);
+  }
+}
+
+export const PrayerRequest = {
+  dataSource: prayerRequestDataSource,
+  resolver: {
+    Mutation: {
+      addPrayer: async (root, args, { dataSources }) => {
+        const { id } = await dataSources.RockPrayerRequest.addPrayer(args);
+        return dataSources.PrayerRequest.addPrayer({
+          text: args.text,
+          originId: String(id),
+          originType: 'rock',
+        });
       },
     },
   },

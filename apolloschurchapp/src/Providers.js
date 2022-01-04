@@ -1,5 +1,4 @@
 import querystring from 'querystring';
-import React from 'react';
 import PropTypes from 'prop-types';
 import { NavigationService } from '@apollosproject/ui-kit';
 import { AuthProvider } from '@apollosproject/ui-auth';
@@ -21,8 +20,9 @@ const AppProviders = ({ children }) => (
       handleExternalLink={(url) => {
         const path = url.split('app-link/')[1];
         const [route, location] = path.split('/');
-        if (route === 'content')
+        if (route === 'content') {
           NavigationService.navigate('ContentSingle', { itemId: location });
+        }
         if (route === 'nav') {
           const [component, params] = location.split('?');
           const args = querystring.parse(params);
