@@ -41,11 +41,11 @@ const onAuthError = async () => {
   NavigationService.resetToAuth();
 };
 
-let uri = ApollosConfig.APP_DATA_URL;
-const androidUri = ApollosConfig.ANDROID_URL || '10.0.2.2';
-
 // Android's emulator requires localhost network traffic to go through 10.0.2.2
-if (Platform.OS === 'android') uri = uri.replace('localhost', androidUri);
+const uri = ApollosConfig.APP_DATA_URL.replace(
+  'localhost',
+  Platform.OS === 'android' ? '10.0.2.2' : 'localhost'
+);
 
 const errorLink = buildErrorLink(onAuthError);
 const apqLink = createPersistedQueryLink({
@@ -74,21 +74,6 @@ export const client = new ApolloClient({
   shouldBatch: true,
   name: getApplicationName(),
   version: getVersion(),
-  // NOTE: this is because we have some very taxing queries that we want to avoid running twice
-  // see if it's still an issue after we're operating mostly on Postgres and have less loading states
-  defaultOptions: {
-    watchQuery: {
-      nextFetchPolicy(lastFetchPolicy) {
-        if (
-          lastFetchPolicy === 'cache-and-network' ||
-          lastFetchPolicy === 'network-only'
-        ) {
-          return 'cache-first';
-        }
-        return lastFetchPolicy;
-      },
-    },
-  },
 });
 
 wipeData();

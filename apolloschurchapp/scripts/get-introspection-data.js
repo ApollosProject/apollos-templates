@@ -42,7 +42,7 @@ const getIntrospectionData = async () => {
     );
 
     await fs.writeFileSync(
-      Path.resolve(__dirname, '../src/client/fragmentTypes.json'),
+      Path.resolve(__dirname, '../fragmentTypes.json'),
       JSON.stringify(data)
     );
 

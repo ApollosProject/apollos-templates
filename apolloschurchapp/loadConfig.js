@@ -1,6 +1,6 @@
 import ApollosConfig from '@apollosproject/config';
 import FRAGMENTS from '@apollosproject/ui-fragments';
-import fragmentTypes from './src/client/fragmentTypes.json';
+import fragmentTypes from './fragmentTypes.json';
 
 // Create a map all the interfaces each type implements.
 // If UniversalContentItem implements Node, Card, and ContentNode,
