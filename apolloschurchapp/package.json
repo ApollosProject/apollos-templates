@@ -56,7 +56,6 @@
     "@apollosproject/ui-prayer": "^2.41.0",
     "@apollosproject/ui-scripture": "^2.41.0",
     "@apollosproject/ui-test-utils": "^2.41.0",
-    "@gorhom/bottom-sheet": "3.4.1",
     "@react-native-community/async-storage": "^1.5.1",
     "@react-native-community/datetimepicker": "^3.0.0",
     "@react-native-community/geolocation": "^2.0.2",
