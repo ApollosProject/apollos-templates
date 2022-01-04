@@ -8,7 +8,7 @@ import { Platform } from 'react-native';
 import { createUploadLink } from 'apollo-upload-client';
 import ApollosConfig from '@apollosproject/config';
 
-import { authLink, buildErrorLink } from '@apollosproject/ui-auth';
+import { authLink, buildErrorLink } from '@apollosproject/ui-authentication';
 import { updatePushId } from '@apollosproject/ui-notifications';
 
 import { NavigationService } from '@apollosproject/ui-kit';
