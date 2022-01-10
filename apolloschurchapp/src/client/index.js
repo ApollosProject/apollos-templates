@@ -4,12 +4,12 @@ import { ApolloProvider, ApolloClient, ApolloLink, gql } from '@apollo/client';
 import { createPersistedQueryLink } from '@apollo/client/link/persisted-queries';
 import { sha256 } from 'react-native-sha256';
 import { getVersion, getApplicationName } from 'react-native-device-info';
+import AsyncStorage from '@react-native-community/async-storage';
 import { Platform } from 'react-native';
 import { createUploadLink } from 'apollo-upload-client';
 import ApollosConfig from '@apollosproject/config';
 
 import { authLink, buildErrorLink } from '@apollosproject/ui-authentication';
-import { updatePushId } from '@apollosproject/ui-notifications';
 
 import { NavigationService } from '@apollosproject/ui-kit';
 
@@ -32,6 +32,8 @@ const wipeData = () =>
 
 let storeIsResetting = false;
 const onAuthError = async () => {
+  AsyncStorage.removeItem('accessToken');
+  AsyncStorage.removeItem('refreshToken');
   if (!storeIsResetting) {
     storeIsResetting = true;
     await client.stop();
@@ -45,9 +47,11 @@ let uri = ApollosConfig.APP_DATA_URL;
 const androidUri = ApollosConfig.ANDROID_URL || '10.0.2.2';
 
 // Android's emulator requires localhost network traffic to go through 10.0.2.2
-if (Platform.OS === 'android') uri = uri.replace('localhost', androidUri);
+if (Platform.OS === 'android') {
+  uri = uri.replace('localhost', androidUri);
+}
 
-const errorLink = buildErrorLink(onAuthError);
+const errorLink = buildErrorLink(onAuthError, uri);
 const apqLink = createPersistedQueryLink({
   sha256,
   useGETForHashedQueries: true,
@@ -109,23 +113,6 @@ const ClientProvider = ({ children }) => {
           cacheLoaded: true,
         },
       });
-      const { isLoggedIn } = client.readQuery({
-        query: gql`
-          query {
-            isLoggedIn @client
-          }
-        `,
-      });
-      const { pushId } = client.readQuery({
-        query: gql`
-          query {
-            pushId @client
-          }
-        `,
-      });
-      if (isLoggedIn && pushId) {
-        updatePushId({ pushId, client });
-      }
     };
     initialize();
   }, []);
