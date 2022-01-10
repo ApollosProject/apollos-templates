@@ -72,173 +72,180 @@ SUGGESTED_FOLLOWS:
   - email: vincent@differential.com
   - email: conrad@differential.com
 
-TABS:
-  HOME:
-    - type: ActionBar
-      title: Welcome to Apollos
-      actions:
-        [
-          {
-            title: Check In,
-            icon: check,
-            action: OPEN_URL,
-            relatedNode: { __typename: Url, url: 'https://www.google.com' },
-          },
-        ]
-    - algorithms:
-      - type: CONTENT_FEED
-        arguments:
-          channelIds:
-            - c7f43eb9-2200-4267-ab28-871e0d5e785f
-            - 3dfe7149-136b-4134-bd91-fdd935ef2221
-      type: HeroList
-      primaryAction:
-        # Right now, you hardcode exactly what GraphQL should return.
-        # Long term, we hope to have a more sophisticated mechanism for driving this field
-        action: OPEN_NODE
-        title: 'Read More'
-        relatedNode:
-          __typename: UniversalContentItem
-          id: a2c42d1d-98c8-46fb-aeea-603bc569cf7d
-    - algorithms: [DAILY_PRAYER]
-      isCard: false
-      type: PrayerList
-      title: Daily Prayer
-    - algorithms:
-        - type: CAMPAIGN_ITEMS
-          channelIds:
-            - 4b23ebc9-248e-4092-99f9-8829e1b6f1cc
-      type: HeroList
-      isFeatured: true
-      subtitle: Featured
-    - title: FOR YOU
-      algorithms: [SERMON_CHILDREN, PERSONA_FEED]
-      subtitle: Explore what God calls you to today
-      type: ActionList
-    - algorithms: [SERIES_IN_PROGRESS]
-      subtitle: Continue
-      type: HorizontalCardList
-    - title: RECOMMENDED
-      algorithms: [SERMON_CHILDREN]
-      subtitle: For Him
-      type: VerticalCardList
-    - title: BULLETIN
-      subtitle: What's happening at apollos?
-      type: ActionList
-      algorithms:
-        - type: CONTENT_FEED
-          arguments:
-            channelIds:
-              - 13
-        - type: UPCOMING_EVENTS
-
-  READ:
-    - algorithms:
+APP_TABS:
+  - title: Home
+    icon: home
+    features:
+      - type: ActionBar
+        title: Welcome to Apollos
+        actions:
+          [
+            {
+              title: Check In,
+              icon: check,
+              action: OPEN_URL,
+              relatedNode: { __typename: Url, url: 'https://www.google.com' },
+            },
+          ]
+      - algorithms:
         - type: CONTENT_FEED
           arguments:
             channelIds:
               - c7f43eb9-2200-4267-ab28-871e0d5e785f
-            limit: 3
-      type: HorizontalCardList
-      subtitle: Podcast Messages
-      primaryAction:
-        action: OPEN_CHANNEL
-        title: 'Read More'
-        relatedNode:
-          __typename: ContentChannel
-          apollosId: ContentChannel:f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
-          title: Podcast Messages
-    - algorithms:
-        - type: CONTENT_FEED
-          arguments:
+              - 3dfe7149-136b-4134-bd91-fdd935ef2221
+        type: HeroList
+        primaryAction:
+          # Right now, you hardcode exactly what GraphQL should return.
+          # Long term, we hope to have a more sophisticated mechanism for driving this field
+          action: OPEN_NODE
+          title: 'Read More'
+          relatedNode:
+            __typename: UniversalContentItem
+            id: a2c42d1d-98c8-46fb-aeea-603bc569cf7d
+      - algorithms: [DAILY_PRAYER]
+        isCard: false
+        type: PrayerList
+        title: Daily Prayer
+      - algorithms:
+          - type: CAMPAIGN_ITEMS
             channelIds:
-              - d9da719f-84ef-4cf0-9875-22fea4bf09eb
-            limit: 3
-      type: HorizontalCardList
-      subtitle: Devotionals
-      primaryAction:
-        action: OPEN_CHANNEL
-        title: 'Read More'
-        relatedNode:
-          __typename: ContentChannel
-          apollosId: ContentChannel:d9da719f-84ef-4cf0-9875-22fea4bf09eb
-          title: Devotionals
-
-  WATCH:
-    - algorithms:
-        - type: LATEST_SERIES_CHILDREN
-          arguments:
-            channelId: 8f0a93f5-ccec-4cc1-8fd8-06afe5982f7b
-      type: HeroList
-      title: Catch up
-      subtitle: Latest Series
-    - algorithms:
-        - type: CONTENT_FEED
-          arguments:
-            channelIds:
-              - f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
-      type: VerticalCardList
-      subtitle: All series
-    - algorithms:
-        - type: CONTENT_FEED
-          arguments:
-            channelIds:
-              - 8f0a93f5-ccec-4cc1-8fd8-06afe5982f7b
-            limit: 3
-      type: HorizontalCardList
-      subtitle: Sermons
-    - algorithms:
-        - type: CONTENT_FEED
-          arguments:
-            channelIds:
-              - f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
-            limit: 3
-      type: HorizontalCardList
-      subtitle: Podcasts
-      primaryAction:
-        action: OPEN_CHANNEL
-        title: 'Read More'
-        relatedNode:
-          __typename: ContentChannel
-          apollosId: ContentChannel:f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
-          title: Podcasts
-    - algorithms:
-        - type: CONTENT_FEED
-          arguments:
-            channelIds:
-              - f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
-            limit: 3
-      type: HorizontalCardList
-      title: Videos
-      primaryAction:
-        action: OPEN_CHANNEL
-        title: 'Read More'
-        relatedNode:
-          __typename: ContentChannel
-          apollosId: ContentChannel:f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
-          title: Videos
-
-  PRAY:
-    - algorithms: [DAILY_PRAYER]
-      isCard: false
-      type: PrayerList
-      title: Daily Prayer
-    - type: VerticalPrayerList
-      title: Your Prayers
-  CONNECT:
-    - type: FollowPeople
-    - type: ActionTable
-      title: Connect to Apollos
-      actions:
-        [
-          {
-            title: Google,
-            action: OPEN_URL,
-            relatedNode: { __typename: Url, url: 'https://www.google.com' },
-          },
-          {
-            title: Facebook,
-            action: OPEN_URL,
-            relatedNode: { __typename: Url, url: 'https://www.facebook.com' },
-          },
-        ]
+              - 4b23ebc9-248e-4092-99f9-8829e1b6f1cc
+        type: HeroList
+        isFeatured: true
+        subtitle: Featured
+      - title: FOR YOU
+        algorithms: [SERMON_CHILDREN, PERSONA_FEED]
+        subtitle: Explore what God calls you to today
+        type: ActionList
+      - algorithms: [SERIES_IN_PROGRESS]
+        subtitle: Continue
+        type: HorizontalCardList
+      - title: RECOMMENDED
+        algorithms: [SERMON_CHILDREN]
+        subtitle: For Him
+        type: VerticalCardList
+      - title: BULLETIN
+        subtitle: What's happening at apollos?
+        type: ActionList
+        algorithms:
+          - type: CONTENT_FEED
+            arguments:
+              channelIds:
+                - 13
+          - type: UPCOMING_EVENTS
+  - title: Read
+    icon: sections
+    features:
+      - algorithms:
+          - type: CONTENT_FEED
+            arguments:
+              channelIds:
+                - c7f43eb9-2200-4267-ab28-871e0d5e785f
+              limit: 3
+        type: HorizontalCardList
+        subtitle: Podcast Messages
+        primaryAction:
+          action: OPEN_CHANNEL
+          title: 'Read More'
+          relatedNode:
+            __typename: ContentChannel
+            apollosId: ContentChannel:f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
+            title: Podcast Messages
+      - algorithms:
+          - type: CONTENT_FEED
+            arguments:
+              channelIds:
+                - d9da719f-84ef-4cf0-9875-22fea4bf09eb
+              limit: 3
+        type: HorizontalCardList
+        subtitle: Devotionals
+        primaryAction:
+          action: OPEN_CHANNEL
+          title: 'Read More'
+          relatedNode:
+            __typename: ContentChannel
+            apollosId: ContentChannel:d9da719f-84ef-4cf0-9875-22fea4bf09eb
+            title: Devotionals
+  - title: Watch
+    icon: video
+    features:
+      - algorithms:
+          - type: LATEST_SERIES_CHILDREN
+            arguments:
+              channelId: 8f0a93f5-ccec-4cc1-8fd8-06afe5982f7b
+        type: HeroList
+        title: Catch up
+        subtitle: Latest Series
+      - algorithms:
+          - type: CONTENT_FEED
+            arguments:
+              channelIds:
+                - f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
+        type: VerticalCardList
+        subtitle: All series
+      - algorithms:
+          - type: CONTENT_FEED
+            arguments:
+              channelIds:
+                - 8f0a93f5-ccec-4cc1-8fd8-06afe5982f7b
+              limit: 3
+        type: HorizontalCardList
+        subtitle: Sermons
+      - algorithms:
+          - type: CONTENT_FEED
+            arguments:
+              channelIds:
+                - f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
+              limit: 3
+        type: HorizontalCardList
+        subtitle: Podcasts
+        primaryAction:
+          action: OPEN_CHANNEL
+          title: 'Read More'
+          relatedNode:
+            __typename: ContentChannel
+            apollosId: ContentChannel:f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
+            title: Podcasts
+      - algorithms:
+          - type: CONTENT_FEED
+            arguments:
+              channelIds:
+                - f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
+              limit: 3
+        type: HorizontalCardList
+        title: Videos
+        primaryAction:
+          action: OPEN_CHANNEL
+          title: 'Read More'
+          relatedNode:
+            __typename: ContentChannel
+            apollosId: ContentChannel:f4a5890c-4af5-4d9f-afe3-5d1c6aa85419
+            title: Videos
+  - title: Pray
+    icon: like
+    features:
+      - algorithms: [DAILY_PRAYER]
+        isCard: false
+        type: PrayerList
+        title: Daily Prayer
+      - type: VerticalPrayerList
+        title: Your Prayers
+  - title: Connect
+    icon: profile
+    features:
+      - type: FollowPeople
+      - type: ActionTable
+        title: Connect to Apollos
+        actions:
+          [
+            {
+              title: Google,
+              action: OPEN_URL,
+              relatedNode: { __typename: Url, url: 'https://www.google.com' },
+            },
+            {
+              title: Facebook,
+              action: OPEN_URL,
+              relatedNode: { __typename: Url, url: 'https://www.facebook.com' },
+            },
+          ]
