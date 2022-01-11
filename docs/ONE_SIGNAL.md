@@ -54,7 +54,7 @@ ONE_SIGNAL_KEY=<key>
 
 ## Android
 
-You need to create a new Firebase project [here](console.firebase.google.com).
+You need to create a new Firebase project [here](https://console.firebase.google.com).
 
 Then, on your OneSignal project, go to Settings > Platforms and select Google Android.
 
