@@ -16,6 +16,7 @@ Add the following snippet to your `src/Providers.js` file:
 
 ```
 import { Amplitude } from '@amplitude/react-native';
+import ApollosConfig from '@apollosproject/config';
 
 const amplitude = Amplitude.getInstance();
 amplitude.init(ApollosConfig.AMPLITUDE_API_KEY);
