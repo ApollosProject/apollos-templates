@@ -42,7 +42,7 @@ openssl x509 -inform DER -outform PEM -in <CERTIFICATE>.cer -out cert.pem
 openssl pkcs12 -inkey myprivate.key -in cert.pem -export -out cert.p12
 ```
 
-Now go to [OneSignal](onesignal.com) and create a new app. Choose iOS as the platform first. Upload your new `.p12` certificate, using the password I told you to remember.
+Now go to [OneSignal](https://onesignal.com/) and create a new app. Choose iOS as the platform first. Upload your new `.p12` certificate, using the password I told you to remember.
 
 ![onesignal onboarding](https://files-rb3fdjqiv.vercel.app)
 
@@ -54,7 +54,7 @@ ONE_SIGNAL_KEY=<key>
 
 ## Android
 
-You need to create a new Firebase project [here](console.firebase.google.com).
+You need to create a new Firebase project [here](https://console.firebase.google.com).
 
 Then, on your OneSignal project, go to Settings > Platforms and select Google Android.
 
