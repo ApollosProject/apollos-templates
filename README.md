@@ -1,5 +1,9 @@
 # Apollos Template Project
 
+## ***API template is not currently being supported but will be open sourced again soon. App template HAS MOVED TO [apollos-apps/templates/mobile](https://github.com/ApollosProject/apollos-apps/tree/master/templates/mobile). The instructions below will still work with this directory:***
+
+---
+
 ## Getting Started
 
 Click the "Use the Template" button on the repo page ⬆
